@@ -1,0 +1,56 @@
+export const metadata = {
+  title: 'Why I prototype in code',
+  date: '2026-03-22',
+  excerpt: 'A Product Manager who prototypes in code makes different decisions.',
+  locale: 'en',
+}
+
+Most PMs don't write code. That's fine. Product management doesn't require programming skills. But if you can do it, it changes how you make decisions.
+
+I'm not talking about writing production features. I'm talking about building the minimum thing needed to answer a question before asking the team for weeks of work.
+
+---
+
+A recent example. I needed an apartment. 8 listing sites, inadequate filters, none that would send a notification when something good came up. First PM instinct: map the problem — sources, criteria, flow. Second instinct: open the editor and build a scraper.
+
+One weekend later, a working system collecting listings from 8 sources and deduplicating them. But the interesting problem wasn't the scraping. It was the scoring. How do you figure out if a listing is good?
+
+The first version sent everything to an LLM. It worked. It cost too much and didn't improve quality above a certain threshold. Restructured: first pass deterministic, filtering out 80% of noise for free. Second pass AI only on the 20% that survived. Third pass adaptive based on feedback.
+
+This architecture would never have come from a diagram. It came from the code showing that the first solution was too expensive, and the second iteration solving the cost problem without sacrificing quality.
+
+---
+
+At work the same thing happens at a different scale.
+
+At QubicaAMF a center was about to cancel the payment integration. The problem: every transaction appeared as "uncategorized income" in Square. No per-terminal attribution, no way to close the books. The internal diagnosis was "partner problem." Unsolvable.
+
+The API documentation told a different story. Tracing the data model revealed an existing field, `external_payment_type`, that could carry source attribution without architectural changes on either side. The implementation spec closed the discussion. The center stayed and became a reference account.
+
+This isn't engineering work. It's not about writing production code. It's about knowing where to look — and that comes from years of reading technical documentation and writing code. When a PM can navigate an API, the conversation with engineering changes. Not "we need to solve this problem." But "this API field might solve it, here's a spec, what do you think?"
+
+The difference is enormous. The first sentence opens a discussion. The second closes it.
+
+---
+
+At LeadsBridge the bridge configuration flow was generating errors on repeat. Every error became a support ticket. The team was growing and support was growing with it. The ask: build a chatbot.
+
+The funnel told a different story. The problem wasn't ticket volume. It was the multi-step flow generating errors. The solution wasn't managing volume. It was eliminating the cause.
+
+Would the same conclusion have been reached without being able to read the code? Maybe. But it would have taken longer, someone else would have had to do the analysis, and proposing a redesign of the product's core flow would have carried less credibility. "I looked at the code and the problem is here" starts a conversation from a different point than "I think the problem might be in the flow."
+
+---
+
+There's a risk. A PM who can code can fall into the trap of wanting to build everything. Of feeling indispensable for every technical decision. Of not delegating.
+
+It's a real risk. The answer isn't to stop coding. It's knowing when it's time to write code and when it's time to write a brief and trust the team.
+
+The prototype serves when an idea needs validation before sprint. When the question is "is this possible?" and the answer lives in data, not opinions. It doesn't serve when the team has the skills to explore the problem better.
+
+---
+
+The point isn't that all PMs should code. The point is that a path — designer, then developer, then PM — wasn't a career mistake. It was an accumulation of tools.
+
+A product problem seen from three angles at once: how it looks to the user, how it works under the hood, and what it means for the business. Not because a framework says so. Because all three jobs have been done.
+
+Sometimes the solution is in the design. Sometimes it's in the code. Sometimes it's in saying "no" to something everyone wants. The ability to prototype isn't the answer to everything. But it's one more tool at the moment you need it. And when you need it, it makes the difference between guessing and knowing.
