@@ -26,13 +26,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### UI Components
 
-- [ ] **UICM-01**: Button component with primary (accent bg, dark text) and secondary (transparent, border) variants, 0px radius, hover transitions
+- [x] **UICM-01**: Button component with primary (accent bg, dark text) and secondary (transparent, border) variants, 0px radius, hover transitions
 - [ ] **UICM-02**: MetricCard with accent number (font-mono), label, context, hover border-accent transition
 - [ ] **UICM-03**: CaseStudyCard with flex layout, tag, title, preview, key metric, hover translate-y(-2px) + border-accent
 - [ ] **UICM-04**: ProjectCard with title, one-liner, tech stack tags, status dot, hover border-accent
 - [ ] **UICM-05**: TimelineBlock with role title, company, dates (monospace), visual connector
-- [ ] **UICM-06**: Tag component (monospace, uppercase, tracking-wide, text-secondary)
-- [ ] **UICM-07**: Section wrapper with configurable max-width (720px default, 1080px wide), section-gap padding
+- [x] **UICM-06**: Tag component (monospace, uppercase, tracking-wide, text-secondary)
+- [x] **UICM-07**: Section wrapper with configurable max-width (720px default, 1080px wide), section-gap padding
 
 ### Homepage
 
@@ -164,13 +164,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | COPY-04 | Phase 2 | Complete |
 | ANLT-01 | Phase 2 | Complete |
 | ANLT-02 | Phase 2 | Complete |
-| UICM-01 | Phase 3 | Pending |
+| UICM-01 | Phase 3 | Complete |
 | UICM-02 | Phase 3 | Pending |
 | UICM-03 | Phase 3 | Pending |
 | UICM-04 | Phase 3 | Pending |
 | UICM-05 | Phase 3 | Pending |
-| UICM-06 | Phase 3 | Pending |
-| UICM-07 | Phase 3 | Pending |
+| UICM-06 | Phase 3 | Complete |
+| UICM-07 | Phase 3 | Complete |
 | HOME-01 | Phase 4 | Pending |
 | HOME-02 | Phase 4 | Pending |
 | HOME-03 | Phase 4 | Pending |

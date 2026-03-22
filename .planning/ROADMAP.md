@@ -66,7 +66,7 @@ Plans:
 **UI hint**: yes
 
 Plans:
-- [ ] 03-01-PLAN.md — cn() utility, Tag, Button, Section wrapper, SectionHeader (foundational components)
+- [x] 03-01-PLAN.md — cn() utility, Tag, Button, Section wrapper, SectionHeader (foundational components)
 - [ ] 03-02-PLAN.md — MetricCard, CaseStudyCard, ProjectCard, TimelineBlock, /dev/components verification route + visual checkpoint
 
 ### Phase 4: Homepage
