@@ -5,13 +5,13 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { LanguageToggle } from './LanguageToggle';
 
-const navLinks = [
+const navLinks: readonly { key: string; href: string; isAccent?: boolean }[] = [
   { key: 'about', href: '/about' },
   { key: 'work', href: '/work' },
   { key: 'lab', href: '/lab' },
   { key: 'notes', href: '/notes' },
   { key: 'contact', href: '/#contact', isAccent: true },
-] as const;
+];
 
 interface MobileMenuProps {
   locale: string;

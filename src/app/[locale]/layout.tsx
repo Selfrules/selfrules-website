@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import Script from 'next/script';
 import { Footer } from '@/components/layout/Footer';
+import { Navbar } from '@/components/layout/Navbar';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -39,7 +40,7 @@ export default async function LocaleLayout({
         {t('skipToContent')}
       </a>
 
-      {/* Navbar -- added in Plan 02 */}
+      <Navbar locale={locale} />
 
       <main id="main" className="pt-16">
         {children}
