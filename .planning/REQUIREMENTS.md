@@ -45,10 +45,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Inner Pages
 
-- [ ] **PAGE-01**: About page with headline, 4 career blocks, "Cosa credo" (3 principles), "Fuori dal lavoro", CTA
+- [x] **PAGE-01**: About page with headline, 4 career blocks, "Cosa credo" (3 principles), "Fuori dal lavoro", CTA
 - [x] **PAGE-02**: Work page with headline + intro, 2 CaseStudyCards (1 with [BOZZA] note), CTA
 - [x] **PAGE-03**: Lab page with headline + intro, CasaHunter ProjectCard with full detail, "Prossimamente" MoneyMind, CTA
-- [ ] **PAGE-04**: Approach page with headline + intro, 5 numbered sections, closing + CTA, max-width 720px
+- [x] **PAGE-04**: Approach page with headline + intro, 5 numbered sections, closing + CTA, max-width 720px
 - [ ] **PAGE-05**: Blog listing with headline, post list (date mono + title + excerpt), empty state copy
 - [ ] **PAGE-06**: Blog post page — "Why I Prototype in Code" with section-title, date mono, prose styling (720px, line-height 1.7-1.8)
 
@@ -177,10 +177,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HOME-04 | Phase 4 | Complete |
 | HOME-05 | Phase 4 | Complete |
 | HOME-06 | Phase 4 | Complete |
-| PAGE-01 | Phase 5 | Pending |
+| PAGE-01 | Phase 5 | Complete |
 | PAGE-02 | Phase 5 | Complete |
 | PAGE-03 | Phase 5 | Complete |
-| PAGE-04 | Phase 5 | Pending |
+| PAGE-04 | Phase 5 | Complete |
 | PAGE-05 | Phase 5 | Pending |
 | PAGE-06 | Phase 5 | Pending |
 | COPY-01 | Phase 5 | Complete |

@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Ready to execute
-stopped_at: Completed 05-03-PLAN.md
-last_updated: "2026-03-22T23:47:41.774Z"
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-22T23:48:16.987Z"
 progress:
   total_phases: 6
   completed_phases: 4
   total_plans: 17
-  completed_plans: 11
+  completed_plans: 12
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 05 (inner-pages) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ Plan: 3 of 4
 | Phase 04 P03 | 1min | 4 tasks | 1 files |
 | Phase 05 P01 | 6min | 8 tasks | 7 files |
 | Phase 05 P03 | 2min | 3 tasks | 2 files |
+| Phase 05 P02 | 3min | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,7 @@ Recent decisions affecting current work:
 - [Phase 05]: Rich text <bold> tags in i18n JSON for inline metrics (technical adaptation, not copy modification)
 - [Phase 05]: CaseStudyCard note rendered as separate p tag below card (component lacks note prop)
 - [Phase 05]: CasaHunter sub-section headings use locale conditional strings for structural labels
+- [Phase 05]: Used inline timeline nodes instead of TimelineNode component for ReactNode rich text support
 
 ### Pending Todos
 
@@ -93,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T23:47:41.771Z
-Stopped at: Completed 05-03-PLAN.md
+Last session: 2026-03-22T23:48:16.985Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

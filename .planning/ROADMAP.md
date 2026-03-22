@@ -102,7 +102,7 @@ Plans:
 
 Plans:
 - [x] 05-01-PLAN.md — MDX infrastructure, @tailwindcss/typography, PageCTA component, all bilingual i18n content for 6 pages
-- [ ] 05-02-PLAN.md — About page (prose career blocks, principles, personal section) + Approach page (5 numbered sections)
+- [x] 05-02-PLAN.md — About page (prose career blocks, principles, personal section) + Approach page (5 numbered sections)
 - [x] 05-03-PLAN.md — Work page (2 CaseStudyCards, non-clickable) + Lab page (CasaHunter expanded inline, MoneyMind)
 - [ ] 05-04-PLAN.md — Blog listing page + Blog post with MDX content, visual verification checkpoint
 
