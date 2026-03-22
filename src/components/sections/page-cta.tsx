@@ -1,5 +1,5 @@
-import { Section } from '@/components/layout/section';
-import { Button } from '@/components/ui/button';
+import { Section } from '@/components/layout/Section';
+import { Button } from '@/components/ui/Button';
 
 interface PageCTAProps {
   text: string;
