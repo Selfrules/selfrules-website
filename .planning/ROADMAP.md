@@ -78,11 +78,13 @@ Plans:
   3. "Numbers, not words" renders 6 MetricCards in responsive grid (3x2 desktop, 2x3 tablet, 1 column mobile)
   4. "What I'm doing now" shows 2 cards side by side (desktop) or stacked (mobile), Contact section has email, LinkedIn, CV, availability tag
   5. All sections render correctly in both IT and EN with identical copy from source files
-**Plans**: TBD
+**Plans**: 3 plans
 **UI hint**: yes
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md — i18n homepage namespace (full EN+IT content), SectionHeader component, Hero section
+- [ ] 04-02-PLAN.md — HowIWork, Timeline, Metrics, CurrentWork, Contact section components
+- [ ] 04-03-PLAN.md — page.tsx translation orchestrator wiring all 6 sections, visual verification checkpoint
 
 ### Phase 5: Inner Pages
 **Goal**: All remaining pages are complete with full bilingual content, and the entire site complies with Modello B positioning
@@ -125,6 +127,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 1. Foundation | 0/1 | Planning complete | - |
 | 2. Shell | 0/3 | Planning complete | - |
 | 3. UI Primitives | 0/? | Not started | - |
-| 4. Homepage | 0/? | Not started | - |
+| 4. Homepage | 0/3 | Planning complete | - |
 | 5. Inner Pages | 0/? | Not started | - |
 | 6. SEO, Polish & Deploy | 0/? | Not started | - |
