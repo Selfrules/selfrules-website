@@ -35,5 +35,111 @@
   },
   "a11y": {
     "skipToContent": "Skip to content"
+  },
+  "homepage": {
+    "hero": {
+      "headline": "Senior Technical Product Manager. Design, code, and product management in the same head.",
+      "subtitle": "B2B SaaS . Payments . Platform. 10+ years designing interfaces, writing production code, and managing products. The advantage: when design, engineering, and business don't understand each other, no translator needed.",
+      "primaryCta": "Get in touch",
+      "secondaryCta": "See the work",
+      "tag1": "10+ years",
+      "tag2": "B2B SaaS",
+      "tag3": "Payments",
+      "tag4": "5 countries",
+      "terminalPrompt": "mattia@selfrules ~ $",
+      "signaturePhrase": "The problem is never the one from the first meeting."
+    },
+    "howIWork": {
+      "label": "HOW I WORK",
+      "title": "How I work",
+      "intro": "When design says \"the user gets stuck here because the visual hierarchy is wrong,\" engineering says \"we need 3 sprints of refactoring,\" and business says \"it's costing us \u20ac15K a month in support tickets.\" Three separate conversations. My job is to turn them into one decision.",
+      "pillar1": {
+        "title": "Designer + Developer + PM. In the same room.",
+        "text": "4 years designing interfaces. 4 writing production code. 5+ managing products and cross-functional teams of up to 10+ people. When design and engineering don't understand each other, the problem usually isn't technical. It's that nobody in the room has done both jobs. Weekly cross-functional sessions cut post-release incidents by <b>25%</b>. Less rework, fewer meetings, decisions that stick."
+      },
+      "pillar2": {
+        "title": "The problem is never the one from the first meeting",
+        "text": "An example. Payment system in crisis, 44 open problems. The pressure is \"act on everything, now.\" Two weeks talking to support, reading tickets, looking at the data. Result: 12 critical, 4 with immediate financial impact. The rest could wait. The 4 most severe resolved in 6 weeks, not 6 months. Before building anything, verify you're solving the right problem."
+      },
+      "pillar3": {
+        "title": "Prototypes, not slides",
+        "text": "A React prototype users can touch says more than any spec document. React, TypeScript, and Node.js to validate an idea before asking the team for months of development. Priority comes from user frustration, not technical complexity. And when the data says a feature isn't needed, the answer is no. Even when 60% of users are asking for it."
+      }
+    },
+    "timeline": {
+      "label": "THE PATH",
+      "title": "The path",
+      "block1": {
+        "role": "Founder & Designer",
+        "dates": "2012-2018",
+        "text": "A web design studio launched at 25 in northern Italy. 20+ clients, everything in one person: sales, design, development, delivery, support. First e-commerce site: award-worthy interface, zero sales. The rule that came out of it still holds."
+      },
+      "block2": {
+        "role": "Designer & Developer",
+        "dates": "2016-2020",
+        "text": "Joined as a UX Designer, left writing production code. B2B and B2C products for clients including Prometeia, Casavo, CliensPiu. CliensPiu: a legal practice management system used 8+ hours a day, designed and built by the same person. After 4 years of designing and then implementing the same product, the line between the two disciplines stopped making sense."
+      },
+      "block3": {
+        "role": "Product Owner",
+        "dates": "2020-2023",
+        "text": "LeadsBridge: B2B SaaS platform with 380+ connectors, Meta, Google, LinkedIn, TikTok partnerships. Solo PM, fully remote from Europe. The core flow redesign cut setup time by <b>35%</b> and unlocked revenue growth."
+      },
+      "block4": {
+        "role": "Product Manager",
+        "dates": "2023-present",
+        "text": "Payment systems, platform integrations, and cashless solutions for centers across 5 countries. A system inherited in critical state. Today: <b>99%+</b> uptime, <b>-25%</b> post-release incidents, <b>116 centers</b> integrated, team of 10+."
+      },
+      "closingLine": "Today when I talk to a designer, I understand the constraints. When I talk to a developer, I understand the trade-offs. When I talk to business, I translate."
+    },
+    "metrics": {
+      "label": "NUMBERS, NOT WORDS",
+      "title": "Numbers, not words",
+      "metric1": {
+        "number": "99%+",
+        "context": "Payment uptime and success rate \u2014 QubicaAMF. From daily crises to enterprise stability."
+      },
+      "metric2": {
+        "number": "-25%",
+        "context": "Post-release incidents \u2014 QubicaAMF. Weekly cross-functional sessions with Product, Support, and Engineering."
+      },
+      "metric3": {
+        "number": "116",
+        "context": "Centers integrated on the platform \u2014 QubicaAMF. 5 new per week."
+      },
+      "metric4": {
+        "number": "-35%",
+        "context": "Setup time \u2014 LeadsBridge. Core product flow redesign."
+      },
+      "metric5": {
+        "number": "+9%",
+        "context": "Integration adoption \u2014 QubicaAMF. 47-page PDFs replaced with 3-minute videos."
+      },
+      "metric6": {
+        "number": "-12%",
+        "context": "Payment processing times \u2014 QubicaAMF. Full payment pipeline optimization."
+      },
+      "link": "Read the full case studies"
+    },
+    "currentWork": {
+      "label": "WHAT I'M DOING NOW",
+      "title": "What I'm doing now",
+      "card1": {
+        "title": "Payments and platform at international scale",
+        "text": "Payment systems, platform integrations, and cashless solutions for centers across 5 countries. Next step: bringing AI into the operational flow to reduce manual reconciliation and support workload."
+      },
+      "card2": {
+        "title": "A personal problem turned product",
+        "text": "Finding an apartment across 8 listing sites by hand wasn't working. Automated scraping, smart scoring, 880+ listings analyzed. The tool is still running."
+      }
+    },
+    "contact": {
+      "label": "LET'S TALK",
+      "title": "Let's talk",
+      "text": "If you think my profile could work for your team, write me. Even if you're not sure it's the right fit. The best conversations I've had started with \"I'm not sure this is your thing, but...\"",
+      "email": "mattia@selfrules.org",
+      "linkedinLabel": "LinkedIn",
+      "cvLabel": "Download my CV (PDF)",
+      "availability": "EU remote . US remote . Italy hybrid"
+    }
   }
 }
