@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Scaffold Next.js 16, configure design tokens + fonts + i18n routing, build placeholder verification page
+- [x] 01-01-PLAN.md — Scaffold Next.js 16, configure design tokens + fonts + i18n routing, build placeholder verification page
 
 ### Phase 2: Shell
 **Goal**: A navigable site skeleton at all viewports -- every page shares a working navbar, footer, language toggle, mobile menu, and 404 fallback
