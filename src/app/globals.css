@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Bridge next/font CSS variables into Tailwind (external vars need @theme inline) */
 @theme inline {
