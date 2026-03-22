@@ -17,10 +17,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Layout & Navigation
 
-- [ ] **LNAV-01**: Fixed navbar with scroll behavior (transparent → bg-primary/90 backdrop-blur on scroll)
-- [ ] **LNAV-02**: Navbar links: Logo SELFRULES + Chi sono/About + Lavori/Work + Lab + Note/Notes + Parliamo/Let's talk (accent) + IT/EN toggle
-- [ ] **LNAV-03**: Mobile hamburger menu with full-screen overlay, accessible (focus trap, Escape closes)
-- [ ] **LNAV-04**: Language toggle preserves current page path when switching IT ↔ EN
+- [x] **LNAV-01**: Fixed navbar with scroll behavior (transparent → bg-primary/90 backdrop-blur on scroll)
+- [x] **LNAV-02**: Navbar links: Logo SELFRULES + Chi sono/About + Lavori/Work + Lab + Note/Notes + Parliamo/Let's talk (accent) + IT/EN toggle
+- [x] **LNAV-03**: Mobile hamburger menu with full-screen overlay, accessible (focus trap, Escape closes)
+- [x] **LNAV-04**: Language toggle preserves current page path when switching IT ↔ EN
 - [x] **LNAV-05**: Footer with bio, email, LinkedIn, GitHub, CV download link, credit "Designed and built by Mattia De Luca"
 - [ ] **LNAV-06**: 404 page with dedicated copy in both languages, link to homepage
 
@@ -155,10 +155,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-03 | Phase 1 | Pending |
 | FOUND-04 | Phase 1 | Pending |
 | FOUND-05 | Phase 1 | Pending |
-| LNAV-01 | Phase 2 | Pending |
-| LNAV-02 | Phase 2 | Pending |
-| LNAV-03 | Phase 2 | Pending |
-| LNAV-04 | Phase 2 | Pending |
+| LNAV-01 | Phase 2 | Complete |
+| LNAV-02 | Phase 2 | Complete |
+| LNAV-03 | Phase 2 | Complete |
+| LNAV-04 | Phase 2 | Complete |
 | LNAV-05 | Phase 2 | Complete |
 | LNAV-06 | Phase 2 | Pending |
 | COPY-04 | Phase 2 | Complete |
