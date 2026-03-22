@@ -27,13 +27,119 @@
   },
   "notFound": {
     "headline": "Questa pagina non esiste. Ma il resto del sito si.",
-    "signaturePhrase": "Il problema non è mai quello del primo meeting.",
+    "signaturePhrase": "Il problema non \u00e8 mai quello del primo meeting.",
     "backLink": "Torna alla homepage"
   },
   "common": {
-    "signaturePhrase": "Il problema non è mai quello del primo meeting."
+    "signaturePhrase": "Il problema non \u00e8 mai quello del primo meeting."
   },
   "a11y": {
     "skipToContent": "Vai al contenuto"
+  },
+  "homepage": {
+    "hero": {
+      "headline": "Senior Technical Product Manager. Design, codice, e product management nella stessa testa.",
+      "subtitle": "B2B SaaS . Payments . Platform. 10+ anni a progettare interfacce, scrivere codice in produzione, e gestire prodotti. Il vantaggio: quando design, engineering e business non si capiscono, non serve un interprete.",
+      "primaryCta": "Scrivimi",
+      "secondaryCta": "Guarda i lavori",
+      "tag1": "10+ anni",
+      "tag2": "B2B SaaS",
+      "tag3": "Payments",
+      "tag4": "5 paesi",
+      "terminalPrompt": "mattia@selfrules ~ $",
+      "signaturePhrase": "Il problema non e' mai quello del primo meeting."
+    },
+    "howIWork": {
+      "label": "COME LAVORO",
+      "title": "Come lavoro",
+      "intro": "Quando il design dice \"l'utente si blocca qui perch\u00e9 la gerarchia visiva \u00e8 sbagliata\", l'engineering dice \"servono 3 sprint di refactoring\", e il business dice \"ci costa \u20ac15K al mese in ticket di supporto\". Tre conversazioni separate. Il mio lavoro \u00e8 trasformarle in una decisione.",
+      "pillar1": {
+        "title": "Designer + Developer + PM. Nella stessa stanza.",
+        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a gestire prodotti e team cross-funzionali fino a 10+ persone. Quando design e engineering non si capiscono, il problema di solito non \u00e8 tecnico. \u00c8 che nessuno in stanza ha fatto entrambi i lavori. Le sessioni cross-funzionali settimanali hanno tagliato gli incidenti post-release del <b>25%</b>. Meno rework, meno meeting, decisioni che reggono."
+      },
+      "pillar2": {
+        "title": "Il problema non \u00e8 mai quello del primo meeting",
+        "text": "Un esempio. Sistema di pagamento in crisi, 44 problemi aperti. La pressione \u00e8 \"agire su tutto, subito.\" Due settimane a parlare con il supporto, leggere i ticket, guardare i dati. Risultato: 12 critici, 4 con impatto finanziario immediato. Gli altri potevano aspettare. I 4 pi\u00f9 gravi risolti in 6 settimane, non 6 mesi. Prima di costruire qualcosa, verifica di star risolvendo il problema giusto."
+      },
+      "pillar3": {
+        "title": "Prototipi, non slide",
+        "text": "Un prototipo in React che gli utenti possono toccare dice pi\u00f9 di qualsiasi documento di specifiche. React, TypeScript e Node.js per validare un'idea prima di chiedere mesi di sviluppo al team. La priorit\u00e0 viene dalla frustrazione dell'utente, non dalla complessit\u00e0 tecnica. E quando i dati dicono che una feature non serve, la risposta \u00e8 no. Anche se la chiede il 60% degli utenti."
+      }
+    },
+    "timeline": {
+      "label": "IL PERCORSO",
+      "title": "Il percorso",
+      "block1": {
+        "role": "Founder e Designer",
+        "dates": "2012-2018",
+        "text": "Uno studio di web design fondato a 25 anni. 20+ clienti, tutto in una persona: vendita, design, sviluppo, consegna, supporto. Primo e-commerce: interfaccia da premio, zero vendite. La regola che ne \u00e8 uscita vale ancora."
+      },
+      "block2": {
+        "role": "Designer e Developer",
+        "dates": "2016-2020",
+        "text": "Entrato come UX Designer, uscito scrivendo codice in produzione. Prodotti B2B e B2C per clienti come Prometeia, Casavo, CliensPi\u00f9. CliensPi\u00f9: un gestionale per studi legali usato 8+ ore al giorno, progettato e sviluppato dalla stessa persona. Dopo 4 anni a fare design e poi implementare lo stesso prodotto, la distinzione tra le due discipline ha smesso di avere senso."
+      },
+      "block3": {
+        "role": "Product Owner",
+        "dates": "2020-2023",
+        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori, partnership Meta, Google, LinkedIn, TikTok. Unico PM, completamente remoto dall'Europa. Il redesign del flusso core ha tagliato il tempo di configurazione del <b>35%</b> e sbloccato la crescita del revenue."
+      },
+      "block4": {
+        "role": "Product Manager",
+        "dates": "2023-oggi",
+        "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Un sistema ereditato in stato critico. Oggi: <b>99%+</b> uptime, <b>-25%</b> incidenti post-release, <b>116 centri</b> integrati, team di 10+."
+      },
+      "closingLine": "Oggi quando parlo con un designer, capisco i vincoli. Quando parlo con uno sviluppatore, capisco i trade-off. Quando parlo con il business, traduco."
+    },
+    "metrics": {
+      "label": "NUMERI, NON PAROLE",
+      "title": "Numeri, non parole",
+      "metric1": {
+        "number": "99%+",
+        "context": "Uptime e success rate pagamenti \u2014 QubicaAMF. Da crisi quotidiana a stabilit\u00e0 enterprise."
+      },
+      "metric2": {
+        "number": "-25%",
+        "context": "Incidenti post-release \u2014 QubicaAMF. Sessioni cross-funzionali settimanali con Product, Support e Engineering."
+      },
+      "metric3": {
+        "number": "116",
+        "context": "Centri integrati sulla piattaforma \u2014 QubicaAMF. 5 nuovi a settimana."
+      },
+      "metric4": {
+        "number": "-35%",
+        "context": "Tempo di configurazione \u2014 LeadsBridge. Redesign del flusso core del prodotto."
+      },
+      "metric5": {
+        "number": "+9%",
+        "context": "Adozione integrazioni \u2014 QubicaAMF. PDF da 47 pagine sostituiti con video da 3 minuti."
+      },
+      "metric6": {
+        "number": "-12%",
+        "context": "Tempi di processing pagamenti \u2014 QubicaAMF. Ottimizzazione dell'intera pipeline di pagamento."
+      },
+      "link": "Leggi i case study completi"
+    },
+    "currentWork": {
+      "label": "COSA FACCIO ORA",
+      "title": "Cosa faccio ora",
+      "card1": {
+        "title": "Payments e platform a scala internazionale",
+        "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Il prossimo passo: portare AI nel flusso operativo per ridurre il lavoro manuale di riconciliazione e supporto."
+      },
+      "card2": {
+        "title": "Un problema personale diventato prodotto",
+        "text": "Trovare casa monitorando 8 portali a mano non funzionava. Scraping automatico, scoring intelligente, 880+ annunci analizzati. Il tool \u00e8 ancora attivo."
+      }
+    },
+    "contact": {
+      "label": "PARLIAMO",
+      "title": "Parliamo",
+      "text": "Se pensi che il mio profilo possa servire al tuo team, scrivimi. Anche se non sei sicuro che sia il fit giusto. Le conversazioni migliori che ho avuto sono iniziate con \"non so se \u00e8 una cosa per te, ma...\".",
+      "email": "mattia@selfrules.org",
+      "linkedinLabel": "LinkedIn",
+      "cvLabel": "Scarica il mio CV (PDF)",
+      "availability": "EU remote . US remote . Italia ibrido"
+    }
   }
 }
