@@ -23,7 +23,7 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
       <div className="hidden lg:block">
         {/* Connector line */}
         <div className="relative mb-8">
-          <div className="absolute top-[4px] left-0 right-0 h-px bg-border" />
+          <div className="absolute top-[4px] left-0 right-0 h-px bg-border-default" />
           <div className="grid grid-cols-4 gap-8">
             {blocks.map((block, index) => (
               <div key={index} className="relative pt-6">
@@ -54,7 +54,7 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
       <div className="lg:hidden">
         <div className="relative pl-8">
           {/* Vertical connector line */}
-          <div className="absolute top-0 bottom-0 left-[4px] w-[2px] bg-border" />
+          <div className="absolute top-0 bottom-0 left-[4px] w-[2px] bg-border-default" />
           {blocks.map((block, index) => (
             <div key={index} className="relative mb-10 last:mb-0">
               {/* Square node */}

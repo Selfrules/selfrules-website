@@ -1,9 +1,5 @@
 import { cn } from '@/lib/utils';
-
-// Usage: Wrap MetricCard components in a grid container:
-// <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--border-default)] border border-default">
-//   <MetricCard ... />
-// </div>
+import { CountUpNumber } from '@/components/ui/CountUpNumber';
 
 interface MetricCardProps {
   number: string;
@@ -22,9 +18,10 @@ export function MetricCard({ number, label, context, className }: MetricCardProp
         className
       )}
     >
-      <p className="font-heading font-bold text-accent text-[clamp(40px,5vw,72px)] leading-none">
-        {number}
-      </p>
+      <CountUpNumber
+        value={number}
+        className="font-heading font-bold text-accent text-[clamp(40px,5vw,72px)] leading-none block"
+      />
       <p className="text-[13px] text-primary mt-4">{label}</p>
       <p className="text-[13px] text-tertiary mt-1">{context}</p>
     </div>
