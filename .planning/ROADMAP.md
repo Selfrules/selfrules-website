@@ -30,10 +30,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Running `next build` produces static output (circle icons, not lambda) for all routes
   3. Design tokens (colors, spacing, typography scale, 0px border-radius) are available as Tailwind utilities throughout the project
   4. Inter and JetBrains Mono render correctly with no layout shift on page load
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Scaffold Next.js 16, configure design tokens + fonts + i18n routing, build placeholder verification page
 
 ### Phase 2: Shell
 **Goal**: A navigable site skeleton at all viewports -- every page shares a working navbar, footer, language toggle, mobile menu, and 404 fallback
@@ -120,7 +120,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
+| 1. Foundation | 0/1 | Planning complete | - |
 | 2. Shell | 0/? | Not started | - |
 | 3. UI Primitives | 0/? | Not started | - |
 | 4. Homepage | 0/? | Not started | - |
