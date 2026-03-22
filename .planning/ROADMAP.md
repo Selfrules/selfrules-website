@@ -62,11 +62,12 @@ Plans:
   2. MetricCard displays accent-colored monospace number, label, and context with hover border-accent transition
   3. CaseStudyCard and ProjectCard render with correct layout, tags, hover translate-y and border-accent effects
   4. Section wrapper applies configurable max-width (720px default, 1080px wide) and section-gap padding consistently
-**Plans**: TBD
+**Plans**: 2 plans
 **UI hint**: yes
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md — cn() utility, Tag, Button, Section wrapper, SectionHeader (foundational components)
+- [ ] 03-02-PLAN.md — MetricCard, CaseStudyCard, ProjectCard, TimelineBlock, /dev/components verification route + visual checkpoint
 
 ### Phase 4: Homepage
 **Goal**: The homepage is complete with all 6 sections, bilingual content, and the visual language that inner pages will inherit
@@ -132,7 +133,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/1 | Planning complete | - |
 | 2. Shell | 0/3 | Planning complete | - |
-| 3. UI Primitives | 0/? | Not started | - |
+| 3. UI Primitives | 0/2 | Planning complete | - |
 | 4. Homepage | 0/3 | Planning complete | - |
 | 5. Inner Pages | 0/4 | Planning complete | - |
 | 6. SEO, Polish & Deploy | 0/4 | Planning complete | - |
