@@ -49,8 +49,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **PAGE-02**: Work page with headline + intro, 2 CaseStudyCards (1 with [BOZZA] note), CTA
 - [x] **PAGE-03**: Lab page with headline + intro, CasaHunter ProjectCard with full detail, "Prossimamente" MoneyMind, CTA
 - [x] **PAGE-04**: Approach page with headline + intro, 5 numbered sections, closing + CTA, max-width 720px
-- [ ] **PAGE-05**: Blog listing with headline, post list (date mono + title + excerpt), empty state copy
-- [ ] **PAGE-06**: Blog post page — "Why I Prototype in Code" with section-title, date mono, prose styling (720px, line-height 1.7-1.8)
+- [x] **PAGE-05**: Blog listing with headline, post list (date mono + title + excerpt), empty state copy
+- [x] **PAGE-06**: Blog post page — "Why I Prototype in Code" with section-title, date mono, prose styling (720px, line-height 1.7-1.8)
 
 ### Copy & i18n
 
@@ -181,8 +181,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PAGE-02 | Phase 5 | Complete |
 | PAGE-03 | Phase 5 | Complete |
 | PAGE-04 | Phase 5 | Complete |
-| PAGE-05 | Phase 5 | Pending |
-| PAGE-06 | Phase 5 | Pending |
+| PAGE-05 | Phase 5 | Complete |
+| PAGE-06 | Phase 5 | Complete |
 | COPY-01 | Phase 5 | Complete |
 | COPY-02 | Phase 5 | Complete |
 | COPY-03 | Phase 5 | Complete |

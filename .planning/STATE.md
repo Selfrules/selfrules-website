@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to execute
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-03-22T23:48:16.987Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 05-04-PLAN.md
+last_updated: "2026-03-22T23:52:58.510Z"
 progress:
   total_phases: 6
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 17
-  completed_plans: 12
+  completed_plans: 13
 ---
 
 # Project State
@@ -57,6 +57,7 @@ Plan: 4 of 4
 | Phase 05 P01 | 6min | 8 tasks | 7 files |
 | Phase 05 P03 | 2min | 3 tasks | 2 files |
 | Phase 05 P02 | 3min | 3 tasks | 2 files |
+| Phase 05 P04 | 3min | 4 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,8 @@ Recent decisions affecting current work:
 - [Phase 05]: CaseStudyCard note rendered as separate p tag below card (component lacks note prop)
 - [Phase 05]: CasaHunter sub-section headings use locale conditional strings for structural labels
 - [Phase 05]: Used inline timeline nodes instead of TimelineNode component for ReactNode rich text support
+- [Phase 05]: MDX metadata via export const pattern, not YAML frontmatter
+- [Phase 05]: Single slug why-i-prototype-in-code for both locales per D-08
 
 ### Pending Todos
 
@@ -95,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T23:48:16.985Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-03-22T23:52:53.715Z
+Stopped at: Completed 05-04-PLAN.md
 Resume file: None
