@@ -60,21 +60,16 @@ Source: implementation-plan.md design tokens
 
 | Role | Size | Weight | Line Height | Font | Usage in Phase 4 |
 |------|------|--------|-------------|------|-------------------|
-| Hero headline | clamp(40px, 5vw, 64px) | 700 | 1.1 | Inter | Hero H1 |
-| Section title | clamp(28px, 3vw, 36px) | 600 | 1.2 | Inter | "Come lavoro", "Il percorso", "Numeri, non parole", "Cosa faccio ora", "Parliamo" |
-| Card title | 20px | 600 | 1.3 | Inter | Pillar titles, "Now" card titles, timeline role titles |
-| Body large | 18-20px | 400 | 1.6 | Inter | Hero subtitle, "How I Work" intro paragraph |
-| Body | 16px | 400 | 1.7 | Inter | Pillar descriptions, timeline block text, "Now" card descriptions, contact text |
-| Label | 14px | 500 | 1.4 | JetBrains Mono | Section labels (uppercase, tracking 0.05em), availability tag |
-| Small | 12-13px | 400 | 1.4 | Inter | Metric context lines |
-| Metric number | clamp(40px, 5vw, 64px) | 700 | 1.0 | JetBrains Mono | MetricCard numbers, always in accent color |
+| Display | clamp(40px, 5vw, 64px) | 700 | 1.1 | Inter (headline) / JetBrains Mono (metrics) | Hero H1, MetricCard numbers (accent color, font-mono) |
+| Title | clamp(28px, 3vw, 36px) | 700 | 1.2 | Inter | Section titles ("Come lavoro", "Il percorso", "Numeri, non parole", "Cosa faccio ora", "Parliamo"), card titles (pillar headings, "Now" card headings, timeline role titles, email link in contact) |
+| Body | 16px | 400 | 1.6 | Inter | Hero subtitle, "How I Work" intro paragraph, pillar descriptions, timeline block text, "Now" card descriptions, contact text. For emphasis within body (hero subtitle, intro paragraphs), increase line-height to 1.7 instead of changing size. |
+| Label | 14px | 400 | 1.4 | JetBrains Mono | Section labels, credential tags, timeline dates, metric context lines, availability tag. Always `uppercase`, `letter-spacing: 0.05em`. Visual distinction from body achieved via font family (JetBrains Mono), uppercase transform, and letter-spacing -- not via weight. |
 
 Additional typography rules:
-- Label role: always `uppercase`, `letter-spacing: 0.05em`, `font-mono`
-- Credential tags in hero: 12-13px, JetBrains Mono, uppercase, tracking-wide, text-secondary color
-- Timeline dates: JetBrains Mono, 14px, text-secondary
-- Email address in contact: JetBrains Mono, 20-24px, accent color on hover
-- Bold text within body copy (e.g., **25%**): weight 600, same size as surrounding text
+- Bold text within body copy (e.g., **25%**, **99%+**): weight 700, same size as surrounding text
+- Card titles use the title clamp at its natural responsive size; they do not need a separate fixed size
+- Email address in contact section: title size, JetBrains Mono, accent color on hover
+- Only two weights are used across the entire page: 400 (body, labels) and 700 (headlines, titles, inline bold)
 
 Source: implementation-plan.md typography scale, figma-make-prompt.md
 
@@ -142,25 +137,25 @@ New section components created in Phase 4:
 - Height: `min-h-screen`, content vertically centered or upper-third aligned
 - Alignment: left-aligned (not centered)
 - Content width: 720px max-width
-- Headline: hero-headline size, text-primary
-- Subtitle: body-large size, text-secondary, 2-3 lines
+- Headline: display size, weight 700, text-primary
+- Subtitle: body size (16px), weight 400, line-height 1.7, text-secondary, 2-3 lines
 - CTAs: two buttons side by side, 16px gap between them
 - Credential tags: horizontal row below CTAs, 24px margin-top from CTAs, 8px gap between tags
 
 ### How I Work Section (HOME-02)
-- Section label: 14px mono uppercase above title
-- Intro paragraph: body-large, text-secondary, max-width 720px
+- Section label: label role (14px mono uppercase)
+- Intro paragraph: body size (16px), line-height 1.7, text-secondary, max-width 720px
 - Pillar grid: 3 columns at desktop (>=1024px), 1 column at mobile
-- Each pillar: card-title for heading, body for text, no background, no border
+- Each pillar: title size for heading (weight 700), body size for text, no background, no border
 - Grid gap: 32px between columns, 48px between rows on mobile
 
 ### Journey Section (HOME-03)
 - Horizontal timeline at desktop (>=1024px): 4 blocks in a row with visual connector line
 - Vertical timeline at mobile: stacked blocks with vertical connector line
 - Connector: 1px line in border-default color
-- Each block: card-title for role, body for company/text, dates in mono 14px text-secondary
+- Each block: title size for role (weight 700), body for company/text, dates in label role (14px mono, text-secondary)
 - Overlapping phases (Designer 2012-18 and Developer 2016-20): visually represented through overlapping date ranges
-- Closing phrase: body-large, text-primary, 48px margin-top, max-width 720px
+- Closing phrase: body size (16px), line-height 1.7, text-primary, 48px margin-top, max-width 720px
 
 ### Numbers Section (HOME-04)
 - Grid: 3 columns x 2 rows at desktop (>=1024px), 2x3 at tablet (>=640px), 1 column at mobile
@@ -177,9 +172,9 @@ New section components created in Phase 4:
 
 ### Contact Section (HOME-06)
 - Max-width: 720px
-- Email: JetBrains Mono, 20-24px, text-primary, transitions to accent on hover
+- Email: title size, JetBrains Mono, text-primary, transitions to accent on hover
 - Links (LinkedIn, CV): body size, text-secondary, accent on hover, arrow suffix
-- Availability tag: Tag component style (mono, uppercase, text-secondary), inline display
+- Availability tag: Tag component style (label role: mono, uppercase, text-secondary), inline display
 - Vertical spacing between elements: 16px between text items, 32px between groups
 
 ---
