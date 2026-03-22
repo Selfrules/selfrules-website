@@ -37,11 +37,11 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Homepage
 
 - [x] **HOME-01**: Hero section — full viewport height, left-aligned, headline + subtitle + 2 CTAs + monospace tags
-- [ ] **HOME-02**: "Come lavoro" / "How I Work" section — 3 columns desktop, 1 mobile, label + 3 pillars
-- [ ] **HOME-03**: "Percorso" / "Journey" section — timeline (horizontal desktop, vertical mobile), 4 blocks + closing phrase
-- [ ] **HOME-04**: "Numeri, non parole" / "Numbers, not words" section — 6 MetricCards in responsive grid (3x2 → 2x3 → 1x6)
-- [ ] **HOME-05**: "Cosa faccio ora" / "What I'm doing now" section — 2 cards side by side desktop, stacked mobile
-- [ ] **HOME-06**: "Parliamo" / "Let's talk" section — title, invite text, email (mono, accent hover), LinkedIn, CV, availability tag
+- [x] **HOME-02**: "Come lavoro" / "How I Work" section — 3 columns desktop, 1 mobile, label + 3 pillars
+- [x] **HOME-03**: "Percorso" / "Journey" section — timeline (horizontal desktop, vertical mobile), 4 blocks + closing phrase
+- [x] **HOME-04**: "Numeri, non parole" / "Numbers, not words" section — 6 MetricCards in responsive grid (3x2 → 2x3 → 1x6)
+- [x] **HOME-05**: "Cosa faccio ora" / "What I'm doing now" section — 2 cards side by side desktop, stacked mobile
+- [x] **HOME-06**: "Parliamo" / "Let's talk" section — title, invite text, email (mono, accent hover), LinkedIn, CV, availability tag
 
 ### Inner Pages
 
@@ -172,11 +172,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UICM-06 | Phase 3 | Complete |
 | UICM-07 | Phase 3 | Complete |
 | HOME-01 | Phase 4 | Complete |
-| HOME-02 | Phase 4 | Pending |
-| HOME-03 | Phase 4 | Pending |
-| HOME-04 | Phase 4 | Pending |
-| HOME-05 | Phase 4 | Pending |
-| HOME-06 | Phase 4 | Pending |
+| HOME-02 | Phase 4 | Complete |
+| HOME-03 | Phase 4 | Complete |
+| HOME-04 | Phase 4 | Complete |
+| HOME-05 | Phase 4 | Complete |
+| HOME-06 | Phase 4 | Complete |
 | PAGE-01 | Phase 5 | Pending |
 | PAGE-02 | Phase 5 | Pending |
 | PAGE-03 | Phase 5 | Pending |
