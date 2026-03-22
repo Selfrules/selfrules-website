@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Bridge next/font CSS variables into Tailwind (external vars need @theme inline) */
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-jetbrains);
+}
+
+@theme {
+  /* Colors */
+  --color-primary: #0A0A0B;
+  --color-surface: #111113;
+  --color-hover: #1A1A1F;
+  --color-border-default: #1A1A1F;
+  --color-border-accent: #E8A838;
+  --color-text-primary: #F5F5F0;
+  --color-text-secondary: #8A8A8E;
+  --color-text-tertiary: #5A5A5E;
+  --color-accent: #E8A838;
+  --color-accent-hover: #D4962F;
+
+  /* Typography scale */
+  --text-hero: clamp(40px, 5vw, 64px);
+  --text-section-title: clamp(28px, 3vw, 36px);
+  --text-card-title: 20px;
+  --text-body: 16px;
+  --text-body-lg: 18px;
+  --text-label: 14px;
+  --text-small: 13px;
+  --text-metric: clamp(40px, 5vw, 64px);
+
+  /* Spacing */
+  --spacing-section: clamp(80px, 10vw, 160px);
+  --spacing-page-padding: clamp(20px, 5vw, 80px);
+
+  /* Content widths */
+  --width-content: 720px;
+  --width-wide: 1080px;
+
+  /* Border radius — 0px everywhere (SIGNATURE ELEMENT) */
+  --radius-*: initial;
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-full: 0px;
+}
+
+/* SIGNATURE: Global reset — no border-radius anywhere, ever */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}

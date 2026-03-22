@@ -1,0 +1,9 @@
+{
+  "placeholder": {
+    "title": "selfrules.org",
+    "fontCheck": "Questo testo usa Inter (sans) e",
+    "headingCheck": "Space Grotesk per i titoli",
+    "monoCheck": "questo usa JetBrains Mono",
+    "locale": "Italiano"
+  }
+}
