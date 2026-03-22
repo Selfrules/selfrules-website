@@ -21,7 +21,7 @@ created: 2026-03-22
 | Preset | not applicable |
 | Component library | none (pure Tailwind v4 utilities) |
 | Icon library | none (arrow in CTA buttons is a text character or inline SVG) |
-| Font | Inter (variable, 400-700) + JetBrains Mono (variable, 400-500) via next/font/google |
+| Font | Inter (variable, 400-700) + JetBrains Mono (variable, 400-700) via next/font/google |
 
 **Inherited from Phase 1.** No component library, no shadcn. All styling via Tailwind CSS v4 `@theme` tokens in globals.css. Locked project-level decision.
 
@@ -58,42 +58,48 @@ Inherited from Phase 1 UI-SPEC. All values are multiples of 4.
 
 ## Typography
 
-Inherited from Phase 1. Phase 3 components use specific subsets:
+Inherited from Phase 1. Phase 3 components use exactly 4 sizes and 2 weights.
 
 | Role | Size | Weight | Line Height | Font | Phase 3 Usage |
 |------|------|--------|-------------|------|---------------|
-| Display | `clamp(40px, 5vw, 64px)` | 700 | 1.1 | Inter | Not used in Phase 3 components |
-| Section title | `clamp(28px, 3vw, 36px)` | 600 | 1.2 | Inter | SectionHeader title (if included in Section wrapper) |
-| Card title | 20px | 600 | 1.3 | Inter | CaseStudyCard title, ProjectCard title, TimelineBlock role title |
-| Body | 16px | 400 | 1.7 | Inter | CaseStudyCard preview, ProjectCard one-liner, TimelineBlock description |
-| Body large | 20px | 400 | 1.6 | Inter | Not used in component internals |
-| Small | 13px | 400 | 1.4 | Inter | MetricCard context line, Tag text |
-| Metric number | `clamp(40px, 5vw, 64px)` | 700 | 1.0 | JetBrains Mono | MetricCard number (accent color) |
+| Small | 13px | 400 | 1.4 | Inter or JetBrains Mono | Tag text (mono, uppercase, tracking 0.05em), MetricCard context, section label (mono, uppercase, tracking 0.05em), MetricCard label, ProjectCard status label, TimelineBlock dates (mono), CaseStudyCard tag (via Tag component) |
+| Body | 16px | 400 | 1.7 | Inter | Button text, CaseStudyCard preview, ProjectCard one-liner, TimelineBlock company, TimelineBlock description |
+| Title | 20px | 700 | 1.3 | Inter | CaseStudyCard title, ProjectCard title, TimelineBlock role, SectionHeader title |
+| Metric | `clamp(40px, 5vw, 72px)` | 700 | 1.0 | JetBrains Mono | MetricCard number (accent color), CaseStudyCard metric number (accent color, right-aligned) |
+
+**Weight map (2 weights only):**
+
+| Weight | Value | Usage |
+|--------|-------|-------|
+| Regular | 400 | Body text, button labels, small/context text, tags, section labels, metric labels, status labels, dates |
+| Bold | 700 | Card titles, section titles, metric display numbers |
 
 **Phase 3 specific type rules:**
 
 | Element | Size | Weight | Font | Details |
 |---------|------|--------|------|---------|
-| Button text | 16px | 500 | Inter | Normal case |
-| Tag text | 12px | 400 | JetBrains Mono | `text-transform: uppercase`, `letter-spacing: 0.05em` |
-| Section label | 14px | 500 | JetBrains Mono | `text-transform: uppercase`, `letter-spacing: 0.05em`, text-secondary |
-| MetricCard number | `clamp(40px, 5vw, 64px)` | 700 | JetBrains Mono | Accent color (#E8A838) |
-| MetricCard label | 14px | 500 | Inter | text-primary |
-| MetricCard context | 13px | 400 | Inter | text-tertiary |
-| CaseStudyCard tag | 12px | 400 | JetBrains Mono | Uppercase, tracking-wide, text-secondary (uses Tag component) |
-| CaseStudyCard title | 20px | 600 | Inter | text-primary |
-| CaseStudyCard preview | 16px | 400 | Inter | text-secondary |
-| CaseStudyCard metric | `clamp(48px, 5vw, 72px)` | 700 | JetBrains Mono | Accent color, right-aligned |
-| ProjectCard title | 20px | 600 | Inter | text-primary |
-| ProjectCard one-liner | 16px | 400 | Inter | text-secondary |
-| ProjectCard status label | 13px | 400 | Inter | text-secondary |
-| TimelineBlock dates | 13px | 400 | JetBrains Mono | text-tertiary |
-| TimelineBlock role | 20px | 600 | Inter | text-primary |
-| TimelineBlock company | 16px | 400 | Inter | text-secondary |
+| Button text | 16px (Body) | 400 | Inter | Normal case |
+| Tag text | 13px (Small) | 400 | JetBrains Mono | `text-transform: uppercase`, `letter-spacing: 0.05em` |
+| Section label | 13px (Small) | 400 | JetBrains Mono | `text-transform: uppercase`, `letter-spacing: 0.05em`, text-secondary |
+| MetricCard number | clamp(40px, 5vw, 72px) (Metric) | 700 | JetBrains Mono | Accent color (#E8A838) |
+| MetricCard label | 13px (Small) | 400 | Inter | text-primary |
+| MetricCard context | 13px (Small) | 400 | Inter | text-tertiary |
+| CaseStudyCard tag | 13px (Small) | 400 | JetBrains Mono | Uppercase, tracking-wide, text-secondary (uses Tag component) |
+| CaseStudyCard title | 20px (Title) | 700 | Inter | text-primary |
+| CaseStudyCard preview | 16px (Body) | 400 | Inter | text-secondary |
+| CaseStudyCard metric | clamp(40px, 5vw, 72px) (Metric) | 700 | JetBrains Mono | Accent color, right-aligned |
+| ProjectCard title | 20px (Title) | 700 | Inter | text-primary |
+| ProjectCard one-liner | 16px (Body) | 400 | Inter | text-secondary |
+| ProjectCard status label | 13px (Small) | 400 | Inter | text-secondary |
+| TimelineBlock dates | 13px (Small) | 400 | JetBrains Mono | text-tertiary |
+| TimelineBlock role | 20px (Title) | 700 | Inter | text-primary |
+| TimelineBlock company | 16px (Body) | 400 | Inter | text-secondary |
 
 ---
 
 ## Color
+
+**60/30/10 split:** 60% dominant background (#0A0A0B), 30% surface/cards/borders (#111113 + #1A1A1F), 10% accent (#E8A838) reserved for CTAs, metric numbers, and hover highlights.
 
 Inherited from Phase 1. Phase 3 uses all tokens:
 
@@ -141,7 +147,7 @@ Both variants:
 - Height: 48px (h-12)
 - Padding: 12px vertical, 24px horizontal (inferred from `px-8` = 32px in Figma prototype -- use `px-8`)
 - Corrected padding from prototype: `h-12 px-8` (48px height, 32px horizontal padding)
-- Font weight: 500
+- Font weight: 400
 - Display: `inline-flex items-center justify-center`
 - Border radius: 0px
 - When `href` is provided: renders as `<a>` (or Next.js `<Link>`). When absent: renders as `<button>`.
@@ -317,7 +323,7 @@ Left side (flex: 1):
   Preview text (below title, mt-2)
 
 Right side (flex-shrink: 0, self-center):
-  Large accent number (clamp 48-72px, font-mono, font-bold)
+  Large accent number (clamp 40-72px, font-mono, font-bold)
   Optional metric label below (13px, text-tertiary)
   Arrow icon (inline SVG, 16px, accent color, to the right of number)
 ```
@@ -356,7 +362,7 @@ Card:
 
 Content stack (vertical):
   Row 1: Dates (font-mono, text-tertiary, 13px)
-  Row 2: Role title (card-title, mt-1)
+  Row 2: Role title (title, mt-1)
   Row 3: Company (body, text-secondary, mt-1)
   Row 4: Description (body, text-secondary, mt-2) -- optional, only if provided
 ```
@@ -483,9 +489,9 @@ A `/dev/components` route that displays all Phase 3 components with their varian
 | 2 | Button secondary renders with transparent bg, 1px border, text-primary | Visual inspection |
 | 3 | Button primary hover: bg darkens to accent-hover, translates up 1px | Hover on /dev/components |
 | 4 | Button secondary hover: border turns accent, text turns accent | Hover on /dev/components |
-| 5 | Tag renders in JetBrains Mono, uppercase, tracking-wide, 12px | DevTools font inspector |
+| 5 | Tag renders in JetBrains Mono, uppercase, tracking-wide, 13px | DevTools font inspector |
 | 6 | MetricCard grid shows shared 1px borders (gap-[1px] pattern works) | Visual inspection of 6-card grid |
-| 7 | MetricCard number is accent-colored, font-mono, large (clamp 40-64px) | Visual inspection |
+| 7 | MetricCard number is accent-colored, font-mono, large (clamp 40-72px) | Visual inspection |
 | 8 | MetricCard hover: border color transitions to accent/40 | Hover on grid cells |
 | 9 | CaseStudyCard shows tag+title+preview left, large metric right (desktop) | Visual inspection >= 768px |
 | 10 | CaseStudyCard stacks metric below text on mobile | Resize to < 768px |
