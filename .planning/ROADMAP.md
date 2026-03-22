@@ -67,7 +67,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md — cn() utility, Tag, Button, Section wrapper, SectionHeader (foundational components)
-- [ ] 03-02-PLAN.md — MetricCard, CaseStudyCard, ProjectCard, TimelineBlock, /dev/components verification route + visual checkpoint
+- [x] 03-02-PLAN.md — MetricCard, CaseStudyCard, ProjectCard, TimelineBlock, /dev/components verification route + visual checkpoint
 
 ### Phase 4: Homepage
 **Goal**: The homepage is complete with all 6 sections, bilingual content, and the visual language that inner pages will inherit
