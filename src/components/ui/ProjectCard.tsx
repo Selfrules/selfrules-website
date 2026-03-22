@@ -37,10 +37,10 @@ export function ProjectCard({
     >
       <div className="flex items-center gap-2">
         <h3 className="font-heading font-bold text-xl text-primary">{title}</h3>
-        {/* Status dot: only exception to 0px border-radius (uses inline style to override global reset) */}
+        {/* Status dot: only exception to 0px border-radius (data-status-dot overrides global reset) */}
         <span
           className={cn('w-2 h-2 rounded-full inline-block', statusColors[status])}
-          style={{ borderRadius: '9999px' }}
+          data-status-dot
           aria-hidden="true"
         />
         <span className="text-[13px] text-secondary">{statusLabel}</span>
