@@ -83,13 +83,15 @@ Inherited from Phase 4:
 Phase 5 typography additions:
 - Career block dates (About): label role (14px mono), placed directly below the bold company heading, text-secondary
 - Approach numbered section titles: subtitle role (20px, weight 700), number included in the text (e.g., "1. Understand before you touch anything"), not a separate visual marker
-- Blog listing post titles: 18px, weight 400, text-primary, link style (accent on hover)
+- Blog listing post titles: subtitle size (20px), weight 400, text-primary, link style (accent on hover). Uses the subtitle size at body weight to create clear hierarchy: 14px date, 16px excerpt, 20px title, clamp(28-36px) page headline
 - Blog listing excerpts: 16px, weight 400, text-secondary, single line
 - Blog post inline code: JetBrains Mono, 14px, bg-surface padding 2px 6px
 - Bold text within body: weight 700, same size (e.g., **35%**, **99%+** in career and approach prose)
 - [BOZZA]/[DRAFT] note on CaseStudyCard 2: label role, text-secondary, inline with card content
 
-Only two weights across all inner pages: 400 (body, labels) and 700 (headlines, subtitles, inline bold).
+Typography scale used in Phase 5 (4 sizes, 2 weights):
+- 14px (label) / 16px (body) / 20px (subtitle, blog listing titles) / clamp(28-36px) (title)
+- Weights: 400 (body, labels, blog listing titles) and 700 (headlines, subtitles, inline bold)
 
 Source: Phase 4 UI-SPEC typography, figma-make-prompt.md Prompt 2-5
 
@@ -250,7 +252,7 @@ Source: Phase 4 UI-SPEC color contract
 **Post list:** max-width 720px
 - Each entry:
   - Date: label role (14px mono, text-secondary, uppercase)
-  - Title: 18px, weight 400, text-primary, hover text-accent (150ms transition). Clickable link to post
+  - Title: subtitle size (20px), weight 400, text-primary, hover text-accent (150ms transition). Clickable link to post. Uses subtitle size at body weight for clear prominence over 16px excerpt without matching the bold 700 weight of section subtitles
   - Excerpt: 16px, weight 400, text-secondary, single line, 4px below title
 - 48px vertical gap between entries
 - With 1 post, the page will be sparse -- this is intentional (D-07)
@@ -311,7 +313,7 @@ Inherited from Phase 4. Phase 5 additions:
 | Primary CTA (PageCTA) | bg-accent, text #0A0A0B | translate-y(-1px), bg-accent-hover | translate-y(0) | 2px outline accent, 2px offset |
 | Secondary CTA (PageCTA) | bg-transparent, border border-default, text-primary | border-accent, text-accent | opacity 0.9 | 2px outline accent, 2px offset |
 | CaseStudyCard | border border-default, bg-surface | border-accent, translate-y(-2px), 150ms | -- | 2px outline accent, 2px offset |
-| Blog post title (listing) | text-primary, 18px | text-accent, 150ms | underline | 2px outline accent, 2px offset |
+| Blog post title (listing) | text-primary, 20px, weight 400 | text-accent, 150ms | underline | 2px outline accent, 2px offset |
 | CasaHunter links | text-secondary | text-accent, 150ms | underline | 2px outline accent, 2px offset |
 | Prose links (blog) | text-primary, underline | text-accent, 150ms | -- | 2px outline accent, 2px offset |
 
