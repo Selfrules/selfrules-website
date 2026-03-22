@@ -96,11 +96,14 @@ Plans:
   3. Approach page renders 5 numbered sections in 720px prose width, Blog listing shows post list with dates, blog post renders with prose styling
   4. All page copy is IDENTICAL to source files -- no rewriting, no summarizing, no improving
   5. No "job seeker" framing anywhere; availability and CV download appear ONLY in Contact section and Footer
-**Plans**: TBD
+**Plans**: 4 plans
 **UI hint**: yes
 
 Plans:
-- [ ] 05-01: TBD
+- [ ] 05-01-PLAN.md — MDX infrastructure, @tailwindcss/typography, PageCTA component, all bilingual i18n content for 6 pages
+- [ ] 05-02-PLAN.md — About page (prose career blocks, principles, personal section) + Approach page (5 numbered sections)
+- [ ] 05-03-PLAN.md — Work page (2 CaseStudyCards, non-clickable) + Lab page (CasaHunter expanded inline, MoneyMind)
+- [ ] 05-04-PLAN.md — Blog listing page + Blog post with MDX content, visual verification checkpoint
 
 ### Phase 6: SEO, Polish & Deploy
 **Goal**: The site is production-ready: discoverable by search engines, accessible, performant, polished with animations, and live on selfrules.org
@@ -128,5 +131,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 2. Shell | 0/3 | Planning complete | - |
 | 3. UI Primitives | 0/? | Not started | - |
 | 4. Homepage | 0/3 | Planning complete | - |
-| 5. Inner Pages | 0/? | Not started | - |
+| 5. Inner Pages | 0/4 | Planning complete | - |
 | 6. SEO, Polish & Deploy | 0/? | Not started | - |
