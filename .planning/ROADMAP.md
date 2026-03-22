@@ -49,7 +49,7 @@ Plans:
 **UI hint**: yes
 
 Plans:
-- [ ] 02-01-PLAN.md — i18n messages, navigation utility, Footer component, root layout shell (skip-to-content, Umami proxy)
+- [x] 02-01-PLAN.md — i18n messages, navigation utility, Footer component, root layout shell (skip-to-content, Umami proxy)
 - [ ] 02-02-PLAN.md — Navbar with scroll behavior, MobileMenu with slide-in and focus trap, LanguageToggle
 - [ ] 02-03-PLAN.md — Localized 404 page with catch-all route, full phase visual verification checkpoint
 

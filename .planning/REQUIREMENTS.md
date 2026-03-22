@@ -21,7 +21,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **LNAV-02**: Navbar links: Logo SELFRULES + Chi sono/About + Lavori/Work + Lab + Note/Notes + Parliamo/Let's talk (accent) + IT/EN toggle
 - [ ] **LNAV-03**: Mobile hamburger menu with full-screen overlay, accessible (focus trap, Escape closes)
 - [ ] **LNAV-04**: Language toggle preserves current page path when switching IT ↔ EN
-- [ ] **LNAV-05**: Footer with bio, email, LinkedIn, GitHub, CV download link, credit "Designed and built by Mattia De Luca"
+- [x] **LNAV-05**: Footer with bio, email, LinkedIn, GitHub, CV download link, credit "Designed and built by Mattia De Luca"
 - [ ] **LNAV-06**: 404 page with dedicated copy in both languages, link to homepage
 
 ### UI Components
@@ -57,7 +57,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **COPY-01**: All page copy IDENTICAL to source files — no rewriting, no summarizing, no "improving"
 - [ ] **COPY-02**: Complete IT translations for all pages from source files
 - [ ] **COPY-03**: Complete EN translations for all pages from source files
-- [ ] **COPY-04**: All microcopy (nav, CTAs, 404, footer, cookie note) from microcopy.md
+- [x] **COPY-04**: All microcopy (nav, CTAs, 404, footer, cookie note) from microcopy.md
 
 ### SEO & Metadata
 
@@ -95,8 +95,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Analytics
 
-- [ ] **ANLT-01**: Umami analytics script integrated (cookieless, no banner needed)
-- [ ] **ANLT-02**: Umami proxied through Next.js rewrites to bypass ad blockers
+- [x] **ANLT-01**: Umami analytics script integrated (cookieless, no banner needed)
+- [x] **ANLT-02**: Umami proxied through Next.js rewrites to bypass ad blockers
 
 ### Modello B Compliance
 
@@ -159,11 +159,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LNAV-02 | Phase 2 | Pending |
 | LNAV-03 | Phase 2 | Pending |
 | LNAV-04 | Phase 2 | Pending |
-| LNAV-05 | Phase 2 | Pending |
+| LNAV-05 | Phase 2 | Complete |
 | LNAV-06 | Phase 2 | Pending |
-| COPY-04 | Phase 2 | Pending |
-| ANLT-01 | Phase 2 | Pending |
-| ANLT-02 | Phase 2 | Pending |
+| COPY-04 | Phase 2 | Complete |
+| ANLT-01 | Phase 2 | Complete |
+| ANLT-02 | Phase 2 | Complete |
 | UICM-01 | Phase 3 | Pending |
 | UICM-02 | Phase 3 | Pending |
 | UICM-03 | Phase 3 | Pending |
