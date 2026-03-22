@@ -1,10 +1,12 @@
 ---
 phase: 1
 slug: foundation
-status: draft
+status: approved
 shadcn_initialized: false
 preset: none
 created: 2026-03-22
+revised: 2026-03-22
+revision_source: DESIGN-UPDATE-v25.md
 ---
 
 # Phase 1 — UI Design Contract
@@ -21,7 +23,7 @@ created: 2026-03-22
 | Preset | not applicable |
 | Component library | none (pure Tailwind v4 utilities) |
 | Icon library | none (Phase 1 has no icons) |
-| Font | Inter (variable, sans-serif) + JetBrains Mono (variable, monospace) via next/font/google |
+| Font | Inter (variable, sans-serif) + Space Grotesk (variable, heading) + JetBrains Mono (variable, monospace) via next/font/google |
 
 **Note:** This project does not use shadcn, Radix, or any component library. All styling is Tailwind CSS v4 with `@theme` tokens in globals.css. This is a locked decision from CLAUDE.md and STACK.md.
 
@@ -47,6 +49,7 @@ Declared values (all multiples of 4):
 |-------|-------|-------|
 | section-gap | `clamp(80px, 10vw, 160px)` | Vertical spacing between page sections |
 | page-padding | `clamp(20px, 5vw, 80px)` | Horizontal page margin |
+| hero-height | `100vh` / `min-h-screen` | Hero section fills entire viewport. No peek of next section on first load. Source: DESIGN-UPDATE-v25.md Change 9. |
 
 **Exceptions:** Section spacing uses `clamp()` for fluid scaling between 80px and 160px. This exceeds the 8-point scale intentionally -- generous whitespace is a core design principle (source: figma-make-prompt.md "120-160px between sections").
 
@@ -56,30 +59,30 @@ Declared values (all multiples of 4):
 
 | Role | Size | Weight | Line Height | Font |
 |------|------|--------|-------------|------|
-| Display | `clamp(40px, 5vw, 64px)` | 700 (bold) | 1.1 | Inter |
-| Heading | `clamp(20px, 2.5vw, 36px)` | 700 (bold) | 1.2 | Inter |
+| Display | `clamp(40px, 5vw, 64px)` | 700 (bold) | 1.1 | Space Grotesk |
+| Heading | `clamp(20px, 2.5vw, 36px)` | 700 (bold) | 1.2 | Space Grotesk |
 | Body | 16px | 400 (regular) | 1.5 | Inter |
 | Small | 14px | 400 (regular) | 1.4 | Inter |
-| Metric | `clamp(40px, 5vw, 64px)` | 700 (bold) | 1.1 | JetBrains Mono |
+| Metric | `clamp(40px, 5vw, 64px)` | 700 (bold) | 1.1 | Space Grotesk |
 | Tag / monospace | 14px | 400 (regular) | 1.4 | JetBrains Mono |
 
 **4 size stops:** Display (40-64px fluid), Heading (20-36px fluid), Body (16px), Small (14px).
 
-**Consolidation rationale (revision from 7 sizes to 4):**
-- **Small (13px) merged into Small (14px):** 1px difference is imperceptible; 14px provides better readability and accessibility.
-- **Body large (18px) merged into Body (16px):** Eliminates a near-duplicate size. Where emphasis is needed, use weight 700 (bold) on 16px body instead of a separate 18px size.
-- **Card title (20px) merged with Section title (28-36px) into Heading:** Single fluid scale `clamp(20px, 2.5vw, 36px)` covers both card titles (at narrow viewports) and section headings (at wide viewports) with one token.
-- **Hero and Metric share the Display size:** Both use the same `clamp(40-64px)` -- Hero in Inter, Metric in JetBrains Mono.
+**Font assignment rationale (revision per DESIGN-UPDATE-v25.md Change 1):**
+- **Display and Heading** now use Space Grotesk instead of Inter. Space Grotesk has DNA from the Space Mono family, creating a subtle visual connection with JetBrains Mono in tags. This differentiates the site from the default Inter-only pattern common in dev portfolios.
+- **Metric numbers** now use Space Grotesk 700 instead of JetBrains Mono. The large metric figures gain the geometric character of Space Grotesk while tag/label text beneath metrics stays in JetBrains Mono.
+- **Body and Small** remain Inter 400 for maximum readability at text sizes.
+- **Tag / monospace** remains JetBrains Mono for code-like labels, credential tags, and small monospace elements.
 
-**2 font weights loaded:**
-- Inter: 400 (regular), 700 (bold)
-- JetBrains Mono: 400 (regular), 700 (bold)
+**3 font families loaded:**
 
-**Weight consolidation rationale (revision from 4 weights to 2):**
-- **500 (medium) dropped:** Label text now uses 400 regular at 14px. Sufficient contrast against 16px body without a separate weight.
-- **600 (semibold) dropped:** Headings use 700 bold instead. The visual difference between 600 and 700 is minimal, and using a single heavy weight simplifies the font loading budget and creates stronger hierarchy.
+| Font | CSS Variable | Tailwind Token | Weights Loaded | Used For |
+|------|-------------|----------------|----------------|----------|
+| Inter | `--font-inter` | `font-sans` | 400, 700 | Body text, small text |
+| Space Grotesk | `--font-heading` | `font-heading` | 400, 700 | Display, headings, metric numbers |
+| JetBrains Mono | `--font-jetbrains` | `font-mono` | 400, 700 | Tags, labels, monospace elements |
 
-**Font loading:** `display: 'swap'`, CSS variable approach (`--font-inter`, `--font-jetbrains`), variables applied on `<html>` element, bridged into Tailwind via `@theme inline`.
+**Font loading:** All fonts loaded via `next/font/google` with `display: 'swap'`. CSS variable approach: `--font-inter`, `--font-heading`, `--font-jetbrains`. Variables applied on `<html>` element, bridged into Tailwind via `@theme inline`. Only 2 weights used across the entire design system: 400 (regular) and 700 (bold).
 
 ---
 
@@ -100,7 +103,7 @@ Declared values (all multiples of 4):
 
 **Accent reserved for:**
 1. Primary CTA button background (dark text on accent)
-2. Metric numbers (large monospace figures)
+2. Metric numbers (large Space Grotesk figures)
 3. Hover state for text links
 4. Card hover border-color transition
 5. Active nav indicator
@@ -118,12 +121,15 @@ Declared values (all multiples of 4):
 |-------|-------|
 | All (`--radius-*`) | 0px |
 
-**Global rule:** 0px border-radius on every element. Enforced via:
+**SIGNATURE ELEMENT -- 0px border-radius everywhere.**
+
+This is a core visual identity element of selfrules.org, not merely a default. Sharp corners are enforced globally and must never be overridden. Enforced via:
+
 1. All `--radius-*` Tailwind tokens set to 0px
 2. `--radius-*: initial` to clear Tailwind defaults
-3. Global CSS reset: `*, *::before, *::after { border-radius: 0; }`
+3. **Global CSS reset in globals.css:** `* { border-radius: 0 !important; }` -- this prevents any border-radius from libraries, browser defaults, or future component additions from breaking the signature
 
-Source: CLAUDE.md constraint "0px border-radius ovunque", figma-make-prompt.md "No border-radius (0px corners on all elements)".
+Source: CLAUDE.md constraint "0px border-radius ovunque", figma-make-prompt.md "No border-radius (0px corners on all elements)", DESIGN-UPDATE-v25.md Change 2 (enforcement as signature element). Verified in Figma v25: buttons, cards, tags, badges, availability badge -- all 0px.
 
 ---
 
@@ -144,6 +150,7 @@ Phase 1 is infrastructure-only. The placeholder page exists solely to verify tha
 |---------|---------|---------|--------|
 | Placeholder title | `selfrules.org` | `selfrules.org` | RESEARCH.md message JSON |
 | Font verification | `This text uses Inter (sans) and` | `Questo testo usa Inter (sans) e` | RESEARCH.md message JSON |
+| Heading font verification | `Space Grotesk for headings` | `Space Grotesk per i titoli` | Added for v25 font verification |
 | Mono verification | `this uses JetBrains Mono` | `questo usa JetBrains Mono` | RESEARCH.md message JSON |
 | Locale label | `English` | `Italiano` | RESEARCH.md message JSON |
 
@@ -155,11 +162,12 @@ Phase 1 is infrastructure-only. The placeholder page exists solely to verify tha
 
 The placeholder page (D-04 from CONTEXT.md) serves as a verification artifact, not a design deliverable. It must display:
 
-1. **Headline** in Inter (visible font name to confirm sans-serif loads)
-2. **Monospace text** in JetBrains Mono (visible font name to confirm mono loads)
-3. **Color swatches** showing the 3 primary tokens: `#0A0A0B` (primary bg), `#F5F5F0` (text), `#E8A838` (accent)
-4. **Locale indicator** showing current language to confirm i18n routing
-5. **Dark background** (`bg-primary`) with light text (`text-primary`) to confirm token wiring
+1. **Headline** in Space Grotesk (visible font name to confirm heading font loads)
+2. **Body text** in Inter (visible font name to confirm sans-serif loads)
+3. **Monospace text** in JetBrains Mono (visible font name to confirm mono loads)
+4. **Color swatches** showing the 3 primary tokens: `#0A0A0B` (primary bg), `#F5F5F0` (text), `#E8A838` (accent)
+5. **Locale indicator** showing current language to confirm i18n routing
+6. **Dark background** (`bg-primary`) with light text (`text-primary`) to confirm token wiring
 
 **Layout:** Single centered column, vertically stacked elements, generous padding (48px+). No responsive complexity needed.
 
@@ -183,13 +191,15 @@ These are the visual verification points that confirm the design contract is cor
 | # | Criterion | How to Verify |
 |---|-----------|---------------|
 | 1 | Inter renders as body font | DevTools font inspector shows "Inter" on body text |
-| 2 | JetBrains Mono renders as mono font | DevTools font inspector shows "JetBrains Mono" on mono text |
-| 3 | No layout shift on font load | CLS < 0.1 in Lighthouse |
-| 4 | Background is `#0A0A0B` | Eyedropper on page background |
-| 5 | Text is `#F5F5F0` | Eyedropper on headline text |
-| 6 | Accent is `#E8A838` | Eyedropper on accent swatch |
-| 7 | 0px border-radius on all elements | Visual inspection -- no rounded corners anywhere |
-| 8 | EN page at `/`, IT page at `/it` | Navigate to both URLs, confirm locale label changes |
+| 2 | Space Grotesk renders as heading font | DevTools font inspector shows "Space Grotesk" on heading text |
+| 3 | JetBrains Mono renders as mono font | DevTools font inspector shows "JetBrains Mono" on mono text |
+| 4 | No layout shift on font load | CLS < 0.1 in Lighthouse |
+| 5 | Background is `#0A0A0B` | Eyedropper on page background |
+| 6 | Text is `#F5F5F0` | Eyedropper on headline text |
+| 7 | Accent is `#E8A838` | Eyedropper on accent swatch |
+| 8 | 0px border-radius on all elements | Visual inspection + DevTools computed style check on every element type |
+| 9 | EN page at `/`, IT page at `/it` | Navigate to both URLs, confirm locale label changes |
+| 10 | `--font-heading` CSS variable resolves to Space Grotesk | DevTools computed styles on `<html>` element |
 
 ---
 

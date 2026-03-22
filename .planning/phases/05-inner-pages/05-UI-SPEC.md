@@ -1,10 +1,12 @@
 ---
 phase: 5
 slug: inner-pages
-status: draft
+status: approved
 shadcn_initialized: false
 preset: none
 created: 2026-03-22
+revised: 2026-03-22
+revision_source: DESIGN-UPDATE-v25.md (changes 1, 7, 8)
 ---
 
 # Phase 5 — UI Design Contract
@@ -22,9 +24,9 @@ created: 2026-03-22
 | Preset | not applicable |
 | Component library | none (custom components from Phase 3) |
 | Icon library | none (text-only design, no icons in v1) |
-| Font | Inter (sans) + JetBrains Mono (mono) via next/font/google |
+| Font | Space Grotesk (heading) + Inter (sans/body) + JetBrains Mono (mono) via next/font/google |
 
-Source: Phase 4 UI-SPEC, CLAUDE.md
+Source: Phase 4 UI-SPEC, CLAUDE.md, DESIGN-UPDATE-v25.md Change 1
 
 ---
 
@@ -45,55 +47,58 @@ Inherited from Phase 4 without changes:
 | page-padding | clamp(20px, 5vw, 80px) | Horizontal page padding |
 
 Content width constraints:
-- `content-width`: 720px max-width for all inner page text content (About prose, Approach sections, Blog post, Work intro, Lab intro)
+- `content-width`: 720px max-width for all inner page text content (About prose, Approach sections, Notes post, Work intro, Lab intro)
 - `wide-width`: 1080px max-width for card layouts (Work cards, Lab project detail)
 
 Phase 5 specific spacing:
 - Page headline to intro text: 24px
 - Intro text to first content block: 48px
-- Between career blocks (About): 48px
+- Between timeline nodes (About Career Path): 48px vertical gap between nodes
 - Between principles (About "Cosa credo"): 48px
 - Between Approach numbered sections: 64px
-- Blog post paragraph spacing: 24px (handled by @tailwindcss/typography prose defaults)
-- Blog listing post entries: 48px vertical gap between entries
+- Notes post paragraph spacing: 24px (handled by @tailwindcss/typography prose defaults)
+- Notes listing post entries: 48px vertical gap between entries
 - CaseStudyCard stack gap: 32px between cards
 - PageCTA top margin from last content: 80px (one section-gap minimum)
+- Timeline vertical line left margin: 0 (flush with content-width left edge)
+- Timeline node to content block horizontal connector: 24px
 
 Exceptions:
-- Blog post prose uses @tailwindcss/typography defaults for internal paragraph spacing (1.7 line-height, standard prose margins)
+- Notes post prose uses @tailwindcss/typography defaults for internal paragraph spacing (1.7 line-height, standard prose margins)
 - CasaHunter expanded section in Lab uses 32px between sub-sections (problem, what it does, product decision, stack, status)
 
-Source: Phase 4 UI-SPEC spacing, figma-make-prompt.md, implementation-plan.md
+Source: Phase 4 UI-SPEC spacing, figma-make-prompt.md, implementation-plan.md, DESIGN-UPDATE-v25.md Change 7
 
 ---
 
 ## Typography
 
-Inherited from Phase 4:
+Inherited from Phase 4, updated per DESIGN-UPDATE-v25.md Change 1 (Space Grotesk for headings):
 
 | Role | Size | Weight | Line Height | Font | Phase 5 Usage |
 |------|------|--------|-------------|------|---------------|
-| Display | clamp(40px, 5vw, 64px) | 700 | 1.1 | Inter | Not used in Phase 5 (display is hero-only) |
-| Title | clamp(28px, 3vw, 36px) | 700 | 1.2 | Inter | Page headlines (About, Work, Lab, Approach, Blog listing, Blog post title) |
-| Subtitle | 20px | 700 | 1.3 | Inter | Career block company names (About), principle headings (About "Cosa credo"), CasaHunter sub-section headings (Lab), Approach numbered section headings |
-| Body | 16px | 400 | 1.6 | Inter | Page intro paragraphs, career block text, principle descriptions, CaseStudyCard preview text, Lab intro, Approach section prose, PageCTA text |
-| Body (prose) | 16px | 400 | 1.7 | Inter | Blog post body text via @tailwindcss/typography (line-height 1.7, max-width 720px) |
-| Label | 14px | 400 | 1.4 | JetBrains Mono | Section labels, career dates (About), blog post dates, CaseStudyCard tags, CasaHunter stack tags, [BOZZA]/[DRAFT] note, availability tags. Always uppercase, letter-spacing 0.05em. |
+| Display | clamp(40px, 5vw, 64px) | 700 | 1.1 | Space Grotesk | Not used in Phase 5 (display is hero-only) |
+| Title | clamp(28px, 3vw, 36px) | 700 | 1.2 | Space Grotesk | Page headlines (About, Work, Lab, Approach, Notes listing, Notes post title) |
+| Subtitle | 20px | 700 | 1.3 | Space Grotesk | Timeline company names (About), principle headings (About "Cosa credo"), CasaHunter sub-section headings (Lab), Approach numbered section headings |
+| Body | 16px | 400 | 1.6 | Inter | Page intro paragraphs, timeline career block text, principle descriptions, CaseStudyCard preview text, Lab intro, Approach section prose, PageCTA text |
+| Body (prose) | 16px | 400 | 1.7 | Inter | Notes post body text via @tailwindcss/typography (line-height 1.7, max-width 720px) |
+| Label | 14px | 400 | 1.4 | JetBrains Mono | Section labels, career dates (About timeline), notes post dates, CaseStudyCard tags, CasaHunter stack tags, [BOZZA]/[DRAFT] note, availability tags. Always uppercase, letter-spacing 0.05em. |
 
 Phase 5 typography additions:
-- Career block dates (About): label role (14px mono), placed directly below the bold company heading, text-secondary
-- Approach numbered section titles: subtitle role (20px, weight 700), number included in the text (e.g., "1. Understand before you touch anything"), not a separate visual marker
-- Blog listing post titles: subtitle size (20px), weight 400, text-primary, link style (accent on hover). Uses the subtitle size at body weight to create clear hierarchy: 14px date, 16px excerpt, 20px title, clamp(28-36px) page headline
-- Blog listing excerpts: 16px, weight 400, text-secondary, single line
-- Blog post inline code: JetBrains Mono, 14px, bg-surface padding 2px 6px
+- Timeline career dates (About): label role (14px mono), placed directly below the bold company heading, text-secondary
+- Approach numbered section titles: subtitle role (20px, Space Grotesk 700), number included in the text (e.g., "1. Understand before you touch anything"), not a separate visual marker
+- Notes listing post titles: subtitle size (20px), weight 400, Inter (body font, not Space Grotesk -- these are not headings, they are list items), text-primary, link style (accent on hover). Uses the subtitle size at body weight to create clear hierarchy: 14px date, 16px excerpt, 20px title, clamp(28-36px) page headline
+- Notes listing excerpts: 16px, weight 400, text-secondary, single line
+- Notes post inline code: JetBrains Mono, 14px, bg-surface padding 2px 6px
 - Bold text within body: weight 700, same size (e.g., **35%**, **99%+** in career and approach prose)
 - [BOZZA]/[DRAFT] note on CaseStudyCard 2: label role, text-secondary, inline with card content
+- Notes post title: title role, Space Grotesk 700
 
 Typography scale used in Phase 5 (4 sizes, 2 weights):
-- 14px (label) / 16px (body) / 20px (subtitle, blog listing titles) / clamp(28-36px) (title)
-- Weights: 400 (body, labels, blog listing titles) and 700 (headlines, subtitles, inline bold)
+- 14px (label) / 16px (body) / 20px (subtitle, notes listing titles) / clamp(28-36px) (title)
+- Weights: 400 (body, labels, notes listing titles) and 700 (headlines, subtitles, inline bold)
 
-Source: Phase 4 UI-SPEC typography, figma-make-prompt.md Prompt 2-5
+Source: Phase 4 UI-SPEC typography, figma-make-prompt.md Prompt 2-5, DESIGN-UPDATE-v25.md Change 1
 
 ---
 
@@ -107,10 +112,10 @@ Inherited from Phase 4 without changes:
 | Secondary (30%) | #111113 (`bg-surface`) | CaseStudyCard backgrounds, CasaHunter detail container (optional, Claude's discretion for "Fuori dal lavoro" section) |
 | Accent (10%) | #E8A838 (`accent`) | See reserved-for list below |
 | Accent hover | #D4962F (`accent-hover`) | Primary CTA button hover |
-| Text primary | #F5F5F0 | Headlines, body text, card titles, blog post prose |
+| Text primary | #F5F5F0 | Headlines, body text, card titles, notes post prose |
 | Text secondary | #8A8A8E | Intro paragraphs, descriptions, dates, labels, excerpts |
 | Text tertiary | #5A5A5E | Very muted supporting text |
-| Border default | #1A1A1F | Card borders, dividers |
+| Border default | #1A1A1F | Card borders, dividers, timeline vertical line |
 | Hover surface | #1A1A1F (`bg-hover`) | Card hover background tint |
 
 Accent reserved for (Phase 5 specific elements):
@@ -118,14 +123,16 @@ Accent reserved for (Phase 5 specific elements):
 2. CaseStudyCard key metric numbers (99.19%, -25%, 5 months, etc.)
 3. CaseStudyCard border on hover
 4. ProjectCard border on hover (Lab page, though CasaHunter is expanded inline)
-5. Blog post title hover on listing page
+5. Notes post title hover on listing page
 6. Bold metric numbers inline in About and Approach prose (**35%**, **99%+**, **-25%**, **116 centers**, **5 new per week**)
 7. CasaHunter status indicator (active dot)
 8. Text link hover states (CTA links, "About me" / "Chi sono" secondary CTAs)
+9. Timeline last node fill (Product Manager, 2023-now): filled square in accent (#E8A838)
+10. Timeline Designer/Developer overlap segment (2016-2020): accent-colored line segment
 
 No destructive color needed: Phase 5 has no destructive actions.
 
-Source: Phase 4 UI-SPEC color contract
+Source: Phase 4 UI-SPEC color contract, DESIGN-UPDATE-v25.md Change 7
 
 ---
 
@@ -139,10 +146,12 @@ Source: Phase 4 UI-SPEC color contract
 | `Button` | `variant="secondary"`, `href` | PageCTA secondary buttons (where applicable) |
 | `CaseStudyCard` | `tag`, `title`, `preview`, `metric`, `note` | 2 cards on Work page. NOT clickable (no href). D-04 |
 | `ProjectCard` | `title`, `oneLiner`, `stack[]`, `status` | MoneyMind "coming soon" card on Lab page |
-| `Tag` | `label` | CaseStudyCard tags, CasaHunter stack tags, blog post dates |
-| `Section` | `maxWidth="default"` (720px) | About prose, Approach sections, Blog post, Blog listing, Lab intro, Work intro, PageCTA |
+| `Tag` | `label` | CaseStudyCard tags, CasaHunter stack tags, notes post dates |
+| `Section` | `maxWidth="default"` (720px) | About prose, Approach sections, Notes post, Notes listing, Lab intro, Work intro, PageCTA |
 | `Section` | `maxWidth="wide"` (1080px) | Work cards layout, Lab project detail |
 | `SectionHeader` | `label`, `title` | Page section headers where applicable |
+| `VerticalTimeline` | `children` | About page Career Path section container (vertical line + nodes) |
+| `TimelineNode` | `company`, `dates`, `description`, `isActive`, `isOverlap` | Individual career entries within VerticalTimeline |
 
 ### New Components Created in Phase 5
 
@@ -154,12 +163,12 @@ Source: Phase 4 UI-SPEC color contract
 
 | Page | Route | Layout |
 |------|-------|--------|
-| About | `src/app/[locale]/about/page.tsx` | Headline + 4 career blocks (prose) + 3 principles (prose) + "Fuori dal lavoro" + PageCTA |
+| About | `src/app/[locale]/about/page.tsx` | Headline + VerticalTimeline with 4 TimelineNodes (Career Path) + 3 principles (prose) + "Fuori dal lavoro" + PageCTA |
 | Work | `src/app/[locale]/work/page.tsx` | Headline + intro + 2 CaseStudyCards stacked + PageCTA |
 | Lab | `src/app/[locale]/lab/page.tsx` | Headline + intro + CasaHunter expanded detail + MoneyMind "coming soon" + PageCTA |
 | Approach | `src/app/[locale]/approach/page.tsx` | Headline + intro + 5 numbered prose sections + closing + PageCTA |
-| Blog listing | `src/app/[locale]/blog/page.tsx` | Headline + intro + post list (date + title + excerpt) |
-| Blog post | `src/app/[locale]/blog/why-i-prototype-in-code/page.tsx` | Title + date + MDX prose content (720px, @tailwindcss/typography) |
+| Notes listing | `src/app/[locale]/notes/page.tsx` | Headline + intro + post list (date + title + excerpt) |
+| Notes post | `src/app/[locale]/notes/why-i-prototype-in-code/page.tsx` | Title + date + MDX prose content (720px, @tailwindcss/typography) |
 
 ---
 
@@ -167,18 +176,31 @@ Source: Phase 4 UI-SPEC color contract
 
 ### About Page (PAGE-01)
 
-**Headline:** title size (clamp 28-36px), weight 700, text-primary, max-width 720px
-**Career blocks (4):** Each block is a prose section, NOT a card or TimelineBlock (D-01):
-- Company name: subtitle size (20px), weight 700, text-primary
+**Headline:** title size (clamp 28-36px), Space Grotesk 700, text-primary, max-width 720px
+
+**Career Path — Vertical Timeline (4 nodes):** Uses `VerticalTimeline` + `TimelineNode` components from Phase 3 (DESIGN-UPDATE-v25.md Change 7):
+
+Timeline structure:
+- Vertical line: 2px width, #1A1A1F (border-default), runs along left side
+- Nodes: SQUARE, 8-10px, border-radius: 0 (consistent with site-wide 0px radius identity)
+- Last node (Product Manager, 2023-now): filled solid in accent (#E8A838)
+- Previous nodes: outlined only (1px border #1A1A1F, transparent fill)
+- Horizontal connector: 1px line from each node to content block on the right, 24px length
+- Designer/Developer overlap (2016-2020): accent-colored (#E8A838) segment of the vertical line between those two nodes, OR a small "overlap" badge in accent
+- Stays vertical on ALL viewports (mobile and desktop) -- no horizontal layout
+
+Each timeline content block:
+- Company name: subtitle size (20px), Space Grotesk 700, text-primary
 - Dates: label role (14px mono, uppercase, text-secondary), directly below company name, 4px gap
-- Prose paragraphs: body size (16px), weight 400, line-height 1.6, text-primary
+- Prose paragraphs: body size (16px), Inter 400, line-height 1.6, text-primary
 - Bold inline metrics: weight 700, accent color
-- Gap between career blocks: 48px
-- Max-width: 720px
+- Gap between timeline nodes: 48px vertical
+
+Max-width: 720px (including timeline line and content)
 
 **"Cosa credo" / "What I believe" (3 principles):** Sequential prose (D-02):
-- Principle title: subtitle size (20px), weight 700, text-primary
-- Principle body: body size (16px), weight 400, line-height 1.6, text-primary
+- Principle title: subtitle size (20px), Space Grotesk 700, text-primary
+- Principle body: body size (16px), Inter 400, line-height 1.6, text-primary
 - Gap between principles: 48px
 - Separation from career section: 64px (section break)
 
@@ -191,8 +213,8 @@ Source: Phase 4 UI-SPEC color contract
 
 ### Work Page (PAGE-02)
 
-**Headline:** title size, weight 700, text-primary, max-width 720px
-**Intro:** body size (16px), text-secondary, line-height 1.7, max-width 720px, 24px below headline
+**Headline:** title size, Space Grotesk 700, text-primary, max-width 720px
+**Intro:** body size (16px), Inter 400, text-secondary, line-height 1.7, max-width 720px, 24px below headline
 
 **CaseStudyCards (2 cards, stacked vertically):**
 - Container: wide-width (1080px)
@@ -208,67 +230,67 @@ Source: Phase 4 UI-SPEC color contract
 
 ### Lab Page (PAGE-03)
 
-**Headline:** title size, weight 700, text-primary, max-width 720px
-**Intro:** body size (16px), text-secondary, line-height 1.7, max-width 720px
+**Headline:** title size, Space Grotesk 700, text-primary, max-width 720px
+**Intro:** body size (16px), Inter 400, text-secondary, line-height 1.7, max-width 720px
 
 **CasaHunter expanded section (D-06):**
 - Container: content-width (720px) or wide-width (1080px) -- Claude's discretion based on visual result
 - One-liner: body size (16px), text-secondary, 24px below heading
 - Sub-sections ("Il problema" / "The problem", "Cosa fa" / "What it does", "La decisione di prodotto" / "The product decision"):
-  - Sub-heading: subtitle size (20px), weight 700, text-primary
-  - Body: 16px, weight 400, line-height 1.6, text-primary
+  - Sub-heading: subtitle size (20px), Space Grotesk 700, text-primary
+  - Body: 16px, Inter 400, line-height 1.6, text-primary
   - 32px between sub-sections
 - Stack tags: Tag components inline (label role: 14px mono, uppercase, text-secondary), 8px gap between tags. Claude's discretion: Tag components or plain monospace text
 - Status line: label role, text-secondary, green dot for "Active" status (accent color or a muted green -- Claude's discretion)
 - Links (GitHub, Dashboard): body size, text-secondary, accent on hover
 
 **MoneyMind "Prossimamente" / "Coming soon":**
-- Heading: subtitle size (20px), weight 700, text-primary
-- One-liner: body size (16px), text-secondary
+- Heading: subtitle size (20px), Space Grotesk 700, text-primary
+- One-liner: body size (16px), Inter 400, text-secondary
 - 64px separation from CasaHunter section
 
 **PageCTA:** 80px below. "Guarda i lavori" / "See the work"
 
 ### Approach Page (PAGE-04)
 
-**Headline:** title size, weight 700, text-primary, max-width 720px
-**Intro:** body size (16px), text-secondary, line-height 1.7, max-width 720px
+**Headline:** title size, Space Grotesk 700, text-primary, max-width 720px
+**Intro:** body size (16px), Inter 400, text-secondary, line-height 1.7, max-width 720px
 
 **5 numbered sections:** All at 720px max-width
-- Section heading: subtitle size (20px), weight 700, text-primary. Number in the title text itself (e.g., "1. Understand before you touch anything"). No separate circle/line visual marker -- the number in the copy is sufficient (Claude's discretion confirmed: plain numbered text)
-- Section body: 16px, weight 400, line-height 1.6, text-primary. Multiple paragraphs per section
+- Section heading: subtitle size (20px), Space Grotesk 700, text-primary. Number in the title text itself (e.g., "1. Understand before you touch anything"). No separate circle/line visual marker -- the number in the copy is sufficient (Claude's discretion confirmed: plain numbered text)
+- Section body: 16px, Inter 400, line-height 1.6, text-primary. Multiple paragraphs per section
 - Bold inline metrics: weight 700, accent color
 - 64px between numbered sections
 - 48px from intro to first section
 
-**Closing text:** body size, text-primary, line-height 1.7, 64px above PageCTA
+**Closing text:** body size, Inter 400, text-primary, line-height 1.7, 64px above PageCTA
 **PageCTA:** "Guarda i lavori" / "See the work"
 
-### Blog Listing Page (PAGE-05)
+### Notes Listing Page (PAGE-05)
 
-**Headline:** title size, weight 700, text-primary, max-width 720px
-**Intro (optional):** body size, text-secondary, max-width 720px
+**Headline:** title size, Space Grotesk 700, text-primary, max-width 720px
+**Intro (optional):** body size, Inter 400, text-secondary, max-width 720px
 
 **Post list:** max-width 720px
 - Each entry:
   - Date: label role (14px mono, text-secondary, uppercase)
-  - Title: subtitle size (20px), weight 400, text-primary, hover text-accent (150ms transition). Clickable link to post. Uses subtitle size at body weight for clear prominence over 16px excerpt without matching the bold 700 weight of section subtitles
-  - Excerpt: 16px, weight 400, text-secondary, single line, 4px below title
+  - Title: subtitle size (20px), Inter 400 (body font, not Space Grotesk), text-primary, hover text-accent (150ms transition). Clickable link to post. Uses subtitle size at body weight for clear prominence over 16px excerpt without matching the bold 700 weight of section subtitles
+  - Excerpt: 16px, Inter 400, text-secondary, single line, 4px below title
 - 48px vertical gap between entries
 - With 1 post, the page will be sparse -- this is intentional (D-07)
 
 **Empty state (0 posts):**
 - IT: "Le note arrivano quando c'e qualcosa da dire. Non per fare volume."
 - EN: "Notes come when there's something worth saying. Not for volume."
-- Style: body size (16px), text-secondary, centered or left-aligned at 720px
+- Style: body size (16px), Inter 400, text-secondary, centered or left-aligned at 720px
 
-### Blog Post Page (PAGE-06)
+### Notes Post Page (PAGE-06)
 
-**Route:** `src/app/[locale]/blog/why-i-prototype-in-code/page.tsx`
+**Route:** `src/app/[locale]/notes/why-i-prototype-in-code/page.tsx`
 **Content:** MDX files `content.en.mdx` + `content.it.mdx` in the same directory (D-08)
 
 **Post header:**
-- Title: title size (clamp 28-36px), weight 700, text-primary
+- Title: title size (clamp 28-36px), Space Grotesk 700, text-primary
 - Date: label role (14px mono, text-secondary), 8px below title
 - 48px from header to prose body
 
@@ -276,14 +298,14 @@ Source: Phase 4 UI-SPEC color contract
 - Max-width: 720px
 - Line-height: 1.7
 - `prose` class with dark mode overrides:
-  - prose headings: text-primary (#F5F5F0)
-  - prose body: text-primary (#F5F5F0)
+  - prose headings: text-primary (#F5F5F0), Space Grotesk 700 (h2, h3 within prose)
+  - prose body: text-primary (#F5F5F0), Inter 400
   - prose muted: text-secondary (#8A8A8E)
   - prose links: text-accent on hover
   - prose bold: weight 700, accent color for metric numbers
   - prose code inline: JetBrains Mono, 14px, bg-surface, padding 2px 6px, 0px border-radius
   - prose hr: border-default (#1A1A1F), 48px margin top and bottom
-- Section breaks in the blog post use `---` (horizontal rules), rendered as 1px border-default with 48px vertical margin
+- Section breaks in the notes post use `---` (horizontal rules), rendered as 1px border-default with 48px vertical margin
 
 **No pagination, no "next/previous post", no sidebar, no reading time.** Minimal.
 
@@ -295,12 +317,12 @@ Inherited from Phase 4:
 
 | Breakpoint | Width | Phase 5 Key Changes |
 |------------|-------|---------------------|
-| Mobile | < 640px | All content single column, cards stacked, blog list full width |
+| Mobile | < 640px | All content single column, cards stacked, notes list full width, timeline stays vertical with line on left |
 | Tablet | >= 640px | No significant layout changes (content is primarily prose at 720px) |
 | Desktop | >= 768px | CaseStudyCard internal layout flex (text left, metric right) |
 | Wide | >= 1024px | No additional changes (720px prose, 1080px cards already fit) |
 
-Phase 5 pages are primarily prose-driven at 720px, so responsive complexity is low. The main responsive concern is CaseStudyCard internal layout (flex row at desktop, flex column at mobile).
+Phase 5 pages are primarily prose-driven at 720px, so responsive complexity is low. The main responsive concerns are CaseStudyCard internal layout (flex row at desktop, flex column at mobile) and timeline (stays vertical on all viewports per DESIGN-UPDATE-v25.md Change 7).
 
 ---
 
@@ -313,9 +335,9 @@ Inherited from Phase 4. Phase 5 additions:
 | Primary CTA (PageCTA) | bg-accent, text #0A0A0B | translate-y(-1px), bg-accent-hover | translate-y(0) | 2px outline accent, 2px offset |
 | Secondary CTA (PageCTA) | bg-transparent, border border-default, text-primary | border-accent, text-accent | opacity 0.9 | 2px outline accent, 2px offset |
 | CaseStudyCard | border border-default, bg-surface | border-accent, translate-y(-2px), 150ms | -- | 2px outline accent, 2px offset |
-| Blog post title (listing) | text-primary, 20px, weight 400 | text-accent, 150ms | underline | 2px outline accent, 2px offset |
+| Notes post title (listing) | text-primary, 20px, weight 400 | text-accent, 150ms | underline | 2px outline accent, 2px offset |
 | CasaHunter links | text-secondary | text-accent, 150ms | underline | 2px outline accent, 2px offset |
-| Prose links (blog) | text-primary, underline | text-accent, 150ms | -- | 2px outline accent, 2px offset |
+| Prose links (notes) | text-primary, underline | text-accent, 150ms | -- | 2px outline accent, 2px offset |
 
 All transitions: 150ms ease timing function.
 All focus styles: visible outline, WCAG 2.1 AA compliant.
@@ -341,14 +363,14 @@ All focus styles: visible outline, WCAG 2.1 AA compliant.
 | Work | How I work, demonstrated. | Come lavoro, dimostrato. |
 | Lab | Same thinking, applied to my own problems. | Lo stesso modo di pensare, applicato a problemi miei. |
 | Approach | How I make product decisions. | Come prendo decisioni di prodotto. |
-| Blog listing | Notes | Note |
-| Blog post | Why I prototype in code | Perche prototipo in codice |
+| Notes listing | Notes | Note |
+| Notes post | Why I prototype in code | Perche prototipo in codice |
 
 ### States
 
 | Element | EN Copy | IT Copy |
 |---------|---------|---------|
-| Blog empty state | Notes come when there's something worth saying. Not for volume. | Le note arrivano quando c'e qualcosa da dire. Non per fare volume. |
+| Notes empty state | Notes come when there's something worth saying. Not for volume. | Le note arrivano quando c'e qualcosa da dire. Non per fare volume. |
 | Error state | Not applicable -- all pages are statically rendered, no data fetching | -- |
 | Destructive actions | None in this phase | -- |
 
@@ -368,15 +390,16 @@ Source: All copy from canonical source files (about-page.md, work-page.md, lab-p
 
 | Requirement | Specification |
 |-------------|---------------|
-| Semantic HTML | Each page uses `<main>` (from layout). Career blocks use `<section>`. Blog post uses `<article>`. CaseStudyCards use `<article>`. |
-| Heading hierarchy | H1: page headline (one per page). H2: career block company names (About), principle titles (About), CasaHunter heading (Lab), numbered section titles (Approach). H3: sub-sections within CasaHunter detail. Blog post: H1 for title, H2/H3 within prose as authored in MDX. |
+| Semantic HTML | Each page uses `<main>` (from layout). Timeline uses `<ol>` with `<li>` for career entries. Notes post uses `<article>`. CaseStudyCards use `<article>`. |
+| Heading hierarchy | H1: page headline (one per page). H2: timeline company names (About), principle titles (About), CasaHunter heading (Lab), numbered section titles (Approach). H3: sub-sections within CasaHunter detail. Notes post: H1 for title, H2/H3 within prose as authored in MDX. |
 | Skip to content | Provided by Phase 2 shell layout |
-| Focus styles | All interactive elements (buttons, links, blog post titles) have visible 2px accent outline with 2px offset |
+| Focus styles | All interactive elements (buttons, links, notes post titles) have visible 2px accent outline with 2px offset |
 | Color contrast | Text primary #F5F5F0 on #0A0A0B = 17.4:1 (AAA). Text secondary #8A8A8E on #0A0A0B = 4.9:1 (AA). Accent #E8A838 on #0A0A0B = 8.6:1 (AAA). |
 | Reduced motion | No animations in Phase 5 (animations added in Phase 6). |
-| Language | Content matches declared locale. Blog post loads correct MDX file per locale. |
-| Link purpose | CaseStudyCards are NOT links (D-04). Blog post titles are descriptive links. PageCTA buttons use verb + noun pattern. |
+| Language | Content matches declared locale. Notes post loads correct MDX file per locale. |
+| Link purpose | CaseStudyCards are NOT links (D-04). Notes post titles are descriptive links. PageCTA buttons use verb + noun pattern. |
 | Cards not clickable | CaseStudyCards have no href and no role="link". They are informational containers only in v1. |
+| Timeline | VerticalTimeline uses semantic ordered list markup. Active node (current role) indicated by both color AND aria-current="step". |
 
 ---
 

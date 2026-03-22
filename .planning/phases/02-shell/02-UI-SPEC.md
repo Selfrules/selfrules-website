@@ -1,10 +1,12 @@
 ---
 phase: 2
 slug: shell
-status: draft
+status: approved
 shadcn_initialized: false
 preset: none
 created: 2026-03-22
+updated: 2026-03-22
+revision: v25
 ---
 
 # Phase 2 — UI Design Contract
@@ -21,9 +23,11 @@ created: 2026-03-22
 | Preset | not applicable |
 | Component library | none (pure Tailwind v4 utilities) |
 | Icon library | none (hamburger and close icons are CSS/SVG inline) |
-| Font | Inter (variable, 400/700) + JetBrains Mono (variable, 400/700) via next/font/google |
+| Font | Space Grotesk (variable, 500/600/700) for Display/Heading + Inter (variable, 400/700) for Body/Small + JetBrains Mono (variable, 400/700) for monospace — all via next/font/google |
 
 **Inherited from Phase 1.** No component library, no shadcn. All styling via Tailwind CSS v4 `@theme` tokens in globals.css. This is a locked project-level decision.
+
+**v25 update:** Space Grotesk added as heading/display font. Inter remains body font. JetBrains Mono remains monospace font. Three-font system loaded via `--font-heading`, `--font-sans`, `--font-mono` CSS variables.
 
 ---
 
@@ -64,8 +68,8 @@ Inherited from Phase 1. Phase 2 uses a subset:
 
 | Role | Size | Weight | Line Height | Font | Phase 2 Usage |
 |------|------|--------|-------------|------|---------------|
-| Display | `clamp(40px, 5vw, 64px)` | 700 | 1.1 | Inter | 404 headline |
-| Heading | `clamp(20px, 2.5vw, 36px)` | 700 | 1.2 | Inter | Not used in Phase 2 |
+| Display | `clamp(40px, 5vw, 64px)` | 700 | 1.1 | Space Grotesk | 404 headline |
+| Heading | `clamp(20px, 2.5vw, 36px)` | 700 | 1.2 | Space Grotesk | Not used in Phase 2 |
 | Body | 16px | 400 | 1.5 | Inter | 404 body text, footer bio |
 | Small | 14px | 400 | 1.4 | Inter | Nav links, footer credit, footer link labels |
 
@@ -84,8 +88,10 @@ Inherited from Phase 1. Phase 2 uses a subset:
 | Footer email | 16px | 400 | JetBrains Mono | Monospace, accent hover per D-10 |
 | Footer links (LinkedIn, GitHub, CV) | 14px | 400 | Inter | Text secondary, accent hover |
 | Footer credit | 14px | 400 | Inter | Text tertiary (#5A5A5E) |
-| 404 headline | `clamp(40px, 5vw, 64px)` | 700 | Inter | Display size, centered |
+| Footer build version | 11px | 400 | JetBrains Mono | Text tertiary (#5A5A5E), below credit line |
+| 404 headline | `clamp(40px, 5vw, 64px)` | 700 | Space Grotesk | Display size, centered |
 | 404 body | 16px | 400 | Inter | Text secondary, centered |
+| 404 signature phrase | 14px | 400 | Inter | Italic (`font-style: italic`), text secondary (#8A8A8E), centered, below body |
 | 404 link | 16px | 400 | Inter | Accent color, arrow prefix |
 
 ---
@@ -101,8 +107,8 @@ Inherited from Phase 1. Phase 2 uses all tokens:
 | Hover surface | `#1A1A1F` | `--color-hover` | Nav link hover background (subtle) |
 | Border default | `#1A1A1F` | `--color-border-default` | Navbar bottom border (1px), footer top border (1px), mobile menu divider (1px) |
 | Text primary (30%) | `#F5F5F0` | `--color-text-primary` | Headlines, nav links, active language, wordmark |
-| Text secondary | `#8A8A8E` | `--color-text-secondary` | Footer bio, footer links, 404 body |
-| Text tertiary | `#5A5A5E` | `--color-text-tertiary` | Inactive language toggle, footer credit |
+| Text secondary | `#8A8A8E` | `--color-text-secondary` | Footer bio, footer links, 404 body, 404 signature phrase |
+| Text tertiary | `#5A5A5E` | `--color-text-tertiary` | Inactive language toggle, footer credit, footer build version |
 | Accent (10%) | `#E8A838` | `--color-accent` | See reserved-for list below |
 | Accent hover | `#D4962F` | `--color-accent-hover` | Hover state of accent elements |
 | Border accent | `#E8A838` | `--color-border-accent` | Not used in Phase 2 (no card hover borders) |
@@ -240,6 +246,7 @@ Left side:                          Right side:
                                       LinkedIn  |  GitHub  |  CV (PDF)
 
 [Footer credit centered or left-aligned, text-tertiary, 14px]
+[Build version centered or left-aligned, JetBrains Mono, 11px, text-tertiary]
 ```
 
 **Mobile (<768px) -- stacked:**
@@ -254,9 +261,12 @@ GitHub
 Scarica il CV (PDF) / Download CV (PDF)
 
 Footer credit
+Build version (JetBrains Mono, 11px, text-tertiary)
 ```
 
 **Footer vertical padding:** 32px top, 32px bottom.
+
+**Build version line:** Sits directly below the credit line ("Designed and built by Mattia De Luca"). Gap between credit and build version: 4px. The build version is always the last visible element in the footer.
 
 ### 404 Page Layout (D-12, D-13, LNAV-06)
 
@@ -266,12 +276,15 @@ Footer credit
 [Full remaining viewport height, flex centered]
   Display headline: "404"  (optional, or just the copy)
   Body: "This page doesn't exist. But the rest of the site does."
+  Signature phrase (italic): "The problem is never the one from the first meeting."
   Link: "-> Back to homepage" / "-> Torna alla homepage"
 
 [Footer -- normal]
 ```
 
 **Center alignment:** Both horizontal and vertical within the viewport minus navbar height. Use `min-h-[calc(100vh-64px)]` with flexbox centering.
+
+**Signature phrase placement:** Below the body text, above the back link. Separated by 16px gap from body text. Separated by 24px gap from the back link.
 
 ---
 
@@ -302,14 +315,25 @@ All copy sourced from `microcopy.md`. Copy is FINAL -- no modifications.
 | GitHub label | GitHub | GitHub | -- |
 | CV label | Download CV (PDF) | Scarica il CV (PDF) | microcopy.md |
 | Credit | Designed and built by Mattia De Luca | Designed and built by Mattia De Luca | microcopy.md (same in both) |
+| Build version | v1.0.0 · build 2026.03 · Next.js 16 · 47 commits | v1.0.0 · build 2026.03 · Next.js 16 · 47 commits | DESIGN-UPDATE-v25.md (same in both languages) |
+
+**Build version notes:**
+- Commit count (`47 commits`) can be hardcoded in v1, updated manually before deploy
+- Build month (`2026.03`) can use `new Date()` at build time or be hardcoded
+- Text is identical in both languages (no translation needed)
+- Font: JetBrains Mono, 11px, color: #5A5A5E (text-tertiary)
+- Middle dot separator: ` · ` (U+00B7)
 
 ### 404 Page Copy (LNAV-06, D-13)
 
 | Element | EN | IT | Source |
 |---------|----|----|--------|
 | Headline | This page doesn't exist. But the rest of the site does. | Questa pagina non esiste. Ma il resto del sito si. | microcopy.md, D-13 |
+| Signature phrase | The problem is never the one from the first meeting. | Il problema non è mai quello del primo meeting. | DESIGN-UPDATE-v25.md, Change 4 |
 | Link | Back to homepage | Torna alla homepage | Phase 2 contract |
 | Link prefix | -> | -> | Arrow prefix, accent color |
+
+**Signature phrase style:** `font-style: italic`, 14px, `color: #8A8A8E` (text-secondary), centered, positioned between body text and back link.
 
 ### Accessibility Copy
 
@@ -391,11 +415,14 @@ The script `src` points to `/api/umami/script.js` instead of the Umami cloud URL
 | 9 | Language toggle switches locale, preserves path | Click inactive language, verify URL changes |
 | 10 | Footer displays bio, email (mono), LinkedIn, GitHub, CV, credit | Visual inspection at both breakpoints |
 | 11 | Footer email is JetBrains Mono with accent hover | Hover over email, check font |
-| 12 | 404 page shows correct bilingual copy, centered | Visit /nonexistent and /it/nonexistent |
-| 13 | 404 has full shell (navbar + footer) | Visual inspection |
-| 14 | Skip-to-content link visible on focus | Tab from page load, verify link appears |
-| 15 | All elements have 0px border-radius | Visual inspection |
-| 16 | Umami script loads via proxy path | DevTools network tab, verify `/api/umami/script.js` |
+| 12 | Footer build version visible below credit in JetBrains Mono 11px | Visual inspection, DevTools font/size check |
+| 13 | 404 page shows correct bilingual copy, centered | Visit /nonexistent and /it/nonexistent |
+| 14 | 404 page shows signature phrase in italic below body text | Visual inspection at both locale paths |
+| 15 | 404 headline uses Space Grotesk font | DevTools font inspector on 404 page |
+| 16 | 404 has full shell (navbar + footer) | Visual inspection |
+| 17 | Skip-to-content link visible on focus | Tab from page load, verify link appears |
+| 18 | All elements have 0px border-radius | Visual inspection |
+| 19 | Umami script loads via proxy path | DevTools network tab, verify `/api/umami/script.js` |
 
 ---
 
