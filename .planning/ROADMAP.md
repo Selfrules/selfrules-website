@@ -51,7 +51,7 @@ Plans:
 Plans:
 - [x] 02-01-PLAN.md — i18n messages, navigation utility, Footer component, root layout shell (skip-to-content, Umami proxy)
 - [x] 02-02-PLAN.md — Navbar with scroll behavior, MobileMenu with slide-in and focus trap, LanguageToggle
-- [ ] 02-03-PLAN.md — Localized 404 page with catch-all route, full phase visual verification checkpoint
+- [x] 02-03-PLAN.md — Localized 404 page with catch-all route, full phase visual verification checkpoint
 
 ### Phase 3: UI Primitives
 **Goal**: A complete component library that pages compose -- each component works in isolation with correct styling, hover states, and responsive behavior

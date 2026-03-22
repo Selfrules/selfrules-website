@@ -22,7 +22,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **LNAV-03**: Mobile hamburger menu with full-screen overlay, accessible (focus trap, Escape closes)
 - [x] **LNAV-04**: Language toggle preserves current page path when switching IT ↔ EN
 - [x] **LNAV-05**: Footer with bio, email, LinkedIn, GitHub, CV download link, credit "Designed and built by Mattia De Luca"
-- [ ] **LNAV-06**: 404 page with dedicated copy in both languages, link to homepage
+- [x] **LNAV-06**: 404 page with dedicated copy in both languages, link to homepage
 
 ### UI Components
 
@@ -160,7 +160,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LNAV-03 | Phase 2 | Complete |
 | LNAV-04 | Phase 2 | Complete |
 | LNAV-05 | Phase 2 | Complete |
-| LNAV-06 | Phase 2 | Pending |
+| LNAV-06 | Phase 2 | Complete |
 | COPY-04 | Phase 2 | Complete |
 | ANLT-01 | Phase 2 | Complete |
 | ANLT-02 | Phase 2 | Complete |
