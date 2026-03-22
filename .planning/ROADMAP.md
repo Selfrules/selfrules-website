@@ -45,11 +45,13 @@ Plans:
   3. Language toggle switches between IT and EN while preserving the current page path
   4. Footer displays bio, email, LinkedIn, GitHub, CV download link, and credit line in both languages
   5. Visiting a nonexistent URL shows the 404 page with dedicated copy in both languages
-**Plans**: TBD
+**Plans**: 3 plans
 **UI hint**: yes
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md — i18n messages, navigation utility, Footer component, root layout shell (skip-to-content, Umami proxy)
+- [ ] 02-02-PLAN.md — Navbar with scroll behavior, MobileMenu with slide-in and focus trap, LanguageToggle
+- [ ] 02-03-PLAN.md — Localized 404 page with catch-all route, full phase visual verification checkpoint
 
 ### Phase 3: UI Primitives
 **Goal**: A complete component library that pages compose -- each component works in isolation with correct styling, hover states, and responsive behavior
@@ -121,7 +123,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/1 | Planning complete | - |
-| 2. Shell | 0/? | Not started | - |
+| 2. Shell | 0/3 | Planning complete | - |
 | 3. UI Primitives | 0/? | Not started | - |
 | 4. Homepage | 0/? | Not started | - |
 | 5. Inner Pages | 0/? | Not started | - |
