@@ -54,9 +54,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Copy & i18n
 
-- [ ] **COPY-01**: All page copy IDENTICAL to source files — no rewriting, no summarizing, no "improving"
-- [ ] **COPY-02**: Complete IT translations for all pages from source files
-- [ ] **COPY-03**: Complete EN translations for all pages from source files
+- [x] **COPY-01**: All page copy IDENTICAL to source files — no rewriting, no summarizing, no "improving"
+- [x] **COPY-02**: Complete IT translations for all pages from source files
+- [x] **COPY-03**: Complete EN translations for all pages from source files
 - [x] **COPY-04**: All microcopy (nav, CTAs, 404, footer, cookie note) from microcopy.md
 
 ### SEO & Metadata
@@ -100,10 +100,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Modello B Compliance
 
-- [ ] **MODB-01**: No "job seeker" framing anywhere — no "looking for my next role", no "hire me"
-- [ ] **MODB-02**: Availability and CV download ONLY in Contact section and Footer
-- [ ] **MODB-03**: Site speaks about WHAT HE DOES and HOW HE THINKS, never what he's looking for
-- [ ] **MODB-04**: Stories lead with the problem/result, not "I worked on"
+- [x] **MODB-01**: No "job seeker" framing anywhere — no "looking for my next role", no "hire me"
+- [x] **MODB-02**: Availability and CV download ONLY in Contact section and Footer
+- [x] **MODB-03**: Site speaks about WHAT HE DOES and HOW HE THINKS, never what he's looking for
+- [x] **MODB-04**: Stories lead with the problem/result, not "I worked on"
 
 ### Deploy
 
@@ -183,13 +183,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PAGE-04 | Phase 5 | Pending |
 | PAGE-05 | Phase 5 | Pending |
 | PAGE-06 | Phase 5 | Pending |
-| COPY-01 | Phase 5 | Pending |
-| COPY-02 | Phase 5 | Pending |
-| COPY-03 | Phase 5 | Pending |
-| MODB-01 | Phase 5 | Pending |
-| MODB-02 | Phase 5 | Pending |
-| MODB-03 | Phase 5 | Pending |
-| MODB-04 | Phase 5 | Pending |
+| COPY-01 | Phase 5 | Complete |
+| COPY-02 | Phase 5 | Complete |
+| COPY-03 | Phase 5 | Complete |
+| MODB-01 | Phase 5 | Complete |
+| MODB-02 | Phase 5 | Complete |
+| MODB-03 | Phase 5 | Complete |
+| MODB-04 | Phase 5 | Complete |
 | SEO-01 | Phase 6 | Pending |
 | SEO-02 | Phase 6 | Pending |
 | SEO-03 | Phase 6 | Pending |
