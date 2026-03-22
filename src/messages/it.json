@@ -276,5 +276,36 @@
         "excerpt": "Un Product Manager che prototipa in codice prende decisioni diverse."
       }
     }
+  },
+  "metadata": {
+    "home": {
+      "title": "Mattia De Luca \u2014 Senior Technical Product Manager | B2B SaaS . Payments",
+      "description": "Senior Technical Product Manager con 10+ anni in B2B SaaS, Payments e Platform. Design, codice e product management nella stessa testa."
+    },
+    "about": {
+      "title": "Chi sono",
+      "description": "Product Manager con background cross-funzionale: designer, developer, poi PM. Il vantaggio: quando design, engineering e business non si capiscono, non serve un interprete."
+    },
+    "work": {
+      "title": "Lavori",
+      "description": "Casi studio da 10+ anni di product management in payments, platform e B2B SaaS. Numeri, non parole."
+    },
+    "lab": {
+      "title": "Lab",
+      "description": "Side project costruiti da un PM che scrive codice. Prodotti veri, non mockup."
+    },
+    "approach": {
+      "title": "Approccio",
+      "description": "Come lavoro nel product management: discovery, prototipi, ship. Nessun framework, nessun teatro."
+    },
+    "notes": {
+      "title": "Note",
+      "description": "Note su product management, decisioni tecniche, e costruire cose. Quando c'e' qualcosa da dire."
+    },
+    "notesPost": {
+      "title": "Why I Prototype in Code",
+      "description": "Un PM che prototipa in codice shippa piu' veloce, comunica meglio con gli engineer, e intercetta problemi prima. Ecco perche' lo faccio."
+    },
+    "skipToContent": "Vai al contenuto"
   }
 }
