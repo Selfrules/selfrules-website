@@ -115,10 +115,13 @@ Plans:
   3. Lighthouse scores 95+ on Performance, Accessibility, Best Practices, and SEO; first load JS < 100KB
   4. Skip-to-content link works, all interactive elements have visible focus styles, WCAG AA contrast passes for all text
   5. Scroll-triggered fade-in animations work and are disabled when prefers-reduced-motion is set; site is deployed and live on selfrules.org with HTTPS
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 06-01: TBD
+- [ ] 06-01-PLAN.md — SEO metadata infrastructure: metadata helper, generateMetadata on all pages, sitemap, robots, JSON-LD, OG image
+- [ ] 06-02-PLAN.md — Accessibility (skip-to-content, focus styles, semantic HTML), scroll animations (ScrollReveal + fade-up), active nav, smooth scroll
+- [ ] 06-03-PLAN.md — Performance audit: build analysis, bundle size verification, Lighthouse checkpoint
+- [ ] 06-04-PLAN.md — Vercel deploy, selfrules.org domain configuration, www redirect
 
 ## Progress
 
@@ -132,4 +135,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 3. UI Primitives | 0/? | Not started | - |
 | 4. Homepage | 0/3 | Planning complete | - |
 | 5. Inner Pages | 0/4 | Planning complete | - |
-| 6. SEO, Polish & Deploy | 0/? | Not started | - |
+| 6. SEO, Polish & Deploy | 0/4 | Planning complete | - |
