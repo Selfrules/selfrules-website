@@ -5,5 +5,35 @@
     "headingCheck": "Space Grotesk for headings",
     "monoCheck": "this uses JetBrains Mono",
     "locale": "English"
+  },
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "lab": "Lab",
+    "notes": "Notes",
+    "contact": "Let's talk",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language"
+  },
+  "footer": {
+    "bio": "Senior Technical PM. I prototype in code, design the UX, and ship.",
+    "email": "mattia@selfrules.org",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "cv": "Download CV (PDF)",
+    "credit": "Designed and built by Mattia De Luca",
+    "buildVersion": "v1.0.0 · build {buildMonth} · Next.js 16 · {commitCount} commits"
+  },
+  "notFound": {
+    "headline": "This page doesn't exist. But the rest of the site does.",
+    "signaturePhrase": "The problem is never the one from the first meeting.",
+    "backLink": "Back to homepage"
+  },
+  "common": {
+    "signaturePhrase": "The problem is never the one from the first meeting."
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
   }
 }
