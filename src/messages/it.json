@@ -141,5 +141,140 @@
       "cvLabel": "Scarica il mio CV (PDF)",
       "availability": "EU remote . US remote . Italia ibrido"
     }
+  },
+  "about": {
+    "headline": "Prodotti migliori nascono quando una persona parla tutte e tre le lingue.",
+    "career": {
+      "selfrules": {
+        "company": "Selfrules (2012\u20132018)",
+        "dates": "2012\u20132018",
+        "text": "Uno studio di web design fondato a 25 anni a Modena. Per 7 anni tutto passava da una persona sola: vendita, design, sviluppo, consegna, supporto. 20+ clienti.\n\nIl primo e-commerce aveva un'interfaccia da premio e zero vendite. Il cliente non trovava il bottone per pagare. \u20ac8K di rimborsi. Quando vendi, progetti, costruisci e supporti lo stesso prodotto, il pensiero cross-funzionale non \u00e8 opzionale. E una regola diventa permanente: se \u00e8 bello ma confuso, \u00e8 decorazione."
+      },
+      "flowing": {
+        "company": "FLOWING (2016\u20132020)",
+        "dates": "2016\u20132020",
+        "text": "Entrato come UX Designer, uscito scrivendo codice in produzione. Prodotti B2B e B2C per clienti come Prometeia, Casavo, CliensPi\u00f9.\n\nIl progetto pi\u00f9 formativo: CliensPi\u00f9, un gestionale per studi legali usato 8+ ore al giorno. Ogni micro-interazione conta quando qualcuno ci lavora tutto il giorno. Disegnare l'interfaccia e poi scrivere il codice che la implementa. Dopo 4 anni a fare entrambe le cose, la distinzione tra \"il designer\" e \"lo sviluppatore\" ha smesso di avere senso."
+      },
+      "leadsbridge": {
+        "company": "ActiveProspect / LeadsBridge (2020\u20132023)",
+        "dates": "2020\u20132023",
+        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori e partnership dirette con Meta, Google, LinkedIn e TikTok. Unico PM, completamente remoto dall'Europa, team di 10 persone.\n\nIl flusso core del prodotto era anche il suo punto pi\u00f9 debole \u2014 il tipo di problema che tutti avevano accettato come normale. Il redesign ha tagliato il tempo di setup del <bold>35%</bold> e sbloccato direttamente la crescita del revenue."
+      },
+      "qubicamf": {
+        "company": "QubicaAMF (2023\u2013oggi)",
+        "dates": "2023\u2013oggi",
+        "text": "600 dipendenti, 90+ paesi. Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri di intrattenimento. Un sistema ereditato in stato critico. Come \u00e8 stato stabilizzato \u00e8 una storia che vale un caso a parte.\n\nOggi: un team di 10+ tra backend, QA e analisti. <bold>99%+</bold> uptime, <bold>-25%</bold> incidenti post-release, <bold>116 centri</bold> integrati, <bold>5 nuovi a settimana</bold>. La stabilizzazione era il primo passo. Il lavoro attuale \u00e8 strategico: cosa costruire, cosa non costruire, e perch\u00e9."
+      }
+    },
+    "beliefs": {
+      "belief1": {
+        "title": "Il problema non \u00e8 mai quello del primo meeting.",
+        "text": "Il primo meeting racconta il sintomo. Il lavoro vero \u00e8 scavare fino alla causa. A volte significa dire \"la soluzione che stiamo valutando non risolve il problema reale.\" Non ti fa amici al primo incontro. Al terzo ti danno ragione."
+      },
+      "belief2": {
+        "title": "Un prototipo funzionante batte 100 slide.",
+        "text": "Un'idea, prima di diventare un ticket, diventa un prototipo funzionante. React che gli utenti possono toccare dice pi\u00f9 di qualsiasi documento di specifiche. I dati che servono per decidere arrivano dal campo, non dalle riunioni."
+      },
+      "belief3": {
+        "title": "Il PM migliore \u00e8 quello che il team non nota.",
+        "text": "Se il team funziona bene, il merito \u00e8 del team. Ma \"togliere ostacoli\" non basta. Il lavoro vero \u00e8 capire cosa costruire e perch\u00e9. Dare al team una direzione che regge anche quando le priorit\u00e0 cambiano. Proteggere il focus non \u00e8 dire \"no\" alle interruzioni. \u00c8 aver fatto il lavoro strategico prima, cos\u00ec il team sa gi\u00e0 cosa conta. Se il PM diventa il collo di bottiglia tra chi costruisce e chi decide, qualcosa \u00e8 andato storto."
+      }
+    },
+    "outside": {
+      "text": "Vivo in provincia di Modena. Quando non lavoro, probabilmente sono in palestra, sto costruendo qualcosa con i LEGO, o sto provando qualcosa fuori dalla mia comfort zone. L'ultimo esperimento: il ricamo. Prima o poi torno, ma non prima di aver capito cosa c'\u00e8 dall'altra parte."
+    },
+    "cta": {
+      "text": "Se il tuo prodotto ha bisogno di qualcuno che ci mette le mani dentro \u2014 non solo le parole sopra \u2014 parliamone. Anche solo per capire se ha senso.",
+      "primary": "Scrivimi"
+    }
+  },
+  "work": {
+    "headline": "Come lavoro, dimostrato.",
+    "intro": "Due storie di prodotto. Il contesto, la sfida, l'approccio, i numeri. Non cosa dico di saper fare. Cosa \u00e8 successo.",
+    "cases": {
+      "payments": {
+        "tag": "Payments \u00b7 B2B SaaS \u00b7 Enterprise",
+        "title": "Un sistema di pagamento che perdeva transazioni ogni giorno",
+        "metric": "99.19% success rate \u00b7 -25% incidenti post-release",
+        "preview": "Centinaia di centri in 5 paesi, 44 problemi aperti senza priorit\u00e0, 4 con impatto economico immediato. La stabilizzazione senza riscrivere niente."
+      },
+      "cashless": {
+        "tag": "Cashless \u00b7 Product Strategy \u00b7 Partnership",
+        "title": "Cashless da zero: tre provider, un problema \"irrisolvibile\", e un prodotto da parcheggiare",
+        "metric": "5 mesi da zero a demo live \u00b7 1 prodotto ucciso prima di diventare un problema",
+        "preview": "Il prodotto interno sembrava la scelta ovvia. La discovery ha raccontato un'altra storia. Come la strategia cashless \u00e8 stata definita partendo dai vincoli reali.",
+        "note": "[BOZZA \u2014 metriche finali TBD quando Amusement Connect \u00e8 in produzione]"
+      }
+    },
+    "cta": {
+      "text": "Questi casi raccontano il come. Se vuoi il chi, c'\u00e8 la pagina about. Se vuoi parlare, scrivimi.",
+      "primary": "Chi sono",
+      "secondary": "Scrivimi"
+    }
+  },
+  "lab": {
+    "headline": "Lo stesso modo di pensare, applicato a problemi miei.",
+    "intro": "Ogni progetto qui \u00e8 partito da un bisogno reale, non da un tutorial. Lo stesso approccio del lavoro: capire il problema, costruire il minimo necessario per validare l'idea, decidere cosa non costruire. Il codice \u00e8 il mezzo. Il pensiero di prodotto \u00e8 il contenuto.",
+    "casahunter": {
+      "oneLiner": "Un tool che cerca casa al posto tuo, impara dai tuoi feedback, e ti avvisa su Telegram.",
+      "problem": "Trovare un appartamento in affitto in provincia di Modena in 4 mesi. 8 portali diversi, nessuno con filtri decenti. Controllare tutto a mano ogni giorno non scalava.",
+      "whatItDoes": "Scraping da 8 fonti (Immobiliare, Idealista, Subito, Casa.it, Bakeca, Wikicasa, Trovacasa, Airbnb), deduplicazione annunci, e scoring a 3 passaggi. Il primo \u00e8 deterministico (gratis). Il secondo usa Claude solo sugli annunci promettenti (ottimizzazione costi). Il terzo ri-valuta sulla base dei feedback. Quando trova qualcosa di buono, notifica su Telegram.",
+      "productDecision": "Tre passaggi invece di uno perch\u00e9 mandare tutto all'AI costava troppo e non migliorava la qualit\u00e0. Il passaggio deterministico filtra l'80% del rumore. L'AI lavora solo sul 20% che conta. Stessa logica applicabile a qualsiasi prodotto.",
+      "stack": "Python 3.11, SQLite, Claude Sonnet, React 18, Tailwind, Leaflet, Recharts, Telegram API, GitHub Actions",
+      "status": "Attivo. 880+ annunci analizzati. Ho trovato casa.",
+      "links": "[GitHub] \u00b7 [Dashboard live]"
+    },
+    "moneymind": {
+      "title": "MoneyMind",
+      "oneLiner": "Finanza personale che non chiede di compilare spreadsheet. Analisi automatica delle transazioni, pattern recognition, insight settimanali. In sviluppo."
+    },
+    "cta": {
+      "text": "Se ti interessa come ragiono quando costruisco, i case study professionali raccontano la stessa cosa su scala diversa.",
+      "primary": "Guarda i lavori"
+    }
+  },
+  "approach": {
+    "headline": "Come prendo decisioni di prodotto.",
+    "intro": "Nessun framework con un nome. Un modo di lavorare formato facendo il designer, poi lo sviluppatore, poi il PM. Ognuna di quelle fasi ha cambiato il modo di vedere i problemi. Quello che segue non \u00e8 una metodologia. \u00c8 quello che succede quando bisogna decidere cosa costruire.",
+    "sections": {
+      "s1": {
+        "title": "1. Capire prima di toccare",
+        "text": "La tentazione quando arrivi su un prodotto in difficolt\u00e0 \u00e8 agire subito. Dimostrare che stai facendo qualcosa. In QubicaAMF il sistema di pagamenti era in crisi. La prima decisione: non toccare niente per due settimane.\n\nNon \u00e8 inerzia. \u00c8 il tempo per capire quali dei 44 problemi aperti stanno effettivamente costando soldi ai clienti adesso, e quali possono aspettare. La differenza tra \"urgente\" e \"importante\" non si vede il primo giorno. Si vede dopo aver parlato con il supporto, letto i ticket, e guardato i dati.\n\nIl risultato: 44 item, 12 critici, 4 con impatto finanziario immediato. Il resto poteva aspettare. Senza quelle due settimane, il lavoro sarebbe stato su tutto contemporaneamente. Con quelle due settimane, i 4 pi\u00f9 gravi risolti in 6 settimane."
+      },
+      "s2": {
+        "title": "2. Il problema \u00e8 nel funnel, non dove pensi",
+        "text": "Quasi sempre la prima diagnosi \u00e8 sbagliata. Non per incompetenza. Perch\u00e9 chi chiede di risolvere il problema vede il sintomo, non la causa.\n\nIn QubicaAMF un centro stava per cancellare l'integrazione perch\u00e9 non riusciva a riconciliare i libri. Ogni transazione appariva come \"uncategorized income\" in Square. La diagnosi interna era \"problema del partner, non risolvibile da noi.\" Tracciando il data model \u00e8 saltato fuori un campo API esistente che risolveva tutto senza modifiche architetturali. Il centro \u00e8 rimasto ed \u00e8 diventato un account di riferimento.\n\nIn LeadsBridge il flusso di configurazione del bridge mapping generava errori a ripetizione. Ogni errore diventava un ticket. Il volume di supporto cresceva proporzionalmente ai nuovi utenti. Il problema non era il volume di ticket. Era il flusso multi-step che li generava. Il redesign ha tagliato il tempo di setup del <bold>35%</bold>.\n\nIl pattern: prima di costruire qualcosa, verificare di star risolvendo il problema giusto. Costa meno di qualsiasi sprint."
+      },
+      "s3": {
+        "title": "3. Costruire per scoprire, non per consegnare",
+        "text": "Un'idea, prima di diventare un ticket, diventa un prototipo funzionante. Non un mockup. Codice che si pu\u00f2 toccare.\n\nCasaHunter \u00e8 nato cos\u00ec: serviva un appartamento, nessun portale funzionava, uno scraper scritto in un weekend. Ma la decisione di prodotto interessante non \u00e8 stata costruirlo. \u00c8 stata l'architettura dello scoring a 3 passaggi: il primo deterministico (gratis), il secondo con AI solo sugli annunci promettenti, il terzo adattivo sui feedback. Stessa logica applicabile a un prodotto enterprise: non mandare tutto all'AI. Filtra prima, spendi dove conta.\n\nPrototipare in codice rivela cose che nessun documento di specifiche avrebbe detto. Vincoli tecnici che cambiano il prodotto. Edge case che cambiano la priorit\u00e0. Costi che cambiano la strategia."
+      },
+      "s4": {
+        "title": "4. Sapere cosa non costruire",
+        "text": "La decisione pi\u00f9 difficile non \u00e8 cosa costruire. \u00c8 cosa smettere di costruire.\n\nNel cashless, OneCashless era il candidato ovvio. Prodotto interno, supporto organizzativo, head start. Ma la discovery ha mostrato che il prodotto non reggeva. Il business model era poco chiaro, l'architettura richiedeva lavoro non giustificabile. Parcheggiato. Deliberatamente.\n\nNel payments rescue, 23 dei 44 item sono stati consegnati. Gli altri 21 erano decisioni deliberate di \"non ora\", ognuna con una motivazione documentata. Quando il refund non era abbastanza solido prima del picco natalizio, \u00e8 stato ritirato. Un giorno intero di testing piuttosto che spedire logica rotta a centinaia di centri nella loro settimana pi\u00f9 intensa.\n\nIl \"no\" documentato \u00e8 un deliverable tanto quanto il codice spedito."
+      },
+      "s5": {
+        "title": "5. Comunicare come se non fossi nella stanza",
+        "text": "Il lavoro migliore \u00e8 inutile se nessuno lo capisce. Soprattutto in contesti remoti, multi-timezone, multi-country.\n\nIl default: recap settimanali strutturati, memo operative per decisioni urgenti, minute dei meeting pubblicate entro ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, servivano video tutorial con i workaround. Soluzioni ponte mentre i fix veri erano in pipeline.\n\nNon \u00e8 burocrazia. \u00c8 il modo in cui un team distribuito mantiene il contesto senza dover chiedere \"cosa sta succedendo?\" ogni luned\u00ec mattina."
+      }
+    },
+    "closing": {
+      "text": "Non c'\u00e8 un nome per questo approccio. \u00c8 il risultato di aver progettato interfacce, scritto codice, e gestito prodotti per 10+ anni. Ogni fase ha aggiunto un modo diverso di guardare lo stesso problema.\n\nSe vuoi vedere come funziona nella pratica, i case study raccontano i dettagli."
+    },
+    "cta": {
+      "text": "Se vuoi vedere come funziona nella pratica, i case study raccontano i dettagli.",
+      "primary": "Guarda i lavori"
+    }
+  },
+  "notes": {
+    "headline": "Note",
+    "emptyState": "Le note arrivano quando c'\u00e8 qualcosa da dire. Non per fare volume.",
+    "posts": {
+      "why-i-prototype-in-code": {
+        "title": "Perch\u00e9 prototipo in codice",
+        "date": "2026-03-22",
+        "excerpt": "Un Product Manager che prototipa in codice prende decisioni diverse."
+      }
+    }
   }
 }
