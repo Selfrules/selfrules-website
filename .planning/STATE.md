@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to plan
-stopped_at: Completed 03-02-PLAN.md
-last_updated: "2026-03-22T23:15:15.743Z"
+status: Ready to execute
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-22T23:21:56.388Z"
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 17
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** A hiring manager landing on selfrules.org thinks "this person knows what they're doing" -- competence through specificity and results, never self-promotion.
-**Current focus:** Phase 03 — ui-primitives
+**Current focus:** Phase 04 — homepage
 
 ## Current Position
 
-Phase: 04
-Plan: Not started
+Phase: 04 (homepage) — EXECUTING
+Plan: 2 of 3
 
 ## Performance Metrics
 
@@ -51,6 +51,7 @@ Plan: Not started
 | Phase 02 P03 | 2min | 2 tasks | 2 files |
 | Phase 03 P01 | 1min | 6 tasks | 6 files |
 | Phase 03 P02 | 4min | 10 tasks | 10 files |
+| Phase 04 P01 | 4min | 5 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,8 @@ Recent decisions affecting current work:
 - [Phase 03]: Added blink keyframes to globals.css for centralized animation with reduced-motion support
 - [Phase 03]: Used data-status-dot attribute to override global border-radius reset for ProjectCard status dots
 - [Phase 03]: TimelineNode uses computed px offsets instead of Tailwind v4 theme() in calc expressions
+- [Phase 04]: Created sections/SectionHeader.tsx separate from existing layout/SectionHeader.tsx per plan spec
+- [Phase 04]: Hero renders terminal prompt inline with prop for custom text instead of importing hardcoded TerminalPrompt component
 
 ### Pending Todos
 
@@ -80,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T23:11:23.658Z
-Stopped at: Completed 03-02-PLAN.md
+Last session: 2026-03-22T23:21:56.386Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None

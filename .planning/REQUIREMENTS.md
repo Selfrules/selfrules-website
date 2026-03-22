@@ -36,7 +36,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Homepage
 
-- [ ] **HOME-01**: Hero section — full viewport height, left-aligned, headline + subtitle + 2 CTAs + monospace tags
+- [x] **HOME-01**: Hero section — full viewport height, left-aligned, headline + subtitle + 2 CTAs + monospace tags
 - [ ] **HOME-02**: "Come lavoro" / "How I Work" section — 3 columns desktop, 1 mobile, label + 3 pillars
 - [ ] **HOME-03**: "Percorso" / "Journey" section — timeline (horizontal desktop, vertical mobile), 4 blocks + closing phrase
 - [ ] **HOME-04**: "Numeri, non parole" / "Numbers, not words" section — 6 MetricCards in responsive grid (3x2 → 2x3 → 1x6)
@@ -171,7 +171,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UICM-05 | Phase 3 | Complete |
 | UICM-06 | Phase 3 | Complete |
 | UICM-07 | Phase 3 | Complete |
-| HOME-01 | Phase 4 | Pending |
+| HOME-01 | Phase 4 | Complete |
 | HOME-02 | Phase 4 | Pending |
 | HOME-03 | Phase 4 | Pending |
 | HOME-04 | Phase 4 | Pending |

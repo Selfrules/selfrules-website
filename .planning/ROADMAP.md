@@ -83,7 +83,7 @@ Plans:
 **UI hint**: yes
 
 Plans:
-- [ ] 04-01-PLAN.md — i18n homepage namespace (full EN+IT content), SectionHeader component, Hero section
+- [x] 04-01-PLAN.md — i18n homepage namespace (full EN+IT content), SectionHeader component, Hero section
 - [ ] 04-02-PLAN.md — HowIWork, Timeline, Metrics, CurrentWork, Contact section components
 - [ ] 04-03-PLAN.md — page.tsx translation orchestrator wiring all 6 sections, visual verification checkpoint
 
