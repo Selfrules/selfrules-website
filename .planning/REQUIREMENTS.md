@@ -150,13 +150,77 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (To be filled by roadmapper) | | |
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Pending |
+| LNAV-01 | Phase 2 | Pending |
+| LNAV-02 | Phase 2 | Pending |
+| LNAV-03 | Phase 2 | Pending |
+| LNAV-04 | Phase 2 | Pending |
+| LNAV-05 | Phase 2 | Pending |
+| LNAV-06 | Phase 2 | Pending |
+| COPY-04 | Phase 2 | Pending |
+| ANLT-01 | Phase 2 | Pending |
+| ANLT-02 | Phase 2 | Pending |
+| UICM-01 | Phase 3 | Pending |
+| UICM-02 | Phase 3 | Pending |
+| UICM-03 | Phase 3 | Pending |
+| UICM-04 | Phase 3 | Pending |
+| UICM-05 | Phase 3 | Pending |
+| UICM-06 | Phase 3 | Pending |
+| UICM-07 | Phase 3 | Pending |
+| HOME-01 | Phase 4 | Pending |
+| HOME-02 | Phase 4 | Pending |
+| HOME-03 | Phase 4 | Pending |
+| HOME-04 | Phase 4 | Pending |
+| HOME-05 | Phase 4 | Pending |
+| HOME-06 | Phase 4 | Pending |
+| PAGE-01 | Phase 5 | Pending |
+| PAGE-02 | Phase 5 | Pending |
+| PAGE-03 | Phase 5 | Pending |
+| PAGE-04 | Phase 5 | Pending |
+| PAGE-05 | Phase 5 | Pending |
+| PAGE-06 | Phase 5 | Pending |
+| COPY-01 | Phase 5 | Pending |
+| COPY-02 | Phase 5 | Pending |
+| COPY-03 | Phase 5 | Pending |
+| MODB-01 | Phase 5 | Pending |
+| MODB-02 | Phase 5 | Pending |
+| MODB-03 | Phase 5 | Pending |
+| MODB-04 | Phase 5 | Pending |
+| SEO-01 | Phase 6 | Pending |
+| SEO-02 | Phase 6 | Pending |
+| SEO-03 | Phase 6 | Pending |
+| SEO-04 | Phase 6 | Pending |
+| SEO-05 | Phase 6 | Pending |
+| SEO-06 | Phase 6 | Pending |
+| SEO-07 | Phase 6 | Pending |
+| PERF-01 | Phase 6 | Pending |
+| PERF-02 | Phase 6 | Pending |
+| PERF-03 | Phase 6 | Pending |
+| PERF-04 | Phase 6 | Pending |
+| PERF-05 | Phase 6 | Pending |
+| PERF-06 | Phase 6 | Pending |
+| A11Y-01 | Phase 6 | Pending |
+| A11Y-02 | Phase 6 | Pending |
+| A11Y-03 | Phase 6 | Pending |
+| A11Y-04 | Phase 6 | Pending |
+| A11Y-05 | Phase 6 | Pending |
+| PLSH-01 | Phase 6 | Pending |
+| PLSH-02 | Phase 6 | Pending |
+| PLSH-03 | Phase 6 | Pending |
+| PLSH-04 | Phase 6 | Pending |
+| DEPL-01 | Phase 6 | Pending |
+| DEPL-02 | Phase 6 | Pending |
+| DEPL-03 | Phase 6 | Pending |
 
 **Coverage:**
-- v1 requirements: 52 total
-- Mapped to phases: 0
-- Unmapped: 52 ⚠️
+- v1 requirements: 65 total
+- Mapped to phases: 65
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-22*
-*Last updated: 2026-03-22 after initial definition*
+*Last updated: 2026-03-22 after roadmap creation*
