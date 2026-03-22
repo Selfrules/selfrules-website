@@ -20,7 +20,7 @@ Rendere il sito production-ready: SEO metadata completo per ogni pagina (title, 
 - **D-04:** prefers-reduced-motion disabilita tutte le animazioni (A11Y-05). Nessun movimento, contenuto visibile immediatamente.
 
 ### Meta Title & OG
-- **D-05:** Formato meta title: "Page — Mattia De Luca" per tutte le inner pages. Homepage: "Mattia De Luca — Product Manager". Versione IT: stessi titoli pagina localizzati.
+- **D-05:** Formato meta title: "Page — Mattia De Luca" per tutte le inner pages. Homepage: "Mattia De Luca — Senior Technical Product Manager | B2B SaaS . Payments" (da UI-SPEC canonical copy). Versione IT: stessi titoli pagina localizzati.
 - **D-06:** Un'unica OG image statica 1200x630 usata come fallback per tutte le pagine in v1. OG image dinamiche per pagina rimandate a v2 (VIS-02).
 - **D-07:** Meta description copiate esattamente da microcopy.md (IT e EN). Nessuna riscrittura — coerente con COPY-01.
 
