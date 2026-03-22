@@ -56,19 +56,28 @@ Declared values (all multiples of 4):
 
 | Role | Size | Weight | Line Height | Font |
 |------|------|--------|-------------|------|
-| Hero | `clamp(40px, 5vw, 64px)` | 700 (bold) | 1.1 | Inter |
-| Section title | `clamp(28px, 3vw, 36px)` | 600 (semibold) | 1.2 | Inter |
-| Card title | 20px | 600 (semibold) | 1.3 | Inter |
-| Body large | 18px | 400 (regular) | 1.6 | Inter |
+| Display | `clamp(40px, 5vw, 64px)` | 700 (bold) | 1.1 | Inter |
+| Heading | `clamp(20px, 2.5vw, 36px)` | 700 (bold) | 1.2 | Inter |
 | Body | 16px | 400 (regular) | 1.5 | Inter |
-| Label | 14px | 500 (medium) | 1.4 | Inter |
-| Small | 13px | 400 (regular) | 1.4 | Inter |
+| Small | 14px | 400 (regular) | 1.4 | Inter |
 | Metric | `clamp(40px, 5vw, 64px)` | 700 (bold) | 1.1 | JetBrains Mono |
 | Tag / monospace | 14px | 400 (regular) | 1.4 | JetBrains Mono |
 
-**Font weights loaded:**
-- Inter: 400, 500, 600, 700 (source: FOUND-04)
-- JetBrains Mono: 400, 500 (source: FOUND-04)
+**4 size stops:** Display (40-64px fluid), Heading (20-36px fluid), Body (16px), Small (14px).
+
+**Consolidation rationale (revision from 7 sizes to 4):**
+- **Small (13px) merged into Small (14px):** 1px difference is imperceptible; 14px provides better readability and accessibility.
+- **Body large (18px) merged into Body (16px):** Eliminates a near-duplicate size. Where emphasis is needed, use weight 700 (bold) on 16px body instead of a separate 18px size.
+- **Card title (20px) merged with Section title (28-36px) into Heading:** Single fluid scale `clamp(20px, 2.5vw, 36px)` covers both card titles (at narrow viewports) and section headings (at wide viewports) with one token.
+- **Hero and Metric share the Display size:** Both use the same `clamp(40-64px)` -- Hero in Inter, Metric in JetBrains Mono.
+
+**2 font weights loaded:**
+- Inter: 400 (regular), 700 (bold)
+- JetBrains Mono: 400 (regular), 700 (bold)
+
+**Weight consolidation rationale (revision from 4 weights to 2):**
+- **500 (medium) dropped:** Label text now uses 400 regular at 14px. Sufficient contrast against 16px body without a separate weight.
+- **600 (semibold) dropped:** Headings use 700 bold instead. The visual difference between 600 and 700 is minimal, and using a single heavy weight simplifies the font loading budget and creates stronger hierarchy.
 
 **Font loading:** `display: 'swap'`, CSS variable approach (`--font-inter`, `--font-jetbrains`), variables applied on `<html>` element, bridged into Tailwind via `@theme inline`.
 
