@@ -107,9 +107,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Deploy
 
-- [ ] **DEPL-01**: Deployed on Vercel with production build
-- [ ] **DEPL-02**: selfrules.org domain configured with HTTPS
-- [ ] **DEPL-03**: www → non-www redirect configured
+- [x] **DEPL-01**: Deployed on Vercel with production build
+- [x] **DEPL-02**: selfrules.org domain configured with HTTPS
+- [x] **DEPL-03**: www → non-www redirect configured
 
 ## v2 Requirements
 
@@ -212,9 +212,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PLSH-02 | Phase 6 | Complete |
 | PLSH-03 | Phase 6 | Complete |
 | PLSH-04 | Phase 6 | Complete |
-| DEPL-01 | Phase 6 | Pending |
-| DEPL-02 | Phase 6 | Pending |
-| DEPL-03 | Phase 6 | Pending |
+| DEPL-01 | Phase 6 | Complete |
+| DEPL-02 | Phase 6 | Complete |
+| DEPL-03 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 65 total
