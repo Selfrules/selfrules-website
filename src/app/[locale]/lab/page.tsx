@@ -6,6 +6,7 @@ import { Section } from '@/components/layout/Section';
 import { Tag } from '@/components/ui/Tag';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 const CASAHUNTER_STACK = [
   'Python 3.11',
@@ -77,6 +78,7 @@ export default async function LabPage({
       </Section>
 
       {/* CasaHunter expanded section (D-06) */}
+      <ScrollReveal>
       <Section>
         <div className="flex flex-col gap-8">
           {/* Project title + one-liner */}
@@ -152,8 +154,10 @@ export default async function LabPage({
           </div>
         </div>
       </Section>
+      </ScrollReveal>
 
       {/* MoneyMind "Coming soon" */}
+      <ScrollReveal>
       <Section>
         <div className="mt-[-16px]">
           <h2 className="font-heading text-xl font-bold text-primary">
@@ -164,6 +168,7 @@ export default async function LabPage({
           </p>
         </div>
       </Section>
+      </ScrollReveal>
 
       {/* PageCTA */}
       <PageCTA

@@ -5,6 +5,7 @@ import { createPageMetadata } from '@/lib/metadata';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -62,6 +63,7 @@ export default async function ApproachPage({
       </Section>
 
       {/* 5 numbered sections */}
+      <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-12">
           {sections.map((key, index) => (
@@ -76,8 +78,10 @@ export default async function ApproachPage({
           ))}
         </div>
       </Section>
+      </ScrollReveal>
 
       {/* Closing text */}
+      <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-16">
           <p className="text-base leading-[1.7] text-primary whitespace-pre-line">
@@ -85,6 +89,7 @@ export default async function ApproachPage({
           </p>
         </div>
       </Section>
+      </ScrollReveal>
 
       {/* PageCTA */}
       <PageCTA

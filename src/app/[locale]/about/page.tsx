@@ -145,8 +145,10 @@ export default async function AboutPage({
           </ol>
         </VerticalTimeline>
       </Section>
+      </ScrollReveal>
 
       {/* What I believe — 3 principles */}
+      <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-16">
           {beliefs.map((belief, index) => (
@@ -161,8 +163,10 @@ export default async function AboutPage({
           ))}
         </div>
       </Section>
+      </ScrollReveal>
 
       {/* Outside work — subtle divider above (D-03 Option B) */}
+      <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-16 pt-16 border-t border-default">
           <p className="text-base leading-[1.6] text-primary">
@@ -170,6 +174,7 @@ export default async function AboutPage({
           </p>
         </div>
       </Section>
+      </ScrollReveal>
 
       {/* PageCTA */}
       <PageCTA

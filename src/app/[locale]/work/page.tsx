@@ -6,6 +6,7 @@ import { Section } from '@/components/layout/Section';
 import { CaseStudyCard } from '@/components/ui/CaseStudyCard';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -59,6 +60,7 @@ export default async function WorkPage({
       </Section>
 
       {/* Case Study Cards */}
+      <ScrollReveal>
       <Section wide>
         <div className="flex flex-col gap-8">
           {/* Card 1: Payments Rescue */}
@@ -83,6 +85,7 @@ export default async function WorkPage({
           </div>
         </div>
       </Section>
+      </ScrollReveal>
 
       {/* PageCTA */}
       <PageCTA
