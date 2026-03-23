@@ -41,17 +41,17 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      {/* Skip to content — sr-only, visible on keyboard focus */}
+      {/* Skip to content — sr-only, visible on keyboard focus (A11Y-01) */}
       <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-accent focus:text-primary focus:px-4 focus:py-2 focus:text-sm focus:font-medium"
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-bg-primary focus:px-4 focus:py-2 focus:font-bold focus:text-sm"
       >
         {t('skipToContent')}
       </a>
 
       <Navbar locale={locale} />
 
-      <main id="main" className="pt-16">
+      <main id="main-content" className="pt-16">
         {children}
       </main>
 
