@@ -37,8 +37,8 @@
   },
   "homepage": {
     "hero": {
-      "headline": "Senior Technical Product Manager. Design, code, and product management in the same head.",
-      "subtitle": "B2B SaaS \u00b7 Payments \u00b7 Platform. 10+ years designing interfaces, writing production code, and managing products. The advantage: when design, engineering, and business don't understand each other, no translator needed.",
+      "headline": "Senior Technical Product Manager.\nDesign, code, and product management in the same head.",
+      "subtitle": "B2B SaaS · Payments · Platform. 10+ years designing interfaces, writing production code, and managing products. The advantage: when design, engineering, and business don't understand each other, no translator needed.",
       "primaryCta": "Get in touch",
       "secondaryCta": "See the work",
       "tag1": "10+ years",
@@ -51,14 +51,14 @@
     "howIWork": {
       "label": "HOW I WORK",
       "title": "How I work",
-      "intro": "When design says \"the user gets stuck here because the visual hierarchy is wrong,\" engineering says \"we need 3 sprints of refactoring,\" and business says \"it's costing us \u20ac15K a month in support tickets.\" Three separate conversations. My job is to turn them into one decision.",
+      "intro": "When design says \"the user gets stuck here because the visual hierarchy is wrong,\" engineering says \"we need 3 sprints of refactoring,\" and business says \"it's costing us €15K a month in support tickets.\" Three separate conversations. My job is to turn them into one decision.",
       "pillar1": {
-        "title": "Designer + Developer + PM. In the same room.",
+        "title": "Designer + Developer + PM.\nIn the same room.",
         "text": "4 years designing interfaces. 4 writing production code. 5+ managing products and cross-functional teams of up to 10+ people. When design and engineering don't understand each other, the problem usually isn't technical. It's that nobody in the room has done both jobs. Weekly cross-functional sessions cut post-release incidents by <b>25%</b>. Less rework, fewer meetings, decisions that stick.",
         "shortText": "4 years design. 4 code. 5+ product. When design and engineering don't understand each other, the problem usually isn't technical. Cross-functional sessions cut post-release incidents by <b>25%</b>."
       },
       "pillar2": {
-        "title": "The problem is never the one from the first meeting",
+        "title": "The problem is never\nthe one from the first meeting",
         "text": "An example. Payment system in crisis, 44 open problems. The pressure is \"act on everything, now.\" Two weeks talking to support, reading tickets, looking at the data. Result: 12 critical, 4 with immediate financial impact. The rest could wait. The 4 most severe resolved in 6 weeks, not 6 months. Before building anything, verify you're solving the right problem.",
         "shortText": "Payment system in crisis, 44 open problems. Two weeks of discovery: 12 critical, 4 with financial impact. The 4 most severe resolved in 6 weeks, not 6 months."
       },
@@ -107,32 +107,32 @@
       "metric1": {
         "number": "99%+",
         "label": "Uptime",
-        "context": "Payment uptime and success rate \u2014 QubicaAMF. From daily crises to enterprise stability."
+        "context": "Payment uptime and success rate — QubicaAMF. From daily crises to enterprise stability."
       },
       "metric2": {
         "number": "-25%",
         "label": "Post-release incidents",
-        "context": "Post-release incidents \u2014 QubicaAMF. Weekly cross-functional sessions with Product, Support, and Engineering."
+        "context": "Post-release incidents — QubicaAMF. Weekly cross-functional sessions with Product, Support, and Engineering."
       },
       "metric3": {
         "number": "116",
         "label": "Centers integrated",
-        "context": "Centers integrated on the platform \u2014 QubicaAMF. 5 new per week."
+        "context": "Centers integrated on the platform — QubicaAMF. 5 new per week."
       },
       "metric4": {
         "number": "-35%",
         "label": "Setup time",
-        "context": "Setup time \u2014 LeadsBridge. Core product flow redesign."
+        "context": "Setup time — LeadsBridge. Core product flow redesign."
       },
       "metric5": {
         "number": "+9%",
         "label": "Integration adoption",
-        "context": "Integration adoption \u2014 QubicaAMF. 47-page PDFs replaced with 3-minute videos."
+        "context": "Integration adoption — QubicaAMF. 47-page PDFs replaced with 3-minute videos."
       },
       "metric6": {
         "number": "-12%",
         "label": "Processing times",
-        "context": "Payment processing times \u2014 QubicaAMF. Full payment pipeline optimization."
+        "context": "Payment processing times — QubicaAMF. Full payment pipeline optimization."
       },
       "link": "See the case studies"
     },
@@ -166,37 +166,37 @@
     }
   },
   "about": {
-    "headline": "Better products happen when one person speaks all three languages.",
+    "headline": "Better products happen\nwhen one person speaks all three languages.",
     "subtitle": "I didn't start in product management. I got here through design, code, and a lot of building. Here's how.",
     "careerLabel": "CAREER PATH",
     "beliefsLabel": "WHAT I BELIEVE",
     "outsideLabel": "OUTSIDE WORK",
     "career": {
       "selfrules": {
-        "company": "Selfrules (2012\u20132018)",
-        "dates": "2012\u20132018",
-        "text": "A web design studio launched at 25 in northern Italy. For 7 years, everything went through one person: sales, design, development, delivery, support. 20+ clients.\n\nThe first e-commerce site had an award-worthy interface and zero sales. The customer couldn't find the checkout button. \u20ac8K in refunds. When you sell, design, build, and support the same product, cross-functional thinking isn't optional. And one rule becomes permanent: if it's beautiful but confusing, it's decoration."
+        "company": "Selfrules (2012–2018)",
+        "dates": "2012–2018",
+        "text": "A web design studio launched at 25 in northern Italy. For 7 years, everything went through one person: sales, design, development, delivery, support. 20+ clients.\n\nThe first e-commerce site had an award-worthy interface and zero sales. The customer couldn't find the checkout button. €8K in refunds. When you sell, design, build, and support the same product, cross-functional thinking isn't optional. And one rule becomes permanent: if it's beautiful but confusing, it's decoration."
       },
       "flowing": {
-        "company": "FLOWING (2016\u20132020)",
-        "dates": "2016\u20132020",
-        "text": "Joined as a UX Designer, left writing production code. B2B and B2C products for clients including Prometeia, Casavo, CliensPi\u00f9.\n\nThe most formative project: CliensPi\u00f9, a legal practice management system used 8+ hours a day. Every micro-interaction matters when someone lives in the tool. Designing the interface, then writing the code that implements it. After 4 years of doing both, the line between \"the designer\" and \"the developer\" stopped making sense."
+        "company": "FLOWING (2016–2020)",
+        "dates": "2016–2020",
+        "text": "Joined as a UX Designer, left writing production code. B2B and B2C products for clients including Prometeia, Casavo, CliensPiù.\n\nThe most formative project: CliensPiù, a legal practice management system used 8+ hours a day. Every micro-interaction matters when someone lives in the tool. Designing the interface, then writing the code that implements it. After 4 years of doing both, the line between \"the designer\" and \"the developer\" stopped making sense."
       },
       "leadsbridge": {
-        "company": "ActiveProspect / LeadsBridge (2020\u20132023)",
-        "dates": "2020\u20132023",
-        "text": "LeadsBridge: B2B SaaS platform with 380+ connectors and direct partnerships with Meta, Google, LinkedIn, and TikTok. Solo PM, fully remote from Europe, team of 10.\n\nThe product's core flow was also its weakest point \u2014 the kind of problem everyone had accepted as normal. The redesign cut setup time by <bold>35%</bold> and directly unlocked revenue growth."
+        "company": "ActiveProspect / LeadsBridge (2020–2023)",
+        "dates": "2020–2023",
+        "text": "LeadsBridge: B2B SaaS platform with 380+ connectors and direct partnerships with Meta, Google, LinkedIn, and TikTok. Solo PM, fully remote from Europe, team of 10.\n\nThe product's core flow was also its weakest point — the kind of problem everyone had accepted as normal. The redesign cut setup time by <bold>35%</bold> and directly unlocked revenue growth."
       },
       "overlapBadge": "↑ overlap",
       "qubicamf": {
-        "company": "QubicaAMF (2023\u2013present)",
-        "dates": "2023\u2013present",
+        "company": "QubicaAMF (2023–present)",
+        "dates": "2023–present",
         "text": "600 employees, 90+ countries. Payment systems, platform integrations, and cashless solutions for entertainment centers. A system inherited in critical state. How it was stabilized is a story worth its own case study.\n\nToday: a team of 10+ across backend, QA, and analysts. <bold>99%+</bold> uptime, <bold>-25%</bold> post-release incidents, <bold>116 centers</bold> integrated, <bold>5 new per week</bold>. Stabilization was step one. The current work is strategic: what to build, what not to build, and why."
       }
     },
     "beliefs": {
       "belief1": {
-        "title": "The problem is never the one from the first meeting.",
+        "title": "The problem is never\nthe one from the first meeting.",
         "text": "The first meeting tells you the symptom. The real work is digging to the cause. Sometimes that means saying \"the solution we're evaluating doesn't solve the real problem.\" It doesn't win you friends in the first meeting. By the third, they agree."
       },
       "belief2": {
@@ -212,29 +212,29 @@
       "text": "Based in northern Italy. When not working, probably at the gym, building something with LEGO, or trying something outside the comfort zone. Latest experiment: embroidery. Will go back eventually, but not before figuring out what's on the other side."
     },
     "cta": {
-      "text": "If your product needs someone who gets their hands in it \u2014 not just words on top \u2014 let's talk. Even just to see if it makes sense.",
+      "text": "If your product needs someone who gets their hands in it — not just words on top — let's talk. Even just to see if it makes sense.",
       "primary": "Read my case studies",
       "secondary": "Get in touch"
     }
   },
   "work": {
-    "headline": "How I work, demonstrated.",
+    "headline": "How I work,\ndemonstrated.",
     "intro": "Two product stories. The context, the challenge, the approach, the numbers. Not what someone says they can do. What happened.",
     "cases": {
       "payments": {
-        "tag": "Payments \u00b7 B2B SaaS \u00b7 Enterprise",
-        "title": "A payment system losing transactions every day",
+        "tag": "Payments · B2B SaaS · Enterprise",
+        "title": "A payment system\nlosing transactions every day",
         "metric": "99%+",
-        "metricLabel": "SUCCESS RATE \u2192",
+        "metricLabel": "SUCCESS RATE →",
         "preview": "Hundreds of centers across 5 countries, 44 open issues with no priority, 4 with immediate financial impact. Stabilization without rewriting anything."
       },
       "cashless": {
-        "tag": "Cashless \u00b7 Product Strategy \u00b7 Partnership",
-        "title": "Cashless from zero: three providers, an \"unsolvable\" problem, and a product to park",
+        "tag": "Cashless · Product Strategy · Partnership",
+        "title": "Cashless from zero: three providers,\nan \"unsolvable\" problem, and a product to park",
         "metric": "5 mo",
-        "metricLabel": "ZERO TO LIVE DEMO \u2192",
+        "metricLabel": "ZERO TO LIVE DEMO →",
         "preview": "The internal product looked like the obvious choice. Discovery told a different story. How the cashless strategy was defined by working from real constraints.",
-        "note": "Full metrics available upon production launch \u2014 pilot data currently being collected"
+        "note": "Full metrics available upon production launch — pilot data currently being collected"
       }
     },
     "cta": {
@@ -246,9 +246,9 @@
   "caseStudies": {
     "backToWork": "Back to Work",
     "payments": {
-      "tag": "Payments \u00b7 B2B SaaS \u00b7 Enterprise",
+      "tag": "Payments · B2B SaaS · Enterprise",
       "role": "Senior Product Manager, Payments",
-      "company": "B2B SaaS platform \u00b7 Entertainment & leisure \u00b7 5 countries",
+      "company": "B2B SaaS platform · Entertainment & leisure · 5 countries",
       "period": "2025",
       "heroMetric": "99.19%",
       "heroMetricLabel": "global success rate",
@@ -258,7 +258,7 @@
         "heading": "The context",
         "content": [
           "A B2B platform serving hundreds of entertainment centers across five countries. The primary payment integration, built on Square, was the fastest-growing product in the portfolio: **42% of total transaction volume**, **25% year-over-year growth**, the only provider trending upward.",
-          "Then the growth outran the product. The original MVP had been designed for a handful of friendly early adopters. By mid-2025 it was running in production across a much broader customer base, and the gaps between \u201ctechnically functional\u201d and \u201coperationally usable\u201d were becoming visible to everyone."
+          "Then the growth outran the product. The original MVP had been designed for a handful of friendly early adopters. By mid-2025 it was running in production across a much broader customer base, and the gaps between “technically functional” and “operationally usable” were becoming visible to everyone."
         ]
       },
       "challenge": {
@@ -275,9 +275,9 @@
           "**The first decision was to stop scaling the problem.** Growth features went on hold. Customer acquisition slowed down. The entire team shifted to a single priority: make the centers already in production work reliably. This required aligning sales leadership, engineering, and executive stakeholders around the same data. The customer satisfaction numbers made the case.",
           "**Then came triage.** 44 open items sat in the backlog, compiled from engineering, sales, and support with no ranking. The sorting criterion was simple: is this costing a center money right now? That split the backlog into three tiers. 12 items were critical to payments operations. Of those, 4 had immediate financial impact on live centers: double charges, payment timeouts, broken split payments, missing refunds. The remaining 32 were real issues, but they could wait.",
           "The 4 highest-impact items got one owner each, a deadline, and a published commitment. All four shipped within six weeks. Zero complaints on any of them post-deployment.",
-          "**While the team stabilized, I dug into a problem others had classified as unsolvable.** A major center was about to cancel the integration because they couldn't reconcile their books. Every transaction appeared as \u201cuncategorized income\u201d in the Square dashboard. No breakdown by terminal, no source attribution, no way to close the books.",
+          "**While the team stabilized, I dug into a problem others had classified as unsolvable.** A major center was about to cancel the integration because they couldn't reconcile their books. Every transaction appeared as “uncategorized income” in the Square dashboard. No breakdown by terminal, no source attribution, no way to close the books.",
           "The root cause was in the Square API. The field where we stored transaction metadata didn't preserve enough information. I traced the data model until I found `external_payment_type`, an existing parameter that could carry source attribution without architectural changes on either side. I wrote the implementation spec and handed it to the team. The center stayed and became a reference account.",
-          "**Scope discipline mattered as much as speed.** Over the full year, 23 of the 44 items shipped. The other 21 were deliberate \u201cnot now\u201d decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back and ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
+          "**Scope discipline mattered as much as speed.** Over the full year, 23 of the 44 items shipped. The other 21 were deliberate “not now” decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back and ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
           "**Parallel to stabilization, two compliance threads ran.** I proposed a scope reduction for PCI DSS certification by presenting the certifiers with a three-channel payment architecture, removing significant recurring penalty risk. I also completed the FreedomPay technical certification end-to-end, which unlocked a new segment of enterprise centers.",
           "**Communication was deliberate.** Structured weekly recaps, operational memos for urgent decisions, meeting minutes published within hours. When the support team needed to help customers with issues that weren't fixed yet, I built video tutorials covering workarounds. Bridge solutions while the real fixes were in the pipeline."
         ]
@@ -285,12 +285,30 @@
       "results": {
         "heading": "The results",
         "items": [
-          { "metric": "-12%", "label": "processing times across all payment flows" },
-          { "metric": "99.19%", "label": "global success rate. 100% uptime against a 99% target" },
-          { "metric": "-25%", "label": "post-release incidents" },
-          { "metric": "25%", "label": "YoY growth for the Square integration, the only payment provider still growing" },
-          { "metric": "116", "label": "centers integrated. 5 new centers per week onboarding pace" },
-          { "metric": "23/44", "label": "backlog items shipped. Critical payments issues reduced from 12 to 5 remaining" }
+          {
+            "metric": "-12%",
+            "label": "processing times across all payment flows"
+          },
+          {
+            "metric": "99.19%",
+            "label": "global success rate. 100% uptime against a 99% target"
+          },
+          {
+            "metric": "-25%",
+            "label": "post-release incidents"
+          },
+          {
+            "metric": "25%",
+            "label": "YoY growth for the Square integration, the only payment provider still growing"
+          },
+          {
+            "metric": "116",
+            "label": "centers integrated. 5 new centers per week onboarding pace"
+          },
+          {
+            "metric": "23/44",
+            "label": "backlog items shipped. Critical payments issues reduced from 12 to 5 remaining"
+          }
         ]
       },
       "learned": {
@@ -298,15 +316,15 @@
         "content": [
           "The instinct in a crisis is to fix and grow at the same time. It doesn't work. The first real product decision is to stop making the hole deeper. Everything else follows from that.",
           "The second thing: 44 items, 12 critical, 4 urgent. Most of what felt urgent could actually wait. Knowing which ones can't is the actual skill. A single clear sorting criterion gave the team more clarity than any amount of discussion.",
-          "The third: when a problem gets labeled \u201cunsolvable\u201d or \u201cwaiting on the partner,\u201d it's worth checking whether someone has actually read the API documentation. The source attribution fix was already there. It just needed someone willing to look."
+          "The third: when a problem gets labeled “unsolvable” or “waiting on the partner,” it's worth checking whether someone has actually read the API documentation. The source attribution fix was already there. It just needed someone willing to look."
         ]
       }
     },
     "cashless": {
-      "tag": "Cashless \u00b7 Product Strategy \u00b7 Partnership",
+      "tag": "Cashless · Product Strategy · Partnership",
       "role": "Senior Product Manager, Payments & Cashless",
-      "company": "B2B SaaS platform \u00b7 Entertainment & leisure \u00b7 5 countries",
-      "period": "2025\u20132026",
+      "company": "B2B SaaS platform · Entertainment & leisure · 5 countries",
+      "period": "2025–2026",
       "heroMetric": "5 mo",
       "heroMetricLabel": "zero to live demo",
       "secondMetric": "1",
@@ -323,13 +341,13 @@
         "heading": "The challenge",
         "content": [
           "Cashless systems work on a deposit-and-redeem model. A customer loads money onto a card, then spends it at game terminals. Simple from the user's side. From the accounting side, a mess: the deposit registers as income, and the redemption registers as a second income. Double counting. Every center running cashless would need to reconcile manually, or their books wouldn't close.",
-          "Three cashless providers were on the table. Each had different API architectures, different pricing models, and different levels of willingness to co-develop. No one internally had mapped the landscape or defined what \u201ccashless integration\u201d actually meant for the platform."
+          "Three cashless providers were on the table. Each had different API architectures, different pricing models, and different levels of willingness to co-develop. No one internally had mapped the landscape or defined what “cashless integration” actually meant for the platform."
         ]
       },
       "approach": {
         "heading": "The approach",
         "content": [
-          "**The first move was to understand what we were actually building.** Not \u201ca cashless feature\u201d but a specific product definition: what does cashless integration mean for a platform that already runs Square payments? What's the data model? Where does the money flow? I mapped the full transaction lifecycle across deposit, play, and redemption before evaluating any provider.",
+          "**The first move was to understand what we were actually building.** Not “a cashless feature” but a specific product definition: what does cashless integration mean for a platform that already runs Square payments? What's the data model? Where does the money flow? I mapped the full transaction lifecycle across deposit, play, and redemption before evaluating any provider.",
           "**Then I killed the obvious option.** The internal product, OneCashless, had been explored through multiple discovery sessions. On paper it looked like the fastest path. In practice, the product wasn't convincing. The business model was unclear, the technical architecture required work we couldn't justify, and forcing a weak product into production would have created the same crisis the payments team had just spent months fixing. I parked it. Deliberately.",
           "**Intercard was the first real test.** A $500-per-terminal API fee, but they had existing market presence. I scoped a proof of concept with two pilot centers, got it validated, and put it into daily use. It proved cashless integration was technically viable on the platform.",
           "**The real unlock was Amusement Connect.** They had something no other provider offered: native compatibility with Square. That meant the double-counting problem had a structural solution, not just a workaround. I initiated a co-development partnership and negotiated a shared roadmap toward feature parity with the Intercard integration.",
@@ -340,10 +358,22 @@
       "results": {
         "heading": "The results",
         "items": [
-          { "metric": "2", "label": "pilot centers validated on Intercard, proving platform viability" },
-          { "metric": "1", "label": "co-development partnership established with shared roadmap" },
-          { "metric": "5 mo", "label": "from zero to live cashless demo at the industry's largest trade show" },
-          { "metric": "1", "label": "product killed (OneCashless) before it could become a liability" }
+          {
+            "metric": "2",
+            "label": "pilot centers validated on Intercard, proving platform viability"
+          },
+          {
+            "metric": "1",
+            "label": "co-development partnership established with shared roadmap"
+          },
+          {
+            "metric": "5 mo",
+            "label": "from zero to live cashless demo at the industry's largest trade show"
+          },
+          {
+            "metric": "1",
+            "label": "product killed (OneCashless) before it could become a liability"
+          }
         ]
       },
       "learned": {
@@ -362,7 +392,7 @@
     }
   },
   "lab": {
-    "headline": "Same thinking, applied to my own problems.",
+    "headline": "Same thinking,\napplied to my own problems.",
     "intro": "Every project here started from a real need, not a tutorial. Same approach as the day job: understand the problem, build the minimum to validate the idea, decide what not to build. Code is the means. Product thinking is the point.",
     "whatItTaughtMeLabel": "What it taught me",
     "casahunter": {
@@ -451,7 +481,7 @@
   },
   "metadata": {
     "home": {
-      "title": "Mattia De Luca \u2014 Senior Technical Product Manager | B2B SaaS . Payments",
+      "title": "Mattia De Luca — Senior Technical Product Manager | B2B SaaS . Payments",
       "description": "Senior Technical Product Manager with 10+ years in B2B SaaS, Payments, and Platform. Design, code, and product management in the same head."
     },
     "about": {
@@ -475,11 +505,11 @@
       "description": "Notes on product management, technical decisions, and building things. When there's something worth saying."
     },
     "paymentsRescue": {
-      "title": "Payments Rescue \u2014 Mattia De Luca",
+      "title": "Payments Rescue — Mattia De Luca",
       "description": "How a payment system went from crisis to 99% uptime. A product case study about triage, scope discipline, and reading the API docs."
     },
     "cashlessSystem": {
-      "title": "Cashless System \u2014 Mattia De Luca",
+      "title": "Cashless System — Mattia De Luca",
       "description": "How a cashless product went from zero to the right integration partner. A product case study about killing the obvious option and finding the structural solution."
     },
     "skipToContent": "Skip to content"

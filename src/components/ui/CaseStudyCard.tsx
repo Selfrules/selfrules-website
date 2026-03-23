@@ -32,7 +32,7 @@ export function CaseStudyCard({
     <>
       <div className="flex-1">
         <span className="font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">{tag}</span>
-        <h3 className="font-heading font-bold text-[28px] leading-[33.6px] tracking-[-0.7px] text-[#f5f5f0] mt-5">{title}</h3>
+        <h3 className="font-heading font-bold text-[28px] leading-[33.6px] tracking-[-0.7px] text-[#f5f5f0] mt-5 md:whitespace-pre-line">{title}</h3>
         <p className="font-light text-[17px] leading-[25.5px] text-[rgba(255,255,255,0.5)] mt-3">{preview}</p>
       </div>
 

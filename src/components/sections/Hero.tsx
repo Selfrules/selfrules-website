@@ -37,7 +37,7 @@ export function Hero({
         </div>
 
         {/* Headline */}
-        <h1 className="font-heading text-[clamp(40px,5vw,64px)] font-bold leading-[1.08] tracking-[-1.6px] text-text-primary max-w-[674px]">
+        <h1 className="font-heading text-[clamp(40px,5vw,64px)] font-bold leading-[1.08] tracking-[-1.6px] text-text-primary max-w-[674px] md:whitespace-pre-line">
           {headline}
         </h1>
 

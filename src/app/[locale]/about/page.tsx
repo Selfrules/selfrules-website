@@ -96,7 +96,7 @@ export default async function AboutPage({
       }} />
       {/* Headline */}
       <Section>
-        <h1 className="font-heading font-bold text-[32px] md:text-[48px] leading-[36px] md:leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
+        <h1 className="font-heading font-bold text-[32px] md:text-[48px] leading-[36px] md:leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0] md:whitespace-pre-line">
           {t('headline')}
         </h1>
         <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
@@ -172,7 +172,7 @@ export default async function AboutPage({
           </p>
           {beliefs.map((belief, index) => (
             <div key={index} className={index < beliefs.length - 1 ? 'mb-12' : ''}>
-              <h2 className="font-heading font-medium text-[22px] leading-[1.3] tracking-[-0.55px] text-[#f5f5f0]">
+              <h2 className="font-heading font-medium text-[22px] leading-[1.3] tracking-[-0.55px] text-[#f5f5f0] md:whitespace-pre-line">
                 {belief.title}
               </h2>
               <p className="mt-4 font-light text-[18px] leading-[32.4px] text-[rgba(255,255,255,0.5)]">
