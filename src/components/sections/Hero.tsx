@@ -24,9 +24,10 @@ export function Hero({
   return (
     <section
       aria-label="Hero"
-      className="flex flex-col justify-start pt-[96px] pb-[80px] pl-[24px] px-[clamp(20px,5vw,80px)]"
+      className="flex flex-col justify-start pt-[96px] pb-[80px] px-[var(--spacing-page-padding)]"
     >
-      <div className="max-w-[720px]">
+      <div className="mx-auto w-full max-w-[var(--width-wide)]">
+        <div className="max-w-[720px]">
         {/* Terminal prompt */}
         <div aria-hidden="true" className="flex items-center gap-2 mb-6">
           <span className="font-mono text-[13px] text-[#5a5a5e] leading-[19.5px]">
@@ -69,6 +70,7 @@ export function Hero({
         <p className="italic text-[15px] leading-[22.5px] text-[#8a8a8e] mt-5">
           {signaturePhrase}
         </p>
+        </div>
       </div>
     </section>
   );
