@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node -e \"const c=require('child_process');let n=47;try{n=parseInt(c.execSync('git rev-list --count HEAD').toString().trim())||47}catch(e){}require('fs').writeFileSync('src/lib/build-info.ts','export const COMMIT_COUNT = '+n+';\\n')\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

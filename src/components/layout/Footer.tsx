@@ -1,4 +1,7 @@
 import { getTranslations } from 'next-intl/server';
+import { COMMIT_COUNT } from '@/lib/build-info';
+
+const buildMonth = new Date().toISOString().slice(0, 7).replace('-', '.');
 
 export async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'footer' });
@@ -57,7 +60,7 @@ export async function Footer({ locale }: { locale: string }) {
 
         {/* Build version — right aligned */}
         <p className="font-mono text-[11px] text-[#5a5a5e] md:text-right">
-          {t('buildVersion', { buildMonth: '2026.03', commitCount: '47' })}
+          {t('buildVersion', { buildMonth, commitCount: String(COMMIT_COUNT) })}
         </p>
       </div>
     </footer>
