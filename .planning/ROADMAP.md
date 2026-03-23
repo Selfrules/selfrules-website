@@ -121,7 +121,7 @@ Plans:
 Plans:
 - [x] 06-01-PLAN.md — SEO metadata infrastructure: metadata helper, generateMetadata on all pages, sitemap, robots, JSON-LD, OG image
 - [x] 06-02-PLAN.md — Accessibility (skip-to-content, focus styles, semantic HTML), scroll animations (ScrollReveal + fade-up), active nav, smooth scroll
-- [ ] 06-03-PLAN.md — Performance audit: build analysis, bundle size verification, Lighthouse checkpoint
+- [x] 06-03-PLAN.md — Performance audit: build analysis, bundle size verification, Lighthouse checkpoint
 - [ ] 06-04-PLAN.md — Vercel deploy, selfrules.org domain configuration, www redirect
 
 ## Progress

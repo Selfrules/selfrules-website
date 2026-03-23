@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Executing Phase 06
-stopped_at: Completed 06-02-PLAN.md
-last_updated: "2026-03-23T00:06:32Z"
+status: Ready to execute
+stopped_at: Completed 06-03-PLAN.md
+last_updated: "2026-03-23T00:12:54.904Z"
 progress:
   total_phases: 6
   completed_phases: 5
   total_plans: 17
-  completed_plans: 15
+  completed_plans: 16
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 06 (seo-polish-deploy) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 
 ## Performance Metrics
 
@@ -60,6 +60,7 @@ Plan: 3 of 4
 | Phase 05 P04 | 3min | 4 tasks | 4 files |
 | Phase 06 P01 | 6min | 7 tasks | 14 files |
 | Phase 06 P02 | 7min | 8 tasks | 9 files |
+| Phase 06 P03 | 3min | 4 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -94,6 +95,7 @@ Recent decisions affecting current work:
 - [Phase 06]: OG image is placeholder PNG -- final to be exported from Figma
 - [Phase 06]: Skip link uses #main-content (updated from existing #main for spec consistency)
 - [Phase 06]: text-tertiary usages verified as decorative/supplementary -- no contrast changes needed
+- [Phase 06]: Moved html/body rendering from root layout to locale layout for correct lang attribute per locale
 
 ### Pending Todos
 
@@ -105,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-23T00:06:32Z
-Stopped at: Completed 06-02-PLAN.md
+Last session: 2026-03-23T00:12:54.902Z
+Stopped at: Completed 06-03-PLAN.md
 Resume file: None

@@ -71,12 +71,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Performance & Accessibility
 
-- [ ] **PERF-01**: Lighthouse Performance ≥ 95
-- [ ] **PERF-02**: Lighthouse Accessibility ≥ 95
-- [ ] **PERF-03**: Lighthouse Best Practices ≥ 95
-- [ ] **PERF-04**: Lighthouse SEO ≥ 95
-- [ ] **PERF-05**: Bundle size < 100KB first load JS
-- [ ] **PERF-06**: Core Web Vitals: LCP < 2.5s, CLS < 0.1
+- [x] **PERF-01**: Lighthouse Performance ≥ 95
+- [x] **PERF-02**: Lighthouse Accessibility ≥ 95
+- [x] **PERF-03**: Lighthouse Best Practices ≥ 95
+- [x] **PERF-04**: Lighthouse SEO ≥ 95
+- [x] **PERF-05**: Bundle size < 100KB first load JS
+- [x] **PERF-06**: Core Web Vitals: LCP < 2.5s, CLS < 0.1
 
 ### Accessibility
 
@@ -91,7 +91,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **PLSH-01**: Scroll-triggered fade-in animations (IntersectionObserver, no libraries)
 - [x] **PLSH-02**: Smooth scroll for anchor links (#contact)
 - [x] **PLSH-03**: Active state in nav links (highlight current page)
-- [ ] **PLSH-04**: No layout shift on page load (CLS < 0.05)
+- [x] **PLSH-04**: No layout shift on page load (CLS < 0.05)
 
 ### Analytics
 
@@ -197,12 +197,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-05 | Phase 6 | Complete |
 | SEO-06 | Phase 6 | Complete |
 | SEO-07 | Phase 6 | Complete |
-| PERF-01 | Phase 6 | Pending |
-| PERF-02 | Phase 6 | Pending |
-| PERF-03 | Phase 6 | Pending |
-| PERF-04 | Phase 6 | Pending |
-| PERF-05 | Phase 6 | Pending |
-| PERF-06 | Phase 6 | Pending |
+| PERF-01 | Phase 6 | Complete |
+| PERF-02 | Phase 6 | Complete |
+| PERF-03 | Phase 6 | Complete |
+| PERF-04 | Phase 6 | Complete |
+| PERF-05 | Phase 6 | Complete |
+| PERF-06 | Phase 6 | Complete |
 | A11Y-01 | Phase 6 | Complete |
 | A11Y-02 | Phase 6 | Complete |
 | A11Y-03 | Phase 6 | Complete |
@@ -211,7 +211,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PLSH-01 | Phase 6 | Complete |
 | PLSH-02 | Phase 6 | Complete |
 | PLSH-03 | Phase 6 | Complete |
-| PLSH-04 | Phase 6 | Pending |
+| PLSH-04 | Phase 6 | Complete |
 | DEPL-01 | Phase 6 | Pending |
 | DEPL-02 | Phase 6 | Pending |
 | DEPL-03 | Phase 6 | Pending |
