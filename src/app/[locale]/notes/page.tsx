@@ -76,7 +76,7 @@ export default async function NotesPage({
         <h1 className="font-heading font-bold text-[clamp(36px,4vw,48px)] leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
-        <p className="mt-4 text-base leading-[1.7] text-text-secondary">
+        <p className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
           {t('subtitle')}
         </p>
       </Section>
@@ -88,26 +88,26 @@ export default async function NotesPage({
             {years.map((year) => (
               <div key={year}>
                 {/* Year separator */}
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="font-mono text-sm text-text-secondary">{year}</span>
-                  <div className="flex-1 h-[1px] bg-[var(--border-default)]" />
+                <div className="mb-8">
+                  <span className="font-mono text-[14px] text-[rgba(255,255,255,0.4)]">{year}</span>
+                  <div className="mt-2 h-[1px] w-full bg-[#1a1a1f]" />
                 </div>
 
                 {/* Posts in this year */}
                 <div className="space-y-8">
                   {postsByYear[year].map((post) => (
                     <article key={post.slug} className="flex gap-6">
-                      <time className="w-[80px] shrink-0 font-mono text-[14px] text-text-secondary pt-1">
+                      <time className="w-[80px] shrink-0 font-mono text-[14px] text-[rgba(255,255,255,0.4)] pt-1">
                         {formatDate(post.date)}
                       </time>
                       <div>
                         <Link
                           href={`/notes/${post.slug}`}
-                          className="block text-[20px] leading-[1.3] text-text-primary transition-colors duration-150 hover:text-accent"
+                          className="block font-heading font-medium text-[18px] leading-[1.3] text-text-primary transition-colors duration-150 hover:text-accent"
                         >
                           {post.title}
                         </Link>
-                        <p className="mt-1 text-base text-text-secondary">
+                        <p className="mt-1 text-[14px] text-[rgba(255,255,255,0.6)]">
                           {post.excerpt}
                         </p>
                       </div>
@@ -118,7 +118,7 @@ export default async function NotesPage({
             ))}
           </div>
         ) : (
-          <p className="mt-12 text-base text-text-secondary">
+          <p className="mt-12 text-[16px] text-[rgba(255,255,255,0.4)]">
             {t('emptyState')}
           </p>
         )}

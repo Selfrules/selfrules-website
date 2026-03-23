@@ -105,14 +105,14 @@ export default async function LabPage({
         <h1 className="font-heading text-[clamp(36px,4vw,48px)] font-bold leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
-        <p className="mt-6 text-base leading-[1.7] text-text-secondary">
+        <p className="mt-6 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
       </Section>
 
       {/* Project grid */}
       <ScrollReveal>
-        <Section>
+        <Section wide>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project) => (
               <ProjectCard

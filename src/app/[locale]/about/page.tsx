@@ -99,7 +99,7 @@ export default async function AboutPage({
         <h1 className="font-heading font-bold text-[clamp(36px,4vw,48px)] leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
-        <p className="mt-4 text-base leading-[1.7] text-text-secondary">
+        <p className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
           {t('subtitle')}
         </p>
       </Section>
@@ -107,7 +107,7 @@ export default async function AboutPage({
       {/* Career Path — VerticalTimeline */}
       <ScrollReveal>
       <Section className="!pt-0">
-        <p className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary mb-6">
+        <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
           {t('careerLabel')}
         </p>
         <VerticalTimeline>
@@ -123,7 +123,7 @@ export default async function AboutPage({
                     className={`absolute w-[10px] h-[10px] -left-[33px] md:-left-[41px] top-[6px] ${
                       entry.isActive
                         ? 'bg-accent'
-                        : 'border border-default bg-transparent'
+                        : 'border border-[#1a1a1f] bg-transparent'
                     }`}
                     aria-hidden="true"
                   />
@@ -136,13 +136,13 @@ export default async function AboutPage({
 
                   {/* Content block */}
                   <div>
-                    <p className="font-mono text-[14px] uppercase tracking-[0.05em] text-accent mt-1">
+                    <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-accent mt-1">
                       {entry.dates}
                     </p>
-                    <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary mt-2">
+                    <h2 className="font-heading font-medium text-[18px] leading-[1.3] text-text-primary mt-2">
                       {entry.company}
                     </h2>
-                    <div className="mt-4 text-base leading-[1.6] text-text-primary whitespace-pre-line">
+                    <div className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)] whitespace-pre-line">
                       {entry.text}
                     </div>
                   </div>
@@ -151,7 +151,7 @@ export default async function AboutPage({
                 {/* Overlap badge between nodes */}
                 {'overlapBadge' in entry && entry.overlapBadge && (
                   <div className="relative mt-4 mb-[-16px]">
-                    <span className="relative -left-[33px] md:-left-[41px] inline-flex items-center gap-1 font-mono text-[11px] text-text-secondary border border-default px-2 py-0.5">
+                    <span className="relative -left-[33px] md:-left-[41px] inline-flex items-center gap-1 font-mono text-[11px] text-[rgba(255,255,255,0.4)] border border-[#1a1a1f] px-2 py-0.5">
                       {entry.overlapBadge}
                     </span>
                   </div>
@@ -167,15 +167,15 @@ export default async function AboutPage({
       <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-16">
-          <p className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary mb-6">
+          <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
             {t('beliefsLabel')}
           </p>
           {beliefs.map((belief, index) => (
             <div key={index} className={index < beliefs.length - 1 ? 'mb-12' : ''}>
-              <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary">
+              <h2 className="font-heading font-medium text-[18px] leading-[1.3] text-text-primary">
                 {belief.title}
               </h2>
-              <p className="mt-4 text-base leading-[1.6] text-text-primary">
+              <p className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
                 {belief.text}
               </p>
             </div>
@@ -187,11 +187,11 @@ export default async function AboutPage({
       {/* Outside work — subtle divider above (D-03 Option B) */}
       <ScrollReveal>
       <Section className="!pt-0">
-        <div className="mt-16 pt-16 border-t border-default">
-          <p className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary mb-6">
+        <div className="mt-16 pt-16 border-t border-[#1a1a1f]">
+          <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
             {t('outsideLabel')}
           </p>
-          <p className="text-base leading-[1.6] text-text-primary">
+          <p className="text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
             {t('outside.text')}
           </p>
         </div>

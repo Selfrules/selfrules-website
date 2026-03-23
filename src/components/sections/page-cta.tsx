@@ -10,8 +10,8 @@ interface PageCTAProps {
 export function PageCTA({ text, primaryCta, secondaryCta }: PageCTAProps) {
   return (
     <Section>
-      <div className="mt-[80px]">
-        <p className="mb-8 text-base leading-[1.7] text-text-primary">{text}</p>
+      <div>
+        <p className="mb-8 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">{text}</p>
         <div className="flex gap-4">
           <Button variant="primary" href={primaryCta.href}>
             {primaryCta.label}

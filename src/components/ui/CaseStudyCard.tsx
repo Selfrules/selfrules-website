@@ -21,7 +21,7 @@ export function CaseStudyCard({
   return (
     <div
       className={cn(
-        'border border-default p-8 md:p-12',
+        'border border-[#1a1a1f] p-8 md:p-12',
         'flex flex-col md:flex-row md:items-center gap-6',
         'transition-all duration-200 hover:border-accent/40 hover:-translate-y-[2px]',
         className
@@ -29,16 +29,16 @@ export function CaseStudyCard({
     >
       <div className="flex-1">
         <Tag>{tag}</Tag>
-        <h3 className="text-xl font-bold text-text-primary font-heading mt-3">{title}</h3>
-        <p className="text-base text-text-secondary mt-2">{preview}</p>
+        <h3 className="text-[18px] font-medium text-text-primary font-heading mt-3">{title}</h3>
+        <p className="text-[14px] text-[rgba(255,255,255,0.6)] mt-2">{preview}</p>
       </div>
 
       <div className="shrink-0 md:text-right">
-        <p className="font-heading font-bold text-accent text-[clamp(40px,5vw,72px)] leading-none">
+        <p className="font-heading font-bold text-accent text-[clamp(40px,5vw,64px)] leading-none tracking-[-2px]">
           {metric}
         </p>
         {metricLabel && (
-          <p className="font-mono text-[13px] uppercase tracking-[0.05em] text-text-tertiary mt-1">{metricLabel}</p>
+          <p className="font-mono text-[14px] uppercase tracking-[1.4px] text-[rgba(255,255,255,0.6)] mt-1">{metricLabel}</p>
         )}
       </div>
     </div>

@@ -54,7 +54,7 @@ export default async function WorkPage({
         <h1 className="font-heading text-[clamp(36px,4vw,48px)] font-bold leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
-        <p className="mt-6 text-base leading-[1.7] text-text-secondary">
+        <p className="mt-6 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
       </Section>
@@ -81,7 +81,7 @@ export default async function WorkPage({
               metric={t('cases.cashless.metric')}
               metricLabel={t('cases.cashless.metricLabel')}
             />
-            <p className="mt-3 font-mono text-sm text-text-secondary">
+            <p className="mt-3 font-mono text-[14px] text-[rgba(255,255,255,0.4)]">
               {t('cases.cashless.note')}
             </p>
           </div>

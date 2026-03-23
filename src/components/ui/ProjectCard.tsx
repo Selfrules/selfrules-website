@@ -35,23 +35,19 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        'border border-default p-8',
+        'border border-[#1a1a1f] p-6',
         'transition-[border-color] duration-200 hover:border-accent/40',
         className
       )}
     >
       <div className="flex items-start justify-between gap-4">
-        <h3 className="font-heading font-bold text-xl text-text-primary">{title}</h3>
+        <h3 className="font-heading font-medium text-[18px] text-text-primary">{title}</h3>
         <div className="flex items-center gap-2 shrink-0">
-          <span
-            className={cn('w-2 h-2 inline-block', statusColors[status])}
-            aria-hidden="true"
-          />
-          <span className="font-mono text-[13px] text-text-secondary uppercase tracking-[0.05em]">{statusLabel}</span>
+          <span className="font-mono text-[10px] uppercase tracking-[1px] bg-[rgba(26,26,31,0.5)] text-[rgba(255,255,255,0.4)] px-2 py-1">{statusLabel}</span>
         </div>
       </div>
 
-      <p className="text-base text-text-secondary mt-2">{description}</p>
+      <p className="text-[14px] text-[rgba(255,255,255,0.6)] mt-2">{description}</p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         {techStack.map((tech) => (
@@ -60,13 +56,13 @@ export function ProjectCard({
       </div>
 
       {whatItTaughtMe && (
-        <div className="mt-4 border-t border-default pt-4">
+        <div className="mt-4 border-t border-[#1a1a1f] pt-4">
           {whatItTaughtMeLabel && (
-            <span className="font-mono text-[13px] font-bold text-accent">
+            <span className="font-mono text-[12px] font-medium text-accent">
               {whatItTaughtMeLabel}
             </span>
           )}
-          <p className="mt-1 text-sm text-text-secondary">{whatItTaughtMe}</p>
+          <p className="mt-1 text-[14px] text-[rgba(255,255,255,0.4)]">{whatItTaughtMe}</p>
         </div>
       )}
 

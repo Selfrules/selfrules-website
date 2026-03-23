@@ -136,7 +136,7 @@ export function MobileMenu({ locale, currentPath, isOpen, onClose }: MobileMenuP
       </nav>
 
       {/* Divider + Language toggle (D-02, D-07) */}
-      <div className="mx-[--spacing-page-padding] mt-8 border-t border-border-default" />
+      <div className="mx-[--spacing-page-padding] mt-8 border-t border-[#1a1a1f]" />
       <div className="px-[--spacing-page-padding] pt-6">
         <LanguageToggle locale={locale} variant="mobile" />
       </div>
