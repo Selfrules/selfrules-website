@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to plan
-stopped_at: Completed 05-04-PLAN.md
-last_updated: "2026-03-22T23:57:54.098Z"
+status: Ready to execute
+stopped_at: Completed 06-01-PLAN.md
+last_updated: "2026-03-23T00:05:48.545Z"
 progress:
   total_phases: 6
   completed_phases: 5
   total_plans: 17
-  completed_plans: 13
+  completed_plans: 14
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** A hiring manager landing on selfrules.org thinks "this person knows what they're doing" -- competence through specificity and results, never self-promotion.
-**Current focus:** Phase 05 — inner-pages
+**Current focus:** Phase 06 — seo-polish-deploy
 
 ## Current Position
 
-Phase: 06
-Plan: Not started
+Phase: 06 (seo-polish-deploy) — EXECUTING
+Plan: 2 of 4
 
 ## Performance Metrics
 
@@ -58,6 +58,7 @@ Plan: Not started
 | Phase 05 P03 | 2min | 3 tasks | 2 files |
 | Phase 05 P02 | 3min | 3 tasks | 2 files |
 | Phase 05 P04 | 3min | 4 tasks | 4 files |
+| Phase 06 P01 | 6min | 7 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,9 @@ Recent decisions affecting current work:
 - [Phase 05]: Used inline timeline nodes instead of TimelineNode component for ReactNode rich text support
 - [Phase 05]: MDX metadata via export const pattern, not YAML frontmatter
 - [Phase 05]: Single slug why-i-prototype-in-code for both locales per D-08
+- [Phase 06]: createPageMetadata helper centralizes SEO metadata (canonical, hreflang, OG, Twitter) for all pages
+- [Phase 06]: Homepage uses absolute title to bypass layout template suffix
+- [Phase 06]: OG image is placeholder PNG -- final to be exported from Figma
 
 ### Pending Todos
 
@@ -98,6 +102,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T23:52:53.715Z
-Stopped at: Completed 05-04-PLAN.md
+Last session: 2026-03-23T00:05:48.543Z
+Stopped at: Completed 06-01-PLAN.md
 Resume file: None
