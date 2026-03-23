@@ -309,6 +309,11 @@
     "subtitle": "Thinking out loud about product, engineering, and the space in between.",
     "emptyState": "Notes come when there's something worth saying. Not for volume.",
     "olderPosts": "Older posts →",
+    "cta": {
+      "text": "If you want to see the reasoning applied to real products, the case studies have the details.",
+      "primary": "See the work",
+      "secondary": "Get in touch"
+    },
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Why I prototype in code",

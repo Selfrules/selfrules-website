@@ -9,12 +9,12 @@ interface ButtonProps {
 }
 
 const baseClasses =
-  'inline-flex items-center justify-center h-12 px-8 text-base font-normal transition-all duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2';
+  'inline-flex items-center justify-center h-12 px-8 text-base transition-all duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2';
 
 const variantClasses = {
   primary: 'bg-accent text-dark font-medium hover:bg-accent-hover hover:-translate-y-[1px]',
   secondary:
-    'bg-transparent border border-[rgba(255,255,255,0.2)] text-text-primary hover:border-accent hover:text-accent',
+    'bg-transparent border border-[rgba(255,255,255,0.2)] text-text-primary font-normal hover:border-accent hover:text-accent',
 } as const;
 
 export function Button({ variant, children, href, className }: ButtonProps) {

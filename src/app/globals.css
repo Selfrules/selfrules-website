@@ -32,7 +32,7 @@
   --text-metric: clamp(40px, 5vw, 64px);
 
   /* Spacing */
-  --spacing-section: clamp(48px, 6vw, 80px);
+  --spacing-section: clamp(40px, 5vw, 64px);
   --spacing-page-padding: clamp(20px, 5vw, 80px);
 
   /* Content widths */
@@ -153,4 +153,12 @@ html {
   }
 
   /* CountUpNumber: handled in JS -- number shows immediately */
+}
+
+/* Fallback: show content when JS is unavailable */
+@media (scripting: none) {
+  .animate-fade-up-initial {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

@@ -309,6 +309,11 @@
     "subtitle": "Pensare ad alta voce su prodotto, ingegneria e lo spazio tra i due.",
     "emptyState": "Le note arrivano quando c'è qualcosa da dire. Non per fare volume.",
     "olderPosts": "Post precedenti →",
+    "cta": {
+      "text": "Se vuoi vedere il ragionamento applicato a prodotti reali, i case study raccontano i dettagli.",
+      "primary": "Guarda i lavori",
+      "secondary": "Scrivimi"
+    },
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Perch\u00e9 prototipo in codice",

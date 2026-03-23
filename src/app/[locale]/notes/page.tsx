@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
 import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
+import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -122,6 +123,19 @@ export default async function NotesPage({
           </p>
         )}
       </Section>
+
+      {/* PageCTA */}
+      <PageCTA
+        text={t('cta.text')}
+        primaryCta={{
+          label: t('cta.primary'),
+          href: locale === 'it' ? '/it/work' : '/work',
+        }}
+        secondaryCta={{
+          label: t('cta.secondary'),
+          href: 'mailto:hello@selfrules.org',
+        }}
+      />
     </>
   );
 }
