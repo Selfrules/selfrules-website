@@ -1,11 +1,27 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import { createPageMetadata } from '@/lib/metadata';
 import { Hero } from '@/components/sections/Hero';
 import { HowIWork } from '@/components/sections/HowIWork';
 import { Timeline } from '@/components/sections/Timeline';
 import { Metrics } from '@/components/sections/Metrics';
 import { CurrentWork } from '@/components/sections/CurrentWork';
 import { Contact } from '@/components/sections/Contact';
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const meta = createPageMetadata({
+    locale,
+    path: '/',
+    title: t('home.title'),
+    description: t('home.description'),
+  });
+  return { ...meta, title: { absolute: t('home.title') } };
+}
 
 export default async function HomePage({
   params,

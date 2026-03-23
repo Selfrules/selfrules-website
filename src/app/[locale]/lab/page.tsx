@@ -1,5 +1,7 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import { createPageMetadata } from '@/lib/metadata';
 import { Section } from '@/components/layout/Section';
 import { Tag } from '@/components/ui/Tag';
 import { PageCTA } from '@/components/sections/page-cta';
@@ -18,6 +20,19 @@ const CASAHUNTER_STACK = [
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
+}
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return createPageMetadata({
+    locale,
+    path: '/lab',
+    title: t('lab.title'),
+    description: t('lab.description'),
+  });
 }
 
 export default async function LabPage({

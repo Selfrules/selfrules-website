@@ -1,7 +1,22 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import { createPageMetadata } from '@/lib/metadata';
 import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return createPageMetadata({
+    locale,
+    path: '/notes',
+    title: t('notes.title'),
+    description: t('notes.description'),
+  });
+}
 
 export default async function NotesPage({
   params,
