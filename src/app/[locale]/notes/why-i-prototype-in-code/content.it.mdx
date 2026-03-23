@@ -2,14 +2,17 @@ export const metadata = {
   title: 'Perché prototipo in codice',
   date: '2026-03-22',
   excerpt: 'Un Product Manager che prototipa in codice prende decisioni diverse.',
+  readingTime: 4,
   locale: 'it',
 }
 
 La maggior parte dei PM non scrive codice. Non è un problema. Il product management non richiede di saper programmare. Ma se sai farlo, cambia il modo in cui prendi decisioni.
 
+<KeyTakeaway>
 Non parlo di scrivere feature in produzione. Parlo di costruire la cosa minima necessaria per rispondere a una domanda prima di chiedere al team settimane di lavoro.
+</KeyTakeaway>
 
----
+## CasaHunter: quando il codice mostra l'architettura
 
 Un esempio recente. Serviva un appartamento in affitto. 8 portali, filtri inadeguati, nessuno che notificasse quando usciva qualcosa di buono. Il primo istinto da PM: mappare il problema — fonti, criteri, flusso. Il secondo istinto: aprire l'editor e costruire uno scraper.
 
@@ -17,9 +20,11 @@ In un weekend, un sistema funzionante che raccoglieva annunci da 8 fonti e li de
 
 La prima versione mandava tutto a un LLM. Funzionava. Costava troppo e non migliorava la qualità sopra una certa soglia. Ristrutturazione: primo passaggio deterministico che filtra l'80% del rumore gratuitamente, secondo passaggio AI solo sul 20% che sopravvive. Terzo passaggio adattivo sui feedback.
 
+<Callout>
 Questa architettura non sarebbe mai uscita da un diagramma. È uscita dal codice, che ha mostrato che la prima soluzione era troppo costosa, e la seconda iterazione ha risolto il problema di costo senza sacrificare la qualità.
+</Callout>
 
----
+## QubicaAMF: leggere l'API che nessun altro leggeva
 
 In azienda succede la stessa cosa su scala diversa.
 
@@ -29,9 +34,11 @@ La documentazione dell'API raccontava un'altra storia. Tracciando il data model 
 
 Questo non è lavoro da ingegnere. Non si tratta di scrivere codice di produzione. Si tratta di sapere dove cercare — e quello viene da anni a leggere documentazione tecnica e scrivere codice. Quando un PM sa muoversi dentro un'API, la conversazione con l'engineering cambia. Non "dobbiamo risolvere questo problema." Ma "questo campo dell'API potrebbe risolvere il problema, ecco una spec, cosa ne pensate?"
 
+<Callout>
 La differenza è enorme. La prima frase apre una discussione. La seconda la chiude.
+</Callout>
 
----
+## LeadsBridge: risolvere la causa, non il sintomo
 
 In LeadsBridge il flusso di configurazione dei bridge generava errori a ripetizione. Ogni errore diventava un ticket di supporto. Il team cresceva e il supporto cresceva con lui. La richiesta: costruire un chatbot.
 
@@ -39,15 +46,17 @@ Il funnel raccontava un'altra storia. Il problema non era il volume di ticket. E
 
 La stessa conclusione sarebbe arrivata senza saper leggere il codice? Forse. Ma avrebbe richiesto più tempo, qualcun altro avrebbe dovuto fare l'analisi, e proporre un redesign del flusso core del prodotto avrebbe avuto meno credibilità. "Ho guardato il codice e il problema è qui" fa partire la conversazione da un punto diverso rispetto a "credo che il problema potrebbe essere nel flusso."
 
----
+## Il rischio del PM che programma
 
 C'è un rischio. Un PM che sa programmare può cadere nella trappola di voler costruire tutto. Di sentirsi indispensabile per ogni decisione tecnica. Di non delegare.
 
 È un rischio reale. La risposta non è smettere di programmare. È sapere quando è il momento di scrivere codice e quando è il momento di scrivere un brief e dare fiducia al team.
 
+<Callout>
 Il prototipo serve quando bisogna validare un'idea prima di portarla in sprint. Quando la domanda è "è possibile?" e la risposta sta nei dati, non nelle opinioni. Non serve quando il team ha le competenze per esplorare il problema meglio.
+</Callout>
 
----
+## Accumulo, non errore
 
 Il punto non è che tutti i PM dovrebbero programmare. Il punto è che un percorso — designer, poi developer, poi PM — non è stato un errore di carriera. È stato un accumulo di strumenti.
 

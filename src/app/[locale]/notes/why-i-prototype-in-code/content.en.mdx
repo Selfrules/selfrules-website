@@ -2,14 +2,17 @@ export const metadata = {
   title: 'Why I prototype in code',
   date: '2026-03-22',
   excerpt: 'A Product Manager who prototypes in code makes different decisions.',
+  readingTime: 4,
   locale: 'en',
 }
 
 Most PMs don't write code. That's fine. Product management doesn't require programming skills. But if you can do it, it changes how you make decisions.
 
+<KeyTakeaway>
 I'm not talking about writing production features. I'm talking about building the minimum thing needed to answer a question before asking the team for weeks of work.
+</KeyTakeaway>
 
----
+## CasaHunter: when the code shows the architecture
 
 A recent example. I needed an apartment. 8 listing sites, inadequate filters, none that would send a notification when something good came up. First PM instinct: map the problem — sources, criteria, flow. Second instinct: open the editor and build a scraper.
 
@@ -17,9 +20,11 @@ One weekend later, a working system collecting listings from 8 sources and dedup
 
 The first version sent everything to an LLM. It worked. It cost too much and didn't improve quality above a certain threshold. Restructured: first pass deterministic, filtering out 80% of noise for free. Second pass AI only on the 20% that survived. Third pass adaptive based on feedback.
 
+<Callout>
 This architecture would never have come from a diagram. It came from the code showing that the first solution was too expensive, and the second iteration solving the cost problem without sacrificing quality.
+</Callout>
 
----
+## QubicaAMF: reading the API no one else read
 
 At work the same thing happens at a different scale.
 
@@ -29,9 +34,11 @@ The API documentation told a different story. Tracing the data model revealed an
 
 This isn't engineering work. It's not about writing production code. It's about knowing where to look — and that comes from years of reading technical documentation and writing code. When a PM can navigate an API, the conversation with engineering changes. Not "we need to solve this problem." But "this API field might solve it, here's a spec, what do you think?"
 
+<Callout>
 The difference is enormous. The first sentence opens a discussion. The second closes it.
+</Callout>
 
----
+## LeadsBridge: solving the cause, not the symptom
 
 At LeadsBridge the bridge configuration flow was generating errors on repeat. Every error became a support ticket. The team was growing and support was growing with it. The ask: build a chatbot.
 
@@ -39,15 +46,17 @@ The funnel told a different story. The problem wasn't ticket volume. It was the 
 
 Would the same conclusion have been reached without being able to read the code? Maybe. But it would have taken longer, someone else would have had to do the analysis, and proposing a redesign of the product's core flow would have carried less credibility. "I looked at the code and the problem is here" starts a conversation from a different point than "I think the problem might be in the flow."
 
----
+## The risk of the PM who codes
 
 There's a risk. A PM who can code can fall into the trap of wanting to build everything. Of feeling indispensable for every technical decision. Of not delegating.
 
 It's a real risk. The answer isn't to stop coding. It's knowing when it's time to write code and when it's time to write a brief and trust the team.
 
+<Callout>
 The prototype serves when an idea needs validation before sprint. When the question is "is this possible?" and the answer lives in data, not opinions. It doesn't serve when the team has the skills to explore the problem better.
+</Callout>
 
----
+## Accumulation, not a mistake
 
 The point isn't that all PMs should code. The point is that a path — designer, then developer, then PM — wasn't a career mistake. It was an accumulation of tools.
 

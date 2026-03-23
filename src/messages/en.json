@@ -244,6 +244,124 @@
       "secondary": "Get in touch"
     }
   },
+  "caseStudies": {
+    "backToWork": "Back to Work",
+    "payments": {
+      "tag": "Payments \u00b7 B2B SaaS \u00b7 Enterprise",
+      "role": "Senior Product Manager, Payments",
+      "company": "B2B SaaS platform \u00b7 Entertainment & leisure \u00b7 5 countries",
+      "period": "2025",
+      "heroMetric": "99.19%",
+      "heroMetricLabel": "global success rate",
+      "secondMetric": "-25%",
+      "secondMetricLabel": "post-release incidents",
+      "context": {
+        "heading": "The context",
+        "content": [
+          "A B2B platform serving hundreds of entertainment centers across five countries. The primary payment integration, built on Square, was the fastest-growing product in the portfolio: **42% of total transaction volume**, **25% year-over-year growth**, the only provider trending upward.",
+          "Then the growth outran the product. The original MVP had been designed for a handful of friendly early adopters. By mid-2025 it was running in production across a much broader customer base, and the gaps between \u201ctechnically functional\u201d and \u201coperationally usable\u201d were becoming visible to everyone."
+        ]
+      },
+      "challenge": {
+        "heading": "The challenge",
+        "content": [
+          "Over **60% of recently onboarded customers** were either unhappy or had paused implementation. Social media complaints were compounding. Centers in production were experiencing double charges, payment timeouts during peak hours, broken split payments, and missing refunds. Each of these had direct financial impact on center operations.",
+          "The deeper problem was structural. New centers were still being onboarded at full pace while existing ones were struggling. Every new unhappy customer added complaints, reputation damage, and support load. The product had outrun its capabilities, and growth was making it worse.",
+          "There was no consolidated view of what was broken, no shared severity ranking, and no single owner driving resolution."
+        ]
+      },
+      "approach": {
+        "heading": "The approach",
+        "content": [
+          "**The first decision was to stop scaling the problem.** Growth features went on hold. Customer acquisition slowed down. The entire team shifted to a single priority: make the centers already in production work reliably. This required aligning sales leadership, engineering, and executive stakeholders around the same data. The customer satisfaction numbers made the case.",
+          "**Then came triage.** 44 open items sat in the backlog, compiled from engineering, sales, and support with no ranking. The sorting criterion was simple: is this costing a center money right now? That split the backlog into three tiers. 12 items were critical to payments operations. Of those, 4 had immediate financial impact on live centers: double charges, payment timeouts, broken split payments, missing refunds. The remaining 32 were real issues, but they could wait.",
+          "The 4 highest-impact items got one owner each, a deadline, and a published commitment. All four shipped within six weeks. Zero complaints on any of them post-deployment.",
+          "**While the team stabilized, I dug into a problem others had classified as unsolvable.** A major center was about to cancel the integration because they couldn't reconcile their books. Every transaction appeared as \u201cuncategorized income\u201d in the Square dashboard. No breakdown by terminal, no source attribution, no way to close the books.",
+          "The root cause was in the Square API. The field where we stored transaction metadata didn't preserve enough information. I traced the data model until I found `external_payment_type`, an existing parameter that could carry source attribution without architectural changes on either side. I wrote the implementation spec and handed it to the team. The center stayed and became a reference account.",
+          "**Scope discipline mattered as much as speed.** Over the full year, 23 of the 44 items shipped. The other 21 were deliberate \u201cnot now\u201d decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back and ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
+          "**Parallel to stabilization, two compliance threads ran.** I proposed a scope reduction for PCI DSS certification by presenting the certifiers with a three-channel payment architecture, removing significant recurring penalty risk. I also completed the FreedomPay technical certification end-to-end, which unlocked a new segment of enterprise centers.",
+          "**Communication was deliberate.** Structured weekly recaps, operational memos for urgent decisions, meeting minutes published within hours. When the support team needed to help customers with issues that weren't fixed yet, I built video tutorials covering workarounds. Bridge solutions while the real fixes were in the pipeline."
+        ]
+      },
+      "results": {
+        "heading": "The results",
+        "items": [
+          { "metric": "-12%", "label": "processing times across all payment flows" },
+          { "metric": "99.19%", "label": "global success rate. 100% uptime against a 99% target" },
+          { "metric": "-25%", "label": "post-release incidents" },
+          { "metric": "25%", "label": "YoY growth for the Square integration, the only payment provider still growing" },
+          { "metric": "116", "label": "centers integrated. 5 new centers per week onboarding pace" },
+          { "metric": "23/44", "label": "backlog items shipped. Critical payments issues reduced from 12 to 5 remaining" }
+        ]
+      },
+      "learned": {
+        "heading": "What I learned",
+        "content": [
+          "The instinct in a crisis is to fix and grow at the same time. It doesn't work. The first real product decision is to stop making the hole deeper. Everything else follows from that.",
+          "The second thing: 44 items, 12 critical, 4 urgent. Most of what felt urgent could actually wait. Knowing which ones can't is the actual skill. A single clear sorting criterion gave the team more clarity than any amount of discussion.",
+          "The third: when a problem gets labeled \u201cunsolvable\u201d or \u201cwaiting on the partner,\u201d it's worth checking whether someone has actually read the API documentation. The source attribution fix was already there. It just needed someone willing to look."
+        ]
+      }
+    },
+    "cashless": {
+      "tag": "Cashless \u00b7 Product Strategy \u00b7 Partnership",
+      "role": "Senior Product Manager, Payments & Cashless",
+      "company": "B2B SaaS platform \u00b7 Entertainment & leisure \u00b7 5 countries",
+      "period": "2025\u20132026",
+      "heroMetric": "5 mo",
+      "heroMetricLabel": "zero to live demo",
+      "secondMetric": "1",
+      "secondMetricLabel": "product killed before it became a liability",
+      "context": {
+        "heading": "The context",
+        "content": [
+          "A B2B platform where the payments product was growing fast. Square integration covered **42% of transaction volume**, centers were onboarding at **5 per week**, and the core payment flows were stable.",
+          "But customers kept asking the same question: when can we go cashless? The industry was moving toward card-based game play, stored-value wallets, and tap-to-play systems. The main competitor already had a unified cashless offering, and that gap was showing up in every competitive deal.",
+          "The problem wasn't whether to build cashless. The problem was that no integration existed between cashless providers and the platform's payment architecture, and the technical gap was deeper than anyone had scoped."
+        ]
+      },
+      "challenge": {
+        "heading": "The challenge",
+        "content": [
+          "Cashless systems work on a deposit-and-redeem model. A customer loads money onto a card, then spends it at game terminals. Simple from the user's side. From the accounting side, a mess: the deposit registers as income, and the redemption registers as a second income. Double counting. Every center running cashless would need to reconcile manually, or their books wouldn't close.",
+          "Three cashless providers were on the table. Each had different API architectures, different pricing models, and different levels of willingness to co-develop. No one internally had mapped the landscape or defined what \u201ccashless integration\u201d actually meant for the platform."
+        ]
+      },
+      "approach": {
+        "heading": "The approach",
+        "content": [
+          "**The first move was to understand what we were actually building.** Not \u201ca cashless feature\u201d but a specific product definition: what does cashless integration mean for a platform that already runs Square payments? What's the data model? Where does the money flow? I mapped the full transaction lifecycle across deposit, play, and redemption before evaluating any provider.",
+          "**Then I killed the obvious option.** The internal product, OneCashless, had been explored through multiple discovery sessions. On paper it looked like the fastest path. In practice, the product wasn't convincing. The business model was unclear, the technical architecture required work we couldn't justify, and forcing a weak product into production would have created the same crisis the payments team had just spent months fixing. I parked it. Deliberately.",
+          "**Intercard was the first real test.** A $500-per-terminal API fee, but they had existing market presence. I scoped a proof of concept with two pilot centers, got it validated, and put it into daily use. It proved cashless integration was technically viable on the platform.",
+          "**The real unlock was Amusement Connect.** They had something no other provider offered: native compatibility with Square. That meant the double-counting problem had a structural solution, not just a workaround. I initiated a co-development partnership and negotiated a shared roadmap toward feature parity with the Intercard integration.",
+          "**The double-counting problem got a specific solution.** I explored multiple approaches: QR-based app payments, gift card mechanisms, physical hardware swaps. None solved it cleanly. The breakthrough was a payout-based model using Square's gift card infrastructure, where redemptions offset deposits instead of creating new income lines. Clean books. No manual reconciliation.",
+          "**BowlExpo validated the direction.** The industry's largest trade show, and the platform needed to show cashless capability. The team delivered a working integration in under five months from kickoff. Not a demo. A working system."
+        ]
+      },
+      "results": {
+        "heading": "The results",
+        "items": [
+          { "metric": "2", "label": "pilot centers validated on Intercard, proving platform viability" },
+          { "metric": "1", "label": "co-development partnership established with shared roadmap" },
+          { "metric": "5 mo", "label": "from zero to live cashless demo at the industry's largest trade show" },
+          { "metric": "1", "label": "product killed (OneCashless) before it could become a liability" }
+        ]
+      },
+      "learned": {
+        "heading": "What I learned",
+        "content": [
+          "The hardest product decision isn't what to build. It's what to stop building. OneCashless had momentum, internal supporters, and a head start. It also wasn't going to work. Parking it early saved months of engineering time and prevented a second payments crisis.",
+          "The second lesson: when the technical problem seems unsolvable, the answer is usually in the data model, not in the UI. The double-counting problem disappeared once I stopped looking for a user-facing fix and started mapping where money actually flows in the system.",
+          "The third: choosing a partner isn't a vendor evaluation. It's a product decision. Amusement Connect won not because they had the best pitch, but because their architecture solved a problem ours couldn't solve alone."
+        ]
+      }
+    },
+    "cta": {
+      "text": "These cases tell the how. For the who, there's the about page. If you want to talk, write me.",
+      "primary": "About me",
+      "secondary": "Get in touch"
+    }
+  },
   "lab": {
     "headline": "Same thinking, applied to my own problems.",
     "intro": "Every project here started from a real need, not a tutorial. Same approach as the day job: understand the problem, build the minimum to validate the idea, decide what not to build. Code is the means. Product thinking is the point.",
@@ -357,9 +475,13 @@
       "title": "Notes",
       "description": "Notes on product management, technical decisions, and building things. When there's something worth saying."
     },
-    "notesPost": {
-      "title": "Why I Prototype in Code",
-      "description": "A PM who prototypes in code ships faster, communicates better with engineers, and catches problems earlier. Here's why I do it."
+    "paymentsRescue": {
+      "title": "Payments Rescue \u2014 Mattia De Luca",
+      "description": "How a payment system went from crisis to 99% uptime. A product case study about triage, scope discipline, and reading the API docs."
+    },
+    "cashlessSystem": {
+      "title": "Cashless System \u2014 Mattia De Luca",
+      "description": "How a cashless product went from zero to the right integration partner. A product case study about killing the obvious option and finding the structural solution."
     },
     "skipToContent": "Skip to content"
   }

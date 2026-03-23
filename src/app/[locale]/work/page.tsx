@@ -70,6 +70,7 @@ export default async function WorkPage({
             preview={t('cases.payments.preview')}
             metric={t('cases.payments.metric')}
             metricLabel={t('cases.payments.metricLabel')}
+            href="/work/payments-rescue"
           />
 
           {/* Card 2: Cashless System */}
@@ -80,6 +81,7 @@ export default async function WorkPage({
               preview={t('cases.cashless.preview')}
               metric={t('cases.cashless.metric')}
               metricLabel={t('cases.cashless.metricLabel')}
+              href="/work/cashless-system"
             />
             <p className="mt-3 font-mono text-[14px] text-[rgba(255,255,255,0.4)]">
               {t('cases.cashless.note')}
