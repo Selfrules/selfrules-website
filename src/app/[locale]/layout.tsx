@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
@@ -8,6 +9,14 @@ import { hasLocale } from 'next-intl';
 import Script from 'next/script';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://selfrules.org'),
+  title: {
+    template: '%s \u2014 Mattia De Luca',
+    default: 'Mattia De Luca \u2014 Senior Technical Product Manager | B2B SaaS . Payments',
+  },
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
