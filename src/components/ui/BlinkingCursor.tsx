@@ -15,7 +15,7 @@ export function BlinkingCursor({ type, className }: BlinkingCursorProps) {
     return (
       <span
         className={cn(
-          'inline-block w-[8px] h-[1.1em] bg-accent align-middle ml-1 animate-blink',
+          'inline-block w-[8px] h-[1.1em] bg-accent align-middle ml-1 animate-blink blinking-cursor',
           className
         )}
         aria-hidden="true"
@@ -25,7 +25,7 @@ export function BlinkingCursor({ type, className }: BlinkingCursorProps) {
 
   return (
     <span
-      className={cn('text-accent animate-blink', className)}
+      className={cn('text-accent animate-blink blinking-cursor', className)}
       aria-hidden="true"
     >
       _
