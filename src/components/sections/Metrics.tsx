@@ -31,7 +31,7 @@ export function Metrics({ label, title, metrics, linkText, linkHref }: MetricsPr
       <div className="mt-8">
         <a
           href={linkHref}
-          className="text-base text-secondary hover:text-accent transition-colors duration-150"
+          className="text-base text-text-secondary hover:text-accent transition-colors duration-150"
         >
           {linkText} →
         </a>

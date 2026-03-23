@@ -8,17 +8,34 @@ Costruire il sito web personale di Mattia De Luca (selfrules.org) da zero.
 Il sito sostituirà il sito attuale su https://selfrules.org/it.
 
 ## File di riferimento
-- **Piano di implementazione:** `./implementation-plan.md` — il piano completo, da seguire step by step
-- **Copy del sito:** `../job-search-2026/selfrules-redesign/` — 7 file con tutto il copy IT + EN
-- **Design specs:** `../job-search-2026/selfrules-redesign/figma-make-prompt.md` — specifiche visive dettagliate
+
+### ⚠️ PRIMA DI TUTTO — Design Update v25
+- **DESIGN-UPDATE-v25.md** — LEGGERE PER PRIMO. Contiene 9 modifiche al design (font, componenti, signature elements) verificate nel prototipo Figma v25. Il file descrive cosa cambia e dove aggiornare CLAUDE.md e implementation-plan.md. Applicare tutte le modifiche ai file sottostanti PRIMA di iniziare a scrivere codice.
+
+### Piano e layout (ESECUZIONE)
+- **Piano di implementazione:** `./implementation-plan.md` — il piano operativo dettagliato con layout per-page, comandi, codice esempio. Questo è il documento da seguire step by step per costruire il sito.
+- **Design specs (originali):** `../job-search-2026/selfrules-redesign/figma-make-prompt.md` — specifiche visive base per pagina. **NOTA:** Il design Figma è stato aggiornato alla v25 con modifiche significative documentate in DESIGN-UPDATE-v25.md. In caso di conflitto, DESIGN-UPDATE-v25.md ha la precedenza.
+
+### Copy sorgente (CONTENUTO)
+- **Copy del sito:** `../job-search-2026/selfrules-redesign/` — 7 file con tutto il copy IT + EN. COPIARE ESATTAMENTE.
+
+### GSD Research (RIFERIMENTO TECNICO)
+- **STACK.md** — Stack research completa, pattern di codice, "What NOT to Use". Documento di riferimento primario per decisioni tecniche.
+- **PITFALLS.md** — 14 pitfalls con mitigazioni. Consultare prima di ogni fase.
+- **REQUIREMENTS.md** — 65 requisiti con ID per checklist di verifica finale.
+- **ARCHITECTURE.md** — Directory structure, component boundaries, client vs server components.
+- **STATE.md** — Tracker avanzamento progetto.
+- **ROADMAP.md** — Struttura fasi (i piani operativi sono in implementation-plan.md).
 
 ## Stack tecnologico
-- Next.js 15 (App Router)
-- TypeScript
-- Tailwind CSS v4
-- next-intl per i18n (IT + EN)
+- Next.js 16.2 (App Router, Turbopack) — NON 15. Usa `proxy.ts` (non middleware.ts)
+- TypeScript 5.x
+- Tailwind CSS v4 (CSS-first: `@theme` in globals.css, NO tailwind.config.ts)
+- next-intl 4.8.x per i18n (IT + EN), `localePrefix: 'as-needed'`, `localeDetection: false`
+- @next/mdx per blog (NON next-mdx-remote)
+- next/font/google per Inter + JetBrains Mono
+- Umami Cloud per analytics (cookieless)
 - Vercel per deploy
-- Umami per analytics
 
 ## Regole
 1. Segui il piano in `implementation-plan.md` fase per fase
@@ -39,7 +56,7 @@ Sito web personale di Mattia De Luca (selfrules.org), posizionato come **Modello
 
 ### Constraints
 
-- **Stack:** Next.js 15 (App Router), TypeScript, Tailwind CSS v4, next-intl per i18n, Vercel per deploy — stack già deciso, non negoziabile
+- **Stack:** Next.js 16.2 (App Router, Turbopack), TypeScript, Tailwind CSS v4 (CSS-first), next-intl 4.8.x per i18n, Vercel per deploy — stack già deciso, non negoziabile. Usa proxy.ts (non middleware.ts)
 - **Copy:** Il copy è DEFINITIVO. Copiarlo esattamente dai file sorgente. Nessuna riscrittura, nessun riassunto, nessun "miglioramento"
 - **Design:** 0px border-radius ovunque. Palette specifica (#0A0A0B, #F5F5F0, #E8A838). Inter + JetBrains Mono. Spacing generoso (80-160px tra sezioni)
 - **Modello B:** Mai framing job-seeker. Disponibilità e CV solo in Contatto e Footer
@@ -85,7 +102,7 @@ Sito web personale di Mattia De Luca (selfrules.org), posizionato come **Modello
 | Next.js Metadata API | (built-in) | Meta tags, OG, hreflang | generateMetadata + metadata exports. Handles merging across nested layouts automatically. |
 | Next.js sitemap.ts | (built-in) | Sitemap generation | Convention-based file in app directory. No external library needed. |
 | Next.js robots.ts | (built-in) | Robots.txt | Convention-based. No external library needed. |
-| JSON-LD (manual) | -- | Structured data | Render a `<script type="application/ld+json">` in page components. No library needed for Person + BreadcrumbList schemas. |
+| JSON-LD (manual) | -- | Structured data | Render a `<script type="application/ld+json">` in page components. No library needed for Person + BreadcrumbList + Article schemas. |
 ### Analytics
 | Technology | Version | Purpose | Why |
 |------------|---------|---------|-----|
@@ -173,22 +190,4 @@ Conventions not yet established. Will populate as patterns emerge during develop
 Architecture not yet mapped. Follow existing patterns found in the codebase.
 <!-- GSD:architecture-end -->
 
-<!-- GSD:workflow-start source:GSD defaults -->
-## GSD Workflow Enforcement
-
-Before using Edit, Write, or other file-changing tools, start work through a GSD command so planning artifacts and execution context stay in sync.
-
-Use these entry points:
-- `/gsd:quick` for small fixes, doc updates, and ad-hoc tasks
-- `/gsd:debug` for investigation and bug fixing
-- `/gsd:execute-phase` for planned phase work
-
-Do not make direct repo edits outside a GSD workflow unless the user explicitly asks to bypass it.
-<!-- GSD:workflow-end -->
-
-<!-- GSD:profile-start -->
-## Developer Profile
-
-> Profile not yet configured. Run `/gsd:profile-user` to generate your developer profile.
-> This section is managed by `generate-claude-profile` -- do not edit manually.
-<!-- GSD:profile-end -->
+<!-- GSD workflow enforcement e developer profile rimossi: non necessari per questo progetto che ha già un piano operativo dettagliato in implementation-plan.md -->

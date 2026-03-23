@@ -35,14 +35,17 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
                       : 'absolute top-0 left-0 w-[10px] h-[10px] border border-default bg-transparent'
                   }
                 />
-                <h3 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary mb-2">
-                  {block.role}
-                </h3>
-                <p className="font-mono text-sm text-secondary mb-3">
-                  {block.dates}
-                </p>
-                <div className="text-base leading-[1.6] text-secondary">
-                  {block.text}
+                {/* Card wrapper */}
+                <div className="border border-default bg-surface p-6 mt-4">
+                  <p className="font-mono text-sm text-accent mb-2">
+                    {block.dates}
+                  </p>
+                  <h3 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary mb-3">
+                    {block.role}
+                  </h3>
+                  <div className="text-base leading-[1.6] text-text-secondary">
+                    {block.text}
+                  </div>
                 </div>
               </div>
             ))}
@@ -65,14 +68,17 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
                     : 'absolute -left-8 top-[6px] w-[10px] h-[10px] border border-default bg-transparent'
                 }
               />
-              <h3 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary mb-2">
-                {block.role}
-              </h3>
-              <p className="font-mono text-sm text-secondary mb-3">
-                {block.dates}
-              </p>
-              <div className="text-base leading-[1.6] text-secondary">
-                {block.text}
+              {/* Card wrapper */}
+              <div className="border border-default bg-surface p-6">
+                <p className="font-mono text-sm text-accent mb-2">
+                  {block.dates}
+                </p>
+                <h3 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary mb-3">
+                  {block.role}
+                </h3>
+                <div className="text-base leading-[1.6] text-text-secondary">
+                  {block.text}
+                </div>
               </div>
             </div>
           ))}
@@ -80,7 +86,7 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
       </div>
 
       {/* Closing phrase */}
-      <p className="text-base leading-[1.7] text-primary mt-12 max-w-[720px]">
+      <p className="text-base leading-[1.7] text-text-primary mt-12 max-w-[720px]">
         {closingLine}
       </p>
     </Section>

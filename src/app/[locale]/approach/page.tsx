@@ -12,12 +12,15 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
-  return createPageMetadata({
-    locale,
-    path: '/approach',
-    title: t('approach.title'),
-    description: t('approach.description'),
-  });
+  return {
+    ...createPageMetadata({
+      locale,
+      path: '/approach',
+      title: t('approach.title'),
+      description: t('approach.description'),
+    }),
+    robots: { index: false, follow: false },
+  };
 }
 
 export default async function ApproachPage({
@@ -54,10 +57,10 @@ export default async function ApproachPage({
       }} />
       {/* Headline + Intro */}
       <Section>
-        <h1 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary">
+        <h1 className="font-heading font-bold text-[clamp(36px,4vw,48px)] leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
-        <p className="mt-6 text-base leading-[1.7] text-secondary">
+        <p className="mt-6 text-base leading-[1.7] text-text-secondary">
           {t('intro')}
         </p>
       </Section>
@@ -68,10 +71,10 @@ export default async function ApproachPage({
         <div className="mt-12">
           {sections.map((key, index) => (
             <div key={key} className={index < sections.length - 1 ? 'mb-16' : ''}>
-              <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-primary">
+              <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary">
                 {t(`sections.${key}.title`)}
               </h2>
-              <div className="mt-4 text-base leading-[1.6] text-primary whitespace-pre-line">
+              <div className="mt-4 text-base leading-[1.6] text-text-primary whitespace-pre-line">
                 {t.rich(`sections.${key}.text`, richBold)}
               </div>
             </div>
@@ -84,7 +87,7 @@ export default async function ApproachPage({
       <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-16">
-          <p className="text-base leading-[1.7] text-primary whitespace-pre-line">
+          <p className="text-base leading-[1.7] text-text-primary whitespace-pre-line">
             {t('closing.text')}
           </p>
         </div>

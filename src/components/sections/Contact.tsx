@@ -27,35 +27,38 @@ export function Contact({
   return (
     <Section id="contact">
       <SectionHeader label={label} title={title} />
-      <p className="text-base leading-[1.7] text-secondary mb-8">
+      <p className="text-base leading-[1.7] text-text-secondary mb-8">
         {text}
       </p>
       <a
         href={`mailto:${email}`}
-        className="block font-mono text-[clamp(28px,3vw,36px)] font-bold text-primary hover:text-accent transition-colors duration-150"
+        className="block font-mono text-[clamp(24px,3vw,36px)] text-text-primary hover:text-accent transition-colors duration-150"
       >
         {email}
       </a>
-      <div className="mt-6 flex flex-col gap-4">
+      <div className="mt-6 flex flex-row items-center gap-6">
         <a
           href={linkedinHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-base text-secondary hover:text-accent transition-colors duration-150"
+          className="text-base text-text-secondary hover:text-accent transition-colors duration-150"
         >
           {linkedinLabel} →
         </a>
         <a
           href={cvHref}
           download
-          className="text-base text-secondary hover:text-accent transition-colors duration-150"
+          className="text-base text-text-secondary hover:text-accent transition-colors duration-150"
         >
           {cvLabel} →
         </a>
       </div>
-      <p className="mt-8 font-mono text-sm uppercase tracking-[0.05em] text-secondary">
-        {availability}
-      </p>
+      <div className="mt-8 inline-flex items-center gap-2 border border-default px-4 py-2">
+        <span className="w-2 h-2 bg-[#4ADE80]" aria-hidden="true" />
+        <span className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary">
+          {availability}
+        </span>
+      </div>
     </Section>
   );
 }

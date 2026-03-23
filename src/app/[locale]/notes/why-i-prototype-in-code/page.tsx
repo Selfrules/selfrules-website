@@ -75,10 +75,10 @@ export default async function BlogPost({
       <Section>
         <article>
           {/* Post header */}
-          <h1 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary">
+          <h1 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-text-primary">
             {metadata.title}
           </h1>
-          <time className="mt-2 block font-mono text-[14px] uppercase tracking-[0.05em] text-secondary">
+          <time className="mt-2 block font-mono text-[14px] uppercase tracking-[0.05em] text-text-secondary">
             {metadata.date}
           </time>
 

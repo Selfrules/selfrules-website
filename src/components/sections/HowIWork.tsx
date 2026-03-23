@@ -16,17 +16,17 @@ export function HowIWork({ label, title, intro, pillars }: HowIWorkProps) {
     <Section wide>
       <div className="max-w-[var(--width-content)]">
         <SectionHeader label={label} title={title} />
-        <p className="text-base leading-[1.7] text-secondary max-w-[720px] mb-12">
+        <p className="text-base leading-[1.7] text-text-secondary max-w-[720px] mb-8">
           {intro}
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-12">
         {pillars.map((pillar, index) => (
           <div key={index}>
-            <h3 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary mb-4">
+            <h3 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary mb-4">
               {pillar.title}
             </h3>
-            <p className="text-base leading-[1.6] text-secondary">
+            <p className="text-base leading-[1.6] text-text-secondary">
               {pillar.text}
             </p>
           </div>

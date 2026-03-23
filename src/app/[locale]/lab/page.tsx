@@ -3,7 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
 import { Section } from '@/components/layout/Section';
-import { Tag } from '@/components/ui/Tag';
+import { ProjectCard } from '@/components/ui/ProjectCard';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -18,6 +18,19 @@ const CASAHUNTER_STACK = [
   'Recharts',
   'Telegram API',
   'GitHub Actions',
+];
+
+const MONEYMIND_STACK = [
+  'TypeScript',
+  'Node.js',
+  'React',
+];
+
+const OPENCLAW_STACK = [
+  'TypeScript',
+  'Puppeteer',
+  'Cheerio',
+  'Docker',
 ];
 
 export function generateStaticParams() {
@@ -46,16 +59,36 @@ export default async function LabPage({
   setRequestLocale(locale);
   const t = await getTranslations('lab');
 
-  const problemHeading = locale === 'it' ? 'Il problema' : 'The problem';
-  const whatItDoesHeading = locale === 'it' ? 'Cosa fa' : 'What it does';
-  const productDecisionHeading =
-    locale === 'it' ? 'La decisione di prodotto' : 'The product decision';
-  const comingSoonHeading =
-    locale === 'it' ? 'Prossimamente' : 'Coming soon';
-
   const baseUrl = 'https://selfrules.org';
   const pageUrl = locale === 'it' ? `${baseUrl}/it/lab` : `${baseUrl}/lab`;
   const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+
+  const projects = [
+    {
+      title: t('casahunter.title'),
+      description: t('casahunter.description'),
+      techStack: CASAHUNTER_STACK,
+      status: 'active' as const,
+      statusLabel: t('casahunter.statusLabel'),
+      whatItTaughtMe: t('casahunter.whatItTaughtMe'),
+    },
+    {
+      title: t('moneymind.title'),
+      description: t('moneymind.description'),
+      techStack: MONEYMIND_STACK,
+      status: 'active' as const,
+      statusLabel: t('moneymind.statusLabel'),
+      whatItTaughtMe: t('moneymind.whatItTaughtMe'),
+    },
+    {
+      title: t('openclaw.title'),
+      description: t('openclaw.description'),
+      techStack: OPENCLAW_STACK,
+      status: 'experiment' as const,
+      statusLabel: t('openclaw.statusLabel'),
+      whatItTaughtMe: t('openclaw.whatItTaughtMe'),
+    },
+  ];
 
   return (
     <>
@@ -69,105 +102,32 @@ export default async function LabPage({
       }} />
       {/* Headline + Intro */}
       <Section>
-        <h1 className="font-heading text-[clamp(28px,3vw,36px)] font-bold leading-[1.2] text-primary">
+        <h1 className="font-heading text-[clamp(36px,4vw,48px)] font-bold leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
-        <p className="mt-6 text-base leading-[1.7] text-secondary">
+        <p className="mt-6 text-base leading-[1.7] text-text-secondary">
           {t('intro')}
         </p>
       </Section>
 
-      {/* CasaHunter expanded section (D-06) */}
+      {/* Project grid */}
       <ScrollReveal>
-      <Section>
-        <div className="flex flex-col gap-8">
-          {/* Project title + one-liner */}
-          <div>
-            <h2 className="font-heading text-xl font-bold text-primary">
-              CasaHunter
-            </h2>
-            <p className="mt-6 text-base leading-[1.6] text-secondary">
-              {t('casahunter.oneLiner')}
-            </p>
-          </div>
-
-          {/* The problem */}
-          <div>
-            <h3 className="font-heading text-xl font-bold text-primary">
-              {problemHeading}
-            </h3>
-            <p className="mt-4 text-base leading-[1.6] text-primary">
-              {t('casahunter.problem')}
-            </p>
-          </div>
-
-          {/* What it does */}
-          <div>
-            <h3 className="font-heading text-xl font-bold text-primary">
-              {whatItDoesHeading}
-            </h3>
-            <p className="mt-4 text-base leading-[1.6] text-primary">
-              {t('casahunter.whatItDoes')}
-            </p>
-          </div>
-
-          {/* The product decision */}
-          <div>
-            <h3 className="font-heading text-xl font-bold text-primary">
-              {productDecisionHeading}
-            </h3>
-            <p className="mt-4 text-base leading-[1.6] text-primary">
-              {t('casahunter.productDecision')}
-            </p>
-          </div>
-
-          {/* Stack tags */}
-          <div className="flex flex-wrap gap-2">
-            {CASAHUNTER_STACK.map((tech) => (
-              <Tag key={tech}>{tech}</Tag>
+        <Section>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                techStack={project.techStack}
+                status={project.status}
+                statusLabel={project.statusLabel}
+                whatItTaughtMe={project.whatItTaughtMe}
+                whatItTaughtMeLabel={t('whatItTaughtMeLabel')}
+              />
             ))}
           </div>
-
-          {/* Status */}
-          <div className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 bg-accent" data-status-dot />
-            <span className="font-mono text-sm text-secondary">
-              {t('casahunter.status')}
-            </span>
-          </div>
-
-          {/* Links */}
-          <div className="flex gap-4">
-            {/* TODO: Replace with actual URLs */}
-            <a
-              href="#"
-              className="text-secondary transition-colors duration-150 hover:text-accent"
-            >
-              GitHub
-            </a>
-            <a
-              href="#"
-              className="text-secondary transition-colors duration-150 hover:text-accent"
-            >
-              {locale === 'it' ? 'Dashboard live' : 'Live dashboard'}
-            </a>
-          </div>
-        </div>
-      </Section>
-      </ScrollReveal>
-
-      {/* MoneyMind "Coming soon" */}
-      <ScrollReveal>
-      <Section>
-        <div className="mt-[-16px]">
-          <h2 className="font-heading text-xl font-bold text-primary">
-            {t('moneymind.title')}
-          </h2>
-          <p className="mt-4 text-base leading-[1.6] text-secondary">
-            {t('moneymind.oneLiner')}
-          </p>
-        </div>
-      </Section>
+        </Section>
       </ScrollReveal>
 
       {/* PageCTA */}

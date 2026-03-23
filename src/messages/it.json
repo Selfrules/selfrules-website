@@ -39,7 +39,7 @@
   "homepage": {
     "hero": {
       "headline": "Senior Technical Product Manager. Design, codice, e product management nella stessa testa.",
-      "subtitle": "B2B SaaS . Payments . Platform. 10+ anni a progettare interfacce, scrivere codice in produzione, e gestire prodotti. Il vantaggio: quando design, engineering e business non si capiscono, non serve un interprete.",
+      "subtitle": "B2B SaaS \u00b7 Payments \u00b7 Platform. 10+ anni a progettare interfacce, scrivere codice in produzione, e gestire prodotti. Il vantaggio: quando design, engineering e business non si capiscono, non serve un interprete.",
       "primaryCta": "Scrivimi",
       "secondaryCta": "Guarda i lavori",
       "tag1": "10+ anni",
@@ -96,26 +96,32 @@
       "title": "Numeri, non parole",
       "metric1": {
         "number": "99%+",
+        "label": "Uptime",
         "context": "Uptime e success rate pagamenti \u2014 QubicaAMF. Da crisi quotidiana a stabilit\u00e0 enterprise."
       },
       "metric2": {
         "number": "-25%",
+        "label": "Incidenti post-release",
         "context": "Incidenti post-release \u2014 QubicaAMF. Sessioni cross-funzionali settimanali con Product, Support e Engineering."
       },
       "metric3": {
         "number": "116",
+        "label": "Centri integrati",
         "context": "Centri integrati sulla piattaforma \u2014 QubicaAMF. 5 nuovi a settimana."
       },
       "metric4": {
         "number": "-35%",
+        "label": "Tempo di setup",
         "context": "Tempo di configurazione \u2014 LeadsBridge. Redesign del flusso core del prodotto."
       },
       "metric5": {
         "number": "+9%",
+        "label": "Adozione integrazioni",
         "context": "Adozione integrazioni \u2014 QubicaAMF. PDF da 47 pagine sostituiti con video da 3 minuti."
       },
       "metric6": {
         "number": "-12%",
+        "label": "Tempi di processing",
         "context": "Tempi di processing pagamenti \u2014 QubicaAMF. Ottimizzazione dell'intera pipeline di pagamento."
       },
       "link": "Leggi i case study completi"
@@ -125,11 +131,18 @@
       "title": "Cosa faccio ora",
       "card1": {
         "title": "Payments e platform a scala internazionale",
-        "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Il prossimo passo: portare AI nel flusso operativo per ridurre il lavoro manuale di riconciliazione e supporto."
+        "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Il prossimo passo: portare AI nel flusso operativo per ridurre il lavoro manuale di riconciliazione e supporto.",
+        "statusLabel": "ATTIVO"
       },
       "card2": {
         "title": "Un problema personale diventato prodotto",
-        "text": "Trovare casa monitorando 8 portali a mano non funzionava. Scraping automatico, scoring intelligente, 880+ annunci analizzati. Il tool \u00e8 ancora attivo."
+        "text": "Trovare casa monitorando 8 portali a mano non funzionava. Scraping automatico, scoring intelligente, 880+ annunci analizzati. Il tool è ancora attivo.",
+        "statusLabel": "COMPLETATO"
+      },
+      "card3": {
+        "title": "Finanza personale senza spreadsheet",
+        "text": "Analisi automatica delle transazioni, pattern recognition, insight settimanali. Progettare un'interfaccia che non chiede di compilare righe e colonne.",
+        "statusLabel": "ESPERIMENTO"
       }
     },
     "contact": {
@@ -144,6 +157,10 @@
   },
   "about": {
     "headline": "Prodotti migliori nascono quando una persona parla tutte e tre le lingue.",
+    "subtitle": "Non sono partito dal product management. Ci sono arrivato passando dal design, dal codice, e da tanto costruire. Ecco come.",
+    "careerLabel": "PERCORSO",
+    "beliefsLabel": "IN COSA CREDO",
+    "outsideLabel": "FUORI DAL LAVORO",
     "career": {
       "selfrules": {
         "company": "Selfrules (2012\u20132018)",
@@ -160,6 +177,7 @@
         "dates": "2020\u20132023",
         "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori e partnership dirette con Meta, Google, LinkedIn e TikTok. Unico PM, completamente remoto dall'Europa, team di 10 persone.\n\nIl flusso core del prodotto era anche il suo punto pi\u00f9 debole \u2014 il tipo di problema che tutti avevano accettato come normale. Il redesign ha tagliato il tempo di setup del <bold>35%</bold> e sbloccato direttamente la crescita del revenue."
       },
+      "overlapBadge": "↑ sovrapposizione",
       "qubicamf": {
         "company": "QubicaAMF (2023\u2013oggi)",
         "dates": "2023\u2013oggi",
@@ -185,7 +203,8 @@
     },
     "cta": {
       "text": "Se il tuo prodotto ha bisogno di qualcuno che ci mette le mani dentro \u2014 non solo le parole sopra \u2014 parliamone. Anche solo per capire se ha senso.",
-      "primary": "Scrivimi"
+      "primary": "Leggi i case study",
+      "secondary": "Scrivimi"
     }
   },
   "work": {
@@ -195,13 +214,15 @@
       "payments": {
         "tag": "Payments \u00b7 B2B SaaS \u00b7 Enterprise",
         "title": "Un sistema di pagamento che perdeva transazioni ogni giorno",
-        "metric": "99.19% success rate \u00b7 -25% incidenti post-release",
+        "metric": "99%+",
+        "metricLabel": "SUCCESS RATE \u2192",
         "preview": "Centinaia di centri in 5 paesi, 44 problemi aperti senza priorit\u00e0, 4 con impatto economico immediato. La stabilizzazione senza riscrivere niente."
       },
       "cashless": {
         "tag": "Cashless \u00b7 Product Strategy \u00b7 Partnership",
         "title": "Cashless da zero: tre provider, un problema \"irrisolvibile\", e un prodotto da parcheggiare",
-        "metric": "5 mesi da zero a demo live \u00b7 1 prodotto ucciso prima di diventare un problema",
+        "metric": "5 mesi",
+        "metricLabel": "DA ZERO A DEMO LIVE \u2192",
         "preview": "Il prodotto interno sembrava la scelta ovvia. La discovery ha raccontato un'altra storia. Come la strategia cashless \u00e8 stata definita partendo dai vincoli reali.",
         "note": "[BOZZA \u2014 metriche finali TBD quando Amusement Connect \u00e8 in produzione]"
       }
@@ -214,19 +235,25 @@
   },
   "lab": {
     "headline": "Lo stesso modo di pensare, applicato a problemi miei.",
-    "intro": "Ogni progetto qui \u00e8 partito da un bisogno reale, non da un tutorial. Lo stesso approccio del lavoro: capire il problema, costruire il minimo necessario per validare l'idea, decidere cosa non costruire. Il codice \u00e8 il mezzo. Il pensiero di prodotto \u00e8 il contenuto.",
+    "intro": "Ogni progetto qui è partito da un bisogno reale, non da un tutorial. Lo stesso approccio del lavoro: capire il problema, costruire il minimo necessario per validare l'idea, decidere cosa non costruire. Il codice è il mezzo. Il pensiero di prodotto è il contenuto.",
+    "whatItTaughtMeLabel": "Cosa mi ha insegnato",
     "casahunter": {
-      "oneLiner": "Un tool che cerca casa al posto tuo, impara dai tuoi feedback, e ti avvisa su Telegram.",
-      "problem": "Trovare un appartamento in affitto in provincia di Modena in 4 mesi. 8 portali diversi, nessuno con filtri decenti. Controllare tutto a mano ogni giorno non scalava.",
-      "whatItDoes": "Scraping da 8 fonti (Immobiliare, Idealista, Subito, Casa.it, Bakeca, Wikicasa, Trovacasa, Airbnb), deduplicazione annunci, e scoring a 3 passaggi. Il primo \u00e8 deterministico (gratis). Il secondo usa Claude solo sugli annunci promettenti (ottimizzazione costi). Il terzo ri-valuta sulla base dei feedback. Quando trova qualcosa di buono, notifica su Telegram.",
-      "productDecision": "Tre passaggi invece di uno perch\u00e9 mandare tutto all'AI costava troppo e non migliorava la qualit\u00e0. Il passaggio deterministico filtra l'80% del rumore. L'AI lavora solo sul 20% che conta. Stessa logica applicabile a qualsiasi prodotto.",
-      "stack": "Python 3.11, SQLite, Claude Sonnet, React 18, Tailwind, Leaflet, Recharts, Telegram API, GitHub Actions",
-      "status": "Attivo. 880+ annunci analizzati. Ho trovato casa.",
-      "links": "[GitHub] \u00b7 [Dashboard live]"
+      "title": "CasaHunter",
+      "description": "Un tool che cerca casa al posto tuo, impara dai tuoi feedback, e ti avvisa su Telegram.",
+      "statusLabel": "Attivo",
+      "whatItTaughtMe": "Scoring a tre passaggi: filtrare l'80% in modo deterministico, spendere il budget AI solo sul 20% che conta. Stessa logica applicabile a qualsiasi prodotto."
     },
     "moneymind": {
       "title": "MoneyMind",
-      "oneLiner": "Finanza personale che non chiede di compilare spreadsheet. Analisi automatica delle transazioni, pattern recognition, insight settimanali. In sviluppo."
+      "description": "Finanza personale che non chiede di compilare spreadsheet. Analisi automatica delle transazioni, pattern recognition, insight settimanali. In sviluppo.",
+      "statusLabel": "In sviluppo",
+      "whatItTaughtMe": "Progettare per chi odia gli spreadsheet significa che neanche la UI può sembrarne uno."
+    },
+    "openclaw": {
+      "title": "OpenClaw",
+      "description": "Web scraper open-source per estrarre dati strutturati di prodotto da siti e-commerce. In fase di sperimentazione.",
+      "statusLabel": "Esperimento",
+      "whatItTaughtMe": "L'estrazione strutturata su scala richiede sapere quando usare un browser headless e quando basta una richiesta HTTP."
     },
     "cta": {
       "text": "Se ti interessa come ragiono quando costruisco, i case study professionali raccontano la stessa cosa su scala diversa.",
@@ -268,7 +295,9 @@
   },
   "notes": {
     "headline": "Note",
-    "emptyState": "Le note arrivano quando c'\u00e8 qualcosa da dire. Non per fare volume.",
+    "subtitle": "Pensare ad alta voce su prodotto, ingegneria e lo spazio tra i due.",
+    "emptyState": "Le note arrivano quando c'è qualcosa da dire. Non per fare volume.",
+    "olderPosts": "Post precedenti →",
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Perch\u00e9 prototipo in codice",

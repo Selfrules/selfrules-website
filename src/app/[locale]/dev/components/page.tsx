@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Tag } from '@/components/ui/Tag';
 import { Section } from '@/components/layout/Section';
-import { SectionHeader } from '@/components/layout/SectionHeader';
+import { SectionHeader } from '@/components/sections/SectionHeader';
 import { MetricCard } from '@/components/ui/MetricCard';
 import { CaseStudyCard } from '@/components/ui/CaseStudyCard';
 import { ProjectCard } from '@/components/ui/ProjectCard';
@@ -17,13 +17,13 @@ export default function DevComponentsPage() {
 
   return (
     <main className="py-20 px-8 max-w-[1080px] mx-auto">
-      <h1 className="font-heading text-3xl font-bold text-primary mb-12">
+      <h1 className="font-heading text-3xl font-bold text-text-primary mb-12">
         Phase 3 — Component Library
       </h1>
 
       {/* Button */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">Button</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">Button</h2>
         <div className="flex gap-4">
           <Button variant="primary">Get in touch &rarr;</Button>
           <Button variant="secondary">See the work &rarr;</Button>
@@ -34,7 +34,7 @@ export default function DevComponentsPage() {
 
       {/* Tag */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">Tag</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">Tag</h2>
         <div className="flex gap-3 mb-4">
           <Tag>B2B SaaS</Tag>
           <Tag>Payments</Tag>
@@ -51,7 +51,7 @@ export default function DevComponentsPage() {
 
       {/* SectionHeader */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">SectionHeader</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">SectionHeader</h2>
         <SectionHeader label="NUMBERS, NOT WORDS" title="Numeri, non parole" />
       </section>
 
@@ -59,12 +59,12 @@ export default function DevComponentsPage() {
 
       {/* Section */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">Section</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">Section</h2>
         <Section>
-          <p className="text-secondary">Default width (720px) content container</p>
+          <p className="text-text-secondary">Default width (720px) content container</p>
         </Section>
         <Section wide>
-          <p className="text-secondary">Wide variant (1080px) content container</p>
+          <p className="text-text-secondary">Wide variant (1080px) content container</p>
         </Section>
       </section>
 
@@ -72,7 +72,7 @@ export default function DevComponentsPage() {
 
       {/* MetricCard Grid */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">MetricCard Grid</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">MetricCard Grid</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--border-default)] border border-default">
           <MetricCard number="99%+" label="Uptime" context="Payment success rate" />
           <MetricCard number="-25%" label="Incidents" context="Post-release (QubicaAMF)" />
@@ -87,7 +87,7 @@ export default function DevComponentsPage() {
 
       {/* CaseStudyCard */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">CaseStudyCard</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">CaseStudyCard</h2>
         <div className="space-y-6">
           <CaseStudyCard
             tag="B2B SaaS"
@@ -109,7 +109,7 @@ export default function DevComponentsPage() {
 
       {/* ProjectCard */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">ProjectCard</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">ProjectCard</h2>
         <div className="space-y-6">
           <ProjectCard
             title="CasaHunter"
@@ -133,16 +133,16 @@ export default function DevComponentsPage() {
 
       {/* BlinkingCursor */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">BlinkingCursor</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">BlinkingCursor</h2>
         <div className="flex gap-8 items-center">
           <div>
-            <p className="text-secondary text-sm mb-2">Block</p>
-            <span className="font-mono text-tertiary">cursor</span>
+            <p className="text-text-secondary text-sm mb-2">Block</p>
+            <span className="font-mono text-text-tertiary">cursor</span>
             <BlinkingCursor type="block" />
           </div>
           <div>
-            <p className="text-secondary text-sm mb-2">Underscore</p>
-            <span className="font-mono text-tertiary">cursor</span>
+            <p className="text-text-secondary text-sm mb-2">Underscore</p>
+            <span className="font-mono text-text-tertiary">cursor</span>
             <BlinkingCursor type="underscore" />
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function DevComponentsPage() {
 
       {/* TerminalPrompt */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">TerminalPrompt</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">TerminalPrompt</h2>
         <TerminalPrompt />
       </section>
 
@@ -160,19 +160,19 @@ export default function DevComponentsPage() {
 
       {/* CountUpNumber */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">CountUpNumber</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">CountUpNumber</h2>
         <div className="flex gap-12">
           <div>
             <CountUpNumber value="-25%" className="font-heading font-bold text-accent text-4xl" />
-            <p className="text-tertiary text-sm mt-1">Incidents</p>
+            <p className="text-text-tertiary text-sm mt-1">Incidents</p>
           </div>
           <div>
             <CountUpNumber value="116" className="font-heading font-bold text-accent text-4xl" />
-            <p className="text-tertiary text-sm mt-1">Markets</p>
+            <p className="text-text-tertiary text-sm mt-1">Markets</p>
           </div>
           <div>
             <CountUpNumber value="99%+" className="font-heading font-bold text-accent text-4xl" />
-            <p className="text-tertiary text-sm mt-1">Uptime</p>
+            <p className="text-text-tertiary text-sm mt-1">Uptime</p>
           </div>
         </div>
       </section>
@@ -181,7 +181,7 @@ export default function DevComponentsPage() {
 
       {/* VerticalTimeline + TimelineNode */}
       <section>
-        <h2 className="font-heading text-xl font-bold text-primary mb-6">VerticalTimeline + TimelineNode</h2>
+        <h2 className="font-heading text-xl font-bold text-text-primary mb-6">VerticalTimeline + TimelineNode</h2>
         <VerticalTimeline>
           <TimelineNode
             role="Designer"

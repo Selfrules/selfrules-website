@@ -120,12 +120,12 @@ export default async function HomePage({
           label={t('metrics.label')}
           title={t('metrics.title')}
           metrics={[
-            { number: t('metrics.metric1.number'), label: '', context: t('metrics.metric1.context') },
-            { number: t('metrics.metric2.number'), label: '', context: t('metrics.metric2.context') },
-            { number: t('metrics.metric3.number'), label: '', context: t('metrics.metric3.context') },
-            { number: t('metrics.metric4.number'), label: '', context: t('metrics.metric4.context') },
-            { number: t('metrics.metric5.number'), label: '', context: t('metrics.metric5.context') },
-            { number: t('metrics.metric6.number'), label: '', context: t('metrics.metric6.context') },
+            { number: t('metrics.metric1.number'), label: t('metrics.metric1.label'), context: t('metrics.metric1.context') },
+            { number: t('metrics.metric2.number'), label: t('metrics.metric2.label'), context: t('metrics.metric2.context') },
+            { number: t('metrics.metric3.number'), label: t('metrics.metric3.label'), context: t('metrics.metric3.context') },
+            { number: t('metrics.metric4.number'), label: t('metrics.metric4.label'), context: t('metrics.metric4.context') },
+            { number: t('metrics.metric5.number'), label: t('metrics.metric5.label'), context: t('metrics.metric5.context') },
+            { number: t('metrics.metric6.number'), label: t('metrics.metric6.label'), context: t('metrics.metric6.context') },
           ]}
           linkText={t('metrics.link')}
           linkHref="/work"
@@ -137,8 +137,9 @@ export default async function HomePage({
           label={t('currentWork.label')}
           title={t('currentWork.title')}
           cards={[
-            { title: t('currentWork.card1.title'), text: t('currentWork.card1.text') },
-            { title: t('currentWork.card2.title'), text: t('currentWork.card2.text') },
+            { title: t('currentWork.card1.title'), text: t('currentWork.card1.text'), status: 'active', statusLabel: t('currentWork.card1.statusLabel') },
+            { title: t('currentWork.card2.title'), text: t('currentWork.card2.text'), status: 'shipped', statusLabel: t('currentWork.card2.statusLabel') },
+            { title: t('currentWork.card3.title'), text: t('currentWork.card3.text'), status: 'experiment', statusLabel: t('currentWork.card3.statusLabel') },
           ]}
         />
       </ScrollReveal>

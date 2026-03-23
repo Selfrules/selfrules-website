@@ -14,7 +14,7 @@ const baseClasses =
 const variantClasses = {
   primary: 'bg-accent text-dark hover:bg-accent-hover hover:-translate-y-[1px]',
   secondary:
-    'bg-transparent border border-default text-primary hover:border-accent hover:text-accent',
+    'bg-transparent border border-default text-text-primary hover:border-accent hover:text-accent',
 } as const;
 
 export function Button({ variant, children, href, className }: ButtonProps) {

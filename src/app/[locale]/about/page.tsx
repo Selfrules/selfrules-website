@@ -42,6 +42,7 @@ export default async function AboutPage({
       dates: t('career.selfrules.dates'),
       text: t.rich('career.selfrules.text', richBold),
       isActive: false,
+      overlapBadge: t('career.overlapBadge'),
     },
     {
       company: t('career.flowing.company'),
@@ -95,14 +96,20 @@ export default async function AboutPage({
       }} />
       {/* Headline */}
       <Section>
-        <h1 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary">
+        <h1 className="font-heading font-bold text-[clamp(36px,4vw,48px)] leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
+        <p className="mt-4 text-base leading-[1.7] text-text-secondary">
+          {t('subtitle')}
+        </p>
       </Section>
 
       {/* Career Path — VerticalTimeline */}
       <ScrollReveal>
       <Section className="!pt-0">
+        <p className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary mb-6">
+          {t('careerLabel')}
+        </p>
         <VerticalTimeline>
           <ol className="list-none p-0 m-0">
             {careerEntries.map((entry, index) => (
@@ -129,17 +136,26 @@ export default async function AboutPage({
 
                   {/* Content block */}
                   <div>
-                    <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-primary">
-                      {entry.company}
-                    </h2>
-                    <p className="font-mono text-[14px] uppercase tracking-[0.05em] text-secondary mt-1">
+                    <p className="font-mono text-[14px] uppercase tracking-[0.05em] text-accent mt-1">
                       {entry.dates}
                     </p>
-                    <div className="mt-4 text-base leading-[1.6] text-primary whitespace-pre-line">
+                    <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary mt-2">
+                      {entry.company}
+                    </h2>
+                    <div className="mt-4 text-base leading-[1.6] text-text-primary whitespace-pre-line">
                       {entry.text}
                     </div>
                   </div>
                 </div>
+
+                {/* Overlap badge between nodes */}
+                {'overlapBadge' in entry && entry.overlapBadge && (
+                  <div className="relative mt-4 mb-[-16px]">
+                    <span className="relative -left-[33px] md:-left-[41px] inline-flex items-center gap-1 font-mono text-[11px] text-text-secondary border border-default px-2 py-0.5">
+                      {entry.overlapBadge}
+                    </span>
+                  </div>
+                )}
               </li>
             ))}
           </ol>
@@ -151,12 +167,15 @@ export default async function AboutPage({
       <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-16">
+          <p className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary mb-6">
+            {t('beliefsLabel')}
+          </p>
           {beliefs.map((belief, index) => (
             <div key={index} className={index < beliefs.length - 1 ? 'mb-12' : ''}>
-              <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-primary">
+              <h2 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary">
                 {belief.title}
               </h2>
-              <p className="mt-4 text-base leading-[1.6] text-primary">
+              <p className="mt-4 text-base leading-[1.6] text-text-primary">
                 {belief.text}
               </p>
             </div>
@@ -169,7 +188,10 @@ export default async function AboutPage({
       <ScrollReveal>
       <Section className="!pt-0">
         <div className="mt-16 pt-16 border-t border-default">
-          <p className="text-base leading-[1.6] text-primary">
+          <p className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary mb-6">
+            {t('outsideLabel')}
+          </p>
+          <p className="text-base leading-[1.6] text-text-primary">
             {t('outside.text')}
           </p>
         </div>
@@ -179,7 +201,8 @@ export default async function AboutPage({
       {/* PageCTA */}
       <PageCTA
         text={t('cta.text')}
-        primaryCta={{ label: t('cta.primary'), href: 'mailto:mattia@selfrules.org' }}
+        primaryCta={{ label: t('cta.primary'), href: locale === 'it' ? '/it/work' : '/work' }}
+        secondaryCta={{ label: t('cta.secondary'), href: 'mailto:mattia@selfrules.org' }}
       />
     </>
   );

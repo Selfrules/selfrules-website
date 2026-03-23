@@ -51,10 +51,10 @@ export default async function WorkPage({
       }} />
       {/* Headline + Intro */}
       <Section>
-        <h1 className="font-heading text-[clamp(28px,3vw,36px)] font-bold leading-[1.2] text-primary">
+        <h1 className="font-heading text-[clamp(36px,4vw,48px)] font-bold leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
-        <p className="mt-6 text-base leading-[1.7] text-secondary">
+        <p className="mt-6 text-base leading-[1.7] text-text-secondary">
           {t('intro')}
         </p>
       </Section>
@@ -69,6 +69,7 @@ export default async function WorkPage({
             title={t('cases.payments.title')}
             preview={t('cases.payments.preview')}
             metric={t('cases.payments.metric')}
+            metricLabel={t('cases.payments.metricLabel')}
           />
 
           {/* Card 2: Cashless System */}
@@ -78,8 +79,9 @@ export default async function WorkPage({
               title={t('cases.cashless.title')}
               preview={t('cases.cashless.preview')}
               metric={t('cases.cashless.metric')}
+              metricLabel={t('cases.cashless.metricLabel')}
             />
-            <p className="mt-3 font-mono text-sm text-secondary">
+            <p className="mt-3 font-mono text-sm text-text-secondary">
               {t('cases.cashless.note')}
             </p>
           </div>

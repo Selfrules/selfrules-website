@@ -22,8 +22,8 @@ export function MetricCard({ number, label, context, className }: MetricCardProp
         value={number}
         className="font-heading font-bold text-accent text-[clamp(40px,5vw,72px)] leading-none block"
       />
-      <p className="text-[13px] text-primary mt-4">{label}</p>
-      <p className="text-[13px] text-tertiary mt-1">{context}</p>
+      <p className="font-mono text-[13px] uppercase tracking-[0.05em] text-text-primary mt-4">{label}</p>
+      <p className="text-[13px] text-text-tertiary mt-1">{context}</p>
     </div>
   );
 }

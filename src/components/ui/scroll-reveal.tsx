@@ -15,6 +15,14 @@ export function ScrollReveal({ children }: { children: ReactNode }) {
       return;
     }
 
+    // If already in viewport on mount, show immediately with animation
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.remove('animate-fade-up-initial');
+      el.classList.add('animate-fade-up');
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

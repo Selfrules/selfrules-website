@@ -29,8 +29,8 @@ export function CaseStudyCard({
     >
       <div className="flex-1">
         <Tag>{tag}</Tag>
-        <h3 className="text-xl font-bold text-primary font-heading mt-3">{title}</h3>
-        <p className="text-base text-secondary mt-2">{preview}</p>
+        <h3 className="text-xl font-bold text-text-primary font-heading mt-3">{title}</h3>
+        <p className="text-base text-text-secondary mt-2">{preview}</p>
       </div>
 
       <div className="shrink-0 md:text-right">
@@ -38,7 +38,7 @@ export function CaseStudyCard({
           {metric}
         </p>
         {metricLabel && (
-          <p className="text-[13px] text-tertiary mt-1">{metricLabel}</p>
+          <p className="font-mono text-[13px] uppercase tracking-[0.05em] text-text-tertiary mt-1">{metricLabel}</p>
         )}
       </div>
     </div>

@@ -32,11 +32,11 @@ export function TimelineNode({
 
       {/* Content block */}
       <div className="border border-default bg-surface p-6 transition-[border-color] duration-200 hover:border-accent/50">
-        <p className="font-mono text-[13px] text-tertiary">{dates}</p>
-        <h3 className="font-heading font-bold text-xl text-primary mt-1">{role}</h3>
-        <p className="text-base text-secondary mt-1">{company}</p>
+        <p className="font-mono text-[13px] text-text-tertiary">{dates}</p>
+        <h3 className="font-heading font-bold text-xl text-text-primary mt-1">{role}</h3>
+        <p className="text-base text-text-secondary mt-1">{company}</p>
         {description && (
-          <p className="text-base text-secondary mt-2">{description}</p>
+          <p className="text-base text-text-secondary mt-2">{description}</p>
         )}
       </div>
     </div>

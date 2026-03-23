@@ -37,10 +37,29 @@ export default async function NotesPage({
     },
   ];
 
+  // Group posts by year
+  const postsByYear = posts.reduce<Record<string, typeof posts>>((acc, post) => {
+    const year = post.date.slice(0, 4);
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(post);
+    return acc;
+  }, {});
+
+  const years = Object.keys(postsByYear).sort((a, b) => b.localeCompare(a));
+
   const baseUrl = 'https://selfrules.org';
   const pageName = locale === 'it' ? 'Note' : 'Notes';
   const pageUrl = locale === 'it' ? `${baseUrl}/it/notes` : `${baseUrl}/notes`;
   const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+
+  // Format date for display (e.g., "Mar 22")
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString(locale === 'it' ? 'it-IT' : 'en-US', {
+      month: 'short',
+      day: 'numeric',
+    });
+  };
 
   return (
     <>
@@ -52,36 +71,54 @@ export default async function NotesPage({
           { "@type": "ListItem", "position": 2, "name": pageName, "item": pageUrl }
         ]
       }} />
-      {/* Headline */}
+      {/* Headline + Subtitle */}
       <Section>
-        <h1 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary">
+        <h1 className="font-heading font-bold text-[clamp(36px,4vw,48px)] leading-[1.1] text-text-primary">
           {t('headline')}
         </h1>
+        <p className="mt-4 text-base leading-[1.7] text-text-secondary">
+          {t('subtitle')}
+        </p>
       </Section>
 
-      {/* Post list */}
+      {/* Post list grouped by year */}
       <Section className="!pt-0">
         {posts.length > 0 ? (
           <div className="mt-12 space-y-12">
-            {posts.map((post) => (
-              <article key={post.slug}>
-                <time className="block font-mono text-[14px] uppercase tracking-[0.05em] text-secondary">
-                  {post.date}
-                </time>
-                <Link
-                  href={`/notes/${post.slug}`}
-                  className="mt-1 block text-[20px] leading-[1.3] text-primary transition-colors duration-150 hover:text-accent"
-                >
-                  {post.title}
-                </Link>
-                <p className="mt-1 text-base text-secondary">
-                  {post.excerpt}
-                </p>
-              </article>
+            {years.map((year) => (
+              <div key={year}>
+                {/* Year separator */}
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="font-mono text-sm text-text-secondary">{year}</span>
+                  <div className="flex-1 h-[1px] bg-[var(--border-default)]" />
+                </div>
+
+                {/* Posts in this year */}
+                <div className="space-y-8">
+                  {postsByYear[year].map((post) => (
+                    <article key={post.slug} className="flex gap-6">
+                      <time className="w-[80px] shrink-0 font-mono text-[14px] text-text-secondary pt-1">
+                        {formatDate(post.date)}
+                      </time>
+                      <div>
+                        <Link
+                          href={`/notes/${post.slug}`}
+                          className="block text-[20px] leading-[1.3] text-text-primary transition-colors duration-150 hover:text-accent"
+                        >
+                          {post.title}
+                        </Link>
+                        <p className="mt-1 text-base text-text-secondary">
+                          {post.excerpt}
+                        </p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         ) : (
-          <p className="mt-12 text-base text-secondary">
+          <p className="mt-12 text-base text-text-secondary">
             {t('emptyState')}
           </p>
         )}
