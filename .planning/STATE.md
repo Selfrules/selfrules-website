@@ -1,10 +1,10 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: milestone
-status: Milestone complete
-stopped_at: Completed 06-04-PLAN.md
-last_updated: "2026-03-23T00:20:30.064Z"
+milestone_name: MVP
+status: v1.0 milestone shipped
+stopped_at: Milestone v1.0 archived
+last_updated: "2026-03-23T14:30:00.000Z"
 progress:
   total_phases: 6
   completed_phases: 6
@@ -16,36 +16,21 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-22)
+See: .planning/PROJECT.md (updated 2026-03-23)
 
-**Core value:** A hiring manager landing on selfrules.org thinks "this person knows what they're doing" -- competence through specificity and results, never self-promotion.
-**Current focus:** Phase 06 — seo-polish-deploy
+**Core value:** Un hiring manager che atterra su selfrules.org pensa "questo è uno che sa quello che fa" — competenza attraverso specificità e risultati.
+**Current focus:** v1.0 shipped — planning next milestone
 
 ## Current Position
 
-Phase: 06
-Plan: Not started
+Milestone v1.0 MVP complete. No active phase.
 
 ## Performance Metrics
 
-**Velocity:**
+**v1.0 Velocity:**
 
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
-
-**By Phase:**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| - | - | - | - |
-
-**Recent Trend:**
-
-- Last 5 plans: -
-- Trend: -
-
-*Updated after each plan completion*
+| Plan | Duration | Tasks | Files |
+|------|----------|-------|-------|
 | Phase 02 P01 | 3min | 2 tasks | 7 files |
 | Phase 02 P02 | 3min | 3 tasks | 4 files |
 | Phase 02 P03 | 2min | 2 tasks | 2 files |
@@ -55,60 +40,33 @@ Plan: Not started
 | Phase 04 P02 | 2min | 5 tasks | 5 files |
 | Phase 04 P03 | 1min | 4 tasks | 1 files |
 | Phase 05 P01 | 6min | 8 tasks | 7 files |
-| Phase 05 P03 | 2min | 3 tasks | 2 files |
 | Phase 05 P02 | 3min | 3 tasks | 2 files |
+| Phase 05 P03 | 2min | 3 tasks | 2 files |
 | Phase 05 P04 | 3min | 4 tasks | 4 files |
 | Phase 06 P01 | 6min | 7 tasks | 14 files |
 | Phase 06 P02 | 7min | 8 tasks | 9 files |
 | Phase 06 P03 | 3min | 4 tasks | 2 files |
 | Phase 06 P04 | 2min | 5 tasks | 2 files |
 
+**Total:** 17 plans, 87 tasks, ~52 min execution
+
 ## Accumulated Context
 
 ### Decisions
 
-Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
-
-- [Roadmap]: Use Next.js 16.2 (not 15) -- proxy.ts instead of middleware.ts
-- [Roadmap]: Tailwind v4 CSS-first @theme, no tailwind.config.ts
-- [Roadmap]: next-intl 4.8.x with localeDetection: false to prevent cookie redirect loops
-- [Phase 02]: Used src/messages/ path (Phase 1 convention) instead of src/i18n/messages/ to match existing request.ts import
-- [Phase 02]: navLinks typed as readonly array with optional isAccent (fixes TS strict mode with as-const tuples)
-- [Phase 02]: Used --text-hero token for 404 headline (--text-display not defined in theme)
-- [Phase 03]: Used actual CSS token names (--spacing-section, --width-content, --width-wide, --spacing-page-padding) instead of plan aliases
-- [Phase 03]: Added blink keyframes to globals.css for centralized animation with reduced-motion support
-- [Phase 03]: Used data-status-dot attribute to override global border-radius reset for ProjectCard status dots
-- [Phase 03]: TimelineNode uses computed px offsets instead of Tailwind v4 theme() in calc expressions
-- [Phase 04]: Created sections/SectionHeader.tsx separate from existing layout/SectionHeader.tsx per plan spec
-- [Phase 04]: Hero renders terminal prompt inline with prop for custom text instead of importing hardcoded TerminalPrompt component
-- [Phase 04]: MetricCard grid uses gap-[1px] bg-border pattern matching Phase 3 usage comment
-- [Phase 04]: Shared richBold handler for t.rich() calls avoids repetition across pillar and timeline text
-- [Phase 05]: PascalCase imports for layout/ui components matching existing codebase convention
-- [Phase 05]: Rich text <bold> tags in i18n JSON for inline metrics (technical adaptation, not copy modification)
-- [Phase 05]: CaseStudyCard note rendered as separate p tag below card (component lacks note prop)
-- [Phase 05]: CasaHunter sub-section headings use locale conditional strings for structural labels
-- [Phase 05]: Used inline timeline nodes instead of TimelineNode component for ReactNode rich text support
-- [Phase 05]: MDX metadata via export const pattern, not YAML frontmatter
-- [Phase 05]: Single slug why-i-prototype-in-code for both locales per D-08
-- [Phase 06]: createPageMetadata helper centralizes SEO metadata (canonical, hreflang, OG, Twitter) for all pages
-- [Phase 06]: Homepage uses absolute title to bypass layout template suffix
-- [Phase 06]: OG image is placeholder PNG -- final to be exported from Figma
-- [Phase 06]: Skip link uses #main-content (updated from existing #main for spec consistency)
-- [Phase 06]: text-tertiary usages verified as decorative/supplementary -- no contrast changes needed
-- [Phase 06]: Moved html/body rendering from root layout to locale layout for correct lang attribute per locale
-- [Phase 06]: Deployment deferred to Mattia -- requires Vercel account authentication
+All v1.0 decisions logged in PROJECT.md Key Decisions table.
 
 ### Pending Todos
 
-1. **Align codebase to Figma v25 — 17 gap fixes** (area: ui) — see `GAP-ANALYSIS-v25.md`
+1. **OG image definitivo** — export da Figma (attualmente placeholder PNG)
+2. **Vercel deploy** — richiede autenticazione account Mattia
 
 ### Blockers/Concerns
 
-None yet.
+None.
 
 ## Session Continuity
 
-Last session: 2026-03-23T00:15:41.363Z
-Stopped at: Completed 06-04-PLAN.md
+Last session: 2026-03-23
+Stopped at: Milestone v1.0 archived
 Resume file: None
