@@ -22,8 +22,8 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
       {/* Desktop: 4-column card grid with horizontal connector */}
       <div className="hidden lg:block">
         <div className="relative">
-          {/* Horizontal connector line through middle of cards */}
-          <div className="absolute top-[92px] left-0 right-0 h-px bg-[#1a1a1f] z-10" />
+          {/* Horizontal connector line — behind cards, visible only in gaps */}
+          <div className="absolute top-[92px] left-0 right-0 h-px bg-[#1a1a1f]" />
           <div className="grid grid-cols-4 gap-6">
             {blocks.map((block, index) => (
               <div
