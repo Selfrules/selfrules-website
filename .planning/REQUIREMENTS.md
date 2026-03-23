@@ -80,17 +80,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Accessibility
 
-- [ ] **A11Y-01**: Skip-to-content link (hidden visually, visible on focus)
-- [ ] **A11Y-02**: Visible focus styles on all interactive elements
-- [ ] **A11Y-03**: WCAG AA color contrast for all text (verify #8A8A8E secondary text)
-- [ ] **A11Y-04**: Semantic HTML throughout (header, nav, main, article, footer)
-- [ ] **A11Y-05**: prefers-reduced-motion respected — animations disabled
+- [x] **A11Y-01**: Skip-to-content link (hidden visually, visible on focus)
+- [x] **A11Y-02**: Visible focus styles on all interactive elements
+- [x] **A11Y-03**: WCAG AA color contrast for all text (verify #8A8A8E secondary text)
+- [x] **A11Y-04**: Semantic HTML throughout (header, nav, main, article, footer)
+- [x] **A11Y-05**: prefers-reduced-motion respected — animations disabled
 
 ### Polish
 
-- [ ] **PLSH-01**: Scroll-triggered fade-in animations (IntersectionObserver, no libraries)
-- [ ] **PLSH-02**: Smooth scroll for anchor links (#contact)
-- [ ] **PLSH-03**: Active state in nav links (highlight current page)
+- [x] **PLSH-01**: Scroll-triggered fade-in animations (IntersectionObserver, no libraries)
+- [x] **PLSH-02**: Smooth scroll for anchor links (#contact)
+- [x] **PLSH-03**: Active state in nav links (highlight current page)
 - [ ] **PLSH-04**: No layout shift on page load (CLS < 0.05)
 
 ### Analytics
@@ -203,14 +203,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERF-04 | Phase 6 | Pending |
 | PERF-05 | Phase 6 | Pending |
 | PERF-06 | Phase 6 | Pending |
-| A11Y-01 | Phase 6 | Pending |
-| A11Y-02 | Phase 6 | Pending |
-| A11Y-03 | Phase 6 | Pending |
-| A11Y-04 | Phase 6 | Pending |
-| A11Y-05 | Phase 6 | Pending |
-| PLSH-01 | Phase 6 | Pending |
-| PLSH-02 | Phase 6 | Pending |
-| PLSH-03 | Phase 6 | Pending |
+| A11Y-01 | Phase 6 | Complete |
+| A11Y-02 | Phase 6 | Complete |
+| A11Y-03 | Phase 6 | Complete |
+| A11Y-04 | Phase 6 | Complete |
+| A11Y-05 | Phase 6 | Complete |
+| PLSH-01 | Phase 6 | Complete |
+| PLSH-02 | Phase 6 | Complete |
+| PLSH-03 | Phase 6 | Complete |
 | PLSH-04 | Phase 6 | Pending |
 | DEPL-01 | Phase 6 | Pending |
 | DEPL-02 | Phase 6 | Pending |
