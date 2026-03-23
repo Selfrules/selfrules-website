@@ -5,6 +5,7 @@ import { createPageMetadata } from '@/lib/metadata';
 import { Section } from '@/components/layout/Section';
 import { Tag } from '@/components/ui/Tag';
 import { PageCTA } from '@/components/sections/page-cta';
+import { JsonLd } from '@/components/seo/json-ld';
 
 const CASAHUNTER_STACK = [
   'Python 3.11',
@@ -51,8 +52,20 @@ export default async function LabPage({
   const comingSoonHeading =
     locale === 'it' ? 'Prossimamente' : 'Coming soon';
 
+  const baseUrl = 'https://selfrules.org';
+  const pageUrl = locale === 'it' ? `${baseUrl}/it/lab` : `${baseUrl}/lab`;
+  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": homeUrl },
+          { "@type": "ListItem", "position": 2, "name": "Lab", "item": pageUrl }
+        ]
+      }} />
       {/* Headline + Intro */}
       <Section>
         <h1 className="font-heading text-[clamp(28px,3vw,36px)] font-bold leading-[1.2] text-primary">

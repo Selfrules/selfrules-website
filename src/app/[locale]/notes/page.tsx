@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
 import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
+import { JsonLd } from '@/components/seo/json-ld';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -36,8 +37,21 @@ export default async function NotesPage({
     },
   ];
 
+  const baseUrl = 'https://selfrules.org';
+  const pageName = locale === 'it' ? 'Note' : 'Notes';
+  const pageUrl = locale === 'it' ? `${baseUrl}/it/notes` : `${baseUrl}/notes`;
+  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": homeUrl },
+          { "@type": "ListItem", "position": 2, "name": pageName, "item": pageUrl }
+        ]
+      }} />
       {/* Headline */}
       <Section>
         <h1 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary">

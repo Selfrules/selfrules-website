@@ -5,6 +5,8 @@ import { createPageMetadata } from '@/lib/metadata';
 import { Section } from '@/components/layout/Section';
 import { VerticalTimeline } from '@/components/ui/VerticalTimeline';
 import { PageCTA } from '@/components/sections/page-cta';
+import { JsonLd } from '@/components/seo/json-ld';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -76,8 +78,21 @@ export default async function AboutPage({
     },
   ];
 
+  const baseUrl = 'https://selfrules.org';
+  const pageName = locale === 'it' ? 'Chi sono' : 'About';
+  const pageUrl = locale === 'it' ? `${baseUrl}/it/about` : `${baseUrl}/about`;
+  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": homeUrl },
+          { "@type": "ListItem", "position": 2, "name": pageName, "item": pageUrl }
+        ]
+      }} />
       {/* Headline */}
       <Section>
         <h1 className="font-heading font-bold text-[clamp(28px,3vw,36px)] leading-[1.2] text-primary">
@@ -86,6 +101,7 @@ export default async function AboutPage({
       </Section>
 
       {/* Career Path — VerticalTimeline */}
+      <ScrollReveal>
       <Section className="!pt-0">
         <VerticalTimeline>
           <ol className="list-none p-0 m-0">

@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
 import { Section } from '@/components/layout/Section';
+import { JsonLd } from '@/components/seo/json-ld';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -36,8 +37,41 @@ export default async function BlogPost({
     `./content.${locale}.mdx`
   );
 
+  const baseUrl = 'https://selfrules.org';
+  const notesName = locale === 'it' ? 'Note' : 'Notes';
+  const notesUrl = locale === 'it' ? `${baseUrl}/it/notes` : `${baseUrl}/notes`;
+  const postUrl = locale === 'it' ? `${baseUrl}/it/notes/why-i-prototype-in-code` : `${baseUrl}/notes/why-i-prototype-in-code`;
+  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": homeUrl },
+          { "@type": "ListItem", "position": 2, "name": notesName, "item": notesUrl },
+          { "@type": "ListItem", "position": 3, "name": metadata.title, "item": postUrl }
+        ]
+      }} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": metadata.title,
+        "datePublished": metadata.date,
+        "author": {
+          "@type": "Person",
+          "name": "Mattia De Luca",
+          "url": "https://selfrules.org"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": postUrl
+        },
+        "description": locale === 'it'
+          ? "Un PM che prototipa in codice shippa piu' veloce, comunica meglio con gli engineer, e intercetta problemi prima."
+          : "A PM who prototypes in code ships faster, communicates better with engineers, and catches problems earlier."
+      }} />
       <Section>
         <article>
           {/* Post header */}
