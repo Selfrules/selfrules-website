@@ -5,12 +5,14 @@ interface SectionProps {
   wide?: boolean;
   className?: string;
   id?: string;
+  'aria-label'?: string;
 }
 
-export function Section({ children, wide = false, className, id }: SectionProps) {
+export function Section({ children, wide = false, className, id, 'aria-label': ariaLabel }: SectionProps) {
   return (
     <section
       id={id}
+      aria-label={ariaLabel}
       className={cn(
         'py-[var(--spacing-section)] px-[var(--spacing-page-padding)]',
         className
