@@ -99,7 +99,7 @@ export function MobileMenu({ locale, currentPath, isOpen, onClose }: MobileMenuP
       }`}
     >
       {/* Header: close [X] top-right (D-04) */}
-      <div className="flex items-center justify-end px-[--spacing-page-padding] h-16">
+      <div className="flex items-center justify-end px-[var(--spacing-page-padding)] h-16">
         <button
           onClick={onClose}
           className="text-text-primary p-2"
@@ -113,7 +113,7 @@ export function MobileMenu({ locale, currentPath, isOpen, onClose }: MobileMenuP
       </div>
 
       {/* Nav links: 32px bold, 24px gap (D-02, D-03) */}
-      <nav className="flex flex-col gap-6 px-[--spacing-page-padding] pt-12">
+      <nav className="flex flex-col gap-6 px-[var(--spacing-page-padding)] pt-12">
         {navLinks.map((link) => {
           const isActive = currentPath === link.href || currentPath.startsWith(link.href + '/');
           return (
@@ -136,8 +136,8 @@ export function MobileMenu({ locale, currentPath, isOpen, onClose }: MobileMenuP
       </nav>
 
       {/* Divider + Language toggle (D-02, D-07) */}
-      <div className="mx-[--spacing-page-padding] mt-8 border-t border-[#1a1a1f]" />
-      <div className="px-[--spacing-page-padding] pt-6">
+      <div className="mx-[var(--spacing-page-padding)] mt-8 border-t border-[#1a1a1f]" />
+      <div className="px-[var(--spacing-page-padding)] pt-6">
         <LanguageToggle locale={locale} variant="mobile" />
       </div>
     </div>
