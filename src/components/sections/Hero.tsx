@@ -24,7 +24,7 @@ export function Hero({
   return (
     <section
       aria-label="Hero"
-      className="flex flex-col justify-start pt-[80px] md:pt-[96px] pb-[var(--spacing-section)] px-[var(--spacing-page-padding)]"
+      className="flex flex-col justify-start pt-[72px] md:pt-[80px] pb-[var(--spacing-section)] px-[var(--spacing-page-padding)]"
     >
       <div className="mx-auto w-full max-w-[var(--width-wide)]">
         <div className="max-w-[720px]">

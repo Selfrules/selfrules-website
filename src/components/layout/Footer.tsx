@@ -7,8 +7,8 @@ export async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'footer' });
 
   return (
-    <footer className="mt-32">
-      <div className="mx-auto max-w-[var(--width-wide)] px-[var(--spacing-page-padding)] flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pb-8">
+    <footer className="mt-32 px-[var(--spacing-page-padding)]">
+      <div className="mx-auto max-w-[var(--width-wide)] flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pb-8">
         {/* Left: inline links separated by · */}
         <div className="flex flex-wrap items-center gap-x-2 text-[14px] text-[rgba(255,255,255,0.5)]">
           <span>PM / Builder</span>

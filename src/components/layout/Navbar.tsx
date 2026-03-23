@@ -34,13 +34,13 @@ export function Navbar({ locale }: NavbarProps) {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 border-b border-border-default transition-[background-color,backdrop-filter] duration-200 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-50 border-b border-border-default px-[var(--spacing-page-padding)] transition-[background-color,backdrop-filter] duration-200 ease-out ${
           scrolled
             ? 'bg-[rgba(10,10,11,0.9)] backdrop-blur-md'
             : 'bg-transparent'
         }`}
       >
-        <nav className={`mx-auto flex max-w-[var(--width-wide)] items-center justify-between px-[var(--spacing-page-padding)] transition-[height] duration-200 ${scrolled ? 'h-14' : 'h-16'}`}>
+        <nav className={`mx-auto flex max-w-[var(--width-wide)] items-center justify-between transition-[height] duration-200 ${scrolled ? 'h-14' : 'h-16'}`}>
           {/* Left: Hamburger (mobile only, D-04) + SELFRULES wordmark (D-15) */}
           <div className="flex items-center gap-4">
             <button
