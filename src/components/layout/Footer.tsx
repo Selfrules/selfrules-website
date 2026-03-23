@@ -52,10 +52,6 @@ export async function Footer({ locale }: { locale: string }) {
             </a>
           </div>
 
-          {/* Right: credit */}
-          <p className="text-[12px] text-[rgba(255,255,255,0.3)]">
-            {t('credit')}
-          </p>
         </div>
 
         {/* Build version — right aligned */}

@@ -22,7 +22,6 @@
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "cv": "Scarica il CV (PDF)",
-    "credit": "Designed and built by Mattia De Luca",
     "buildVersion": "v1.0.0 · build {buildMonth} · Next.js 16 · {commitCount} commits"
   },
   "notFound": {
