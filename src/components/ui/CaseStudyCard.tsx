@@ -1,5 +1,4 @@
 import { cn } from '@/lib/utils';
-import { Tag } from '@/components/ui/Tag';
 
 interface CaseStudyCardProps {
   tag: string;
@@ -21,24 +20,24 @@ export function CaseStudyCard({
   return (
     <div
       className={cn(
-        'border border-[#1a1a1f] p-8 md:p-12',
+        'border border-[#1a1a1f] px-[49px] py-[49px]',
         'flex flex-col md:flex-row md:items-center gap-6',
         'transition-all duration-200 hover:border-accent/40 hover:-translate-y-[2px]',
         className
       )}
     >
       <div className="flex-1">
-        <Tag>{tag}</Tag>
-        <h3 className="text-[18px] font-medium text-text-primary font-heading mt-3">{title}</h3>
-        <p className="text-[14px] text-[rgba(255,255,255,0.6)] mt-2">{preview}</p>
+        <span className="font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">{tag}</span>
+        <h3 className="font-heading font-bold text-[28px] leading-[33.6px] tracking-[-0.7px] text-[#f5f5f0] mt-5">{title}</h3>
+        <p className="font-light text-[17px] leading-[25.5px] text-[rgba(255,255,255,0.5)] mt-3">{preview}</p>
       </div>
 
       <div className="shrink-0 md:text-right">
-        <p className="font-heading font-bold text-accent text-[clamp(40px,5vw,64px)] leading-none tracking-[-2px]">
+        <p className="font-heading font-bold text-[#e8a838] text-[72px] leading-[72px] tracking-[-3.6px]">
           {metric}
         </p>
         {metricLabel && (
-          <p className="font-mono text-[14px] uppercase tracking-[1.4px] text-[rgba(255,255,255,0.6)] mt-1">{metricLabel}</p>
+          <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">{metricLabel}</p>
         )}
       </div>
     </div>

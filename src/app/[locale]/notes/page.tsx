@@ -73,10 +73,10 @@ export default async function NotesPage({
       }} />
       {/* Headline + Subtitle */}
       <Section>
-        <h1 className="font-heading font-bold text-[clamp(36px,4vw,48px)] leading-[1.1] text-text-primary">
+        <h1 className="font-heading font-bold text-[48px] leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
           {t('headline')}
         </h1>
-        <p className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
+        <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('subtitle')}
         </p>
       </Section>
@@ -84,30 +84,29 @@ export default async function NotesPage({
       {/* Post list grouped by year */}
       <Section className="!pt-0">
         {posts.length > 0 ? (
-          <div className="mt-12 space-y-12">
+          <div className="mt-12 flex flex-col gap-32">
             {years.map((year) => (
               <div key={year}>
                 {/* Year separator */}
-                <div className="mb-8">
-                  <span className="font-mono text-[14px] text-[rgba(255,255,255,0.4)]">{year}</span>
-                  <div className="mt-2 h-[1px] w-full bg-[#1a1a1f]" />
+                <div className="border-b border-[#1a1a1f] pb-4">
+                  <span className="font-mono text-[13px] uppercase tracking-[1.3px] text-[rgba(255,255,255,0.3)]">{year}</span>
                 </div>
 
                 {/* Posts in this year */}
-                <div className="space-y-8">
+                <div className="flex flex-col gap-16 mt-12">
                   {postsByYear[year].map((post) => (
                     <article key={post.slug} className="flex gap-6">
-                      <time className="w-[80px] shrink-0 font-mono text-[14px] text-[rgba(255,255,255,0.4)] pt-1">
+                      <time className="w-[96px] shrink-0 font-mono text-[13px] leading-[19.5px] text-[rgba(255,255,255,0.4)] pt-[6px]">
                         {formatDate(post.date)}
                       </time>
                       <div>
                         <Link
                           href={`/notes/${post.slug}`}
-                          className="block font-heading font-medium text-[18px] leading-[1.3] text-text-primary transition-colors duration-150 hover:text-accent"
+                          className="block font-heading font-bold text-[20px] leading-[28px] text-[#f5f5f0] transition-colors duration-150 hover:text-accent"
                         >
                           {post.title}
                         </Link>
-                        <p className="mt-1 text-[14px] text-[rgba(255,255,255,0.6)]">
+                        <p className="mt-2 font-light text-[16px] leading-[25.6px] text-[rgba(255,255,255,0.6)]">
                           {post.excerpt}
                         </p>
                       </div>

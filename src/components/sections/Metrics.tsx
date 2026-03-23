@@ -18,7 +18,7 @@ export function Metrics({ label, title, metrics, linkText, linkHref }: MetricsPr
   return (
     <Section wide>
       <SectionHeader label={label} title={title} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-border-default border border-default">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[#1a1a1f] border border-[#1a1a1f]">
         {metrics.map((metric, index) => (
           <MetricCard
             key={index}

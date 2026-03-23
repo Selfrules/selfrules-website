@@ -51,10 +51,10 @@ export default async function WorkPage({
       }} />
       {/* Headline + Intro */}
       <Section>
-        <h1 className="font-heading text-[clamp(36px,4vw,48px)] font-bold leading-[1.1] text-text-primary">
+        <h1 className="font-heading font-bold text-[48px] leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
           {t('headline')}
         </h1>
-        <p className="mt-6 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
+        <p className="mt-6 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
       </Section>
@@ -62,7 +62,7 @@ export default async function WorkPage({
       {/* Case Study Cards */}
       <ScrollReveal>
       <Section wide>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6">
           {/* Card 1: Payments Rescue */}
           <CaseStudyCard
             tag={t('cases.payments.tag')}

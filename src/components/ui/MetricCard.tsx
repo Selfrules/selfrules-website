@@ -18,7 +18,7 @@ export function MetricCard({ number, label, context, className }: MetricCardProp
   return (
     <div
       className={cn(
-        'bg-[#0a0a0b] px-12 py-12',
+        'bg-[#0a0a0b] px-8 py-10',
         'outline outline-0 hover:outline-1 hover:outline-accent/40 hover:-outline-offset-1',
         'transition-all duration-200',
         className

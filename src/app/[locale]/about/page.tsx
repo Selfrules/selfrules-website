@@ -96,10 +96,10 @@ export default async function AboutPage({
       }} />
       {/* Headline */}
       <Section>
-        <h1 className="font-heading font-bold text-[clamp(36px,4vw,48px)] leading-[1.1] text-text-primary">
+        <h1 className="font-heading font-bold text-[48px] leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
           {t('headline')}
         </h1>
-        <p className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
+        <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('subtitle')}
         </p>
       </Section>
@@ -123,7 +123,7 @@ export default async function AboutPage({
                     className={`absolute w-[10px] h-[10px] -left-[33px] md:-left-[41px] top-[6px] ${
                       entry.isActive
                         ? 'bg-accent'
-                        : 'border border-[#1a1a1f] bg-transparent'
+                        : 'border-[1.5px] border-[#5a5a5e] bg-transparent'
                     }`}
                     aria-hidden="true"
                   />
@@ -139,10 +139,10 @@ export default async function AboutPage({
                     <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-accent mt-1">
                       {entry.dates}
                     </p>
-                    <h2 className="font-heading font-medium text-[18px] leading-[1.3] text-text-primary mt-2">
+                    <h2 className="font-heading font-medium text-[26px] leading-[1.3] tracking-[-0.65px] text-[#f5f5f0] mt-2">
                       {entry.company}
                     </h2>
-                    <div className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)] whitespace-pre-line">
+                    <div className="mt-4 font-light text-[17px] leading-[29.75px] text-[rgba(255,255,255,0.5)] whitespace-pre-line">
                       {entry.text}
                     </div>
                   </div>
@@ -151,7 +151,7 @@ export default async function AboutPage({
                 {/* Overlap badge between nodes */}
                 {'overlapBadge' in entry && entry.overlapBadge && (
                   <div className="relative mt-4 mb-[-16px]">
-                    <span className="relative -left-[33px] md:-left-[41px] inline-flex items-center gap-1 font-mono text-[11px] text-[rgba(255,255,255,0.4)] border border-[#1a1a1f] px-2 py-0.5">
+                    <span className="relative -left-[33px] md:-left-[41px] inline-flex items-center gap-1 font-mono text-[10px] text-[rgba(232,168,56,0.6)] border border-[rgba(232,168,56,0.3)] px-2 py-0.5">
                       {entry.overlapBadge}
                     </span>
                   </div>
@@ -172,10 +172,10 @@ export default async function AboutPage({
           </p>
           {beliefs.map((belief, index) => (
             <div key={index} className={index < beliefs.length - 1 ? 'mb-12' : ''}>
-              <h2 className="font-heading font-medium text-[18px] leading-[1.3] text-text-primary">
+              <h2 className="font-heading font-medium text-[22px] leading-[1.3] tracking-[-0.55px] text-[#f5f5f0]">
                 {belief.title}
               </h2>
-              <p className="mt-4 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
+              <p className="mt-4 font-light text-[18px] leading-[32.4px] text-[rgba(255,255,255,0.5)]">
                 {belief.text}
               </p>
             </div>
@@ -191,7 +191,7 @@ export default async function AboutPage({
           <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
             {t('outsideLabel')}
           </p>
-          <p className="text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
+          <p className="font-light text-[17px] leading-[29.75px] text-[rgba(255,255,255,0.5)]">
             {t('outside.text')}
           </p>
         </div>

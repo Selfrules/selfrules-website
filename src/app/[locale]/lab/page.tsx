@@ -102,10 +102,10 @@ export default async function LabPage({
       }} />
       {/* Headline + Intro */}
       <Section>
-        <h1 className="font-heading text-[clamp(36px,4vw,48px)] font-bold leading-[1.1] text-text-primary">
+        <h1 className="font-heading font-bold text-[48px] leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
           {t('headline')}
         </h1>
-        <p className="mt-6 text-[16px] leading-[26px] text-[rgba(255,255,255,0.6)]">
+        <p className="mt-6 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
       </Section>
@@ -113,7 +113,7 @@ export default async function LabPage({
       {/* Project grid */}
       <ScrollReveal>
         <Section wide>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-10">
             {projects.map((project) => (
               <ProjectCard
                 key={project.title}

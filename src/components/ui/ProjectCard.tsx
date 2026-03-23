@@ -16,9 +16,9 @@ interface ProjectCardProps {
 
 const statusColors: Record<ProjectCardProps['status'], string> = {
   active: 'bg-accent',
-  shipped: 'bg-[#4ADE80]',
+  shipped: 'bg-[#00bc7d]',
   'coming-soon': 'bg-secondary',
-  experiment: 'bg-[#60A5FA]',
+  experiment: 'bg-[#2b7fff]',
 };
 
 export function ProjectCard({
@@ -35,19 +35,20 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        'border border-[#1a1a1f] p-6',
+        'border border-[#1a1a1f] p-10',
         'transition-[border-color] duration-200 hover:border-accent/40',
         className
       )}
     >
       <div className="flex items-start justify-between gap-4">
-        <h3 className="font-heading font-medium text-[18px] text-text-primary">{title}</h3>
-        <div className="flex items-center gap-2 shrink-0">
-          <span className="font-mono text-[10px] uppercase tracking-[1px] bg-[rgba(26,26,31,0.5)] text-[rgba(255,255,255,0.4)] px-2 py-1">{statusLabel}</span>
-        </div>
+        <h3 className="font-heading font-bold text-[22px] tracking-[-0.55px] text-[#f5f5f0]">{title}</h3>
+        <span className="inline-flex items-center gap-2 shrink-0">
+          <span className={`w-2 h-2 ${statusColors[status]}`} data-status-dot />
+          <span className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">{statusLabel}</span>
+        </span>
       </div>
 
-      <p className="text-[14px] text-[rgba(255,255,255,0.6)] mt-2">{description}</p>
+      <p className="font-light text-[16px] leading-[25.6px] text-[rgba(255,255,255,0.5)] mt-3">{description}</p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         {techStack.map((tech) => (
@@ -58,11 +59,11 @@ export function ProjectCard({
       {whatItTaughtMe && (
         <div className="mt-4 border-t border-[#1a1a1f] pt-4">
           {whatItTaughtMeLabel && (
-            <span className="font-mono text-[12px] font-medium text-accent">
+            <span className="font-heading font-medium text-[15px] text-[rgba(255,255,255,0.7)]">
               {whatItTaughtMeLabel}
             </span>
           )}
-          <p className="mt-1 text-[14px] text-[rgba(255,255,255,0.4)]">{whatItTaughtMe}</p>
+          <p className="mt-1 font-light text-[15px] leading-[24px] text-[rgba(255,255,255,0.5)]">{whatItTaughtMe}</p>
         </div>
       )}
 
