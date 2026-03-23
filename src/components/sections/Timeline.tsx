@@ -7,45 +7,42 @@ interface TimelineProps {
   blocks: Array<{
     role: string;
     dates: string;
+    company?: string;
     text: React.ReactNode;
+    shortText?: React.ReactNode;
   }>;
   closingLine: string;
 }
 
 export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
-  const lastIndex = blocks.length - 1;
-
   return (
     <Section wide>
       <SectionHeader label={label} title={title} />
 
-      {/* Desktop: horizontal timeline */}
+      {/* Desktop: 4-column card grid with horizontal connector */}
       <div className="hidden lg:block">
-        {/* Connector line */}
-        <div className="relative mb-8">
-          <div className="absolute top-[4px] left-0 right-0 h-px bg-border-default" />
-          <div className="grid grid-cols-4 gap-8">
+        <div className="relative">
+          {/* Horizontal connector line through middle of cards */}
+          <div className="absolute top-[92px] left-0 right-0 h-px bg-[#1a1a1f] z-10" />
+          <div className="grid grid-cols-4 gap-6">
             {blocks.map((block, index) => (
-              <div key={index} className="relative pt-6">
-                {/* Square node */}
-                <div
-                  className={
-                    index === lastIndex
-                      ? 'absolute top-0 left-0 w-[10px] h-[10px] bg-accent'
-                      : 'absolute top-0 left-0 w-[10px] h-[10px] border border-default bg-transparent'
-                  }
-                />
-                {/* Card wrapper */}
-                <div className="border border-default bg-surface p-6 mt-4">
-                  <p className="font-mono text-sm text-accent mb-2">
-                    {block.dates}
+              <div
+                key={index}
+                className="relative border border-[#1a1a1f] bg-[#0a0a0b] p-6"
+              >
+                <p className="font-mono text-[12px] leading-[16px] text-accent mb-2">
+                  {block.dates}
+                </p>
+                <h3 className="font-heading font-medium text-[18px] leading-[28px] text-text-primary mb-2">
+                  {block.role}
+                </h3>
+                {block.company && (
+                  <p className="text-[14px] leading-[20px] text-[rgba(255,255,255,0.6)] mb-3">
+                    {block.company}
                   </p>
-                  <h3 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary mb-3">
-                    {block.role}
-                  </h3>
-                  <div className="text-base leading-[1.6] text-text-secondary">
-                    {block.text}
-                  </div>
+                )}
+                <div className="text-[14px] leading-[20px] text-text-primary">
+                  {block.shortText || block.text}
                 </div>
               </div>
             ))}
@@ -53,32 +50,27 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
         </div>
       </div>
 
-      {/* Mobile: vertical timeline */}
+      {/* Mobile: stacked cards */}
       <div className="lg:hidden">
-        <div className="relative pl-8">
-          {/* Vertical connector line */}
-          <div className="absolute top-0 bottom-0 left-[4px] w-[2px] bg-border-default" />
+        <div className="flex flex-col gap-4">
           {blocks.map((block, index) => (
-            <div key={index} className="relative mb-10 last:mb-0">
-              {/* Square node */}
-              <div
-                className={
-                  index === lastIndex
-                    ? 'absolute -left-8 top-[6px] w-[10px] h-[10px] bg-accent'
-                    : 'absolute -left-8 top-[6px] w-[10px] h-[10px] border border-default bg-transparent'
-                }
-              />
-              {/* Card wrapper */}
-              <div className="border border-default bg-surface p-6">
-                <p className="font-mono text-sm text-accent mb-2">
-                  {block.dates}
+            <div
+              key={index}
+              className="border border-[#1a1a1f] bg-[#0a0a0b] p-6"
+            >
+              <p className="font-mono text-[12px] leading-[16px] text-accent mb-2">
+                {block.dates}
+              </p>
+              <h3 className="font-heading font-medium text-[18px] leading-[28px] text-text-primary mb-2">
+                {block.role}
+              </h3>
+              {block.company && (
+                <p className="text-[14px] leading-[20px] text-[rgba(255,255,255,0.6)] mb-3">
+                  {block.company}
                 </p>
-                <h3 className="font-heading font-bold text-[20px] leading-[1.3] text-text-primary mb-3">
-                  {block.role}
-                </h3>
-                <div className="text-base leading-[1.6] text-text-secondary">
-                  {block.text}
-                </div>
+              )}
+              <div className="text-[14px] leading-[20px] text-text-primary">
+                {block.text}
               </div>
             </div>
           ))}
@@ -86,7 +78,7 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
       </div>
 
       {/* Closing phrase */}
-      <p className="text-base leading-[1.7] text-text-primary mt-12 max-w-[720px]">
+      <p className="text-[18px] leading-[28px] text-[rgba(255,255,255,0.8)] mt-12 max-w-[684px]">
         {closingLine}
       </p>
     </Section>

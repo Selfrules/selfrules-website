@@ -72,14 +72,17 @@ export default async function HomePage({
             {
               title: t('howIWork.pillar1.title'),
               text: t.rich('howIWork.pillar1.text', richBold),
+              shortText: t.rich('howIWork.pillar1.shortText', richBold),
             },
             {
               title: t('howIWork.pillar2.title'),
               text: t.rich('howIWork.pillar2.text', richBold),
+              shortText: t.rich('howIWork.pillar2.shortText', richBold),
             },
             {
               title: t('howIWork.pillar3.title'),
               text: t.rich('howIWork.pillar3.text', richBold),
+              shortText: t.rich('howIWork.pillar3.shortText', richBold),
             },
           ]}
         />
@@ -93,22 +96,30 @@ export default async function HomePage({
             {
               role: t('timeline.block1.role'),
               dates: t('timeline.block1.dates'),
+              company: t('timeline.block1.company'),
               text: t.rich('timeline.block1.text', richBold),
+              shortText: t('timeline.block1.shortText'),
             },
             {
               role: t('timeline.block2.role'),
               dates: t('timeline.block2.dates'),
+              company: t('timeline.block2.company'),
               text: t.rich('timeline.block2.text', richBold),
+              shortText: t('timeline.block2.shortText'),
             },
             {
               role: t('timeline.block3.role'),
               dates: t('timeline.block3.dates'),
+              company: t('timeline.block3.company'),
               text: t.rich('timeline.block3.text', richBold),
+              shortText: t('timeline.block3.shortText'),
             },
             {
               role: t('timeline.block4.role'),
               dates: t('timeline.block4.dates'),
+              company: t('timeline.block4.company'),
               text: t.rich('timeline.block4.text', richBold),
+              shortText: t('timeline.block4.shortText'),
             },
           ]}
           closingLine={t('timeline.closingLine')}
@@ -120,12 +131,12 @@ export default async function HomePage({
           label={t('metrics.label')}
           title={t('metrics.title')}
           metrics={[
-            { number: t('metrics.metric1.number'), label: t('metrics.metric1.label'), context: t('metrics.metric1.context') },
+            { number: t('metrics.metric6.number'), label: t('metrics.metric6.label'), context: t('metrics.metric6.context') },
+            { number: t('metrics.metric5.number'), label: t('metrics.metric5.label'), context: t('metrics.metric5.context') },
             { number: t('metrics.metric2.number'), label: t('metrics.metric2.label'), context: t('metrics.metric2.context') },
+            { number: t('metrics.metric1.number'), label: t('metrics.metric1.label'), context: t('metrics.metric1.context') },
             { number: t('metrics.metric3.number'), label: t('metrics.metric3.label'), context: t('metrics.metric3.context') },
             { number: t('metrics.metric4.number'), label: t('metrics.metric4.label'), context: t('metrics.metric4.context') },
-            { number: t('metrics.metric5.number'), label: t('metrics.metric5.label'), context: t('metrics.metric5.context') },
-            { number: t('metrics.metric6.number'), label: t('metrics.metric6.label'), context: t('metrics.metric6.context') },
           ]}
           linkText={t('metrics.link')}
           linkHref="/work"

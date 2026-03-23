@@ -57,21 +57,21 @@ export function Navbar({ locale }: NavbarProps) {
 
             <Link
               href="/"
-              className="font-mono text-base font-bold uppercase tracking-[0.1em] text-text-primary"
+              className="font-mono text-[14px] font-bold uppercase tracking-[1.4px] text-text-primary"
             >
               SELFRULES
             </Link>
           </div>
 
           {/* Right: Desktop nav links + CTA + Language toggle (D-15, D-16) */}
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
               return (
                 <Link
                   key={link.key}
                   href={link.href}
-                  className={`text-sm transition-colors duration-150 ${
+                  className={`text-[14px] transition-colors duration-150 ${
                     link.isAccent
                       ? 'text-accent hover:text-accent-hover'
                       : isActive
@@ -83,6 +83,8 @@ export function Navbar({ locale }: NavbarProps) {
                 </Link>
               );
             })}
+            {/* Vertical separator */}
+            <div className="w-px h-4 bg-[#1a1a1f]" />
             <LanguageToggle locale={locale} variant="desktop" />
           </div>
         </nav>

@@ -10,8 +10,8 @@ export function Tag({ children, bordered = true, className }: TagProps) {
   return (
     <span
       className={cn(
-        'font-mono text-[13px] uppercase tracking-[0.05em] text-text-secondary inline-block',
-        bordered && 'px-3 py-1 bg-surface border border-default',
+        'font-mono text-[12px] uppercase tracking-[0.05em] text-[rgba(255,255,255,0.4)] inline-flex items-center h-[32px]',
+        bordered && 'px-3 bg-surface border border-[#1a1a1f]',
         className
       )}
     >

@@ -4,61 +4,59 @@ export async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'footer' });
 
   return (
-    <footer className="border-t border-border-default">
-      <div className="mx-auto max-w-[--width-wide] px-[--spacing-page-padding] py-8">
-        {/* Desktop: single row (D-09). Mobile: stacked (D-11). */}
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          {/* Left: bio tagline (14px, text-secondary) */}
-          <p className="text-sm text-text-secondary">
-            {t('bio')}
-          </p>
-
-          {/* Right: links (D-09, D-10) */}
-          <div className="flex flex-col gap-2">
-            {/* Email in JetBrains Mono with accent hover (D-10) */}
+    <footer>
+      <div className="mx-auto max-w-[--width-wide] px-[24px] flex flex-col gap-4 pb-8">
+        {/* Main row: links left, credit right */}
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          {/* Left: inline links separated by · */}
+          <div className="flex flex-wrap items-center gap-x-2 text-[14px] text-[rgba(255,255,255,0.5)]">
+            <span>PM / Builder</span>
+            <span>·</span>
             <a
-              href="mailto:mattia@selfrules.org"
-              className="font-mono text-base text-text-secondary transition-colors duration-150 hover:text-accent"
+              href="mailto:hello@selfrules.org"
+              className="hover:text-accent transition-colors duration-150"
             >
               {t('email')}
             </a>
-            {/* LinkedIn, GitHub, CV links (14px, text-secondary, accent hover) */}
-            <div className="flex items-center gap-3 text-sm">
-              <a
-                href="https://linkedin.com/in/mattiadeluca"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary transition-colors duration-150 hover:text-accent"
-              >
-                {t('linkedin')}
-              </a>
-              <span className="text-text-tertiary">|</span>
-              <a
-                href="https://github.com/mattiadeluca"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary transition-colors duration-150 hover:text-accent"
-              >
-                {t('github')}
-              </a>
-              <span className="text-text-tertiary">|</span>
-              <a
-                href="/cv.pdf"
-                className="text-text-secondary transition-colors duration-150 hover:text-accent"
-              >
-                {t('cv')}
-              </a>
-            </div>
+            <span>·</span>
+            <a
+              href="https://linkedin.com/in/selfrules"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors duration-150"
+            >
+              {t('linkedin')}
+            </a>
+            <span>·</span>
+            <a
+              href="https://github.com/selfrules"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors duration-150"
+            >
+              {t('github')}
+            </a>
+            <span>·</span>
+            <a
+              href="/mattia-de-luca-cv.pdf"
+              download
+              className="inline-flex items-center gap-1 hover:text-accent transition-colors duration-150"
+            >
+              CV
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
+            </a>
           </div>
+
+          {/* Right: credit */}
+          <p className="text-[12px] text-[rgba(255,255,255,0.3)]">
+            {t('credit')}
+          </p>
         </div>
 
-        {/* Credit line (14px, text-tertiary) per D-09 */}
-        <p className="mt-6 text-sm text-text-tertiary">
-          {t('credit')}
-        </p>
-
-        {/* Build version (JetBrains Mono, 11px, text-tertiary) per DESIGN-UPDATE-v25.md change 5 */}
-        <p className="mt-1 font-mono text-[11px] text-text-tertiary">
+        {/* Build version — right aligned */}
+        <p className="font-mono text-[11px] text-[#5a5a5e] md:text-right">
           {t('buildVersion', { buildMonth: '2026.03', commitCount: '47' })}
         </p>
       </div>

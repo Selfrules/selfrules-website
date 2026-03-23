@@ -1,10 +1,9 @@
 import { Section } from '@/components/layout/Section';
-import { SectionHeader } from '@/components/sections/SectionHeader';
 
 interface ContactProps {
   label: string;
   title: string;
-  text: string;
+  text?: string;
   email: string;
   linkedinLabel: string;
   linkedinHref: string;
@@ -16,7 +15,6 @@ interface ContactProps {
 export function Contact({
   label,
   title,
-  text,
   email,
   linkedinLabel,
   linkedinHref,
@@ -26,36 +24,53 @@ export function Contact({
 }: ContactProps) {
   return (
     <Section id="contact">
-      <SectionHeader label={label} title={title} />
-      <p className="text-base leading-[1.7] text-text-secondary mb-8">
-        {text}
-      </p>
+      {/* Custom header — Contact uses 36px title per Figma */}
+      <div className="mb-12">
+        <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-2">
+          {label}
+        </p>
+        <h2 className="font-heading text-[36px] font-bold leading-[40px] tracking-[-0.9px] text-text-primary">
+          {title}
+        </h2>
+      </div>
+
+      {/* Email */}
       <a
         href={`mailto:${email}`}
-        className="block font-mono text-[clamp(24px,3vw,36px)] text-text-primary hover:text-accent transition-colors duration-150"
+        className="block font-mono text-[clamp(24px,5vw,40px)] leading-[1.5] font-normal text-[rgba(255,255,255,0.8)] hover:text-accent transition-colors duration-150"
       >
         {email}
       </a>
-      <div className="mt-6 flex flex-row items-center gap-6">
+
+      {/* Links */}
+      <div className="mt-12 flex flex-row items-center gap-6">
         <a
           href={linkedinHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-base text-text-secondary hover:text-accent transition-colors duration-150"
+          className="inline-flex items-center gap-1 text-[14px] text-[rgba(255,255,255,0.6)] hover:text-accent transition-colors duration-150"
         >
-          {linkedinLabel} →
+          {linkedinLabel}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="-rotate-45">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
         <a
           href={cvHref}
           download
-          className="text-base text-text-secondary hover:text-accent transition-colors duration-150"
+          className="inline-flex items-center gap-1 text-[14px] text-[rgba(255,255,255,0.6)] hover:text-accent transition-colors duration-150"
         >
-          {cvLabel} →
+          {cvLabel}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+          </svg>
         </a>
       </div>
-      <div className="mt-8 inline-flex items-center gap-2 border border-default px-4 py-2">
-        <span className="w-2 h-2 bg-[#4ADE80]" aria-hidden="true" />
-        <span className="font-mono text-sm uppercase tracking-[0.05em] text-text-secondary">
+
+      {/* Availability badge */}
+      <div className="mt-12 inline-flex items-center gap-3 border border-[#1a1a1f] h-[32px] px-3">
+        <span className="w-2 h-2 bg-[#00bc7d]" aria-hidden="true" />
+        <span className="font-mono text-[12px] text-[rgba(255,255,255,0.5)]">
           {availability}
         </span>
       </div>

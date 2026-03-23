@@ -18,7 +18,7 @@
   },
   "footer": {
     "bio": "Senior Technical PM. I prototype in code, design the UX, and ship.",
-    "email": "mattia@selfrules.org",
+    "email": "hello@selfrules.org",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "cv": "Scarica il CV (PDF)",
@@ -55,15 +55,18 @@
       "intro": "Quando il design dice \"l'utente si blocca qui perch\u00e9 la gerarchia visiva \u00e8 sbagliata\", l'engineering dice \"servono 3 sprint di refactoring\", e il business dice \"ci costa \u20ac15K al mese in ticket di supporto\". Tre conversazioni separate. Il mio lavoro \u00e8 trasformarle in una decisione.",
       "pillar1": {
         "title": "Designer + Developer + PM. Nella stessa stanza.",
-        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a gestire prodotti e team cross-funzionali fino a 10+ persone. Quando design e engineering non si capiscono, il problema di solito non \u00e8 tecnico. \u00c8 che nessuno in stanza ha fatto entrambi i lavori. Le sessioni cross-funzionali settimanali hanno tagliato gli incidenti post-release del <b>25%</b>. Meno rework, meno meeting, decisioni che reggono."
+        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a gestire prodotti e team cross-funzionali fino a 10+ persone. Quando design e engineering non si capiscono, il problema di solito non \u00e8 tecnico. \u00c8 che nessuno in stanza ha fatto entrambi i lavori. Le sessioni cross-funzionali settimanali hanno tagliato gli incidenti post-release del <b>25%</b>. Meno rework, meno meeting, decisioni che reggono.",
+        "shortText": "4 anni design. 4 codice. 5+ prodotto. Quando design e engineering non si capiscono, il problema non \u00e8 tecnico. Sessioni cross-funzionali: incidenti post-release <b>-25%</b>."
       },
       "pillar2": {
         "title": "Il problema non \u00e8 mai quello del primo meeting",
-        "text": "Un esempio. Sistema di pagamento in crisi, 44 problemi aperti. La pressione \u00e8 \"agire su tutto, subito.\" Due settimane a parlare con il supporto, leggere i ticket, guardare i dati. Risultato: 12 critici, 4 con impatto finanziario immediato. Gli altri potevano aspettare. I 4 pi\u00f9 gravi risolti in 6 settimane, non 6 mesi. Prima di costruire qualcosa, verifica di star risolvendo il problema giusto."
+        "text": "Un esempio. Sistema di pagamento in crisi, 44 problemi aperti. La pressione \u00e8 \"agire su tutto, subito.\" Due settimane a parlare con il supporto, leggere i ticket, guardare i dati. Risultato: 12 critici, 4 con impatto finanziario immediato. Gli altri potevano aspettare. I 4 pi\u00f9 gravi risolti in 6 settimane, non 6 mesi. Prima di costruire qualcosa, verifica di star risolvendo il problema giusto.",
+        "shortText": "Sistema di pagamento in crisi, 44 problemi aperti. Due settimane di discovery: 12 critici, 4 con impatto finanziario. I 4 pi\u00f9 gravi risolti in 6 settimane, non 6 mesi."
       },
       "pillar3": {
         "title": "Prototipi, non slide",
-        "text": "Un prototipo in React che gli utenti possono toccare dice pi\u00f9 di qualsiasi documento di specifiche. React, TypeScript e Node.js per validare un'idea prima di chiedere mesi di sviluppo al team. La priorit\u00e0 viene dalla frustrazione dell'utente, non dalla complessit\u00e0 tecnica. E quando i dati dicono che una feature non serve, la risposta \u00e8 no. Anche se la chiede il 60% degli utenti."
+        "text": "Un prototipo in React che gli utenti possono toccare dice pi\u00f9 di qualsiasi documento di specifiche. React, TypeScript e Node.js per validare un'idea prima di chiedere mesi di sviluppo al team. La priorit\u00e0 viene dalla frustrazione dell'utente, non dalla complessit\u00e0 tecnica. E quando i dati dicono che una feature non serve, la risposta \u00e8 no. Anche se la chiede il 60% degli utenti.",
+        "shortText": "Un prototipo React che gli utenti possono toccare dice pi\u00f9 di qualsiasi spec. Priorit\u00e0 dalla frustrazione utente, non dalla complessit\u00e0 tecnica. Quando i dati dicono no, la risposta \u00e8 no."
       }
     },
     "timeline": {
@@ -72,22 +75,30 @@
       "block1": {
         "role": "Founder e Designer",
         "dates": "2012-2018",
-        "text": "Uno studio di web design fondato a 25 anni. 20+ clienti, tutto in una persona: vendita, design, sviluppo, consegna, supporto. Primo e-commerce: interfaccia da premio, zero vendite. La regola che ne \u00e8 uscita vale ancora."
+        "company": "Selfrules Studio",
+        "text": "Uno studio di web design fondato a 25 anni. 20+ clienti, tutto in una persona: vendita, design, sviluppo, consegna, supporto. Primo e-commerce: interfaccia da premio, zero vendite. La regola che ne \u00e8 uscita vale ancora.",
+        "shortText": "Studio di web design. 20+ clienti, tutto in una persona. Primo e-commerce: interfaccia da premio, zero vendite."
       },
       "block2": {
         "role": "Designer e Developer",
         "dates": "2016-2020",
-        "text": "Entrato come UX Designer, uscito scrivendo codice in produzione. Prodotti B2B e B2C per clienti come Prometeia, Casavo, CliensPi\u00f9. CliensPi\u00f9: un gestionale per studi legali usato 8+ ore al giorno, progettato e sviluppato dalla stessa persona. Dopo 4 anni a fare design e poi implementare lo stesso prodotto, la distinzione tra le due discipline ha smesso di avere senso."
+        "company": "FLOWING",
+        "text": "Entrato come UX Designer, uscito scrivendo codice in produzione. Prodotti B2B e B2C per clienti come Prometeia, Casavo, CliensPi\u00f9. CliensPi\u00f9: un gestionale per studi legali usato 8+ ore al giorno, progettato e sviluppato dalla stessa persona. Dopo 4 anni a fare design e poi implementare lo stesso prodotto, la distinzione tra le due discipline ha smesso di avere senso.",
+        "shortText": "UX Designer \u2192 codice in produzione. Prodotti B2B/B2C tra cui CliensPi\u00f9 \u2014 progettato e sviluppato dalla stessa persona."
       },
       "block3": {
         "role": "Product Owner",
         "dates": "2020-2023",
-        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori, partnership Meta, Google, LinkedIn, TikTok. Unico PM, completamente remoto dall'Europa. Il redesign del flusso core ha tagliato il tempo di configurazione del <b>35%</b> e sbloccato la crescita del revenue."
+        "company": "LeadsBridge / ActiveProspect",
+        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori, partnership Meta, Google, LinkedIn, TikTok. Unico PM, completamente remoto dall'Europa. Il redesign del flusso core ha tagliato il tempo di configurazione del <b>35%</b> e sbloccato la crescita del revenue.",
+        "shortText": "SaaS B2B, 380+ connettori. Unico PM, full remote. Redesign del flusso core: tempo di setup -35%."
       },
       "block4": {
         "role": "Product Manager",
         "dates": "2023-oggi",
-        "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Un sistema ereditato in stato critico. Oggi: <b>99%+</b> uptime, <b>-25%</b> incidenti post-release, <b>116 centri</b> integrati, team di 10+."
+        "company": "QubicaAMF",
+        "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Un sistema ereditato in stato critico. Oggi: <b>99%+</b> uptime, <b>-25%</b> incidenti post-release, <b>116 centri</b> integrati, team di 10+.",
+        "shortText": "Payments, piattaforma, cashless. 99%+ uptime, -25% incidenti, 116 centri, team di 10+."
       },
       "closingLine": "Oggi quando parlo con un designer, capisco i vincoli. Quando parlo con uno sviluppatore, capisco i trade-off. Quando parlo con il business, traduco."
     },
@@ -124,7 +135,7 @@
         "label": "Tempi di processing",
         "context": "Tempi di processing pagamenti \u2014 QubicaAMF. Ottimizzazione dell'intera pipeline di pagamento."
       },
-      "link": "Leggi i case study completi"
+      "link": "Guarda i case study"
     },
     "currentWork": {
       "label": "COSA FACCIO ORA",
@@ -149,7 +160,7 @@
       "label": "PARLIAMO",
       "title": "Parliamo",
       "text": "Se pensi che il mio profilo possa servire al tuo team, scrivimi. Anche se non sei sicuro che sia il fit giusto. Le conversazioni migliori che ho avuto sono iniziate con \"non so se \u00e8 una cosa per te, ma...\".",
-      "email": "mattia@selfrules.org",
+      "email": "hello@selfrules.org",
       "linkedinLabel": "LinkedIn",
       "cvLabel": "Scarica il mio CV (PDF)",
       "availability": "EU remote . US remote . Italia ibrido"

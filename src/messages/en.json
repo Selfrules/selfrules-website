@@ -18,7 +18,7 @@
   },
   "footer": {
     "bio": "Senior Technical PM. I prototype in code, design the UX, and ship.",
-    "email": "mattia@selfrules.org",
+    "email": "hello@selfrules.org",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "cv": "Download CV (PDF)",
@@ -55,15 +55,18 @@
       "intro": "When design says \"the user gets stuck here because the visual hierarchy is wrong,\" engineering says \"we need 3 sprints of refactoring,\" and business says \"it's costing us \u20ac15K a month in support tickets.\" Three separate conversations. My job is to turn them into one decision.",
       "pillar1": {
         "title": "Designer + Developer + PM. In the same room.",
-        "text": "4 years designing interfaces. 4 writing production code. 5+ managing products and cross-functional teams of up to 10+ people. When design and engineering don't understand each other, the problem usually isn't technical. It's that nobody in the room has done both jobs. Weekly cross-functional sessions cut post-release incidents by <b>25%</b>. Less rework, fewer meetings, decisions that stick."
+        "text": "4 years designing interfaces. 4 writing production code. 5+ managing products and cross-functional teams of up to 10+ people. When design and engineering don't understand each other, the problem usually isn't technical. It's that nobody in the room has done both jobs. Weekly cross-functional sessions cut post-release incidents by <b>25%</b>. Less rework, fewer meetings, decisions that stick.",
+        "shortText": "4 years design. 4 code. 5+ product. When design and engineering don't understand each other, the problem usually isn't technical. Cross-functional sessions cut post-release incidents by <b>25%</b>."
       },
       "pillar2": {
         "title": "The problem is never the one from the first meeting",
-        "text": "An example. Payment system in crisis, 44 open problems. The pressure is \"act on everything, now.\" Two weeks talking to support, reading tickets, looking at the data. Result: 12 critical, 4 with immediate financial impact. The rest could wait. The 4 most severe resolved in 6 weeks, not 6 months. Before building anything, verify you're solving the right problem."
+        "text": "An example. Payment system in crisis, 44 open problems. The pressure is \"act on everything, now.\" Two weeks talking to support, reading tickets, looking at the data. Result: 12 critical, 4 with immediate financial impact. The rest could wait. The 4 most severe resolved in 6 weeks, not 6 months. Before building anything, verify you're solving the right problem.",
+        "shortText": "Payment system in crisis, 44 open problems. Two weeks of discovery: 12 critical, 4 with financial impact. The 4 most severe resolved in 6 weeks, not 6 months."
       },
       "pillar3": {
         "title": "Prototypes, not slides",
-        "text": "A React prototype users can touch says more than any spec document. React, TypeScript, and Node.js to validate an idea before asking the team for months of development. Priority comes from user frustration, not technical complexity. And when the data says a feature isn't needed, the answer is no. Even when 60% of users are asking for it."
+        "text": "A React prototype users can touch says more than any spec document. React, TypeScript, and Node.js to validate an idea before asking the team for months of development. Priority comes from user frustration, not technical complexity. And when the data says a feature isn't needed, the answer is no. Even when 60% of users are asking for it.",
+        "shortText": "A React prototype users can touch says more than any spec. Priority from user frustration, not technical complexity. When data says no, the answer is no."
       }
     },
     "timeline": {
@@ -72,22 +75,30 @@
       "block1": {
         "role": "Founder & Designer",
         "dates": "2012-2018",
-        "text": "A web design studio launched at 25 in northern Italy. 20+ clients, everything in one person: sales, design, development, delivery, support. First e-commerce site: award-worthy interface, zero sales. The rule that came out of it still holds."
+        "company": "Selfrules Studio",
+        "text": "A web design studio launched at 25 in northern Italy. 20+ clients, everything in one person: sales, design, development, delivery, support. First e-commerce site: award-worthy interface, zero sales. The rule that came out of it still holds.",
+        "shortText": "Web design studio. 20+ clients, everything in one person. First e-commerce: award-worthy interface, zero sales."
       },
       "block2": {
         "role": "Designer & Developer",
         "dates": "2016-2020",
-        "text": "Joined as a UX Designer, left writing production code. B2B and B2C products for clients including Prometeia, Casavo, CliensPiu. CliensPiu: a legal practice management system used 8+ hours a day, designed and built by the same person. After 4 years of designing and then implementing the same product, the line between the two disciplines stopped making sense."
+        "company": "FLOWING",
+        "text": "Joined as a UX Designer, left writing production code. B2B and B2C products for clients including Prometeia, Casavo, CliensPiu. CliensPiu: a legal practice management system used 8+ hours a day, designed and built by the same person. After 4 years of designing and then implementing the same product, the line between the two disciplines stopped making sense.",
+        "shortText": "UX Designer → production code. B2B/B2C products including CliensPiù — designed and built by the same person."
       },
       "block3": {
         "role": "Product Owner",
         "dates": "2020-2023",
-        "text": "LeadsBridge: B2B SaaS platform with 380+ connectors, Meta, Google, LinkedIn, TikTok partnerships. Solo PM, fully remote from Europe. The core flow redesign cut setup time by <b>35%</b> and unlocked revenue growth."
+        "company": "LeadsBridge / ActiveProspect",
+        "text": "LeadsBridge: B2B SaaS platform with 380+ connectors, Meta, Google, LinkedIn, TikTok partnerships. Solo PM, fully remote from Europe. The core flow redesign cut setup time by <b>35%</b> and unlocked revenue growth.",
+        "shortText": "B2B SaaS, 380+ connectors. Solo PM, fully remote. Core flow redesign cut setup time by 35%."
       },
       "block4": {
         "role": "Product Manager",
         "dates": "2023-present",
-        "text": "Payment systems, platform integrations, and cashless solutions for centers across 5 countries. A system inherited in critical state. Today: <b>99%+</b> uptime, <b>-25%</b> post-release incidents, <b>116 centers</b> integrated, team of 10+."
+        "company": "QubicaAMF",
+        "text": "Payment systems, platform integrations, and cashless solutions for centers across 5 countries. A system inherited in critical state. Today: <b>99%+</b> uptime, <b>-25%</b> post-release incidents, <b>116 centers</b> integrated, team of 10+.",
+        "shortText": "Payments, platform, cashless. 99%+ uptime, -25% incidents, 116 centers, team of 10+."
       },
       "closingLine": "Today when I talk to a designer, I understand the constraints. When I talk to a developer, I understand the trade-offs. When I talk to business, I translate."
     },
@@ -124,7 +135,7 @@
         "label": "Processing times",
         "context": "Payment processing times \u2014 QubicaAMF. Full payment pipeline optimization."
       },
-      "link": "Read the full case studies"
+      "link": "See the case studies"
     },
     "currentWork": {
       "label": "WHAT I'M DOING NOW",
@@ -149,7 +160,7 @@
       "label": "LET'S TALK",
       "title": "Let's talk",
       "text": "If you think my profile could work for your team, write me. Even if you're not sure it's the right fit. The best conversations I've had started with \"I'm not sure this is your thing, but...\"",
-      "email": "mattia@selfrules.org",
+      "email": "hello@selfrules.org",
       "linkedinLabel": "LinkedIn",
       "cvLabel": "Download my CV (PDF)",
       "availability": "EU remote . US remote . Italy hybrid"

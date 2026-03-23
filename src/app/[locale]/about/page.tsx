@@ -130,7 +130,7 @@ export default async function AboutPage({
 
                   {/* Horizontal connector */}
                   <div
-                    className="absolute top-[10px] -left-[23px] md:-left-[31px] w-[16px] md:w-[20px] h-[1px] bg-[var(--border-default)]"
+                    className="absolute top-[10px] -left-[23px] md:-left-[31px] w-[16px] md:w-[20px] h-[1px] bg-[#1a1a1f]"
                     aria-hidden="true"
                   />
 
@@ -202,7 +202,7 @@ export default async function AboutPage({
       <PageCTA
         text={t('cta.text')}
         primaryCta={{ label: t('cta.primary'), href: locale === 'it' ? '/it/work' : '/work' }}
-        secondaryCta={{ label: t('cta.secondary'), href: 'mailto:mattia@selfrules.org' }}
+        secondaryCta={{ label: t('cta.secondary'), href: 'mailto:hello@selfrules.org' }}
       />
     </>
   );

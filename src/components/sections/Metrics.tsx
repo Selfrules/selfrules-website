@@ -31,9 +31,12 @@ export function Metrics({ label, title, metrics, linkText, linkHref }: MetricsPr
       <div className="mt-8">
         <a
           href={linkHref}
-          className="text-base text-text-secondary hover:text-accent transition-colors duration-150"
+          className="inline-flex items-center gap-2 text-[14px] font-medium text-text-primary hover:text-accent transition-colors duration-150"
         >
-          {linkText} →
+          {linkText}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
       </div>
     </Section>

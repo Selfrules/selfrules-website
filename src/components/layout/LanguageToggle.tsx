@@ -15,7 +15,7 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
     router.replace({ pathname }, { locale: newLocale });
   }
 
-  const sizeClass = variant === 'mobile' ? 'text-base' : 'text-sm';
+  const sizeClass = variant === 'mobile' ? 'text-base' : 'text-[16px] font-medium';
 
   return (
     <div className={`flex items-center gap-1 ${sizeClass}`} role="group" aria-label="Language">
@@ -23,8 +23,8 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
         onClick={() => switchLocale('it')}
         className={`transition-colors duration-150 ${
           locale === 'it'
-            ? 'text-text-primary'
-            : 'text-text-tertiary hover:text-text-secondary cursor-pointer'
+            ? 'text-[rgba(255,255,255,0.6)]'
+            : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
         }`}
         aria-label="Italiano"
         aria-current={locale === 'it' ? 'true' : undefined}
@@ -36,8 +36,8 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
         onClick={() => switchLocale('en')}
         className={`transition-colors duration-150 ${
           locale === 'en'
-            ? 'text-text-primary'
-            : 'text-text-tertiary hover:text-text-secondary cursor-pointer'
+            ? 'text-[rgba(255,255,255,0.6)]'
+            : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
         }`}
         aria-label="English"
         aria-current={locale === 'en' ? 'true' : undefined}
