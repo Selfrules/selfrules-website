@@ -101,7 +101,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-None yet.
+1. **Align codebase to Figma v25 — 17 gap fixes** (area: ui) — see `GAP-ANALYSIS-v25.md`
 
 ### Blockers/Concerns
 
