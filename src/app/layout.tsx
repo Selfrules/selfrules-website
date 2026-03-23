@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { inter, spaceGrotesk, jetbrainsMono } from '@/lib/fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -12,11 +11,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}>
-      <body className="font-sans bg-primary text-text-primary antialiased">
-        {children}
-      </body>
-    </html>
-  );
+  return children;
 }

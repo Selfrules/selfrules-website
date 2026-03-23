@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import Script from 'next/script';
+import { inter, spaceGrotesk, jetbrainsMono } from '@/lib/fonts';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 
@@ -40,30 +41,34 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: 'a11y' });
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      {/* Skip to content — sr-only, visible on keyboard focus (A11Y-01) */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-bg-primary focus:px-4 focus:py-2 focus:font-bold focus:text-sm"
-      >
-        {t('skipToContent')}
-      </a>
+    <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}>
+      <body className="font-sans bg-primary text-text-primary antialiased">
+        <NextIntlClientProvider messages={messages}>
+          {/* Skip to content -- sr-only, visible on keyboard focus (A11Y-01) */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-bg-primary focus:px-4 focus:py-2 focus:font-bold focus:text-sm"
+          >
+            {t('skipToContent')}
+          </a>
 
-      <Navbar locale={locale} />
+          <Navbar locale={locale} />
 
-      <main id="main-content" className="pt-16">
-        {children}
-      </main>
+          <main id="main-content" className="pt-16">
+            {children}
+          </main>
 
-      <Footer locale={locale} />
+          <Footer locale={locale} />
 
-      {process.env.NEXT_PUBLIC_UMAMI_ID && (
-        <Script
-          src="/api/umami/script.js"
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-          strategy="afterInteractive"
-        />
-      )}
-    </NextIntlClientProvider>
+          {process.env.NEXT_PUBLIC_UMAMI_ID && (
+            <Script
+              src="/api/umami/script.js"
+              data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+              strategy="afterInteractive"
+            />
+          )}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
