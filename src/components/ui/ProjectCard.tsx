@@ -35,8 +35,8 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        'border border-[#1a1a1f] p-10',
-        'transition-[border-color] duration-200 hover:border-accent/40',
+        'border border-[#1a1a1f] p-6 md:p-10',
+        'transition-all duration-200 hover:border-accent/40 hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]',
         className
       )}
     >

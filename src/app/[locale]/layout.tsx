@@ -10,6 +10,7 @@ import Script from 'next/script';
 import { inter, spaceGrotesk, jetbrainsMono } from '@/lib/fonts';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
+import { PageTransition } from '@/components/ui/PageTransition';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://selfrules.org'),
@@ -55,7 +56,9 @@ export default async function LocaleLayout({
           <Navbar locale={locale} />
 
           <main id="main-content" className="pt-16">
-            {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
           </main>
 
           <Footer locale={locale} />

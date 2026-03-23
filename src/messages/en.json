@@ -46,7 +46,7 @@
       "tag2": "B2B SaaS",
       "tag3": "Payments",
       "tag4": "5 countries",
-      "terminalPrompt": "mattia@selfrules ~ $",
+      "terminalPrompt": "hello@selfrules.org ~ $",
       "signaturePhrase": "The problem is never the one from the first meeting."
     },
     "howIWork": {
@@ -235,7 +235,7 @@
         "metric": "5 mo",
         "metricLabel": "ZERO TO LIVE DEMO \u2192",
         "preview": "The internal product looked like the obvious choice. Discovery told a different story. How the cashless strategy was defined by working from real constraints.",
-        "note": "[DRAFT \u2014 final metrics TBD when Amusement Connect is in production]"
+        "note": "Full metrics available upon production launch \u2014 pilot data currently being collected"
       }
     },
     "cta": {
@@ -319,6 +319,16 @@
         "title": "Why I prototype in code",
         "date": "2026-03-22",
         "excerpt": "A Product Manager who prototypes in code makes different decisions."
+      },
+      "the-meeting-where-everyone-says-yes": {
+        "title": "The meeting where everyone says yes",
+        "date": "2026-03-15",
+        "excerpt": "Alignment is not the same as agreement. One builds products, the other builds backlogs."
+      },
+      "why-metrics-lie-without-context": {
+        "title": "Why metrics lie without context",
+        "date": "2026-03-08",
+        "excerpt": "A number without a story is just a number. The story is what makes it a decision."
       }
     }
   },

@@ -40,7 +40,7 @@ export function Navbar({ locale }: NavbarProps) {
             : 'bg-transparent'
         }`}
       >
-        <nav className="mx-auto flex h-16 max-w-[var(--width-wide)] items-center justify-between px-[var(--spacing-page-padding)]">
+        <nav className={`mx-auto flex max-w-[var(--width-wide)] items-center justify-between px-[var(--spacing-page-padding)] transition-[height] duration-200 ${scrolled ? 'h-14' : 'h-16'}`}>
           {/* Left: Hamburger (mobile only, D-04) + SELFRULES wordmark (D-15) */}
           <div className="flex items-center gap-4">
             <button
@@ -71,7 +71,7 @@ export function Navbar({ locale }: NavbarProps) {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className={`text-[14px] transition-colors duration-150 ${
+                  className={`text-[14px] transition-colors duration-150 hover:underline underline-offset-4 decoration-1 ${
                     link.isAccent
                       ? 'text-accent hover:text-accent-hover'
                       : isActive

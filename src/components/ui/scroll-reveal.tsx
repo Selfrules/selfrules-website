@@ -2,7 +2,12 @@
 
 import { useEffect, useRef, type ReactNode } from 'react';
 
-export function ScrollReveal({ children }: { children: ReactNode }) {
+interface ScrollRevealProps {
+  children: ReactNode;
+  delay?: number;
+}
+
+export function ScrollReveal({ children, delay = 0 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -26,8 +31,15 @@ export function ScrollReveal({ children }: { children: ReactNode }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove('animate-fade-up-initial');
-          el.classList.add('animate-fade-up');
+          if (delay > 0) {
+            setTimeout(() => {
+              el.classList.remove('animate-fade-up-initial');
+              el.classList.add('animate-fade-up');
+            }, delay);
+          } else {
+            el.classList.remove('animate-fade-up-initial');
+            el.classList.add('animate-fade-up');
+          }
           observer.unobserve(el);
         }
       },
@@ -36,7 +48,7 @@ export function ScrollReveal({ children }: { children: ReactNode }) {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [delay]);
 
   return (
     <div ref={ref} className="animate-fade-up-initial">

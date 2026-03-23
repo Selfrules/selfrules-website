@@ -18,20 +18,20 @@ export function MetricCard({ number, label, context, className }: MetricCardProp
   return (
     <div
       className={cn(
-        'bg-[#0a0a0b] px-8 py-10',
-        'outline outline-0 hover:outline-1 hover:outline-accent/40 hover:-outline-offset-1',
+        'group bg-[#0a0a0b] px-8 py-10',
+        'outline outline-0 hover:outline-1 hover:outline-accent/40 hover:-outline-offset-1 hover:shadow-[0_4px_16px_rgba(0,0,0,0.2)]',
         'transition-all duration-200',
         className
       )}
     >
       <div className="relative">
         {/* Shadow number behind */}
-        <span className="font-heading font-bold text-[#1a1a1f] text-[80px] leading-[120px] tracking-[-4px] absolute top-0 left-0 select-none" aria-hidden="true">
+        <span className="font-heading font-bold text-[#1a1a1f] text-[48px] sm:text-[64px] lg:text-[80px] leading-[72px] sm:leading-[96px] lg:leading-[120px] tracking-[-4px] absolute top-0 left-0 select-none" aria-hidden="true">
           {parseShadow(number)}
         </span>
         <CountUpNumber
           value={number}
-          className="font-heading font-bold text-accent text-[80px] leading-[120px] tracking-[-4px] block relative"
+          className="font-heading font-bold text-accent text-[48px] sm:text-[64px] lg:text-[80px] leading-[72px] sm:leading-[96px] lg:leading-[120px] tracking-[-4px] block relative transition-[filter] duration-200 group-hover:drop-shadow-[0_0_8px_rgba(232,168,56,0.4)]"
         />
       </div>
       <p className="font-mono text-[14px] uppercase tracking-[1.4px] text-[rgba(255,255,255,0.6)] mt-4">{label}</p>

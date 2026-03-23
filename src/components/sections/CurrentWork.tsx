@@ -20,7 +20,7 @@ export function CurrentWork({ label, title, cards }: CurrentWorkProps) {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="border border-[#1a1a1f] pt-[25px] px-[25px] pb-6 transition-all duration-150 hover:border-accent hover:-translate-y-0.5"
+            className="border border-[#1a1a1f] pt-[25px] px-[25px] pb-6 transition-all duration-150 hover:border-accent hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
           >
             {/* Title + badge on same row */}
             <div className="flex items-start justify-between gap-4">

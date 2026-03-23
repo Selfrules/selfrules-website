@@ -9,7 +9,7 @@ export function TerminalPrompt({ className }: TerminalPromptProps) {
   return (
     <div className={cn('flex items-center gap-2', className)}>
       <span className="font-mono text-[13px] text-text-tertiary">
-        mattia@selfrules ~ $
+        hello@selfrules.org ~ $
       </span>
       <BlinkingCursor type="block" />
     </div>

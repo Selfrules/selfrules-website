@@ -1,0 +1,48 @@
+export const metadata = {
+  title: 'Why metrics lie without context',
+  date: '2026-03-08',
+  excerpt: 'A number without a story is just a number. The story is what makes it a decision.',
+  locale: 'en',
+}
+
+Early in my PM career, I walked into a quarterly review with a slide that said "DAU up 23%." The room was happy. The VP nodded. We moved on.
+
+Three weeks later, we discovered the increase came from a bug in the session tracking that was double-counting users who switched between tabs. Real DAU was flat. We'd spent the quarter optimizing for a metric that was lying to us.
+
+---
+
+**Every metric needs three things: the number, the mechanism, and the counter-metric.**
+
+The number is what happened. DAU is 23% up. Revenue grew 15%. Support tickets dropped 40%.
+
+The mechanism is *why* it happened. DAU grew because we launched push notifications. Revenue grew because we raised prices. Support tickets dropped because we removed a feature.
+
+The counter-metric is what you're paying for it. Push notifications increased DAU but also tripled opt-out rates. Price increase grew revenue but churn went from 3% to 7%. Removing the feature cut tickets but NPS dropped 12 points.
+
+Without all three, you're making decisions with one eye closed.
+
+---
+
+**The dashboard trap.**
+
+I've worked with teams that had 30+ metrics on their main dashboard. They checked it every morning. They could tell you the exact number for any KPI at any time.
+
+But when I asked "which of these metrics would change your next decision?", the answer was usually two or three. The rest were vanity metrics — numbers that went up, which made people feel good, but didn't inform any actual choice.
+
+The best dashboard I ever built had four numbers on it. One for acquisition, one for activation, one for retention, one for revenue. Each one had a target, a trend line, and a one-sentence explanation of why it was moving. That's it.
+
+---
+
+**What I do now.**
+
+When someone presents a metric, I ask three questions:
+
+1. **"What's the mechanism?"** — If they can't explain why the number moved, the number is noise.
+2. **"What's the counter-metric?"** — If there's no trade-off, either we got lucky or we're not looking hard enough.
+3. **"What would you do differently if this number were 10x worse?"** — If the answer is "nothing," then we're tracking the wrong thing.
+
+These questions aren't popular in meetings. Nobody wants to hear "your 23% growth might be a bug." But the alternative is building strategy on sand.
+
+---
+
+The goal isn't to have more metrics. It's to have fewer metrics that you actually understand. A single number you trust is worth more than a dashboard full of numbers you don't.

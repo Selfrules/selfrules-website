@@ -36,6 +36,18 @@ export default async function NotesPage({
       date: t('posts.why-i-prototype-in-code.date'),
       excerpt: t('posts.why-i-prototype-in-code.excerpt'),
     },
+    {
+      slug: 'the-meeting-where-everyone-says-yes',
+      title: t('posts.the-meeting-where-everyone-says-yes.title'),
+      date: t('posts.the-meeting-where-everyone-says-yes.date'),
+      excerpt: t('posts.the-meeting-where-everyone-says-yes.excerpt'),
+    },
+    {
+      slug: 'why-metrics-lie-without-context',
+      title: t('posts.why-metrics-lie-without-context.title'),
+      date: t('posts.why-metrics-lie-without-context.date'),
+      excerpt: t('posts.why-metrics-lie-without-context.excerpt'),
+    },
   ];
 
   // Group posts by year
@@ -74,7 +86,7 @@ export default async function NotesPage({
       }} />
       {/* Headline + Subtitle */}
       <Section>
-        <h1 className="font-heading font-bold text-[48px] leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
+        <h1 className="font-heading font-bold text-[32px] md:text-[48px] leading-[36px] md:leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
           {t('headline')}
         </h1>
         <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">

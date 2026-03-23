@@ -20,9 +20,9 @@ export function CaseStudyCard({
   return (
     <div
       className={cn(
-        'border border-[#1a1a1f] px-[49px] py-[49px]',
+        'border border-[#1a1a1f] px-6 py-8 md:px-[49px] md:py-[49px]',
         'flex flex-col md:flex-row md:items-center gap-6',
-        'transition-all duration-200 hover:border-accent/40 hover:-translate-y-[2px]',
+        'transition-all duration-200 hover:border-accent/40 hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]',
         className
       )}
     >
@@ -33,7 +33,7 @@ export function CaseStudyCard({
       </div>
 
       <div className="shrink-0 md:text-right">
-        <p className="font-heading font-bold text-[#e8a838] text-[72px] leading-[72px] tracking-[-3.6px]">
+        <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[48px] md:leading-[72px] tracking-[-3.6px]">
           {metric}
         </p>
         {metricLabel && (

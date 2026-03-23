@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 const baseUrl = 'https://selfrules.org';
 
-const pages = ['', '/about', '/work', '/lab', '/approach', '/notes', '/notes/why-i-prototype-in-code'];
+const pages = ['', '/about', '/work', '/lab', '/approach', '/notes', '/notes/why-i-prototype-in-code', '/notes/the-meeting-where-everyone-says-yes', '/notes/why-metrics-lie-without-context'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return pages.flatMap((path) => [

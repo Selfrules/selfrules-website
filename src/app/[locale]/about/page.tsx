@@ -96,7 +96,7 @@ export default async function AboutPage({
       }} />
       {/* Headline */}
       <Section>
-        <h1 className="font-heading font-bold text-[48px] leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
+        <h1 className="font-heading font-bold text-[32px] md:text-[48px] leading-[36px] md:leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0]">
           {t('headline')}
         </h1>
         <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
@@ -139,7 +139,7 @@ export default async function AboutPage({
                     <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-accent mt-1">
                       {entry.dates}
                     </p>
-                    <h2 className="font-heading font-medium text-[26px] leading-[1.3] tracking-[-0.65px] text-[#f5f5f0] mt-2">
+                    <h2 className="font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#f5f5f0] mt-2">
                       {entry.company}
                     </h2>
                     <div className="mt-4 font-light text-[17px] leading-[29.75px] text-[rgba(255,255,255,0.5)] whitespace-pre-line">
@@ -165,8 +165,8 @@ export default async function AboutPage({
 
       {/* What I believe — 3 principles */}
       <ScrollReveal>
-      <Section className="!pt-0">
-        <div className="mt-16">
+      <Section>
+        <div>
           <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
             {t('beliefsLabel')}
           </p>

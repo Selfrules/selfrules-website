@@ -16,7 +16,7 @@ export function HowIWork({ label, title, pillars }: HowIWorkProps) {
   return (
     <Section wide>
       <SectionHeader label={label} title={title} />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-8 lg:gap-x-12 lg:gap-y-12">
         {pillars.map((pillar, index) => (
           <div key={index}>
             <h3 className="font-heading font-medium text-[20px] leading-[28px] text-text-primary mb-4">

@@ -24,7 +24,7 @@ export function Hero({
   return (
     <section
       aria-label="Hero"
-      className="flex flex-col justify-start pt-[96px] pb-[64px] px-[var(--spacing-page-padding)]"
+      className="flex flex-col justify-start pt-[80px] md:pt-[96px] pb-[var(--spacing-section)] px-[var(--spacing-page-padding)]"
     >
       <div className="mx-auto w-full max-w-[var(--width-wide)]">
         <div className="max-w-[720px]">
@@ -42,12 +42,12 @@ export function Hero({
         </h1>
 
         {/* Subtitle */}
-        <p className="font-light text-[24px] leading-[36px] text-[rgba(255,255,255,0.6)] max-w-[715px] mt-8">
+        <p className="font-light text-[18px] md:text-[24px] leading-[28px] md:leading-[36px] text-[rgba(255,255,255,0.6)] max-w-[715px] mt-8">
           {subtitle}
         </p>
 
         {/* CTA buttons */}
-        <div className="flex gap-4 mt-14">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-14">
           <Button variant="primary" href="#contact">
             {primaryCta}
           </Button>

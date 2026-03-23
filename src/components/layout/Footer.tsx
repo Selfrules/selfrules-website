@@ -5,7 +5,7 @@ export async function Footer({ locale }: { locale: string }) {
 
   return (
     <footer className="mt-32">
-      <div className="mx-auto max-w-[var(--width-wide)] px-[24px] flex flex-col gap-4 pb-8">
+      <div className="mx-auto max-w-[var(--width-wide)] px-[var(--spacing-page-padding)] flex flex-col gap-4 pb-8">
         {/* Main row: links left, credit right */}
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* Left: inline links separated by · */}

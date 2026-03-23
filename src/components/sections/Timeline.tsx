@@ -23,7 +23,7 @@ export function Timeline({ label, title, blocks, closingLine }: TimelineProps) {
       <div className="hidden lg:block">
         <div className="relative">
           {/* Horizontal connector line — behind cards, visible only in gaps */}
-          <div className="absolute top-[92px] left-0 right-0 h-px bg-[#1a1a1f]" />
+          <div className="absolute top-[92px] left-0 right-0 h-px bg-[#1a1a1f] origin-left animate-[scale-x_800ms_ease-out_forwards]" style={{ transform: 'scaleX(0)' }} />
           <div className="grid grid-cols-4 gap-6">
             {blocks.map((block, index) => (
               <div

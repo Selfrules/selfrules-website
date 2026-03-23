@@ -17,7 +17,7 @@
     "switchLanguage": "Cambia lingua"
   },
   "footer": {
-    "bio": "Senior Technical PM. I prototype in code, design the UX, and ship.",
+    "bio": "Senior Technical PM. Prototipo in codice, disegno la UX, e shippo.",
     "email": "hello@selfrules.org",
     "linkedin": "LinkedIn",
     "github": "GitHub",
@@ -46,7 +46,7 @@
       "tag2": "B2B SaaS",
       "tag3": "Payments",
       "tag4": "5 paesi",
-      "terminalPrompt": "mattia@selfrules ~ $",
+      "terminalPrompt": "hello@selfrules.org ~ $",
       "signaturePhrase": "Il problema non e' mai quello del primo meeting."
     },
     "howIWork": {
@@ -235,7 +235,7 @@
         "metric": "5 mesi",
         "metricLabel": "DA ZERO A DEMO LIVE \u2192",
         "preview": "Il prodotto interno sembrava la scelta ovvia. La discovery ha raccontato un'altra storia. Come la strategia cashless \u00e8 stata definita partendo dai vincoli reali.",
-        "note": "[BOZZA \u2014 metriche finali TBD quando Amusement Connect \u00e8 in produzione]"
+        "note": "Metriche finali disponibili al lancio in produzione \u2014 dati pilota in corso di raccolta"
       }
     },
     "cta": {
@@ -319,6 +319,16 @@
         "title": "Perch\u00e9 prototipo in codice",
         "date": "2026-03-22",
         "excerpt": "Un Product Manager che prototipa in codice prende decisioni diverse."
+      },
+      "the-meeting-where-everyone-says-yes": {
+        "title": "Il meeting dove tutti dicono s\u00ec",
+        "date": "2026-03-15",
+        "excerpt": "Allineamento non \u00e8 la stessa cosa di accordo. Uno costruisce prodotti, l\u2019altro costruisce backlog."
+      },
+      "why-metrics-lie-without-context": {
+        "title": "Perch\u00e9 le metriche mentono senza contesto",
+        "date": "2026-03-08",
+        "excerpt": "Un numero senza una storia \u00e8 solo un numero. La storia \u00e8 ci\u00f2 che lo rende una decisione."
       }
     }
   },

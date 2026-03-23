@@ -1,0 +1,48 @@
+export const metadata = {
+  title: 'Perch\u00e9 le metriche mentono senza contesto',
+  date: '2026-03-08',
+  excerpt: 'Un numero senza una storia \u00e8 solo un numero. La storia \u00e8 ci\u00f2 che lo rende una decisione.',
+  locale: 'it',
+}
+
+All'inizio della mia carriera da PM, sono entrato in una quarterly review con una slide che diceva "DAU su del 23%." La stanza era contenta. Il VP annuiva. Siamo andati avanti.
+
+Tre settimane dopo, abbiamo scoperto che l'aumento veniva da un bug nel tracking delle sessioni che contava doppio gli utenti che switchavano tra tab. I DAU reali erano piatti. Avevamo passato il quarter a ottimizzare per una metrica che ci mentiva.
+
+---
+
+**Ogni metrica ha bisogno di tre cose: il numero, il meccanismo, e la contro-metrica.**
+
+Il numero \u00e8 cosa \u00e8 successo. I DAU sono su del 23%. Il revenue \u00e8 cresciuto del 15%. I ticket di supporto sono calati del 40%.
+
+Il meccanismo \u00e8 *perch\u00e9* \u00e8 successo. I DAU sono cresciuti perch\u00e9 abbiamo lanciato le push notification. Il revenue \u00e8 cresciuto perch\u00e9 abbiamo alzato i prezzi. I ticket sono calati perch\u00e9 abbiamo rimosso una feature.
+
+La contro-metrica \u00e8 cosa stai pagando per ottenerlo. Le push notification hanno aumentato i DAU ma hanno anche triplicato il tasso di opt-out. L'aumento di prezzo ha fatto crescere il revenue ma il churn \u00e8 passato dal 3% al 7%. Rimuovere la feature ha tagliato i ticket ma l'NPS \u00e8 sceso di 12 punti.
+
+Senza tutte e tre, stai prendendo decisioni con un occhio chiuso.
+
+---
+
+**La trappola della dashboard.**
+
+Ho lavorato con team che avevano 30+ metriche sulla dashboard principale. La controllavano ogni mattina. Potevano dirti il numero esatto di qualsiasi KPI in qualsiasi momento.
+
+Ma quando chiedevo "quale di queste metriche cambierebbe la vostra prossima decisione?", la risposta di solito era due o tre. Il resto erano vanity metric \u2014 numeri che salivano, che facevano sentire bene, ma non informavano nessuna scelta concreta.
+
+La migliore dashboard che abbia mai costruito aveva quattro numeri. Uno per acquisition, uno per activation, uno per retention, uno per revenue. Ognuno aveva un target, una linea di trend, e una spiegazione in una frase del perch\u00e9 si stava muovendo. Fine.
+
+---
+
+**Cosa faccio adesso.**
+
+Quando qualcuno presenta una metrica, faccio tre domande:
+
+1. **"Qual \u00e8 il meccanismo?"** \u2014 Se non sanno spiegare perch\u00e9 il numero si \u00e8 mosso, il numero \u00e8 rumore.
+2. **"Qual \u00e8 la contro-metrica?"** \u2014 Se non c'\u00e8 un trade-off, o siamo stati fortunati o non stiamo cercando abbastanza.
+3. **"Cosa faresti diversamente se questo numero fosse 10 volte peggiore?"** \u2014 Se la risposta \u00e8 "niente," allora stiamo tracciando la cosa sbagliata.
+
+Queste domande non sono popolari nei meeting. Nessuno vuole sentirsi dire "la vostra crescita del 23% potrebbe essere un bug." Ma l'alternativa \u00e8 costruire strategia sulla sabbia.
+
+---
+
+L'obiettivo non \u00e8 avere pi\u00f9 metriche. \u00c8 avere meno metriche che capisci davvero. Un singolo numero di cui ti fidi vale pi\u00f9 di una dashboard piena di numeri di cui non ti fidi.
