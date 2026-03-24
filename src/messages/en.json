@@ -22,7 +22,7 @@
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "cv": "Download CV (PDF)",
-    "buildVersion": "v1.0.0 · build {buildMonth} · Next.js 16 · {commitCount} commits"
+    "buildVersion": "v1.0.0 · build {buildMonth} · Next.js 16"
   },
   "notFound": {
     "headline": "This page doesn't exist. But the rest of the site does.",
@@ -38,9 +38,9 @@
   "homepage": {
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, code, and product management in the same head.",
-      "subtitle": "B2B SaaS · Payments · Platform. 10+ years designing interfaces, writing production code, and managing products. The advantage: when design, engineering, and business don't understand each other, no translator needed.",
-      "primaryCta": "Get in touch",
-      "secondaryCta": "See the work",
+      "subtitle": "Payment systems from crisis to 99% uptime. Integration funnels redesigned, -35% setup time. B2B SaaS products, built and shipped.",
+      "primaryCta": "Let's talk about your product",
+      "secondaryCta": "Read the case studies",
       "tag1": "10+ years",
       "tag2": "B2B SaaS",
       "tag3": "Payments",
@@ -49,8 +49,8 @@
       "signaturePhrase": "The problem is never the one from the first meeting."
     },
     "howIWork": {
-      "label": "HOW I WORK",
-      "title": "How I work",
+      "label": "THREE LANGUAGES, ONE PRODUCT",
+      "title": "Three languages, one product",
       "intro": "When design says \"the user gets stuck here because the visual hierarchy is wrong,\" engineering says \"we need 3 sprints of refactoring,\" and business says \"it's costing us €15K a month in support tickets.\" Three separate conversations. My job is to turn them into one decision.",
       "pillar1": {
         "title": "Designer + Developer + PM.\nIn the same room.",
@@ -107,32 +107,32 @@
       "metric1": {
         "number": "99%+",
         "label": "Uptime",
-        "context": "Payment uptime and success rate — QubicaAMF. From daily crises to enterprise stability."
+        "context": "100% uptime against 99% SLA target"
       },
       "metric2": {
         "number": "-25%",
         "label": "Post-release incidents",
-        "context": "Post-release incidents — QubicaAMF. Weekly cross-functional sessions with Product, Support, and Engineering."
+        "context": "Post-release, through cross-functional triage process"
       },
       "metric3": {
         "number": "116",
         "label": "Centers integrated",
-        "context": "Centers integrated on the platform — QubicaAMF. 5 new per week."
+        "context": "Integrated on enterprise platform, 5 new per week"
       },
       "metric4": {
         "number": "-35%",
         "label": "Setup time",
-        "context": "Setup time — LeadsBridge. Core product flow redesign."
+        "context": "Across all payment flows in 5-country B2B platform"
       },
       "metric5": {
-        "number": "+9%",
-        "label": "Integration adoption",
-        "context": "Integration adoption — QubicaAMF. 47-page PDFs replaced with 3-minute videos."
+        "number": "+25%",
+        "label": "YoY growth",
+        "context": "Only payment provider still growing in the portfolio"
       },
       "metric6": {
-        "number": "-12%",
-        "label": "Processing times",
-        "context": "Payment processing times — QubicaAMF. Full payment pipeline optimization."
+        "number": "23/44",
+        "label": "Items shipped",
+        "context": "Shipped. Critical payments reduced from 12 to 5"
       },
       "link": "See the case studies"
     },
@@ -140,19 +140,19 @@
       "label": "WHAT I'M DOING NOW",
       "title": "What I'm doing now",
       "card1": {
-        "title": "Payments and platform at international scale",
-        "text": "Payment systems, platform integrations, and cashless solutions for centers across 5 countries. Next step: bringing AI into the operational flow to reduce manual reconciliation and support workload.",
+        "title": "Leading payments and platform product for a 600-employee international company",
+        "text": "Stabilized a payment system to 99%+ uptime, now scaling cashless integration across 5 countries.",
         "statusLabel": "ACTIVE"
       },
       "card2": {
-        "title": "A personal problem turned product",
-        "text": "Finding an apartment across 8 listing sites by hand wasn't working. Automated scraping, smart scoring, 880+ listings analyzed. The tool is still running.",
-        "statusLabel": "SHIPPED"
+        "title": "Building CasaHunter",
+        "text": "An AI-powered apartment hunting tool. Three-pass scoring: 80% deterministic filtering, 20% AI budget on what matters. 880+ listings analyzed, zero manual search.",
+        "statusLabel": "ACTIVE"
       },
       "card3": {
-        "title": "Personal finance without spreadsheets",
-        "text": "Automatic transaction analysis, pattern recognition, weekly insights. Designing an interface that doesn't ask you to fill out rows and columns.",
-        "statusLabel": "EXPERIMENT"
+        "title": "Exploring what's next",
+        "text": "Open to PM and Technical PM roles where design, code, and product thinking converge.",
+        "statusLabel": "OPEN"
       }
     },
     "contact": {
@@ -219,7 +219,7 @@
   },
   "work": {
     "headline": "How I work,\ndemonstrated.",
-    "intro": "Two product stories. The context, the challenge, the approach, the numbers. Not what someone says they can do. What happened.",
+    "intro": "Three product stories. The context, the challenge, the approach, the numbers. Not what someone says they can do. What happened.",
     "cases": {
       "payments": {
         "tag": "Payments · B2B SaaS · Enterprise",
@@ -235,6 +235,13 @@
         "metricLabel": "ZERO TO LIVE DEMO →",
         "preview": "The internal product looked like the obvious choice. Discovery told a different story. How the cashless strategy was defined by working from real constraints.",
         "note": "Full metrics available upon production launch — pilot data currently being collected"
+      },
+      "leadsbridge": {
+        "tag": "B2B SaaS · Integration Platform · Growth",
+        "title": "380+ integrations, and most users\nnever finished setting one up",
+        "metric": "-35%",
+        "metricLabel": "SETUP TIME →",
+        "preview": "A five-step bridge creation flow with massive drop-off. The fix wasn't adding features — it was removing them. Auto-mapping, hidden complexity, and a simpler path to activation."
       }
     },
     "cta": {
@@ -317,6 +324,76 @@
           "The instinct in a crisis is to fix and grow at the same time. It doesn't work. The first real product decision is to stop making the hole deeper. Everything else follows from that.",
           "The second thing: 44 items, 12 critical, 4 urgent. Most of what felt urgent could actually wait. Knowing which ones can't is the actual skill. A single clear sorting criterion gave the team more clarity than any amount of discussion.",
           "The third: when a problem gets labeled “unsolvable” or “waiting on the partner,” it's worth checking whether someone has actually read the API documentation. The source attribution fix was already there. It just needed someone willing to look."
+        ]
+      }
+    },
+    "leadsbridge": {
+      "tag": "B2B SaaS · Integration Platform · Growth",
+      "role": "Product Owner",
+      "company": "B2B SaaS platform · Lead generation · 380+ integrations",
+      "period": "2020–2023",
+      "heroMetric": "-35%",
+      "heroMetricLabel": "setup time",
+      "secondMetric": "+9%",
+      "secondMetricLabel": "integration adoption",
+      "context": {
+        "heading": "The context",
+        "content": [
+          "A B2B SaaS platform connecting advertising channels to CRMs and marketing tools. Every time a lead came in from Facebook, Google, or TikTok Ads, LeadsBridge moved it to the right destination automatically — no code, no manual exports, no lost leads.",
+          "The product had **380+ integrations** and a growing customer base of marketers and agencies who depended on it daily. The core experience was the \"bridge\": a five-step flow where users selected their source and destination, authenticated both platforms, mapped the data fields, configured advanced options, and activated.",
+          "The problem wasn't that bridges didn't work. The problem was that too many users never finished building one."
+        ]
+      },
+      "challenge": {
+        "heading": "The challenge",
+        "content": [
+          "The bridge creation funnel had a significant drop-off. Users entered the flow — they had intent, they had a use case — but a disproportionate number abandoned before activation. The two steepest drops were in **integration configuration** (connecting and authenticating platforms) and **field mapping** (matching source fields to destination fields).",
+          "Configuration required users to navigate OAuth flows, API keys, and platform-specific authentication patterns — each integration slightly different, each with its own failure modes. Users who made it past authentication then faced field mapping: a flexible but overwhelming screen where every source field could be manually paired with any destination field. Power users loved it. Everyone else stared at it.",
+          "The product had grown feature by feature, adding options at every step to satisfy the loudest requests. The result was a flow that technically could do anything — and practically intimidated most users before they reached the end."
+        ]
+      },
+      "approach": {
+        "heading": "The approach",
+        "content": [
+          "**The first step was understanding where people actually got stuck.** Not where we assumed they got stuck. I mapped the full funnel with completion rates at every step, cross-referenced with support tickets and session patterns. The data confirmed what the numbers suggested: configuration and mapping were the walls. But it also revealed something less obvious — users who completed their first bridge went on to create an average of three more. The activation barrier was the only barrier.",
+          "**Then came the counterintuitive decision: remove features.** The advanced options panel — conditional logic, custom transformations, multi-step field processing — was visible to every user on every bridge. It added cognitive load to a flow that most users needed to be simple. The proposal was to hide it entirely from the default experience and surface it only for users who explicitly needed it.",
+          "The resistance was immediate. The advanced options were a selling point in demos. Sales used them to differentiate from competitors. Support had built documentation around them. Removing them from the default view felt like removing a feature. The argument that won: **we're not removing capability, we're removing friction.** The options still exist. They just stop punishing users who don't need them.",
+          "**Field mapping got the same treatment.** Instead of presenting an empty canvas where users manually connected fields one by one, the redesigned flow proposed automatic mappings based on field names, types, and common patterns across the integration catalogue. Users could review and adjust — but the starting point was a working configuration, not a blank screen.",
+          "**This wasn't just a UI change. It required rethinking the data layer.** The auto-mapping engine needed to understand field semantics across hundreds of integrations with different naming conventions. I worked with engineering to build a matching algorithm that used field metadata, historical mapping patterns from successful bridges, and type compatibility. The technical work made the simple UI possible.",
+          "**The rollout was gradual.** We didn't flip a switch for everyone. The new flow went to new users first, while existing power users kept the original experience. We measured completion rates, time-to-first-bridge, and — critically — whether the simplified flow produced bridges that actually worked in production. They did."
+        ]
+      },
+      "results": {
+        "heading": "The results",
+        "items": [
+          {
+            "metric": "-35%",
+            "label": "setup time across all bridge types"
+          },
+          {
+            "metric": "+9%",
+            "label": "integration adoption — more bridges completed, more usage of complex integrations"
+          },
+          {
+            "metric": "Higher",
+            "label": "first bridge completion rate for new users"
+          },
+          {
+            "metric": "Zero",
+            "label": "increase in failed bridges post-simplification"
+          },
+          {
+            "metric": "Fully accessible",
+            "label": "advanced features remained accessible via explicit toggle"
+          }
+        ]
+      },
+      "learned": {
+        "heading": "What I learned",
+        "content": [
+          "The hardest product decisions look like you're taking something away. Removing visible options from a flow feels like regression — especially when those options exist because customers asked for them. But there's a difference between what users ask for and what users need to succeed. The data was unambiguous: most users needed a simpler path, and the minority who needed complexity could handle one extra click to find it.",
+          "The second lesson was about defaults. A blank field mapping screen and a pre-filled one lead to the same place. But the pre-filled version communicates \"we understand your use case\" while the blank one communicates \"figure it out.\" The product's job is to encode knowledge, not just provide tools.",
+          "The third: working as a Product Owner under a founder who gave real autonomy was the best possible training ground. I owned the full cycle — research, design, specs, delivery, measurement — with a senior partner who challenged assumptions but didn't override decisions. That dynamic taught me more about product judgment than any framework."
         ]
       }
     },
@@ -511,6 +588,10 @@
     "cashlessSystem": {
       "title": "Cashless System — Mattia De Luca",
       "description": "How a cashless product went from zero to the right integration partner. A product case study about killing the obvious option and finding the structural solution."
+    },
+    "leadsbridgeRedesign": {
+      "title": "LeadsBridge Redesign — Mattia De Luca",
+      "description": "How removing features from an integration flow cut setup time by 35%. A product case study about simplification, auto-mapping, and making the hard path easier."
     },
     "skipToContent": "Skip to content"
   }

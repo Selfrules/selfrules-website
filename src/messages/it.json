@@ -22,7 +22,7 @@
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "cv": "Scarica il CV (PDF)",
-    "buildVersion": "v1.0.0 · build {buildMonth} · Next.js 16 · {commitCount} commits"
+    "buildVersion": "v1.0.0 · build {buildMonth} · Next.js 16"
   },
   "notFound": {
     "headline": "Questa pagina non esiste. Ma il resto del sito si.",
@@ -38,9 +38,9 @@
   "homepage": {
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, codice, e product management nella stessa testa.",
-      "subtitle": "B2B SaaS · Payments · Platform. 10+ anni a progettare interfacce, scrivere codice in produzione, e gestire prodotti. Il vantaggio: quando design, engineering e business non si capiscono, non serve un interprete.",
-      "primaryCta": "Scrivimi",
-      "secondaryCta": "Guarda i lavori",
+      "subtitle": "Sistemi di pagamento dal caos al 99% di uptime. Funnel di integrazione ridisegnati, -35% tempo di setup. Prodotti B2B SaaS, costruiti e spediti.",
+      "primaryCta": "Parliamo del tuo prodotto",
+      "secondaryCta": "Leggi i case study",
       "tag1": "10+ anni",
       "tag2": "B2B SaaS",
       "tag3": "Payments",
@@ -49,8 +49,8 @@
       "signaturePhrase": "Il problema non e' mai quello del primo meeting."
     },
     "howIWork": {
-      "label": "COME LAVORO",
-      "title": "Come lavoro",
+      "label": "TRE LINGUAGGI, UN PRODOTTO",
+      "title": "Tre linguaggi, un prodotto",
       "intro": "Quando il design dice \"l'utente si blocca qui perché la gerarchia visiva è sbagliata\", l'engineering dice \"servono 3 sprint di refactoring\", e il business dice \"ci costa €15K al mese in ticket di supporto\". Tre conversazioni separate. Il mio lavoro è trasformarle in una decisione.",
       "pillar1": {
         "title": "Designer + Developer + PM.\nNella stessa stanza.",
@@ -107,32 +107,32 @@
       "metric1": {
         "number": "99%+",
         "label": "Uptime",
-        "context": "Uptime e success rate pagamenti — QubicaAMF. Da crisi quotidiana a stabilità enterprise."
+        "context": "100% uptime contro un target SLA del 99%"
       },
       "metric2": {
         "number": "-25%",
         "label": "Incidenti post-release",
-        "context": "Incidenti post-release — QubicaAMF. Sessioni cross-funzionali settimanali con Product, Support e Engineering."
+        "context": "Post-release, attraverso processo di triage cross-funzionale"
       },
       "metric3": {
         "number": "116",
         "label": "Centri integrati",
-        "context": "Centri integrati sulla piattaforma — QubicaAMF. 5 nuovi a settimana."
+        "context": "Integrati su piattaforma enterprise, 5 nuovi a settimana"
       },
       "metric4": {
         "number": "-35%",
         "label": "Tempo di setup",
-        "context": "Tempo di configurazione — LeadsBridge. Redesign del flusso core del prodotto."
+        "context": "Su tutti i flussi di pagamento in piattaforma B2B su 5 paesi"
       },
       "metric5": {
-        "number": "+9%",
-        "label": "Adozione integrazioni",
-        "context": "Adozione integrazioni — QubicaAMF. PDF da 47 pagine sostituiti con video da 3 minuti."
+        "number": "+25%",
+        "label": "Crescita YoY",
+        "context": "Unico provider di pagamento ancora in crescita nel portfolio"
       },
       "metric6": {
-        "number": "-12%",
-        "label": "Tempi di processing",
-        "context": "Tempi di processing pagamenti — QubicaAMF. Ottimizzazione dell'intera pipeline di pagamento."
+        "number": "23/44",
+        "label": "Item spediti",
+        "context": "Spediti. Pagamenti critici ridotti da 12 a 5"
       },
       "link": "Guarda i case study"
     },
@@ -140,19 +140,19 @@
       "label": "COSA FACCIO ORA",
       "title": "Cosa faccio ora",
       "card1": {
-        "title": "Payments e platform a scala internazionale",
-        "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Il prossimo passo: portare AI nel flusso operativo per ridurre il lavoro manuale di riconciliazione e supporto.",
+        "title": "Guido il prodotto payments e platform per un'azienda internazionale di 600 dipendenti",
+        "text": "Stabilizzato un sistema di pagamenti al 99%+ di uptime, ora scalo l'integrazione cashless su 5 paesi.",
         "statusLabel": "ATTIVO"
       },
       "card2": {
-        "title": "Un problema personale diventato prodotto",
-        "text": "Trovare casa monitorando 8 portali a mano non funzionava. Scraping automatico, scoring intelligente, 880+ annunci analizzati. Il tool è ancora attivo.",
-        "statusLabel": "COMPLETATO"
+        "title": "Sto costruendo CasaHunter",
+        "text": "Uno strumento AI per la ricerca di appartamenti. Scoring a tre passaggi: 80% filtro deterministico, 20% budget AI su quello che conta. 880+ annunci analizzati, zero ricerca manuale.",
+        "statusLabel": "ATTIVO"
       },
       "card3": {
-        "title": "Finanza personale senza spreadsheet",
-        "text": "Analisi automatica delle transazioni, pattern recognition, insight settimanali. Progettare un'interfaccia che non chiede di compilare righe e colonne.",
-        "statusLabel": "ESPERIMENTO"
+        "title": "Esplorando il prossimo passo",
+        "text": "Aperto a ruoli PM e Technical PM dove design, codice e pensiero di prodotto convergono.",
+        "statusLabel": "APERTO"
       }
     },
     "contact": {
@@ -219,7 +219,7 @@
   },
   "work": {
     "headline": "Come lavoro,\ndimostrato.",
-    "intro": "Due storie di prodotto. Il contesto, la sfida, l'approccio, i numeri. Non cosa dico di saper fare. Cosa è successo.",
+    "intro": "Tre storie di prodotto. Il contesto, la sfida, l'approccio, i numeri. Non cosa dico di saper fare. Cosa è successo.",
     "cases": {
       "payments": {
         "tag": "Payments · B2B SaaS · Enterprise",
@@ -235,6 +235,13 @@
         "metricLabel": "DA ZERO A DEMO LIVE →",
         "preview": "Il prodotto interno sembrava la scelta ovvia. La discovery ha raccontato un'altra storia. Come la strategia cashless è stata definita partendo dai vincoli reali.",
         "note": "Metriche finali disponibili al lancio in produzione — dati pilota in corso di raccolta"
+      },
+      "leadsbridge": {
+        "tag": "B2B SaaS · Integration Platform · Growth",
+        "title": "380+ integrazioni, e la maggior parte degli utenti\nnon ne finiva nemmeno una",
+        "metric": "-35%",
+        "metricLabel": "TEMPO DI SETUP →",
+        "preview": "Un flusso di creazione bridge in cinque step con enorme drop-off. La soluzione non era aggiungere funzioni — era toglierle. Auto-mapping, complessità nascosta, e un percorso più semplice verso l'attivazione."
       }
     },
     "cta": {
@@ -317,6 +324,76 @@
           "L’istinto in una crisi è fixare e crescere allo stesso tempo. Non funziona. La prima vera decisione di prodotto è smettere di scavare il buco più in profondità. Tutto il resto segue da lì.",
           "La seconda cosa: 44 item, 12 critici, 4 urgenti. La maggior parte di quello che sembrava urgente poteva in realtà aspettare. Sapere quali non possono è la vera competenza. Un singolo criterio di ordinamento chiaro ha dato al team più chiarezza di qualsiasi quantità di discussione.",
           "La terza: quando un problema viene etichettato come “irrisolvibile” o “in attesa del partner”, vale la pena verificare se qualcuno ha effettivamente letto la documentazione dell’API. Il fix per l’attribuzione della fonte era già lì. Serviva solo qualcuno disposto a cercare."
+        ]
+      }
+    },
+    "leadsbridge": {
+      "tag": "B2B SaaS · Integration Platform · Growth",
+      "role": "Product Owner",
+      "company": "Piattaforma B2B SaaS · Lead generation · 380+ integrazioni",
+      "period": "2020–2023",
+      "heroMetric": "-35%",
+      "heroMetricLabel": "tempo di setup",
+      "secondMetric": "+9%",
+      "secondMetricLabel": "adozione integrazioni",
+      "context": {
+        "heading": "Il contesto",
+        "content": [
+          "Una piattaforma B2B SaaS che collegava canali pubblicitari a CRM e strumenti di marketing. Ogni volta che arrivava un lead da Facebook, Google o TikTok Ads, LeadsBridge lo spostava automaticamente alla destinazione giusta — senza codice, senza export manuali, senza lead persi.",
+          "Il prodotto aveva **380+ integrazioni** e una base clienti in crescita di marketer e agenzie che dipendevano dalla piattaforma quotidianamente. L'esperienza centrale era il \"bridge\": un flusso in cinque step dove gli utenti selezionavano sorgente e destinazione, autenticavano entrambe le piattaforme, mappavano i campi dati, configuravano le opzioni avanzate e attivavano.",
+          "Il problema non era che i bridge non funzionassero. Il problema era che troppi utenti non arrivavano mai a completarne uno."
+        ]
+      },
+      "challenge": {
+        "heading": "La sfida",
+        "content": [
+          "Il funnel di creazione bridge aveva un drop-off significativo. Gli utenti entravano nel flusso — avevano un'intenzione, avevano un caso d'uso — ma un numero sproporzionato abbandonava prima dell'attivazione. I due cali più ripidi erano nella **configurazione delle integrazioni** (connessione e autenticazione delle piattaforme) e nella **mappatura dei campi** (associazione dei campi sorgente con quelli di destinazione).",
+          "La configurazione richiedeva agli utenti di navigare flussi OAuth, chiavi API e pattern di autenticazione specifici per ogni piattaforma — ognuno leggermente diverso, ognuno con le proprie modalità di errore. Chi superava l'autenticazione si trovava di fronte alla mappatura: una schermata flessibile ma travolgente dove ogni campo sorgente poteva essere associato manualmente a qualsiasi campo destinazione. I power user la adoravano. Tutti gli altri restavano a fissarla.",
+          "Il prodotto era cresciuto feature dopo feature, aggiungendo opzioni a ogni step per soddisfare le richieste più insistenti. Il risultato era un flusso che tecnicamente poteva fare tutto — e in pratica intimidiva la maggior parte degli utenti prima di arrivare alla fine."
+        ]
+      },
+      "approach": {
+        "heading": "L'approccio",
+        "content": [
+          "**Il primo passo è stato capire dove le persone si bloccavano davvero.** Non dove pensavamo si bloccassero. Ho mappato l'intero funnel con tassi di completamento a ogni step, incrociando ticket di supporto e pattern di sessione. I dati confermavano quello che i numeri suggerivano: configurazione e mappatura erano i muri. Ma rivelavano anche qualcosa di meno ovvio — gli utenti che completavano il primo bridge ne creavano in media altri tre. La barriera all'attivazione era l'unica barriera.",
+          "**Poi è arrivata la decisione controintuitiva: togliere funzionalità.** Il pannello opzioni avanzate — logica condizionale, trasformazioni custom, elaborazione campi multi-step — era visibile a ogni utente su ogni bridge. Aggiungeva carico cognitivo a un flusso che la maggior parte degli utenti aveva bisogno fosse semplice. La proposta era nasconderlo completamente dall'esperienza di default e mostrarlo solo agli utenti che lo cercavano esplicitamente.",
+          "La resistenza è stata immediata. Le opzioni avanzate erano un punto di vendita nelle demo. Il commerciale le usava per differenziarsi dai competitor. Il supporto aveva costruito documentazione attorno ad esse. Rimuoverle dalla vista di default sembrava rimuovere una funzionalità. L'argomento che ha vinto: **non stiamo rimuovendo capacità, stiamo rimuovendo frizione.** Le opzioni esistono ancora. Semplicemente smettono di penalizzare chi non ne ha bisogno.",
+          "**La mappatura dei campi ha avuto lo stesso trattamento.** Invece di presentare un canvas vuoto dove gli utenti collegavano manualmente i campi uno a uno, il flusso ridisegnato proponeva mappature automatiche basate su nomi dei campi, tipi e pattern comuni attraverso il catalogo integrazioni. Gli utenti potevano rivedere e modificare — ma il punto di partenza era una configurazione funzionante, non uno schermo vuoto.",
+          "**Non era solo un cambiamento di UI. Richiedeva ripensare il data layer.** Il motore di auto-mapping doveva comprendere la semantica dei campi attraverso centinaia di integrazioni con convenzioni di naming diverse. Ho lavorato con l'engineering per costruire un algoritmo di matching che usava metadati dei campi, pattern storici di mappatura dai bridge riusciti e compatibilità di tipo. Il lavoro tecnico ha reso possibile l'UI semplice.",
+          "**Il rollout è stato graduale.** Non abbiamo cambiato tutto per tutti. Il nuovo flusso è andato prima ai nuovi utenti, mentre i power user esistenti mantenevano l'esperienza originale. Abbiamo misurato tassi di completamento, time-to-first-bridge e — cruciale — se il flusso semplificato produceva bridge che funzionavano davvero in produzione. Funzionavano."
+        ]
+      },
+      "results": {
+        "heading": "I risultati",
+        "items": [
+          {
+            "metric": "-35%",
+            "label": "tempo di setup su tutti i tipi di bridge"
+          },
+          {
+            "metric": "+9%",
+            "label": "adozione integrazioni — più bridge completati, più utilizzo di integrazioni complesse"
+          },
+          {
+            "metric": "Superiore",
+            "label": "tasso di completamento del primo bridge per i nuovi utenti"
+          },
+          {
+            "metric": "Zero",
+            "label": "aumento di bridge falliti dopo la semplificazione"
+          },
+          {
+            "metric": "Completamente accessibili",
+            "label": "le funzionalità avanzate restavano accessibili tramite toggle esplicito"
+          }
+        ]
+      },
+      "learned": {
+        "heading": "Cosa ho imparato",
+        "content": [
+          "Le decisioni di prodotto più difficili sembrano quelle in cui togli qualcosa. Rimuovere opzioni visibili da un flusso sembra un passo indietro — specialmente quando quelle opzioni esistono perché i clienti le hanno chieste. Ma c'è una differenza tra quello che gli utenti chiedono e quello di cui hanno bisogno per avere successo. I dati erano inequivocabili: la maggior parte degli utenti aveva bisogno di un percorso più semplice, e la minoranza che aveva bisogno di complessità poteva gestire un click in più per trovarla.",
+          "La seconda lezione riguardava i default. Una schermata di mappatura vuota e una pre-compilata portano allo stesso posto. Ma la versione pre-compilata comunica \"capiamo il tuo caso d'uso\" mentre quella vuota comunica \"arrangiatevi.\" Il lavoro del prodotto è codificare conoscenza, non solo fornire strumenti.",
+          "La terza: lavorare come Product Owner sotto un fondatore che dava vera autonomia è stata la miglior palestra possibile. Gestivo l'intero ciclo — ricerca, design, specifiche, delivery, misurazione — con un partner senior che sfidava le assunzioni ma non sovrascriveva le decisioni. Quella dinamica mi ha insegnato più sul giudizio di prodotto di qualsiasi framework."
         ]
       }
     },
@@ -512,6 +589,10 @@
       "title": "Cashless System — Mattia De Luca",
       "description": "Come un prodotto cashless è passato da zero al partner di integrazione giusto. Un caso studio di prodotto su uccidere l’opzione ovvia e trovare la soluzione strutturale."
     },
-    "skipToContent": "Vai al contenuto"
+    "skipToContent": "Vai al contenuto",
+    "leadsbridgeRedesign": {
+      "title": "LeadsBridge Redesign — Mattia De Luca",
+      "description": "Come rimuovere funzionalità da un flusso di integrazione ha tagliato il tempo di setup del 35%. Un caso di studio su semplificazione, auto-mapping, e rendere il percorso difficile più facile."
+    }
   }
 }

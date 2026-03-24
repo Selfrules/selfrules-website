@@ -87,6 +87,16 @@ export default async function WorkPage({
               {t('cases.cashless.note')}
             </p>
           </div>
+
+          {/* Card 3: LeadsBridge Redesign */}
+          <CaseStudyCard
+            tag={t('cases.leadsbridge.tag')}
+            title={t('cases.leadsbridge.title')}
+            preview={t('cases.leadsbridge.preview')}
+            metric={t('cases.leadsbridge.metric')}
+            metricLabel={t('cases.leadsbridge.metricLabel')}
+            href="/work/leadsbridge-redesign"
+          />
         </div>
       </Section>
       </ScrollReveal>
