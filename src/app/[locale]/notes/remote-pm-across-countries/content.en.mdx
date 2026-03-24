@@ -1,0 +1,82 @@
+export const metadata = {
+  title: 'Remote product management across 5 countries',
+  date: '2026-05-06',
+  excerpt: 'It\'s not about meetings on Zoom. It\'s about async-first communication and everyone having the same context.',
+  readingTime: 6,
+  locale: 'en',
+}
+
+Remote PM is often presented as a logistics problem: how do I run meetings across timezones? That's the wrong problem. The real problem is context.
+
+When everyone is colocated, context is ambient. Someone walks past your desk, mentions a sales call went badly, you see the Slack thread, you remember the feature. Context lives in the air. Remove the room and the air disappears. Now context has to be deliberate.
+
+<KeyTakeaway>
+The skill isn't being good at Zoom calls. It's understanding when a 30-minute conversation replaces two days of Slack threads, and when async is actually better.
+</KeyTakeaway>
+
+## QubicaAMF: five countries, no shared office
+
+My team was split: backend engineers in Italy, QA in Poland, product analytics in the US. No overlap. When I sent a message at 7 AM in Modena, the US team saw it at 11 PM and made a decision I wasn't awake to see made. When they sent documentation at 4 PM their time, I had eight hours of accumulated work the next morning.
+
+The first instinct was to solve this with better Zoom scheduling. Get better timezone overlap. Protect core hours when everyone can meet.
+
+That failed because it was the wrong problem. The real issue was that information wasn't persistent. A Zoom call happens, decisions get made, nobody writes it down except in the call notes that two people half-pay attention to, and the next day the two people on the other side of the world are repeating work or making contradictory decisions.
+
+The fix wasn't scheduling. It was documentation.
+
+## Documentation as product
+
+Every decision got a one-page doc. Not a Slack thread. Not a quick email. A document with: what decision do we need to make, what's the context, what are the options, what did we choose and why. The last sentence mattered most: "If this assumption breaks, here's what we'll revisit."
+
+Those documents became the source of truth. Engineers would read them before starting work. QA would reference them when testing. Analysts would use them to understand what metrics actually mattered.
+
+It sounds like bureaucracy. It's actually the opposite. Slack threads that cascade into 50 messages have a way of losing context in the middle. A one-page doc says everything at once. Five minutes to read instead of 20 minutes scrolling through Slack, guessing who made which decision.
+
+<Callout>
+The first version of my docs were too long. I learned the hard way: if a decision document is more than one page, you've confused priority. One page per decision. One priority per page.
+</Callout>
+
+## When a call replaces Slack
+
+Not everything should be async. Some conversations need real-time dialogue.
+
+When an engineer said "the API change will break existing integrations for customers in three countries," that needed immediate discussion. The implementation spec was wrong. We knew it the moment he said it. A Slack thread would have been: message, wait 3 hours for response, clarify, wait again. A 15-minute call solved it immediately.
+
+The skill is knowing which conversations need synchronous time. The pattern I use:
+
+- **Slack first.** Every decision starts as a Slack message. Not to decide — to surface that something needs deciding.
+- **If it requires back-and-forth in 5 turns or more, call.**
+- **If it touches multiple timezones and people would need to wait 8 hours for clarification, call.**
+- **If someone saying "wait, what?" in real-time changes the whole direction, call.**
+
+Everything else stays async.
+
+The result: we had far fewer Zoom calls than a colocated team. But the calls we had mattered. They were crisp, focused, and documented immediately after.
+
+## Managing feedback across cultures
+
+This one surprised me. Italy, US, Poland: they don't give feedback the same way.
+
+In Italy, direct feedback is expected. "Your spec has gaps" is normal conversation. In Poland, the same thing requires more context — why, what's the impact, what would be better. In the US, it comes with a compliment sandwich.
+
+The first time a Polish engineer pushed back on something as "this needs more thinking," I interpreted it as soft rejection. Actually it meant "I see the value and I want to make sure we're not missing risk." Totally different.
+
+I learned to write feedback explicitly: "Here's what I noticed. Here's why it matters. Here's what I'd do differently, and here's why I might be wrong." The last part matters. It signals that I'm not giving orders, I'm proposing an option.
+
+<Callout>
+Remote work exposed cultural differences that would have been obvious in a room together. You can't read a Polish engineer's body language on Zoom. You have to read their words more carefully.
+</Callout>
+
+## The documentation tax
+
+There is a cost. Writing a one-page decision doc takes 20 minutes. A Slack decision takes 20 seconds. The math seems bad until you account for:
+
+- How many times that decision gets explained to someone who wasn't in the room.
+- How many wrong assumptions happen because the context was ambiguous.
+- How many hours get wasted re-discussing something that was already decided.
+
+Once I started tracking, a single decision doc prevented maybe five hours of repeated conversations over the next month. Twenty minutes to write, five hours saved. The math worked.
+
+But the bigger payoff was something else. When people know a decision is documented, they read it before building. They don't assume. They don't half-remember. They come to the work informed.
+
+That's the leverage of async-first: it forces clarity. Because if you can't write it clearly, you don't understand it well enough yet.

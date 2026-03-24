@@ -466,29 +466,81 @@
       "text": "Questi casi raccontano il come. Se vuoi il chi, c’è la pagina about. Se vuoi parlare, scrivimi.",
       "primary": "Chi sono",
       "secondary": "Scrivimi"
+    },
+    "casahunter": {
+      "tag": "Prodotto · Scoring · Budget AI · Feedback loop",
+      "role": "Fondatore / Solo",
+      "company": "Side project · Ricerca appartamento · Italia",
+      "period": "2024–present",
+      "heroMetric": "8",
+      "heroMetricLabel": "piattaforme monitorate automaticamente",
+      "secondMetric": "1",
+      "secondMetricLabel": "sviluppatore. Molti meno appartamenti da controllare a mano.",
+      "context": {
+        "heading": "Il problema",
+        "content": [
+          "Cercare casa in Italia è rotto. Gli annunci sono sparsi su 8+ piattaforme — Immobiliare.it, Airbnb, Subito, marketplace di Facebook, siti di agenzie immobiliari, e altri ancora. Gli appartamenti buoni spariscono in ore. Controllare ogni piattaforma quotidianamente per nuovi annunci che corrispondono ai tuoi criteri è un lavoro a tempo pieno. Avevo bisogno di un appartamento, non di un hobby.",
+          "Gli strumenti esistenti non lo risolvono. Gli alert di Immobiliare.it sono basati su parole chiave, non sulla qualità. I filtri di Airbnb sono rigidi. Nessuna piattaforma aggregata intelligentemente e definisce le priorità tra tutte le fonti. La ricerca manuale significava spendere 2-3 ore al giorno tra schede, segnalibri e cronologia del browser."
+        ]
+      },
+      "challenge": {
+        "heading": "La decisione di prodotto: costruire vs comprare",
+        "content": [
+          "La scelta ovvia: pagare una sottoscrizione a un aggregatore di ricerca immobiliare. Ma nessuno di loro faceva quello che mi serviva. Aggregavano gli annunci, ma non capivano le mie preferenze. Non imparavano dai miei feedback. Non classificavano per qualità effettiva, solo per recency o algoritmo di default.",
+          "Così l'ho costruito. Ma non come un'app tradizionale. L'obiettivo non era una UI carina — era l'automazione che funziona senza di me. Niente controlli manuali quotidiani. Niente aprire 8 schede. Notifiche Telegram quando c'è qualcosa che corrisponde.",
+          "La vera decisione di prodotto non era \"costruire un aggregatore.\" Era \"ottimizzare il costo dello scoring con AI su milioni di annunci al giorno.\""
+        ]
+      },
+      "approach": {
+        "heading": "Scoring a tre passaggi: deterministico + AI + feedback",
+        "content": [
+          "**Passaggio 1: Filtro deterministico (gratis, veloce).** Prezzo, posizione, metratura, stanze — vincoli hard. Per ogni piattaforma, l'80% degli annunci viene eliminato qui senza toccare nessun budget AI. Un annuncio che non soddisfa i criteri base non vale la pena di scorarlo. Questo passaggio gira ogni giorno su tutte e 8 le piattaforme con costo computazionale trascurabile.",
+          "**Passaggio 2: Scoring con AI (costoso, selettivo).** Solo il 20% degli annunci che hanno passato il primo filtro viene inviato a Claude Sonnet per l'analisi. L'AI assegna un punteggio alla qualità: legge il testo dell'annuncio, analizza le descrizioni delle foto, controlla il contesto del quartiere, valuta il rapporto qualità-prezzo. Lo scoring avviene una volta per annuncio, cachato per il confronto.",
+          "**Passaggio 3: Feedback loop (apprendimento).** Il feedback dell'utente aggiusta i pesi dello scoring. Pollice su o giù su Telegram aggiusta come gli annunci futuri vengono scorati. Un edificio che ho segnato come \"troppo rumoroso\" abbassa i punteggi per annunci simili in quell'area. Il sistema impara.",
+          "Perché questa struttura? È lo stesso pattern usato nei prodotti enterprise: spendere risorse costose solo dove creano valore. Su scala, lanciare Claude Sonnet su tutti gli annunci costerebbe migliaia al mese. Lanciarlo sul 20% costa pochi euro. Il primo passaggio è il gate."
+        ]
+      },
+      "results": {
+        "heading": "I risultati",
+        "items": [
+          {
+            "metric": "8",
+            "label": "piattaforme immobiliari monitorate e aggregate giornalmente"
+          },
+          {
+            "metric": "0",
+            "label": "controlli manuali necessari. Notifiche Telegram quando c'è qualcosa."
+          },
+          {
+            "metric": "~80%",
+            "label": "annunci filtrati dal passaggio 1 prima che l'AI li veda"
+          },
+          {
+            "metric": "In espansione",
+            "label": "verso micro-SaaS basato sulla domanda di amici e colleghi"
+          }
+        ]
+      },
+      "learned": {
+        "heading": "Perché questo importa per il pensiero di prodotto",
+        "content": [
+          "La divisione 80/20 del budget tra scoring deterministico e AI non è un hack. È lo stesso principio dietro le buone decisioni di prodotto su qualsiasi scala: non spendere risorse costose per risolvere problemi economici. Filtra presto, spendi dove conta.",
+          "I feedback loop che affinano lo scoring sono lo stesso principio dietro qualsiasi buona iterazione di prodotto. Rilasci, ricevi segnale, aggiusti. La differenza qui è che il segnale è pollice su/giù su Telegram, non dashboard di metriche. Feedback loop più piccolo, stesso principio.",
+          "Sapere cosa NON costruire importa tanto quanto ciò che costruisci. Nessuna app mobile (il browser basta). Nessuna feature sociale (è uno strumento personale). Nessun marketplace. Nessun altro flusso di ricavi. La disciplina di scope è una decisione di prodotto.",
+          "La decisione di andare SaaS non era pianificata. Gli amici hanno chiesto accesso. I colleghi volevano le loro versioni. Quel è il segnale che qualcosa ha product-market fit, anche in forma di side project. Ora sto esplorando il percorso micro-SaaS — lo stesso pensiero di prodotto, ora con utenti paganti come validazione."
+        ]
+      }
     }
   },
   "lab": {
     "headline": "Lo stesso modo di pensare,\napplicato a problemi miei.",
-    "intro": "Ogni progetto qui è partito da un bisogno reale, non da un tutorial. Lo stesso approccio del lavoro: capire il problema, costruire il minimo necessario per validare l'idea, decidere cosa non costruire. Il codice è il mezzo. Il pensiero di prodotto è il contenuto.",
+    "intro": "I side project sono decisioni di prodotto, non esercizi di coding. Lo stesso pensiero del lavoro, vincoli diversi. Ogni progetto qui è partito da un bisogno reale: capire il problema, costruire il minimo per validare, decidere cosa non costruire. Il risultato è su Telegram, non in un portfolio.",
     "whatItTaughtMeLabel": "Cosa mi ha insegnato",
     "casahunter": {
       "title": "CasaHunter",
       "description": "Un tool che cerca casa al posto tuo, impara dai tuoi feedback, e ti avvisa su Telegram.",
       "statusLabel": "Attivo",
       "whatItTaughtMe": "Scoring a tre passaggi: filtrare l'80% in modo deterministico, spendere il budget AI solo sul 20% che conta. Stessa logica applicabile a qualsiasi prodotto."
-    },
-    "moneymind": {
-      "title": "MoneyMind",
-      "description": "Finanza personale che non chiede di compilare spreadsheet. Analisi automatica delle transazioni, pattern recognition, insight settimanali. In sviluppo.",
-      "statusLabel": "In sviluppo",
-      "whatItTaughtMe": "Progettare per chi odia gli spreadsheet significa che neanche la UI può sembrarne uno."
-    },
-    "openclaw": {
-      "title": "OpenClaw",
-      "description": "Web scraper open-source per estrarre dati strutturati di prodotto da siti e-commerce. In fase di sperimentazione.",
-      "statusLabel": "Esperimento",
-      "whatItTaughtMe": "L'estrazione strutturata su scala richiede sapere quando usare un browser headless e quando basta una richiesta HTTP."
     },
     "cta": {
       "text": "Se ti interessa come ragiono quando costruisco, i case study professionali raccontano la stessa cosa su scala diversa.",
@@ -541,18 +593,83 @@
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Perché prototipo in codice",
-        "date": "2026-03-22",
-        "excerpt": "Un Product Manager che prototipa in codice prende decisioni diverse."
+        "date": "2026-01-16",
+        "excerpt": "Un Product Manager che prototipa in codice prende decisioni diverse.",
+        "readingTime": "4 min di lettura",
+        "tags": [
+          "Product Craft",
+          "Technical PM"
+        ]
       },
       "the-meeting-where-everyone-says-yes": {
         "title": "Il meeting dove tutti dicono sì",
-        "date": "2026-03-15",
-        "excerpt": "Allineamento non è la stessa cosa di accordo. Uno costruisce prodotti, l’altro costruisce backlog."
+        "date": "2026-02-08",
+        "excerpt": "Allineamento non è la stessa cosa di accordo. Uno costruisce prodotti, l'altro costruisce backlog.",
+        "readingTime": "5 min di lettura",
+        "tags": [
+          "Decision Making",
+          "Product Craft"
+        ]
       },
       "why-metrics-lie-without-context": {
         "title": "Perché le metriche mentono senza contesto",
-        "date": "2026-03-08",
-        "excerpt": "Un numero senza una storia è solo un numero. La storia è ciò che lo rende una decisione."
+        "date": "2026-03-22",
+        "excerpt": "Un numero senza una storia è solo un numero. La storia è ciò che lo rende una decisione.",
+        "readingTime": "6 min di lettura",
+        "tags": [
+          "Product Craft",
+          "Payments"
+        ]
+      },
+      "when-ai-makes-sense-in-product": {
+        "title": "Quando l'AI ha senso nel prodotto",
+        "date": "2024-12-15",
+        "excerpt": "Pensare all'AI nelle decisioni.",
+        "readingTime": "5 min",
+        "tags": [
+          "AI",
+          "Prodotto"
+        ]
+      },
+      "managing-payments-at-scale": {
+        "title": "Gestire i pagamenti su scala",
+        "date": "2025-01-15",
+        "excerpt": "Come scalano i pagamenti.",
+        "readingTime": "6 min",
+        "tags": [
+          "Pagamenti",
+          "Scale"
+        ]
+      },
+      "remote-pm-across-countries": {
+        "title": "PM remoto su paesi diversi",
+        "date": "2025-01-08",
+        "excerpt": "Product management su fusi orari diversi.",
+        "readingTime": "5 min",
+        "tags": [
+          "Remoto",
+          "PM"
+        ]
+      },
+      "build-vs-buy-framework": {
+        "title": "Framework Build vs Buy",
+        "date": "2024-12-08",
+        "excerpt": "Un framework per decisioni build vs buy.",
+        "readingTime": "4 min",
+        "tags": [
+          "Framework",
+          "Decisioni"
+        ]
+      },
+      "seven-years-running-a-business": {
+        "title": "Sette anni a gestire un business",
+        "date": "2025-01-01",
+        "excerpt": "Lezioni da sette anni.",
+        "readingTime": "7 min",
+        "tags": [
+          "Business",
+          "Lezioni"
+        ]
       }
     }
   },
@@ -593,6 +710,10 @@
     "leadsbridgeRedesign": {
       "title": "LeadsBridge Redesign — Mattia De Luca",
       "description": "Come rimuovere funzionalità da un flusso di integrazione ha tagliato il tempo di setup del 35%. Un caso di studio su semplificazione, auto-mapping, e rendere il percorso difficile più facile."
+    },
+    "casahunter": {
+      "title": "CasaHunter — Mattia De Luca",
+      "description": "Come ho costruito un tool che cerca casa al posto tuo. Un caso studio di prodotto su scoring a tre passaggi, ottimizzazione del budget AI, e sapere quando andare SaaS."
     }
   }
 }

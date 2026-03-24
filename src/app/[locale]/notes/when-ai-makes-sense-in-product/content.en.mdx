@@ -1,0 +1,75 @@
+export const metadata = {
+  title: 'When AI makes sense in product (and when it doesn\'t)',
+  date: '2026-04-15',
+  excerpt: 'The 80/20 split. Use deterministic rules for what\'s predictable. AI only where judgment matters.',
+  readingTime: 6,
+  locale: 'en',
+}
+
+Every product team is looking at AI features now. And most of them are solving the wrong problem.
+
+The question isn't "should we add AI?" The question is: "Is there a judgment call happening that a rule or a query can't solve?" If the answer is no, you don't need AI. You need a filter and better UX.
+
+<KeyTakeaway>
+The pattern I use: 80% of the problem should be solvable with deterministic rules. The remaining 20% — where judgment matters — is where AI belongs.
+</KeyTakeaway>
+
+## CasaHunter: the 80/20 split in practice
+
+I built an apartment hunting tool over a weekend. The problem: eight listing sites, inconsistent data, no single place to see "did something good show up since yesterday?"
+
+The naive approach: throw an LLM at every listing, ask it to score quality, rank, and notify. Ship it. Sounds good. It cost money, it was slow, and the output was barely better than a rule.
+
+The real problem was different. An apartment listing has 80% objective data: square meters, price, location, year built, has elevator, has parking. That's checkable, rankable, filterable. All deterministic.
+
+So the system works like this:
+
+**First pass: deterministic filtering.** Price between €400-700k? Square meters above 120? Doesn't require complete gut renovation? Yes to all three. If no, score 0. This eliminates 80% of listings for free in milliseconds.
+
+**Second pass: AI on what survived.** The remaining 20% goes to an LLM. But now the context is tight. Not "score this apartment," but "given that this one passed our objective filters, and given this user's feedback on five apartments they did see, should they see this one?" Much cheaper. Much faster. Much better.
+
+**Third pass: feedback loop.** When a user ignores a listing or checks it and doesn't reach out, the scoring learns. Not from scraped data. From actual user behavior.
+
+<Callout>
+The difference between the naive approach and the working one isn't the AI. It's the architecture. AI was never the bottleneck. The bottleneck was clarity on what's objective and what requires judgment.
+</Callout>
+
+## When AI is the right answer
+
+AI makes sense when:
+
+**Pattern recognition on unstructured data.** You have thousands of data points with no clear rule, and you need to categorize them. Text classification, image analysis, anomaly detection. The LLM sees patterns a human rule can't express.
+
+**Personalized scoring when the preference is complex.** "Which apartment should I see next?" has no single rule. Person A cares about proximity to work, low renovation cost, and outdoor space. Person B prioritizes renovated, building age, and ceiling height. You can't write rules for this. You can learn from behavior and adjust.
+
+**Natural language understanding where context matters.** A customer writes "the integration keeps breaking." That's not a data field. That's a complaint, and it needs context. Did it break once? Three times? Is the customer frustrated or just reporting? Natural language matters here. A rule won't handle the nuance.
+
+## When it's not
+
+**Anything a filter solves.** "Show me payments under €1000" doesn't need an LLM. It needs a `WHERE amount < 1000`. Every feature request that's basically "let the user see only the items where [condition]" is a filter, not an AI problem.
+
+**Anything a SQL query can answer.** "Which centers have highest transaction volume?" "What's the onboarding drop-off by country?" Rules. Structure the question, write the query, show the answer.
+
+**Anything with a clear rule.** "If the payment fails twice, put the center in review." That's a rule. "If processing takes more than 2 seconds, log an incident." Rule. The PM who says "let's use AI to handle failure scenarios" is usually looking at a state machine, not an intelligence problem.
+
+## The cost calculation
+
+This is where most teams go wrong. They compare "cost of writing a rule" to "cost of using an LLM." The rule costs 2 hours. The LLM costs $0.001 per call. LLM wins. Except:
+
+LLM calls add up. Apartment scoring runs on 5,000 listings a month. €0.001 per call. €5 a month. But multiply by latency, cold starts, API overhead, error handling. By the time you've built it reliably, the cost per call is higher and the latency is worse than if you'd written a rule.
+
+More importantly: when the AI gets a judgment wrong, what's the cost? In an apartment app, nothing. The user just sees a bad listing. In a payment system, wrong judgment costs money. You need guardrails, auditing, and human review. Now the "simple AI feature" is infrastructure.
+
+<Callout>
+The real cost of AI isn't the API call. It's the infrastructure around uncertainty. If you need to explain why a decision was made, or audit it later, or roll it back, deterministic rules are cheaper.
+</Callout>
+
+## What I ship
+
+CasaHunter is three deterministic filters, then AI on the survivors, then behavior learning. Payments Rescue is rules — strict rules — with no AI. If a payment can't be categorized by schema, it doesn't get categorized. A person reads it.
+
+ActiveProspect: the lead bridge configuration has some AI (smart field mapping), but the core decision — which connectors to suggest — is a rule based on what the user has already configured.
+
+Every time I see "let's use AI" before "do we have a decision problem?" I know the feature is going to be expensive and mediocre.
+
+The better question: "What can we solve with no AI at all?" Solve that first. The 20% that's left over — that's where AI belongs.

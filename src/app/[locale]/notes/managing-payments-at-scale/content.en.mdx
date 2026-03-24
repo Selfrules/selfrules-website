@@ -1,0 +1,67 @@
+export const metadata = {
+  title: 'Managing payments at scale: what PM school doesn\'t teach',
+  date: '2026-04-22',
+  excerpt: 'You can\'t move fast and break things when breaking things means double-charging customers.',
+  readingTime: 7,
+  locale: 'en',
+}
+
+Payments is a different domain than most product work. The usual PM instincts fail fast.
+
+"Move fast and break things" is a fine philosophy for features. Totally different when breaking things means a customer got charged twice. Or three times. Or charged for a transaction that failed. The PM skills that matter in payments aren't the ones they teach in PM school.
+
+<KeyTakeaway>
+The mindset shift: in payments, you lead with constraint, not possibility. What can we do safely? is the first question. What do we want to do? comes later.
+</KeyTakeaway>
+
+## The Payments Rescue at QubicaAMF
+
+When I arrived, the payment integration was in crisis. 44 open issues. Centers were losing transactions. The system was technically functional but operationally unusable. The team's instinct: fix everything, fast.
+
+That instinct is wrong in payments. You can't fix everything at once when fixing one thing might break another.
+
+The first skill: reading API documentation like a detective. Square's documentation is extensive, but it doesn't tell you how transaction metadata flows through reconciliation. You have to understand the data model deeply enough to know: "If we change this field, what breaks downstream?" I spent a week reading and re-reading the docs, finding the field (`external_payment_type`) that unlocked reconciliation without architectural changes on either side. One PM, one week, one field. A center stayed and became a reference account.
+
+The second skill: understanding money flows before touching code. Every feature touches cash. Not metaphorically. Actual money. "Let's add a feature to split revenue between two accounts" sounds reasonable until you realize: what happens if the split fails mid-transaction? What if one account is full? What if a chargeback comes 60 days later and only one side got reversed? You need to trace the money path before the engineering team starts writing code.
+
+<Callout>
+I've seen teams build split payment features without answering "what if the split fails?" The answer mattered because it's happened twice. In production. With real money.
+</Callout>
+
+## PCI compliance as product constraint, not compliance checkbox
+
+PCI DSS compliance is the baseline. But it's not a checkbox to check and move on. It's a product constraint that shapes every feature.
+
+At QubicaAMF I proposed a scope reduction to the certifiers by restructuring the payment architecture into three channels: payments, reconciliation, and settlement. Each on a different compliance track. This reduced recurring penalty risk and made the entire system simpler. It wasn't a compliance win. It was a product architecture decision that happened to have compliance upside.
+
+The reason this works: if you understand compliance from a product angle, it becomes a design constraint, not an obstacle. The best products aren't built without constraints. They're built within good ones.
+
+Most teams treat compliance as an afterthought. "Build the feature, then make sure we're compliant." In payments, compliance has to be upstream. It shapes what's even possible.
+
+## The courage to freeze features when stability is at risk
+
+This is the hardest part, and where PM instinct actually gets in the way.
+
+The refund feature was ready. The code was solid, the tests passed. But it was two weeks before the holiday peak — the busiest 14 days of the year for transaction volume. The team wanted to ship it to get early data.
+
+I pulled it back. Not because the code was bad. Because if something went wrong with refunds during peak, the damage scope is massive. Every refund issued during those 14 days. Hundreds of centers. Potential double refunds, lost reconciliation, chargebacks 60 days later.
+
+The team pushed back. The code was good. The testing was thorough. Ship it.
+
+The answer was no. Not maybe-after-more-testing. No.
+
+<Callout>
+A PM in B2B SaaS can sometimes ship a risky feature and roll it back if it breaks. A PM in payments can't. Once the money moved, it moved. You can't unring that bell.
+</Callout>
+
+We ran a full testing day. Real data, real scenarios, real edge cases. Found three issues. Shipped after peak.
+
+Was that slower? Yes. Was the feature released 14 days late? Yes. Is the business better off? Also yes, because the feature didn't cause a reconciliation crisis during peak that would have cost 10x the value of early data.
+
+## Reading API docs, understanding compliance, the courage to say wait
+
+These aren't sexy PM skills. They don't show up on a resume as "product vision" or "stakeholder management." But in payments, they matter more than strategy.
+
+A PM who can't read an API spec carefully will miss data flows. A PM who doesn't understand the compliance landscape will build features that have to be ripped out. A PM without the backbone to freeze features at risk becomes the person who explains to the CEO why a double-charging bug cost the company €400K.
+
+The PMs who succeed in payments aren't the ones with the best ideas. They're the ones who understand that the system has to work first. Ideas come second.

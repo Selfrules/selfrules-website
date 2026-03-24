@@ -2,6 +2,11 @@ export const POSTS = [
   'why-i-prototype-in-code',
   'the-meeting-where-everyone-says-yes',
   'why-metrics-lie-without-context',
+  'when-ai-makes-sense-in-product',
+  'managing-payments-at-scale',
+  'remote-pm-across-countries',
+  'build-vs-buy-framework',
+  'seven-years-running-a-business',
 ] as const;
 
 export type PostSlug = (typeof POSTS)[number];

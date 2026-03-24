@@ -20,19 +20,6 @@ const CASAHUNTER_STACK = [
   'GitHub Actions',
 ];
 
-const MONEYMIND_STACK = [
-  'TypeScript',
-  'Node.js',
-  'React',
-];
-
-const OPENCLAW_STACK = [
-  'TypeScript',
-  'Puppeteer',
-  'Cheerio',
-  'Docker',
-];
-
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
 }
@@ -71,22 +58,7 @@ export default async function LabPage({
       status: 'active' as const,
       statusLabel: t('casahunter.statusLabel'),
       whatItTaughtMe: t('casahunter.whatItTaughtMe'),
-    },
-    {
-      title: t('moneymind.title'),
-      description: t('moneymind.description'),
-      techStack: MONEYMIND_STACK,
-      status: 'active' as const,
-      statusLabel: t('moneymind.statusLabel'),
-      whatItTaughtMe: t('moneymind.whatItTaughtMe'),
-    },
-    {
-      title: t('openclaw.title'),
-      description: t('openclaw.description'),
-      techStack: OPENCLAW_STACK,
-      status: 'experiment' as const,
-      statusLabel: t('openclaw.statusLabel'),
-      whatItTaughtMe: t('openclaw.whatItTaughtMe'),
+      href: locale === 'it' ? '/it/lab/casahunter' : '/lab/casahunter',
     },
   ];
 
@@ -124,6 +96,7 @@ export default async function LabPage({
                 statusLabel={project.statusLabel}
                 whatItTaughtMe={project.whatItTaughtMe}
                 whatItTaughtMeLabel={t('whatItTaughtMeLabel')}
+                href={project.href}
               />
             ))}
           </div>

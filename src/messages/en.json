@@ -466,29 +466,81 @@
       "text": "These cases tell the how. For the who, there's the about page. If you want to talk, write me.",
       "primary": "About me",
       "secondary": "Get in touch"
+    },
+    "casahunter": {
+      "tag": "Product · Scoring · AI Budget · Feedback loops",
+      "role": "Founder / Solo",
+      "company": "Side project · Apartment hunting · Italy",
+      "period": "2024–present",
+      "heroMetric": "8",
+      "heroMetricLabel": "platforms monitored automatically",
+      "secondMetric": "1",
+      "secondMetricLabel": "developer. Many fewer apartments to check manually.",
+      "context": {
+        "heading": "The problem",
+        "content": [
+          "Finding an apartment in Italy is broken. Listings appear on 8+ platforms — Immobiliare.it, Airbnb, Subito, Facebook marketplace, real estate agency websites, and more. Good apartments disappear in hours. Checking every platform daily for new listings that match your criteria is a full-time job. I needed an apartment, not a hobby.",
+          "Existing tools don't solve it. Immobiliare.it alerts are keyword-based, not quality-based. Airbnb's filtering is rigid. No single platform aggregates and intelligently prioritizes across all sources. Manual hunting meant spending 2–3 hours daily across tabs, bookmarks, and browser history."
+        ]
+      },
+      "challenge": {
+        "heading": "The product decision: build vs buy",
+        "content": [
+          "The obvious move: buy a subscription to a rental search aggregator. But none of them did what I actually needed. They aggregated listings, but they didn't understand my preferences. They didn't learn from my feedback. They didn't rank by actual quality, only by recency or default algorithm.",
+          "So I built it. But not as a traditional app. The goal wasn't a shiny UI — it was automation that runs without me. No daily manual checking. No opening 8 tabs. Telegram notifications when something matches.",
+          "The real product decision wasn't \"build an aggregator.\" It was \"optimize the cost of AI scoring across millions of listings daily.\""
+        ]
+      },
+      "approach": {
+        "heading": "Three-pass scoring: deterministic + AI + feedback",
+        "content": [
+          "**Pass 1: Deterministic filter (free, fast).** Price, location, size, rooms — hard constraints. For each platform, 80% of listings get eliminated here without touching any AI budget. A listing that doesn't meet basic criteria isn't worth scoring. This pass runs every day on all 8 platforms with negligible compute cost.",
+          "**Pass 2: AI scoring (expensive, selective).** Only the 20% of listings that passed the first filter get sent to Claude Sonnet for analysis. The AI scores quality: reads listing text, analyzes photo descriptions, checks neighborhood context, evaluates value-for-money. Scoring happens once per listing, cached for comparison.",
+          "**Pass 3: Feedback loop (learning).** User feedback adjusts scoring weights. Thumbs up or down on Telegram adjusts how future listings get scored. A building I marked as \"too noisy\" lowers scores for similar listings in that area. The system learns.",
+          "Why this structure? It's the same pattern used in enterprise products: spend expensive resources only where they create value. At scale, running Claude Sonnet on all listings would cost thousands monthly. Running it on 20% costs single digits. The first pass is the gate."
+        ]
+      },
+      "results": {
+        "heading": "The results",
+        "items": [
+          {
+            "metric": "8",
+            "label": "real estate platforms monitored and aggregated daily"
+          },
+          {
+            "metric": "0",
+            "label": "manual platform checks needed. Telegram notification when there's something."
+          },
+          {
+            "metric": "~80%",
+            "label": "listings filtered out by pass 1 before AI even sees them"
+          },
+          {
+            "metric": "Expanding",
+            "label": "to micro-SaaS based on demand from friends and colleagues"
+          }
+        ]
+      },
+      "learned": {
+        "heading": "Why this matters for product thinking",
+        "content": [
+          "The 80/20 budget split between deterministic and AI scoring isn't a hack. It's the same principle behind good product decisions at any scale: don't spend expensive resources to solve cheap problems. Filter early, spend where it counts.",
+          "Feedback loops that refine scoring are the same principle behind any good product iteration. You ship, you get signal, you adjust. The difference here is the signal is thumbs up/down on Telegram, not metrics dashboards. Smaller feedback loop, same principle.",
+          "Knowing what NOT to build matters as much as what you build. No mobile app (browser is enough). No social features (it's a personal tool). No marketplace. No other revenue stream. Scope discipline is a product decision.",
+          "The decision to go SaaS wasn't planned. Friends asked for access. Colleagues wanted their own versions. That's the signal that something has product-market fit, even in side project form. Now exploring the micro-SaaS path — same product thinking, now with paying users as validation."
+        ]
+      }
     }
   },
   "lab": {
     "headline": "Same thinking,\napplied to my own problems.",
-    "intro": "Every project here started from a real need, not a tutorial. Same approach as the day job: understand the problem, build the minimum to validate the idea, decide what not to build. Code is the means. Product thinking is the point.",
+    "intro": "Side projects are product decisions, not coding exercises. Same thinking as the day job, different constraints. Every project here started from a real need: understand the problem, build the minimum to validate, decide what not to build. The result is on Telegram, not in a portfolio.",
     "whatItTaughtMeLabel": "What it taught me",
     "casahunter": {
       "title": "CasaHunter",
       "description": "A tool that apartment-hunts for you, learns from your feedback, and pings you on Telegram.",
       "statusLabel": "Active",
       "whatItTaughtMe": "Three-pass scoring: filter 80% deterministically, spend AI budget on the 20% that matters. Same logic applicable to any product at scale."
-    },
-    "moneymind": {
-      "title": "MoneyMind",
-      "description": "Personal finance that doesn't ask you to fill out spreadsheets. Automatic transaction analysis, pattern recognition, weekly insights. In development.",
-      "statusLabel": "In development",
-      "whatItTaughtMe": "Designing for people who hate spreadsheets means the UI can't look like one either."
-    },
-    "openclaw": {
-      "title": "OpenClaw",
-      "description": "Open-source web scraper for extracting structured product data from e-commerce sites. Experiment phase.",
-      "statusLabel": "Experiment",
-      "whatItTaughtMe": "Structured extraction at scale requires knowing when to use headless browsers and when a simple HTTP request is enough."
     },
     "cta": {
       "text": "If you're curious about how I think when I build, the professional case studies tell the same story at a different scale.",
@@ -541,18 +593,83 @@
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Why I prototype in code",
-        "date": "2026-03-22",
-        "excerpt": "A Product Manager who prototypes in code makes different decisions."
+        "date": "2026-01-16",
+        "excerpt": "A Product Manager who prototypes in code makes different decisions.",
+        "readingTime": "4 min read",
+        "tags": [
+          "Product Craft",
+          "Technical PM"
+        ]
       },
       "the-meeting-where-everyone-says-yes": {
         "title": "The meeting where everyone says yes",
-        "date": "2026-03-15",
-        "excerpt": "Alignment is not the same as agreement. One builds products, the other builds backlogs."
+        "date": "2026-02-08",
+        "excerpt": "Alignment is not the same as agreement. One builds products, the other builds backlogs.",
+        "readingTime": "5 min read",
+        "tags": [
+          "Decision Making",
+          "Product Craft"
+        ]
       },
       "why-metrics-lie-without-context": {
         "title": "Why metrics lie without context",
-        "date": "2026-03-08",
-        "excerpt": "A number without a story is just a number. The story is what makes it a decision."
+        "date": "2026-03-22",
+        "excerpt": "A number without a story is just a number. The story is what makes it a decision.",
+        "readingTime": "6 min read",
+        "tags": [
+          "Product Craft",
+          "Payments"
+        ]
+      },
+      "when-ai-makes-sense-in-product": {
+        "title": "When AI makes sense in product",
+        "date": "2024-12-15",
+        "excerpt": "Thinking about AI in product decisions.",
+        "readingTime": "5 min",
+        "tags": [
+          "AI",
+          "Product"
+        ]
+      },
+      "managing-payments-at-scale": {
+        "title": "Managing payments at scale",
+        "date": "2025-01-15",
+        "excerpt": "How payments scale.",
+        "readingTime": "6 min",
+        "tags": [
+          "Payments",
+          "Scale"
+        ]
+      },
+      "remote-pm-across-countries": {
+        "title": "Being a remote PM across countries",
+        "date": "2025-01-08",
+        "excerpt": "Product management across time zones.",
+        "readingTime": "5 min",
+        "tags": [
+          "Remote",
+          "PM"
+        ]
+      },
+      "build-vs-buy-framework": {
+        "title": "Build vs Buy framework",
+        "date": "2024-12-08",
+        "excerpt": "A framework for build vs buy decisions.",
+        "readingTime": "4 min",
+        "tags": [
+          "Framework",
+          "Decisions"
+        ]
+      },
+      "seven-years-running-a-business": {
+        "title": "Seven years running a business",
+        "date": "2025-01-01",
+        "excerpt": "Lessons from running a business.",
+        "readingTime": "7 min",
+        "tags": [
+          "Business",
+          "Lessons"
+        ]
       }
     }
   },
@@ -593,6 +710,10 @@
       "title": "LeadsBridge Redesign — Mattia De Luca",
       "description": "How removing features from an integration flow cut setup time by 35%. A product case study about simplification, auto-mapping, and making the hard path easier."
     },
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "casahunter": {
+      "title": "CasaHunter — Mattia De Luca",
+      "description": "How I built a tool that apartment-hunts for you. A product case study about three-pass scoring, AI budget optimization, and knowing when to go SaaS."
+    }
   }
 }
