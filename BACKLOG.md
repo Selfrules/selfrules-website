@@ -56,7 +56,7 @@
 > Come hiring manager, "full metrics available upon production launch" mi fa pensare che il progetto non è finito.
 
 - [x] **T-1.4.1** (2026-03-24) `[MATTIA-REQUIRED]` Framing Cashless deciso: mix strategic decision + 0-to-1 + partnership/ecosystem. Dati pilot: 5 clienti, 150+ ricariche in 14gg, 64% volume da web in 1 centro. Partnership AC: v2 in sviluppo, API ready, 173 centri overlap (53%), beta Q1. ✅
-- [ ] **T-1.4.2** `[CLAUDE-AUTONOMO]` Riscrivere il case study con i nuovi dati pilot + evoluzione partnership AC — eliminare "coming soon", aggiungere metriche reali e sezione partnership/ecosystem
+- [x] **T-1.4.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Cashless riscritto: dati pilot (5 clienti, 150+ ricariche, 64% web), partnership AC (173 centri, v2 in sviluppo), rimosso "coming soon" ✅
 
 ---
 
@@ -68,24 +68,24 @@
 ### US 2.1: Espandere CasaHunter da card a mini-case study
 > Come hiring manager, voglio vedere come Mattia applica il product thinking a un problema personale — e come usa AI in modo intelligente.
 
-- [ ] **T-2.1.1** `[CLAUDE-AUTONOMO]` Creare la pagina `/lab/casahunter` con struttura: problema personale → decisione di prodotto (build vs buy) → architettura 3-pass scoring (deterministico → AI → feedback loop) → stack + decisioni tecniche → risultati (listings analizzate, tempo risparmiato, accuracy) → decisione di trasformarlo in SaaS
-- [ ] **T-2.1.2** `[CLAUDE-AUTONOMO]` Scrivere copy EN + IT, applicando selfrules-voice — tono "ecco come ragiono anche quando nessuno mi paga"
+- [x] **T-2.1.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Pagina `/lab/casahunter` creata con struttura completa (problema → build vs buy → three-pass scoring → risultati → SaaS decision) ✅
+- [x] **T-2.1.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Copy EN + IT scritto con selfrules-voice ✅
 - [ ] **T-2.1.3** `[MATTIA-REQUIRED]` Fornire screenshot della dashboard React e/o del bot Telegram — ⏳ Mattia ci torna quando pronti
 - [ ] **T-2.1.4** `[MATTIA-REQUIRED]` Decidere se linkare il repo GitHub — ⏳ in attesa
 - [ ] **T-2.1.5** `[CLAUDE-AUTONOMO]` Creare diagramma architetturale SVG del three-pass scoring pipeline
-- [ ] **T-2.1.6** `[CLAUDE-AUTONOMO]` Aggiornare la card nella pagina Lab con link alla pagina dettaglio
+- [x] **T-2.1.6** (2026-03-24) `[CLAUDE-AUTONOMO]` Card Lab aggiornata con link a /lab/casahunter ✅
 
 ### US 2.2: Pulire la pagina Lab
 > Come hiring manager, 2 progetti "in development" senza niente da mostrare comunicano "inizia le cose ma non le finisce".
 
-- [ ] **T-2.2.1** `[CLAUDE-AUTONOMO]` Rimuovere MoneyMind e OpenClaw dalla pagina Lab (ripristinare quando hanno deliverable tangibili)
-- [ ] **T-2.2.2** `[CLAUDE-AUTONOMO]` Riscrivere l'intro della pagina Lab — meno generica, più specifica su "i side project sono decisioni di prodotto, non esercizi tecnici"
-- [ ] **T-2.2.3** `[CLAUDE-AUTONOMO]` Aggiornare translation keys en.json e it.json
+- [x] **T-2.2.1** (2026-03-24) `[CLAUDE-AUTONOMO]` MoneyMind e OpenClaw rimossi dalla Lab page ✅
+- [x] **T-2.2.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Intro Lab riscritta: "Side projects are product decisions, not coding exercises" ✅
+- [x] **T-2.2.3** (2026-03-24) `[CLAUDE-AUTONOMO]` Translation keys aggiornate ✅
 
 ### US 2.3: Collegare Lab e AI capability senza posizionarsi come "AI PM"
 > Come candidato, voglio che il mio uso di AI emerga come competenza aggiuntiva — una ninja belt, non il focus primario.
 
-- [ ] **T-2.3.1** `[CLAUDE-AUTONOMO]` Nel case study CasaHunter, evidenziare il framework decisionale "quando usare AI e quando no" (80% deterministico, 20% AI = budget optimization). Questo è product thinking applicato all'AI.
+- [x] **T-2.3.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Framework 80/20 AI evidenziato nel case study CasaHunter ✅
 - [ ] **T-2.3.2** `[CLAUDE-AUTONOMO]` Aggiungere un tag/badge "AI-assisted" dove appropriato (CasaHunter, e eventualmente nel sito stesso come meta-reference "questo sito è stato costruito con Claude Code")
 
 ---
@@ -138,21 +138,21 @@
 > Come hiring manager, voglio vedere che Mattia ha opinioni forti e pensiero strutturato sui temi rilevanti per il mio team.
 
 - [x] **T-4.1.1** (2026-03-24) `[INSIEME]` Lista 5 post approvata: (1) When AI Makes Sense in Product, (2) Managing Payments at Scale, (3) Remote PM Across 5 Countries, (4) Build vs Buy Decision Framework, (5) What I Learned Running a Startup for 7 Years ✅
-- [ ] **T-4.1.2** `[CLAUDE-AUTONOMO]` Scrivere post #1 EN + IT, applicando selfrules-voice, struttura: problema concreto → esperienza → lezione → domanda aperta
-- [ ] **T-4.1.3** `[CLAUDE-AUTONOMO]` Scrivere post #2 EN + IT
-- [ ] **T-4.1.4** `[CLAUDE-AUTONOMO]` Scrivere post #3 EN + IT
-- [ ] **T-4.1.5** `[CLAUDE-AUTONOMO]` Scrivere post #4 EN + IT
-- [ ] **T-4.1.6** `[CLAUDE-AUTONOMO]` Scrivere post #5 EN + IT
-- [ ] **T-4.1.7** `[CLAUDE-AUTONOMO]` Implementare tutte le pagine con routing, metadata, JSON-LD, hreflang
+- [x] **T-4.1.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Post #1 "When AI Makes Sense in Product" EN + IT ✅
+- [x] **T-4.1.3** (2026-03-24) `[CLAUDE-AUTONOMO]` Post #2 "Managing Payments at Scale" EN + IT ✅
+- [x] **T-4.1.4** (2026-03-24) `[CLAUDE-AUTONOMO]` Post #3 "Remote PM Across 5 Countries" EN + IT ✅
+- [x] **T-4.1.5** (2026-03-24) `[CLAUDE-AUTONOMO]` Post #4 "Build vs Buy Framework" EN + IT ✅
+- [x] **T-4.1.6** (2026-03-24) `[CLAUDE-AUTONOMO]` Post #5 "7 Years Running a Business" EN + IT ✅
+- [x] **T-4.1.7** (2026-03-24) `[CLAUDE-AUTONOMO]` Tutte le pagine implementate con routing, MDX, metadata, sitemap ✅
 - [ ] **T-4.1.8** `[MATTIA-REQUIRED]` Revisione e approvazione di ogni post prima di merge
 
 ### US 4.2: Migliorare la presentazione dei blog post
 > Come lettore, voglio sapere quanto tempo mi serve per leggere e di cosa parla il post prima di aprirlo.
 
-- [ ] **T-4.2.1** `[CLAUDE-AUTONOMO]` Aggiungere "reading time" calcolato (parole / 200) visibile nella card e nella pagina del post
-- [ ] **T-4.2.2** `[CLAUDE-AUTONOMO]` Aggiungere tag/categoria visibile (Product Craft, Technical PM, Payments, AI, Startup)
-- [ ] **T-4.2.3** `[CLAUDE-AUTONOMO]` Distribuire le date dei post in modo naturale — non tutti nello stesso mese
-- [ ] **T-4.2.4** `[CLAUDE-AUTONOMO]` Aggiungere year grouping nella pagina notes listing (gap P0 dal Figma v25)
+- [x] **T-4.2.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Reading time aggiunto a tutti gli 8 post ✅
+- [x] **T-4.2.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Tag/categoria visibili: Product Craft, Technical PM, Payments, AI, Decision Making, Startup ✅
+- [x] **T-4.2.3** (2026-03-24) `[CLAUDE-AUTONOMO]` Date distribuite: Jan-Jun 2026 ✅
+- [x] **T-4.2.4** (2026-03-24) `[CLAUDE-AUTONOMO]` Year grouping nella notes listing ✅
 
 ### US 4.3: Cross-posting e distribuzione
 > Come candidato, i post che vivono solo sul sito non generano traffico né social proof.
@@ -196,11 +196,11 @@
 ### US 6.1: Differenziare l'About dalla Homepage
 > Come hiring manager che ha letto la homepage, non voglio rileggere le stesse cose. L'About deve andare in profondità.
 
-- [ ] **T-6.1.1** `[CLAUDE-AUTONOMO]` Riscrivere la sezione narrativa dell'About: il percorso raccontato come storia (perché ogni transizione, cosa ha portato alla successiva), non come ripetizione della timeline homepage
-- [ ] **T-6.1.2** `[CLAUDE-AUTONOMO]` Correzione critica: Selfrules NON è stata venduta — la P.IVA è stata chiusa nel 2018. Verificare e correggere qualsiasi riferimento nel sito.
-- [ ] **T-6.1.3** `[CLAUDE-AUTONOMO]` Potenziare la sezione "Cosa credo" con esempi concreti da case study — non principi astratti ma "questo principio l'ho applicato quando..."
-- [ ] **T-6.1.4** `[CLAUDE-AUTONOMO]` Aggiungere dual CTA in fondo: "Read the case studies" + "Get in touch" (gap P1 dal Figma v25)
-- [ ] **T-6.1.5** `[CLAUDE-AUTONOMO]` Aggiornare en.json e it.json
+- [x] **T-6.1.1** (2026-03-24) `[CLAUDE-AUTONOMO]` About riscritta come narrativa (perché ogni transizione, cosa ha insegnato) ✅
+- [x] **T-6.1.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Fix: Selfrules "chiusa" non "venduta" — corretto ✅
+- [x] **T-6.1.3** (2026-03-24) `[CLAUDE-AUTONOMO]` Sezione "Cosa credo" con esempi concreti dai case study ✅
+- [x] **T-6.1.4** (2026-03-24) `[CLAUDE-AUTONOMO]` Dual CTA: "Read the case studies" + "Get in touch" ✅
+- [x] **T-6.1.5** (2026-03-24) `[CLAUDE-AUTONOMO]` en.json + it.json aggiornati ✅
 
 ---
 
