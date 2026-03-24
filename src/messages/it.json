@@ -736,47 +736,67 @@
       }
     }
   },
+  "contact": {
+    "headline": "Parliamo di prodotto",
+    "intro": "Sono sempre interessato a conversazioni su sfide di prodotto, soprattutto in B2B SaaS, pagamenti e design di piattaforme. Che tu abbia un ruolo specifico in mente o solo voglia scambiare idee, sono qui ad ascoltare.",
+    "emailLabel": "Email",
+    "emailValue": "hello@selfrules.org",
+    "linkedinLabel": "LinkedIn",
+    "linkedinValue": "linkedin.com/in/mattiadeluca",
+    "linkedinUrl": "https://linkedin.com/in/mattiadeluca",
+    "availabilityLabel": "Disponibilità",
+    "availabilityText": "Aperto a ruoli di Product Manager e Technical PM. Remoto, fuso orario EU o US. Con base in Italia.",
+    "cta": {
+      "text": "Mandami un'email o connettiti su LinkedIn. Il primo messaggio migliore è sempre specifico: cosa stai costruendo, qual è la sfida, cosa stai cercando di capire.",
+      "primary": "Invia email",
+      "secondary": "Apri LinkedIn"
+    }
+  },
   "metadata": {
     "home": {
       "title": "Mattia De Luca — Senior Technical Product Manager | B2B SaaS . Payments",
-      "description": "Senior Technical Product Manager con 10+ anni in B2B SaaS, Payments e Platform. Design, codice e product management nella stessa testa."
+      "description": "Senior Product Manager. Ho salvato sistemi di pagamento dalla crisi al 99% uptime. Lanciato B2B da zero. Scopri come product e codice convergono."
     },
     "about": {
       "title": "Chi sono",
-      "description": "Product Manager con background cross-funzionale: designer, developer, poi PM. Il vantaggio: quando design, engineering e business non si capiscono, non serve un interprete."
+      "description": "Designer, developer, poi Product Manager—tutto in una testa. Carriera costruita su colmare il divario tra design, engineering e business quando non si capiscono."
     },
     "work": {
       "title": "Lavori",
-      "description": "Casi studio da 10+ anni di product management in payments, platform e B2B SaaS. Numeri, non parole."
+      "description": "Tre casi studio: pagamenti salvati dalla crisi, piattaforma integrazione da zero, tempo setup tagliato 35%. Numeri e decisioni, non marketing copy."
     },
     "lab": {
       "title": "Lab",
-      "description": "Side project costruiti da un PM che scrive codice. Prodotti veri, non mockup."
+      "description": "Side project costruiti da un PM che scrive codice. CasaHunter: IA che cerca casa. Prodotti veri con vincoli reali, non mockup o prototipi."
     },
     "approach": {
       "title": "Approccio",
-      "description": "Come lavoro nel product management: discovery, prototipi, ship. Nessun framework, nessun teatro."
+      "description": "Come lavoro: discovery prima, prototipi prima di spec, ship con convinzione. Nessun framework, nessun teatro—cosa funziona al limite del caos."
     },
     "notes": {
       "title": "Note",
-      "description": "Note su product management, decisioni tecniche, e costruire cose. Quando c'e' qualcosa da dire."
+      "description": "Saggi su decisioni di prodotto, metriche che ingannano, quando buildare vs comprare, e perché prototipar in codice cambia il modo di pensare il prodotto."
+    },
+    "contact": {
+      "title": "Parliamo",
+      "description": "Contattami se vuoi parlare di sfide di prodotto, opportunità lavorative, o semplicemente scambiare idee su product management e building in tech."
     },
     "paymentsRescue": {
       "title": "Payments Rescue — Mattia De Luca",
-      "description": "Come un sistema di pagamento è passato dalla crisi al 99% di uptime. Un caso studio di prodotto su triage, disciplina di scope e leggere la documentazione dell’API."
+      "description": "Sistema di pagamento in crisi. 44 problemi aperti. Due settimane di triage: 12 critici, 4 con impatto finanziario. I 4 peggiori risolti in 6 settimane."
     },
     "cashlessSystem": {
       "title": "Cashless System — Mattia De Luca",
-      "description": "Come un prodotto cashless è passato da zero al partner di integrazione giusto. Un caso studio di prodotto su uccidere l’opzione ovvia e trovare la soluzione strutturale."
+      "description": "Prodotto cashless da zero al lancio. Perché il partner di integrazione ovvio era sbagliato. Come abbiamo trovato la soluzione strutturale invece."
     },
-    "skipToContent": "Vai al contenuto",
     "leadsbridgeRedesign": {
       "title": "LeadsBridge Redesign — Mattia De Luca",
-      "description": "Come rimuovere funzionalità da un flusso di integrazione ha tagliato il tempo di setup del 35%. Un caso di studio su semplificazione, auto-mapping, e rendere il percorso difficile più facile."
+      "description": "Una feature rimossa ha tagliato il setup del 35%. Come la semplificazione, auto-mapping e ripensare il percorso difficile sono diventati il differenziale."
     },
     "casahunter": {
       "title": "CasaHunter — Mattia De Luca",
-      "description": "Come ho costruito un tool che cerca casa al posto tuo. Un caso studio di prodotto su scoring a tre passaggi, ottimizzazione del budget AI, e sapere quando andare SaaS."
-    }
+      "description": "Costruito un tool di apartment-hunting con IA. Scoring a tre passaggi, ottimizzazione budget, e la lezione: eleganza tecnica < velocità di ship."
+    },
+    "skipToContent": "Vai al contenuto"
   }
 }

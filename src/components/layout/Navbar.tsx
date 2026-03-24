@@ -11,7 +11,7 @@ const navLinks: readonly { key: string; href: string; isAccent?: boolean }[] = [
   { key: 'work', href: '/work' },
   { key: 'lab', href: '/lab' },
   { key: 'notes', href: '/notes' },
-  { key: 'contact', href: '/#contact', isAccent: true },
+  { key: 'contact', href: '/contact', isAccent: true },
 ];
 
 interface NavbarProps {
