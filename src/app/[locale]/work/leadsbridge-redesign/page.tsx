@@ -6,6 +6,8 @@ import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
+import { PullQuote } from '@/components/ui/PullQuote';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -58,6 +60,10 @@ export default async function LeadsBridgePage({
     label: string;
   }[];
   const learnedParagraphs = t.raw('leadsbridge.learned.content') as string[];
+  const patternItems = t.raw('leadsbridge.patterns.items') as {
+    title: string;
+    content: string;
+  }[];
 
   return (
     <>
@@ -153,6 +159,21 @@ export default async function LeadsBridgePage({
         </div>
       </Section>
 
+      {/* Case Study Summary */}
+      <Section>
+        <CaseStudySummary
+          role={t('leadsbridge.role')}
+          period={t('leadsbridge.period')}
+          industry={t('leadsbridge.industry')}
+          metrics={[
+            { value: t('leadsbridge.heroMetric'), label: t('leadsbridge.heroMetricLabel') },
+            { value: t('leadsbridge.secondMetric'), label: t('leadsbridge.secondMetricLabel') },
+            { value: resultItems[0]?.metric || 'Higher', label: resultItems[0]?.label || 'first bridge completion rate' },
+          ]}
+          summary={t('leadsbridge.summary')}
+        />
+      </Section>
+
       {/* Body */}
       <Section>
         <div
@@ -177,8 +198,16 @@ export default async function LeadsBridgePage({
 
           {/* Approach */}
           <h2>{t('leadsbridge.approach.heading')}</h2>
-          {approachParagraphs.map((p, i) => (
+          {approachParagraphs.slice(0, 1).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+          <PullQuote>We're not removing capability, we're removing friction.</PullQuote>
+          {approachParagraphs.slice(1, 3).map((p, i) => (
+            <p key={i + 1} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+          <PullQuote>A blank field mapping screen and a pre-filled one lead to the same place. But the pre-filled version communicates we understand your use case.</PullQuote>
+          {approachParagraphs.slice(3).map((p, i) => (
+            <p key={i + 3} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
 
           {/* Results */}
@@ -200,6 +229,17 @@ export default async function LeadsBridgePage({
           <h2 className="mt-16">{t('leadsbridge.learned.heading')}</h2>
           {learnedParagraphs.map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+
+          {/* Patterns */}
+          <h2 className="mt-16">{t('leadsbridge.patterns.heading')}</h2>
+          {patternItems.map((item, i) => (
+            <div key={i} className="mt-8">
+              <h3 className="font-heading font-bold text-[16px] leading-[1.5] tracking-[-0.5px] text-[#f5f5f0]">
+                {item.title}
+              </h3>
+              <p className="mt-3">{item.content}</p>
+            </div>
           ))}
         </div>
       </Section>

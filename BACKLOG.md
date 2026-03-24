@@ -39,18 +39,18 @@
 ### US 1.2: Rendere i case study scannable e visivamente ricchi
 > Come hiring manager con poco tempo, voglio poter fare skim di un case study in 60 secondi e capire l'impatto — senza leggere wall-of-text.
 
-- [ ] **T-1.2.1** `[CLAUDE-AUTONOMO]` Creare componente `PullQuote` per evidenziare insight chiave nei case study (box con bordo accent, font più grande)
-- [ ] **T-1.2.2** `[CLAUDE-AUTONOMO]` Creare componente `MetricHighlight` per metriche inline nei case study (numero grande accent + contesto)
-- [ ] **T-1.2.3** `[CLAUDE-AUTONOMO]` Creare componente `CaseStudySummary` — box in cima al case study con: ruolo, periodo, industry, 3 metriche chiave, 1-line summary. L'hiring manager legge solo questo e capisce.
-- [ ] **T-1.2.4** `[CLAUDE-AUTONOMO]` Applicare i nuovi componenti al case study Payments Rescue
-- [ ] **T-1.2.5** `[CLAUDE-AUTONOMO]` Applicare i nuovi componenti al case study Cashless System
+- [x] **T-1.2.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Componente `PullQuote` creato — box con bordo accent, font più grande ✅
+- [x] **T-1.2.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Componente `MetricHighlight` creato — numero grande accent + contesto ✅
+- [x] **T-1.2.3** (2026-03-24) `[CLAUDE-AUTONOMO]` Componente `CaseStudySummary` creato — ruolo, periodo, industry, 3 metriche, 1-line summary ✅
+- [x] **T-1.2.4** (2026-03-24) `[CLAUDE-AUTONOMO]` Componenti applicati a Payments Rescue (CaseStudySummary + 2 PullQuote) ✅
+- [x] **T-1.2.5** (2026-03-24) `[CLAUDE-AUTONOMO]` Componenti applicati a Cashless System e LeadsBridge ✅
 - [ ] **T-1.2.6** `[INSIEME]` Aggiungere 1 visual per case study — diagramma di architettura, flow, o before/after. Mattia indica il contenuto concettuale, Claude genera il visual in SVG/code.
 
 ### US 1.3: Aggiungere contesto di trasferibilità ai case study
 > Come hiring manager, dopo aver letto il case study voglio capire: "questo approccio funzionerebbe anche nella mia azienda?"
 
-- [ ] **T-1.3.1** `[CLAUDE-AUTONOMO]` Aggiungere sezione "Pattern" alla fine di ogni case study: 3-4 bullet che estraggono il principio generalizzabile (es. "Crisis → freeze growth → triage → fix → resume" per Payments Rescue)
-- [ ] **T-1.3.2** `[CLAUDE-AUTONOMO]` Scrivere copy EN + IT per le sezioni Pattern di Payments Rescue e Cashless System
+- [x] **T-1.3.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Sezione "Transferable Patterns" aggiunta a tutti e 3 i case study (4 pattern ciascuno) ✅
+- [x] **T-1.3.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Copy EN + IT scritto per Pattern di Payments Rescue, Cashless System e LeadsBridge ✅
 
 ### US 1.4: Risolvere il Cashless System — metriche mancanti
 > Come hiring manager, "full metrics available upon production launch" mi fa pensare che il progetto non è finito.
@@ -72,7 +72,7 @@
 - [x] **T-2.1.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Copy EN + IT scritto con selfrules-voice ✅
 - [ ] **T-2.1.3** `[MATTIA-REQUIRED]` Fornire screenshot della dashboard React e/o del bot Telegram — ⏳ Mattia ci torna quando pronti
 - [ ] **T-2.1.4** `[MATTIA-REQUIRED]` Decidere se linkare il repo GitHub — ⏳ in attesa
-- [ ] **T-2.1.5** `[CLAUDE-AUTONOMO]` Creare diagramma architetturale SVG del three-pass scoring pipeline
+- [x] **T-2.1.5** (2026-03-24) `[CLAUDE-AUTONOMO]` Diagramma architetturale SVG del three-pass scoring pipeline creato e integrato nella pagina CasaHunter ✅
 - [x] **T-2.1.6** (2026-03-24) `[CLAUDE-AUTONOMO]` Card Lab aggiornata con link a /lab/casahunter ✅
 
 ### US 2.2: Pulire la pagina Lab
@@ -86,7 +86,7 @@
 > Come candidato, voglio che il mio uso di AI emerga come competenza aggiuntiva — una ninja belt, non il focus primario.
 
 - [x] **T-2.3.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Framework 80/20 AI evidenziato nel case study CasaHunter ✅
-- [ ] **T-2.3.2** `[CLAUDE-AUTONOMO]` Aggiungere un tag/badge "AI-assisted" dove appropriato (CasaHunter, e eventualmente nel sito stesso come meta-reference "questo sito è stato costruito con Claude Code")
+- [x] **T-2.3.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Badge AiBadge creato: "AI-assisted" su CasaHunter + "Built with Claude Code" nel footer ✅
 
 ---
 
@@ -238,11 +238,11 @@
 ### US 8.1: Fix problemi tecnici
 > Come visitatore tecnico, dettagli rotti comunicano disattenzione.
 
-- [ ] **T-8.1.1** `[CLAUDE-AUTONOMO]` Rimuovere /dev/components dal build di produzione (o proteggerlo con condizione NODE_ENV)
-- [ ] **T-8.1.2** `[CLAUDE-AUTONOMO]` Rimuovere o rendere dinamico il conteggio commit dal footer — "10 commits" comunica "fatto in fretta"
-- [ ] **T-8.1.3** `[CLAUDE-AUTONOMO]` Fix contrast ratio text-tertiary (#5A5A5E → almeno #7A7A7E per WCAG AA compliance)
-- [ ] **T-8.1.4** `[CLAUDE-AUTONOMO]` Consolidare SectionHeader duplicato (esiste in layout/ e sections/)
-- [ ] **T-8.1.5** `[CLAUDE-AUTONOMO]` Rimuovere asset Next.js default non usati (file.svg, globe.svg, next.svg, vercel.svg, window.svg)
+- [x] **T-8.1.1** (2026-03-24) `[CLAUDE-AUTONOMO]` /dev/components già protetto con `if (process.env.NODE_ENV === 'production') notFound()` ✅
+- [x] **T-8.1.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Commit count nel footer è dinamico (163 commits, aggiornato automaticamente al build) ✅
+- [x] **T-8.1.3** (2026-03-24) `[CLAUDE-AUTONOMO]` text-tertiary già corretto a #7A7A7E in globals.css ✅
+- [x] **T-8.1.4** (2026-03-24) `[CLAUDE-AUTONOMO]` Nessun duplicato: SectionHeader esiste solo in sections/ ✅
+- [x] **T-8.1.5** (2026-03-24) `[CLAUDE-AUTONOMO]` Asset Next.js default già rimossi, public/ contiene solo og-image.png ✅
 - [ ] **T-8.1.6** `[CLAUDE-AUTONOMO]` Chiudere i gap P0 dal GAP-ANALYSIS-v25: Lab page layout + Notes year grouping
 
 ### US 8.2: SEO optimization

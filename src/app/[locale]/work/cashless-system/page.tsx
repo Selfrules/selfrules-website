@@ -6,6 +6,8 @@ import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
+import { PullQuote } from '@/components/ui/PullQuote';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -58,6 +60,10 @@ export default async function CashlessSystemPage({
     label: string;
   }[];
   const learnedParagraphs = t.raw('cashless.learned.content') as string[];
+  const patternItems = t.raw('cashless.patterns.items') as {
+    title: string;
+    content: string;
+  }[];
 
   return (
     <>
@@ -153,6 +159,21 @@ export default async function CashlessSystemPage({
         </div>
       </Section>
 
+      {/* Case Study Summary */}
+      <Section>
+        <CaseStudySummary
+          role={t('cashless.role')}
+          period={t('cashless.period')}
+          industry={t('cashless.industry')}
+          metrics={[
+            { value: t('cashless.heroMetric'), label: t('cashless.heroMetricLabel') },
+            { value: t('cashless.secondMetric'), label: t('cashless.secondMetricLabel') },
+            { value: resultItems[1]?.metric || '1', label: resultItems[1]?.label || 'co-development partnership' },
+          ]}
+          summary={t('cashless.summary')}
+        />
+      </Section>
+
       {/* Body */}
       <Section>
         <div
@@ -177,8 +198,16 @@ export default async function CashlessSystemPage({
 
           {/* Approach */}
           <h2>{t('cashless.approach.heading')}</h2>
-          {approachParagraphs.map((p, i) => (
+          {approachParagraphs.slice(0, 2).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+          <PullQuote>The hardest product decision isn't what to build. It's what to stop building.</PullQuote>
+          {approachParagraphs.slice(2, 4).map((p, i) => (
+            <p key={i + 2} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+          <PullQuote>Choosing a partner isn't a vendor evaluation. It's a product decision.</PullQuote>
+          {approachParagraphs.slice(4).map((p, i) => (
+            <p key={i + 4} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
 
           {/* Results */}
@@ -200,6 +229,17 @@ export default async function CashlessSystemPage({
           <h2 className="mt-16">{t('cashless.learned.heading')}</h2>
           {learnedParagraphs.map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+
+          {/* Patterns */}
+          <h2 className="mt-16">{t('cashless.patterns.heading')}</h2>
+          {patternItems.map((item, i) => (
+            <div key={i} className="mt-8">
+              <h3 className="font-heading font-bold text-[16px] leading-[1.5] tracking-[-0.5px] text-[#f5f5f0]">
+                {item.title}
+              </h3>
+              <p className="mt-3">{item.content}</p>
+            </div>
           ))}
         </div>
       </Section>

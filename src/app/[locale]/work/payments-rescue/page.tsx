@@ -6,6 +6,8 @@ import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
+import { PullQuote } from '@/components/ui/PullQuote';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -58,6 +60,10 @@ export default async function PaymentsRescuePage({
     label: string;
   }[];
   const learnedParagraphs = t.raw('payments.learned.content') as string[];
+  const patternItems = t.raw('payments.patterns.items') as {
+    title: string;
+    content: string;
+  }[];
 
   return (
     <>
@@ -153,6 +159,21 @@ export default async function PaymentsRescuePage({
         </div>
       </Section>
 
+      {/* Case Study Summary */}
+      <Section>
+        <CaseStudySummary
+          role={t('payments.role')}
+          period={t('payments.period')}
+          industry={t('payments.industry')}
+          metrics={[
+            { value: t('payments.heroMetric'), label: t('payments.heroMetricLabel') },
+            { value: t('payments.secondMetric'), label: t('payments.secondMetricLabel') },
+            { value: resultItems[1]?.metric || '116', label: resultItems[1]?.label || 'centers integrated' },
+          ]}
+          summary={t('payments.summary')}
+        />
+      </Section>
+
       {/* Body */}
       <Section>
         <div
@@ -177,8 +198,16 @@ export default async function PaymentsRescuePage({
 
           {/* Approach */}
           <h2>{t('payments.approach.heading')}</h2>
-          {approachParagraphs.map((p, i) => (
+          {approachParagraphs.slice(0, 1).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+          <PullQuote>The first decision is to stop making the hole deeper. Everything else follows from that.</PullQuote>
+          {approachParagraphs.slice(1, 3).map((p, i) => (
+            <p key={i + 1} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+          <PullQuote>A single clear sorting criterion gave the team more clarity than any amount of discussion.</PullQuote>
+          {approachParagraphs.slice(3).map((p, i) => (
+            <p key={i + 3} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
 
           {/* Results */}
@@ -200,6 +229,17 @@ export default async function PaymentsRescuePage({
           <h2 className="mt-16">{t('payments.learned.heading')}</h2>
           {learnedParagraphs.map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
+          ))}
+
+          {/* Patterns */}
+          <h2 className="mt-16">{t('payments.patterns.heading')}</h2>
+          {patternItems.map((item, i) => (
+            <div key={i} className="mt-8">
+              <h3 className="font-heading font-bold text-[16px] leading-[1.5] tracking-[-0.5px] text-[#f5f5f0]">
+                {item.title}
+              </h3>
+              <p className="mt-3">{item.content}</p>
+            </div>
           ))}
         </div>
       </Section>

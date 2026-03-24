@@ -6,6 +6,8 @@ import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
+import { AiBadge } from '@/components/ui/AiBadge';
+import { ArchitectureDiagram } from '@/components/ui/ArchitectureDiagram';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -127,11 +129,16 @@ export default async function CasaHunterPage({
           {t('casahunter.role')} · {t('casahunter.company')} · {t('casahunter.period')}
         </span>
 
-        <h1 className="mt-5 font-heading font-bold text-[clamp(28px,4vw,48px)] leading-[1.15] tracking-[-1.2px] text-[#f5f5f0]">
-          {locale === 'it'
-            ? 'CasaHunter — Come ho costruito un tool che cerca casa al posto tuo'
-            : 'CasaHunter — How I built a tool that apartment-hunts for you'}
-        </h1>
+        <div className="mt-5 flex items-start justify-between gap-4">
+          <h1 className="font-heading font-bold text-[clamp(28px,4vw,48px)] leading-[1.15] tracking-[-1.2px] text-[#f5f5f0]">
+            {locale === 'it'
+              ? 'CasaHunter — Come ho costruito un tool che cerca casa al posto tuo'
+              : 'CasaHunter — How I built a tool that apartment-hunts for you'}
+          </h1>
+          <div className="mt-1 flex-shrink-0">
+            <AiBadge />
+          </div>
+        </div>
 
         <div className="mt-10 flex flex-wrap gap-8 md:gap-16">
           <div>
@@ -180,7 +187,21 @@ export default async function CasaHunterPage({
           {approachParagraphs.map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
+        </div>
 
+        {/* Architecture Diagram */}
+        <div className="not-prose mt-12">
+          <ArchitectureDiagram />
+        </div>
+
+        <div
+          className="max-w-none leading-[1.7]
+            prose prose-invert
+            prose-headings:font-heading prose-headings:text-[var(--color-text-primary)]
+            prose-p:text-[var(--color-text-primary)]
+            prose-strong:text-[var(--color-accent)] prose-strong:font-bold
+            prose-code:font-mono prose-code:text-sm prose-code:bg-[var(--color-surface)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-none"
+        >
           {/* Results */}
           <h2>{t('casahunter.results.heading')}</h2>
           <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-8 mt-6">

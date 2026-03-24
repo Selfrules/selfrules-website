@@ -325,6 +325,27 @@
           "The second thing: 44 items, 12 critical, 4 urgent. Most of what felt urgent could actually wait. Knowing which ones can't is the actual skill. A single clear sorting criterion gave the team more clarity than any amount of discussion.",
           "The third: when a problem gets labeled “unsolvable” or “waiting on the partner,” it's worth checking whether someone has actually read the API documentation. The source attribution fix was already there. It just needed someone willing to look."
         ]
+      },
+      "patterns": {
+        "heading": "Transferable patterns",
+        "items": [
+          {
+            "title": "Crisis → Freeze → Triage → Fix → Resume",
+            "content": "When a system is on fire, the first instinct is to fix everything at once. The pattern that works: freeze scope, triage ruthlessly (we went from 44 issues to 4 priorities), fix what matters, then resume growth."
+          },
+          {
+            "title": "Metrics as triage tool, not dashboard decoration",
+            "content": "The 99.19% uptime number only mattered because it came from instrumenting every failure mode. The dashboard wasn't for executives — it was for the on-call engineer at 2am."
+          },
+          {
+            "title": "Scope discipline under pressure",
+            "content": "Every stakeholder had a pet fix. The pattern: if it doesn't directly reduce failure rate, it waits. Saying no to 40 items made fixing the 4 that mattered possible."
+          },
+          {
+            "title": "Post-crisis architecture > pre-crisis architecture",
+            "content": "The payment system after the rescue was better than the one before the crisis. Crises expose architectural debt that normal operations hide."
+          }
+        ]
       }
     },
     "leadsbridge": {
@@ -395,6 +416,27 @@
           "The second lesson was about defaults. A blank field mapping screen and a pre-filled one lead to the same place. But the pre-filled version communicates \"we understand your use case\" while the blank one communicates \"figure it out.\" The product's job is to encode knowledge, not just provide tools.",
           "The third: working as a Product Owner under a founder who gave real autonomy was the best possible training ground. I owned the full cycle — research, design, specs, delivery, measurement — with a senior partner who challenged assumptions but didn't override decisions. That dynamic taught me more about product judgment than any framework."
         ]
+      },
+      "patterns": {
+        "heading": "Transferable patterns",
+        "items": [
+          {
+            "title": "Remove before you add",
+            "content": "The counterintuitive move: removing the advanced options panel from the default flow reduced setup time by 35%. Most UX improvements come from subtraction, not addition."
+          },
+          {
+            "title": "Automate the pain point, don't redesign around it",
+            "content": "Users weren't failing because the UI was ugly. They were failing at field mapping. Auto-mapping solved the problem at the root, not at the surface."
+          },
+          {
+            "title": "Measure the funnel, not the feature",
+            "content": "The 380+ integrations were a vanity metric. The real number was the 5-step completion rate. Optimizing one step moved the business metric more than launching 50 new integrations."
+          },
+          {
+            "title": "Platform thinking: make the common case effortless",
+            "content": "80% of users needed the same simple flow. The platform already supported complex cases. The win was making the simple path actually simple."
+          }
+        ]
       }
     },
     "cashless": {
@@ -459,6 +501,27 @@
           "The hardest product decision isn't what to build. It's what to stop building. OneCashless had momentum, internal supporters, and a head start. It also wasn't going to work. Parking it early saved months of engineering time and prevented a second payments crisis.",
           "The second lesson: when the technical problem seems unsolvable, the answer is usually in the data model, not in the UI. The double-counting problem disappeared once I stopped looking for a user-facing fix and started mapping where money actually flows in the system.",
           "The third: choosing a partner isn't a vendor evaluation. It's a product decision. Amusement Connect won not because they had the best pitch, but because their architecture solved a problem ours couldn't solve alone."
+        ]
+      },
+      "patterns": {
+        "heading": "Transferable patterns",
+        "items": [
+          {
+            "title": "Kill your product to solve the real problem",
+            "content": "The hardest product decision: recommending to stop building internally and partner instead. The structural problem (regulatory, hardware, operations) couldn't be solved by better software."
+          },
+          {
+            "title": "Pilot before you commit",
+            "content": "5 clients, 150+ transactions in 14 days was enough signal. You don't need 100 clients to validate a direction — you need the right 5."
+          },
+          {
+            "title": "Partner selection is product work",
+            "content": "Evaluating 3 vendors wasn't procurement — it was product strategy. The scoring framework (tech, API, roadmap, overlap) was the same framework you'd use for build vs buy."
+          },
+          {
+            "title": "Zero-to-one requires a different PM muscle",
+            "content": "Going from nothing to a working pilot in 5 months required PM skills that maintenance mode never exercises: ambiguity tolerance, vendor negotiation, stakeholder alignment without data."
+          }
         ]
       }
     },

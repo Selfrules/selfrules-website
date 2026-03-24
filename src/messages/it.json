@@ -325,6 +325,27 @@
           "La seconda cosa: 44 item, 12 critici, 4 urgenti. La maggior parte di quello che sembrava urgente poteva in realtà aspettare. Sapere quali non possono è la vera competenza. Un singolo criterio di ordinamento chiaro ha dato al team più chiarezza di qualsiasi quantità di discussione.",
           "La terza: quando un problema viene etichettato come “irrisolvibile” o “in attesa del partner”, vale la pena verificare se qualcuno ha effettivamente letto la documentazione dell’API. Il fix per l’attribuzione della fonte era già lì. Serviva solo qualcuno disposto a cercare."
         ]
+      },
+      "patterns": {
+        "heading": "Pattern trasferibili",
+        "items": [
+          {
+            "title": "Crisi → Freeze → Triage → Fix → Resume",
+            "content": "Quando un sistema è in fiamme, l'istinto è fixare tutto contemporaneamente. Il pattern che funziona: congela lo scope, fai il triage spietatamente (siamo passati da 44 problemi a 4 priorità), aggiusta quello che conta, poi riprendi la crescita."
+          },
+          {
+            "title": "Le metriche come tool di triage, non decorazione di dashboard",
+            "content": "Il numero 99.19% di uptime contava solo perché veniva dall'instrumentare ogni modalità di fallimento. La dashboard non era per gli executive — era per l'ingegnere on-call alle 2 di mattina."
+          },
+          {
+            "title": "Disciplina di scope sotto pressione",
+            "content": "Ogni stakeholder aveva il suo fix preferito. Il pattern: se non riduce direttamente il failure rate, aspetta. Dire no a 40 item ha reso possibile fixare i 4 che contavano."
+          },
+          {
+            "title": "L'architettura post-crisi > architettura pre-crisi",
+            "content": "Il sistema di pagamento dopo il rescue era migliore di quello prima della crisi. Le crisi espongono il technical debt che le operazioni normali nascondono."
+          }
+        ]
       }
     },
     "leadsbridge": {
@@ -395,6 +416,27 @@
           "La seconda lezione riguardava i default. Una schermata di mappatura vuota e una pre-compilata portano allo stesso posto. Ma la versione pre-compilata comunica \"capiamo il tuo caso d'uso\" mentre quella vuota comunica \"arrangiatevi.\" Il lavoro del prodotto è codificare conoscenza, non solo fornire strumenti.",
           "La terza: lavorare come Product Owner sotto un fondatore che dava vera autonomia è stata la miglior palestra possibile. Gestivo l'intero ciclo — ricerca, design, specifiche, delivery, misurazione — con un partner senior che sfidava le assunzioni ma non sovrascriveva le decisioni. Quella dinamica mi ha insegnato più sul giudizio di prodotto di qualsiasi framework."
         ]
+      },
+      "patterns": {
+        "heading": "Pattern trasferibili",
+        "items": [
+          {
+            "title": "Togli prima di aggiungere",
+            "content": "La mossa controintuitiva: rimuovere il pannello opzioni avanzate dal flusso di default ha ridotto il tempo di setup del 35%. La maggior parte dei miglioramenti UX vengono dalla sottrazione, non dall'aggiunta."
+          },
+          {
+            "title": "Automatizza il pain point, non redesign intorno a esso",
+            "content": "Gli utenti non fallivano perché l'UI fosse brutta. Fallivano alla mappatura dei campi. L'auto-mapping ha risolto il problema alla radice, non in superficie."
+          },
+          {
+            "title": "Misura il funnel, non la feature",
+            "content": "Le 380+ integrazioni erano una vanity metric. Il numero reale era il tasso di completamento a 5 step. Ottimizzare uno step ha mosso la metrica di business più che lanciare 50 nuove integrazioni."
+          },
+          {
+            "title": "Pensiero da piattaforma: rendi il caso comune senza sforzo",
+            "content": "L'80% degli utenti aveva bisogno dello stesso flusso semplice. La piattaforma già supportava casi complessi. Il valore era rendere il percorso semplice effettivamente semplice."
+          }
+        ]
       }
     },
     "cashless": {
@@ -459,6 +501,27 @@
           "La decisione di prodotto più difficile non è cosa costruire. È cosa smettere di costruire. OneCashless aveva momentum, supporter interni e un vantaggio iniziale. Non avrebbe funzionato. Parcheggiarlo presto ha risparmiato mesi di tempo engineering e prevenuto una seconda crisi pagamenti.",
           "La seconda lezione: quando il problema tecnico sembra irrisolvibile, la risposta di solito è nel data model, non nella UI. Il problema del doppio conteggio è sparito quando ho smesso di cercare un fix lato utente e ho iniziato a mappare dove il denaro scorre effettivamente nel sistema.",
           "La terza: scegliere un partner non è una valutazione fornitori. È una decisione di prodotto. Amusement Connect ha vinto non perché aveva il pitch migliore, ma perché la loro architettura risolveva un problema che la nostra non poteva risolvere da sola."
+        ]
+      },
+      "patterns": {
+        "heading": "Pattern trasferibili",
+        "items": [
+          {
+            "title": "Uccidi il tuo prodotto per risolvere il vero problema",
+            "content": "La decisione di prodotto più difficile: raccomandare di smettere di costruire internamente e fare partnership invece. Il problema strutturale (regolamentare, hardware, operations) non poteva essere risolto da software migliore."
+          },
+          {
+            "title": "Pilot prima di committerti",
+            "content": "5 clienti, 150+ transazioni in 14 giorni erano segnale sufficiente. Non hai bisogno di 100 clienti per validare una direzione — hai bisogno dei 5 giusti."
+          },
+          {
+            "title": "La selezione del partner è lavoro di prodotto",
+            "content": "Valutare 3 vendor non era procurement — era strategia di prodotto. Il framework di scoring (tech, API, roadmap, overlap) era lo stesso che useresti per build vs buy."
+          },
+          {
+            "title": "Da zero a uno richiede un PM muscle diverso",
+            "content": "Andare da nulla a un pilot funzionante in 5 mesi richiedeva skills di PM che la modalità maintenance non esercita mai: tolleranza dell'ambiguità, negoziazione con vendor, allineamento degli stakeholder senza dati."
+          }
         ]
       }
     },
