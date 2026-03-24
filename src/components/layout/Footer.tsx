@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 import { COMMIT_COUNT } from '@/lib/build-info';
-import { AiBadge } from '@/components/ui/AiBadge';
 
 const buildMonth = new Date().toISOString().slice(0, 7).replace('-', '.');
 
@@ -51,13 +50,10 @@ export async function Footer({ locale }: { locale: string }) {
           </a>
         </div>
 
-        {/* Right: build version and AI note */}
-        <div className="flex flex-col items-end gap-2">
-          <p className="font-mono text-[11px] text-[#5a5a5e]">
-            {t('buildVersion', { buildMonth, commitCount: String(COMMIT_COUNT) })}
-          </p>
-          <AiBadge label="Built with Claude Code" className="text-[10px]" />
-        </div>
+        {/* Right: build version */}
+        <p className="font-mono text-[11px] text-[#5a5a5e]">
+          {t('buildVersion', { buildMonth, commitCount: String(COMMIT_COUNT) })}
+        </p>
       </div>
     </footer>
   );
