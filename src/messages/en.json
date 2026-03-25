@@ -545,32 +545,47 @@
       "heroMetricLabel": "listings processed daily. 73 scored HIGH (75+/100), 322 MEDIUM (50-74), 524 LOW.",
       "secondMetric": "€0.25",
       "secondMetricLabel": "AI + infrastructure cost per user per month. 95% gross margin.",
-      "context": {
-        "heading": "The market and the opportunity",
+      "origin": {
+        "heading": "How it started",
         "content": [
-          "At any given time, 800K–1.2M people are searching for apartments in Italy. They're scattered across 8 platforms: Immobiliare.it, Idealista, Subito, Casa.it, Facebook marketplace, agency websites, and others. Each platform is a silo. No competitor does cross-portal aggregation + AI scoring + intelligent notifications.",
-          "Finding an apartment in Italy is broken because listing quality is opaque. Immobiliare.it alerts are keyword-based, not quality-based. Airbnb's filtering is rigid. Good apartments disappear in hours. The question renters actually need answered isn't \"what apartments exist?\" It's \"is this apartment for me?\" Nobody in the market answers that question."
+          "I needed to find an apartment in Modena. Like everyone else in Italy, I was checking Immobiliare.it, Idealista, Subito, and agency websites separately — each platform isolated, no way to see the full picture. The good apartments disappeared in hours. The algorithms didn't understand quality; they just sorted by recency or price.",
+          "So I built a scraper over a weekend. Parse every platform, score listings on actual quality — not keywords, not popularity, but value-for-money. Price against zone averages. Condition from photos. Commute time. Everything a human would check, but automated.",
+          "I ran it for weeks. The dashboard showed 1,029 listings across Emilia-Romagna, colored by score. Most were noise. But the high-scoring ones? They were genuinely good apartments. And I found mine using it."
         ]
       },
-      "challenge": {
-        "heading": "The product decision: build intelligence, not just aggregation",
+      "v1": {
+        "heading": "The first version",
         "content": [
-          "The obvious move: subscribe to a rental aggregator. But they all have the same problem — they aggregate, they don't understand. They show you 50 listings. You spend 2–3 hours daily filtering them manually.",
-          "The real product decision wasn't about building an aggregator. Every tool does that. It was about building intelligence: \"Personal Apartment Intelligence.\" Instead of \"here are all the apartments,\" answer \"here are the ones for you, ranked by actual quality.\" Learn from feedback. Tell users when an apartment is 15% below zone average, or 20% overpriced.",
-          "That required rethinking the cost model. Running Claude Sonnet on all 1,000+ daily listings would cost thousands monthly. The solution: filter ruthlessly first, spend AI budget only where it matters."
+          "The v1 dashboard was simple: a map with colored pins (green = high quality, yellow = medium, red = low), and a list view showing price, rooms, and AI score. No auth, no monetization. Just the data and the logic.",
+          "Friends started asking for access. That was the signal. Not \"this is cool,\" but \"I need this.\" They were doing exactly what I did — checking eight platforms manually, frustrated by the noise."
+        ]
+      },
+      "turning_point": {
+        "heading": "From tool to product",
+        "content": [
+          "The turning point wasn't the dashboard itself. It was realizing what didn't exist in the market: nobody does AI-based quality scoring. Aggregators exist. Alerts exist. But aggregators + scoring + \"is this apartment for me?\" — that's a product gap.",
+          "That gap required a cost model. Running Claude Sonnet on all 1,000+ daily listings would be thousands monthly. Unsustainable. The answer: be ruthless about what deserves AI attention. Filter deterministically first (price, location, size — hard constraints), then spend AI budget on the 50% that passes the gate.",
+          "With that math solved, I decided to build a real product. Not just a bot, but a SaaS: Telegram for real-time alerts, dashboard for analysis, customer-grade infrastructure."
         ]
       },
       "approach": {
-        "heading": "Three-pass scoring: deterministic + AI + feedback",
+        "heading": "Three-pass scoring",
         "content": [
-          "**Pass 1: Deterministic filter (free, fast).** Price, location, size, rooms — hard constraints. The system processes 1,029 listings per day. This pass eliminates ~524 listings (51%) without touching any AI budget. These don't meet basic criteria — no point scoring them. Runs hourly across 8 platforms with negligible compute cost.",
-          "**Pass 2: AI scoring (expensive, selective).** Only the remaining ~505 listings (49%) get sent to Claude Sonnet. From real data on March 17: 73 scored HIGH (75+/100), 322 scored MEDIUM (50-74), 111 LOW. The AI reads listing text, analyzes photos, checks neighborhood context, compares to zone prices, evaluates value-for-money. Scoring happens once per listing, cached for comparison.",
-          "**Pass 3: Feedback loop + outreach assistant (learning).** User feedback on Telegram adjusts future scoring. Thumbs up or down refines the weighting. Separate /outreach command auto-generates contact templates (different for agenzia vs private sellers). The system learns what you actually want, not what the algorithm assumed.",
-          "The three-pass structure mirrors enterprise patterns: don't spend expensive resources solving cheap problems. At 1,000+ listings daily, this architecture costs ~€0.25/user/month in AI + infrastructure. Without it, cost would be orders of magnitude higher. The first pass is the gate that makes the entire economics work."
+          "**Pass 1: Deterministic filter.** Price, location, size, rooms. The system processes 1,029 listings per day. This pass eliminates ~51% without touching AI budget. Runs hourly, negligible cost.",
+          "**Pass 2: AI scoring.** Only the remaining 49% get Claude Sonnet. Real data from March 17: 73 HIGH (75+/100), 322 MEDIUM (50-74), 111 LOW. The AI reads text, analyzes photos, checks neighborhoods, compares zone prices.",
+          "**Pass 3: Feedback loop.** User feedback on Telegram refines scoring. Separate /outreach command auto-generates contact messages. The system learns what you actually want.",
+          "This structure keeps costs at ~€0.25/user/month. Without it, an order of magnitude higher."
+        ]
+      },
+      "saas": {
+        "heading": "The SaaS prototype",
+        "content": [
+          "Built a Figma Make prototype to test the product vision: real-time Telegram bot alerts, persistent dashboard, saved searches, comparison tools. Not yet monetized — running on a waitlist to measure demand first.",
+          "The economics work (95% margin at €5–10/user/month), but the question remains: is demand strong enough to justify building the full SaaS? Friends asking for access is signal. Customer acquisition cost and churn are a different measurement."
         ]
       },
       "results": {
-        "heading": "Signal from real use",
+        "heading": "What the numbers say",
         "items": [
           {
             "metric": "1,000+",
@@ -578,25 +593,24 @@
           },
           {
             "metric": "73",
-            "label": "HIGH-scored listings per day (7% signal-to-noise ratio from 1,029 total)"
+            "label": "HIGH-scored listings per day (7% signal-to-noise ratio)"
           },
           {
             "metric": "€0.25",
-            "label": "AI + infra cost per user per month. 95% gross margin at €5–10/user/month."
+            "label": "AI + infra cost per user per month. 95% gross margin at scale."
           },
           {
-            "metric": "Validating",
-            "label": "SaaS demand. Friends asking for access. Dashboard built (React + Leaflet + Recharts). Waitlist strategy live."
+            "metric": "Friends asking",
+            "label": "The earliest signal. More meaningful than metrics."
           }
         ]
       },
       "learned": {
-        "heading": "Product thinking: validate first, build later",
+        "heading": "What I learned",
         "content": [
-          "The market analysis revealed why nobody built this: it requires scraping 8+ platforms (infrastructure complexity), AI scoring (expensive at scale), market intelligence data (neighborhoods, zone pricing, trend analysis), and real-time notifications. It's not that the idea is new — it's that the unit economics had to be solved first.",
-          "Unit economics matter before product. At €0.25/user/month and 95% margin, break-even is ~150 paying users at €10/month. That's a realistic SaaS target for a niche market. Without that math, the product would be unsustainable.",
-          "\"Validate first, build later\" changed the roadmap. The dashboard is built. The bot works. But the SaaS is not live — it's a waitlist + ads to test demand first. Friends asking for access is signal, but not proof. Running a SaaS requires more: customer acquisition cost, churn analysis, support load. Measure those on a small waitlist before building the full product.",
-          "The feedback loop principle applies at product scale too, not just at user scale. Ship the core (1,000+ listings daily, 3-pass scoring), measure real usage, adjust based on what people actually do. The outreach assistant exists because users asked for it while using the bot. That's signal-driven product design."
+          "Building intelligence costs more than building aggregation. Every SaaS tool aggregates something — the moat is what you do with the data after. For apartments, that's AI scoring that answers \"is this for me?\"",
+          "Unit economics determine product strategy. At €0.25/user/month, break-even is ~150 users at €10/month. That shaped everything: the architecture, the feature set, the go-to-market.",
+          "Validate first, build later. The dashboard and bot work. The SaaS is not live. I'm measuring demand before committing to customer support infrastructure. That's the hard part — not the code."
         ]
       },
       "links": {

@@ -70,10 +70,13 @@
 
 - [x] **T-2.1.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Pagina `/lab/casahunter` creata con struttura completa (problema → build vs buy → three-pass scoring → risultati → SaaS decision) ✅
 - [x] **T-2.1.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Copy EN + IT scritto con selfrules-voice ✅
-- [ ] **T-2.1.3** `[MATTIA-REQUIRED]` Fornire screenshot della dashboard React e/o del bot Telegram — ⏳ Mattia ci torna quando pronti
+- [x] **T-2.1.3** (2026-03-25) `[INSIEME]` Screenshot dashboard v1 catturati con Playwright (mappa, lista, statistiche) + link al prototipo SaaS Figma ✅
 - [ ] **T-2.1.4** `[MATTIA-REQUIRED]` Decidere se linkare il repo GitHub — ⏳ in attesa
 - [x] **T-2.1.5** (2026-03-24) `[CLAUDE-AUTONOMO]` Diagramma architetturale SVG del three-pass scoring pipeline creato e integrato nella pagina CasaHunter ✅
 - [x] **T-2.1.6** (2026-03-24) `[CLAUDE-AUTONOMO]` Card Lab aggiornata con link a /lab/casahunter ✅
+- [x] **T-2.1.7** (2026-03-25) `[INSIEME]` Riscrittura narrativa CasaHunter: arco personale (bisogno → build → funziona → prodotto) con 6 sezioni: origin, v1, turning point, approach, SaaS, learned ✅
+- [x] **T-2.1.8** (2026-03-25) `[CLAUDE-AUTONOMO]` Sezione visiva v1 dashboard con 3 screenshot (mappa, lista, statistiche) + caption bilingue ✅
+- [x] **T-2.1.9** (2026-03-25) `[CLAUDE-AUTONOMO]` Sezione SaaS prototype con link Figma design + icona Figma + Umami event tracking ✅
 
 ### US 2.2: Pulire la pagina Lab
 > Come hiring manager, 2 progetti "in development" senza niente da mostrare comunicano "inizia le cose ma non le finisce".
