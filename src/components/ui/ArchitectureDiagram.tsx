@@ -47,6 +47,8 @@ export function ArchitectureDiagram() {
         xmlns="http://www.w3.org/2000/svg"
         className="mx-auto"
         style={{ minWidth: '100%', height: 'auto' }}
+        role="img"
+        aria-label="CasaHunter architecture: 8 scrapers collect raw data, then deduplicate and normalize, followed by three scoring passes (hard filter removing 80%, AI weighted scoring, AI text analysis), producing a final 0-100 score that triggers Telegram alerts"
       >
         {/* Define styles */}
         <defs>

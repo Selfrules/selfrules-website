@@ -38,6 +38,7 @@ export function Contact({
       <a
         href={`mailto:${email}`}
         className="block font-mono text-[clamp(24px,5vw,40px)] leading-[1.5] font-normal text-[rgba(255,255,255,0.8)] hover:text-accent transition-colors duration-150"
+        data-umami-event="contact-email"
       >
         {email}
       </a>
@@ -49,9 +50,10 @@ export function Contact({
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-[14px] text-[rgba(255,255,255,0.6)] hover:text-accent transition-colors duration-150"
+          data-umami-event="contact-linkedin"
         >
           {linkedinLabel}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="-rotate-45">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="-rotate-45" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
@@ -59,9 +61,10 @@ export function Contact({
           href={cvHref}
           download
           className="inline-flex items-center gap-1 text-[14px] text-[rgba(255,255,255,0.6)] hover:text-accent transition-colors duration-150"
+          data-umami-event="contact-cv-download"
         >
           {cvLabel}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
           </svg>
         </a>
