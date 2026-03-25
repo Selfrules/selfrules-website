@@ -86,7 +86,7 @@
 > Come candidato, voglio che il mio uso di AI emerga come competenza aggiuntiva — una ninja belt, non il focus primario.
 
 - [x] **T-2.3.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Framework 80/20 AI evidenziato nel case study CasaHunter ✅
-- [x] **T-2.3.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Badge AiBadge creato: "AI-assisted" su CasaHunter + "Built with Claude Code" nel footer ✅
+- [x] **T-2.3.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Badge AiBadge creato: "AI-assisted" su CasaHunter ✅ (⚠️ "Built with Claude Code" rimosso dal footer su richiesta di Mattia — rompeva il layout)
 
 ---
 
@@ -158,7 +158,7 @@
 > Come candidato, i post che vivono solo sul sito non generano traffico né social proof.
 
 - [ ] **T-4.3.1** `[MATTIA-REQUIRED]` Cross-postare ogni post su LinkedIn come articolo o post con link al sito
-- [ ] **T-4.3.2** `[CLAUDE-AUTONOMO]` Per ogni blog post, generare una versione LinkedIn-optimized (hook + 3 key points + CTA al sito) — Mattia copia e posta
+- [x] **T-4.3.2** (2026-03-25) `[CLAUDE-AUTONOMO]` 8 versioni LinkedIn-optimized generate — vedi LINKEDIN-POSTS.md ✅
 - [ ] **T-4.3.3** `[INSIEME]` Definire cadenza editoriale: 1 post ogni 2 settimane è sufficiente per mantenere il momentum
 
 ---
@@ -212,8 +212,8 @@
 ### US 7.1: Aggiungere varietà visiva alla homepage
 > Come visitatore, dopo la terza sezione text-only il sito diventa prevedibile. Servono break visivi.
 
-- [ ] **T-7.1.1** `[CLAUDE-AUTONOMO]` Variare il layout di almeno 1 sezione homepage — ad esempio la sezione metriche con layout asimmetrico o la sezione "Now" con layout diverso dalle altre
-- [ ] **T-7.1.2** `[CLAUDE-AUTONOMO]` Sperimentare con l'uso del colore accent (#E8A838) — attualmente usato solo per numeri e hover, potrebbe guidare l'occhio verso CTA e sezioni chiave
+- [x] **T-7.1.1** (2026-03-25) `[CLAUDE-AUTONOMO]` CurrentWork cards con accent top bar gradient + status badge colorato ✅
+- [x] **T-7.1.2** (2026-03-25) `[CLAUDE-AUTONOMO]` Accent underline su SectionHeader + accent badge su CurrentWork ✅
 
 ### US 7.2: OG Images dinamici
 > Come candidato che condivide il sito su LinkedIn, ogni pagina deve avere un'anteprima visiva specifica — non la stessa immagine generica per tutto.
@@ -243,7 +243,7 @@
 - [x] **T-8.1.3** (2026-03-24) `[CLAUDE-AUTONOMO]` text-tertiary già corretto a #7A7A7E in globals.css ✅
 - [x] **T-8.1.4** (2026-03-24) `[CLAUDE-AUTONOMO]` Nessun duplicato: SectionHeader esiste solo in sections/ ✅
 - [x] **T-8.1.5** (2026-03-24) `[CLAUDE-AUTONOMO]` Asset Next.js default già rimossi, public/ contiene solo og-image.png ✅
-- [ ] **T-8.1.6** `[CLAUDE-AUTONOMO]` Chiudere i gap P0 dal GAP-ANALYSIS-v25: Lab page layout + Notes year grouping
+- [x] **T-8.1.6** (2026-03-25) `[CLAUDE-AUTONOMO]` Gap P0 chiusi: Notes year grouping già OK, Lab page verificata (solo CasaHunter, come da T-2.2.1) ✅
 
 ### US 8.2: SEO optimization
 > Come candidato, voglio che "Mattia De Luca product manager" su Google mostri il mio sito in prima pagina.
@@ -257,7 +257,7 @@
 > Come engineering manager, un sito con Lighthouse 95+ e test automatici comunica engineering rigor.
 
 - [ ] **T-8.3.1** `[CLAUDE-AUTONOMO]` Eseguire Lighthouse audit e documentare score
-- [ ] **T-8.3.2** `[CLAUDE-AUTONOMO]` Aggiungere test e2e basilari con Playwright per le pagine principali (homepage, work, case study, lab, notes)
+- [x] **T-8.3.2** (2026-03-25) `[CLAUDE-AUTONOMO]` 19 test e2e Playwright creati: tutte le pagine, navigazione, locale IT, 404 ✅
 - [ ] **T-8.3.3** `[CLAUDE-AUTONOMO]` Aggiungere test di accessibilità automatizzati (axe-core)
 
 ---
