@@ -540,63 +540,70 @@
       "tag": "Prodotto · Scoring · Budget AI · Feedback loop",
       "role": "Fondatore / Solo",
       "company": "Side project · Ricerca appartamento · Italia",
-      "period": "2024–present",
-      "heroMetric": "8",
-      "heroMetricLabel": "piattaforme monitorate automaticamente",
-      "secondMetric": "1",
-      "secondMetricLabel": "sviluppatore. Molti meno appartamenti da controllare a mano.",
+      "period": "2024–presente",
+      "heroMetric": "1.000+",
+      "heroMetricLabel": "annunci processati giornalmente. 73 HIGH (75+/100), 322 MEDIUM (50-74), 524 LOW.",
+      "secondMetric": "€0,25",
+      "secondMetricLabel": "costo AI + infrastruttura per utente al mese. Margine lordo 95%.",
       "context": {
-        "heading": "Il problema",
+        "heading": "Il mercato e l'opportunità",
         "content": [
-          "Cercare casa in Italia è rotto. Gli annunci sono sparsi su 8+ piattaforme — Immobiliare.it, Airbnb, Subito, marketplace di Facebook, siti di agenzie immobiliari, e altri ancora. Gli appartamenti buoni spariscono in ore. Controllare ogni piattaforma quotidianamente per nuovi annunci che corrispondono ai tuoi criteri è un lavoro a tempo pieno. Avevo bisogno di un appartamento, non di un hobby.",
-          "Gli strumenti esistenti non lo risolvono. Gli alert di Immobiliare.it sono basati su parole chiave, non sulla qualità. I filtri di Airbnb sono rigidi. Nessuna piattaforma aggregata intelligentemente e definisce le priorità tra tutte le fonti. La ricerca manuale significava spendere 2-3 ore al giorno tra schede, segnalibri e cronologia del browser."
+          "In qualsiasi momento, 800K–1,2M persone cercano appartamenti in Italia. Sono sparsi su 8 piattaforme: Immobiliare.it, Idealista, Subito, Casa.it, Facebook marketplace, siti di agenzie e altri. Ognuna è un silo. Nessun competitor aggrega su più portali + scoring AI + notifiche intelligenti.",
+          "Cercare casa in Italia è rotto perché la qualità degli annunci è opaca. Gli alert di Immobiliare.it sono basati su parole chiave, non su qualità. I filtri di Airbnb sono rigidi. Gli appartamenti buoni spariscono in ore. La vera domanda che gli inquilini hanno non è \"quali appartamenti esistono?\" ma \"è questo appartamento per me?\" Nessuno nel mercato risponde a quella domanda."
         ]
       },
       "challenge": {
-        "heading": "La decisione di prodotto: costruire vs comprare",
+        "heading": "La decisione di prodotto: costruire intelligenza, non solo aggregazione",
         "content": [
-          "La scelta ovvia: pagare una sottoscrizione a un aggregatore di ricerca immobiliare. Ma nessuno di loro faceva quello che mi serviva. Aggregavano gli annunci, ma non capivano le mie preferenze. Non imparavano dai miei feedback. Non classificavano per qualità effettiva, solo per recency o algoritmo di default.",
-          "Così l'ho costruito. Ma non come un'app tradizionale. L'obiettivo non era una UI carina — era l'automazione che funziona senza di me. Niente controlli manuali quotidiani. Niente aprire 8 schede. Notifiche Telegram quando c'è qualcosa che corrisponde.",
-          "La vera decisione di prodotto non era \"costruire un aggregatore.\" Era \"ottimizzare il costo dello scoring con AI su milioni di annunci al giorno.\""
+          "La scelta ovvia: pagare un aggregatore di ricerca immobiliare. Ma tutti hanno lo stesso problema — aggregano, non capiscono. Ti mostrano 50 annunci. Tu spendi 2-3 ore al giorno a filtrarli a mano.",
+          "La vera decisione di prodotto non era \"costruire un aggregatore.\" Tutti lo fanno. Era costruire intelligenza: \"Intelligenza Appartamentale Personalizzata.\" Invece di \"ecco gli appartamenti,\" rispondere \"ecco quelli per te, ordinati per qualità effettiva.\" Imparare dai feedback. Dire all'utente quando un appartamento costa il 15% meno della media della zona, o il 20% più caro.",
+          "Questo richiedeva ripensare il modello di costo. Lanciare Claude Sonnet su tutti i 1.000+ annunci giornalieri costerebbe migliaia al mese. La soluzione: filtrare spietatamente prima, spendere il budget AI solo dove conta davvero."
         ]
       },
       "approach": {
         "heading": "Scoring a tre passaggi: deterministico + AI + feedback",
         "content": [
-          "**Passaggio 1: Filtro deterministico (gratis, veloce).** Prezzo, posizione, metratura, stanze — vincoli hard. Per ogni piattaforma, l'80% degli annunci viene eliminato qui senza toccare nessun budget AI. Un annuncio che non soddisfa i criteri base non vale la pena di scorarlo. Questo passaggio gira ogni giorno su tutte e 8 le piattaforme con costo computazionale trascurabile.",
-          "**Passaggio 2: Scoring con AI (costoso, selettivo).** Solo il 20% degli annunci che hanno passato il primo filtro viene inviato a Claude Sonnet per l'analisi. L'AI assegna un punteggio alla qualità: legge il testo dell'annuncio, analizza le descrizioni delle foto, controlla il contesto del quartiere, valuta il rapporto qualità-prezzo. Lo scoring avviene una volta per annuncio, cachato per il confronto.",
-          "**Passaggio 3: Feedback loop (apprendimento).** Il feedback dell'utente aggiusta i pesi dello scoring. Pollice su o giù su Telegram aggiusta come gli annunci futuri vengono scorati. Un edificio che ho segnato come \"troppo rumoroso\" abbassa i punteggi per annunci simili in quell'area. Il sistema impara.",
-          "Perché questa struttura? È lo stesso pattern usato nei prodotti enterprise: spendere risorse costose solo dove creano valore. Su scala, lanciare Claude Sonnet su tutti gli annunci costerebbe migliaia al mese. Lanciarlo sul 20% costa pochi euro. Il primo passaggio è il gate."
+          "**Passaggio 1: Filtro deterministico (gratis, veloce).** Prezzo, posizione, metratura, stanze — vincoli hard. Il sistema processa 1.029 annunci al giorno. Questo passaggio elimina ~524 annunci (51%) senza toccare nessun budget AI. Non soddisfano i criteri base — non vale la pena scorarli. Gira ogni ora su 8 piattaforme con costo computazionale trascurabile.",
+          "**Passaggio 2: Scoring con AI (costoso, selettivo).** Solo i restanti ~505 annunci (49%) vengono inviati a Claude Sonnet. Dai dati reali del 17 marzo: 73 HIGH (75+/100), 322 MEDIUM (50-74), 111 LOW. L'AI legge il testo, analizza le foto, controlla il contesto del quartiere, confronta i prezzi della zona, valuta il rapporto qualità-prezzo. Lo scoring avviene una volta per annuncio, cachato per il confronto.",
+          "**Passaggio 3: Feedback loop + assistente di outreach (apprendimento).** Il feedback dell'utente su Telegram aggiusta lo scoring futuro. Pollice su o giù affina i pesi. Un comando /outreach separato genera automaticamente template di contatti (diversi per agenzia vs privati). Il sistema impara cosa vuoi veramente, non quello che l'algoritmo ha assunto.",
+          "La struttura a tre passaggi rispecchia i pattern enterprise: non spendere risorse costose per risolvere problemi economici. A 1.000+ annunci al giorno, questa architettura costa ~€0,25/utente/mese in AI + infrastruttura. Senza di essa, il costo sarebbe ordini di grandezza superiore. Il primo passaggio è il cancello che rende l'intera economia sostenibile."
         ]
       },
       "results": {
-        "heading": "I risultati",
+        "heading": "Segnale dall'uso reale",
         "items": [
           {
-            "metric": "8",
-            "label": "piattaforme immobiliari monitorate e aggregate giornalmente"
+            "metric": "1.000+",
+            "label": "annunci processati giornalmente su 8 piattaforme immobiliari italiane"
           },
           {
-            "metric": "0",
-            "label": "controlli manuali necessari. Notifiche Telegram quando c'è qualcosa."
+            "metric": "73",
+            "label": "annunci HIGH al giorno (7% signal-to-noise ratio su 1.029 totali)"
           },
           {
-            "metric": "~80%",
-            "label": "annunci filtrati dal passaggio 1 prima che l'AI li veda"
+            "metric": "€0,25",
+            "label": "costo AI + infra per utente al mese. Margine lordo 95% a €5–10/utente/mese."
           },
           {
-            "metric": "In espansione",
-            "label": "verso micro-SaaS basato sulla domanda di amici e colleghi"
+            "metric": "Validando",
+            "label": "domanda SaaS. Amici che chiedono accesso. Dashboard costruita (React + Leaflet + Recharts). Waitlist attiva."
           }
         ]
       },
       "learned": {
-        "heading": "Perché questo importa per il pensiero di prodotto",
+        "heading": "Pensiero di prodotto: validare prima, costruire dopo",
         "content": [
-          "La divisione 80/20 del budget tra scoring deterministico e AI non è un hack. È lo stesso principio dietro le buone decisioni di prodotto su qualsiasi scala: non spendere risorse costose per risolvere problemi economici. Filtra presto, spendi dove conta.",
-          "I feedback loop che affinano lo scoring sono lo stesso principio dietro qualsiasi buona iterazione di prodotto. Rilasci, ricevi segnale, aggiusti. La differenza qui è che il segnale è pollice su/giù su Telegram, non dashboard di metriche. Feedback loop più piccolo, stesso principio.",
-          "Sapere cosa NON costruire importa tanto quanto ciò che costruisci. Nessuna app mobile (il browser basta). Nessuna feature sociale (è uno strumento personale). Nessun marketplace. Nessun altro flusso di ricavi. La disciplina di scope è una decisione di prodotto.",
-          "La decisione di andare SaaS non era pianificata. Gli amici hanno chiesto accesso. I colleghi volevano le loro versioni. Quel è il segnale che qualcosa ha product-market fit, anche in forma di side project. Ora sto esplorando il percorso micro-SaaS — lo stesso pensiero di prodotto, ora con utenti paganti come validazione."
+          "L'analisi di mercato ha rivelato perché nessuno lo ha costruito: richiede scraping su 8+ piattaforme (complessità infrastrutturale), scoring AI (costoso in scala), dati di intelligence di mercato (quartieri, prezzi di zona, analisi di trend), notifiche real-time. Non è che l'idea sia nuova — è che l'economia unitaria doveva essere risolta prima.",
+          "L'economia unitaria conta prima del prodotto. A €0,25/utente/mese e margine 95%, break-even è ~150 utenti paganti a €10/mese. È un target SaaS realistico per un mercato di nicchia. Senza questi numeri, il prodotto sarebbe insostenibile.",
+          "\"Validare prima, costruire dopo\" ha cambiato la roadmap. La dashboard è costruita. Il bot funziona. Ma il SaaS non è live — è una waitlist + ads per testare la domanda prima. Amici che chiedono accesso è segnale, non prova. Un SaaS richiede di più: customer acquisition cost, churn analysis, carico di supporto. Misurare questi su una piccola waitlist prima di costruire il prodotto completo.",
+          "Il principio del feedback loop si applica anche alla scala di prodotto, non solo a quella utente. Rilascia il core (1.000+ annunci al giorno, scoring 3-passaggi), misura l'uso reale, aggiusta in base a quello che le persone effettivamente fanno. L'assistente di outreach esiste perché gli utenti lo hanno chiesto mentre usavano il bot. Quel è product design guidato dai segnali."
+        ]
+      },
+      "links": {
+        "heading": "Risorse",
+        "content": [
+          "**Dashboard live:** https://casahunter.vercel.app/ — lo scoring, gli annunci, l'intelligence di mercato.",
+          "**Bot Telegram:** Attivo 24/7 per il testing. Processa alert giornalieri, gestisce il comando /outreach per generare messaggi."
         ]
       }
     }
@@ -607,9 +614,9 @@
     "whatItTaughtMeLabel": "Cosa mi ha insegnato",
     "casahunter": {
       "title": "CasaHunter",
-      "description": "Un tool che cerca casa al posto tuo, impara dai tuoi feedback, e ti avvisa su Telegram.",
+      "description": "Processa 1.000+ annunci di appartamenti al giorno su 8 piattaforme italiane. Scoring della qualità con Claude Sonnet. Bot Telegram + dashboard. Nessun competitor fa questo.",
       "statusLabel": "Attivo",
-      "whatItTaughtMe": "Scoring a tre passaggi: filtrare l'80% in modo deterministico, spendere il budget AI solo sul 20% che conta. Stessa logica applicabile a qualsiasi prodotto."
+      "whatItTaughtMe": "Scoring a tre passaggi: elimina il 50% in modo deterministico (gratis), spendi il budget AI sul 50% che conta (€0,25/utente/mese). Stessa logica applicabile a qualsiasi prodotto."
     },
     "moneymind": {
       "title": "MoneyMind",

@@ -541,62 +541,69 @@
       "role": "Founder / Solo",
       "company": "Side project · Apartment hunting · Italy",
       "period": "2024–present",
-      "heroMetric": "8",
-      "heroMetricLabel": "platforms monitored automatically",
-      "secondMetric": "1",
-      "secondMetricLabel": "developer. Many fewer apartments to check manually.",
+      "heroMetric": "1,000+",
+      "heroMetricLabel": "listings processed daily. 73 scored HIGH (75+/100), 322 MEDIUM (50-74), 524 LOW.",
+      "secondMetric": "€0.25",
+      "secondMetricLabel": "AI + infrastructure cost per user per month. 95% gross margin.",
       "context": {
-        "heading": "The problem",
+        "heading": "The market and the opportunity",
         "content": [
-          "Finding an apartment in Italy is broken. Listings appear on 8+ platforms — Immobiliare.it, Airbnb, Subito, Facebook marketplace, real estate agency websites, and more. Good apartments disappear in hours. Checking every platform daily for new listings that match your criteria is a full-time job. I needed an apartment, not a hobby.",
-          "Existing tools don't solve it. Immobiliare.it alerts are keyword-based, not quality-based. Airbnb's filtering is rigid. No single platform aggregates and intelligently prioritizes across all sources. Manual hunting meant spending 2–3 hours daily across tabs, bookmarks, and browser history."
+          "At any given time, 800K–1.2M people are searching for apartments in Italy. They're scattered across 8 platforms: Immobiliare.it, Idealista, Subito, Casa.it, Facebook marketplace, agency websites, and others. Each platform is a silo. No competitor does cross-portal aggregation + AI scoring + intelligent notifications.",
+          "Finding an apartment in Italy is broken because listing quality is opaque. Immobiliare.it alerts are keyword-based, not quality-based. Airbnb's filtering is rigid. Good apartments disappear in hours. The question renters actually need answered isn't \"what apartments exist?\" It's \"is this apartment for me?\" Nobody in the market answers that question."
         ]
       },
       "challenge": {
-        "heading": "The product decision: build vs buy",
+        "heading": "The product decision: build intelligence, not just aggregation",
         "content": [
-          "The obvious move: buy a subscription to a rental search aggregator. But none of them did what I actually needed. They aggregated listings, but they didn't understand my preferences. They didn't learn from my feedback. They didn't rank by actual quality, only by recency or default algorithm.",
-          "So I built it. But not as a traditional app. The goal wasn't a shiny UI — it was automation that runs without me. No daily manual checking. No opening 8 tabs. Telegram notifications when something matches.",
-          "The real product decision wasn't \"build an aggregator.\" It was \"optimize the cost of AI scoring across millions of listings daily.\""
+          "The obvious move: subscribe to a rental aggregator. But they all have the same problem — they aggregate, they don't understand. They show you 50 listings. You spend 2–3 hours daily filtering them manually.",
+          "The real product decision wasn't about building an aggregator. Every tool does that. It was about building intelligence: \"Personal Apartment Intelligence.\" Instead of \"here are all the apartments,\" answer \"here are the ones for you, ranked by actual quality.\" Learn from feedback. Tell users when an apartment is 15% below zone average, or 20% overpriced.",
+          "That required rethinking the cost model. Running Claude Sonnet on all 1,000+ daily listings would cost thousands monthly. The solution: filter ruthlessly first, spend AI budget only where it matters."
         ]
       },
       "approach": {
         "heading": "Three-pass scoring: deterministic + AI + feedback",
         "content": [
-          "**Pass 1: Deterministic filter (free, fast).** Price, location, size, rooms — hard constraints. For each platform, 80% of listings get eliminated here without touching any AI budget. A listing that doesn't meet basic criteria isn't worth scoring. This pass runs every day on all 8 platforms with negligible compute cost.",
-          "**Pass 2: AI scoring (expensive, selective).** Only the 20% of listings that passed the first filter get sent to Claude Sonnet for analysis. The AI scores quality: reads listing text, analyzes photo descriptions, checks neighborhood context, evaluates value-for-money. Scoring happens once per listing, cached for comparison.",
-          "**Pass 3: Feedback loop (learning).** User feedback adjusts scoring weights. Thumbs up or down on Telegram adjusts how future listings get scored. A building I marked as \"too noisy\" lowers scores for similar listings in that area. The system learns.",
-          "Why this structure? It's the same pattern used in enterprise products: spend expensive resources only where they create value. At scale, running Claude Sonnet on all listings would cost thousands monthly. Running it on 20% costs single digits. The first pass is the gate."
+          "**Pass 1: Deterministic filter (free, fast).** Price, location, size, rooms — hard constraints. The system processes 1,029 listings per day. This pass eliminates ~524 listings (51%) without touching any AI budget. These don't meet basic criteria — no point scoring them. Runs hourly across 8 platforms with negligible compute cost.",
+          "**Pass 2: AI scoring (expensive, selective).** Only the remaining ~505 listings (49%) get sent to Claude Sonnet. From real data on March 17: 73 scored HIGH (75+/100), 322 scored MEDIUM (50-74), 111 LOW. The AI reads listing text, analyzes photos, checks neighborhood context, compares to zone prices, evaluates value-for-money. Scoring happens once per listing, cached for comparison.",
+          "**Pass 3: Feedback loop + outreach assistant (learning).** User feedback on Telegram adjusts future scoring. Thumbs up or down refines the weighting. Separate /outreach command auto-generates contact templates (different for agenzia vs private sellers). The system learns what you actually want, not what the algorithm assumed.",
+          "The three-pass structure mirrors enterprise patterns: don't spend expensive resources solving cheap problems. At 1,000+ listings daily, this architecture costs ~€0.25/user/month in AI + infrastructure. Without it, cost would be orders of magnitude higher. The first pass is the gate that makes the entire economics work."
         ]
       },
       "results": {
-        "heading": "The results",
+        "heading": "Signal from real use",
         "items": [
           {
-            "metric": "8",
-            "label": "real estate platforms monitored and aggregated daily"
+            "metric": "1,000+",
+            "label": "listings processed daily across 8 Italian platforms"
           },
           {
-            "metric": "0",
-            "label": "manual platform checks needed. Telegram notification when there's something."
+            "metric": "73",
+            "label": "HIGH-scored listings per day (7% signal-to-noise ratio from 1,029 total)"
           },
           {
-            "metric": "~80%",
-            "label": "listings filtered out by pass 1 before AI even sees them"
+            "metric": "€0.25",
+            "label": "AI + infra cost per user per month. 95% gross margin at €5–10/user/month."
           },
           {
-            "metric": "Expanding",
-            "label": "to micro-SaaS based on demand from friends and colleagues"
+            "metric": "Validating",
+            "label": "SaaS demand. Friends asking for access. Dashboard built (React + Leaflet + Recharts). Waitlist strategy live."
           }
         ]
       },
       "learned": {
-        "heading": "Why this matters for product thinking",
+        "heading": "Product thinking: validate first, build later",
         "content": [
-          "The 80/20 budget split between deterministic and AI scoring isn't a hack. It's the same principle behind good product decisions at any scale: don't spend expensive resources to solve cheap problems. Filter early, spend where it counts.",
-          "Feedback loops that refine scoring are the same principle behind any good product iteration. You ship, you get signal, you adjust. The difference here is the signal is thumbs up/down on Telegram, not metrics dashboards. Smaller feedback loop, same principle.",
-          "Knowing what NOT to build matters as much as what you build. No mobile app (browser is enough). No social features (it's a personal tool). No marketplace. No other revenue stream. Scope discipline is a product decision.",
-          "The decision to go SaaS wasn't planned. Friends asked for access. Colleagues wanted their own versions. That's the signal that something has product-market fit, even in side project form. Now exploring the micro-SaaS path — same product thinking, now with paying users as validation."
+          "The market analysis revealed why nobody built this: it requires scraping 8+ platforms (infrastructure complexity), AI scoring (expensive at scale), market intelligence data (neighborhoods, zone pricing, trend analysis), and real-time notifications. It's not that the idea is new — it's that the unit economics had to be solved first.",
+          "Unit economics matter before product. At €0.25/user/month and 95% margin, break-even is ~150 paying users at €10/month. That's a realistic SaaS target for a niche market. Without that math, the product would be unsustainable.",
+          "\"Validate first, build later\" changed the roadmap. The dashboard is built. The bot works. But the SaaS is not live — it's a waitlist + ads to test demand first. Friends asking for access is signal, but not proof. Running a SaaS requires more: customer acquisition cost, churn analysis, support load. Measure those on a small waitlist before building the full product.",
+          "The feedback loop principle applies at product scale too, not just at user scale. Ship the core (1,000+ listings daily, 3-pass scoring), measure real usage, adjust based on what people actually do. The outreach assistant exists because users asked for it while using the bot. That's signal-driven product design."
+        ]
+      },
+      "links": {
+        "heading": "Resources",
+        "content": [
+          "**Live dashboard:** https://casahunter.vercel.app/ — the scoring, the listings, the market intelligence.",
+          "**Telegram bot:** Running 24/7 for testing. Processes daily alerts, handles /outreach command for message generation."
         ]
       }
     }
@@ -607,9 +614,9 @@
     "whatItTaughtMeLabel": "What it taught me",
     "casahunter": {
       "title": "CasaHunter",
-      "description": "A tool that apartment-hunts for you, learns from your feedback, and pings you on Telegram.",
+      "description": "Processes 1,000+ apartment listings daily across 8 Italian platforms. Scores quality with Claude Sonnet. Telegram bot + dashboard. Zero competitors do this.",
       "statusLabel": "Active",
-      "whatItTaughtMe": "Three-pass scoring: filter 80% deterministically, spend AI budget on the 20% that matters. Same logic applicable to any product at scale."
+      "whatItTaughtMe": "Three-pass scoring: eliminate 50% deterministically (free), spend AI budget on the 50% that matters (€0.25/user/month). Same logic applicable to any product at scale."
     },
     "moneymind": {
       "title": "MoneyMind",

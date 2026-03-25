@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "remotion:studio": "remotion studio remotion/Root.tsx",
+    "remotion:render": "remotion render remotion/Root.tsx"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -23,6 +25,9 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
+    "@remotion/bundler": "^4.0.439",
+    "@remotion/cli": "^4.0.439",
+    "@remotion/renderer": "^4.0.439",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",
@@ -31,6 +36,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "remark-gfm": "^4.0.1",
+    "remotion": "^4.0.439",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
