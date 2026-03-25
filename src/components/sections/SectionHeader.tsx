@@ -9,9 +9,12 @@ export function SectionHeader({ label, title }: SectionHeaderProps) {
       <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)]">
         {label}
       </p>
-      <h2 className="font-heading text-[30px] font-bold leading-[36px] tracking-[-0.75px] text-text-primary">
-        {title}
-      </h2>
+      <div className="relative inline-block w-fit">
+        <h2 className="font-heading text-[30px] font-bold leading-[36px] tracking-[-0.75px] text-text-primary">
+          {title}
+        </h2>
+        <div className="absolute bottom-[-8px] left-0 h-1 w-[120px] bg-gradient-to-r from-accent to-accent/30" />
+      </div>
     </div>
   );
 }

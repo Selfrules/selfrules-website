@@ -611,6 +611,18 @@
       "statusLabel": "Attivo",
       "whatItTaughtMe": "Scoring a tre passaggi: filtrare l'80% in modo deterministico, spendere il budget AI solo sul 20% che conta. Stessa logica applicabile a qualsiasi prodotto."
     },
+    "moneymind": {
+      "title": "MoneyMind",
+      "description": "Tracker di finanze personali che impara dai tuoi pattern di spesa e predice il cash flow del prossimo trimestre.",
+      "statusLabel": "Spedito",
+      "whatItTaughtMe": "Un modello di machine learning è utile solo quando l'UI lo rende tangibile. Una previsione al 95% di accuratezza che nessuno capisce ha valore zero. Progetta per gli insight, non per la matematica."
+    },
+    "openclaw": {
+      "title": "OpenClaw",
+      "description": "Web scraper open-source per estrarre dati strutturati di prodotti da siti e-commerce. Costruito per la raccolta dati su larga scala senza intervento manuale.",
+      "statusLabel": "Esperimento",
+      "whatItTaughtMe": "Costruire open-source ti insegna che l'API è il prodotto. Interfacce pulite e documentate contano più della breadth di feature. Meno cose fa, meglio le fa."
+    },
     "cta": {
       "text": "Se ti interessa come ragiono quando costruisco, i case study professionali raccontano la stessa cosa su scala diversa.",
       "primary": "Guarda i lavori"

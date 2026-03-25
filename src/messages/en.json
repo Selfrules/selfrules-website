@@ -611,6 +611,18 @@
       "statusLabel": "Active",
       "whatItTaughtMe": "Three-pass scoring: filter 80% deterministically, spend AI budget on the 20% that matters. Same logic applicable to any product at scale."
     },
+    "moneymind": {
+      "title": "MoneyMind",
+      "description": "Personal finance tracker that learns spending patterns and predicts cash flow for the next quarter.",
+      "statusLabel": "Shipped",
+      "whatItTaughtMe": "Machine learning models are only useful when the UI makes them tangible. A 95% accurate prediction nobody understands has zero value. Design for the insights, not the math."
+    },
+    "openclaw": {
+      "title": "OpenClaw",
+      "description": "Open-source web scraper for extracting structured product data from e-commerce sites. Built for data collection at scale without manual intervention.",
+      "statusLabel": "Experiment",
+      "whatItTaughtMe": "Building open-source teaches you that the API is the product. Clean, documented interfaces matter more than feature breadth. The fewer things it does, the better it does them."
+    },
     "cta": {
       "text": "If you're curious about how I think when I build, the professional case studies tell the same story at a different scale.",
       "primary": "See the work"

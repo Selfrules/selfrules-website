@@ -50,18 +50,6 @@ export default async function LabPage({
   const pageUrl = locale === 'it' ? `${baseUrl}/it/lab` : `${baseUrl}/lab`;
   const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
 
-  const projects = [
-    {
-      title: t('casahunter.title'),
-      description: t('casahunter.description'),
-      techStack: CASAHUNTER_STACK,
-      status: 'active' as const,
-      statusLabel: t('casahunter.statusLabel'),
-      whatItTaughtMe: t('casahunter.whatItTaughtMe'),
-      href: locale === 'it' ? '/it/lab/casahunter' : '/lab/casahunter',
-    },
-  ];
-
   return (
     <>
       <JsonLd data={{
@@ -82,24 +70,19 @@ export default async function LabPage({
         </p>
       </Section>
 
-      {/* Project grid */}
+      {/* CasaHunter — the only shipped project */}
       <ScrollReveal>
         <Section wide>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                techStack={project.techStack}
-                status={project.status}
-                statusLabel={project.statusLabel}
-                whatItTaughtMe={project.whatItTaughtMe}
-                whatItTaughtMeLabel={t('whatItTaughtMeLabel')}
-                href={project.href}
-              />
-            ))}
-          </div>
+          <ProjectCard
+            title={t('casahunter.title')}
+            description={t('casahunter.description')}
+            techStack={CASAHUNTER_STACK}
+            status={'active' as const}
+            statusLabel={t('casahunter.statusLabel')}
+            whatItTaughtMe={t('casahunter.whatItTaughtMe')}
+            whatItTaughtMeLabel={t('whatItTaughtMeLabel')}
+            href={locale === 'it' ? '/it/lab/casahunter' : '/lab/casahunter'}
+          />
         </Section>
       </ScrollReveal>
 

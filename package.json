@@ -7,7 +7,8 @@
     "prebuild": "node -e \"const c=require('child_process');let n=47;try{n=parseInt(c.execSync('git rev-list --count HEAD').toString().trim())||47}catch(e){}require('fs').writeFileSync('src/lib/build-info.ts','export const COMMIT_COUNT = '+n+';\\n')\"",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -21,6 +22,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",
