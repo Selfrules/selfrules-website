@@ -71,7 +71,7 @@
 - [x] **T-2.1.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Pagina `/lab/casahunter` creata con struttura completa (problema → build vs buy → three-pass scoring → risultati → SaaS decision) ✅
 - [x] **T-2.1.2** (2026-03-24) `[CLAUDE-AUTONOMO]` Copy EN + IT scritto con selfrules-voice ✅
 - [x] **T-2.1.3** (2026-03-25) `[INSIEME]` Screenshot dashboard v1 catturati con Playwright (mappa, lista, statistiche) + link al prototipo SaaS Figma ✅
-- [ ] **T-2.1.4** `[MATTIA-REQUIRED]` Decidere se linkare il repo GitHub — ⏳ in attesa
+- [x] **T-2.1.4** (2026-03-26) `[MATTIA-REQUIRED]` Decisione: NON linkare il repo GitHub — Mattia ha deciso di tenerlo privato ✅
 - [x] **T-2.1.5** (2026-03-24) `[CLAUDE-AUTONOMO]` Diagramma architetturale SVG del three-pass scoring pipeline creato e integrato nella pagina CasaHunter ✅
 - [x] **T-2.1.6** (2026-03-24) `[CLAUDE-AUTONOMO]` Card Lab aggiornata con link a /lab/casahunter ✅
 - [x] **T-2.1.7** (2026-03-25) `[INSIEME]` Riscrittura narrativa CasaHunter: arco personale (bisogno → build → funziona → prodotto) con 6 sezioni: origin, v1, turning point, approach, SaaS, learned ✅
@@ -254,7 +254,7 @@
 - [x] **T-8.2.1** (2026-03-24) `[CLAUDE-AUTONOMO]` Meta descriptions riscritte per CTR: azione + beneficio + curiosità, 150-160 chars ✅
 - [x] **T-8.2.2** (2026-03-24) `[CLAUDE-AUTONOMO]` H1/H2 hierarchy verificata su tutte le pagine — tutte passano ✅
 - [ ] **T-8.2.3** `[CLAUDE-AUTONOMO]` Aggiungere alt text descrittivi quando vengono aggiunti visual/immagini
-- [ ] **T-8.2.4** `[MATTIA-REQUIRED]` Configurare dominio selfrules.org su Vercel + redirect da selfrules-website.vercel.app + canonical URL
+- [ ] **T-8.2.4** `[MATTIA-REQUIRED]` Configurare dominio selfrules.org su Vercel + redirect da selfrules-website.vercel.app + canonical URL — ⏳ POSTICIPATO: si fa per ultimo quando MVP è pronto
 
 ### US 8.3: Performance e testing
 > Come engineering manager, un sito con Lighthouse 95+ e test automatici comunica engineering rigor.
@@ -301,7 +301,7 @@
 ### US 10.3: Analytics e feedback loop
 > Come candidato, voglio sapere come i visitatori interagiscono con il sito per ottimizzarlo.
 
-- [ ] **T-10.3.1** `[MATTIA-REQUIRED]` Configurare Umami Cloud account e aggiungere tracking script
+- [x] **T-10.3.1** (2026-03-26) `[MATTIA-REQUIRED]` Configurare Umami Cloud account e aggiungere tracking script — account attivo, .env.local configurato con Website ID. ⚠️ Aggiungere NEXT_PUBLIC_UMAMI_ID su Vercel env vars per produzione ✅
 - [ ] **T-10.3.2** `[CLAUDE-AUTONOMO]` Definire gli eventi da tracciare: CTA clicks, case study views, CV downloads, time on page
 - [ ] **T-10.3.3** `[INSIEME]` Dopo 2 settimane di dati: analisi e ottimizzazione basata su dati reali
 
