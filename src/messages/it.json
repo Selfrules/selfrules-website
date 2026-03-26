@@ -38,7 +38,7 @@
   "homepage": {
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, codice, e product management nella stessa testa.",
-      "subtitle": "Sistemi di pagamento dal caos al 99% di uptime. Funnel di integrazione ridisegnati, -35% tempo di setup. Prodotti B2B SaaS, costruiti e spediti.",
+      "subtitle": "Trovo il problema reale, risolvo prima quello che conta, e porto in produzione prodotti che reggono. Sistemi di pagamento portati dal caos al 99%+ di uptime. Flussi di integrazione rifatti, -35% sul tempo di setup.",
       "primaryCta": "Parliamo del tuo prodotto",
       "secondaryCta": "Leggi i case study",
       "tag1": "10+ anni",
@@ -48,24 +48,29 @@
       "terminalPrompt": "hello@selfrules.org ~ $",
       "signaturePhrase": "Il problema non e' mai quello del primo meeting."
     },
+    "whatIDo": {
+      "label": "COSA FACCIO",
+      "title": "Quello che faccio davvero",
+      "text": "Le aziende mi cercano quando un prodotto non funziona come dovrebbe. Scavo nel problema reale — non quello che emerge al primo meeting — progetto una soluzione che abbia senso per chi la usa, e la costruisco con il team. L'ho fatto con piattaforme di pagamento che gestiscono milioni di transazioni, tool di integrazione usati da migliaia di aziende, e side project costruiti da zero. Lo schema è sempre lo stesso: prima capire, poi costruire."
+    },
     "howIWork": {
       "label": "TRE LINGUAGGI, UN PRODOTTO",
       "title": "Tre linguaggi, un prodotto",
       "intro": "Quando il design dice \"l'utente si blocca qui perché la gerarchia visiva è sbagliata\", l'engineering dice \"servono 3 sprint di refactoring\", e il business dice \"ci costa €15K al mese in ticket di supporto\". Tre conversazioni separate. Il mio lavoro è trasformarle in una decisione.",
       "pillar1": {
-        "title": "Designer + Developer + PM.\nNella stessa stanza.",
-        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a gestire prodotti e team cross-funzionali fino a 10+ persone. Quando design e engineering non si capiscono, il problema di solito non è tecnico. È che nessuno in stanza ha fatto entrambi i lavori. Le sessioni cross-funzionali settimanali hanno tagliato gli incidenti post-release del <b>25%</b>. Meno rework, meno meeting, decisioni che reggono.",
-        "shortText": "4 anni design. 4 codice. 5+ prodotto. Quando design e engineering non si capiscono, il problema non è tecnico. Sessioni cross-funzionali: incidenti post-release <b>-25%</b>."
+        "title": "Ho fatto tutti e tre i mestieri.\nQuesto cambia come prendo le decisioni.",
+        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente finale. Meno passaggi, meno sorprese. Le sessioni cross-funzionali che ho introdotto hanno ridotto gli incidenti post-release del <b>25%</b>.",
+        "shortText": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente. Sessioni cross-funzionali: incidenti post-release <b>-25%</b>."
       },
       "pillar2": {
-        "title": "Il problema non è mai\nquello del primo meeting",
-        "text": "Un esempio. Sistema di pagamento in crisi, 44 problemi aperti. La pressione è \"agire su tutto, subito.\" Due settimane a parlare con il supporto, leggere i ticket, guardare i dati. Risultato: 12 critici, 4 con impatto finanziario immediato. Gli altri potevano aspettare. I 4 più gravi risolti in 6 settimane, non 6 mesi. Prima di costruire qualcosa, verifica di star risolvendo il problema giusto.",
-        "shortText": "Sistema di pagamento in crisi, 44 problemi aperti. Due settimane di discovery: 12 critici, 4 con impatto finanziario. I 4 più gravi risolti in 6 settimane, non 6 mesi."
+        "title": "Prima di costruire qualsiasi cosa,\nverifico il problema vero.",
+        "text": "Un sistema di pagamento con 44 problemi aperti e la pressione di risolvere tutto subito. Due settimane a parlare col supporto e leggere i dati: solo 4 stavano facendo perdere soldi ai clienti. Quei 4 risolti in 6 settimane, non 6 mesi. Gli altri 40 potevano aspettare. Capire cosa conta davvero: quello è il lavoro.",
+        "shortText": "Un sistema di pagamento con 44 problemi aperti. Due settimane di discovery: solo 4 facevano perdere soldi ai clienti. Quei 4 risolti in 6 settimane, non 6 mesi. Capire cosa conta davvero: quello è il lavoro."
       },
       "pillar3": {
-        "title": "Prototipi, non slide",
-        "text": "Un prototipo in React che gli utenti possono toccare dice più di qualsiasi documento di specifiche. React, TypeScript e Node.js per validare un'idea prima di chiedere mesi di sviluppo al team. La priorità viene dalla frustrazione dell'utente, non dalla complessità tecnica. E quando i dati dicono che una feature non serve, la risposta è no. Anche se la chiede il 60% degli utenti.",
-        "shortText": "Un prototipo React che gli utenti possono toccare dice più di qualsiasi spec. Priorità dalla frustrazione utente, non dalla complessità tecnica. Quando i dati dicono no, la risposta è no."
+        "title": "Valido le idee con codice che funziona,\nnon con i deck.",
+        "text": "Quando devo validare un'idea, costruisco un prototipo funzionante — non una presentazione. Gli utenti lo provano, osserviamo cosa succede, impariamo in giorni invece che mesi. La priorità viene dalla frustrazione reale degli utenti, non dalla politica interna. E quando i dati dicono che una feature non serve, la risposta è no — anche quando la chiede il 60% degli utenti.",
+        "shortText": "Quando devo validare un'idea, costruisco un prototipo funzionante — non una presentazione. Gli utenti lo provano, impariamo in giorni invece che mesi. Quando i dati dicono no, la risposta è no."
       }
     },
     "timeline": {
@@ -106,33 +111,33 @@
       "title": "Numeri, non parole",
       "metric1": {
         "number": "99%+",
-        "label": "Uptime",
-        "context": "100% uptime contro un target SLA del 99%"
+        "label": "Uptime sui sistemi di pagamento",
+        "context": "Transazioni per centri di intrattenimento in 5 paesi. Ereditato in stato critico, stabilizzato in 6 mesi"
       },
       "metric2": {
         "number": "-25%",
-        "label": "Incidenti post-release",
-        "context": "Post-release, attraverso processo di triage cross-funzionale"
+        "label": "Bug in meno arrivati ai clienti",
+        "context": "Introducendo review cross-funzionali settimanali prima di ogni release"
       },
       "metric3": {
         "number": "116",
-        "label": "Centri integrati",
-        "context": "Integrati su piattaforma enterprise, 5 nuovi a settimana"
+        "label": "Sedi attive sulla piattaforma",
+        "context": "Ognuna con pagamenti, scoring e operations attivi. 5 nuove live ogni settimana"
       },
       "metric4": {
         "number": "-35%",
-        "label": "Tempo di setup",
-        "context": "Su tutti i flussi di pagamento in piattaforma B2B su 5 paesi"
+        "label": "Tempo in meno per iniziare a usare il prodotto",
+        "context": "Flusso di setup ridisegnato per una piattaforma di integrazione con 380+ connettori"
       },
       "metric5": {
         "number": "+25%",
-        "label": "Crescita YoY",
-        "context": "Unico provider di pagamento ancora in crescita nel portfolio"
+        "label": "Crescita revenue anno su anno",
+        "context": "L'unica soluzione di pagamento ancora in crescita mentre i competitor si fermavano"
       },
       "metric6": {
         "number": "23/44",
-        "label": "Item spediti",
-        "context": "Spediti. Pagamenti critici ridotti da 12 a 5"
+        "label": "Problemi risolti in 6 mesi",
+        "context": "Da 12 problemi critici sui pagamenti a 5. Gli altri 21 erano decisioni deliberate di 'non ora'"
       },
       "link": "Guarda i case study"
     },
@@ -226,14 +231,14 @@
         "title": "Un sistema di pagamento\nche perdeva transazioni ogni giorno",
         "metric": "99%+",
         "metricLabel": "SUCCESS RATE →",
-        "preview": "Centinaia di centri in 5 paesi, 44 problemi aperti senza priorità, 4 con impatto economico immediato. La stabilizzazione senza riscrivere niente."
+        "preview": "I clienti perdevano soldi — doppi addebiti, pagamenti falliti, rimborsi spariti. 44 problemi aperti e la pressione di sistemare tutto insieme. Ho trovato i 4 che contavano davvero, risolti in 6 settimane, e portato il sistema al 99%+ di uptime. Senza riscrivere una riga di codice."
       },
       "cashless": {
         "tag": "Cashless · Product Strategy · Partnership",
         "title": "Cashless da zero: tre provider,\nun problema \"irrisolvibile\", e un prodotto da parcheggiare",
         "metric": "5 mesi",
         "metricLabel": "DA ZERO A DEMO LIVE →",
-        "preview": "Il prodotto interno sembrava la scelta ovvia. La discovery ha raccontato un'altra storia. Come la strategia cashless è stata definita partendo dai vincoli reali.",
+        "preview": "Come fai pagare i clienti senza contanti nei centri di intrattenimento? Tre provider in competizione, serve una strategia prodotto. La scelta ovvia sembrava la migliore sulla carta. I test reali con vincoli reali hanno raccontato un'altra storia.",
         "note": "Metriche finali disponibili al lancio in produzione — dati pilota in corso di raccolta"
       },
       "leadsbridge": {
@@ -241,7 +246,7 @@
         "title": "380+ integrazioni, e la maggior parte degli utenti\nnon ne finiva nemmeno una",
         "metric": "-35%",
         "metricLabel": "TEMPO DI SETUP →",
-        "preview": "Un flusso di creazione bridge in cinque step con enorme drop-off. La soluzione non era aggiungere funzioni — era toglierle. Auto-mapping, complessità nascosta, e un percorso più semplice verso l'attivazione."
+        "preview": "Migliaia di aziende volevano collegare i dati pubblicitari al CRM in automatico. Ma la maggior parte mollava durante la configurazione — troppo complessa. La soluzione non erano più funzionalità. Erano meno. Tempo di setup -35%, adozione +9%."
       }
     },
     "cta": {

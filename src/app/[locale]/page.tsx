@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
 import { Hero } from '@/components/sections/Hero';
+import { WhatIDo } from '@/components/sections/WhatIDo';
 import { HowIWork } from '@/components/sections/HowIWork';
 import { Timeline } from '@/components/sections/Timeline';
 import { Metrics } from '@/components/sections/Metrics';
@@ -62,6 +63,14 @@ export default async function HomePage({
         terminalPrompt={t('hero.terminalPrompt')}
         signaturePhrase={t('hero.signaturePhrase')}
       />
+
+      <ScrollReveal>
+        <WhatIDo
+          label={t('whatIDo.label')}
+          title={t('whatIDo.title')}
+          text={t('whatIDo.text')}
+        />
+      </ScrollReveal>
 
       <ScrollReveal>
         <HowIWork

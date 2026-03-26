@@ -301,7 +301,7 @@
 ### US 10.3: Analytics e feedback loop
 > Come candidato, voglio sapere come i visitatori interagiscono con il sito per ottimizzarlo.
 
-- [x] **T-10.3.1** (2026-03-26) `[MATTIA-REQUIRED]` Configurare Umami Cloud account e aggiungere tracking script — account attivo, .env.local configurato con Website ID. ⚠️ Aggiungere NEXT_PUBLIC_UMAMI_ID su Vercel env vars per produzione ✅
+- [x] **T-10.3.1** (2026-03-26) `[MATTIA-REQUIRED]` Configurare Umami Cloud account e aggiungere tracking script — account attivo, .env.local + Vercel env var configurati, redeploy lanciato ✅
 - [ ] **T-10.3.2** `[CLAUDE-AUTONOMO]` Definire gli eventi da tracciare: CTA clicks, case study views, CV downloads, time on page
 - [ ] **T-10.3.3** `[INSIEME]` Dopo 2 settimane di dati: analisi e ottimizzazione basata su dati reali
 
@@ -336,29 +336,162 @@
 
 ---
 
+## EPIC 12: Clarity Rewrite — Il sito che capisce chiunque
+**Priorità: CRITICA** | **Impatto: 10/10** | **Valore hiring manager: Massimo**
+
+> **Fonte:** SITE-AUDIT-CLARITY.md (2026-03-26). Il sito attuale fallisce l'80% degli hiring manager. Il pattern CasaHunter (problema → soluzione → risultato) funziona. Il resto del sito parla a specialisti. Questa epic riscrive il sito perché chiunque — recruiter, VP of Product, TPM da un altro verticale — capisca cosa fa Mattia e perché assumerlo.
+>
+> **Principio guida:** Se un bambino non può spiegare cosa fa Mattia dopo aver letto la pagina, la pagina va riscritta.
+
+### US 12.1: Homepage — Riscrivere il subtitle per outcome, non dominio (TIER 1)
+> Come hiring manager non-specialist, in 5 secondi devo capire cosa fa Mattia per le aziende — non in quale dominio ha lavorato.
+
+- [ ] **T-12.1.1** `[INSIEME]` Riscrivere l'hero subtitle: da jargon di dominio a outcome universale. Proposta audit: "I find what customers actually need — then design and ship the product that solves it." Mattia valida il tono e il messaggio.
+- [ ] **T-12.1.2** `[CLAUDE-AUTONOMO]` Implementare il nuovo subtitle EN + IT in en.json / it.json
+- [ ] **T-12.1.3** `[CLAUDE-AUTONOMO]` Verificare rendering su homepage, build OK
+
+### US 12.2: Homepage — Riscrivere "Three Languages, One Product" (TIER 1)
+> Come hiring manager, "The problem is never the one from the first meeting" è una frase memorabile ma non mi dice niente. Devo capire il VALORE del ruolo ibrido design/code/PM.
+
+- [ ] **T-12.2.1** `[INSIEME]` Riscrivere i 3 pillar della sezione "Three Languages": spiegare il valore dell'ibrido con esempi concreti, non tagline clever. Ogni pillar deve rispondere a "perché questo è un vantaggio per la mia azienda?"
+- [ ] **T-12.2.2** `[CLAUDE-AUTONOMO]` Implementare il nuovo copy EN + IT
+- [ ] **T-12.2.3** `[CLAUDE-AUTONOMO]` Build OK, verificare che la sezione funzioni visivamente con il nuovo copy (potrebbe essere più lungo)
+
+### US 12.3: Homepage — Riscrivere le case study preview cards (TIER 1)
+> Come hiring manager, le preview devono comunicare risultato e significato — non contesto tecnico che richiede domain knowledge.
+
+- [ ] **T-12.3.1** `[CLAUDE-AUTONOMO]` Riscrivere la preview card Payments Rescue: aprire con l'outcome ("Customer churn was accelerating because of payment failures..."), non con "Hundreds of centers across 5 countries"
+- [ ] **T-12.3.2** `[CLAUDE-AUTONOMO]` Riscrivere la preview card LeadsBridge: aprire con il problema utente ("Most customers wanted to use the platform but gave up during setup..."), non con jargon SaaS
+- [ ] **T-12.3.3** `[CLAUDE-AUTONOMO]` Riscrivere la preview card Cashless System: chiarire cosa significa "cashless integration" per un non-specialist
+- [ ] **T-12.3.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json con le nuove preview
+- [ ] **T-12.3.5** `[CLAUDE-AUTONOMO]` Build OK, verificare rendering cards
+
+### US 12.4: Homepage — Aggiungere sezione "What I Actually Do" (TIER 1)
+> Come hiring manager non-specialist, dopo l'hero devo trovare UNA frase chiara che traduca le competenze di Mattia in valore per la mia azienda.
+
+- [ ] **T-12.4.1** `[INSIEME]` Scrivere la sezione "What I Actually Do": 1 frase chiara + 1 paragrafo di contesto. Proposta audit: "I investigate what customers actually need (instead of what they ask for), design the solution (so it's intuitive), and ship it (so it's reliable)." Mattia valida.
+- [ ] **T-12.4.2** `[CLAUDE-AUTONOMO]` Implementare la nuova sezione nel layout homepage, posizionata subito dopo l'hero
+- [ ] **T-12.4.3** `[CLAUDE-AUTONOMO]` Copy EN + IT, styling coerente con design system
+- [ ] **T-12.4.4** `[CLAUDE-AUTONOMO]` Build OK, verificare posizionamento e responsive
+
+### US 12.5: Homepage — Contestualizzare le metriche per non-specialist (TIER 1)
+> Come hiring manager, "99%+ uptime" senza "di cosa?" mi fa pensare SRE, non PM. Ogni metrica deve avere il contesto "di cosa" e "per chi".
+
+- [ ] **T-12.5.1** `[CLAUDE-AUTONOMO]` Riscrivere le 6 metriche homepage: aggiungere "di cosa?" e "perché conta?" — es. "99%+ uptime" → "99%+ uptime on payment systems serving 116 entertainment centers across 5 countries"
+- [ ] **T-12.5.2** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
+- [ ] **T-12.5.3** `[CLAUDE-AUTONOMO]` Verificare che le card metriche reggano il copy più lungo (responsive check)
+
+---
+
+## EPIC 13: Case Study Reframe — Il pattern CasaHunter ovunque
+**Priorità: ALTA** | **Impatto: 9/10** | **Valore hiring manager: Alto**
+
+> **Fonte:** SITE-AUDIT-CLARITY.md, TIER 2. CasaHunter funziona perché usa "outcome language": problema (1 frase) → soluzione (1 frase) → risultato (1 frase). I case study Payments e LeadsBridge usano "technical language": 3 paragrafi di contesto aziendale prima del problema. Questa epic applica il pattern CasaHunter a tutti i case study.
+
+### US 13.1: Payments Rescue — Riscrivere l'apertura con il pattern CasaHunter
+> Come hiring manager non-payments, devo capire il problema in 1 frase, la soluzione in 1 frase, e il risultato in 1 frase — PRIMA di entrare nel dettaglio tecnico.
+
+- [ ] **T-13.1.1** `[INSIEME]` Riscrivere l'apertura Payments Rescue: 3 frasi CasaHunter-style (problema → soluzione → risultato), poi il dettaglio per chi vuole approfondire. Mattia valida il framing.
+- [ ] **T-13.1.2** `[CLAUDE-AUTONOMO]` Tradurre il jargon tecnico nel case study: ogni termine di dominio (payments, split payments, square integration) deve avere una traduzione plain-English nella frase successiva
+- [ ] **T-13.1.3** `[CLAUDE-AUTONOMO]` Spostare la sezione "What I Learned" in alto (callout visivo) — il takeaway più prezioso non deve essere in fondo alla pagina
+- [ ] **T-13.1.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
+- [ ] **T-13.1.5** `[CLAUDE-AUTONOMO]` Build OK
+
+### US 13.2: LeadsBridge — Riscrivere l'apertura con il pattern CasaHunter
+> Come mobile product director senza esperienza SaaS integration, devo capire perché "rimuovere feature" è controintuitivo e significativo.
+
+- [ ] **T-13.2.1** `[INSIEME]` Riscrivere l'apertura LeadsBridge: 3 frasi CasaHunter-style. Mattia valida.
+- [ ] **T-13.2.2** `[CLAUDE-AUTONOMO]` Tradurre jargon: "bridge creation flow", "field mapping", "connectors" → plain English con analogie comprensibili
+- [ ] **T-13.2.3** `[CLAUDE-AUTONOMO]` Spostare "What I Learned" in alto come callout
+- [ ] **T-13.2.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
+- [ ] **T-13.2.5** `[CLAUDE-AUTONOMO]` Build OK
+
+### US 13.3: Cashless System — Riscrivere l'apertura con il pattern CasaHunter
+> Come hiring manager, "5 months, zero to live demo" non dice nulla se non so cosa significa "cashless integration" e perché è difficile.
+
+- [ ] **T-13.3.1** `[INSIEME]` Riscrivere l'apertura Cashless: chiarire il problema (3 payment provider in competizione, serve una strategia prodotto unificata), la soluzione (discovery reale, non assumptions), il risultato. Mattia valida.
+- [ ] **T-13.3.2** `[CLAUDE-AUTONOMO]` Tradurre jargon specifico del dominio cashless/payments
+- [ ] **T-13.3.3** `[CLAUDE-AUTONOMO]` Spostare "What I Learned" in alto
+- [ ] **T-13.3.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
+- [ ] **T-13.3.5** `[CLAUDE-AUTONOMO]` Build OK
+
+---
+
+## EPIC 14: Blog Clarity — Preview text e rilevanza
+**Priorità: MEDIA** | **Impatto: 5/10** | **Valore hiring manager: Medio**
+
+> **Fonte:** SITE-AUDIT-CLARITY.md, TIER 3. I titoli dei blog post sono "clever" ma non dicono al lettore perché dovrebbe leggere. Aggiungere 1 riga di contesto sotto ogni titolo.
+
+### US 14.1: Aggiungere preview text a tutti i blog post
+> Come hiring manager che scorre la pagina Notes, devo capire in 1 riga se il post è rilevante per me — senza doverlo aprire.
+
+- [ ] **T-14.1.1** `[CLAUDE-AUTONOMO]` Scrivere 1 riga di preview per ciascuno degli 8 blog post — non un riassunto, ma una "premessa" che spiega perché leggere (es. "The meeting where everyone says yes" → "A decision-making technique for teams with competing priorities")
+- [ ] **T-14.1.2** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json con le preview
+- [ ] **T-14.1.3** `[CLAUDE-AUTONOMO]` Aggiornare il componente NoteCard per mostrare la preview sotto il titolo
+- [ ] **T-14.1.4** `[CLAUDE-AUTONOMO]` Build OK, verificare layout Notes page
+
+---
+
+## EPIC 15: About Page & Polish — Focus su outcome
+**Priorità: BASSA-MEDIA** | **Impatto: 4/10** | **Valore hiring manager: Completamento**
+
+> **Fonte:** SITE-AUDIT-CLARITY.md, TIER 4. L'About page descrive le aziende, non i learning. La sezione "Outside work" non serve all'obiettivo. Polish finale dopo che EPIC 12 e 13 sono completate.
+
+### US 15.1: Riscrivere l'About per outcome, non per azienda
+> Come hiring manager che ha già deciso di approfondire, ogni entry della carriera deve rispondere "Cosa hai imparato?" non "Dove hai lavorato?"
+
+- [ ] **T-15.1.1** `[INSIEME]` Riscrivere le career entry dell'About: ogni posizione apre con il learning/outcome, poi il contesto. Es. CliensPiù: "I learned that details matter because users live in the tool 8+ hours a day" prima di "legal practice management system"
+- [ ] **T-15.1.2** `[CLAUDE-AUTONOMO]` Implementare il nuovo copy EN + IT
+- [ ] **T-15.1.3** `[CLAUDE-AUTONOMO]` Valutare se la sezione "Outside work" (LEGO, embroidery) serve all'obiettivo — proporre a Mattia rimozione o riformulazione
+- [ ] **T-15.1.4** `[CLAUDE-AUTONOMO]` Build OK
+
+### US 15.2: Valutare il ruolo del blog nella job search
+> Come Mattia, devo decidere se il blog nella forma attuale differenzia o diluisce il messaggio del sito.
+
+- [ ] **T-15.2.1** `[INSIEME]` Analisi: il blog aggiunge valore differenziante o è "generic PM thinking"? CasaHunter è l'unico pezzo veramente differenziato. Decidere se mantenere tutti i post, selezionarne alcuni, o riposizionare la sezione Notes.
+
+---
+
 ## RIEPILOGO ESECUZIONE
 
-### Task che Claude può iniziare SUBITO (autonomamente):
-1. T-8.1.1 → T-8.1.6: Fix tecnici (30 min totali)
-2. T-3.2.1 → T-3.2.3: Contesto metriche homepage (1h)
-3. T-3.4.1 → T-3.4.2: Riscrittura sezione Now (30 min)
-4. T-3.5.1 → T-3.5.2: CTA specifici (30 min)
-5. T-2.2.1 → T-2.2.3: Pulizia Lab page (30 min)
-6. T-1.2.1 → T-1.2.3: Nuovi componenti case study (1h)
-7. T-6.1.1 → T-6.1.5: Riscrittura About (1h)
-8. T-4.2.1 → T-4.2.4: Reading time, tag, year grouping (1h)
+### 🔥 PROSSIMI — Clarity Rewrite (EPIC 12-13, massima priorità):
 
-### Task che richiedono INPUT di Mattia prima di procedere:
-1. **T-1.1.1**: Contenuto case study ActiveProspect/LeadsBridge — bullet point grezzi
-2. **T-1.4.1**: Framing Cashless System — metriche pilot o decisione strategica
-3. **T-2.1.3**: Screenshot CasaHunter dashboard/bot
-4. **T-2.1.4**: Decisione repo GitHub pubblico/privato
-5. **T-5.1.1**: Approvazione concept interactive case study
-6. **T-8.2.4**: Configurazione dominio selfrules.org
+**INSIEME (serve Mattia):**
+1. **T-12.1.1**: Hero subtitle → outcome-first (la singola modifica con più impatto)
+2. **T-12.2.1**: Riscrivere "Three Languages" — valore dell'ibrido, non tagline
+3. **T-12.4.1**: Nuova sezione "What I Actually Do" — 1 frase chiara
+4. **T-13.1.1**: Apertura Payments Rescue → pattern CasaHunter
+5. **T-13.2.1**: Apertura LeadsBridge → pattern CasaHunter
+6. **T-13.3.1**: Apertura Cashless → pattern CasaHunter
 
-### Task da fare INSIEME (sessione collaborativa):
-1. **T-3.1.1**: Hero subtitle — Claude propone varianti, Mattia sceglie
-2. **T-3.3.1**: Titolo "How I Work" — Claude propone, Mattia sceglie
-3. **T-4.1.1**: Lista blog post — Claude propone, Mattia approva/modifica
-4. **T-1.2.6**: Visual case study — Mattia indica contenuto, Claude genera
-5. **T-5.2.1**: Decisione "Ask Mattia" chatbot — valutazione ROI insieme
+**CLAUDE-AUTONOMO (dopo validazione copy con Mattia):**
+1. T-12.1.2 → T-12.1.3: Implementare nuovo subtitle
+2. T-12.3.1 → T-12.3.5: Riscrivere preview cards case study
+3. T-12.5.1 → T-12.5.3: Contestualizzare metriche
+4. T-13.1.2 → T-13.1.5: Tradurre jargon Payments + spostare "Learned" in alto
+5. T-13.2.2 → T-13.2.5: Tradurre jargon LeadsBridge + spostare "Learned" in alto
+6. T-14.1.1 → T-14.1.4: Preview text blog post
+
+### Task aperti da epic precedenti:
+
+**CLAUDE-AUTONOMO:**
+1. T-1.2.6: Visual per case study (diagramma/flow)
+2. T-7.2.3: Test OG images su LinkedIn/Twitter
+3. T-7.3.1 → T-7.3.2: Visual nei blog post
+4. T-8.2.3: Alt text quando si aggiungono immagini
+5. T-8.3.1: Lighthouse audit
+6. T-8.3.3: Test accessibilità axe-core
+7. T-10.1.1 → T-10.1.3: Blog publishing pipeline MDX
+
+**MATTIA-REQUIRED:**
+1. **T-4.1.8**: Revisione 5 blog post prima di merge
+2. **T-4.3.1**: Cross-postare blog su LinkedIn
+3. **T-8.2.4**: Configurazione dominio selfrules.org (posticipato a MVP pronto)
+
+**INSIEME:**
+1. **T-4.3.3**: Cadenza editoriale blog
+2. **T-5.1.1**: Storyboard interactive case study Payments
+3. **T-5.2.1**: Decisione "Ask Mattia" chatbot
+4. **T-10.2.1**: Definire scheduled tasks
+5. **T-15.1.1**: Riscrivere About per outcome
+6. **T-15.2.1**: Valutare ruolo blog nella job search
