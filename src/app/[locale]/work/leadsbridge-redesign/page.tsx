@@ -8,6 +8,7 @@ import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
 import { PullQuote } from '@/components/ui/PullQuote';
+import { KeyInsight } from '@/components/ui/KeyInsight';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -172,6 +173,16 @@ export default async function LeadsBridgePage({
           ]}
           summary={t('leadsbridge.summary')}
         />
+      </Section>
+
+      {/* TL;DR + Key Insight */}
+      <Section>
+        <div className="max-w-none leading-[1.7] prose prose-invert prose-p:text-[var(--color-text-primary)]">
+          <p className="text-[18px] md:text-[20px] leading-[1.7] text-[rgba(255,255,255,0.7)]">
+            {t('leadsbridge.tldr')}
+          </p>
+        </div>
+        <KeyInsight>{t('leadsbridge.learnedCallout')}</KeyInsight>
       </Section>
 
       {/* Body */}
