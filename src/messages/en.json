@@ -725,16 +725,6 @@
           "Technical PM"
         ]
       },
-      "the-meeting-where-everyone-says-yes": {
-        "title": "The meeting where everyone says yes",
-        "date": "2026-02-08",
-        "excerpt": "When nobody disagrees, nobody's thinking. A PM with no position turns the roadmap into a parking lot of unrelated features.",
-        "readingTime": "5 min read",
-        "tags": [
-          "Decision Making",
-          "Product Craft"
-        ]
-      },
       "why-metrics-lie-without-context": {
         "title": "Why metrics lie without context",
         "date": "2026-03-22",
@@ -763,26 +753,6 @@
         "tags": [
           "Payments",
           "Scale"
-        ]
-      },
-      "remote-pm-across-countries": {
-        "title": "Being a remote PM across countries",
-        "date": "2026-02-19",
-        "excerpt": "Remote PM fails when you solve timezone overlap with better scheduling. The real skill is async-first: persistent docs, written decisions, shared context.",
-        "readingTime": "5 min",
-        "tags": [
-          "Remote",
-          "PM"
-        ]
-      },
-      "build-vs-buy-framework": {
-        "title": "Build vs Buy framework",
-        "date": "2026-01-18",
-        "excerpt": "Build vs buy isn't a technical decision. It's four strategic questions in sequence: constraint, differentiator, total cost, reversibility.",
-        "readingTime": "4 min",
-        "tags": [
-          "Framework",
-          "Decisions"
         ]
       },
       "seven-years-running-a-business": {

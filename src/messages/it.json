@@ -725,16 +725,6 @@
           "Technical PM"
         ]
       },
-      "the-meeting-where-everyone-says-yes": {
-        "title": "Il meeting dove tutti dicono sì",
-        "date": "2026-02-08",
-        "excerpt": "Quando nessuno dissente, nessuno sta pensando. Un PM senza una posizione trasforma la roadmap in un parcheggio di feature scollegate.",
-        "readingTime": "5 min di lettura",
-        "tags": [
-          "Decision Making",
-          "Product Craft"
-        ]
-      },
       "why-metrics-lie-without-context": {
         "title": "Perché le metriche mentono senza contesto",
         "date": "2026-03-22",
@@ -763,26 +753,6 @@
         "tags": [
           "Pagamenti",
           "Scale"
-        ]
-      },
-      "remote-pm-across-countries": {
-        "title": "PM remoto su paesi diversi",
-        "date": "2026-02-19",
-        "excerpt": "Il PM remoto fallisce quando provi a risolvere il gap di fuso orario con meeting migliori. La vera skill è l'async-first: documentazione persistente, decisioni scritte, contesto condiviso.",
-        "readingTime": "5 min",
-        "tags": [
-          "Remoto",
-          "PM"
-        ]
-      },
-      "build-vs-buy-framework": {
-        "title": "Framework Build vs Buy",
-        "date": "2026-01-18",
-        "excerpt": "Build vs buy non è una decisione tecnica. Sono quattro domande strategiche in sequenza: vincolo, differenziatore, costo totale, reversibilità.",
-        "readingTime": "4 min",
-        "tags": [
-          "Framework",
-          "Decisioni"
         ]
       },
       "seven-years-running-a-business": {

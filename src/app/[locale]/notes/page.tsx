@@ -39,14 +39,6 @@ export default async function NotesPage({
       tags: t.raw('posts.why-i-prototype-in-code.tags') as string[],
     },
     {
-      slug: 'the-meeting-where-everyone-says-yes',
-      title: t('posts.the-meeting-where-everyone-says-yes.title'),
-      date: t('posts.the-meeting-where-everyone-says-yes.date'),
-      excerpt: t('posts.the-meeting-where-everyone-says-yes.excerpt'),
-      readingTime: t('posts.the-meeting-where-everyone-says-yes.readingTime'),
-      tags: t.raw('posts.the-meeting-where-everyone-says-yes.tags') as string[],
-    },
-    {
       slug: 'why-metrics-lie-without-context',
       title: t('posts.why-metrics-lie-without-context.title'),
       date: t('posts.why-metrics-lie-without-context.date'),
@@ -69,22 +61,6 @@ export default async function NotesPage({
       excerpt: t('posts.managing-payments-at-scale.excerpt'),
       readingTime: t('posts.managing-payments-at-scale.readingTime'),
       tags: t.raw('posts.managing-payments-at-scale.tags') as string[],
-    },
-    {
-      slug: 'remote-pm-across-countries',
-      title: t('posts.remote-pm-across-countries.title'),
-      date: t('posts.remote-pm-across-countries.date'),
-      excerpt: t('posts.remote-pm-across-countries.excerpt'),
-      readingTime: t('posts.remote-pm-across-countries.readingTime'),
-      tags: t.raw('posts.remote-pm-across-countries.tags') as string[],
-    },
-    {
-      slug: 'build-vs-buy-framework',
-      title: t('posts.build-vs-buy-framework.title'),
-      date: t('posts.build-vs-buy-framework.date'),
-      excerpt: t('posts.build-vs-buy-framework.excerpt'),
-      readingTime: t('posts.build-vs-buy-framework.readingTime'),
-      tags: t.raw('posts.build-vs-buy-framework.tags') as string[],
     },
     {
       slug: 'seven-years-running-a-business',
