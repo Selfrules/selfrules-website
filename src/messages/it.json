@@ -717,7 +717,7 @@
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Perché prototipo in codice",
-        "date": "2026-01-16",
+        "date": "2026-01-29",
         "excerpt": "I diagrammi nascondono le parti difficili. Costruire un sistema vero — anche piccolo — fa emergere i vincoli architetturali che dovrebbero guidare le decisioni di prodotto.",
         "readingTime": "4 min di lettura",
         "tags": [
@@ -747,7 +747,7 @@
       },
       "when-ai-makes-sense-in-product": {
         "title": "Quando l'AI ha senso nel prodotto",
-        "date": "2024-12-15",
+        "date": "2026-03-12",
         "excerpt": "La regola 80/20 applicata all'AI: regole deterministiche per i problemi prevedibili, ML solo dove serve giudizio vero. La maggior parte delle feature non ha bisogno di un modello.",
         "readingTime": "5 min",
         "tags": [
@@ -757,7 +757,7 @@
       },
       "managing-payments-at-scale": {
         "title": "Gestire i pagamenti su scala",
-        "date": "2025-01-15",
+        "date": "2026-03-01",
         "excerpt": "I pagamenti richiedono un mindset da PM diverso. Sicurezza prima di possibilità. Una settimana a leggere le API e tracciare i flussi di denaro previene mesi di incendi in produzione.",
         "readingTime": "6 min",
         "tags": [
@@ -767,7 +767,7 @@
       },
       "remote-pm-across-countries": {
         "title": "PM remoto su paesi diversi",
-        "date": "2025-01-08",
+        "date": "2026-02-19",
         "excerpt": "Il PM remoto fallisce quando provi a risolvere il gap di fuso orario con meeting migliori. La vera skill è l'async-first: documentazione persistente, decisioni scritte, contesto condiviso.",
         "readingTime": "5 min",
         "tags": [
@@ -777,7 +777,7 @@
       },
       "build-vs-buy-framework": {
         "title": "Framework Build vs Buy",
-        "date": "2024-12-08",
+        "date": "2026-01-18",
         "excerpt": "Build vs buy non è una decisione tecnica. Sono quattro domande strategiche in sequenza: vincolo, differenziatore, costo totale, reversibilità.",
         "readingTime": "4 min",
         "tags": [
@@ -787,7 +787,7 @@
       },
       "seven-years-running-a-business": {
         "title": "Sette anni a gestire un business",
-        "date": "2025-01-01",
+        "date": "2026-01-06",
         "excerpt": "Sette anni da freelance hanno insegnato una regola su tutte: conta portare a termine. I clienti guardano le date di consegna e i risultati visibili, non il processo elegante.",
         "readingTime": "7 min",
         "tags": [

@@ -717,7 +717,7 @@
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Why I prototype in code",
-        "date": "2026-01-16",
+        "date": "2026-01-29",
         "excerpt": "Diagrams hide the hard parts. Building a real system — even a small one — exposes the architectural constraints that should drive product decisions.",
         "readingTime": "4 min read",
         "tags": [
@@ -747,7 +747,7 @@
       },
       "when-ai-makes-sense-in-product": {
         "title": "When AI makes sense in product",
-        "date": "2024-12-15",
+        "date": "2026-03-12",
         "excerpt": "The 80/20 rule applied to AI: use deterministic rules for predictable problems, reserve ML for genuine judgment calls. Most features don't need a model.",
         "readingTime": "5 min",
         "tags": [
@@ -757,7 +757,7 @@
       },
       "managing-payments-at-scale": {
         "title": "Managing payments at scale",
-        "date": "2025-01-15",
+        "date": "2026-03-01",
         "excerpt": "Payments require a different PM mindset. Safety before possibility. One week reading the API and tracing money flows prevents months of production fires.",
         "readingTime": "6 min",
         "tags": [
@@ -767,7 +767,7 @@
       },
       "remote-pm-across-countries": {
         "title": "Being a remote PM across countries",
-        "date": "2025-01-08",
+        "date": "2026-02-19",
         "excerpt": "Remote PM fails when you solve timezone overlap with better scheduling. The real skill is async-first: persistent docs, written decisions, shared context.",
         "readingTime": "5 min",
         "tags": [
@@ -777,7 +777,7 @@
       },
       "build-vs-buy-framework": {
         "title": "Build vs Buy framework",
-        "date": "2024-12-08",
+        "date": "2026-01-18",
         "excerpt": "Build vs buy isn't a technical decision. It's four strategic questions in sequence: constraint, differentiator, total cost, reversibility.",
         "readingTime": "4 min",
         "tags": [
@@ -787,7 +787,7 @@
       },
       "seven-years-running-a-business": {
         "title": "Seven years running a business",
-        "date": "2025-01-01",
+        "date": "2026-01-06",
         "excerpt": "Seven years freelancing taught one rule above all: shipping is what matters. Clients care about delivery dates and visible results, not elegant process.",
         "readingTime": "7 min",
         "tags": [
