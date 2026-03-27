@@ -718,7 +718,7 @@
       "why-i-prototype-in-code": {
         "title": "Perché prototipo in codice",
         "date": "2026-01-16",
-        "excerpt": "Un Product Manager che prototipa in codice prende decisioni diverse.",
+        "excerpt": "I diagrammi nascondono le parti difficili. Costruire un sistema vero — anche piccolo — fa emergere i vincoli architetturali che dovrebbero guidare le decisioni di prodotto.",
         "readingTime": "4 min di lettura",
         "tags": [
           "Product Craft",
@@ -728,7 +728,7 @@
       "the-meeting-where-everyone-says-yes": {
         "title": "Il meeting dove tutti dicono sì",
         "date": "2026-02-08",
-        "excerpt": "Allineamento non è la stessa cosa di accordo. Uno costruisce prodotti, l'altro costruisce backlog.",
+        "excerpt": "Quando nessuno dissente, nessuno sta pensando. Un PM senza una posizione trasforma la roadmap in un parcheggio di feature scollegate.",
         "readingTime": "5 min di lettura",
         "tags": [
           "Decision Making",
@@ -738,7 +738,7 @@
       "why-metrics-lie-without-context": {
         "title": "Perché le metriche mentono senza contesto",
         "date": "2026-03-22",
-        "excerpt": "Un numero senza una storia è solo un numero. La storia è ciò che lo rende una decisione.",
+        "excerpt": "Ogni metrica ha bisogno di tre cose: il numero, il meccanismo che l'ha causato, e la contro-metrica — cosa hai sacrificato. Senza tutte e tre, stai tirando a indovinare.",
         "readingTime": "6 min di lettura",
         "tags": [
           "Product Craft",
@@ -748,7 +748,7 @@
       "when-ai-makes-sense-in-product": {
         "title": "Quando l'AI ha senso nel prodotto",
         "date": "2024-12-15",
-        "excerpt": "Pensare all'AI nelle decisioni.",
+        "excerpt": "La regola 80/20 applicata all'AI: regole deterministiche per i problemi prevedibili, ML solo dove serve giudizio vero. La maggior parte delle feature non ha bisogno di un modello.",
         "readingTime": "5 min",
         "tags": [
           "AI",
@@ -758,7 +758,7 @@
       "managing-payments-at-scale": {
         "title": "Gestire i pagamenti su scala",
         "date": "2025-01-15",
-        "excerpt": "Come scalano i pagamenti.",
+        "excerpt": "I pagamenti richiedono un mindset da PM diverso. Sicurezza prima di possibilità. Una settimana a leggere le API e tracciare i flussi di denaro previene mesi di incendi in produzione.",
         "readingTime": "6 min",
         "tags": [
           "Pagamenti",
@@ -768,7 +768,7 @@
       "remote-pm-across-countries": {
         "title": "PM remoto su paesi diversi",
         "date": "2025-01-08",
-        "excerpt": "Product management su fusi orari diversi.",
+        "excerpt": "Il PM remoto fallisce quando provi a risolvere il gap di fuso orario con meeting migliori. La vera skill è l'async-first: documentazione persistente, decisioni scritte, contesto condiviso.",
         "readingTime": "5 min",
         "tags": [
           "Remoto",
@@ -778,7 +778,7 @@
       "build-vs-buy-framework": {
         "title": "Framework Build vs Buy",
         "date": "2024-12-08",
-        "excerpt": "Un framework per decisioni build vs buy.",
+        "excerpt": "Build vs buy non è una decisione tecnica. Sono quattro domande strategiche in sequenza: vincolo, differenziatore, costo totale, reversibilità.",
         "readingTime": "4 min",
         "tags": [
           "Framework",
@@ -788,7 +788,7 @@
       "seven-years-running-a-business": {
         "title": "Sette anni a gestire un business",
         "date": "2025-01-01",
-        "excerpt": "Lezioni da sette anni.",
+        "excerpt": "Sette anni da freelance hanno insegnato una regola su tutte: conta portare a termine. I clienti guardano le date di consegna e i risultati visibili, non il processo elegante.",
         "readingTime": "7 min",
         "tags": [
           "Business",
