@@ -180,23 +180,23 @@
       "selfrules": {
         "company": "Selfrules (2012–2018)",
         "dates": "2012–2018",
-        "text": "A web design studio launched at 25 in northern Italy. For 7 years, everything went through one person: sales, design, development, delivery, support. 20+ clients.\n\nThe first e-commerce site had an award-worthy interface and zero sales. The customer couldn't find the checkout button. €8K in refunds. When you sell, design, build, and support the same product, cross-functional thinking isn't optional. And one rule becomes permanent: if it's beautiful but confusing, it's decoration."
+        "text": "When you sell, design, build, and deliver the same product, cross-functional thinking isn't optional. I learned that working on projects as a freelancer for 7 years in northern Italy. Websites, e-commerce, graphics, print. 20+ clients, everything went through one person.\n\nThe most expensive lesson: an e-commerce site with an award-worthy interface and zero sales. The customer couldn't find the checkout button. €8K in refunds. From there, one permanent rule: if it's beautiful but confusing, it's decoration."
       },
       "flowing": {
         "company": "FLOWING (2016–2020)",
         "dates": "2016–2020",
-        "text": "Joined as a UX Designer, left writing production code. B2B and B2C products for clients including Prometeia, Casavo, CliensPiù.\n\nThe most formative project: CliensPiù, a legal practice management system used 8+ hours a day. Every micro-interaction matters when someone lives in the tool. Designing the interface, then writing the code that implements it. After 4 years of doing both, the line between \"the designer\" and \"the developer\" stopped making sense."
+        "text": "After 4 years designing interfaces and then writing the code that implements them, the line between \"the designer\" and \"the developer\" stopped making sense. Joined FLOWING as a UX Designer, left writing production code. B2B and B2C clients: Prometeia, Casavo, CliensPiù.\n\nThe most formative project: CliensPiù, a legal practice management system used 8+ hours a day. Every micro-interaction matters when someone lives in the tool."
       },
       "leadsbridge": {
         "company": "ActiveProspect / LeadsBridge (2020–2023)",
         "dates": "2020–2023",
-        "text": "LeadsBridge: B2B SaaS platform with 380+ connectors and direct partnerships with Meta, Google, LinkedIn, and TikTok. Solo PM, fully remote from Europe, team of 10.\n\nThe product's core flow was also its weakest point — the kind of problem everyone had accepted as normal. The redesign cut setup time by <bold>35%</bold> and directly unlocked revenue growth."
+        "text": "The product's core flow was also its weakest point — the kind of problem everyone had accepted as normal. The redesign cut setup time by <bold>35%</bold> and directly unlocked revenue growth.\n\nLeadsBridge: B2B SaaS platform with 380+ connectors and direct partnerships with Meta, Google, LinkedIn, and TikTok. Solo PM, fully remote from Europe, team of 10."
       },
       "overlapBadge": "↑ overlap",
       "qubicamf": {
         "company": "QubicaAMF (2023–present)",
         "dates": "2023–present",
-        "text": "600 employees, 90+ countries. Payment systems, platform integrations, and cashless solutions for entertainment centers. A system inherited in critical state. How it was stabilized is a story worth its own case study.\n\nToday: a team of 10+ across backend, QA, and analysts. <bold>99%+</bold> uptime, <bold>-25%</bold> post-release incidents, <bold>116 centers</bold> integrated, <bold>5 new per week</bold>. Stabilization was step one. The current work is strategic: what to build, what not to build, and why."
+        "text": "A payment system inherited in critical state. Stabilizing it was step one. The current work is strategic: what to build, what not to build, and why.\n\n600 employees, 90+ countries. Team of 10+ across backend, QA, and analysts. <bold>99%+</bold> uptime, <bold>-25%</bold> post-release incidents, <bold>116 centers</bold> integrated, <bold>5 new per week</bold>."
       }
     },
     "beliefs": {
