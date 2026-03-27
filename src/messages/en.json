@@ -54,7 +54,7 @@
       "text": "Companies hire me when a product isn't working the way it should. I dig into the real problem — not the one from the first meeting — design a solution that makes sense for users, and build it with the team. I've done this with payment platforms handling millions in transactions, integration tools used by thousands of businesses, and side projects I built from scratch. The pattern is always the same: understand first, then build."
     },
     "howIWork": {
-      "label": "THREE LANGUAGES, ONE PRODUCT",
+      "label": "HOW I WORK",
       "title": "Three languages, one product",
       "intro": "When design says \"the user gets stuck here because the visual hierarchy is wrong,\" engineering says \"we need 3 sprints of refactoring,\" and business says \"it's costing us €15K a month in support tickets.\" Three separate conversations. My job is to turn them into one decision.",
       "pillar1": {
@@ -74,7 +74,7 @@
       }
     },
     "timeline": {
-      "label": "THE PATH",
+      "label": "CAREER",
       "title": "The path",
       "block1": {
         "role": "Founder & Designer",
@@ -107,7 +107,7 @@
       "closingLine": "Today when I talk to a designer, I understand the constraints. When I talk to a developer, I understand the trade-offs. When I talk to business, I translate."
     },
     "metrics": {
-      "label": "NUMBERS, NOT WORDS",
+      "label": "TRACK RECORD",
       "title": "Numbers, not words",
       "metric1": {
         "number": "99%+",
@@ -142,7 +142,7 @@
       "link": "See the case studies"
     },
     "currentWork": {
-      "label": "WHAT I'M DOING NOW",
+      "label": "NOW",
       "title": "What I'm doing now",
       "card1": {
         "title": "Leading payments and platform product for a 600-employee international company",
@@ -161,7 +161,7 @@
       }
     },
     "contact": {
-      "label": "LET'S TALK",
+      "label": "CONTACT",
       "title": "Let's talk",
       "text": "If you think my profile could work for your team, write me. Even if you're not sure it's the right fit. The best conversations I've had started with \"I'm not sure this is your thing, but...\"",
       "email": "hello@selfrules.org",
@@ -355,7 +355,9 @@
             "content": "The payment system after the rescue was better than the one before the crisis. Crises expose architectural debt that normal operations hide."
           }
         ]
-      }
+      },
+      "pullQuote1": "The first decision is to stop making the hole deeper. Everything else follows from that.",
+      "pullQuote2": "A single clear sorting criterion gave the team more clarity than any amount of discussion."
     },
     "leadsbridge": {
       "tag": "B2B SaaS · Integration Platform · Growth",
@@ -450,7 +452,9 @@
             "content": "80% of users needed the same simple flow. The platform already supported complex cases. The win was making the simple path actually simple."
           }
         ]
-      }
+      },
+      "pullQuote1": "We’re not removing capability, we’re removing friction.",
+      "pullQuote2": "A blank field mapping screen and a pre-filled one lead to the same place. But the pre-filled version communicates we understand your use case."
     },
     "cashless": {
       "tag": "Cashless · Product Strategy · Partnership",
@@ -540,7 +544,9 @@
             "content": "Going from nothing to a working pilot in 5 months required PM skills that maintenance mode never exercises: ambiguity tolerance, vendor negotiation, stakeholder alignment without data."
           }
         ]
-      }
+      },
+      "pullQuote1": "The hardest product decision isn’t what to build. It’s what to stop building.",
+      "pullQuote2": "Choosing a partner isn’t a vendor evaluation. It’s a product decision."
     },
     "cta": {
       "text": "These cases tell the how. For the who, there's the about page. If you want to talk, write me.",
@@ -631,6 +637,11 @@
           "**Telegram bot:** Running 24/7 for testing. Processes daily alerts, handles /outreach command for message generation."
         ]
       }
+    },
+    "summaryLabels": {
+      "role": "Role",
+      "period": "Period",
+      "industry": "Industry"
     }
   },
   "lab": {

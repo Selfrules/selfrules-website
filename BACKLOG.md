@@ -452,17 +452,114 @@
 
 ---
 
+## EPIC 16: Micro-copy & i18n Consistency — Il sito che non tradisce la cura
+**Priorità: MEDIA** | **Impatto: 5/10** | **Valore hiring manager: Fiducia nel dettaglio**
+
+> **Fonte:** Audit manuale del micro-copy, 2026-03-26. Un hiring manager non nota i dettagli quando funzionano. Ma nota quando non funzionano: una label in inglese su una pagina italiana, un titolo ripetuto due volte senza ragione, un bio nel footer che dice "shippo". Questi micro-errori comunicano sciatteria — l'opposto esatto di quello che il sito deve comunicare.
+>
+> **Criterio decisionale:** Ogni fix in questa EPIC va valutato con: "Un hiring manager se ne accorge? Se sì, lo avvicina o lo allontana dall'assunzione?" I fix sono raggruppati da quelli che fanno danno attivo a quelli che sono polish.
+
+### AUDIT — Risultati completi
+
+**CATEGORIA A — DANNO ATTIVO (il visitatore nota qualcosa di rotto)**
+
+1. **Footer bio IT: "shippo"** — `it.json → footer.bio`: "Senior Technical PM. Prototipo in codice, disegno la UX, e shippo." Stesso errore già corretto nell'EPIC 12 per il resto del sito. Il footer è su OGNI pagina — un hiring manager italiano lo vede 5+ volte durante la visita. Comunicazione: questo PM non revisiona nemmeno i testi del proprio sito.
+
+2. **CaseStudySummary: label inglesi su pagine italiane** — `CaseStudySummary.tsx` righe 27/33/39: "Role", "Period", "Industry" sono hardcoded in inglese nel componente. Screenshot conferma: la pagina /it/work/payments-rescue mostra "ROLE" e "PERIOD" in inglese. Un hiring manager italiano vede un sito mezzo tradotto.
+
+3. **PullQuote: 6 citazioni hardcoded in inglese** — I 3 case study hanno 2 PullQuote ciascuno con testo inglese hardcoded nel JSX (non nelle traduzioni). Sulla versione /it/ queste citazioni restano in inglese nel mezzo di testo italiano. Effetto: il visitatore italiano pensa che il sito sia una traduzione automatica fatta male.
+
+**CATEGORIA B — RUMORE VISIVO (non rotto, ma confonde)**
+
+4. **Label e titolo identici nei SectionHeader** — Homepage: "TRE LINGUAGGI, UN PRODOTTO" (label monospace) + "Tre linguaggi, un prodotto" (titolo bold) = stessa informazione ripetuta due volte. Stessa cosa per: "IL PERCORSO" / "Il percorso", "NUMERI, NON PAROLE" / "Numeri, non parole", "COSA FACCIO ORA" / "Cosa faccio ora", "PARLIAMO" / "Parliamo". Un hiring manager non legge due volte la stessa cosa — la label dovrebbe aggiungere contesto, non ripetere. Effetto: il sito sembra avere una struttura solo decorativa.
+
+5. **NoteLayout: ternari inline invece di traduzioni** — `NoteLayout.tsx` usa `locale === 'it' ? 'Tutte le note' : 'All notes'` (4 occorrenze). Funzionalmente corretto ma fragile e contrario al pattern next-intl usato ovunque. Non impatta l'hiring manager direttamente, ma rende il codice meno manutenibile.
+
+6. **KeyInsight: label default inglese** — `KeyInsight.tsx` ha `label = 'KEY INSIGHT'` come default. Funziona perché il label è in inglese/universale, ma per coerenza dovrebbe passare per le traduzioni.
+
+7. **AiBadge: label default inglese** — `AiBadge.tsx` ha `label = 'AI-assisted'` come default. Stesso pattern del KeyInsight.
+
+**CATEGORIA C — POLISH (nessun impatto diretto sull'hiring manager)**
+
+8. **LanguageToggle: aria-label hardcoded** — `aria-label="Italiano"` / `"English"` hardcoded. Impatta solo screen reader, non visivamente.
+
+9. **ProjectCard: "View project →" hardcoded** — Link text non tradotto. Visibile sulla pagina Lab.
+
+10. **KeyTakeaway MDX: "Key Takeaway" hardcoded** — Label nel componente blog MDX. Visibile solo nei blog post.
+
+---
+
+### STRATEGIA: Cosa fare e cosa non fare
+
+**FARE (Cat. A) — Danno attivo, l'hiring manager nota:**
+- Fix footer bio IT
+- Internazionalizzare CaseStudySummary
+- Spostare PullQuote text nelle traduzioni JSON
+
+**FARE (Cat. B, solo il #4) — Alto rapporto valore/effort:**
+- Differenziare le label dai titoli. La label diventa un contesto breve che aggiunge informazione, il titolo resta il titolo. Es: label "COME LAVORO" → titolo "Tre linguaggi, un prodotto". Questo trasforma un elemento decorativo in un elemento informativo.
+
+**NON FARE ORA (Cat. B #5-7, Cat. C) — Non muove l'ago:**
+- I ternari in NoteLayout funzionano. Refactoring purista, zero impatto utente.
+- KeyInsight/AiBadge/KeyTakeaway label defaults: funzionano, l'utente non li vede come "sbagliati".
+- Aria-label, ProjectCard: polish che non avvicina all'assunzione.
+
+---
+
+### US 16.1: Fix footer bio IT — eliminare "shippo"
+> Come hiring manager italiano, non devo vedere un calco dall'inglese nel footer di OGNI pagina del sito.
+
+- [ ] **T-16.1.1** `[CLAUDE-AUTONOMO]` Riscrivere `it.json → footer.bio` in italiano nativo. Proposta: "Senior Technical PM. Prototipo in codice, disegno la UX, e porto in produzione." — coerente con lo stile stabilito nell'EPIC 12.
+- [ ] **T-16.1.2** `[CLAUDE-AUTONOMO]` Build + verifica visiva
+
+### US 16.2: Internazionalizzare CaseStudySummary — label traducibili
+> Come hiring manager italiano, le label "Role", "Period", "Industry" devono essere in italiano quando il sito è in italiano.
+
+- [ ] **T-16.2.1** `[CLAUDE-AUTONOMO]` Aggiungere in `en.json` e `it.json` sotto `caseStudies`: `"summaryLabels": { "role": "Role" / "Ruolo", "period": "Period" / "Periodo", "industry": "Industry" / "Settore" }`
+- [ ] **T-16.2.2** `[CLAUDE-AUTONOMO]` Modificare `CaseStudySummary.tsx`: accettare prop `labels: { role: string; period: string; industry: string }` e usarle al posto delle stringhe hardcoded
+- [ ] **T-16.2.3** `[CLAUDE-AUTONOMO]` Aggiornare i 3 (+1 CasaHunter) file page.tsx che usano CaseStudySummary per passare le label tradotte
+- [ ] **T-16.2.4** `[CLAUDE-AUTONOMO]` Build + verifica che /it/ mostra "RUOLO", "PERIODO", "SETTORE"
+
+### US 16.3: PullQuote traducibili — citazioni nella lingua della pagina
+> Come hiring manager italiano, le citazioni evidenziate nei case study devono essere in italiano, non in inglese.
+
+- [ ] **T-16.3.1** `[CLAUDE-AUTONOMO]` Aggiungere in `en.json` e `it.json` sotto ogni case study: `"pullQuote1"` e `"pullQuote2"` con il testo appropriato. IT scritto nativamente, non tradotto.
+- [ ] **T-16.3.2** `[CLAUDE-AUTONOMO]` Aggiornare i 3 file page.tsx dei case study: sostituire il testo hardcoded con `t('payments.pullQuote1')` ecc.
+- [ ] **T-16.3.3** `[CLAUDE-AUTONOMO]` Build + verifica che /it/ mostra citazioni in italiano
+
+### US 16.4: Label SectionHeader differenziate — aggiungere contesto, non ripetere
+> Come hiring manager, ogni elemento visivo deve aggiungere informazione. Una label che ripete il titolo è rumore.
+
+- [ ] **T-16.4.1** `[INSIEME]` Proporre nuove label per ogni sezione homepage. Schema: la label dice COSA (categoria), il titolo dice COME (claim specifico). Proposta:
+
+| Sezione | Label attuale | Label proposta (EN) | Label proposta (IT) | Titolo (invariato) |
+|---------|--------------|--------------------|--------------------|-------------------|
+| howIWork | THREE LANGUAGES, ONE PRODUCT | HOW I WORK | COME LAVORO | Three languages, one product / Tre linguaggi, un prodotto |
+| timeline | THE PATH | CAREER | PERCORSO | The path / Il percorso |
+| metrics | NUMBERS, NOT WORDS | TRACK RECORD | RISULTATI | Numbers, not words / Numeri, non parole |
+| currentWork | WHAT I'M DOING NOW | NOW | ORA | What I'm doing now / Cosa faccio ora |
+| contact | LET'S TALK | CONTACT | CONTATTO | Let's talk / Parliamo |
+
+- [ ] **T-16.4.2** `[CLAUDE-AUTONOMO]` Dopo approvazione di Mattia, aggiornare le label in en.json e it.json
+- [ ] **T-16.4.3** `[CLAUDE-AUTONOMO]` Build + verifica
+
+---
+
 ## RIEPILOGO ESECUZIONE
 
-### 🔥 PROSSIMI — Clarity Rewrite (EPIC 12-13, massima priorità):
+### ✅ COMPLETATI
+- [x] **EPIC 12** — Clarity Rewrite Homepage (2026-03-26, commit f61fe74)
+- [x] **EPIC 13** — Case Study Reframe TL;DR + KeyInsight (2026-03-26, commit 732b29b)
 
-**INSIEME (serve Mattia):**
-1. **T-12.1.1**: Hero subtitle → outcome-first (la singola modifica con più impatto)
-2. **T-12.2.1**: Riscrivere "Three Languages" — valore dell'ibrido, non tagline
-3. **T-12.4.1**: Nuova sezione "What I Actually Do" — 1 frase chiara
-4. **T-13.1.1**: Apertura Payments Rescue → pattern CasaHunter
-5. **T-13.2.1**: Apertura LeadsBridge → pattern CasaHunter
-6. **T-13.3.1**: Apertura Cashless → pattern CasaHunter
+### 🔥 PROSSIMI — Micro-copy & i18n (EPIC 16, priorità media-alta):
+
+**CLAUDE-AUTONOMO (dopo approvazione Mattia):**
+1. **T-16.1.1**: Fix footer bio IT "shippo" → "porto in produzione"
+2. **T-16.2.1–4**: Internazionalizzare CaseStudySummary (Role/Period/Industry)
+3. **T-16.3.1–3**: PullQuote traducibili (6 citazioni EN hardcoded)
+
+**INSIEME (serve decisione Mattia):**
+4. **T-16.4.1**: Label SectionHeader differenziate (label ≠ titolo)
 
 **CLAUDE-AUTONOMO (dopo validazione copy con Mattia):**
 1. T-12.1.2 → T-12.1.3: Implementare nuovo subtitle

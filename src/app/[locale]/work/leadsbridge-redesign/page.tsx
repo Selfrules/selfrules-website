@@ -172,6 +172,7 @@ export default async function LeadsBridgePage({
             { value: resultItems[0]?.metric || 'Higher', label: resultItems[0]?.label || 'first bridge completion rate' },
           ]}
           summary={t('leadsbridge.summary')}
+          labels={{ role: t('summaryLabels.role'), period: t('summaryLabels.period'), industry: t('summaryLabels.industry') }}
         />
       </Section>
 
@@ -212,11 +213,11 @@ export default async function LeadsBridgePage({
           {approachParagraphs.slice(0, 1).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>We're not removing capability, we're removing friction.</PullQuote>
+          <PullQuote>{t('leadsbridge.pullQuote1')}</PullQuote>
           {approachParagraphs.slice(1, 3).map((p, i) => (
             <p key={i + 1} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>A blank field mapping screen and a pre-filled one lead to the same place. But the pre-filled version communicates we understand your use case.</PullQuote>
+          <PullQuote>{t('leadsbridge.pullQuote2')}</PullQuote>
           {approachParagraphs.slice(3).map((p, i) => (
             <p key={i + 3} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}

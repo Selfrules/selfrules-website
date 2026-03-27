@@ -172,6 +172,7 @@ export default async function CashlessSystemPage({
             { value: resultItems[1]?.metric || '1', label: resultItems[1]?.label || 'co-development partnership' },
           ]}
           summary={t('cashless.summary')}
+          labels={{ role: t('summaryLabels.role'), period: t('summaryLabels.period'), industry: t('summaryLabels.industry') }}
         />
       </Section>
 
@@ -212,11 +213,11 @@ export default async function CashlessSystemPage({
           {approachParagraphs.slice(0, 2).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>The hardest product decision isn't what to build. It's what to stop building.</PullQuote>
+          <PullQuote>{t('cashless.pullQuote1')}</PullQuote>
           {approachParagraphs.slice(2, 4).map((p, i) => (
             <p key={i + 2} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>Choosing a partner isn't a vendor evaluation. It's a product decision.</PullQuote>
+          <PullQuote>{t('cashless.pullQuote2')}</PullQuote>
           {approachParagraphs.slice(4).map((p, i) => (
             <p key={i + 4} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}

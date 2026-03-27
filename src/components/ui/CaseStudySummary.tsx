@@ -3,12 +3,19 @@ interface MetricItem {
   label: string;
 }
 
+interface SummaryLabels {
+  role: string;
+  period: string;
+  industry: string;
+}
+
 interface CaseStudySummaryProps {
   role: string;
   period: string;
   industry: string;
   metrics: MetricItem[];
   summary: string;
+  labels?: SummaryLabels;
 }
 
 export function CaseStudySummary({
@@ -17,6 +24,7 @@ export function CaseStudySummary({
   industry,
   metrics,
   summary,
+  labels = { role: 'Role', period: 'Period', industry: 'Industry' },
 }: CaseStudySummaryProps) {
   return (
     <div className="border border-[#1a1a1f] bg-[#111113] p-6 md:p-8 my-12 md:my-16">
@@ -24,19 +32,19 @@ export function CaseStudySummary({
       <div className="grid grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-10 pb-8 md:pb-10 border-b border-[#1a1a1f]">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.4)] mb-2">
-            Role
+            {labels.role}
           </p>
           <p className="text-[13px] text-[#f5f5f0]">{role}</p>
         </div>
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.4)] mb-2">
-            Period
+            {labels.period}
           </p>
           <p className="text-[13px] text-[#f5f5f0]">{period}</p>
         </div>
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.4)] mb-2">
-            Industry
+            {labels.industry}
           </p>
           <p className="text-[13px] text-[#f5f5f0]">{industry}</p>
         </div>
