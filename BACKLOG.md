@@ -425,10 +425,10 @@
 ### US 14.1: Aggiungere preview text a tutti i blog post
 > Come hiring manager che scorre la pagina Notes, devo capire in 1 riga se il post è rilevante per me — senza doverlo aprire.
 
-- [ ] **T-14.1.1** `[CLAUDE-AUTONOMO]` Scrivere 1 riga di preview per ciascuno degli 8 blog post — non un riassunto, ma una "premessa" che spiega perché leggere (es. "The meeting where everyone says yes" → "A decision-making technique for teams with competing priorities")
-- [ ] **T-14.1.2** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json con le preview
-- [ ] **T-14.1.3** `[CLAUDE-AUTONOMO]` Aggiornare il componente NoteCard per mostrare la preview sotto il titolo
-- [ ] **T-14.1.4** `[CLAUDE-AUTONOMO]` Build OK, verificare layout Notes page
+- [x] **T-14.1.1** (2026-03-27) `[CLAUDE-AUTONOMO]` Riscritti tutti gli excerpt — preview specifiche e opinionated (commit 4d71bc8) ✅
+- [x] **T-14.1.2** (2026-03-27) `[CLAUDE-AUTONOMO]` en.json + it.json aggiornati (IT nativo) ✅
+- [x] **T-14.1.3** (2026-03-27) `[CLAUDE-AUTONOMO]` NoteCard già rendeva excerpt — nessuna modifica componente necessaria ✅
+- [x] **T-14.1.4** (2026-03-27) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ---
 
@@ -440,15 +440,15 @@
 ### US 15.1: Riscrivere l'About per outcome, non per azienda
 > Come hiring manager che ha già deciso di approfondire, ogni entry della carriera deve rispondere "Cosa hai imparato?" non "Dove hai lavorato?"
 
-- [ ] **T-15.1.1** `[INSIEME]` Riscrivere le career entry dell'About: ogni posizione apre con il learning/outcome, poi il contesto. Es. CliensPiù: "I learned that details matter because users live in the tool 8+ hours a day" prima di "legal practice management system"
-- [ ] **T-15.1.2** `[CLAUDE-AUTONOMO]` Implementare il nuovo copy EN + IT
-- [ ] **T-15.1.3** `[CLAUDE-AUTONOMO]` Valutare se la sezione "Outside work" (LEGO, embroidery) serve all'obiettivo — proporre a Mattia rimozione o riformulazione
-- [ ] **T-15.1.4** `[CLAUDE-AUTONOMO]` Build OK
+- [x] **T-15.1.1** (2026-03-27) `[INSIEME]` Riscrivere le career entry dell'About: outcome-first, contesto dopo ✅
+- [x] **T-15.1.2** (2026-03-27) `[CLAUDE-AUTONOMO]` Implementare il nuovo copy EN + IT (commit 1057ff7) ✅
+- [x] **T-15.1.3** (2026-03-27) `[CLAUDE-AUTONOMO]` Outside Work riformulata — versione di Mattia (commit 837379a) ✅
+- [x] **T-15.1.4** (2026-03-27) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ### US 15.2: Valutare il ruolo del blog nella job search
 > Come Mattia, devo decidere se il blog nella forma attuale differenzia o diluisce il messaggio del sito.
 
-- [ ] **T-15.2.1** `[INSIEME]` Analisi: il blog aggiunge valore differenziante o è "generic PM thinking"? CasaHunter è l'unico pezzo veramente differenziato. Decidere se mantenere tutti i post, selezionarne alcuni, o riposizionare la sezione Notes.
+- [x] **T-15.2.1** (2026-03-27) `[INSIEME]` Blog curato: rimossi 3 post generici, mantenuti 5 differenzianti (commit 813cddd) ✅
 
 ---
 
@@ -509,28 +509,28 @@
 ### US 16.1: Fix footer bio IT — eliminare "shippo"
 > Come hiring manager italiano, non devo vedere un calco dall'inglese nel footer di OGNI pagina del sito.
 
-- [ ] **T-16.1.1** `[CLAUDE-AUTONOMO]` Riscrivere `it.json → footer.bio` in italiano nativo. Proposta: "Senior Technical PM. Prototipo in codice, disegno la UX, e porto in produzione." — coerente con lo stile stabilito nell'EPIC 12.
-- [ ] **T-16.1.2** `[CLAUDE-AUTONOMO]` Build + verifica visiva
+- [x] **T-16.1.1** (2026-03-27) `[CLAUDE-AUTONOMO]` Footer bio IT riscritto: "porto in produzione" (commit e0b3981) ✅
+- [x] **T-16.1.2** (2026-03-27) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ### US 16.2: Internazionalizzare CaseStudySummary — label traducibili
 > Come hiring manager italiano, le label "Role", "Period", "Industry" devono essere in italiano quando il sito è in italiano.
 
-- [ ] **T-16.2.1** `[CLAUDE-AUTONOMO]` Aggiungere in `en.json` e `it.json` sotto `caseStudies`: `"summaryLabels": { "role": "Role" / "Ruolo", "period": "Period" / "Periodo", "industry": "Industry" / "Settore" }`
-- [ ] **T-16.2.2** `[CLAUDE-AUTONOMO]` Modificare `CaseStudySummary.tsx`: accettare prop `labels: { role: string; period: string; industry: string }` e usarle al posto delle stringhe hardcoded
-- [ ] **T-16.2.3** `[CLAUDE-AUTONOMO]` Aggiornare i 3 (+1 CasaHunter) file page.tsx che usano CaseStudySummary per passare le label tradotte
-- [ ] **T-16.2.4** `[CLAUDE-AUTONOMO]` Build + verifica che /it/ mostra "RUOLO", "PERIODO", "SETTORE"
+- [x] **T-16.2.1** (2026-03-27) `[CLAUDE-AUTONOMO]` summaryLabels aggiunte a en.json + it.json ✅
+- [x] **T-16.2.2** (2026-03-27) `[CLAUDE-AUTONOMO]` CaseStudySummary.tsx accetta prop labels ✅
+- [x] **T-16.2.3** (2026-03-27) `[CLAUDE-AUTONOMO]` 3 case study page.tsx aggiornati con label tradotte ✅
+- [x] **T-16.2.4** (2026-03-27) `[CLAUDE-AUTONOMO]` Build OK, /it/ mostra RUOLO/PERIODO/SETTORE ✅
 
 ### US 16.3: PullQuote traducibili — citazioni nella lingua della pagina
 > Come hiring manager italiano, le citazioni evidenziate nei case study devono essere in italiano, non in inglese.
 
-- [ ] **T-16.3.1** `[CLAUDE-AUTONOMO]` Aggiungere in `en.json` e `it.json` sotto ogni case study: `"pullQuote1"` e `"pullQuote2"` con il testo appropriato. IT scritto nativamente, non tradotto.
-- [ ] **T-16.3.2** `[CLAUDE-AUTONOMO]` Aggiornare i 3 file page.tsx dei case study: sostituire il testo hardcoded con `t('payments.pullQuote1')` ecc.
-- [ ] **T-16.3.3** `[CLAUDE-AUTONOMO]` Build + verifica che /it/ mostra citazioni in italiano
+- [x] **T-16.3.1** (2026-03-27) `[CLAUDE-AUTONOMO]` pullQuote1/pullQuote2 aggiunti EN + IT (nativo) ✅
+- [x] **T-16.3.2** (2026-03-27) `[CLAUDE-AUTONOMO]` 3 page.tsx aggiornati con t('*.pullQuote1/2') ✅
+- [x] **T-16.3.3** (2026-03-27) `[CLAUDE-AUTONOMO]` Build OK, /it/ mostra citazioni in italiano ✅
 
 ### US 16.4: Label SectionHeader differenziate — aggiungere contesto, non ripetere
 > Come hiring manager, ogni elemento visivo deve aggiungere informazione. Una label che ripete il titolo è rumore.
 
-- [ ] **T-16.4.1** `[INSIEME]` Proporre nuove label per ogni sezione homepage. Schema: la label dice COSA (categoria), il titolo dice COME (claim specifico). Proposta:
+- [x] **T-16.4.1** (2026-03-27) `[INSIEME]` Label SectionHeader differenziate: HOW I WORK/CAREER/TRACK RECORD/NOW/CONTACT (commit e0b3981) ✅ Proposta originale:
 
 | Sezione | Label attuale | Label proposta (EN) | Label proposta (IT) | Titolo (invariato) |
 |---------|--------------|--------------------|--------------------|-------------------|
@@ -540,8 +540,8 @@
 | currentWork | WHAT I'M DOING NOW | NOW | ORA | What I'm doing now / Cosa faccio ora |
 | contact | LET'S TALK | CONTACT | CONTATTO | Let's talk / Parliamo |
 
-- [ ] **T-16.4.2** `[CLAUDE-AUTONOMO]` Dopo approvazione di Mattia, aggiornare le label in en.json e it.json
-- [ ] **T-16.4.3** `[CLAUDE-AUTONOMO]` Build + verifica
+- [x] **T-16.4.2** (2026-03-27) `[CLAUDE-AUTONOMO]` Label aggiornate in en.json + it.json ✅
+- [x] **T-16.4.3** (2026-03-27) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ---
 
@@ -550,45 +550,54 @@
 ### ✅ COMPLETATI
 - [x] **EPIC 12** — Clarity Rewrite Homepage (2026-03-26, commit f61fe74)
 - [x] **EPIC 13** — Case Study Reframe TL;DR + KeyInsight (2026-03-26, commit 732b29b)
+- [x] **EPIC 16** — Micro-copy & i18n Consistency (2026-03-27, commit e0b3981)
+- [x] **EPIC 14** — Blog Clarity preview text (2026-03-27, commit 4d71bc8)
+- [x] **EPIC 15** — About Page & Polish (2026-03-27, commits 837379a + 1057ff7 + 813cddd)
+- [x] **Volante** — Date blog post allineate a Jan–Mar 2026 (2026-03-27, commit f951bed)
 
-### 🔥 PROSSIMI — Micro-copy & i18n (EPIC 16, priorità media-alta):
+### Task aperti — ordinati per impatto sull'obiettivo
 
-**CLAUDE-AUTONOMO (dopo approvazione Mattia):**
-1. **T-16.1.1**: Fix footer bio IT "shippo" → "porto in produzione"
-2. **T-16.2.1–4**: Internazionalizzare CaseStudySummary (Role/Period/Industry)
-3. **T-16.3.1–3**: PullQuote traducibili (6 citazioni EN hardcoded)
+**ALTA PRIORITÀ — Copy & contenuto (avvicinano direttamente l'HM)**
 
-**INSIEME (serve decisione Mattia):**
-4. **T-16.4.1**: Label SectionHeader differenziate (label ≠ titolo)
+`[INSIEME]`
+1. **T-12.1.1**: Riscrivere hero subtitle (da jargon a outcome universale)
+2. **T-12.2.1**: Riscrivere i 3 pillar "Three Languages" con esempi concreti
+3. **T-12.4.1**: Scrivere sezione "What I Actually Do" per homepage
+4. **T-13.1.1 / T-13.2.1 / T-13.3.1**: Riscrivere aperture 3 case study (CasaHunter-style)
 
-**CLAUDE-AUTONOMO (dopo validazione copy con Mattia):**
-1. T-12.1.2 → T-12.1.3: Implementare nuovo subtitle
-2. T-12.3.1 → T-12.3.5: Riscrivere preview cards case study
-3. T-12.5.1 → T-12.5.3: Contestualizzare metriche
-4. T-13.1.2 → T-13.1.5: Tradurre jargon Payments + spostare "Learned" in alto
-5. T-13.2.2 → T-13.2.5: Tradurre jargon LeadsBridge + spostare "Learned" in alto
-6. T-14.1.1 → T-14.1.4: Preview text blog post
+`[CLAUDE-AUTONOMO]` (dopo approvazione copy INSIEME)
+5. **T-12.1.2–3**: Implementare nuovo subtitle
+6. **T-12.2.2–3**: Implementare nuovi pillar
+7. **T-12.3.1–5**: Riscrivere preview cards case study
+8. **T-12.4.2–4**: Implementare "What I Actually Do"
+9. **T-12.5.1–3**: Contestualizzare metriche homepage
+10. **T-13.1.2–5 / T-13.2.2–5 / T-13.3.2–5**: Tradurre jargon + spostare "Learned" in alto
 
-### Task aperti da epic precedenti:
+**MEDIA PRIORITÀ — Visual & polish (rafforzano la credibilità)**
 
-**CLAUDE-AUTONOMO:**
-1. T-1.2.6: Visual per case study (diagramma/flow)
-2. T-7.2.3: Test OG images su LinkedIn/Twitter
-3. T-7.3.1 → T-7.3.2: Visual nei blog post
-4. T-8.2.3: Alt text quando si aggiungono immagini
-5. T-8.3.1: Lighthouse audit
-6. T-8.3.3: Test accessibilità axe-core
-7. T-10.1.1 → T-10.1.3: Blog publishing pipeline MDX
+`[INSIEME]`
+11. **T-1.2.6**: 1 visual per case study (diagramma/flow)
+12. **T-5.1.1**: Storyboard interactive case study Payments (scroll-driven)
 
-**MATTIA-REQUIRED:**
-1. **T-4.1.8**: Revisione 5 blog post prima di merge
-2. **T-4.3.1**: Cross-postare blog su LinkedIn
-3. **T-8.2.4**: Configurazione dominio selfrules.org (posticipato a MVP pronto)
+`[CLAUDE-AUTONOMO]`
+13. **T-5.1.2–5**: Implementare animazioni scroll-driven
+14. **T-7.3.1–2**: Visual nei blog post
+15. **T-7.2.3**: Test OG images su LinkedIn/Twitter
+16. **T-8.3.1**: Lighthouse audit
+17. **T-8.3.3**: Test accessibilità axe-core
 
-**INSIEME:**
-1. **T-4.3.3**: Cadenza editoriale blog
-2. **T-5.1.1**: Storyboard interactive case study Payments
-3. **T-5.2.1**: Decisione "Ask Mattia" chatbot
-4. **T-10.2.1**: Definire scheduled tasks
-5. **T-15.1.1**: Riscrivere About per outcome
-6. **T-15.2.1**: Valutare ruolo blog nella job search
+**BASSA PRIORITÀ — Infra & automazione (post-lancio)**
+
+`[INSIEME]`
+18. **T-4.3.3**: Cadenza editoriale blog
+19. **T-5.2.1**: Decisione chatbot "Ask Mattia"
+20. **T-10.2.1**: Definire scheduled tasks
+
+`[CLAUDE-AUTONOMO]`
+21. **T-10.1.1–3**: Blog publishing pipeline MDX
+22. **T-10.3.2–3**: Analytics events + ottimizzazione
+
+`[MATTIA-REQUIRED]`
+23. **T-4.1.8**: Revisione 5 blog post prima di merge
+24. **T-4.3.1**: Cross-postare blog su LinkedIn
+25. **T-8.2.4**: Configurazione dominio selfrules.org (posticipato a MVP pronto)
