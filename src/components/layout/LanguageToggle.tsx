@@ -12,6 +12,8 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
   const router = useRouter();
 
   function switchLocale(newLocale: string) {
+    // Set preferred-locale cookie (1 year) — prevents geo-redirect from overriding
+    document.cookie = `preferred-locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
     router.replace({ pathname }, { locale: newLocale });
   }
 
