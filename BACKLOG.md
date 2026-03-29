@@ -336,7 +336,7 @@
 
 ---
 
-## EPIC 12: Clarity Rewrite — Il sito che capisce chiunque
+## EPIC 12: Clarity Rewrite — Il sito che capisce chiunque ✅ COMPLETATA
 **Priorità: CRITICA** | **Impatto: 10/10** | **Valore hiring manager: Massimo**
 
 > **Fonte:** SITE-AUDIT-CLARITY.md (2026-03-26). Il sito attuale fallisce l'80% degli hiring manager. Il pattern CasaHunter (problema → soluzione → risultato) funziona. Il resto del sito parla a specialisti. Questa epic riscrive il sito perché chiunque — recruiter, VP of Product, TPM da un altro verticale — capisca cosa fa Mattia e perché assumerlo.
@@ -346,44 +346,44 @@
 ### US 12.1: Homepage — Riscrivere il subtitle per outcome, non dominio (TIER 1)
 > Come hiring manager non-specialist, in 5 secondi devo capire cosa fa Mattia per le aziende — non in quale dominio ha lavorato.
 
-- [ ] **T-12.1.1** `[INSIEME]` Riscrivere l'hero subtitle: da jargon di dominio a outcome universale. Proposta audit: "I find what customers actually need — then design and ship the product that solves it." Mattia valida il tono e il messaggio.
-- [ ] **T-12.1.2** `[CLAUDE-AUTONOMO]` Implementare il nuovo subtitle EN + IT in en.json / it.json
-- [ ] **T-12.1.3** `[CLAUDE-AUTONOMO]` Verificare rendering su homepage, build OK
+- [x] **T-12.1.1** (2026-03-28) `[INSIEME]` Hero subtitle riscritto CasaHunter-style: "Companies call me when a product isn't working..." ✅
+- [x] **T-12.1.2** (2026-03-28) `[CLAUDE-AUTONOMO]` Implementato EN + IT in en.json / it.json ✅
+- [x] **T-12.1.3** (2026-03-28) `[CLAUDE-AUTONOMO]` Rendering verificato, build OK ✅
 
 ### US 12.2: Homepage — Riscrivere "Three Languages, One Product" (TIER 1)
 > Come hiring manager, "The problem is never the one from the first meeting" è una frase memorabile ma non mi dice niente. Devo capire il VALORE del ruolo ibrido design/code/PM.
 
-- [ ] **T-12.2.1** `[INSIEME]` Riscrivere i 3 pillar della sezione "Three Languages": spiegare il valore dell'ibrido con esempi concreti, non tagline clever. Ogni pillar deve rispondere a "perché questo è un vantaggio per la mia azienda?"
-- [ ] **T-12.2.2** `[CLAUDE-AUTONOMO]` Implementare il nuovo copy EN + IT
-- [ ] **T-12.2.3** `[CLAUDE-AUTONOMO]` Build OK, verificare che la sezione funzioni visivamente con il nuovo copy (potrebbe essere più lungo)
+- [x] **T-12.2.1** (2026-03-28) `[INSIEME]` Pillar riscritti: "Fewer handoffs", "I find the 4 problems", "When I need to validate" ✅
+- [x] **T-12.2.2** (2026-03-28) `[CLAUDE-AUTONOMO]` Copy EN + IT implementato ✅
+- [x] **T-12.2.3** (2026-03-28) `[CLAUDE-AUTONOMO]` Build OK, rendering verificato ✅
 
 ### US 12.3: Homepage — Riscrivere le case study preview cards (TIER 1)
 > Come hiring manager, le preview devono comunicare risultato e significato — non contesto tecnico che richiede domain knowledge.
 
-- [ ] **T-12.3.1** `[CLAUDE-AUTONOMO]` Riscrivere la preview card Payments Rescue: aprire con l'outcome ("Customer churn was accelerating because of payment failures..."), non con "Hundreds of centers across 5 countries"
-- [ ] **T-12.3.2** `[CLAUDE-AUTONOMO]` Riscrivere la preview card LeadsBridge: aprire con il problema utente ("Most customers wanted to use the platform but gave up during setup..."), non con jargon SaaS
-- [ ] **T-12.3.3** `[CLAUDE-AUTONOMO]` Riscrivere la preview card Cashless System: chiarire cosa significa "cashless integration" per un non-specialist
-- [ ] **T-12.3.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json con le nuove preview
-- [ ] **T-12.3.5** `[CLAUDE-AUTONOMO]` Build OK, verificare rendering cards
+- [x] **T-12.3.1** (2026-03-28) `[CLAUDE-AUTONOMO]` Preview card Payments riscritte con outcome language ✅
+- [x] **T-12.3.2** (2026-03-28) `[CLAUDE-AUTONOMO]` Preview card LeadsBridge riscritte ✅
+- [x] **T-12.3.3** (2026-03-28) `[CLAUDE-AUTONOMO]` Preview card Cashless riscritte ✅
+- [x] **T-12.3.4** (2026-03-28) `[CLAUDE-AUTONOMO]` en.json + it.json aggiornati ✅
+- [x] **T-12.3.5** (2026-03-28) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ### US 12.4: Homepage — Aggiungere sezione "What I Actually Do" (TIER 1)
 > Come hiring manager non-specialist, dopo l'hero devo trovare UNA frase chiara che traduca le competenze di Mattia in valore per la mia azienda.
 
-- [ ] **T-12.4.1** `[INSIEME]` Scrivere la sezione "What I Actually Do": 1 frase chiara + 1 paragrafo di contesto. Proposta audit: "I investigate what customers actually need (instead of what they ask for), design the solution (so it's intuitive), and ship it (so it's reliable)." Mattia valida.
-- [ ] **T-12.4.2** `[CLAUDE-AUTONOMO]` Implementare la nuova sezione nel layout homepage, posizionata subito dopo l'hero
-- [ ] **T-12.4.3** `[CLAUDE-AUTONOMO]` Copy EN + IT, styling coerente con design system
-- [ ] **T-12.4.4** `[CLAUDE-AUTONOMO]` Build OK, verificare posizionamento e responsive
+- [x] **T-12.4.1** (2026-03-29) `[INSIEME]` Sezione "What I Actually Do" presente su live site come "whatIDo" section ✅
+- [x] **T-12.4.2** (2026-03-29) `[CLAUDE-AUTONOMO]` Sezione implementata dopo hero ✅
+- [x] **T-12.4.3** (2026-03-29) `[CLAUDE-AUTONOMO]` Copy EN + IT presente, styling coerente ✅
+- [x] **T-12.4.4** (2026-03-29) `[CLAUDE-AUTONOMO]` Build OK, responsive verificato ✅
 
 ### US 12.5: Homepage — Contestualizzare le metriche per non-specialist (TIER 1)
 > Come hiring manager, "99%+ uptime" senza "di cosa?" mi fa pensare SRE, non PM. Ogni metrica deve avere il contesto "di cosa" e "per chi".
 
-- [ ] **T-12.5.1** `[CLAUDE-AUTONOMO]` Riscrivere le 6 metriche homepage: aggiungere "di cosa?" e "perché conta?" — es. "99%+ uptime" → "99%+ uptime on payment systems serving 116 entertainment centers across 5 countries"
-- [ ] **T-12.5.2** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
-- [ ] **T-12.5.3** `[CLAUDE-AUTONOMO]` Verificare che le card metriche reggano il copy più lungo (responsive check)
+- [x] **T-12.5.1** (2026-03-29) `[CLAUDE-AUTONOMO]` Metriche homepage contestualizzate con "di cosa" e "per chi" ✅
+- [x] **T-12.5.2** (2026-03-29) `[CLAUDE-AUTONOMO]` en.json + it.json aggiornati ✅
+- [x] **T-12.5.3** (2026-03-29) `[CLAUDE-AUTONOMO]` Card metriche responsive verificate ✅
 
 ---
 
-## EPIC 13: Case Study Reframe — Il pattern CasaHunter ovunque
+## EPIC 13: Case Study Reframe — Il pattern CasaHunter ovunque ✅ COMPLETATA
 **Priorità: ALTA** | **Impatto: 9/10** | **Valore hiring manager: Alto**
 
 > **Fonte:** SITE-AUDIT-CLARITY.md, TIER 2. CasaHunter funziona perché usa "outcome language": problema (1 frase) → soluzione (1 frase) → risultato (1 frase). I case study Payments e LeadsBridge usano "technical language": 3 paragrafi di contesto aziendale prima del problema. Questa epic applica il pattern CasaHunter a tutti i case study.
@@ -391,29 +391,29 @@
 ### US 13.1: Payments Rescue — Riscrivere l'apertura con il pattern CasaHunter
 > Come hiring manager non-payments, devo capire il problema in 1 frase, la soluzione in 1 frase, e il risultato in 1 frase — PRIMA di entrare nel dettaglio tecnico.
 
-- [ ] **T-13.1.1** `[INSIEME]` Riscrivere l'apertura Payments Rescue: 3 frasi CasaHunter-style (problema → soluzione → risultato), poi il dettaglio per chi vuole approfondire. Mattia valida il framing.
-- [ ] **T-13.1.2** `[CLAUDE-AUTONOMO]` Tradurre il jargon tecnico nel case study: ogni termine di dominio (payments, split payments, square integration) deve avere una traduzione plain-English nella frase successiva
-- [ ] **T-13.1.3** `[CLAUDE-AUTONOMO]` Spostare la sezione "What I Learned" in alto (callout visivo) — il takeaway più prezioso non deve essere in fondo alla pagina
-- [ ] **T-13.1.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
-- [ ] **T-13.1.5** `[CLAUDE-AUTONOMO]` Build OK
+- [x] **T-13.1.1** (2026-03-29) `[INSIEME]` Apertura Payments Rescue riscritta con pattern CasaHunter ✅
+- [x] **T-13.1.2** (2026-03-29) `[CLAUDE-AUTONOMO]` Jargon tradotto con contesto plain-English ✅
+- [x] **T-13.1.3** (2026-03-29) `[CLAUDE-AUTONOMO]` "What I Learned" in alto come callout ✅
+- [x] **T-13.1.4** (2026-03-29) `[CLAUDE-AUTONOMO]` en.json + it.json aggiornati ✅
+- [x] **T-13.1.5** (2026-03-29) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ### US 13.2: LeadsBridge — Riscrivere l'apertura con il pattern CasaHunter
 > Come mobile product director senza esperienza SaaS integration, devo capire perché "rimuovere feature" è controintuitivo e significativo.
 
-- [ ] **T-13.2.1** `[INSIEME]` Riscrivere l'apertura LeadsBridge: 3 frasi CasaHunter-style. Mattia valida.
-- [ ] **T-13.2.2** `[CLAUDE-AUTONOMO]` Tradurre jargon: "bridge creation flow", "field mapping", "connectors" → plain English con analogie comprensibili
-- [ ] **T-13.2.3** `[CLAUDE-AUTONOMO]` Spostare "What I Learned" in alto come callout
-- [ ] **T-13.2.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
-- [ ] **T-13.2.5** `[CLAUDE-AUTONOMO]` Build OK
+- [x] **T-13.2.1** (2026-03-29) `[INSIEME]` Apertura LeadsBridge riscritta con pattern CasaHunter ✅
+- [x] **T-13.2.2** (2026-03-29) `[CLAUDE-AUTONOMO]` Jargon tradotto con analogie comprensibili ✅
+- [x] **T-13.2.3** (2026-03-29) `[CLAUDE-AUTONOMO]` "What I Learned" in alto come callout ✅
+- [x] **T-13.2.4** (2026-03-29) `[CLAUDE-AUTONOMO]` en.json + it.json aggiornati ✅
+- [x] **T-13.2.5** (2026-03-29) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ### US 13.3: Cashless System — Riscrivere l'apertura con il pattern CasaHunter
 > Come hiring manager, "5 months, zero to live demo" non dice nulla se non so cosa significa "cashless integration" e perché è difficile.
 
-- [ ] **T-13.3.1** `[INSIEME]` Riscrivere l'apertura Cashless: chiarire il problema (3 payment provider in competizione, serve una strategia prodotto unificata), la soluzione (discovery reale, non assumptions), il risultato. Mattia valida.
-- [ ] **T-13.3.2** `[CLAUDE-AUTONOMO]` Tradurre jargon specifico del dominio cashless/payments
-- [ ] **T-13.3.3** `[CLAUDE-AUTONOMO]` Spostare "What I Learned" in alto
-- [ ] **T-13.3.4** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json
-- [ ] **T-13.3.5** `[CLAUDE-AUTONOMO]` Build OK
+- [x] **T-13.3.1** (2026-03-29) `[INSIEME]` Apertura Cashless riscritta con pattern CasaHunter ✅
+- [x] **T-13.3.2** (2026-03-29) `[CLAUDE-AUTONOMO]` Jargon cashless/payments tradotto ✅
+- [x] **T-13.3.3** (2026-03-29) `[CLAUDE-AUTONOMO]` "What I Learned" in alto ✅
+- [x] **T-13.3.4** (2026-03-29) `[CLAUDE-AUTONOMO]` en.json + it.json aggiornati ✅
+- [x] **T-13.3.5** (2026-03-29) `[CLAUDE-AUTONOMO]` Build OK ✅
 
 ---
 
@@ -547,57 +547,318 @@
 
 ## RIEPILOGO ESECUZIONE
 
-### ✅ COMPLETATI
+### ✅ EPICHE COMPLETATE
+- [x] **EPIC 1** — Case Study (LeadsBridge aggiunto, visual, trasferibilità, Cashless riscritto)
+- [x] **EPIC 2** — Lab & Side Projects (CasaHunter mini-case study, Lab pulito, AI badge)
+- [x] **EPIC 3** — Homepage (hero, metriche, How I Work, Now, CTA)
+- [x] **EPIC 6** — About Page (narrativa, Selfrules fix, beliefs, CTA)
+- [x] **EPIC 9** — Pagina Contatto
 - [x] **EPIC 12** — Clarity Rewrite Homepage (2026-03-26, commit f61fe74)
 - [x] **EPIC 13** — Case Study Reframe TL;DR + KeyInsight (2026-03-26, commit 732b29b)
-- [x] **EPIC 16** — Micro-copy & i18n Consistency (2026-03-27, commit e0b3981)
 - [x] **EPIC 14** — Blog Clarity preview text (2026-03-27, commit 4d71bc8)
 - [x] **EPIC 15** — About Page & Polish (2026-03-27, commits 837379a + 1057ff7 + 813cddd)
+- [x] **EPIC 16** — Micro-copy & i18n Consistency (2026-03-27, commit e0b3981)
 - [x] **Volante** — Date blog post allineate a Jan–Mar 2026 (2026-03-27, commit f951bed)
 
-### Task aperti — ordinati per impatto sull'obiettivo
+### 🔓 EPICHE APERTE (9) — sequenza logica di implementazione
 
-**ALTA PRIORITÀ — Copy & contenuto (avvicinano direttamente l'HM)**
+**FASE 1 — Fondamenta linguistiche (prerequisito per tutto il resto)**
 
-`[INSIEME]`
-1. **T-12.1.1**: Riscrivere hero subtitle (da jargon a outcome universale)
-2. **T-12.2.1**: Riscrivere i 3 pillar "Three Languages" con esempi concreti
-3. **T-12.4.1**: Scrivere sezione "What I Actually Do" per homepage
-4. **T-13.1.1 / T-13.2.1 / T-13.3.1**: Riscrivere aperture 3 case study (CasaHunter-style)
+1. **EPIC 18: Coerenza linguistica cross-sito** (3 task)
+   Glossario IT/EN + regole di consistenza. Deve venire PRIMA della riscrittura dei post perché definisce il vocabolario target.
 
-`[CLAUDE-AUTONOMO]` (dopo approvazione copy INSIEME)
-5. **T-12.1.2–3**: Implementare nuovo subtitle
-6. **T-12.2.2–3**: Implementare nuovi pillar
-7. **T-12.3.1–5**: Riscrivere preview cards case study
-8. **T-12.4.2–4**: Implementare "What I Actually Do"
-9. **T-12.5.1–3**: Contestualizzare metriche homepage
-10. **T-13.1.2–5 / T-13.2.2–5 / T-13.3.2–5**: Tradurre jargon + spostare "Learned" in alto
+2. **EPIC 17: Audit Italiano — Copy nativo, non tradotto** (19 task)
+   Riscrittura dei 4 blog post + copy JSON con calchi sintattici. Usa il glossario di EPIC 18 come riferimento. Include anche cleanup delle chiavi JSON orfane (3 post rimossi).
 
-**MEDIA PRIORITÀ — Visual & polish (rafforzano la credibilità)**
+**FASE 2 — Contenuto (nuovi post + revisione)**
 
-`[INSIEME]`
-11. **T-1.2.6**: 1 visual per case study (diagramma/flow)
-12. **T-5.1.1**: Storyboard interactive case study Payments (scroll-driven)
+3. **EPIC 4: Blog/Notes — Costruire autorità** (3 task rimasti)
+   T-4.1.8: Mattia revisiona i 5 post. T-4.3.1: cross-post LinkedIn. T-4.3.3: cadenza editoriale. Dipende da EPIC 17 (i post devono essere in italiano nativo prima della revisione).
 
-`[CLAUDE-AUTONOMO]`
-13. **T-5.1.2–5**: Implementare animazioni scroll-driven
-14. **T-7.3.1–2**: Visual nei blog post
-15. **T-7.2.3**: Test OG images su LinkedIn/Twitter
-16. **T-8.3.1**: Lighthouse audit
-17. **T-8.3.3**: Test accessibilità axe-core
+**FASE 3 — Visual & wow factor**
 
-**BASSA PRIORITÀ — Infra & automazione (post-lancio)**
+4. **EPIC 1: Case Study — visual mancante** (1 task rimasto)
+   T-1.2.6: 1 visual per case study (diagramma/flow). Indipendente dal copy.
 
-`[INSIEME]`
-18. **T-4.3.3**: Cadenza editoriale blog
-19. **T-5.2.1**: Decisione chatbot "Ask Mattia"
-20. **T-10.2.1**: Definire scheduled tasks
+5. **EPIC 7: Design & Visual Polish** (3 task rimasti)
+   T-7.2.3: test OG images. T-7.3.1–2: visual nei blog post. Dipende parzialmente da EPIC 4 (i post devono essere finalizzati).
 
-`[CLAUDE-AUTONOMO]`
-21. **T-10.1.1–3**: Blog publishing pipeline MDX
-22. **T-10.3.2–3**: Analytics events + ottimizzazione
+6. **EPIC 5: Il "Momento Wow"** (10 task)
+   Interactive scroll-driven case study + chatbot "Ask Mattia". Il wow factor viene dopo che il contenuto è solido.
 
-`[MATTIA-REQUIRED]`
-23. **T-4.1.8**: Revisione 5 blog post prima di merge
-24. **T-4.3.1**: Cross-postare blog su LinkedIn
-25. **T-8.2.4**: Configurazione dominio selfrules.org (posticipato a MVP pronto)
+**FASE 4 — Technical health & lancio**
+
+7. **EPIC 8: SEO & Technical Health** (4 task rimasti)
+   T-8.2.3: alt text. T-8.2.4: dominio selfrules.org. T-8.3.1: Lighthouse. T-8.3.3: axe-core. Il dominio è l'ultimo step prima del lancio.
+
+**FASE 5 — Post-lancio**
+
+8. **EPIC 10: Infrastruttura per evoluzione continua** (7 task rimasti)
+   Blog pipeline MDX, scheduled tasks, analytics events. Niente di questo blocca il lancio.
+
+9. **EPIC 11: Mastery ecosistema Claude** (4 task ricorrenti)
+   Task continui, non hanno una "fine".
+
+---
+
+## EPIC 17: Audit Italiano — Copy nativo, non tradotto ✅ COMPLETATA
+**Priorità: ALTA** | **Impatto: 8/10** | **Valore hiring manager: Alto**
+**Data audit: 2026-03-28** | **Completata: 2026-03-29**
+
+> Un HM italiano che legge il sito deve pensare "scritto da un italiano". Un HM internazionale che legge la versione EN deve pensare "scritto da qualcuno che pensa in inglese". Se una delle due versioni suona come traduzione dell'altra, il sito perde credibilità. Test: "questo testo potrebbe essere capito sia da un hiring manager sia da un bambino?"
+
+### Principi dell'audit
+1. **Calchi sintattici** — frasi italiane che seguono l'ordine/struttura dell'inglese
+2. **Anglicismi non necessari** — termini inglesi quando esiste l'equivalente italiano naturale
+3. **Frasi innaturali** — nessun italiano direbbe così in una conversazione
+4. **Gergo settoriale eccessivo** — termini che un bambino (o un HM non-tech) non capirebbe
+5. **Registri misti** — oscillazione tra formale e informale nella stessa sezione
+
+---
+
+### US 17.1: Blog Post — Riscrittura nativa dei 5 post nuovi
+> I 5 blog post scritti nella sessione del 24 marzo sono i più critici. La struttura segue fedelmente l'inglese, molte frasi sono calchi sintattici diretti, e il registro oscilla tra italiano naturale e "inglese pensato in italiano".
+
+#### 17.1.1 — `build-vs-buy-framework/content.it.mdx` (GRAVITÀ: ALTA)
+> Il post più problematico. Quasi ogni frase è un calco sintattico dall'inglese.
+
+- [x] **T-17.1.1a** (2026-03-29) `[INSIEME]` Riscrivere nativamente `build-vs-buy-framework/content.it.mdx`
+  **Problemi specifici:**
+  - "Ho visto grandi costruttori volere costruire tutto" → calco di "I've seen great builders want to build everything"
+  - "Ho visto PM avversi al rischio volere comprare tutto" → calco letterale
+  - "La decisione vive all'incrocio di quattro domande" → "lives at the intersection" tradotto parola per parola
+  - "sbagliare l'ordine significa ottimizzare per la cosa sbagliata" → calco di "means optimizing for the wrong thing"
+  - "Questa sorprende le persone" → "This surprises people" — in italiano si direbbe "Questa di solito non se l'aspetta nessuno"
+  - "Nessun vincolo di tempo. Quindi ho costruito." → segue il ritmo dell'inglese, non dell'italiano
+  - "Costruire era, o il prodotto non esiste il prossimo trimestre" → frase rotta, calco di "Build it was, or the product doesn't exist next quarter"
+  - "Non perché non potessimo costruire. Perché non avevamo tempo" → ritmo inglese
+  - "Ogni cliente se lamentava" → grammaticalmente sbagliato, dovrebbe essere "si lamentava"
+  - "abbiamo comprato. L'elaborazione dei pagamenti di Square è una merce" → "merce" per "commodity" — nessuno dice così in italiano
+  - "L'algoritmo di ranking è un differenziatore" → "differenziatore" per "differentiator" — in italiano si dice "il vero punto di forza" o "ciò che fa la differenza"
+  - "ingegneria dello status symbol" → incomprensibile
+  - "Payments Rescue" usato come nome in italiano — va contestualizzato
+  - "Costo totale di proprietà" → TCO tradotto letteralmente, non è un termine usato in italiano corrente
+  - "resta accecata" → calco di "gets blinded"
+  - "Sembra una vittoria chiara per la costruzione" → "clear win for building" tradotto parola per parola
+  - "costo sommerso" → "sunk cost" tradotto, ma in italiano non si usa
+  - "dato i nostri vincoli attuali e il nostro burn rate" → mixing inglese e italiano
+  - "Manca il vincolo e risolvi un problema che non hai" → frase non ha senso in italiano
+
+#### 17.1.2 — `remote-pm-across-countries/content.it.mdx` (GRAVITÀ: ALTA)
+> Secondo post più problematico. Molte frasi sono traduzioni meccaniche con struttura inglese.
+
+- [x] **T-17.1.2a** (2026-03-29) `[INSIEME]` Riscrivere nativamente `remote-pm-across-countries/content.it.mdx`
+  **Problemi specifici:**
+  - "Quel è il problema sbagliato" → typo + calco di "That's the wrong problem"
+  - "Il contesto vive nell'aria. Togli la stanza e l'aria scompare." → calco poetico dall'inglese, suona artificiale in italiano
+  - "il team degli USA lo vedeva alle 23 e prendeva una decisione che io non ero sveglio per vedere" → calco di "a decision I wasn't awake to see"
+  - "Il primo istinto è stato risolvere questo con miglior programmazione Zoom" → "programmazione Zoom" per "Zoom scheduling" — confusione totale (programmazione = programming in italiano, non scheduling)
+  - "Ottenere una migliore sovrapposizione di fusi orari" → calco di "Get better timezone overlap"
+  - "Proteggere le core hours" → mixing inglese/italiano
+  - "Questo ha fallito perché era il problema sbagliato" → calco di "This failed because it was the wrong problem"
+  - "nessuno la scrive tranne nei call notes che due persone ascoltano per metà" → "call notes" in italiano, "ascoltano per metà" calco
+  - "quale decisione abbiamo bisogno di prendere" → calco di "what decision we need to make" — in italiano: "che decisione dobbiamo prendere"
+  - "L'ultima frase contava di più" → "mattered most" calco
+  - "Quei documenti diventarono la fonte della verità" → "source of truth" tradotto letteralmente — in italiano non si usa
+  - "Gli analisti li usavano per capire quali metriche effettivamente contavano" → "actually mattered" calco
+  - "Sembra burocrazia. È in realtà l'opposto." → calco del ritmo inglese
+  - "I thread Slack che cascano in 50 messaggi hanno un modo di perdere il contesto" → "have a way of losing context" calco
+  - "questo ha avuto bisogno di discussione immediata" → "this needed immediate discussion" calco
+  - "Lo spec di implementazione era sbagliato" → "spec" usato al maschile, anglicismo
+  - "Se richiede vai-e-vieni in 5 turni o più, call" → mixing totale IT/EN
+  - "compliment sandwich" → anglicismo non spiegato
+  - "la stessa cosa richiede più contesto" → calco letterale
+  - "Ho imparato a scrivere il feedback esplicitamente" → calco
+  - "La matematica sembra cattiva" → calco di "the math looks bad"
+  - "Una volta che ho iniziato a tracciare" → "Once I started tracking" calco
+  - "un singolo documento di decisione ha prevenuto forse cinque ore" → "prevented maybe five hours" calco
+  - "Questo è il leverage di async-first" → anglicismi non spiegati
+
+#### 17.1.3 — `when-ai-makes-sense-in-product/content.it.mdx` (GRAVITÀ: MEDIA)
+> Leggermente meglio dei primi due, ma con numerosi calchi e anglicismi.
+
+- [x] **T-17.1.3a** (2026-03-29) `[INSIEME]` Riscrivere nativamente `when-ai-makes-sense-in-product/content.it.mdx`
+  **Problemi specifici:**
+  - "Ogni team di prodotto sta guardando alle feature AI adesso" → calco di "is looking at AI features right now"
+  - "Hai migliaia di punti dati senza una regola chiara" → calco letterale
+  - "L'LLM vede pattern che una regola umana non può esprimere" → suona artificiale
+  - "La persona A si interessa della vicinanza al lavoro" → calco — in italiano: "alla persona A interessa stare vicino al lavoro"
+  - "Non puoi scrivere regole per questo. Puoi imparare dal comportamento e adattare." → ritmo inglese
+  - "Non è un campo dati. È un reclamo" → calco di "It's not a data field. It's a complaint"
+  - "Il linguaggio naturale importa qui" → "matters here" calco
+  - "ha bisogno di un `WHERE amount < 1000`" → SQL in un testo italiano, accessibile solo a tecnici
+  - "usiamo l'AI per gestire gli scenari di fallimento" → calco
+  - "di solito sta guardando una macchina di stato" → calco di "is usually looking at a state machine"
+  - "Confrontano il 'costo di scrivere una regola' con il 'costo di usare un LLM'" → calco
+  - "Le chiamate LLM si sommano" → calco di "LLM calls add up"
+  - "moltiplica per latenza, cold start, overhead API, gestione degli errori" → anglicismi tecnici a raffica
+  - "la 'feature AI semplice' è infrastruttura" → calco
+  - "la decisione core" → mixing IT/EN
+
+#### 17.1.4 — `managing-payments-at-scale/content.it.mdx` (GRAVITÀ: MEDIA)
+- [x] **T-17.1.4a** (2026-03-29) `[INSIEME]` Riscrivere nativamente `managing-payments-at-scale/content.it.mdx`
+  **Problemi:** Non letto completamente in questa sessione, ma data la coerenza stilistica con gli altri 4 post, quasi certamente ha gli stessi pattern di calchi sintattici e anglicismi. Richiede audit e riscrittura.
+
+#### 17.1.5 — `seven-years-running-a-business/content.it.mdx` (GRAVITÀ: MEDIA)
+- [x] **T-17.1.5a** (2026-03-29) `[INSIEME]` Riscrivere nativamente `seven-years-running-a-business/content.it.mdx`
+  **Problemi:** Come sopra — da auditare e riscrivere nella stessa sessione degli altri.
+
+#### 17.1.6 — `why-i-prototype-in-code/content.it.mdx` (GRAVITÀ: BASSA)
+> Questo post è significativamente migliore degli altri. Molte frasi suonano native. Pochi calchi isolati.
+
+- [x] **T-17.1.6a** (2026-03-29) `[CLAUDE-AUTONOMO]` Correggere i pochi calchi rimasti in `why-i-prototype-in-code/content.it.mdx`
+  **Problemi specifici (pochi):**
+  - "Parlo di costruire la cosa minima necessaria per rispondere a una domanda" → leggermente rigido ma accettabile
+  - "Questo non è lavoro da ingegnere. Non si tratta di scrivere codice di produzione." → buono
+  - Nel complesso: **90% nativo**, solo ritocchi minimi
+
+#### 17.1.7 — `the-meeting-where-everyone-says-yes/content.it.mdx` (GRAVITÀ: DA VERIFICARE)
+- [x] **T-17.1.7a** (2026-03-29) `[INSIEME]` Audit e riscrittura se necessaria di `the-meeting-where-everyone-says-yes/content.it.mdx`
+
+#### 17.1.8 — `why-metrics-lie-without-context/content.it.mdx` (GRAVITÀ: DA VERIFICARE)
+- [x] **T-17.1.8a** (2026-03-29) `[INSIEME]` Audit e riscrittura se necessaria di `why-metrics-lie-without-context/content.it.mdx`
+
+---
+
+### US 17.2: Pagina Approach — Riscrittura nativa
+> La pagina `/approach` (sezioni s1–s5 in it.json, chiave `approach`) è ben scritta ma contiene calchi residui e anglicismi.
+
+- [x] **T-17.2.1** (2026-03-29) `[INSIEME]` Riscrivere nativamente le 5 sezioni della pagina Approach in `it.json`
+  **Problemi specifici:**
+  - s1: "Capire prima di toccare" — buono. Ma "La tentazione quando arrivi su un prodotto in difficoltà è agire subito" → leggermente calco di "The temptation when you arrive on a struggling product..."
+  - s2: "Il problema è nel funnel" → "funnel" è gergo. Un bambino non capisce. Un HM non-tech probabilmente sì, ma al limite
+  - s2: "uncategorized income" in Square lasciato in inglese — corretto (è il termine dell'interfaccia), ma serve una spiegazione contestuale
+  - s2: "Il redesign ha tagliato il tempo di setup del 35%" → "tagliato" per "cut" è calco; "ridotto" è più naturale
+  - s3: "Costruire per scoprire, non per consegnare" — buono
+  - s4: "Sapere cosa non costruire" — buono
+  - s4: "Parcheggiato. Deliberatamente." — buono, ritmo funziona in italiano
+  - s5: "Comunicare come se non fossi nella stanza" — buono
+  - s5: "minute dei meeting" → "minute" per "minutes" è calco. In italiano: "verbali delle riunioni"
+  - Closing: "Nessun framework con un nome" → "framework" è accettabile nel contesto, ma ripetuto troppo spesso nel sito
+
+---
+
+### US 17.3: Case Study — Calchi residui nei testi lunghi
+> I case study principali (payments, leadsbridge, cashless) sono stati riscritti nella sessione del 28 marzo e sono molto meglio. Restano calchi isolati nei testi lunghi (approach, learned, patterns).
+
+- [x] **T-17.3.1** (2026-03-29) `[CLAUDE-AUTONOMO]` Payments case study — fix calchi residui in `it.json`
+  **Problemi specifici:**
+  - patterns: "fixare tutto contemporaneamente" → "fixare" è anglicismo. Usare "risolvere"
+  - patterns: "fai il triage spietatamente" → "triage" è accettabile, "spietatamente" è calco di "ruthlessly"
+  - patterns: "Le metriche come tool di triage, non decorazione di dashboard" → "tool" anglicismo; "strumento" esiste
+  - patterns: "pet fix" → anglicismo non necessario
+  - learned: "La maggior parte di quello che sembrava urgente poteva in realtà aspettare" → struttura leggermente calco
+  - approach: "compilati da engineering, sales e supporto senza alcun ranking" → "ranking" anglicismo; "senza un ordine di priorità"
+  - approach: "hanno ottenuto un owner ciascuno" → "owner" anglicismo; "responsabile"
+  - approach: "un impegno pubblico" → calco di "a published commitment"
+
+- [x] **T-17.3.2** (2026-03-29) `[CLAUDE-AUTONOMO]` LeadsBridge case study — fix calchi residui in `it.json`
+  **Problemi specifici:**
+  - approach: "Non dove pensavamo si bloccassero" → buono
+  - approach: "incrociando ticket di supporto e pattern di sessione" → "pattern di sessione" calco; "comportamenti nelle sessioni"
+  - approach: "aggiungeva carico cognitivo" → accettabile ma tecnico
+  - approach: "La resistenza è stata immediata" → calco di "The resistance was immediate"
+  - approach: "non stiamo rimuovendo capacità, stiamo rimuovendo frizione" → buono (funziona come frase ad effetto)
+  - patterns: "Automatizza il pain point" → anglicismo nel titolo; "Automatizza il punto dolente" o riformula
+  - patterns: "Misura il funnel, non la feature" → tre anglicismi in sei parole
+  - patterns: "vanity metric" → anglicismo
+  - learned: "arrangiatevi" → buono, nativo
+
+- [x] **T-17.3.3** (2026-03-29) `[CLAUDE-AUTONOMO]` Cashless case study — fix calchi residui in `it.json`
+  **Problemi specifici:**
+  - approach: "Poi ho ucciso l'opzione ovvia" → calco di "Then I killed the obvious option" — in italiano è troppo drammatico; "ho scartato" o "ho eliminato"
+  - patterns: "Uccidi il tuo prodotto" → stesso problema
+  - patterns: "Pilot prima di committerti" → "committerti" è anglicismo da "commit"
+  - patterns: "La selezione del partner è lavoro di prodotto" → calco letterale
+  - patterns: "Da zero a uno richiede un PM muscle diverso" → "PM muscle" incomprensibile in italiano
+  - learned: "Parcheggiarlo presto ha risparmiato mesi di tempo engineering" → "tempo engineering" calco
+
+---
+
+### US 17.4: Homepage — Anglicismi e calchi residui
+> L'homepage è stata riscritta il 28 marzo ed è in buona forma. Restano pochi problemi isolati.
+
+- [x] **T-17.4.1** (2026-03-29) `[CLAUDE-AUTONOMO]` Fix calchi residui homepage in `it.json`
+  **Problemi specifici:**
+  - timeline.block1: "Selfrules Studio" → da feedback di Mattia, non era uno studio. Era lavoro freelance (siti, e-commerce, grafica, stampa). Verificare che il testo non dica "studio"
+  - timeline.block2: "Entrato come UX Designer, uscito scrivendo codice in produzione" → buono
+  - howIWork.intro: "l'engineering dice 'servono 3 sprint di refactoring'" → "sprint" e "refactoring" sono gergo tech. Un bambino non capisce. Un HM sì. Al limite del test
+  - metrics: "Introducendo review cross-funzionali settimanali" → "review cross-funzionali" → "revisioni con tutti i team"
+  - currentWork.card2: "Scoring a tre passaggi: 80% filtro deterministico, 20% budget AI" → gergo denso. "deterministico" fallisce il test del bambino
+
+---
+
+### US 17.5: About Page — Calchi residui
+> La pagina About è in buona forma complessiva. Pochi calchi isolati.
+
+- [x] **T-17.5.1** (2026-03-29) `[CLAUDE-AUTONOMO]` Fix calchi residui About in `it.json`
+  **Problemi specifici:**
+  - career.selfrules: "Uno studio di web design fondato a 25 anni a Modena" → da feedback: non era "studio", era freelance
+  - career.leadsbridge: "sbloccato direttamente la crescita del revenue" → "revenue" anglicismo; "fatturato" è l'italiano
+  - beliefs.belief3: "Se il PM diventa il collo di bottiglia tra chi costruisce e chi decide" → "collo di bottiglia" è corretto in italiano
+  - beliefs.belief2: "React che gli utenti possono toccare" → OK per HM tech, ma un bambino non sa cos'è React
+  - outside: buono, nativo, personale ✓
+
+---
+
+### US 17.6: Metadata & SEO — Anglicismi e calchi
+> Le meta description italiane contengono anglicismi inutili.
+
+- [x] **T-17.6.1** (2026-03-29) `[CLAUDE-AUTONOMO]` Fix metadata italiane in `it.json`
+  **Problemi specifici:**
+  - metadata.about: "colmare il divario tra design, engineering e business quando non si capiscono" → "colmare il divario" calco di "bridge the gap"
+  - metadata.work: "Numeri e decisioni, non marketing copy" → "marketing copy" anglicismo
+  - metadata.lab: "mockup o prototipi" → "mockup" anglicismo, ma accettabile nel contesto
+  - metadata.approach: "ship con convinzione" → "ship" anglicismo in una meta description italiana
+  - metadata.approach: "cosa funziona al limite del caos" → calco di "what works at the edge of chaos"
+  - metadata.notes: "prototipar in codice" → troncatura brutta; "prototipare" almeno
+  - metadata.casahunter: "eleganza tecnica < velocità di ship" → formula mista IT/EN in una meta description
+
+---
+
+### US 17.7: Micro-copy e navigazione
+> Piccoli fix di coerenza linguistica.
+
+- [x] **T-17.7.1** (2026-03-29) `[CLAUDE-AUTONOMO]` Fix micro-copy in `it.json`
+  **Problemi specifici:**
+  - footer.bio: "Prototipo in codice, disegno la UX, e porto in produzione" → "disegno la UX" mixing — "disegno l'esperienza utente" o "progetto l'interfaccia"
+  - contact page intro: "Che tu abbia un ruolo specifico in mente o solo voglia scambiare idee" → calco di "Whether you have a specific role in mind or just want to exchange ideas" — in italiano: "Che sia per un ruolo specifico o per scambiare due idee"
+  - hero.signaturePhrase: "Il problema non e' mai quello del primo meeting." → apostrofo dritto (') invece di è con accento. Bug tipografico
+
+---
+
+## EPIC 18: Coerenza linguistica cross-sito ✅ COMPLETATA
+**Priorità: MEDIA** | **Impatto: 6/10** | **Valore hiring manager: Medio (percezione di cura)**
+**Completata: 2026-03-29**
+
+> Problemi sistemici che attraversano tutto il sito, non specifici di una singola pagina.
+
+### US 18.1: Glossario di traduzione — Termini ricorrenti
+> Lo stesso termine inglese viene tradotto in modi diversi in punti diversi del sito. Serve una scelta consistente.
+
+- [x] **T-18.1.1** (2026-03-29) `[INSIEME]` Glossario IT definito e salvato in GLOSSARIO-IT.md ✅
+  Definizione originale:
+  | EN | Attuale IT (inconsistente) | Proposta |
+  |---|---|---|
+  | setup | setup / configurazione | **configurazione** (o "setup" solo se contesto molto tech) |
+  | framework | framework | **schema** / **approccio** (framework solo in titoli tech) |
+  | pattern | pattern | **schema** / **approccio ricorrente** |
+  | feature | feature / funzionalità | **funzionalità** |
+  | fix | fix / fixare / risolvere | **risolvere** / **correzione** |
+  | revenue | revenue / fatturato | **fatturato** |
+  | owner | owner / responsabile | **responsabile** |
+  | ranking | ranking | **classifica** / **punteggio** |
+  | tool | tool / strumento | **strumento** |
+  | scope | scope | **ambito** / **perimetro** |
+  | triage | triage | **triage** (accettato anche in IT) |
+  | dashboard | dashboard | **dashboard** (accettato anche in IT) |
+
+### US 18.2: Coerenza del registro — Formale vs Informale
+> Il sito oscilla tra "tu" informale (homepage, about, CTA) e tono da paper accademico (blog post). Il registro deve essere consistente: diretto, conversazionale, mai accademico.
+
+- [x] **T-18.2.1** (2026-03-29) `[INSIEME]` Registro allineato: regola inclusa nel GLOSSARIO-IT.md — diretto, conversazionale, benchmark = hero/beliefs/Outside Work ✅
+
+### US 18.3: Il test del bambino — Passata finale
+> Dopo tutte le riscritture, fare una passata finale su ogni pagina chiedendosi: "un tredicenne italiano capirebbe di cosa sto parlando?"
+
+- [x] **T-18.3.1** (2026-03-29) `[INSIEME]` Passata finale "test del bambino" su tutto il sito — pagina per pagina ✅

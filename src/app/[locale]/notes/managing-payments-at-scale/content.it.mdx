@@ -1,67 +1,67 @@
 export const metadata = {
   title: 'Gestire i pagamenti in scala: quello che la PM school non insegna',
   date: '2026-03-01',
-  excerpt: 'Non puoi muoverti velocemente quando le rotture significano addebitare due volte il cliente.',
+  excerpt: 'Quando sbagliare significa addebitare al cliente due volte, non puoi permetterti di muoverti velocemente.',
   readingTime: 7,
   locale: 'it',
 }
 
-I pagamenti sono un dominio diverso dalla maggior parte del lavoro di prodotto. Gli istinti da PM soliti falliscono velocemente.
+I pagamenti non sono come il resto del lavoro di prodotto. I riflessi da PM che funzionano altrove qui non reggono.
 
-"Muoviti velocemente e rompi cose" è una filosofia fine per le feature. Completamente diverso quando rompere cose significa che un cliente è stato addebitato due volte. O tre volte. O addebitato per una transazione che è fallita. Le skill da PM che contano nei pagamenti non sono quelle che insegnano in PM school.
+"Muoviti velocemente e rompi le cose" va benissimo per le funzionalità. Cambia tutto quando rompere qualcosa significa che un cliente è stato addebitato due volte. O tre. O pagato per una transazione fallita. Le competenze che contano davvero nei pagamenti non le insegna nessuna PM school.
 
 <KeyTakeaway>
-La riorientazione mentale: nei pagamenti, guidi con il vincolo, non con la possibilità. Cosa possiamo fare in sicurezza? è la prima domanda. Cosa vogliamo fare? viene dopo.
+Il cambio di prospettiva è questo: nei pagamenti, parti dal vincolo, non dalla possibilità. La prima domanda è sempre: cosa possiamo fare in sicurezza? Il resto viene dopo.
 </KeyTakeaway>
 
-## Il Payments Rescue a QubicaAMF
+## Il progetto pagamenti a QubicaAMF
 
-Quando sono arrivato, l'integrazione di pagamento era in crisi. 44 issue aperti. I centri stavano perdendo transazioni. Il sistema era tecnicamente funzionale ma operativamente inusabile. L'istinto del team: risolvere tutto, velocemente.
+Quando sono arrivato, il sistema era in crisi. Quarantaquattro segnalazioni aperte. I centri perdevano transazioni. Tecnicamente il sistema funzionava, ma operativamente era inutilizzabile. Il riflesso del team: aggiustare tutto subito.
 
-Quell'istinto è sbagliato nei pagamenti. Non puoi risolvere tutto in una volta quando risolvere una cosa potrebbe romperne un'altra.
+Nei pagamenti questo riflesso ti inganna. Non puoi risolvere tutto insieme perché aggiustare una cosa rischia di romperne un'altra.
 
-La prima skill: leggere la documentazione API come un detective. La documentazione di Square è estesa, ma non ti dice come i metadati di transazione fluiscono attraverso la riconciliazione. Devi capire il modello di dati abbastanza a fondo per sapere: "Se cambiamo questo campo, cosa si rompe downstream?" Ho speso una settimana a leggere e rileggere i documenti, trovando il campo (`external_payment_type`) che ha sbloccato la riconciliazione senza cambiamenti architetturali da nessuna parte. Un PM, una settimana, un campo. Un centro è rimasto e è diventato un account di riferimento.
+La prima competenza è semplice: leggi la documentazione API come un investigatore. La documentazione di Square è ricchissima, ma non ti dice come i metadati fluiscono attraverso la riconciliazione. Devi capire il modello di dati abbastanza a fondo da porti questa domanda: "Se cambiamo questo campo, cosa si rompe downstream?" Ho speso una settimana a rileggere i documenti finché non ho trovato il campo (`external_payment_type`) che ha sbloccato la riconciliazione senza toccarne nient'altro. Un PM, una settimana, un campo. Il centro è rimasto e è diventato un account di riferimento.
 
-La seconda skill: capire i flussi di denaro prima di toccare il codice. Ogni feature tocca il denaro. Non metaforicamente. Denaro vero. "Aggiungiamo una feature per dividere le entrate tra due account" sembra ragionevole fino a quando non realizzi: cosa succede se la divisione fallisce a metà transazione? E se un account è pieno? E se uno chargeback arriva 60 giorni dopo e solo un lato è stato reversato? Devi tracciare il percorso del denaro prima che il team di engineering inizi a scrivere codice.
-
-<Callout>
-Ho visto team costruire feature di pagamento diviso senza rispondere a "cosa se la divisione fallisce?" La risposta contava perché è successo due volte. In produzione. Con soldi veri.
-</Callout>
-
-## La conformità PCI come vincolo di prodotto, non checkbox di compliance
-
-La conformità PCI DSS è la baseline. Ma non è una casella da spuntare e andare avanti. È un vincolo di prodotto che modella ogni feature.
-
-A QubicaAMF ho proposto una riduzione di scope ai certificatori ristrutturando l'architettura di pagamento in tre canali: pagamenti, riconciliazione e settlement. Ognuno su una traccia di conformità diversa. Questo ha ridotto il rischio di penalità ricorrente e reso l'intero sistema più semplice. Non è stata una vittoria di compliance. È stata una decisione di architettura di prodotto che è andata a beneficio della compliance.
-
-Il motivo per cui funziona: se capisci la conformità da un angolo di prodotto, diventa un vincolo di design, non un ostacolo. I migliori prodotti non sono costruiti senza vincoli. Sono costruiti all'interno di vincoli buoni.
-
-La maggior parte dei team tratta la conformità come un ripensamento. "Costruisci la feature, poi assicurati che siamo conformi." Nei pagamenti, la conformità deve essere upstream. Modella cosa è persino possibile.
-
-## Il coraggio di congelare le feature quando la stabilità è a rischio
-
-Questa è la parte più difficile, e dove l'istinto da PM effettivamente intralcia.
-
-La feature di rimborso era pronta. Il codice era solido, i test passavano. Ma era due settimane prima del picco delle vacanze — i 14 giorni più occupati dell'anno per il volume di transazioni. Il team voleva rilasciarla per ottenere dati precoci.
-
-L'ho tirata indietro. Non perché il codice era cattivo. Perché se qualcosa è andato storto con i rimborsi durante il picco, il danno è massiccio. Ogni rimborso emesso durante quei 14 giorni. Centinaia di centri. Potenziali rimborsi doppi, riconciliazione persa, chargebacks 60 giorni dopo.
-
-Il team ha spinto indietro. Il codice era buono. I test erano approfonditi. Rilascialo.
-
-La risposta è stata no. Non forse-dopo-più-test. No.
+La seconda competenza: capisci come fluisce il denaro prima di toccare il codice. Ogni funzionalità tocca il denaro. Non metaforicamente. Denaro vero. "Aggiungiamo una funzionalità per dividere le entrate tra due account" sembra sensato finché non realizzi: cosa succede se la divisione fallisce a metà? E se un account raggiunge il limite? E se un chargeback arriva sessanta giorni dopo e solo uno dei due è stato stornato? Devi tracciare il percorso del denaro prima che il team di engineering cominci a scrivere una riga.
 
 <Callout>
-Un PM in B2B SaaS a volte può rilasciare una feature rischiosa e rollbackarla se si rompe. Un PM nei pagamenti no. Una volta che il denaro si è mosso, si è mosso. Non puoi togliere quella campana.
+Ho visto team costruire funzionalità di divisione dei pagamenti senza chiedersi "cosa se la divisione fallisce?" La risposta importava perché è successo due volte. In produzione. Con soldi veri.
 </Callout>
 
-Abbiamo fatto un'intera giornata di test. Dati veri, scenari veri, veri edge case. Trovati tre problemi. Rilasciato dopo il picco.
+## La conformità PCI come vincolo di design, non come casella da spuntare
 
-Era più lento? Sì. La feature è stata rilasciata 14 giorni in ritardo? Sì. L'azienda sta meglio? Anche sì, perché la feature non ha causato una crisi di riconciliazione durante il picco che avrebbe costato 10 volte il valore dei dati precoci.
+PCI DSS è il baseline. Ma non è una casella che spunti e passi oltre. È un vincolo che modella ogni funzionalità.
 
-## Leggere documentazione API, capire la conformità, il coraggio di dire aspetta
+A QubicaAMF ho proposto ai certificatori di ridurre lo scope ristrutturando l'architettura in tre canali: pagamenti, riconciliazione e settlement. Ognuno su una traccia di conformità diversa. Questo ha ridotto il rischio di penalità e reso il sistema più semplice. Non è stata una vittoria di compliance. È stata una decisione di design di prodotto che è andata a beneficio della compliance.
 
-Queste non sono skill da PM sexy. Non appaiono su un CV come "product vision" o "stakeholder management." Ma nei pagamenti, contano più della strategia.
+Il motivo funziona: se capisci la conformità da un angolo di prodotto, diventa un vincolo di design, non un ostacolo. I migliori prodotti non nascono senza vincoli. Nascono dentro vincoli buoni.
 
-Un PM che non può leggere una spec API attentamente perderà i flussi di dati. Un PM che non capisce il paesaggio di conformità costruirà feature che devono essere strappate via. Un PM senza la spina dorsale per congelare le feature a rischio diventa la persona che spiega al CEO perché un bug di doppio addebito è costato all'azienda 400K euro.
+La maggior parte dei team tratta la conformità come un ripensamento. "Costruisci la funzionalità, poi assicurati che siamo conformi." Nei pagamenti la conformità deve stare a monte. Definisce cosa è persino possibile.
 
-I PM che hanno successo nei pagamenti non sono quelli con le idee migliori. Sono quelli che capiscono che il sistema deve funzionare per primo. Le idee vengono dopo.
+## Il coraggio di fermare una funzionalità quando la stabilità è a rischio
+
+Questa è la parte più difficile. E qui i riflessi da PM danneggiano.
+
+La funzionalità di rimborso era pronta. Il codice era solido, i test passavano. Eravamo due settimane prima del picco delle vacanze: i quattordici giorni più movimentati dell'anno per volume di transazioni. Il team voleva rilasciarla per raccogliere dati precoci.
+
+L'ho bloccata. Non perché il codice era cattivo. Perché se qualcosa va storto con i rimborsi durante il picco, il danno è enorme. Ogni rimborso emesso in quei giorni. Centinaia di centri. Rimborsi doppi, riconciliazione persa, chargebacks sessanta giorni dopo.
+
+Il team ha insistito. Il codice era buono. I test approfonditi. Rilascialo.
+
+La risposta è stata no. Non "forse dopo altri test." No.
+
+<Callout>
+Un PM in SaaS B2B a volte può rilasciare una funzionalità rischiosa e tornare indietro se si rompe. Un PM nei pagamenti no. Quando il denaro si è mosso, si è mosso. Non puoi far tornare quella campana.
+</Callout>
+
+Abbiamo fatto una giornata intera di test. Dati reali, scenari reali, edge case reali. Abbiamo trovato tre problemi. Rilasciato dopo il picco.
+
+Più lento? Sì. La funzionalità è uscita quattordici giorni in ritardo? Sì. L'azienda sta meglio? Anche sì, perché la funzionalità non ha causato una crisi di riconciliazione durante il picco che sarebbe costata dieci volte quello che avremmo guadagnato dai dati precoci.
+
+## Leggere le API, capire la conformità, il coraggio di dire aspetta
+
+Queste non sono competenze sexy da PM. Non le metti nel CV come "product vision" o "stakeholder management." Ma nei pagamenti contano più della strategia.
+
+Un PM che non legge attentamente una spec API perde i flussi di dati. Un PM che non capisce il panorama di conformità costruisce funzionalità che dovrà strappare via. Un PM senza la spina dorsale per fermare funzionalità rischiose è quello che spiega al CEO perché un bug di doppio addebito è costato all'azienda 400mila euro.
+
+I PM che vincono nei pagamenti non sono quelli con le idee migliori. Sono quelli che capiscono una cosa sola: il sistema deve funzionare prima. Le idee vengono dopo.
