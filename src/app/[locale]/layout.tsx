@@ -43,6 +43,21 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}>
+      <head>
+        {/* CLS fix: Override JetBrains Mono fallback with Courier New (monospace→monospace).
+            Inline style loads AFTER external CSS chunks, overriding next/font's Arial fallback
+            which has a 134.59% size-adjust mismatch. Courier New needs only ~100%. */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          @font-face {
+            font-family: 'JetBrains Mono Fallback';
+            src: local('Courier New');
+            ascent-override: 75.79%;
+            descent-override: 22.29%;
+            line-gap-override: 0%;
+            size-adjust: 100%;
+          }
+        `}} />
+      </head>
       <body className="font-sans bg-primary text-text-primary antialiased">
         <NextIntlClientProvider messages={messages}>
           {/* Skip to content -- sr-only, visible on keyboard focus (A11Y-01) */}

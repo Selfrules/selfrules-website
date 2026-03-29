@@ -16,4 +16,6 @@ export const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains',
   display: 'swap',
+  // Note: adjustFontFallback auto-generates an Arial fallback, but we override it
+  // with Courier New in layout.tsx inline <style> for better CLS (monospace→monospace)
 });
