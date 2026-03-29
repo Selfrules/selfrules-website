@@ -21,7 +21,7 @@ export function CaseStudyCard({
   className,
 }: CaseStudyCardProps) {
   const cardClasses = cn(
-    'border border-[#1a1a1f] px-6 py-8 md:px-[49px] md:py-[49px]',
+    'border border-[#1a1a1f] px-4 py-6 sm:px-6 sm:py-8 md:px-[49px] md:py-[49px]',
     'flex flex-col md:flex-row md:items-center gap-6',
     'transition-all duration-200 hover:border-accent/40 hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]',
     href && 'cursor-pointer',
@@ -37,7 +37,7 @@ export function CaseStudyCard({
       </div>
 
       <div className="shrink-0 md:text-right flex flex-col items-start md:items-end">
-        <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[48px] md:leading-[72px] tracking-[-3.6px]">
+        <p className="font-heading font-bold text-[#e8a838] text-[36px] sm:text-[48px] md:text-[72px] leading-[36px] sm:leading-[48px] md:leading-[72px] tracking-[-3.6px]">
           {metric}
         </p>
         {metricLabel && (

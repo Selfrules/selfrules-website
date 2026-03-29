@@ -134,7 +134,7 @@ export function FeedbackWidget({ locale }: { locale: string }) {
 
       {/* Modal overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:justify-end p-0 sm:p-6">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:justify-end p-0 sm:p-6 overflow-y-auto">
           {/* Backdrop */}
           <div className="absolute inset-0 bg-[rgba(0,0,0,0.5)]" aria-hidden="true" />
 
@@ -144,7 +144,7 @@ export function FeedbackWidget({ locale }: { locale: string }) {
             role="dialog"
             aria-modal="true"
             aria-label={t('modalTitle')}
-            className="relative w-full sm:w-[400px] max-h-[85vh] overflow-y-auto bg-surface border border-border-default shadow-[0_8px_32px_rgba(0,0,0,0.6)] sm:mb-0"
+            className="relative w-full sm:w-[400px] max-h-[85dvh] overflow-y-auto bg-surface border border-border-default shadow-[0_8px_32px_rgba(0,0,0,0.6)] sm:mb-0"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-5 border-b border-border-default">
@@ -209,7 +209,7 @@ export function FeedbackWidget({ locale }: { locale: string }) {
                       placeholder={t('messagePlaceholder')}
                       required
                       rows={4}
-                      className="w-full bg-primary border border-border-default p-3 text-sm text-text-primary placeholder:text-text-tertiary resize-none focus:border-accent focus:outline-none transition-colors"
+                      className="w-full bg-primary border border-border-default p-3 text-base sm:text-sm text-text-primary placeholder:text-text-tertiary resize-none focus:border-accent focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -224,7 +224,8 @@ export function FeedbackWidget({ locale }: { locale: string }) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder={t('emailPlaceholder')}
-                      className="w-full bg-primary border border-border-default p-3 text-sm text-text-primary placeholder:text-text-tertiary focus:border-accent focus:outline-none transition-colors"
+                      autoComplete="email"
+                      className="w-full bg-primary border border-border-default p-3 text-base sm:text-sm text-text-primary placeholder:text-text-tertiary focus:border-accent focus:outline-none transition-colors"
                     />
                   </div>
 

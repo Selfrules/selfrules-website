@@ -59,7 +59,7 @@ export default async function ContactPage({
       {/* Contact Details */}
       <ScrollReveal>
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Email */}
           <div>
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">

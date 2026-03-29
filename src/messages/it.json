@@ -863,22 +863,22 @@
   "feedbackWidget": {
     "triggerLabel": "Invia feedback",
     "triggerText": "Feedback",
-    "modalTitle": "Invia feedback",
+    "modalTitle": "Dimmi qualcosa",
     "close": "Chiudi",
-    "typeLabel": "Tipo",
+    "typeLabel": "Di cosa si tratta",
     "typeFeedback": "Feedback",
     "typeBug": "Bug",
     "typeQuestion": "Domanda",
     "messageLabel": "Messaggio",
-    "messagePlaceholder": "Cosa vuoi dirci?",
+    "messagePlaceholder": "Qualcosa che non funziona, non è chiaro, o si può migliorare?",
     "emailLabel": "Email",
     "emailPlaceholder": "tua@email.com",
-    "optional": "facoltativa",
+    "optional": "solo se vuoi una risposta",
     "submit": "Invia",
     "sending": "Invio in corso...",
-    "successTitle": "Grazie!",
-    "successMessage": "Il tuo feedback è stato ricevuto.",
-    "errorGeneric": "Qualcosa è andato storto. Riprova.",
-    "rateLimited": "Troppe richieste. Riprova più tardi."
+    "successTitle": "Ricevuto.",
+    "successMessage": "Lo leggo. Grazie per il tempo.",
+    "errorGeneric": "Qualcosa si è rotto da questa parte. Riprova.",
+    "rateLimited": "Piano — troppe richieste. Riprova tra un po'."
   }
 }

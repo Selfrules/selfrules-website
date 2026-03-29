@@ -37,7 +37,7 @@ export function Contact({
       {/* Email */}
       <a
         href={`mailto:${email}`}
-        className="block font-mono text-[clamp(24px,5vw,40px)] leading-[1.5] font-normal text-[rgba(255,255,255,0.8)] hover:text-accent transition-colors duration-150"
+        className="block font-mono text-[clamp(18px,4vw,40px)] leading-[1.5] font-normal text-[rgba(255,255,255,0.8)] hover:text-accent transition-colors duration-150 break-all sm:break-normal"
         data-umami-event="contact-email"
       >
         {email}

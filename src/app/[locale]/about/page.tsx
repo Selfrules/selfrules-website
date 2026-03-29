@@ -115,7 +115,7 @@ export default async function AboutPage({
             {careerEntries.map((entry, index) => (
               <li
                 key={index}
-                className={index < careerEntries.length - 1 ? 'mb-12' : ''}
+                className={index < careerEntries.length - 1 ? 'mb-8 md:mb-12' : ''}
               >
                 <div className="relative">
                   {/* Square node */}
@@ -171,7 +171,7 @@ export default async function AboutPage({
             {t('beliefsLabel')}
           </p>
           {beliefs.map((belief, index) => (
-            <div key={index} className={index < beliefs.length - 1 ? 'mb-12' : ''}>
+            <div key={index} className={index < beliefs.length - 1 ? 'mb-8 md:mb-12' : ''}>
               <h2 className="font-heading font-medium text-[22px] leading-[1.3] tracking-[-0.55px] text-[#f5f5f0] md:whitespace-pre-line">
                 {belief.title}
               </h2>

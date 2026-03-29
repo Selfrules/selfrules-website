@@ -863,22 +863,22 @@
   "feedbackWidget": {
     "triggerLabel": "Send feedback",
     "triggerText": "Feedback",
-    "modalTitle": "Send feedback",
+    "modalTitle": "Tell me something",
     "close": "Close",
-    "typeLabel": "Type",
+    "typeLabel": "What is it",
     "typeFeedback": "Feedback",
     "typeBug": "Bug",
     "typeQuestion": "Question",
     "messageLabel": "Message",
-    "messagePlaceholder": "What's on your mind?",
+    "messagePlaceholder": "Something broken, unclear, or worth improving?",
     "emailLabel": "Email",
     "emailPlaceholder": "your@email.com",
-    "optional": "optional",
+    "optional": "only if you want a reply",
     "submit": "Send",
     "sending": "Sending...",
-    "successTitle": "Thanks!",
-    "successMessage": "Your feedback has been received.",
-    "errorGeneric": "Something went wrong. Please try again.",
-    "rateLimited": "Too many requests. Please try again later."
+    "successTitle": "Got it.",
+    "successMessage": "I'll read it. Thanks for taking the time.",
+    "errorGeneric": "Something broke on my end. Try again.",
+    "rateLimited": "Easy — too many requests. Try again in a bit."
   }
 }

@@ -125,7 +125,8 @@ export function NoteLayout({
               prose-a:text-[var(--color-text-primary)] prose-a:underline hover:prose-a:text-[var(--color-accent)]
               prose-strong:text-[var(--color-accent)] prose-strong:font-bold
               prose-code:font-mono prose-code:text-sm prose-code:bg-[var(--color-surface)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-none
-              prose-hr:border-[var(--color-border-default)] prose-hr:my-12"
+              prose-hr:border-[var(--color-border-default)] prose-hr:my-12
+              prose-img:max-w-full prose-img:h-auto"
           >
             {children}
           </div>

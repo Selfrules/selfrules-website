@@ -62,7 +62,7 @@ export default async function WorkPage({
       {/* Case Study Cards */}
       <ScrollReveal>
       <Section wide>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 sm:gap-6">
           {/* Card 1: Payments Rescue */}
           <CaseStudyCard
             tag={t('cases.payments.tag')}
