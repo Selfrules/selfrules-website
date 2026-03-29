@@ -11,6 +11,7 @@ import { inter, spaceGrotesk, jetbrainsMono } from '@/lib/fonts';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 import { PageTransition } from '@/components/ui/PageTransition';
+import { FeedbackWidget } from '@/components/ui/FeedbackWidget';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://selfrules.org'),
@@ -77,6 +78,8 @@ export default async function LocaleLayout({
           </main>
 
           <Footer locale={locale} />
+
+          <FeedbackWidget locale={locale} />
 
           {process.env.NEXT_PUBLIC_UMAMI_ID && (
             <Script
