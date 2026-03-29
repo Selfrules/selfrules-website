@@ -558,46 +558,54 @@
 - [x] **EPIC 14** — Blog Clarity preview text (2026-03-27, commit 4d71bc8)
 - [x] **EPIC 15** — About Page & Polish (2026-03-27, commits 837379a + 1057ff7 + 813cddd)
 - [x] **EPIC 16** — Micro-copy & i18n Consistency (2026-03-27, commit e0b3981)
+- [x] **EPIC 17** — Audit Italiano Copy nativo (2026-03-29, riscrittura 5 blog post IT + copy JSON)
+- [x] **EPIC 18** — Coerenza linguistica cross-sito (2026-03-29, GLOSSARIO-IT.md + test del bambino)
 - [x] **Volante** — Date blog post allineate a Jan–Mar 2026 (2026-03-27, commit f951bed)
 
-### 🔓 EPICHE APERTE (9) — sequenza logica di implementazione
+### 🔓 EPICHE APERTE (13) — sequenza logica di implementazione
 
-**FASE 1 — Fondamenta linguistiche (prerequisito per tutto il resto)**
+**FASE 0 — LinkedIn e candidature (CRITICO — blocca la job search)**
 
-1. **EPIC 18: Coerenza linguistica cross-sito** (3 task)
-   Glossario IT/EN + regole di consistenza. Deve venire PRIMA della riscrittura dei post perché definisce il vocabolario target.
+1. **EPIC 19: LinkedIn ↔ Sito — Allineamento e attivazione profilo** (15 task)
+   Sezioni mancanti (Education, Featured), correzione incoerenze, riscrittura About/Experience, keyword audit. Prerequisito per candidarsi.
 
-2. **EPIC 17: Audit Italiano — Copy nativo, non tradotto** (19 task)
-   Riscrittura dei 4 blog post + copy JSON con calchi sintattici. Usa il glossario di EPIC 18 come riferimento. Include anche cleanup delle chiavi JSON orfane (3 post rimossi).
+2. **EPIC 20: Riattivazione LinkedIn — Da profilo dormiente a canale attivo** (8 task)
+   6 post LinkedIn dai blog del sito, cadenza editoriale, engagement strategico. 2-3 settimane prima di candidarsi.
 
-**FASE 2 — Contenuto (nuovi post + revisione)**
+3. **EPIC 21: CV PDF — Il documento che chiude** (6 task)
+   CV base ATS-optimized, processo per versioni targettizzate, download dal sito.
 
-3. **EPIC 4: Blog/Notes — Costruire autorità** (3 task rimasti)
-   T-4.1.8: Mattia revisiona i 5 post. T-4.3.1: cross-post LinkedIn. T-4.3.3: cadenza editoriale. Dipende da EPIC 17 (i post devono essere in italiano nativo prima della revisione).
+4. **EPIC 22: Sito — Completamento per il lancio** (9 task)
+   Social proof (testimonial dalle raccomandazioni LinkedIn), CV scaricabile su /contact, cross-link LinkedIn ↔ sito.
 
-**FASE 3 — Visual & wow factor**
+**FASE 1 — Contenuto (revisione post + blog)**
 
-4. **EPIC 1: Case Study — visual mancante** (1 task rimasto)
+5. **EPIC 4: Blog/Notes — Costruire autorità** (3 task rimasti)
+   T-4.1.8: Mattia revisiona i 5 post. T-4.3.1: cross-post LinkedIn. T-4.3.3: cadenza editoriale. Dipende da EPIC 17 (completata) e si integra con EPIC 20 (post LinkedIn).
+
+**FASE 2 — Visual & wow factor**
+
+6. **EPIC 1: Case Study — visual mancante** (1 task rimasto)
    T-1.2.6: 1 visual per case study (diagramma/flow). Indipendente dal copy.
 
-5. **EPIC 7: Design & Visual Polish** (3 task rimasti)
-   T-7.2.3: test OG images. T-7.3.1–2: visual nei blog post. Dipende parzialmente da EPIC 4 (i post devono essere finalizzati).
+7. **EPIC 7: Design & Visual Polish** (3 task rimasti)
+   T-7.2.3: test OG images. T-7.3.1–2: visual nei blog post. Dipende parzialmente da EPIC 4.
 
-6. **EPIC 5: Il "Momento Wow"** (10 task)
+8. **EPIC 5: Il "Momento Wow"** (10 task)
    Interactive scroll-driven case study + chatbot "Ask Mattia". Il wow factor viene dopo che il contenuto è solido.
 
-**FASE 4 — Technical health & lancio**
+**FASE 3 — Technical health & lancio**
 
-7. **EPIC 8: SEO & Technical Health** (4 task rimasti)
+9. **EPIC 8: SEO & Technical Health** (4 task rimasti)
    T-8.2.3: alt text. T-8.2.4: dominio selfrules.org. T-8.3.1: Lighthouse. T-8.3.3: axe-core. Il dominio è l'ultimo step prima del lancio.
 
-**FASE 5 — Post-lancio**
+**FASE 4 — Post-lancio**
 
-8. **EPIC 10: Infrastruttura per evoluzione continua** (7 task rimasti)
-   Blog pipeline MDX, scheduled tasks, analytics events. Niente di questo blocca il lancio.
+10. **EPIC 10: Infrastruttura per evoluzione continua** (7 task rimasti)
+    Blog pipeline MDX, scheduled tasks, analytics events. Niente di questo blocca il lancio.
 
-9. **EPIC 11: Mastery ecosistema Claude** (4 task ricorrenti)
-   Task continui, non hanno una "fine".
+11. **EPIC 11: Mastery ecosistema Claude** (4 task ricorrenti)
+    Task continui, non hanno una "fine".
 
 ---
 
@@ -862,3 +870,144 @@
 > Dopo tutte le riscritture, fare una passata finale su ogni pagina chiedendosi: "un tredicenne italiano capirebbe di cosa sto parlando?"
 
 - [x] **T-18.3.1** (2026-03-29) `[INSIEME]` Passata finale "test del bambino" su tutto il sito — pagina per pagina ✅
+
+---
+
+## EPIC 19: LinkedIn ↔ Sito — Allineamento e attivazione profilo
+**Priorità: CRITICA** | **Impatto: 10/10** | **Valore hiring manager: Massimo**
+**Data analisi: 2026-03-29** | **Fonte: LINKEDIN-VS-SITO-ANALISI.md**
+
+> **Il problema:** Il sito è lo strumento di conversione migliore, ma LinkedIn è lo strumento di scoperta — e oggi è dormiente (16 visite profilo, 5 impressioni, 0 post negli ultimi 6 mesi). Se un recruiter non trova Mattia su LinkedIn, il sito non esiste. LinkedIn e sito raccontano due persone diverse: il sito è specifico, narrativo, con proof points. LinkedIn è generico, statico, senza prove tangibili.
+>
+> **Obiettivo:** LinkedIn e sito devono raccontare la stessa storia. LinkedIn cattura l'attenzione → il sito convince → il CV chiude. I tre pezzi devono funzionare come un funnel.
+>
+> **Principio guida:** Mai duplicare. LinkedIn rimanda al sito per la profondità. Il sito rimanda a LinkedIn per la social proof. Ogni canale fa quello che sa fare meglio.
+
+### US 19.1: Sezioni mancanti — Education e Featured
+> Come recruiter, un profilo senza Education è un red flag. Un profilo senza Featured è un profilo senza prove. Queste due sezioni mancanti si riempiono in 30 minuti ma cambiano la percezione del profilo.
+
+- [ ] **T-19.1.1** `[INSIEME]` Aggiungere sezione Education su LinkedIn — raccogliere formazione di Mattia (laurea, corsi, certificazioni significative oltre le 2 già presenti). Se il percorso è non-tradizionale, discutere come posizionarlo.
+- [ ] **T-19.1.2** `[INSIEME]` Creare Featured section su LinkedIn con 3-4 item:
+  1. Link a selfrules.org (homepage o /work)
+  2. Case study Payments Rescue (link diretto)
+  3. CasaHunter Lab (link diretto)
+  4. Eventuale post LinkedIn più performante (quando disponibile)
+  Per ogni item: titolo chiaro + descrizione 1-2 righe che spiega il "so what".
+
+### US 19.2: Correggere incoerenze LinkedIn ↔ Sito
+> Come hiring manager che guarda sia LinkedIn che il sito, le informazioni devono essere coerenti. Oggi non lo sono.
+
+- [ ] **T-19.2.1** `[INSIEME]` Correggere descrizione Selfrules: da "Founded and ran a web design and development studio for 7 years" a framing freelance coerente con il sito e con la realtà (lavoro freelance su progetti web, e-commerce, grafica — non uno studio).
+- [ ] **T-19.2.2** `[CLAUDE-AUTONOMO]` Audit di coerenza: confrontare ogni sezione LinkedIn con il corrispondente sul sito. Verificare che metriche, date, titoli, descrizioni matchino. Documentare le discrepanze in una checklist.
+- [ ] **T-19.2.3** `[INSIEME]` Risolvere le discrepanze trovate nell'audit — decidere caso per caso se allineare LinkedIn al sito o viceversa.
+
+### US 19.3: Riscrivere l'About LinkedIn per coerenza con il sito
+> L'About LinkedIn è buono ma generico rispetto al sito. Deve usare lo stesso livello di specificità del sito senza duplicare il contenuto.
+
+- [ ] **T-19.3.1** `[CLAUDE-AUTONOMO]` Analizzare l'About attuale vs il posizionamento del sito (homepage hero, approach, beliefs). Identificare gap e opportunità.
+- [ ] **T-19.3.2** `[INSIEME]` Riscrivere l'About LinkedIn: stessa voce del sito, ma formato LinkedIn (scansionabile in 8 secondi, paragrafi brevi, CTA a selfrules.org). Seguire la struttura della skill linkedin-personal-brand.
+- [ ] **T-19.3.3** `[MATTIA-REQUIRED]` Mattia aggiorna l'About su LinkedIn con il nuovo copy.
+
+### US 19.4: Riscrivere le Experience per achievement-based coerente
+> Le experience LinkedIn devono matchare il livello di specificità dei case study del sito. Oggi QubicaAMF è buona, LeadsBridge è buona, FLOWING è narrativa ma manca di metriche.
+
+- [ ] **T-19.4.1** `[CLAUDE-AUTONOMO]` Scrivere versioni aggiornate delle 4 experience LinkedIn, coerenti con i case study del sito. Ogni bullet inizia con action verb, include metrica dove possibile.
+- [ ] **T-19.4.2** `[INSIEME]` Review delle experience riscritte — Mattia valida che i numeri e i framing siano corretti e NDA-safe.
+- [ ] **T-19.4.3** `[MATTIA-REQUIRED]` Mattia aggiorna le Experience su LinkedIn con il nuovo copy.
+
+### US 19.5: Headline e keyword optimization
+> La headline è buona ma il differenziatore ("I prototype in code...") viene tagliato nei risultati di ricerca LinkedIn Recruiter. Le keyword "remote" e "distributed teams" non sono nella headline né nelle skill.
+
+- [ ] **T-19.5.1** `[CLAUDE-AUTONOMO]` Raccogliere 5-10 job posting target (EU remote + US remote, Senior PM / Technical PM) ed estrarre keyword ricorrenti.
+- [ ] **T-19.5.2** `[CLAUDE-AUTONOMO]` Confrontare keyword delle JD con il profilo attuale. Identificare gap (keyword presenti nelle JD ma assenti dal profilo).
+- [ ] **T-19.5.3** `[INSIEME]` Valutare se riformulare la headline per rendere il differenziatore visibile nei primi 120 caratteri. Proporre 2-3 alternative.
+- [ ] **T-19.5.4** `[INSIEME]` Aggiungere skill mancanti su LinkedIn: remote work, distributed teams, async, e altre keyword emerse dall'audit JD.
+- [ ] **T-19.5.5** `[MATTIA-REQUIRED]` Mattia aggiorna headline e skill su LinkedIn.
+
+---
+
+## EPIC 20: Riattivazione LinkedIn — Da profilo dormiente a canale attivo
+**Priorità: ALTA** | **Impatto: 9/10** | **Valore hiring manager: Scoperta + credibilità**
+**Data analisi: 2026-03-29** | **Fonte: LINKEDIN-VS-SITO-ANALISI.md**
+
+> **Il problema:** 5 impressioni e 16 visite profilo in 7 giorni = profilo invisibile. L'algoritmo LinkedIn penalizza i profili senza attività recente anche nei risultati di ricerca. Candidarsi con un profilo dormiente è come mandare un CV con un buco nel CV — il recruiter si chiede "cosa faceva?".
+>
+> **Obiettivo:** 2-3 settimane di attività consistente prima di iniziare a candidarsi. Non per diventare un content creator, ma per mostrare che Mattia è un professionista attivo che pensa e condivide.
+>
+> **Principio guida:** "Proof of work, not opinion." Ogni post parte da qualcosa che Mattia ha fatto, costruito, o osservato. Mai opinione astratta. Il blog del sito è la miniera di contenuto — riadattare, non duplicare.
+
+### US 20.1: Content plan — I primi 6 post per riattivare il profilo
+> Prima di postare serve un piano. 6 post in 3 settimane (2/settimana) sono sufficienti per riattivare l'algoritmo senza sembrare spam.
+
+- [x] **T-20.1.1** (2026-03-29) `[CLAUDE-AUTONOMO]` 6 draft post LinkedIn scritti — vedi LINKEDIN-POSTS.md. Mapping: (1) Payments at Scale → tema #3, (2) Metrics Lie → tema #2, (3) Prototype in Code → tema #1, (4) AI Makes Sense → tema #1, (5) Seven Years → tema #1, (6) CasaHunter originale → tema #1. Tutti 800-1200 char, hook concreto, domanda aperta finale. ✅
+- [ ] **T-20.1.2** `[INSIEME]` Review dei 6 draft — Mattia valida tono, contenuto, e ordine di pubblicazione.
+- [x] **T-20.1.3** (2026-03-29) `[INSIEME]` Calendario definito: mar-gio, 08:30-09:00 CET, 3 settimane. Vedi LINKEDIN-POSTS.md. ✅
+
+### US 20.2: Cadenza editoriale post-attivazione
+> Dopo le prime 3 settimane, serve una cadenza sostenibile che mantenga il profilo attivo senza diventare un secondo lavoro.
+
+- [x] **T-20.2.1** (2026-03-29) `[INSIEME]` Cadenza decisa: 1 post/settimana (martedì 08:30 CET). ~1 ora/settimana. ✅
+- [x] **T-20.2.2** (2026-03-29) `[CLAUDE-AUTONOMO]` Template riutilizzabile creato in LINKEDIN-POSTS.md: struttura hook → corpo → lezione → domanda → link → hashtag. ✅
+- [ ] **T-20.2.3** `[INSIEME]` Dopo 3 settimane di dati: analisi engagement (impressioni, reazioni, commenti, visite profilo). Decidere cosa funziona e cosa aggiustare.
+
+### US 20.3: Engagement strategico — Non solo postare
+> Postare senza interagire è un monologo. L'algoritmo LinkedIn premia chi commenta, reagisce, e partecipa alle discussioni.
+
+- [x] **T-20.3.1** (2026-03-29) `[INSIEME]` Lista profili creata in LINKEDIN-POSTS.md: 5 PM influencer (Shreyas Doshi, Lenny, Peter Yang, Kevin Yien, Tim Herbig) + vertical payments + rete esistente (Filippo Ferri, Christian Goss). ✅
+- [ ] **T-20.3.2** `[MATTIA-REQUIRED]` Mattia dedica 15 min 2-3 volte a settimana a commentare post rilevanti nella sua rete. Non commenti generici ma contributi con prospettiva personale.
+
+---
+
+## EPIC 21: CV PDF — Il documento che chiude
+**Priorità: ALTA** | **Impatto: 8/10** | **Valore hiring manager: Conversione finale**
+**Data analisi: 2026-03-29** | **Fonte: LINKEDIN-VS-SITO-ANALISI.md**
+
+> **Il problema:** Quando un recruiter chiede il CV, Mattia deve mandarlo a mano. Non c'è un CV scaricabile sul sito. Il CV deve essere coerente con LinkedIn e sito — stessa storia, stesso livello di specificità, stesso posizionamento.
+>
+> **Obiettivo:** Un CV PDF professionale, ATS-optimized, scaricabile dalla pagina Contatto del sito. Una versione base + il processo per generare versioni adattate a JD specifiche.
+
+### US 21.1: Generare il CV base
+> Come recruiter, quando chiedo il CV a Mattia voglio riceverlo in 30 secondi — non in 2 giorni.
+
+- [x] **T-21.1.1** (2026-03-29) `[INSIEME]` Dati raccolti: no telefono, Bologna Italy, 2 pagine, diploma ITIS informatico, cert Product Compass ✅
+- [x] **T-21.1.2** (2026-03-29) `[CLAUDE-AUTONOMO]` CV PDF generato: mattia-de-luca-cv.pdf — ATS-optimized, single-column, Helvetica, text-based, 2 pagine. Script: generate_cv.py ✅
+- [ ] **T-21.1.3** `[INSIEME]` Review del CV — Mattia valida contenuto, formato, e tono.
+- [ ] **T-21.1.4** `[CLAUDE-AUTONOMO]` Pubblicare il CV sulla pagina /contact del sito come PDF scaricabile con Umami event tracking sul download.
+
+### US 21.2: Processo per CV targettizzati
+> Come candidato, ogni candidatura seria dovrebbe avere un CV adattato alla JD specifica — non lo stesso documento generico per tutti.
+
+- [x] **T-21.2.1** (2026-03-29) `[CLAUDE-AUTONOMO]` Processo documentato in CV-TARGETING-PROCESS.md: incolla JD → Claude analizza match → genera versione adattata → Mattia revisiona ✅
+- [ ] **T-21.2.2** `[INSIEME]` Testare il processo con 2-3 JD reali. Validare che il risultato sia utilizzabile senza modifiche manuali significative.
+
+---
+
+## EPIC 22: Sito — Completamento per il lancio
+**Priorità: ALTA** | **Impatto: 8/10** | **Valore hiring manager: Prerequisito**
+**Data analisi: 2026-03-29** | **Fonte: LINKEDIN-VS-SITO-ANALISI.md**
+
+> **Il problema:** Il sito è la destinazione finale del funnel, ma non è ancora completo. Se un recruiter USA clicca selfrules.org dall'About di LinkedIn, deve trovare un sito completo e coerente — non un work in progress. La pagina Contatto non ha CV scaricabile. I social proof (testimonial) sono assenti dal sito.
+>
+> **Obiettivo:** Il sito è pronto per ricevere traffico da LinkedIn e dalle candidature. Ogni pagina funziona, ogni link porta da qualche parte, il CV è scaricabile.
+
+### US 22.1: Social proof sul sito — Le raccomandazioni LinkedIn come testimonial
+> Come hiring manager, testimonial di colleghi e manager sono potenti. LinkedIn ne ha 8. Il sito ne ha 0. Questa è un'opportunità persa.
+
+- [ ] **T-22.1.1** `[INSIEME]` Selezionare 2-3 raccomandazioni LinkedIn più impattanti (Christian Goss come manager diretto è la più forte). Decidere dove metterle: homepage? about? case study specifici?
+- [ ] **T-22.1.2** `[CLAUDE-AUTONOMO]` Implementare sezione testimonial con le raccomandazioni selezionate. Design coerente col design system (PullQuote-style, nome + ruolo + relazione).
+- [ ] **T-22.1.3** `[CLAUDE-AUTONOMO]` en.json + it.json con testo delle raccomandazioni (in inglese originale, con nota "traduzione" per IT se serve).
+- [ ] **T-22.1.4** `[CLAUDE-AUTONOMO]` Build OK, responsive verificato.
+
+### US 22.2: Pagina Contatto — CV scaricabile + completamento
+> Come recruiter, la pagina contatto deve avere tutto ciò che mi serve per procedere: email, LinkedIn, CV PDF, disponibilità.
+
+- [ ] **T-22.2.1** `[CLAUDE-AUTONOMO]` Aggiungere link download CV PDF alla pagina /contact (dipende da EPIC 21 T-21.1.4)
+- [ ] **T-22.2.2** `[CLAUDE-AUTONOMO]` Verificare che tutti i link della pagina Contatto funzionino (email mailto, LinkedIn, CV download)
+- [ ] **T-22.2.3** `[CLAUDE-AUTONOMO]` Aggiungere Umami events: click email, click LinkedIn, download CV
+
+### US 22.3: Cross-link LinkedIn ↔ Sito
+> LinkedIn e sito devono rimandarsi a vicenda in modo naturale — non come un redirect forzato, ma come un approfondimento.
+
+- [ ] **T-22.3.1** `[CLAUDE-AUTONOMO]` Verificare che il footer del sito abbia link a LinkedIn funzionante e visibile
+- [ ] **T-22.3.2** `[MATTIA-REQUIRED]` Aggiornare il campo "Website" nel profilo LinkedIn con l'URL definitivo (selfrules.org quando il dominio è configurato)
+- [ ] **T-22.3.3** `[CLAUDE-AUTONOMO]` About LinkedIn CTA punta a selfrules.org (verificare dopo riscrittura About in EPIC 19)

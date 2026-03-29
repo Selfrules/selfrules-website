@@ -49,3 +49,13 @@ src/lib/build-info.ts
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# job search materials (personal, not part of the website)
+docs/job-search/
+
+# legacy/cleanup (duplicate files pending deletion)
+docs/selfrules-redesign-legacy-TO-DELETE/
+docs/drafts/LEGACY-Memory.md
+
+# lighthouse
+.lighthouseci/

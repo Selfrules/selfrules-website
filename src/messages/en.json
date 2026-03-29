@@ -79,7 +79,7 @@
       "block1": {
         "role": "Founder & Designer",
         "dates": "2012-2018",
-        "company": "Selfrules Studio",
+        "company": "Selfrules",
         "text": "A web design studio launched at 25 in northern Italy. 20+ clients, everything in one person: sales, design, development, delivery, support. First e-commerce site: award-worthy interface, zero sales. The rule that came out of it still holds.",
         "shortText": "Web design studio. 20+ clients, everything in one person. First e-commerce: award-worthy interface, zero sales."
       },
@@ -801,8 +801,10 @@
     "emailLabel": "Email",
     "emailValue": "hello@selfrules.org",
     "linkedinLabel": "LinkedIn",
-    "linkedinValue": "linkedin.com/in/mattiadeluca",
-    "linkedinUrl": "https://linkedin.com/in/mattiadeluca",
+    "linkedinValue": "linkedin.com/in/selfrules",
+    "linkedinUrl": "https://linkedin.com/in/selfrules",
+    "cvLabel": "CV",
+    "cvValue": "Download PDF",
     "availabilityLabel": "Availability",
     "availabilityText": "Currently open to Product Manager and Technical PM roles. Remote, EU or US timezone. Based in Italy.",
     "cta": {

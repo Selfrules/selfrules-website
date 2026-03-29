@@ -10,22 +10,29 @@ Il sito sostituirà il sito attuale su https://selfrules.org/it.
 ## File di riferimento
 
 ### ⚠️ PRIMA DI TUTTO — Design Update v25
-- **DESIGN-UPDATE-v25.md** — LEGGERE PER PRIMO. Contiene 9 modifiche al design (font, componenti, signature elements) verificate nel prototipo Figma v25. Il file descrive cosa cambia e dove aggiornare CLAUDE.md e implementation-plan.md. Applicare tutte le modifiche ai file sottostanti PRIMA di iniziare a scrivere codice.
+- **`docs/design/DESIGN-UPDATE-v25.md`** — LEGGERE PER PRIMO. Contiene 9 modifiche al design (font, componenti, signature elements) verificate nel prototipo Figma v25. Applicare tutte le modifiche PRIMA di iniziare a scrivere codice.
 
 ### Piano e layout (ESECUZIONE)
-- **Piano di implementazione:** `./implementation-plan.md` — il piano operativo dettagliato con layout per-page, comandi, codice esempio. Questo è il documento da seguire step by step per costruire il sito.
-- **Design specs (originali):** `../job-search-2026/selfrules-redesign/figma-make-prompt.md` — specifiche visive base per pagina. **NOTA:** Il design Figma è stato aggiornato alla v25 con modifiche significative documentate in DESIGN-UPDATE-v25.md. In caso di conflitto, DESIGN-UPDATE-v25.md ha la precedenza.
+- **Piano di implementazione:** `./implementation-plan.md` — il piano operativo dettagliato con layout per-page, comandi, codice esempio.
+- **Design specs (originali):** `docs/copy/figma-make-prompt.md` — specifiche visive base per pagina. In caso di conflitto, DESIGN-UPDATE-v25.md ha la precedenza.
 
 ### Copy sorgente (CONTENUTO)
-- **Copy del sito:** `../job-search-2026/selfrules-redesign/` — 7 file con tutto il copy IT + EN. COPIARE ESATTAMENTE.
+- **Copy del sito:** `docs/copy/` — 10 file con tutto il copy IT + EN e specifiche SEO. COPIARE ESATTAMENTE.
 
 ### GSD Research (RIFERIMENTO TECNICO)
-- **STACK.md** — Stack research completa, pattern di codice, "What NOT to Use". Documento di riferimento primario per decisioni tecniche.
-- **PITFALLS.md** — 14 pitfalls con mitigazioni. Consultare prima di ogni fase.
-- **REQUIREMENTS.md** — 65 requisiti con ID per checklist di verifica finale.
-- **ARCHITECTURE.md** — Directory structure, component boundaries, client vs server components.
-- **STATE.md** — Tracker avanzamento progetto.
-- **ROADMAP.md** — Struttura fasi (i piani operativi sono in implementation-plan.md).
+- **STACK.md** — in `.planning/research/STACK.md`. Stack research completa, pattern di codice, "What NOT to Use".
+- **PITFALLS.md** — in `.planning/research/PITFALLS.md`. 14 pitfalls con mitigazioni.
+- **REQUIREMENTS.md** — in `.planning/milestones/v1.0-REQUIREMENTS.md`. 65 requisiti con ID.
+- **ARCHITECTURE.md** — in `.planning/research/ARCHITECTURE.md`. Directory structure, component boundaries.
+- **STATE.md** — in `.planning/STATE.md`. Tracker avanzamento progetto.
+- **ROADMAP.md** — in `.planning/ROADMAP.md`. Struttura fasi.
+
+### Documentazione aggiuntiva (in `docs/`)
+- **`docs/design/`** — Design specs, gap analysis, pixel-perfect fixes
+- **`docs/audits/`** — Site audit reports
+- **`docs/reference/`** — Analytics events, deploy checklist, glossario IT, Remotion guide
+- **`docs/drafts/`** — Bozze e documenti di lavoro
+- **`docs/job-search/`** — Materiali LinkedIn, CV, analisi job search (non parte del sito)
 
 ## Stack tecnologico
 - Next.js 16.2 (App Router, Turbopack) — NON 15. Usa `proxy.ts` (non middleware.ts)

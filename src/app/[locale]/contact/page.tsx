@@ -59,7 +59,7 @@ export default async function ContactPage({
       {/* Contact Details */}
       <ScrollReveal>
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Email */}
           <div>
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
@@ -68,6 +68,7 @@ export default async function ContactPage({
             <a
               href={`mailto:${t('emailValue')}`}
               className="font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              data-umami-event="contact-email"
             >
               {t('emailValue')}
             </a>
@@ -83,8 +84,27 @@ export default async function ContactPage({
               target="_blank"
               rel="noopener noreferrer"
               className="font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              data-umami-event="contact-linkedin"
             >
               {t('linkedinValue')}
+            </a>
+          </div>
+
+          {/* CV Download */}
+          <div>
+            <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
+              {t('cvLabel')}
+            </p>
+            <a
+              href="/mattia-de-luca-cv.pdf"
+              download
+              className="inline-flex items-center gap-2 font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              data-umami-event="contact-cv-download"
+            >
+              {t('cvValue')}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
             </a>
           </div>
         </div>

@@ -801,8 +801,10 @@
     "emailLabel": "Email",
     "emailValue": "hello@selfrules.org",
     "linkedinLabel": "LinkedIn",
-    "linkedinValue": "linkedin.com/in/mattiadeluca",
-    "linkedinUrl": "https://linkedin.com/in/mattiadeluca",
+    "linkedinValue": "linkedin.com/in/selfrules",
+    "linkedinUrl": "https://linkedin.com/in/selfrules",
+    "cvLabel": "CV",
+    "cvValue": "Scarica PDF",
     "availabilityLabel": "Disponibilità",
     "availabilityText": "Aperto a ruoli di Product Manager e Technical PM. Remoto, fuso orario EU o US. Con base in Italia.",
     "cta": {
