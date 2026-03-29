@@ -63,37 +63,37 @@ function StageIcon({ type }: { type: PipelineStage['icon'] }) {
   switch (type) {
     case 'scraper':
       return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" />
         </svg>
       );
     case 'clean':
       return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M4 7h16M10 11v6M14 11v6M5 7l1 12a2 2 0 002 2h8a2 2 0 002-2l1-12M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3" />
         </svg>
       );
     case 'filter':
       return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
         </svg>
       );
     case 'ai':
       return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4zM8 14h8l2 8H6l2-8z" />
         </svg>
       );
     case 'score':
       return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" />
         </svg>
       );
     case 'telegram':
       return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
         </svg>
       );
@@ -110,6 +110,7 @@ function Arrow({ className = '' }: { className?: string }) {
         className="hidden md:block w-8 h-4 text-[var(--color-accent)]"
         viewBox="0 0 32 16"
         fill="none"
+        aria-hidden="true"
       >
         <path d="M0 8h28" stroke="currentColor" strokeWidth="2" />
         <path d="M24 3l6 5-6 5" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
@@ -119,6 +120,7 @@ function Arrow({ className = '' }: { className?: string }) {
         className="md:hidden w-4 h-8 text-[var(--color-accent)]"
         viewBox="0 0 16 32"
         fill="none"
+        aria-hidden="true"
       >
         <path d="M8 0v28" stroke="currentColor" strokeWidth="2" />
         <path d="M3 24l5 6 5-6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
@@ -144,7 +146,7 @@ function StageCard({ stage, index, isVisible }: { stage: PipelineStage; index: n
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       {/* Step number */}
-      <span className="absolute -top-3 left-3 font-mono text-[10px] bg-[var(--color-bg-primary)] px-1.5 py-0.5 text-[rgba(255,255,255,0.3)]">
+      <span className="absolute -top-3 left-3 font-mono text-[10px] bg-[var(--color-bg-primary)] px-1.5 py-0.5 text-[rgba(255,255,255,0.55)]">
         {String(index + 1).padStart(2, '0')}
       </span>
 
@@ -161,7 +163,7 @@ function StageCard({ stage, index, isVisible }: { stage: PipelineStage; index: n
       {/* Sublabel */}
       {stage.sublabel && (
         <span className={`mt-1 font-mono text-[10px] uppercase tracking-[1px] ${
-          stage.accent ? 'text-[var(--color-accent)]' : 'text-[rgba(255,255,255,0.4)]'
+          stage.accent ? 'text-[var(--color-accent)]' : 'text-[rgba(255,255,255,0.55)]'
         }`}>
           {stage.sublabel}
         </span>
@@ -204,7 +206,7 @@ export function ArchitectureDiagram() {
       {/* Title bar */}
       <div className="flex items-center gap-3 mb-6">
         <div className="h-px flex-1 bg-[rgba(255,255,255,0.08)]" />
-        <span className="font-mono text-[11px] uppercase tracking-[1.5px] text-[rgba(255,255,255,0.3)]">
+        <span className="font-mono text-[11px] uppercase tracking-[1.5px] text-[rgba(255,255,255,0.55)]">
           Three-Pass Scoring Pipeline
         </span>
         <div className="h-px flex-1 bg-[rgba(255,255,255,0.08)]" />
@@ -233,7 +235,7 @@ export function ArchitectureDiagram() {
       <div
         className={`
           mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8
-          font-mono text-[11px] text-[rgba(255,255,255,0.3)]
+          font-mono text-[11px] text-[rgba(255,255,255,0.55)]
           transition-all duration-700 delay-700
           ${isVisible ? 'opacity-100' : 'opacity-0'}
         `}

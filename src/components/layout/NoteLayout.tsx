@@ -109,7 +109,7 @@ export function NoteLayout({
             </time>
             {metadata.readingTime && (
               <>
-                <span className="text-[rgba(255,255,255,0.3)]">·</span>
+                <span className="text-[rgba(255,255,255,0.55)]">·</span>
                 <span className="font-mono text-[14px] uppercase tracking-[0.05em] text-text-secondary">
                   {metadata.readingTime} min read
                 </span>
@@ -138,7 +138,7 @@ export function NoteLayout({
                 href={`/notes/${prevPost.slug}`}
                 className="group text-[14px] text-[rgba(255,255,255,0.5)] hover:text-accent transition-colors"
               >
-                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.3)] mb-1">
+                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)] mb-1">
                   {locale === 'it' ? 'Precedente' : 'Previous'}
                 </span>
                 ← {prevPost.title}
@@ -151,7 +151,7 @@ export function NoteLayout({
                 href={`/notes/${nextPost.slug}`}
                 className="group text-right text-[14px] text-[rgba(255,255,255,0.5)] hover:text-accent transition-colors"
               >
-                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.3)] mb-1">
+                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)] mb-1">
                   {locale === 'it' ? 'Successivo' : 'Next'}
                 </span>
                 {nextPost.title} →

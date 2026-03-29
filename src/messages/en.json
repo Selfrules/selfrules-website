@@ -38,7 +38,7 @@
   "homepage": {
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, code, and product management in the same head.",
-      "subtitle": "Companies call me when a product isn't working. I figure out why, fix it, and make sure it stays fixed. I've done it at startup scale and enterprise scale — the results are in the case studies.",
+      "subtitle": "I find what's actually broken, fix what matters first, and ship products that stay up. From payment systems rescued to 99%+ uptime, to integration flows rebuilt and setup time cut by 35%.",
       "primaryCta": "Let's talk about your product",
       "secondaryCta": "Read the case studies",
       "tag1": "10+ years",
@@ -51,24 +51,24 @@
     "whatIDo": {
       "label": "WHAT I DO",
       "title": "What I actually do",
-      "text": "I start from the problem, not from the solution someone already has in mind. That means talking to the people who use the product, reading the data nobody looked at, and figuring out what's actually going wrong before writing a single spec. Then I design and ship with the team — not hand off a document and wait."
+      "text": "Companies hire me when a product isn't working the way it should. I dig into the real problem — not the one from the first meeting — design a solution that makes sense for users, and build it with the team. I've done this with payment platforms handling millions in transactions, integration tools used by thousands of businesses, and side projects I built from scratch. The pattern is always the same: understand first, then build."
     },
     "howIWork": {
       "label": "HOW I WORK",
       "title": "Three languages, one product",
       "intro": "When design says \"the user gets stuck here because the visual hierarchy is wrong,\" engineering says \"we need 3 sprints of refactoring,\" and business says \"it's costing us €15K a month in support tickets.\" Three separate conversations. My job is to turn them into one decision.",
       "pillar1": {
-        "title": "Fewer handoffs, fewer surprises.\nI've been on all three sides.",
+        "title": "I've done all three jobs.\nThat changes how I make decisions.",
         "text": "4 years designing interfaces. 4 writing production code. 5+ shipping products. When I review a design, I know what it costs to build. When I scope engineering work, I know what the user will feel. Less translation, fewer surprises. Cross-functional sessions I introduced cut post-release incidents by <b>25%</b>.",
         "shortText": "4 years designing interfaces. 4 writing production code. 5+ shipping products. When I review a design, I know what it costs to build. When I scope engineering work, I know what the user will feel. Cross-functional sessions cut post-release incidents by <b>25%</b>."
       },
       "pillar2": {
-        "title": "I find the 4 problems that matter\nout of the 44 everyone is panicking about.",
+        "title": "Before building anything,\nI verify the real problem.",
         "text": "A payment system had 44 open issues and pressure to fix everything now. Two weeks of talking to support and reading the data: only 4 were costing customers real money. Those 4 got resolved in 6 weeks, not 6 months. The other 40 could wait. Finding what actually matters is the job.",
         "shortText": "A payment system had 44 open issues. Two weeks of discovery: only 4 were costing customers real money. Those 4 resolved in 6 weeks, not 6 months. Finding what actually matters is the job."
       },
       "pillar3": {
-        "title": "When I need to validate, I build it.\nUsers touch it in days, not months.",
+        "title": "I test ideas with working code,\nnot slide decks.",
         "text": "When I need to validate an idea, I build a working prototype — not a presentation. Users touch it, we watch what happens, we learn in days instead of months. Priority comes from real user frustration, not internal politics. And when the data says a feature isn't needed, the answer is no — even when 60% of users are asking for it.",
         "shortText": "When I need to validate an idea, I build a working prototype — not a presentation. Users touch it, we learn in days instead of months. When data says no, the answer is no."
       }
@@ -111,8 +111,8 @@
       "title": "Numbers, not words",
       "metric1": {
         "number": "99%+",
-        "label": "System reliability — from critical to stable",
-        "context": "A product handling real money for businesses across 5 countries. Inherited in crisis, stabilized in 6 months"
+        "label": "Uptime on payment systems",
+        "context": "Transactions for entertainment centers across 5 countries. Inherited at critical, stabilized in 6 months"
       },
       "metric2": {
         "number": "-25%",
@@ -121,8 +121,8 @@
       },
       "metric3": {
         "number": "116",
-        "label": "Businesses running on the product I manage",
-        "context": "Each relying on it for daily operations. 5 new ones going live every week"
+        "label": "Business locations live on the platform",
+        "context": "Each running payments, scoring, and operations. 5 new going live every week"
       },
       "metric4": {
         "number": "-35%",
@@ -262,9 +262,9 @@
       "role": "Senior Product Manager, Payments",
       "company": "B2B SaaS platform · Entertainment & leisure · 5 countries",
       "industry": "B2B SaaS · Payments · Enterprise",
-      "summary": "Customers were losing money on every transaction. I found the 4 issues that actually mattered out of 44, fixed them in 6 weeks, and took the system to 99%+ reliability.",
-      "tldr": "Customers were being double-charged. Refunds weren't going through. The system broke during the busiest hours. There were 44 open problems and everyone wanted them all fixed now. I found the 4 that were actually costing money, fixed those in 6 weeks, and the system went from broken to 99%+ reliable.",
-      "learnedCallout": "The instinct in a crisis is to fix and grow at the same time. It doesn't work. The first real product decision is to stop making the hole deeper.",
+      "summary": "Stabilized a payment system from crisis to 99.19% uptime through ruthless triage — 44 issues down to 4 priorities.",
+      "tldr": "A payment system was losing customers real money — double charges, failed refunds, timeouts during peak hours. Instead of trying to fix everything at once, I triaged 44 open issues down to the 4 that actually mattered. Those 4 got resolved in 6 weeks. The system went from crisis to 99%+ uptime.",
+      "learnedCallout": "The instinct in a crisis is to fix and grow at the same time. It doesn’t work. The first real product decision is to stop making the hole deeper.",
       "period": "2025",
       "heroMetric": "99.19%",
       "heroMetricLabel": "global success rate",
@@ -364,9 +364,9 @@
       "role": "Product Owner",
       "company": "B2B SaaS platform · Lead generation · 380+ integrations",
       "industry": "B2B SaaS · Integration Platform · Growth",
-      "summary": "Most customers wanted to use the product but gave up during setup. The fix wasn't adding features — it was removing them. Setup time dropped 35%.",
-      "tldr": "The product connected advertising platforms to business tools — automatically, no code needed. Thousands of companies depended on it. But most new users gave up before finishing setup. Five steps, each more confusing than the last. The fix wasn't adding features. It was removing them. Setup time dropped 35%, adoption jumped 9%.",
-      "learnedCallout": "There's a difference between what users ask for and what users need to succeed. Most users needed a simpler path. The minority who needed complexity could handle one extra click.",
+      "summary": "Redesigned the bridge creation flow by removing complexity, not adding it. Setup time down 35%, adoption up 9%.",
+      "tldr": "Thousands of businesses wanted to automatically move their advertising leads into their CRM. But most gave up during setup — five steps, each more confusing than the last. The fix wasn’t adding features. It was removing them. Setup time dropped 35%, adoption jumped 9%.",
+      "learnedCallout": "There’s a difference between what users ask for and what users need to succeed. Most users needed a simpler path. The minority who needed complexity could handle one extra click.",
       "period": "2020–2023",
       "heroMetric": "-35%",
       "heroMetricLabel": "setup time",
@@ -452,7 +452,7 @@
           }
         ]
       },
-      "pullQuote1": "We're not removing capability, we're removing friction.",
+      "pullQuote1": "We’re not removing capability, we’re removing friction.",
       "pullQuote2": "A blank field mapping screen and a pre-filled one lead to the same place. But the pre-filled version communicates we understand your use case."
     },
     "cashless": {
@@ -460,9 +460,9 @@
       "role": "Senior Product Manager, Payments & Cashless",
       "company": "B2B SaaS platform · Entertainment & leisure · 5 countries",
       "industry": "B2B SaaS · Cashless · Strategy & Partnerships",
-      "summary": "Three providers, one strategic gap, and an internal product that wasn't going to work. I killed it early and built a partnership that delivered in 5 months.",
-      "tldr": "Customers wanted to stop using cash. Load money on a card, tap to play. The company had no solution, and the competitor did. Three providers were on the table. The obvious choice — building it in-house — wasn't going to work. I killed that option early, tested two alternatives against real constraints, and built a partnership that went from nothing to a working system in 5 months.",
-      "learnedCallout": "The hardest product decision isn't what to build. It's what to stop building. Parking the internal product early saved months and prevented a second crisis.",
+      "summary": "Killed an internal product and built a co-development partnership that solved the structural problem in 5 months.",
+      "tldr": "Entertainment centers wanted to let customers play without cash — load money on a card, tap to play. Three providers competed for the deal, and the obvious internal product wasn’t going to work. I killed it, tested two alternatives with real constraints, and built a co-development partnership that went from zero to a working system in 5 months.",
+      "learnedCallout": "The hardest product decision isn’t what to build. It’s what to stop building. Parking the internal product early saved months and prevented a second crisis.",
       "period": "2025–2026",
       "heroMetric": "5 mo",
       "heroMetricLabel": "zero to live demo",
@@ -543,8 +543,8 @@
           }
         ]
       },
-      "pullQuote1": "The hardest product decision isn't what to build. It's what to stop building.",
-      "pullQuote2": "Choosing a partner isn't a vendor evaluation. It's a product decision."
+      "pullQuote1": "The hardest product decision isn’t what to build. It’s what to stop building.",
+      "pullQuote2": "Choosing a partner isn’t a vendor evaluation. It’s a product decision."
     },
     "cta": {
       "text": "These cases tell the how. For the who, there's the about page. If you want to talk, write me.",
@@ -715,7 +715,7 @@
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Why I prototype in code",
-        "date": "2026-01-29",
+        "date": "2026-01-16",
         "excerpt": "Diagrams hide the hard parts. Building a real system — even a small one — exposes the architectural constraints that should drive product decisions.",
         "readingTime": "4 min read",
         "tags": [
@@ -745,7 +745,7 @@
       },
       "when-ai-makes-sense-in-product": {
         "title": "When AI makes sense in product",
-        "date": "2026-03-12",
+        "date": "2024-12-15",
         "excerpt": "The 80/20 rule applied to AI: use deterministic rules for predictable problems, reserve ML for genuine judgment calls. Most features don't need a model.",
         "readingTime": "5 min",
         "tags": [
@@ -755,7 +755,7 @@
       },
       "managing-payments-at-scale": {
         "title": "Managing payments at scale",
-        "date": "2026-03-01",
+        "date": "2025-01-15",
         "excerpt": "Payments require a different PM mindset. Safety before possibility. One week reading the API and tracing money flows prevents months of production fires.",
         "readingTime": "6 min",
         "tags": [
@@ -765,7 +765,7 @@
       },
       "remote-pm-across-countries": {
         "title": "Being a remote PM across countries",
-        "date": "2026-02-19",
+        "date": "2025-01-08",
         "excerpt": "Remote PM fails when you solve timezone overlap with better scheduling. The real skill is async-first: persistent docs, written decisions, shared context.",
         "readingTime": "5 min",
         "tags": [
@@ -775,7 +775,7 @@
       },
       "build-vs-buy-framework": {
         "title": "Build vs Buy framework",
-        "date": "2026-01-18",
+        "date": "2024-12-08",
         "excerpt": "Build vs buy isn't a technical decision. It's four strategic questions in sequence: constraint, differentiator, total cost, reversibility.",
         "readingTime": "4 min",
         "tags": [
@@ -785,7 +785,7 @@
       },
       "seven-years-running-a-business": {
         "title": "Seven years running a business",
-        "date": "2026-01-06",
+        "date": "2025-01-01",
         "excerpt": "Seven years freelancing taught one rule above all: shipping is what matters. Clients care about delivery dates and visible results, not elegant process.",
         "readingTime": "7 min",
         "tags": [

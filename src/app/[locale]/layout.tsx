@@ -48,7 +48,7 @@ export default async function LocaleLayout({
           {/* Skip to content -- sr-only, visible on keyboard focus (A11Y-01) */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-bg-primary focus:px-4 focus:py-2 focus:font-bold focus:text-sm"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-[#0A0A0B] focus:px-4 focus:py-2 focus:font-bold focus:text-sm"
           >
             {t('skipToContent')}
           </a>

@@ -24,7 +24,7 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
         className={`transition-colors duration-150 ${
           locale === 'it'
             ? 'text-[rgba(255,255,255,0.6)]'
-            : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
+            : 'text-[rgba(255,255,255,0.55)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
         }`}
         aria-label="Italiano"
         aria-current={locale === 'it' ? 'true' : undefined}
@@ -37,7 +37,7 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
         className={`transition-colors duration-150 ${
           locale === 'en'
             ? 'text-[rgba(255,255,255,0.6)]'
-            : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
+            : 'text-[rgba(255,255,255,0.55)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
         }`}
         aria-label="English"
         aria-current={locale === 'en' ? 'true' : undefined}

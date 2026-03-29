@@ -136,7 +136,7 @@ export default async function CasaHunterPage({
           {locale === 'it' ? 'Torna al Lab' : 'Back to Lab'}
         </Link>
 
-        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">
+        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.55)]">
           {t('casahunter.role')} · {t('casahunter.company')} · {t('casahunter.period')}
         </span>
 
@@ -156,7 +156,7 @@ export default async function CasaHunterPage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('casahunter.heroMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('casahunter.heroMetricLabel')}
             </p>
           </div>
@@ -164,7 +164,7 @@ export default async function CasaHunterPage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('casahunter.secondMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('casahunter.secondMetricLabel')}
             </p>
           </div>
@@ -179,6 +179,7 @@ export default async function CasaHunterPage({
             muted
             loop
             playsInline
+            preload="none"
             className="w-full border border-[rgba(255,255,255,0.08)]"
             poster="/images/casahunter/v1-map.png"
           >
@@ -214,10 +215,11 @@ export default async function CasaHunterPage({
               width={1440}
               height={900}
               className="w-full h-auto"
-              quality={85}
+              quality={75}
+              loading="lazy"
             />
             <div className="px-4 py-3 bg-[rgba(255,255,255,0.03)]">
-              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)]">
+              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.55)]">
                 {locale === 'it'
                   ? 'Vista mappa — pin colorati per score (verde = alto, giallo = medio, rosso = basso)'
                   : 'Map view — score-colored pins (green = high, yellow = medium, red = low)'}
@@ -233,10 +235,11 @@ export default async function CasaHunterPage({
               width={1440}
               height={900}
               className="w-full h-auto"
-              quality={85}
+              quality={75}
+              loading="lazy"
             />
             <div className="px-4 py-3 bg-[rgba(255,255,255,0.03)]">
-              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)]">
+              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.55)]">
                 {locale === 'it'
                   ? 'Vista lista — card con score AI, prezzo, metratura e analisi'
                   : 'List view — cards with AI score, price, size and analysis'}
@@ -253,10 +256,11 @@ export default async function CasaHunterPage({
             width={1440}
             height={900}
             className="w-full h-auto"
-            quality={85}
+            quality={75}
+            loading="lazy"
           />
           <div className="px-4 py-3 bg-[rgba(255,255,255,0.03)]">
-            <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] text-[rgba(255,255,255,0.55)]">
               {locale === 'it'
                 ? 'Statistiche — distribuzione prezzi, categorie di score, analisi zone'
                 : 'Statistics — price distribution, score categories, zone analysis'}

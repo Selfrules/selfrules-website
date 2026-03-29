@@ -130,7 +130,7 @@ export default async function PaymentsRescuePage({
           {t('backToWork')}
         </Link>
 
-        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">
+        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.55)]">
           {t('payments.role')} · {t('payments.company')} · {t('payments.period')}
         </span>
 
@@ -145,7 +145,7 @@ export default async function PaymentsRescuePage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('payments.heroMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('payments.heroMetricLabel')}
             </p>
           </div>
@@ -153,7 +153,7 @@ export default async function PaymentsRescuePage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('payments.secondMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('payments.secondMetricLabel')}
             </p>
           </div>

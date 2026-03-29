@@ -30,7 +30,7 @@ export function Hero({
         <div className="max-w-[720px]">
         {/* Terminal prompt */}
         <div aria-hidden="true" className="flex items-center gap-2 mb-6">
-          <span className="font-mono text-[13px] text-[#5a5a5e] leading-[19.5px]">
+          <span className="font-mono text-[13px] text-[#7e7e82] leading-[19.5px]">
             {terminalPrompt}
           </span>
           <BlinkingCursor type="block" />

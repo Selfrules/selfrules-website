@@ -124,14 +124,14 @@ export default async function NotesPage({
               <div key={year}>
                 {/* Year separator */}
                 <div className="border-b border-[#1a1a1f] pb-4">
-                  <span className="font-mono text-[13px] uppercase tracking-[1.3px] text-[rgba(255,255,255,0.3)]">{year}</span>
+                  <span className="font-mono text-[13px] uppercase tracking-[1.3px] text-[rgba(255,255,255,0.55)]">{year}</span>
                 </div>
 
                 {/* Posts in this year */}
                 <div className="flex flex-col gap-16 mt-12">
                   {postsByYear[year].map((post) => (
                     <article key={post.slug} className="flex gap-6">
-                      <time className="w-[96px] shrink-0 font-mono text-[13px] leading-[19.5px] text-[rgba(255,255,255,0.4)] pt-[6px]">
+                      <time className="w-[96px] shrink-0 font-mono text-[13px] leading-[19.5px] text-[rgba(255,255,255,0.55)] pt-[6px]">
                         {formatDate(post.date)}
                       </time>
                       <div>
@@ -152,7 +152,7 @@ export default async function NotesPage({
             ))}
           </div>
         ) : (
-          <p className="mt-12 text-[16px] text-[rgba(255,255,255,0.4)]">
+          <p className="mt-12 text-[16px] text-[rgba(255,255,255,0.55)]">
             {t('emptyState')}
           </p>
         )}

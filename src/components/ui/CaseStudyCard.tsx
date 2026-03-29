@@ -31,7 +31,7 @@ export function CaseStudyCard({
   const content = (
     <>
       <div className="flex-1">
-        <span className="font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">{tag}</span>
+        <span className="font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.55)]">{tag}</span>
         <h3 className="font-heading font-bold text-[28px] leading-[33.6px] tracking-[-0.7px] text-[#f5f5f0] mt-5 md:whitespace-pre-line">{title}</h3>
         <p className="font-light text-[17px] leading-[25.5px] text-[rgba(255,255,255,0.5)] mt-3">{preview}</p>
       </div>
@@ -41,10 +41,10 @@ export function CaseStudyCard({
           {metric}
         </p>
         {metricLabel && (
-          <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">{metricLabel}</p>
+          <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">{metricLabel}</p>
         )}
         {href && (
-          <span className="mt-3 text-[14px] text-[rgba(255,255,255,0.3)] transition-colors group-hover:text-accent">
+          <span className="mt-3 text-[14px] text-[rgba(255,255,255,0.55)] transition-colors group-hover:text-accent">
             →
           </span>
         )}

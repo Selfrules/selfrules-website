@@ -54,7 +54,7 @@ export async function Footer({ locale }: { locale: string }) {
         </div>
 
         {/* Right: build version */}
-        <p className="font-mono text-[11px] text-[#5a5a5e]">
+        <p className="font-mono text-[11px] text-[#7e7e82]">
           {t('buildVersion', { buildMonth, commitCount: String(COMMIT_COUNT) })}
         </p>
       </div>

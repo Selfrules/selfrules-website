@@ -83,7 +83,7 @@ export default async function WorkPage({
               metricLabel={t('cases.cashless.metricLabel')}
               href="/work/cashless-system"
             />
-            <p className="mt-3 font-mono text-[14px] text-[rgba(255,255,255,0.4)]">
+            <p className="mt-3 font-mono text-[14px] text-[rgba(255,255,255,0.55)]">
               {t('cases.cashless.note')}
             </p>
           </div>

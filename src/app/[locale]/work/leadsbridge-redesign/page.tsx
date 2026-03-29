@@ -130,7 +130,7 @@ export default async function LeadsBridgePage({
           {t('backToWork')}
         </Link>
 
-        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">
+        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.55)]">
           {t('leadsbridge.role')} · {t('leadsbridge.company')} · {t('leadsbridge.period')}
         </span>
 
@@ -145,7 +145,7 @@ export default async function LeadsBridgePage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('leadsbridge.heroMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('leadsbridge.heroMetricLabel')}
             </p>
           </div>
@@ -153,7 +153,7 @@ export default async function LeadsBridgePage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('leadsbridge.secondMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('leadsbridge.secondMetricLabel')}
             </p>
           </div>
