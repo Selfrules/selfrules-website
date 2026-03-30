@@ -46,7 +46,7 @@ export default async function ContactPage({
         ]
       }} />
 
-      {/* Headline */}
+      {/* Headline + Contact Details + Availability — single Section */}
       <Section>
         <h1 className="font-heading font-bold text-[32px] md:text-[48px] leading-[36px] md:leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0] md:whitespace-pre-line">
           {t('headline')}
@@ -54,12 +54,9 @@ export default async function ContactPage({
         <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
-      </Section>
 
-      {/* Contact Details */}
-      <ScrollReveal>
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <ScrollReveal>
+        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Email */}
           <div>
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
@@ -108,22 +105,19 @@ export default async function ContactPage({
             </a>
           </div>
         </div>
-      </Section>
-      </ScrollReveal>
+        </ScrollReveal>
 
-      {/* Availability */}
-      <ScrollReveal>
-      <Section className="!pt-0">
-        <div className="mt-16 pt-16 border-t border-[#1a1a1f]">
-          <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
+        <ScrollReveal>
+        <div className="mt-12 md:mt-16 pt-8 md:pt-12 border-t border-[#1a1a1f]">
+          <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
             {t('availabilityLabel')}
           </p>
           <p className="font-light text-[17px] leading-[29.75px] text-[rgba(255,255,255,0.5)]">
             {t('availabilityText')}
           </p>
         </div>
+        </ScrollReveal>
       </Section>
-      </ScrollReveal>
 
       {/* CTA */}
       <PageCTA
