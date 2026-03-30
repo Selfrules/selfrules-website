@@ -58,13 +58,13 @@ export default async function ContactPage({
         <ScrollReveal>
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Email */}
-          <div>
+          <div className="min-w-0">
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
               {t('emailLabel')}
             </p>
             <a
               href={`mailto:${t('emailValue')}`}
-              className="font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              className="block break-all font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
               data-umami-event="contact-email"
             >
               {t('emailValue')}
@@ -72,7 +72,7 @@ export default async function ContactPage({
           </div>
 
           {/* LinkedIn */}
-          <div>
+          <div className="min-w-0">
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
               {t('linkedinLabel')}
             </p>
@@ -80,7 +80,7 @@ export default async function ContactPage({
               href={t('linkedinUrl')}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              className="block break-all font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
               data-umami-event="contact-linkedin"
             >
               {t('linkedinValue')}
@@ -88,7 +88,7 @@ export default async function ContactPage({
           </div>
 
           {/* CV Download */}
-          <div>
+          <div className="min-w-0">
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
               {t('cvLabel')}
             </p>
