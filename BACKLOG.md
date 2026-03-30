@@ -561,59 +561,61 @@
 - [x] **EPIC 17** — Audit Italiano Copy nativo (2026-03-29, riscrittura 5 blog post IT + copy JSON)
 - [x] **EPIC 18** — Coerenza linguistica cross-sito (2026-03-29, GLOSSARIO-IT.md + test del bambino)
 - [x] **Volante** — Date blog post allineate a Jan–Mar 2026 (2026-03-27, commit f951bed)
+- [x] **EPIC 19** — LinkedIn ↔ Sito allineamento (2026-03-29, profilo completato: headline, About, Experience, Education, Certifications, Skills, Open to Work)
+- [x] **EPIC 21** — CV PDF ATS-optimized (2026-03-29, 2 pagine, scaricabile da /contact e Footer, Umami tracked)
+- [x] **Volante** — Dominio selfrules.org configurato su Vercel (2026-03-29, T-8.2.4 completato)
+- [x] **EPIC 24** — Feedback Widget con backend Notion (2026-03-29, widget funzionante + API route + DB Notion)
+- [x] **Volante** — Mobile-first audit + fix iOS Safari (2026-03-29, 16 file, dvh, touch targets, overflow-x)
 
-### 🔓 EPICHE APERTE (15) — sequenza logica di implementazione
+### 🔓 EPICHE APERTE (11) — sequenza logica di implementazione
 
-**FASE 0 — LinkedIn e candidature (CRITICO — blocca la job search)**
+**FASE 0 — Posizionamento (CRITICO — prima di pubblicizzare)**
 
-1. **EPIC 19: LinkedIn ↔ Sito — Allineamento e attivazione profilo** (15 task)
-   Sezioni mancanti (Education, Featured), correzione incoerenze, riscrittura About/Experience, keyword audit. Prerequisito per candidarsi.
+0. **EPIC 27: Reframe — Da candidato a esperto** (20 task, molti [INSIEME])
+   Rimuovere segnali job-seeking, aggiungere "noi" nei case study, riformulare Contact come conversazione tra pari. Prerequisito per il lancio pubblico.
+
+**FASE 1 — Contenuto & attivazione LinkedIn**
+
+1. **EPIC 4: Blog/Notes — Costruire autorità** (3 task rimasti)
+   T-4.1.8: Mattia revisiona i 5 post. T-4.3.1: cross-post LinkedIn. T-4.3.3: cadenza editoriale. NB: Mattia vuole collegare un generatore di immagini AI prima di procedere.
 
 2. **EPIC 20: Riattivazione LinkedIn — Da profilo dormiente a canale attivo** (8 task)
    6 post LinkedIn dai blog del sito, cadenza editoriale, engagement strategico. 2-3 settimane prima di candidarsi.
 
-3. **EPIC 21: CV PDF — Il documento che chiude** (6 task)
-   CV base ATS-optimized, processo per versioni targettizzate, download dal sito.
-
-4. **EPIC 22: Sito — Completamento per il lancio** (9 task)
-   Social proof (testimonial dalle raccomandazioni LinkedIn), CV scaricabile su /contact, cross-link LinkedIn ↔ sito.
-
-**FASE 1 — Contenuto (revisione post + blog)**
-
-5. **EPIC 4: Blog/Notes — Costruire autorità** (3 task rimasti)
-   T-4.1.8: Mattia revisiona i 5 post. T-4.3.1: cross-post LinkedIn. T-4.3.3: cadenza editoriale. Dipende da EPIC 17 (completata) e si integra con EPIC 20 (post LinkedIn).
+3. **EPIC 22: Sito — Completamento per il lancio** (task ridotti)
+   Social proof (testimonial dalle raccomandazioni LinkedIn), cross-link LinkedIn ↔ sito. CV e dominio già completati.
 
 **FASE 2 — Visual & wow factor**
 
-6. **EPIC 1: Case Study — visual mancante** (1 task rimasto)
+4. **EPIC 1: Case Study — visual mancante** (1 task rimasto)
    T-1.2.6: 1 visual per case study (diagramma/flow). Indipendente dal copy.
 
-7. **EPIC 7: Design & Visual Polish** (3 task rimasti)
-   T-7.2.3: test OG images. T-7.3.1–2: visual nei blog post. Dipende parzialmente da EPIC 4.
+5. **EPIC 7: Design & Visual Polish** (3 task rimasti)
+   T-7.2.3: test OG images. T-7.3.1–2: visual nei blog post.
 
-8. **EPIC 5: Il "Momento Wow"** (10 task)
-   Interactive scroll-driven case study + chatbot "Ask Mattia". Il wow factor viene dopo che il contenuto è solido.
+6. **EPIC 5: Il "Momento Wow"** (10 task)
+   Interactive scroll-driven case study + chatbot "Ask Mattia". Post-lancio.
 
-**FASE 3 — Technical health & lancio**
+**FASE 3 — Technical health**
 
-9. **EPIC 8: SEO & Technical Health** (4 task rimasti)
-   T-8.2.3: alt text. T-8.2.4: dominio selfrules.org. T-8.3.1: Lighthouse. T-8.3.3: axe-core. Il dominio è l'ultimo step prima del lancio.
+7. **EPIC 8: SEO & Technical Health** (2 task rimasti)
+   T-8.3.1: Lighthouse audit. T-8.3.3: axe-core. Dominio e alt text completati.
 
 **FASE 4 — Post-lancio**
 
-10. **EPIC 10: Infrastruttura per evoluzione continua** (7 task rimasti)
-    Blog pipeline MDX, scheduled tasks, analytics events. Niente di questo blocca il lancio.
+8. **EPIC 10: Infrastruttura per evoluzione continua** (7 task rimasti)
+    Blog pipeline MDX, scheduled tasks, analytics events.
 
-11. **EPIC 11: Mastery ecosistema Claude** (4 task ricorrenti)
+9. **EPIC 11: Mastery ecosistema Claude** (4 task ricorrenti)
     Task continui, non hanno una "fine".
 
 **FASE 5 — Compliance & Analytics**
 
-12. **EPIC 25: Cookie Consent — Serve o non serve?** (4 task)
-    Analisi: probabilmente NON serve un banner (solo cookie funzionali + Umami cookieless). Servono una Privacy Policy page e link nel footer.
+10. **EPIC 25: Cookie Consent — Serve o non serve?** (4 task)
+    Analisi: probabilmente NO banner. Servono Privacy Policy page + link nel footer.
 
-13. **EPIC 26: Umami Analytics Audit** (9 task)
-    Verificare setup, aggiungere eventi mancanti (language-switch, case-study-read, note-read), configurare dashboard per monitorare l'efficacia del sito nella job search.
+11. **EPIC 26: Umami Analytics Audit** (9 task)
+    Verificare setup, aggiungere eventi mancanti, dashboard per job search.
 
 ---
 
@@ -1082,6 +1084,59 @@
 - [ ] **T-24.2.5** `[CLAUDE-AUTONOMO]` Caching: risposte a domande frequenti cachate per ridurre costi API.
 - [ ] **T-24.2.6** `[CLAUDE-AUTONOMO]` Analytics: Umami event `ai-question-asked`, `ai-response-helpful` (thumbs up/down).
 - [ ] **T-24.2.7** `[INSIEME]` Review: Mattia testa il responder con 10 domande realistiche da hiring manager. Tuning del prompt e del context.
+
+---
+
+## EPIC 27: Reframe — Da candidato a esperto
+**Priorità: ALTA** | **Impatto: 9/10** | **Valore hiring manager: Massimo**
+**Data analisi: 2026-03-29** | **Fonte: Audit multi-persona (amico, HR, collega, capo)**
+
+> **Il problema:** Il sito comunica competenza attraverso i fatti — case study, numeri, blog — poi si auto-sabota con segnali espliciti di job-seeking ("Open to PM and Technical PM roles", "Currently open to...", "Exploring what's next"). Questo sposta il frame mentale di chi legge da "esperto da corteggiare" a "candidato da valutare". Inoltre, i case study usano "I" anche dove il lavoro era del team, e la Contact page ha un tono da candidatura anziché da peer.
+>
+> **L'audit ha valutato 4 prospettive:**
+> - **Amico:** Il sito è impressionante ma troppo tecnico per spiegare cosa fa Mattia (non risolvibile senza compromettere il target primario — accettato come trade-off)
+> - **HR:** Quasi perfetto per la scrematura. I segnali job-seeker non aiutano perché l'HR sa già che Mattia cerca — il CV glielo dice
+> - **Collega QubicaAMF:** I fatti sono corretti, ma la narrazione "I" dove il lavoro era collaborativo può generare fastidio
+> - **Capo QubicaAMF:** Due rischi — (1) scopre che Mattia cerca attivamente, (2) percepisce appropriazione di merito su decisioni condivise
+>
+> **Obiettivo:** Mantenere l'efficacia per HR/HM (target primario), ridurre il rischio con audience interne (colleghi, capo), e rafforzare il posizionamento "esperto che puoi ingaggiare" vs "candidato che cerca".
+>
+> **Principi guida:**
+> - "I" per le decisioni di prodotto (prioritizzazione, cosa costruire, cosa non costruire). Il PM decide — questo va raccontato in prima persona.
+> - "We" o forma passiva per l'esecuzione tecnica e le scoperte collaborative. Il team implementa — non è merito del PM.
+> - La disponibilità si comunica per inferenza (CV scaricabile, email visibile, availability badge), mai per dichiarazione esplicita.
+
+### US 27.1: Rimuovere i segnali espliciti di job-seeking
+> Come hiring manager, non ho bisogno che il candidato mi dica "cerco lavoro" — lo so già dal CV. Quello che voglio vedere è competenza, non disponibilità.
+
+- [ ] **T-27.1.1** `[INSIEME]` Riscrivere la card3 "Exploring what's next" / "Esplorando il prossimo passo" nella sezione "Now" dell'homepage. Due opzioni: (a) rimuoverla del tutto (2 card bastano), (b) riformularla come interesse professionale senza "open to roles" — es. "Interested in where product, code, and design intersect." Mattia decide.
+- [ ] **T-27.1.2** `[INSIEME]` Riscrivere il copy della sezione Contact dell'homepage (`homepage.contact.text`). Attuale: "Se pensi che il mio profilo possa servire al tuo team, scrivimi." → Tono da peer, non da candidato. Es: "Se hai un problema di prodotto, parliamone. Se vuoi capire come lavoro, i case study raccontano meglio di qualsiasi call."
+- [ ] **T-27.1.3** `[INSIEME]` Riscrivere la Contact page dedicata (`/contact`). Attuale: "Currently open to Product Manager and Technical PM roles." → Rimuovere. L'availability badge ("EU remote · US remote · Italia hybrid") resta — comunica disponibilità senza dichiarare job-seeking. L'intro va riformulata: da "Whether you have a specific role..." a "If you've got a product challenge — in payments, SaaS, or platform design — I'm always up for a conversation."
+- [ ] **T-27.1.4** `[CLAUDE-AUTONOMO]` Aggiornare i metadata SEO della Contact page. Attuale description: "Reach out if you want to talk about product challenges, hiring, or just exchange ideas." → Rimuovere "hiring".
+- [ ] **T-27.1.5** `[CLAUDE-AUTONOMO]` Aggiornare en.json + it.json con il nuovo copy approvato nei task precedenti.
+- [ ] **T-27.1.6** `[CLAUDE-AUTONOMO]` Build OK, verificare che nessun link rotto o stringa mancante.
+
+### US 27.2: Aggiungere "noi" nei case study — attribuzione corretta
+> Come collega di Mattia, voglio che il sito racconti i fatti come sono realmente accaduti. Come hiring manager esperto, un PM che si prende tutto il merito è un red flag.
+
+- [ ] **T-27.2.1** `[INSIEME]` Review del case study Payments Rescue — identificare i punti dove "I" dovrebbe diventare "we", "the team", o forma passiva. Focus su: (a) la scoperta `external_payment_type` (chi l'ha trovata?), (b) le weekly review (decisione di PM, ma esecuzione del team), (c) la stabilizzazione del sistema (PM ha diretto, team ha implementato). Mattia indica la verità per ogni punto.
+- [ ] **T-27.2.2** `[INSIEME]` Review del case study Cashless System — stessi criteri. Focus su: (a) il kill di OneCashless (decisione condivisa col management o di Mattia?), (b) il proof of concept Intercard (chi l'ha implementato?), (c) la demo a BowlExpo (sforzo del team).
+- [ ] **T-27.2.3** `[INSIEME]` Review del case study LeadsBridge — stessi criteri. Focus su: (a) la decisione di rimuovere le advanced options (consenso del team? resistenza interna?), (b) l'auto-mapping engine (chi l'ha costruito?), (c) il rollout graduale (decisione di PM, esecuzione del team).
+- [ ] **T-27.2.4** `[CLAUDE-AUTONOMO]` Applicare le modifiche approvate ai 3 case study — EN + IT. Regola: "I" per decisioni strategiche di prodotto, "we" per esecuzione e scoperte collaborative, forma passiva per risultati ("setup time dropped 35%" anziché "I reduced setup time by 35%").
+- [ ] **T-27.2.5** `[CLAUDE-AUTONOMO]` Verificare coerenza: la sezione Results usa già forma passiva ("setup time dropped", "adoption jumped") — bene, mantenere. Verificare che l'Approach non contraddica.
+- [ ] **T-27.2.6** `[CLAUDE-AUTONOMO]` Review copy About page (`about.career`) — stessa logica. Verificare che le descrizioni dei ruoli usino "I" per posizionamento e "we" per risultati di team.
+- [ ] **T-27.2.7** `[CLAUDE-AUTONOMO]` Build OK, en.json + it.json aggiornati.
+
+### US 27.3: Riformulare la Contact page come conversazione tra pari
+> Come hiring manager senior, un candidato che dice "parliamo" da pari a pari mi interessa di più di uno che dice "sono disponibile".
+
+- [ ] **T-27.3.1** `[INSIEME]` Definire il nuovo tono della Contact page. Attuale: mix tra candidatura e conversazione. Nuovo: conversazione tra professionisti. Il visitatore arriva perché ha visto competenza nei case study — la Contact deve continuare quel tono, non romperlo. Mattia approva la direzione.
+- [ ] **T-27.3.2** `[INSIEME]` Riscrivere `contact.intro` — da "I'm always interested in conversations about product challenges, especially in B2B SaaS, payments, and platform design. Whether you have a specific role or just want to exchange ideas, I'm here to listen." → Qualcosa tipo: "I'm always interested in product conversations — especially around payments, platform architecture, and the decisions that sit between design and engineering. If something on the site resonated, or if you've got a problem that looks familiar, write me."
+- [ ] **T-27.3.3** `[INSIEME]` Riscrivere `contact.availabilityText` — da "Currently open to Product Manager and Technical PM roles. Remote, EU or US timezone. Based in Italy." → "Based in Italy. Available EU and US remote." (basta — il CV dice il resto).
+- [ ] **T-27.3.4** `[INSIEME]` Riscrivere `contact.cta.text` — da "Send me an email or connect on LinkedIn. The best first message is always specific: what are you building, what's the challenge, what are you trying to figure out." → Valutare se tenere l'indicazione di specificità (funziona come filtro) o se è troppo prescrittivo per un HM.
+- [ ] **T-27.3.5** `[CLAUDE-AUTONOMO]` Applicare tutto il copy approvato in en.json + it.json. Il copy IT deve essere scritto nativamente, non tradotto.
+- [ ] **T-27.3.6** `[CLAUDE-AUTONOMO]` Build OK, verificare tutte le pagine.
+- [ ] **T-27.3.7** `[CLAUDE-AUTONOMO]` Verifica finale: rileggere TUTTO il sito (homepage, about, work, 3 case study, lab, notes, contact) e cercare qualsiasi altra frase che abbia framing da job-seeker. Se trovata, proporre fix.
 
 ---
 

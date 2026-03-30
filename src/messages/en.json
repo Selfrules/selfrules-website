@@ -155,15 +155,15 @@
         "statusLabel": "ACTIVE"
       },
       "card3": {
-        "title": "Exploring what's next",
-        "text": "Open to PM and Technical PM roles where design, code, and product thinking converge.",
-        "statusLabel": "OPEN"
+        "title": "Where product meets code",
+        "text": "Interested in the space where product decisions, technical architecture, and user experience collide. That's where the hardest problems live.",
+        "statusLabel": "ALWAYS"
       }
     },
     "contact": {
       "label": "CONTACT",
       "title": "Let's talk",
-      "text": "If you think my profile could work for your team, write me. Even if you're not sure it's the right fit. The best conversations I've had started with \"I'm not sure this is your thing, but...\"",
+      "text": "Got a product that's not working the way it should? Or one that could work better? That's my favorite kind of conversation.",
       "email": "hello@selfrules.org",
       "linkedinLabel": "LinkedIn",
       "cvLabel": "Download my CV (PDF)",
@@ -294,8 +294,8 @@
           "**While the team stabilized, I dug into a problem others had classified as unsolvable.** A major center was about to cancel the integration because they couldn't reconcile their books. Every transaction appeared as \"uncategorized income\" in the Square dashboard. No breakdown by terminal, no source attribution, no way to close the books.",
           "The root cause was in the Square API. The field where we stored transaction metadata didn't preserve enough information. I traced the data model until I found `external_payment_type`, an existing parameter that could carry source attribution without architectural changes on either side. I wrote the implementation spec and handed it to the team. The center stayed and became a reference account.",
           "**Scope discipline mattered as much as speed.** Over the full year, 23 of the 44 items shipped. The other 21 were deliberate \"not now\" decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back and ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
-          "**Parallel to stabilization, two compliance threads ran.** I proposed a scope reduction for PCI DSS certification by presenting the certifiers with a three-channel payment architecture, removing significant recurring penalty risk. I also completed the FreedomPay technical certification end-to-end, which unlocked a new segment of enterprise centers.",
-          "**Communication was deliberate.** Structured weekly recaps, operational memos for urgent decisions, meeting minutes published within hours. When the support team needed to help customers with issues that weren't fixed yet, I built video tutorials covering workarounds. Bridge solutions while the real fixes were in the pipeline."
+          "**Parallel to stabilization, two compliance threads ran.** I proposed a scope reduction for PCI DSS certification by presenting the certifiers with a three-channel payment architecture, removing significant recurring penalty risk. We also completed the FreedomPay technical certification end-to-end, unlocking a new segment of enterprise centers.",
+          "**Communication was deliberate.** Structured weekly recaps, operational memos for urgent decisions, meeting minutes published within hours. When the support team needed to help customers with issues that weren't fixed yet, we built video tutorials covering workarounds. Bridge solutions while the real fixes were in the pipeline."
         ]
       },
       "results": {
@@ -394,7 +394,7 @@
           "**Then came the counterintuitive decision: remove features.** The advanced options panel — conditional logic, custom transformations, multi-step field processing — was visible to every user on every bridge. It added cognitive load to a flow that most users needed to be simple. The proposal was to hide it entirely from the default experience and surface it only for users who explicitly needed it.",
           "The resistance was immediate. The advanced options were a selling point in demos. Sales used them to differentiate from competitors. Support had built documentation around them. Removing them from the default view felt like removing a feature. The argument that won: **we're not removing capability, we're removing friction.** The options still exist. They just stop punishing users who don't need them.",
           "**Field mapping got the same treatment.** Instead of presenting an empty canvas where users manually connected fields one by one, the redesigned flow proposed automatic mappings based on field names, types, and common patterns across the integration catalogue. Users could review and adjust — but the starting point was a working configuration, not a blank screen.",
-          "**This wasn't just a UI change. It required rethinking the data layer.** The auto-mapping engine needed to understand field semantics across hundreds of integrations with different naming conventions. I worked with engineering to build a matching algorithm that used field metadata, historical mapping patterns from successful bridges, and type compatibility. The technical work made the simple UI possible.",
+          "**This wasn't just a UI change. It required rethinking the data layer.** The auto-mapping engine needed to understand field semantics across hundreds of integrations with different naming conventions. We built a matching algorithm that used field metadata, historical mapping patterns from successful bridges, and type compatibility. The technical work made the simple UI possible.",
           "**The rollout was gradual.** We didn't flip a switch for everyone. The new flow went to new users first, while existing power users kept the original experience. We measured completion rates, time-to-first-bridge, and — critically — whether the simplified flow produced bridges that actually worked in production. They did."
         ]
       },
@@ -487,7 +487,7 @@
         "content": [
           "**The first move was to understand what we were actually building.** Not \"a cashless feature\" but a specific product definition: what does cashless integration mean for a platform that already runs Square payments? What's the data model? Where does the money flow? I mapped the full transaction lifecycle across deposit, play, and redemption before evaluating any provider.",
           "**Then I killed the obvious option.** The internal product, OneCashless, had been explored through multiple discovery sessions. On paper it looked like the fastest path. In practice, the product wasn't convincing. The business model was unclear, the technical architecture required work we couldn't justify, and forcing a weak product into production would have created the same crisis the payments team had just spent months fixing. I parked it. Deliberately.",
-          "**Intercard was the first real test.** A $500-per-terminal API fee, but they had existing market presence. I scoped a proof of concept with two pilot centers, got it validated, and put it into daily use. It proved cashless integration was technically viable on the platform.",
+          "**Intercard was the first real test.** A $500-per-terminal API fee, but they had existing market presence. I scoped a proof of concept with two pilot centers. The team validated it and put it into daily use. It proved cashless integration was technically viable on the platform.",
           "**The real unlock was Amusement Connect.** They had something no other provider offered: native compatibility with Square. That meant the double-counting problem had a structural solution, not just a workaround. I initiated a co-development partnership and negotiated a shared roadmap toward feature parity with the Intercard integration.",
           "**The double-counting problem got a specific solution.** I explored multiple approaches: QR-based app payments, gift card mechanisms, physical hardware swaps. None solved it cleanly. The breakthrough was a payout-based model using Square's gift card infrastructure, where redemptions offset deposits instead of creating new income lines. Clean books. No manual reconciliation.",
           "**BowlExpo validated the direction.** The industry's largest trade show, and the platform needed to show cashless capability. The team delivered a working integration in under five months from kickoff. Not a demo. A working system."
@@ -797,7 +797,7 @@
   },
   "contact": {
     "headline": "Let's talk about product",
-    "intro": "I'm always interested in conversations about product challenges, especially in B2B SaaS, payments, and platform design. Whether you have a specific role or just want to exchange ideas, I'm here to listen.",
+    "intro": "I'm always interested in conversations about product challenges, especially in B2B SaaS, payments, and platform design. If something in the case studies resonated, let's talk.",
     "emailLabel": "Email",
     "emailValue": "hello@selfrules.org",
     "linkedinLabel": "LinkedIn",
@@ -806,7 +806,7 @@
     "cvLabel": "CV",
     "cvValue": "Download PDF",
     "availabilityLabel": "Availability",
-    "availabilityText": "Currently open to Product Manager and Technical PM roles. Remote, EU or US timezone. Based in Italy.",
+    "availabilityText": "Based in Italy. Available remote across EU and US timezones.",
     "cta": {
       "text": "Send me an email or connect on LinkedIn. The best first message is always specific: what are you building, what's the challenge, what are you trying to figure out.",
       "primary": "Send email",
@@ -840,7 +840,7 @@
     },
     "contact": {
       "title": "Get in touch",
-      "description": "Reach out if you want to talk about product challenges, hiring, or just exchange ideas about product management and building in tech."
+      "description": "Reach out if you want to talk about product challenges or exchange ideas about product management and building in tech."
     },
     "paymentsRescue": {
       "title": "Payments Rescue — Mattia De Luca",

@@ -1,0 +1,82 @@
+export const metadata = {
+  title: 'PM remoto su paesi diversi',
+  date: '2026-02-19',
+  excerpt: 'Il PM remoto fallisce quando provi a risolvere il gap di fuso orario con riunioni migliori. La vera competenza è lavorare in asincrono: documentazione persistente, decisioni scritte, contesto condiviso.',
+  readingTime: 6,
+  locale: 'it',
+}
+
+Il product management remoto viene spesso presentato come un problema di logistica: come organizzo le riunioni tra fusi orari? È la domanda sbagliata. Il vero problema è il contesto.
+
+Quando tutti sono nello stesso ufficio, il contesto si assorbe. Qualcuno passa accanto alla tua scrivania, accenna a una trattativa andata male, vedi il thread su Slack, ti ricordi della funzionalità collegata. Il contesto è nell'aria. Togli l'ufficio e l'aria sparisce. A quel punto il contesto deve essere costruito di proposito.
+
+<KeyTakeaway>
+La competenza non è essere bravo nelle videochiamate. È capire quando una conversazione di 30 minuti sostituisce due giorni di thread su Slack, e quando l'asincrono è davvero meglio.
+</KeyTakeaway>
+
+## QubicaAMF: cinque paesi, nessun ufficio condiviso
+
+Il mio team era distribuito: ingegneri backend in Italia, QA in Polonia, product analytics negli USA. Nessuna sovrapposizione di orario. Quando mandavo un messaggio alle 7 del mattino da Modena, il team americano lo vedeva alle 23 e prendeva una decisione che la mattina dopo trovavo già fatta. Quando loro mandavano documentazione alle 16 ora loro, io avevo otto ore di lavoro accumulato il giorno dopo.
+
+Il primo istinto è stato risolvere il problema con riunioni meglio organizzate. Trovare più ore di sovrapposizione. Proteggere le fasce orarie in cui tutti potevano collegarsi.
+
+Non ha funzionato, perché il problema era un altro. Il vero problema era che le informazioni non restavano. Si faceva una videochiamata, si prendevano decisioni, nessuno le metteva per iscritto — a parte qualche appunto che due persone leggevano a metà — e il giorno dopo le persone dall'altra parte del mondo rifacevano il lavoro o prendevano decisioni contraddittorie.
+
+La soluzione non erano riunioni migliori. Era documentare.
+
+## La documentazione come prodotto
+
+Ogni decisione aveva un documento di una pagina. Non un thread su Slack. Non un'email veloce. Un documento con: che decisione dobbiamo prendere, qual è il contesto, quali sono le opzioni, cosa abbiamo scelto e perché. L'ultima frase era la più importante: "Se questa ipotesi si rivela sbagliata, ecco cosa rivedremo."
+
+Quei documenti sono diventati il punto di riferimento per tutti. Gli ingegneri li leggevano prima di iniziare a lavorare. Il QA li consultava durante i test. Gli analisti li usavano per capire quali metriche contavano davvero.
+
+Sembra burocrazia. In realtà è l'opposto. I thread su Slack che esplodono in 50 messaggi perdono il filo nel mezzo. Un documento di una pagina dice tutto in una volta. Cinque minuti per leggerlo, invece di 20 minuti a scorrere Slack cercando di capire chi ha deciso cosa.
+
+<Callout>
+La prima versione dei miei documenti era troppo lunga. Ho imparato a mie spese: se un documento di decisione supera una pagina, hai confuso le priorità. Una pagina per decisione. Una priorità per pagina.
+</Callout>
+
+## Quando la videochiamata batte Slack
+
+Non tutto deve essere asincrono. Alcune conversazioni hanno bisogno di dialogo in tempo reale.
+
+Quando un ingegnere ha detto "il cambio API romperà le integrazioni esistenti per i clienti in tre paesi", serviva una discussione immediata. Le specifiche di implementazione erano sbagliate. Lo sapevamo nel momento in cui l'ha detto. Su Slack sarebbe stato: messaggio, tre ore di attesa per la risposta, chiarimento, altra attesa. Una videochiamata di 15 minuti l'ha risolto subito.
+
+La competenza è capire quali conversazioni hanno bisogno di tempo sincrono. Lo schema che uso:
+
+- **Slack prima.** Ogni decisione inizia come messaggio. Non per decidere — per far emergere che qualcosa va deciso.
+- **Se servono più di 5 scambi di messaggi, videochiamata.**
+- **Se coinvolge fusi orari diversi e le persone dovrebbero aspettare 8 ore per un chiarimento, videochiamata.**
+- **Se qualcuno che dice "aspetta, cosa?" in tempo reale cambierebbe tutta la direzione, videochiamata.**
+
+Tutto il resto resta asincrono.
+
+Il risultato: facevamo molte meno videochiamate di un team che condivide l'ufficio. Ma quelle che facevamo contavano. Erano precise, focalizzate, e documentate subito dopo.
+
+## Il feedback tra culture diverse
+
+Questo mi ha colto di sorpresa. Italia, USA, Polonia: il feedback si dà in modo diverso.
+
+In Italia, il feedback diretto è la norma. "Le tue specifiche hanno dei buchi" è conversazione normale. In Polonia, la stessa cosa richiede più contesto — perché c'è un problema, qual è l'impatto, cosa sarebbe meglio. Negli USA, il feedback negativo arriva sempre avvolto in uno positivo.
+
+La prima volta che un ingegnere polacco ha risposto "questo ha bisogno di più riflessione", l'ho letto come un rifiuto educato. In realtà voleva dire "vedo il valore e voglio assicurarmi che non stiamo trascurando un rischio". Completamente diverso.
+
+Ho imparato a scrivere il feedback in modo esplicito: "Ecco cosa ho notato. Ecco perché è importante. Ecco cosa farei diversamente, e ecco perché potrei sbagliarmi." L'ultima parte conta. Segnala che non sto dando ordini, sto proponendo.
+
+<Callout>
+Il lavoro remoto ha fatto emergere differenze culturali che in ufficio sarebbero state ovvie. Non puoi leggere il linguaggio del corpo su una videochiamata. Devi leggere le parole con più attenzione.
+</Callout>
+
+## Il costo della documentazione
+
+C'è un costo. Scrivere un documento di decisione di una pagina richiede 20 minuti. Decidere su Slack richiede 20 secondi. Il calcolo sembra sfavorevole, finché non conti:
+
+- Quante volte quella decisione viene rispiegata a qualcuno che non c'era.
+- Quante ipotesi sbagliate nascono perché il contesto era ambiguo.
+- Quante ore si perdono a ridiscutere qualcosa che era già stato deciso.
+
+Quando ho iniziato a tenerne traccia, un singolo documento di decisione evitava circa cinque ore di conversazioni ripetute nel mese successivo. 20 minuti per scriverlo, cinque ore risparmiate. Il calcolo funziona.
+
+Ma il valore più grande era un altro. Quando le persone sanno che una decisione è documentata, la leggono prima di costruire. Non fanno ipotesi. Non ricordano a metà. Arrivano al lavoro informate.
+
+È il vantaggio di lavorare in asincrono: costringe alla chiarezza. Perché se non riesci a scriverlo in modo chiaro, non l'hai ancora capito abbastanza bene.

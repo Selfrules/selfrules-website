@@ -155,15 +155,15 @@
         "statusLabel": "ATTIVO"
       },
       "card3": {
-        "title": "Esplorando il prossimo passo",
-        "text": "Aperto a ruoli PM e Technical PM dove design, codice e pensiero di prodotto convergono.",
-        "statusLabel": "APERTO"
+        "title": "Dove il prodotto incontra il codice",
+        "text": "Mi interessa il punto in cui decisioni di prodotto, architettura tecnica e esperienza utente si incontrano. I problemi più difficili stanno tutti lì.",
+        "statusLabel": "SEMPRE"
       }
     },
     "contact": {
       "label": "CONTATTO",
       "title": "Parliamo",
-      "text": "Se pensi che il mio profilo possa servire al tuo team, scrivimi. Anche se non sei sicuro che sia il fit giusto. Le conversazioni migliori che ho avuto sono iniziate con \"non so se è una cosa per te, ma...\".",
+      "text": "Hai un prodotto che non funziona come dovrebbe? O uno che potrebbe funzionare meglio? È il tipo di conversazione che preferisco.",
       "email": "hello@selfrules.org",
       "linkedinLabel": "LinkedIn",
       "cvLabel": "Scarica il mio CV (PDF)",
@@ -294,8 +294,8 @@
           "**Mentre il team stabilizzava, ho scavato in un problema che altri avevano classificato come irrisolvibile.** Un centro importante stava per cancellare l'integrazione perché non riusciva a riconciliare i conti. Ogni transazione appariva come \"entrata non categorizzata\" nella dashboard Square. Nessun dettaglio per terminale, nessuna attribuzione della fonte, nessun modo di chiudere i conti.",
           "La causa radice era nell'API di Square. Il campo dove venivano salvati i metadati delle transazioni non preservava informazioni sufficienti. Ho tracciato il data model fino a trovare `external_payment_type`, un parametro esistente che poteva trasportare l'attribuzione della fonte senza modifiche architetturali su nessuno dei due lati. Ho scritto le specifiche di implementazione e le ho passate al team. Il centro è rimasto ed è diventato un account di riferimento.",
           "**La disciplina di scope contava quanto la velocità.** Nell'arco dell'intero anno, 23 dei 44 item sono stati rilasciati. Gli altri 21 erano decisioni deliberate di \"non ora\", ciascuna con una motivazione documentata. I 12 item critici di pagamento sono stati ridotti a 5 rimanenti, con ogni problema risolto validato in produzione. Quando la feature di rimborso non era abbastanza solida prima del picco natalizio, l'ho ritirata e ho organizzato una giornata completa di test piuttosto che rilasciare logica rotta a centinaia di centri durante la settimana più intensa.",
-          "**In parallelo alla stabilizzazione, sono corsi due filoni di compliance.** Ho proposto una riduzione di scope per la certificazione PCI DSS presentando ai certificatori un'architettura di pagamento a tre canali, eliminando un rischio significativo di penale ricorrente. Ho anche completato end-to-end la certificazione tecnica FreedomPay, che ha sbloccato un nuovo segmento di centri enterprise.",
-          "**La comunicazione è stata deliberata.** Riepiloghi settimanali strutturati, memo operative per decisioni urgenti, verbali delle riunioni pubblicati entro poche ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, ho creato video tutorial sulle soluzioni temporanee. Soluzioni ponte mentre le correzioni vere erano in coda."
+          "**In parallelo alla stabilizzazione, sono corsi due filoni di compliance.** Ho proposto una riduzione di scope per la certificazione PCI DSS presentando ai certificatori un'architettura di pagamento a tre canali, eliminando un rischio significativo di penale ricorrente. Abbiamo anche completato la certificazione tecnica FreedomPay end-to-end, sbloccando un nuovo segmento di centri enterprise.",
+          "**La comunicazione è stata deliberata.** Riepiloghi settimanali strutturati, memo operative per decisioni urgenti, verbali delle riunioni pubblicati entro poche ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, abbiamo creato video tutorial sulle soluzioni temporanee. Soluzioni ponte mentre le correzioni vere erano in coda."
         ]
       },
       "results": {
@@ -394,7 +394,7 @@
           "**Poi è arrivata la decisione controintuitiva: togliere funzionalità.** Il pannello opzioni avanzate — logica condizionale, trasformazioni custom, elaborazione campi multi-step — era visibile a ogni utente su ogni bridge. Aggiungeva carico cognitivo a un flusso che la maggior parte degli utenti aveva bisogno fosse semplice. La proposta era nasconderlo completamente dall'esperienza di default e mostrarlo solo agli utenti che lo cercavano esplicitamente.",
           "La resistenza è stata immediata. Le opzioni avanzate erano un punto di vendita nelle demo. Il commerciale le usava per differenziarsi dai competitor. Il supporto aveva costruito documentazione attorno ad esse. Rimuoverle dalla vista di default sembrava rimuovere una funzionalità. L'argomento che ha vinto: **non stiamo rimuovendo capacità, stiamo rimuovendo frizione.** Le opzioni esistono ancora. Semplicemente smettono di penalizzare chi non ne ha bisogno.",
           "**La mappatura dei campi ha avuto lo stesso trattamento.** Invece di presentare uno schermo vuoto dove gli utenti collegavano manualmente i campi uno a uno, il flusso ridisegnato proponeva mappature automatiche basate su nomi dei campi, tipi e schemi ricorrenti nel catalogo integrazioni. Gli utenti potevano rivedere e modificare — ma il punto di partenza era una configurazione funzionante, non uno schermo vuoto.",
-          "**Non era solo un cambiamento di UI. Richiedeva ripensare lo strato dati.** Il motore di auto-mapping doveva comprendere la semantica dei campi attraverso centinaia di integrazioni con convenzioni di denominazione diverse. Ho lavorato con l'engineering per costruire un algoritmo di matching che usava metadati dei campi, schemi storici di mappatura dai bridge riusciti e compatibilità di tipo. Il lavoro tecnico ha reso possibile l'interfaccia semplice.",
+          "**Non era solo un cambiamento di UI. Richiedeva ripensare lo strato dati.** Il motore di auto-mapping doveva comprendere la semantica dei campi attraverso centinaia di integrazioni con convenzioni di denominazione diverse. Abbiamo costruito un algoritmo di matching che usava metadati dei campi, schemi storici di mappatura dai bridge riusciti e compatibilità di tipo. Il lavoro tecnico ha reso possibile l'interfaccia semplice.",
           "**Il rollout è stato graduale.** Non abbiamo cambiato tutto per tutti. Il nuovo flusso è andato prima ai nuovi utenti, mentre i power user esistenti mantenevano l'esperienza originale. Abbiamo misurato tassi di completamento, time-to-first-bridge e — cruciale — se il flusso semplificato produceva bridge che funzionavano davvero in produzione. Funzionavano."
         ]
       },
@@ -487,7 +487,7 @@
         "content": [
           "**La prima mossa è stata capire cosa stavamo effettivamente costruendo.** Non \"una feature cashless\" ma una definizione di prodotto specifica: cosa significa integrazione cashless per una piattaforma che già gestisce pagamenti Square? Qual è il data model? Dove scorre il denaro? Ho mappato l'intero ciclo di vita della transazione attraverso deposito, gioco e riscatto prima di valutare qualsiasi provider.",
           "**Poi ho scartato l'opzione ovvia.** Il prodotto interno, OneCashless, era stato esplorato attraverso diverse sessioni di discovery. Sulla carta sembrava il percorso più veloce. In pratica, il prodotto non convinceva. Il modello di business era poco chiaro, l'architettura tecnica richiedeva lavoro che non potevamo giustificare, e forzare un prodotto debole in produzione avrebbe creato la stessa crisi che il team pagamenti aveva appena speso mesi a risolvere. L'ho parcheggiato. Deliberatamente.",
-          "**Intercard è stato il primo vero test.** Una fee API di $500 per terminale, ma avevano presenza di mercato. Ho definito l'ambito per un proof of concept con due centri pilota, l'ho fatto validare e messo in uso quotidiano. Ha dimostrato che l'integrazione cashless era tecnicamente fattibile sulla piattaforma.",
+          "**Intercard è stato il primo vero test.** Una fee API di $500 per terminale, ma avevano presenza di mercato. Ho definito l'ambito per un proof of concept con due centri pilota. Il team l'ha validato e messo in uso quotidiano. Ha dimostrato che l'integrazione cashless era tecnicamente fattibile sulla piattaforma.",
           "**Il vero sblocco è stato Amusement Connect.** Avevano qualcosa che nessun altro provider offriva: compatibilità nativa con Square. Questo significava che il problema del doppio conteggio aveva una soluzione strutturale, non solo un aggiramento temporaneo. Ho avviato una partnership di co-sviluppo e negoziato una roadmap condivisa verso la parità di funzionalità con l'integrazione Intercard.",
           "**Il problema del doppio conteggio ha ottenuto una soluzione specifica.** Ho esplorato molteplici approcci: pagamenti app tramite QR, meccanismi gift card, swap hardware fisici. Nessuno lo risolveva in modo pulito. La svolta è stata un modello basato su payout che utilizza l'infrastruttura gift card di Square, dove i riscatti compensano i depositi invece di creare nuove voci di entrata. Conti puliti. Nessuna riconciliazione manuale.",
           "**BowlExpo ha validato la direzione.** La fiera più grande del settore, e la piattaforma doveva mostrare capacità cashless. Il team ha consegnato un'integrazione funzionante in meno di cinque mesi dal kickoff. Non una demo. Un sistema funzionante."
@@ -797,7 +797,7 @@
   },
   "contact": {
     "headline": "Parliamo di prodotto",
-    "intro": "Sono sempre interessato a conversazioni su sfide di prodotto, soprattutto in B2B SaaS, pagamenti e progettazione di piattaforme. Che sia per un ruolo specifico o per scambiare due idee, sono qui.",
+    "intro": "Mi interessano le conversazioni su problemi di prodotto, soprattutto in ambito B2B SaaS, pagamenti e piattaforme. Se qualcosa nei case study ti ha colpito, parliamone.",
     "emailLabel": "Email",
     "emailValue": "hello@selfrules.org",
     "linkedinLabel": "LinkedIn",
@@ -806,7 +806,7 @@
     "cvLabel": "CV",
     "cvValue": "Scarica PDF",
     "availabilityLabel": "Disponibilità",
-    "availabilityText": "Aperto a ruoli di Product Manager e Technical PM. Remoto, fuso orario EU o US. Con base in Italia.",
+    "availabilityText": "In Italia. Disponibile da remoto su fusi europei e americani.",
     "cta": {
       "text": "Mandami un'email o connettiti su LinkedIn. Il primo messaggio migliore è sempre specifico: cosa stai costruendo, qual è la sfida, cosa stai cercando di capire.",
       "primary": "Invia email",
@@ -840,7 +840,7 @@
     },
     "contact": {
       "title": "Parliamo",
-      "description": "Contattami se vuoi parlare di sfide di prodotto, opportunità lavorative, o semplicemente scambiare idee su product management e building in tech."
+      "description": "Scrivimi se vuoi parlare di problemi di prodotto o scambiare idee su product management e costruzione di software."
     },
     "paymentsRescue": {
       "title": "Payments Rescue — Mattia De Luca",
