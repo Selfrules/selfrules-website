@@ -155,19 +155,19 @@
         "statusLabel": "ACTIVE"
       },
       "card3": {
-        "title": "Exploring how AI changes product decisions",
-        "text": "From scoring algorithms to context-aware automation. Building tools that test where AI adds real value, and where simpler logic wins.",
-        "statusLabel": "EXPLORING"
+        "title": "Documenting when AI is worth the complexity",
+        "text": "CasaHunter taught me where AI wins (scoring 880 listings) and where it loses (Telegram beats a web dashboard). I log every decision between AI, deterministic logic, and just asking the user. That's the data product teams actually need.",
+        "statusLabel": "ACTIVE"
       }
     },
     "contact": {
       "label": "CONTACT",
       "title": "Let's talk",
-      "text": "If something on the site resonated, a case study, an approach, a problem that looks familiar: write me.",
+      "text": "I write about payments, platform architecture, and the product decisions that sit between design and engineering. If something here made you think, write me.",
       "email": "hello@selfrules.org",
       "linkedinLabel": "LinkedIn",
       "cvLabel": "Download my CV (PDF)",
-      "availability": "EU remote . US remote . Italy hybrid"
+      "availability": ""
     }
   },
   "about": {
@@ -292,8 +292,8 @@
           "**Then came triage.** 44 open items sat in the backlog, compiled from engineering, sales, and support with no ranking. The sorting criterion was simple: is this costing a center money right now? That split the backlog into three tiers. 12 items were critical to payments operations. Of those, 4 had immediate financial impact on live centers: double charges, payment timeouts, broken split payments, missing refunds. The remaining 32 were real issues, but they could wait.",
           "The 4 highest-impact items got one owner each, a deadline, and a published commitment. All four shipped within six weeks. Zero complaints on any of them post-deployment.",
           "**While the team stabilized, I dug into a problem others had classified as unsolvable.** A major center was about to cancel the integration because they couldn't reconcile their books. Every transaction appeared as \"uncategorized income\" in the Square dashboard. No breakdown by terminal, no source attribution, no way to close the books.",
-          "The root cause was in the Square API. The field where we stored transaction metadata didn't preserve enough information. I traced the data model until I found `external_payment_type`, an existing parameter that could carry source attribution without architectural changes on either side. I wrote the implementation spec and handed it to the team. The center stayed and became a reference account.",
-          "**Scope discipline mattered as much as speed.** Over the full year, 23 of the 44 items shipped. The other 21 were deliberate \"not now\" decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back and ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
+          "The root cause was in the Square API. The field where we stored transaction metadata didn't preserve enough information. We traced the data model until we found `external_payment_type`, an existing parameter that could carry source attribution without architectural changes on either side. I wrote the implementation spec and handed it to the team. The center stayed and became a reference account.",
+          "**Scope discipline mattered as much as speed.** Over the full year, 23 of the 44 items shipped. The other 21 were deliberate \"not now\" decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back. We ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
           "**Parallel to stabilization, two compliance threads ran.** I proposed a scope reduction for PCI DSS certification by presenting the certifiers with a three-channel payment architecture, removing significant recurring penalty risk. We also completed the FreedomPay technical certification end-to-end, unlocking a new segment of enterprise centers.",
           "**Communication was deliberate.** Structured weekly recaps, operational memos for urgent decisions, meeting minutes published within hours. When the support team needed to help customers with issues that weren't fixed yet, we built video tutorials covering workarounds. Bridge solutions while the real fixes were in the pipeline."
         ]
@@ -489,7 +489,7 @@
           "**Then I killed the obvious option.** The internal product, OneCashless, had been explored through multiple discovery sessions. On paper it looked like the fastest path. In practice, the product wasn't convincing. The business model was unclear, the technical architecture required work we couldn't justify, and forcing a weak product into production would have created the same crisis the payments team had just spent months fixing. I parked it. Deliberately.",
           "**Intercard was the first real test.** A $500-per-terminal API fee, but they had existing market presence. I scoped a proof of concept with two pilot centers. The team validated it and put it into daily use. It proved cashless integration was technically viable on the platform.",
           "**The real unlock was Amusement Connect.** They had something no other provider offered: native compatibility with Square. That meant the double-counting problem had a structural solution, not just a workaround. I initiated a co-development partnership and negotiated a shared roadmap toward feature parity with the Intercard integration.",
-          "**The double-counting problem got a specific solution.** I explored multiple approaches: QR-based app payments, gift card mechanisms, physical hardware swaps. None solved it cleanly. The breakthrough was a payout-based model using Square's gift card infrastructure, where redemptions offset deposits instead of creating new income lines. Clean books. No manual reconciliation.",
+          "**The double-counting problem got a specific solution.** We explored multiple approaches: QR-based app payments, gift card mechanisms, physical hardware swaps. None solved it cleanly. The breakthrough was a payout-based model using Square's gift card infrastructure, where redemptions offset deposits instead of creating new income lines. Clean books. No manual reconciliation.",
           "**BowlExpo validated the direction.** The industry's largest trade show, and the platform needed to show cashless capability. The team delivered a working integration in under five months from kickoff. Not a demo. A working system."
         ]
       },
@@ -797,7 +797,7 @@
   },
   "contact": {
     "headline": "Let's talk about product",
-    "intro": "I work on B2B SaaS products: payments, platform integrations, and the decisions that sit between design and engineering. If something on the site resonated, or if you have a product challenge that looks familiar, write me.",
+    "intro": "I work on B2B SaaS products: payments, platform integrations, and the decisions that sit between design and engineering. If something on the site made you think, or if you have a product problem that looks familiar, write me.",
     "emailLabel": "Email",
     "emailValue": "hello@selfrules.org",
     "linkedinLabel": "LinkedIn",
@@ -805,8 +805,8 @@
     "linkedinUrl": "https://linkedin.com/in/selfrules",
     "cvLabel": "CV",
     "cvValue": "Download PDF",
-    "availabilityLabel": "Availability",
-    "availabilityText": "Based in Italy. Available EU and US remote.",
+    "availabilityLabel": "",
+    "availabilityText": "",
     "cta": {
       "text": "Send me an email or connect on LinkedIn.",
       "primary": "Send email",
@@ -840,7 +840,7 @@
     },
     "contact": {
       "title": "Get in touch — Mattia De Luca",
-      "description": "Contact Mattia De Luca. Senior Technical PM specializing in B2B SaaS, payments, and platform product. Based in Italy, available EU and US remote."
+      "description": "Contact Mattia De Luca. Senior Technical PM specializing in B2B SaaS, payments, and platform product."
     },
     "paymentsRescue": {
       "title": "Payments Rescue — Mattia De Luca",

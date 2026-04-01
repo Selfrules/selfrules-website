@@ -70,13 +70,15 @@ export function Contact({
         </a>
       </div>
 
-      {/* Availability badge */}
-      <div className="mt-12 inline-flex items-center gap-3 border border-[#1a1a1f] h-[32px] px-3">
-        <span className="w-2 h-2 bg-[#00bc7d] animate-pulse" aria-hidden="true" />
-        <span className="font-mono text-[12px] text-[rgba(255,255,255,0.5)]">
-          {availability}
-        </span>
-      </div>
+      {/* Availability badge — hidden when empty */}
+      {availability && (
+        <div className="mt-12 inline-flex items-center gap-3 border border-[#1a1a1f] h-[32px] px-3">
+          <span className="w-2 h-2 bg-[#00bc7d] animate-pulse" aria-hidden="true" />
+          <span className="font-mono text-[12px] text-[rgba(255,255,255,0.5)]">
+            {availability}
+          </span>
+        </div>
+      )}
     </Section>
   );
 }

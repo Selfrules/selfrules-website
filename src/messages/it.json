@@ -155,19 +155,19 @@
         "statusLabel": "ATTIVO"
       },
       "card3": {
-        "title": "Esplorando come l'AI cambia le decisioni di prodotto",
-        "text": "Dagli algoritmi di scoring all'automazione context-aware. Costruisco strumenti che testano dove l'AI aggiunge valore reale, e dove vince una logica più semplice.",
-        "statusLabel": "ESPLORO"
+        "title": "Documentare quando l'AI vale la complessità",
+        "text": "CasaHunter mi ha insegnato dove l'AI vince (valutare 880 annunci) e dove perde (Telegram batte una dashboard web). Registro ogni decisione tra AI, logica deterministica, e semplicemente chiedere all'utente. Sono i dati che servono davvero ai team di prodotto.",
+        "statusLabel": "ATTIVO"
       }
     },
     "contact": {
       "label": "CONTATTO",
       "title": "Parliamo",
-      "text": "Se qualcosa nel sito ha risuonato, un caso studio, un approccio, un problema che sembra familiare: scrivimi.",
+      "text": "Scrivo di pagamenti, architettura di piattaforma, e delle decisioni di prodotto che stanno tra design e engineering. Se qualcosa qui ti ha fatto riflettere, scrivimi.",
       "email": "hello@selfrules.org",
       "linkedinLabel": "LinkedIn",
       "cvLabel": "Scarica il mio CV (PDF)",
-      "availability": "EU remote . US remote . Italia ibrido"
+      "availability": ""
     }
   },
   "about": {
@@ -292,8 +292,8 @@
           "**Poi è arrivato il triage.** 44 problemi aperti nel backlog, segnalati da engineering, sales e supporto senza un ordine di priorità. Il criterio di ordinamento era semplice: questo sta costando soldi a un centro adesso? Questo ha diviso il backlog in tre livelli. 12 problemi erano critici per le operazioni di pagamento. Di questi, 4 avevano impatto finanziario immediato sui centri live: addebiti doppi, timeout dei pagamenti, split payment non funzionanti, rimborsi mancanti. I restanti 32 erano problemi reali, ma potevano aspettare.",
           "I 4 problemi a più alto impatto hanno ottenuto un responsabile ciascuno, una scadenza e un impegno pubblico. Tutti e quattro sono stati rilasciati in sei settimane. Zero lamentele su nessuno di essi dopo il rilascio.",
           "**Mentre il team stabilizzava, ho scavato in un problema che altri avevano classificato come irrisolvibile.** Un centro importante stava per cancellare l'integrazione perché non riusciva a riconciliare i conti. Ogni transazione appariva come \"entrata non categorizzata\" nella dashboard Square. Nessun dettaglio per terminale, nessuna attribuzione della fonte, nessun modo di chiudere i conti.",
-          "La causa radice era nell'API di Square. Il campo dove venivano salvati i metadati delle transazioni non preservava informazioni sufficienti. Ho tracciato il data model fino a trovare `external_payment_type`, un parametro esistente che poteva trasportare l'attribuzione della fonte senza modifiche architetturali su nessuno dei due lati. Ho scritto le specifiche di implementazione e le ho passate al team. Il centro è rimasto ed è diventato un account di riferimento.",
-          "**La disciplina di scope contava quanto la velocità.** Nell'arco dell'intero anno, 23 dei 44 item sono stati rilasciati. Gli altri 21 erano decisioni deliberate di \"non ora\", ciascuna con una motivazione documentata. I 12 item critici di pagamento sono stati ridotti a 5 rimanenti, con ogni problema risolto validato in produzione. Quando la feature di rimborso non era abbastanza solida prima del picco natalizio, l'ho ritirata e ho organizzato una giornata completa di test piuttosto che rilasciare logica rotta a centinaia di centri durante la settimana più intensa.",
+          "La causa radice era nell'API di Square. Il campo dove venivano salvati i metadati delle transazioni non preservava informazioni sufficienti. Abbiamo tracciato il data model fino a trovare `external_payment_type`, un parametro esistente che poteva trasportare l'attribuzione della fonte senza modifiche architetturali su nessuno dei due lati. Ho scritto le specifiche di implementazione e le ho passate al team. Il centro è rimasto ed è diventato un account di riferimento.",
+          "**La disciplina di scope contava quanto la velocità.** Nell'arco dell'intero anno, 23 dei 44 item sono stati rilasciati. Gli altri 21 erano decisioni deliberate di \"non ora\", ciascuna con una motivazione documentata. I 12 item critici di pagamento sono stati ridotti a 5 rimanenti, con ogni problema risolto validato in produzione. Quando la feature di rimborso non era abbastanza solida prima del picco natalizio, l'ho ritirata. Abbiamo organizzato una giornata completa di test piuttosto che rilasciare logica rotta a centinaia di centri durante la settimana più intensa.",
           "**In parallelo alla stabilizzazione, sono corsi due filoni di compliance.** Ho proposto una riduzione di scope per la certificazione PCI DSS presentando ai certificatori un'architettura di pagamento a tre canali, eliminando un rischio significativo di penale ricorrente. Abbiamo anche completato la certificazione tecnica FreedomPay end-to-end, sbloccando un nuovo segmento di centri enterprise.",
           "**La comunicazione è stata deliberata.** Riepiloghi settimanali strutturati, memo operative per decisioni urgenti, verbali delle riunioni pubblicati entro poche ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, abbiamo creato video tutorial sulle soluzioni temporanee. Soluzioni ponte mentre le correzioni vere erano in coda."
         ]
@@ -489,7 +489,7 @@
           "**Poi ho scartato l'opzione ovvia.** Il prodotto interno, OneCashless, era stato esplorato attraverso diverse sessioni di discovery. Sulla carta sembrava il percorso più veloce. In pratica, il prodotto non convinceva. Il modello di business era poco chiaro, l'architettura tecnica richiedeva lavoro che non potevamo giustificare, e forzare un prodotto debole in produzione avrebbe creato la stessa crisi che il team pagamenti aveva appena speso mesi a risolvere. L'ho parcheggiato. Deliberatamente.",
           "**Intercard è stato il primo vero test.** Una fee API di $500 per terminale, ma avevano presenza di mercato. Ho definito l'ambito per un proof of concept con due centri pilota. Il team l'ha validato e messo in uso quotidiano. Ha dimostrato che l'integrazione cashless era tecnicamente fattibile sulla piattaforma.",
           "**Il vero sblocco è stato Amusement Connect.** Avevano qualcosa che nessun altro provider offriva: compatibilità nativa con Square. Questo significava che il problema del doppio conteggio aveva una soluzione strutturale, non solo un aggiramento temporaneo. Ho avviato una partnership di co-sviluppo e negoziato una roadmap condivisa verso la parità di funzionalità con l'integrazione Intercard.",
-          "**Il problema del doppio conteggio ha ottenuto una soluzione specifica.** Ho esplorato molteplici approcci: pagamenti app tramite QR, meccanismi gift card, swap hardware fisici. Nessuno lo risolveva in modo pulito. La svolta è stata un modello basato su payout che utilizza l'infrastruttura gift card di Square, dove i riscatti compensano i depositi invece di creare nuove voci di entrata. Conti puliti. Nessuna riconciliazione manuale.",
+          "**Il problema del doppio conteggio ha ottenuto una soluzione specifica.** Abbiamo esplorato molteplici approcci: pagamenti app tramite QR, meccanismi gift card, swap hardware fisici. Nessuno lo risolveva in modo pulito. La svolta è stata un modello basato su payout che utilizza l'infrastruttura gift card di Square, dove i riscatti compensano i depositi invece di creare nuove voci di entrata. Conti puliti. Nessuna riconciliazione manuale.",
           "**BowlExpo ha validato la direzione.** La fiera più grande del settore, e la piattaforma doveva mostrare capacità cashless. Il team ha consegnato un'integrazione funzionante in meno di cinque mesi dal kickoff. Non una demo. Un sistema funzionante."
         ]
       },
@@ -797,7 +797,7 @@
   },
   "contact": {
     "headline": "Parliamo di prodotto",
-    "intro": "Lavoro su prodotti B2B SaaS: pagamenti, integrazioni di piattaforma, e le decisioni che stanno tra design e engineering. Se qualcosa nel sito ti ha colpito, o se hai un problema di prodotto che sembra familiare, scrivimi.",
+    "intro": "Lavoro su prodotti B2B SaaS: pagamenti, integrazioni di piattaforma, e le decisioni che stanno tra design e engineering. Se qualcosa nel sito ti ha fatto riflettere, o se hai un problema di prodotto che sembra familiare, scrivimi.",
     "emailLabel": "Email",
     "emailValue": "hello@selfrules.org",
     "linkedinLabel": "LinkedIn",
@@ -805,8 +805,8 @@
     "linkedinUrl": "https://linkedin.com/in/selfrules",
     "cvLabel": "CV",
     "cvValue": "Scarica PDF",
-    "availabilityLabel": "Disponibilità",
-    "availabilityText": "In Italia. Disponibile EU e US remote.",
+    "availabilityLabel": "",
+    "availabilityText": "",
     "cta": {
       "text": "Mandami un'email o connettiti su LinkedIn.",
       "primary": "Invia email",
@@ -840,7 +840,7 @@
     },
     "contact": {
       "title": "Contatti — Mattia De Luca",
-      "description": "Contatta Mattia De Luca. Senior Technical PM specializzato in B2B SaaS, pagamenti e piattaforme. In Italia, disponibile EU e US remote."
+      "description": "Contatta Mattia De Luca. Senior Technical PM specializzato in B2B SaaS, pagamenti e piattaforme."
     },
     "paymentsRescue": {
       "title": "Payments Rescue — Mattia De Luca",

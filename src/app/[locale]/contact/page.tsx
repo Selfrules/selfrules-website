@@ -107,16 +107,7 @@ export default async function ContactPage({
         </div>
         </ScrollReveal>
 
-        <ScrollReveal>
-        <div className="mt-12 md:mt-16 pt-8 md:pt-12 border-t border-[#1a1a1f]">
-          <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
-            {t('availabilityLabel')}
-          </p>
-          <p className="font-light text-[17px] leading-[29.75px] text-[rgba(255,255,255,0.5)]">
-            {t('availabilityText')}
-          </p>
-        </div>
-        </ScrollReveal>
+        {/* Availability section removed — EPIC 27 reframe */}
       </Section>
 
       {/* CTA */}

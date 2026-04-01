@@ -59,3 +59,6 @@ docs/drafts/LEGACY-Memory.md
 
 # lighthouse
 .lighthouseci/
+
+# github pat for automated push
+.github-pat
