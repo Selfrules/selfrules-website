@@ -9,6 +9,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
 import { PullQuote } from '@/components/ui/PullQuote';
 import { KeyInsight } from '@/components/ui/KeyInsight';
+import { PatternCard } from '@/components/ui/PatternCard';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -245,14 +246,31 @@ export default async function CashlessSystemPage({
 
           {/* Patterns */}
           <h2 className="mt-16">{t('cashless.patterns.heading')}</h2>
-          {patternItems.map((item, i) => (
-            <div key={i} className="mt-8">
-              <h3 className="font-heading font-bold text-[16px] leading-[1.5] tracking-[-0.5px] text-[#f5f5f0]">
-                {item.title}
-              </h3>
-              <p className="mt-3">{item.content}</p>
-            </div>
-          ))}
+          <div className="mt-8 space-y-6">
+            {patternItems.map((item, i) => (
+              <PatternCard key={i} title={item.title}>
+                {item.content}
+              </PatternCard>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Related Notes */}
+      <Section>
+        <div className="border-t border-[var(--color-border-default)] pt-12">
+          <h2 className="font-heading font-bold text-[18px] tracking-[-0.5px] text-text-primary mb-6">
+            {locale === 'it' ? 'Note correlate' : 'Related notes'}
+          </h2>
+          <ul className="space-y-3">
+            <li>
+              <Link href="/notes/build-vs-buy-framework" className="text-[15px] text-text-secondary hover:text-accent transition-colors">
+                {locale === 'it'
+                  ? 'Build vs Buy — un framework decisionale'
+                  : 'Build vs Buy — a decision framework'}
+              </Link>
+            </li>
+          </ul>
         </div>
       </Section>
 

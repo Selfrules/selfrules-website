@@ -4,7 +4,7 @@ milestone: v1.0
 milestone_name: MVP
 status: v1.0 milestone shipped
 stopped_at: Milestone v1.0 archived
-last_updated: "2026-03-23T14:30:00.000Z"
+last_updated: "2026-03-31T10:00:00.000Z"
 progress:
   total_phases: 6
   completed_phases: 6
@@ -23,7 +23,9 @@ See: .planning/PROJECT.md (updated 2026-03-23)
 
 ## Current Position
 
-Milestone v1.0 MVP complete. No active phase.
+Milestone v1.0 MVP complete. v2.0 Content Benchmark Expansion in planning.
+**Active backlog:** [BACKLOG-v2-content.md](BACKLOG-v2-content.md) — 9 EPICs (28-36), ~50 tasks.
+**Next action:** Complete EPIC 27 (reframe — sole launch blocker), then EPIC 29 + 33 (quick wins, eseguibili [SOLO]).
 
 ## Performance Metrics
 
@@ -60,6 +62,7 @@ All v1.0 decisions logged in PROJECT.md Key Decisions table.
 
 1. **OG image definitivo** — export da Figma (attualmente placeholder PNG)
 2. **Vercel deploy** — richiede autenticazione account Mattia
+3. **v2.0 Content Expansion** — 9 EPICs dal benchmark analysis PM (Torres, Cagan, Norton, etc.) → vedi BACKLOG-v2-content.md
 
 ### Blockers/Concerns
 

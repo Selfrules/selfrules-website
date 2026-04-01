@@ -363,6 +363,38 @@ export default async function CasaHunterPage({
         </div>
       </Section>
 
+      {/* Related Notes */}
+      <Section>
+        <div className="border-t border-[var(--color-border-default)] pt-12">
+          <h2 className="font-heading font-bold text-[18px] tracking-[-0.5px] text-text-primary mb-6">
+            {locale === 'it' ? 'Note correlate' : 'Related notes'}
+          </h2>
+          <ul className="space-y-3">
+            <li>
+              <Link href="/notes/why-i-prototype-in-code" className="text-[15px] text-text-secondary hover:text-accent transition-colors">
+                {locale === 'it'
+                  ? 'Perché faccio prototipi in codice'
+                  : 'Why I prototype in code'}
+              </Link>
+            </li>
+            <li>
+              <Link href="/notes/when-ai-makes-sense-in-product" className="text-[15px] text-text-secondary hover:text-accent transition-colors">
+                {locale === 'it'
+                  ? 'Quando l\'AI ha senso nel prodotto'
+                  : 'When AI makes sense in product'}
+              </Link>
+            </li>
+            <li>
+              <Link href="/notes/build-vs-buy-framework" className="text-[15px] text-text-secondary hover:text-accent transition-colors">
+                {locale === 'it'
+                  ? 'Build vs Buy — un framework decisionale'
+                  : 'Build vs Buy — a decision framework'}
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </Section>
+
       <PageCTA
         text={t('cta.text')}
         primaryCta={{

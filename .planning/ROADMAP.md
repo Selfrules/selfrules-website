@@ -3,6 +3,12 @@
 ## Milestones
 
 - ✅ **v1.0 MVP** — Phases 1-6 (shipped 2026-03-23) → [archive](milestones/v1.0-ROADMAP.md)
+- 🔄 **v2.0 Content Benchmark Expansion** — EPICs 27-36 (in progress) → [backlog](BACKLOG-v2-content.md)
+  - P0: EPIC 27 (reframe — launch blocker)
+  - P1: EPIC 28 (meta-narrative), 29 (cross-linking), 30 (decision logs)
+  - P2: EPIC 31 (post definitorio), 32 (notes featured), 33 (patterns prominence)
+  - P3: EPIC 34 (bridge posts), 35 (lab expansion)
+  - P4: EPIC 36 (approach page decision)
 
 ## Phases
 
