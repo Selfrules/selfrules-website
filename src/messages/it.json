@@ -225,6 +225,7 @@
   "work": {
     "headline": "Come lavoro,\ndimostrato.",
     "intro": "Tre storie di prodotto. Il contesto, la sfida, l'approccio, i numeri. Non cosa dico di saper fare. Cosa è successo.",
+    "metaNarrative": "Tutti e tre i casi sono iniziati allo stesso modo. Qualcuno ha descritto un problema. Il problema vero era sempre un altro. Un sistema di pagamento \"pieno di bug\" in realtà aveva quattro problemi critici che facevano perdere soldi. Un brief \"scegli il fornitore cashless\" è diventato una domanda più grande: ha senso questo prodotto? Una configurazione \"che serviva più funzionalità\" si è risolta togliendo passaggi, non aggiungendone. Non è un metodo. È quello che succede quando smetti di risolvere il problema che ti hanno dato e inizi a cercare quello che conta.",
     "cases": {
       "payments": {
         "tag": "Payments · B2B SaaS · Enterprise",
@@ -617,6 +618,28 @@
           {
             "metric": "Amici che chiedono",
             "label": "Il segnale più precoce. Più significativo dei numeri."
+          }
+        ]
+      },
+      "decisionLog": {
+        "heading": "Decisioni chiave",
+        "whyLabel": "PERCHÉ",
+        "learnedLabel": "COSA MI HA INSEGNATO",
+        "items": [
+          {
+            "title": "Tre passaggi di scoring, non tutto all'AI",
+            "why": "Ogni annuncio poteva passare da GPT. Sarebbe stato più semplice da costruire e da spiegare. Ho scelto un sistema a tre passaggi: prima i filtri deterministici (gratis), poi lo scoring AI (solo su quello che sopravvive), infine il feedback loop (impara dalle reazioni dell'utente). Metà degli annunci viene eliminata prima che l'AI li veda. Processare tutto con l'AI a 1.000+ annunci al giorno avrebbe bruciato qualsiasi budget ragionevole. E soprattutto, la maggior parte degli annunci non passa criteri oggettivi: zona sbagliata, senza ascensore, troppo caro. Non serve un modello linguistico per controllare un numero.",
+            "learned": "L'uso migliore dell'AI in un prodotto è quello più stretto. Dai l'AI in pasto a tutto e ottieni un sistema lento, costoso, difficile da debuggare. Limita dove gira e diventa la parte che conta davvero."
+          },
+          {
+            "title": "Prima Telegram, non una web app",
+            "why": "La mossa ovvia era una dashboard. Filtri di ricerca, mappa, annunci salvati. Ne ho prototipata una. Poi ho rilasciato su Telegram. L'utente tipo — qualcuno che cerca casa in Italia — controlla il telefono tra una visita e l'altra, in autobus, a pranzo. Un bot Telegram consegna un annuncio con punteggio in una notifica push. Niente login, niente tab da ricordare, niente app da installare. L'interazione è: arriva la notifica, guardi il punteggio, tocchi per aprire l'annuncio. Cinque secondi.",
+            "learned": "L'interfaccia giusta non è quella più completa. È quella che si inserisce nel momento in cui l'utente ne ha bisogno. Una dashboard è un prodotto migliore sulla carta. Un bot è un prodotto migliore nella tasca di qualcuno."
+          },
+          {
+            "title": "Budget AI fisso per utente: €0,25/mese",
+            "why": "Prima di scrivere qualsiasi riga di architettura, ho fissato un vincolo: il costo AI per utente attivo non può superare €0,25/mese. Ogni decisione tecnica è partita da questo numero. Senza un tetto di spesa, le funzionalità AI si espandono finché il prodotto è in perdita o il prezzo è assurdo. €0,25 significava 95% di margine lordo a €10/mese di prezzo. Significava anche essere spietati su cosa meritava l'attenzione dell'AI e cosa no. Il che ha reso l'architettura a tre passaggi inevitabile.",
+            "learned": "Un vincolo di budget non è un limite. È una decisione di prodotto che rende tutte le altre più facili. \"Possiamo aggiungere l'AI a X?\" diventa \"X sta dentro €0,25?\" e la risposta diventa ovvia."
           }
         ]
       },

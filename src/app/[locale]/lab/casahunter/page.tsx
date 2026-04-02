@@ -9,6 +9,7 @@ import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AiBadge } from '@/components/ui/AiBadge';
 import { ArchitectureDiagram } from '@/components/ui/ArchitectureDiagram';
+import { DecisionCard } from '@/components/ui/DecisionCard';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -62,6 +63,12 @@ export default async function CasaHunterPage({
     metric: string;
     label: string;
   }[];
+  const decisionLog = t.raw('casahunter.decisionLog') as {
+    heading: string;
+    whyLabel: string;
+    learnedLabel: string;
+    items: { title: string; why: string; learned: string }[];
+  };
   const learnedParagraphs = t.raw('casahunter.learned.content') as string[];
 
   /* Shared prose class string for consistent styling */
@@ -343,6 +350,23 @@ export default async function CasaHunterPage({
                 {item.label}
               </p>
             </div>
+          ))}
+        </div>
+
+        {/* Key Decisions */}
+        <div className={`${proseClasses} mt-12`}>
+          <h2>{decisionLog.heading}</h2>
+        </div>
+        <div className="not-prose mt-6 flex flex-col gap-4">
+          {decisionLog.items.map((item, i) => (
+            <DecisionCard
+              key={i}
+              title={item.title}
+              why={item.why}
+              learned={item.learned}
+              whyLabel={decisionLog.whyLabel}
+              learnedLabel={decisionLog.learnedLabel}
+            />
           ))}
         </div>
 

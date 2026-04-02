@@ -57,6 +57,9 @@ export default async function WorkPage({
         <p className="mt-6 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
+        <p className="mt-8 text-[17px] leading-[28px] text-[rgba(255,255,255,0.45)]">
+          {t('metaNarrative')}
+        </p>
       </Section>
 
       {/* Case Study Cards */}

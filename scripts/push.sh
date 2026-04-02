@@ -98,13 +98,27 @@ git commit -m "$COMMIT_MSG
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
 
-# Push (PAT is already in remote URL from clone)
+# Inject PAT for push
+PAT_FILE="$MOUNT_DIR/.github-pat"
+if [ -f "$PAT_FILE" ] && [ -s "$PAT_FILE" ]; then
+  PAT=$(cat "$PAT_FILE" | tr -d '[:space:]')
+  PUSH_URL=$(git remote get-url origin | sed "s|https://|https://${PAT}@|")
+  git remote set-url origin "$PUSH_URL"
+else
+  echo -e "${RED}❌ .github-pat non trovato o vuoto.${NC}"
+  echo -e "   Crea il file: ${CYAN}echo \"ghp_xxx\" > $PAT_FILE${NC}"
+  exit 1
+fi
+
 echo -e "${CYAN}🚀 Push a origin/main...${NC}"
 if git push origin main 2>&1; then
   echo -e "${GREEN}✅ Push riuscito${NC}"
 else
   echo -e "${RED}❌ Push fallito. Probabilmente il remote è andato avanti.${NC}"
   echo -e "   Lancia ${CYAN}bash scripts/sync.sh${NC} e riprova."
+  # Clean PAT before exiting
+  CLEAN_URL=$(git remote get-url origin | sed 's|https://[^@]*@|https://|')
+  git remote set-url origin "$CLEAN_URL" 2>/dev/null || true
   exit 1
 fi
 

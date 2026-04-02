@@ -225,6 +225,7 @@
   "work": {
     "headline": "How I work,\ndemonstrated.",
     "intro": "Three product stories. The context, the challenge, the approach, the numbers. Not what someone says they can do. What happened.",
+    "metaNarrative": "Every case here started the same way. Someone described a problem. The real problem was always somewhere else. A payment system \"with too many bugs\" was actually four critical issues bleeding money. A \"pick a cashless provider\" brief turned into a question about whether the product should exist at all. A setup flow \"that needed more features\" got fixed by removing steps, not adding them. The pattern isn't a method. It's what happens when you stop solving the problem you were handed and start looking for the one that matters.",
     "cases": {
       "payments": {
         "tag": "Payments · B2B SaaS · Enterprise",
@@ -617,6 +618,28 @@
           {
             "metric": "Friends asking",
             "label": "The earliest signal. More meaningful than metrics."
+          }
+        ]
+      },
+      "decisionLog": {
+        "heading": "Key decisions",
+        "whyLabel": "WHY",
+        "learnedLabel": "WHAT IT TAUGHT ME",
+        "items": [
+          {
+            "title": "Three-pass scoring, not full-AI",
+            "why": "Every listing could go through GPT. It would be simpler to build and easier to explain. I chose a three-pass system instead: deterministic filters first (free), AI scoring second (only on what survived), feedback loop third (learning from user reactions). Half the listings get eliminated before AI sees them. Full-AI processing at 1,000+ listings/day would blow through any reasonable budget. More importantly, most listings fail on objective criteria — wrong zone, no elevator, too expensive. You don't need a language model to check a number.",
+            "learned": "The best use of AI in a product is the narrowest one. Throw AI at everything and you get a slow, expensive system that's hard to debug. Constrain where it runs and it becomes the part that actually matters."
+          },
+          {
+            "title": "Telegram first, not a web app",
+            "why": "The obvious move was a dashboard. Search filters, map view, saved listings. I built one as a prototype. Then I shipped on Telegram instead. The target user — someone apartment hunting in Italy — checks their phone between viewings, on the bus, during lunch. A Telegram bot delivers a scored listing in a push notification. No login, no tab to remember, no app to install. The interaction is: notification arrives, glance at score, tap to open listing. Five seconds.",
+            "learned": "The right interface isn't the most capable one. It's the one that fits the moment when the user needs it. A dashboard is a better product on paper. A bot is a better product in someone's pocket."
+          },
+          {
+            "title": "Fixed AI budget per user: €0.25/month",
+            "why": "Before writing any architecture, I set a constraint: the AI cost per active user cannot exceed €0.25/month. Every technical decision flowed from this number. Without a cost ceiling, AI features expand until the product is unprofitable or the pricing is absurd. €0.25 meant 95% gross margin at a €10/month price point. It also meant I had to be ruthless about what deserved AI attention and what didn't — which made the three-pass architecture inevitable.",
+            "learned": "A budget constraint isn't a limitation. It's a product decision that makes every other decision easier. \"Can we add AI to X?\" becomes \"Does X fit within €0.25?\" — and suddenly the answer is obvious."
           }
         ]
       },
