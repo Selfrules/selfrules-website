@@ -289,14 +289,14 @@
       "approach": {
         "heading": "The approach",
         "content": [
-          "**The first decision was to stop scaling the problem.** Growth features went on hold. Customer acquisition slowed down. The entire team shifted to a single priority: make the centers already in production work reliably. This required aligning sales leadership, engineering, and executive stakeholders around the same data. The customer satisfaction numbers made the case.",
-          "**Then came triage.** 44 open items sat in the backlog, compiled from engineering, sales, and support with no ranking. The sorting criterion was simple: is this costing a center money right now? That split the backlog into three tiers. 12 items were critical to payments operations. Of those, 4 had immediate financial impact on live centers: double charges, payment timeouts, broken split payments, missing refunds. The remaining 32 were real issues, but they could wait.",
+          "The first decision was to stop scaling the problem. Growth features went on hold. Customer acquisition slowed down. The entire team shifted to a single priority: make the centers already in production work reliably. This meant getting sales leadership, engineering, and executive stakeholders looking at the same data. The customer satisfaction numbers made the case.",
+          "Then came triage. 44 open items sat in the backlog, compiled from engineering, sales, and support with no ranking. The sorting criterion was simple: is this costing a center money right now? That split the backlog into three tiers. 12 items were critical to payments operations. Of those, 4 had immediate financial impact on live centers: double charges, payment timeouts, broken split payments, missing refunds. The remaining 32 were real issues, but they could wait.",
           "The 4 highest-impact items got one owner each, a deadline, and a published commitment. All four shipped within six weeks. Zero complaints on any of them post-deployment.",
-          "**While the team stabilized, I dug into a problem others had classified as unsolvable.** A major center was about to cancel the integration because they couldn't reconcile their books. Every transaction appeared as \"uncategorized income\" in the Square dashboard. No breakdown by terminal, no source attribution, no way to close the books.",
+          "While the team stabilized, I dug into a problem others had classified as unsolvable. A major center was about to cancel the integration because they couldn't reconcile their books. Every transaction appeared as \"uncategorized income\" in the Square dashboard. No breakdown by terminal, no source attribution, no way to close the books.",
           "The root cause was in the Square API. The field where we stored transaction metadata didn't preserve enough information. We traced the data model until we found `external_payment_type`, an existing parameter that could carry source attribution without architectural changes on either side. I wrote the implementation spec and handed it to the team. The center stayed and became a reference account.",
-          "**Scope discipline mattered as much as speed.** Over the full year, 23 of the 44 items shipped. The other 21 were deliberate \"not now\" decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back. We ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
-          "**Parallel to stabilization, two compliance threads ran.** I proposed a scope reduction for PCI DSS certification by presenting the certifiers with a three-channel payment architecture, removing significant recurring penalty risk. We also completed the FreedomPay technical certification end-to-end, unlocking a new segment of enterprise centers.",
-          "**Communication was deliberate.** Structured weekly recaps, operational memos for urgent decisions, meeting minutes published within hours. When the support team needed to help customers with issues that weren't fixed yet, we built video tutorials covering workarounds. Bridge solutions while the real fixes were in the pipeline."
+          "Scope discipline mattered as much as speed. Over the full year, 23 of the 44 items shipped. The other 21 were deliberate \"not now\" decisions, each with a documented rationale. The 12 critical payments items were brought down to 5 remaining, with every resolved issue validated in production. When the refund feature wasn't solid enough before the holiday peak, I pulled it back. We ran a full testing day rather than ship broken logic to hundreds of centers during their busiest week.",
+          "Parallel to stabilization, two compliance threads ran. I proposed a scope reduction for PCI DSS certification by presenting the certifiers with a three-channel payment architecture, removing significant recurring penalty risk. We also completed the FreedomPay technical certification end-to-end, unlocking a new segment of enterprise centers.",
+          "Communication was deliberate. Structured weekly recaps, operational memos for urgent decisions, meeting minutes published within hours. When the support team needed to help customers with issues that weren't fixed yet, we built video tutorials covering workarounds. Bridge solutions while the real fixes were in the pipeline."
         ]
       },
       "results": {
@@ -377,7 +377,7 @@
         "heading": "The context",
         "content": [
           "A product that connected advertising platforms to business tools. When a potential customer came in from Facebook, Google, or TikTok Ads, the product moved their information to the right place automatically. No code, no manual work, no lost leads.",
-          "**380+ integrations**, a growing base of marketers and agencies who relied on it daily. To set up a connection, users went through five steps: pick the source, pick the destination, log into both, match the data fields, and activate. The product worked well. The problem was that too many users never made it through the setup."
+          "380+ integrations, a growing base of marketers and agencies who relied on it daily. To set up a connection, users went through five steps: pick the source, pick the destination, log into both, match the data fields, and activate. The product worked well. The problem was that too many users never made it through the setup."
         ]
       },
       "challenge": {
@@ -391,12 +391,12 @@
       "approach": {
         "heading": "The approach",
         "content": [
-          "**The first step was understanding where people actually got stuck.** Not where we assumed they got stuck. I mapped the full funnel with completion rates at every step, cross-referenced with support tickets and session patterns. The data confirmed what the numbers suggested: configuration and mapping were the walls. But it also revealed something less obvious — users who completed their first bridge went on to create an average of three more. The activation barrier was the only barrier.",
-          "**Then came the counterintuitive decision: remove features.** The advanced options panel — conditional logic, custom transformations, multi-step field processing — was visible to every user on every bridge. It added cognitive load to a flow that most users needed to be simple. The proposal was to hide it entirely from the default experience and surface it only for users who explicitly needed it.",
-          "The resistance was immediate. The advanced options were a selling point in demos. Sales used them to differentiate from competitors. Support had built documentation around them. Removing them from the default view felt like removing a feature. The argument that won: **we're not removing capability, we're removing friction.** The options still exist. They just stop punishing users who don't need them.",
-          "**Field mapping got the same treatment.** Instead of presenting an empty canvas where users manually connected fields one by one, the redesigned flow proposed automatic mappings based on field names, types, and common patterns across the integration catalogue. Users could review and adjust — but the starting point was a working configuration, not a blank screen.",
-          "**This wasn't just a UI change. It required rethinking the data layer.** The auto-mapping engine needed to understand field semantics across hundreds of integrations with different naming conventions. We built a matching algorithm that used field metadata, historical mapping patterns from successful bridges, and type compatibility. The technical work made the simple UI possible.",
-          "**The rollout was gradual.** We didn't flip a switch for everyone. The new flow went to new users first, while existing power users kept the original experience. We measured completion rates, time-to-first-bridge, and (critically) whether the simplified flow produced bridges that actually worked in production. They did."
+          "The first step was understanding where people actually got stuck. Not where we assumed they got stuck. I mapped the full funnel with completion rates at every step, cross-referenced with support tickets and session patterns. The data confirmed what the numbers suggested: configuration and mapping were the walls. But it also revealed something less obvious — users who completed their first bridge went on to create an average of three more. The activation barrier was the only barrier.",
+          "Then came the counterintuitive decision: remove features. The advanced options panel — conditional logic, custom transformations, multi-step field processing — was visible to every user on every bridge. It added cognitive load to a flow that most users needed to be simple. The proposal was to hide it entirely from the default experience and surface it only for users who explicitly needed it.",
+          "The resistance was immediate. The advanced options were a selling point in demos. Sales used them to differentiate from competitors. Support had built documentation around them. Removing them from the default view felt like removing a feature. The argument that won: we're not removing capability, we're removing friction. The options still exist. They just stop punishing users who don't need them.",
+          "Field mapping got the same treatment. Instead of presenting an empty canvas where users manually connected fields one by one, the redesigned flow proposed automatic mappings based on field names, types, and common patterns across the integration catalogue. Users could review and adjust — but the starting point was a working configuration, not a blank screen.",
+          "This wasn't just a UI change. It required rethinking the data layer. The auto-mapping engine needed to understand field semantics across hundreds of integrations with different naming conventions. We built a matching algorithm that used field metadata, historical mapping patterns from successful bridges, and type compatibility. The technical work made the simple UI possible.",
+          "The rollout was gradual. We didn't flip a switch for everyone. The new flow went to new users first, while existing power users kept the original experience. We measured completion rates, time-to-first-bridge, and (critically) whether the simplified flow produced bridges that actually worked in production. They did."
         ]
       },
       "results": {
@@ -445,7 +445,7 @@
           },
           {
             "title": "Measure the funnel, not the feature",
-            "content": "The 380+ integrations were a vanity metric. The real number was the 5-step completion rate. Optimizing one step moved the business metric more than launching 50 new integrations."
+            "content": "The 380+ integrations were a vanity metric. The real number was the 5-step completion rate. Improving one step moved the business metric more than launching 50 new integrations."
           },
           {
             "title": "Platform thinking: make the common case effortless",
@@ -486,12 +486,12 @@
       "approach": {
         "heading": "The approach",
         "content": [
-          "**The first move was to understand what we were actually building.** Not \"a cashless feature\" but a specific product definition: what does cashless integration mean for a platform that already runs Square payments? What's the data model? Where does the money flow? I mapped the full transaction lifecycle across deposit, play, and redemption before evaluating any provider.",
-          "**Then I killed the obvious option.** The internal product, OneCashless, had been explored through multiple discovery sessions. On paper it looked like the fastest path. In practice, the product wasn't convincing. The business model was unclear, the technical architecture required work we couldn't justify, and forcing a weak product into production would have created the same crisis the payments team had just spent months fixing. I parked it. Deliberately.",
-          "**Intercard was the first real test.** A $500-per-terminal API fee, but they had existing market presence. I scoped a proof of concept with two pilot centers. The team validated it and put it into daily use. It proved cashless integration was technically viable on the platform.",
-          "**The real unlock was Amusement Connect.** They had something no other provider offered: native compatibility with Square. That meant the double-counting problem had a structural solution, not just a workaround. I initiated a co-development partnership and negotiated a shared roadmap toward feature parity with the Intercard integration.",
-          "**The double-counting problem got a specific solution.** We explored multiple approaches: QR-based app payments, gift card mechanisms, physical hardware swaps. None solved it cleanly. The breakthrough was a payout-based model using Square's gift card infrastructure, where redemptions offset deposits instead of creating new income lines. Clean books. No manual reconciliation.",
-          "**BowlExpo validated the direction.** The industry's largest trade show, and the platform needed to show cashless capability. The team delivered a working integration in under five months from kickoff. Not a demo. A working system."
+          "The first move was to understand what we were actually building. Not \"a cashless feature\" but a specific product definition: what does cashless integration mean for a platform that already runs Square payments? What's the data model? Where does the money flow? I mapped the full transaction lifecycle across deposit, play, and redemption before evaluating any provider.",
+          "Then I killed the obvious option. The internal product, OneCashless, had been explored through multiple discovery sessions. On paper it looked like the fastest path. In practice, the product wasn't convincing. The business model was unclear, the technical architecture required work we couldn't justify, and forcing a weak product into production would have created the same crisis the payments team had just spent months fixing. I parked it. Deliberately.",
+          "Intercard was the first real test. A $500-per-terminal API fee, but they had existing market presence. I scoped a proof of concept with two pilot centers. The team validated it and put it into daily use. It proved cashless integration was technically viable on the platform.",
+          "The real unlock was Amusement Connect. They had something no other provider offered: native compatibility with Square. That meant the double-counting problem had a structural solution, not just a workaround. I initiated a co-development partnership and negotiated a shared roadmap toward feature parity with the Intercard integration.",
+          "The double-counting problem got a specific solution. We explored multiple approaches: QR-based app payments, gift card mechanisms, physical hardware swaps. None solved it cleanly. The breakthrough was a payout-based model using Square's gift card infrastructure, where redemptions offset deposits instead of creating new income lines. Clean books. No manual reconciliation.",
+          "BowlExpo validated the direction. The industry's largest trade show, and the platform needed to show cashless capability. The team delivered a working integration in under five months from kickoff. Not a demo. A working system."
         ]
       },
       "results": {
@@ -540,7 +540,7 @@
           },
           {
             "title": "Zero-to-one requires a different PM muscle",
-            "content": "Going from nothing to a working pilot in 5 months required PM skills that maintenance mode never exercises: ambiguity tolerance, vendor negotiation, stakeholder alignment without data."
+            "content": "Going from nothing to a working pilot in 5 months required PM skills that maintenance mode never exercises: ambiguity tolerance, vendor negotiation, getting stakeholders on the same page without data."
           }
         ]
       },
@@ -628,7 +628,7 @@
         "items": [
           {
             "title": "Three-pass scoring, not full-AI",
-            "why": "Every listing could go through GPT. It would be simpler to build and easier to explain. I chose a three-pass system instead: deterministic filters first (free), AI scoring second (only on what survived), feedback loop third (learning from user reactions). Half the listings get eliminated before AI sees them. Full-AI processing at 1,000+ listings/day would blow through any reasonable budget. More importantly, most listings fail on objective criteria — wrong zone, no elevator, too expensive. You don't need a language model to check a number.",
+            "why": "Every listing could go through GPT. It would be simpler to build and easier to explain. I chose a three-pass system instead: deterministic filters first (free), AI scoring second (only on what survived), feedback loop third (learning from user reactions). Half the listings get eliminated before AI sees them. Full-AI processing at 1,000+ listings/day would blow through any reasonable budget. And most listings fail on objective criteria — wrong zone, no elevator, too expensive. You don't need a language model to check a number.",
             "learned": "The best use of AI in a product is the narrowest one. Throw AI at everything and you get a slow, expensive system that's hard to debug. Constrain where it runs and it becomes the part that actually matters."
           },
           {
@@ -879,7 +879,7 @@
     },
     "casahunter": {
       "title": "CasaHunter — Mattia De Luca",
-      "description": "Built an AI apartment-hunting tool. Three-pass scoring, budget optimization, and a lesson in when technical elegance matters less than shipping fast."
+      "description": "Built an AI apartment-hunting tool. Three-pass scoring, budget control, and a lesson in when technical elegance matters less than shipping fast."
     },
     "skipToContent": "Skip to content"
   },

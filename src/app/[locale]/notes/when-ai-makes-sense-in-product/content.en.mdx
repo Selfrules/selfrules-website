@@ -26,11 +26,11 @@ The real problem was different. An apartment listing has 80% objective data: squ
 
 So the system works like this:
 
-**First pass: deterministic filtering.** Price between €400-700k? Square meters above 120? Doesn't require complete gut renovation? Yes to all three. If no, score 0. This eliminates 80% of listings for free in milliseconds.
+First pass: deterministic filtering. Price between €400-700k? Square meters above 120? Doesn't require complete gut renovation? Yes to all three. If no, score 0. This eliminates 80% of listings for free in milliseconds.
 
-**Second pass: AI on what survived.** The remaining 20% goes to an LLM. But now the context is tight. Not "score this apartment," but "given that this one passed our objective filters, and given this user's feedback on five apartments they did see, should they see this one?" Much cheaper. Much faster. Much better.
+Second pass: AI on what survived. The remaining 20% goes to an LLM. But now the context is tight. Not "score this apartment," but "given that this one passed our objective filters, and given this user's feedback on five apartments they did see, should they see this one?" Much cheaper. Much faster. Much better.
 
-**Third pass: feedback loop.** When a user ignores a listing or checks it and doesn't reach out, the scoring learns. Not from scraped data. From actual user behavior.
+Third pass: feedback loop. When a user ignores a listing or checks it and doesn't reach out, the scoring learns. Not from scraped data. From actual user behavior.
 
 <Callout>
 The difference between the naive approach and the working one isn't the AI. It's the architecture. AI was never the bottleneck. The bottleneck was clarity on what's objective and what requires judgment.
@@ -40,19 +40,19 @@ The difference between the naive approach and the working one isn't the AI. It's
 
 AI makes sense when:
 
-**Pattern recognition on unstructured data.** You have thousands of data points with no clear rule, and you need to categorize them. Text classification, image analysis, anomaly detection. The LLM sees patterns a human rule can't express.
+Pattern recognition on unstructured data. You have thousands of data points with no clear rule, and you need to categorize them. Text classification, image analysis, anomaly detection. The LLM sees patterns a human rule can't express.
 
-**Personalized scoring when the preference is complex.** "Which apartment should I see next?" has no single rule. Person A cares about proximity to work, low renovation cost, and outdoor space. Person B prioritizes renovated, building age, and ceiling height. You can't write rules for this. You can learn from behavior and adjust.
+Personalized scoring when the preference is complex. "Which apartment should I see next?" has no single rule. Person A cares about proximity to work, low renovation cost, and outdoor space. Person B prioritizes renovated, building age, and ceiling height. You can't write rules for this. You can learn from behavior and adjust.
 
-**Natural language understanding where context matters.** A customer writes "the integration keeps breaking." That's not a data field. That's a complaint, and it needs context. Did it break once? Three times? Is the customer frustrated or just reporting? Natural language matters here. A rule won't handle the nuance.
+Natural language understanding where context matters. A customer writes "the integration keeps breaking." That's not a data field. That's a complaint, and it needs context. Did it break once? Three times? Is the customer frustrated or just reporting? Natural language matters here. A rule won't handle the nuance.
 
 ## When it's not
 
-**Anything a filter solves.** "Show me payments under €1000" doesn't need an LLM. It needs a `WHERE amount < 1000`. Every feature request that's basically "let the user see only the items where [condition]" is a filter, not an AI problem.
+Anything a filter solves. "Show me payments under €1000" doesn't need an LLM. It needs a `WHERE amount < 1000`. Every feature request that's basically "let the user see only the items where [condition]" is a filter, not an AI problem.
 
-**Anything a SQL query can answer.** "Which centers have highest transaction volume?" "What's the onboarding drop-off by country?" Rules. Structure the question, write the query, show the answer.
+Anything a SQL query can answer. "Which centers have highest transaction volume?" "What's the onboarding drop-off by country?" Rules. Structure the question, write the query, show the answer.
 
-**Anything with a clear rule.** "If the payment fails twice, put the center in review." That's a rule. "If processing takes more than 2 seconds, log an incident." Rule. The PM who says "let's use AI to handle failure scenarios" is usually looking at a state machine, not an intelligence problem.
+Anything with a clear rule. "If the payment fails twice, put the center in review." That's a rule. "If processing takes more than 2 seconds, log an incident." Rule. The PM who says "let's use AI to handle failure scenarios" is usually looking at a state machine, not an intelligence problem.
 
 ## The cost calculation
 
@@ -78,4 +78,4 @@ The better question: "What can we solve with no AI at all?" Solve that first. Th
 
 ---
 
-**See it in practice:** [CasaHunter](/lab/casahunter) uses this exact approach — three deterministic filters first, AI only on what survives. The result is faster, cheaper, and more predictable than full-AI alternatives.
+See it in practice: [CasaHunter](/lab/casahunter) uses this exact approach — three deterministic filters first, AI only on what survives. The result is faster, cheaper, and more predictable than full-AI alternatives.

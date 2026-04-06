@@ -26,11 +26,11 @@ Il vero problema era diverso. Un annuncio di appartamento ha l'80% di dati ogget
 
 Quindi il sistema funziona così:
 
-**Primo passaggio: filtri automatici.** Prezzo tra 400-700k? Metri quadri sopra 120? Non richiede una ristrutturazione totale? Sì a tutti. Altrimenti, scartato. Questo elimina l'80% degli annunci gratis in millisecondi.
+Primo passaggio: filtri automatici. Prezzo tra 400-700k? Metri quadri sopra 120? Non richiede una ristrutturazione totale? Sì a tutti. Altrimenti, scartato. Questo elimina l'80% degli annunci gratis in millisecondi.
 
-**Secondo passaggio: AI su quello che sopravvive.** Il 20% che resta va al modello. Ma adesso il contesto è ristretto. Non "valuta questo appartamento", ma "considerando che ha passato i filtri oggettivi, e considerando il feedback di questo utente su cinque appartamenti che ha già visto, vale la pena che lo guardi?" Molto più economico. Molto più veloce. Molto più preciso.
+Secondo passaggio: AI su quello che sopravvive. Il 20% che resta va al modello. Ma adesso il contesto è ristretto. Non "valuta questo appartamento", ma "considerando che ha passato i filtri oggettivi, e considerando il feedback di questo utente su cinque appartamenti che ha già visto, vale la pena che lo guardi?" Molto più economico. Molto più veloce. Molto più preciso.
 
-**Terzo passaggio: apprendimento dal comportamento.** Quando un utente ignora un annuncio o lo guarda senza contattare, la valutazione impara. Non dai dati degli annunci. Dal comportamento reale dell'utente.
+Terzo passaggio: apprendimento dal comportamento. Quando un utente ignora un annuncio o lo guarda senza contattare, la valutazione impara. Non dai dati degli annunci. Dal comportamento reale dell'utente.
 
 <Callout>
 La differenza tra l'approccio ingenuo e quello che funziona non è l'AI. È l'architettura. L'AI non è mai stata il collo di bottiglia. Il collo di bottiglia era la chiarezza su cosa è oggettivo e cosa richiede giudizio.
@@ -40,19 +40,19 @@ La differenza tra l'approccio ingenuo e quello che funziona non è l'AI. È l'ar
 
 L'AI ha senso quando:
 
-**Riconoscimento di schemi su dati non strutturati.** Hai migliaia di informazioni senza una regola chiara, e devi categorizzarle. Classificazione di testo, analisi di immagini, rilevamento di anomalie. Il modello vede schemi che una regola scritta da un umano non riesce a esprimere.
+Riconoscimento di schemi su dati non strutturati. Hai migliaia di informazioni senza una regola chiara, e devi categorizzarle. Classificazione di testo, analisi di immagini, rilevamento di anomalie. Il modello vede schemi che una regola scritta da un umano non riesce a esprimere.
 
-**Valutazione personalizzata quando le preferenze sono complesse.** "Quale appartamento dovrei vedere dopo?" non ha una regola sola. A una persona interessa stare vicino al lavoro, ristrutturare poco, avere uno spazio esterno. A un'altra interessa che sia già ristrutturato, l'altezza dei soffitti, l'età del palazzo. Non puoi scrivere regole per questo. Puoi imparare dal comportamento e adattarti.
+Valutazione personalizzata quando le preferenze sono complesse. "Quale appartamento dovrei vedere dopo?" non ha una regola sola. A una persona interessa stare vicino al lavoro, ristrutturare poco, avere uno spazio esterno. A un'altra interessa che sia già ristrutturato, l'altezza dei soffitti, l'età del palazzo. Non puoi scrivere regole per questo. Puoi imparare dal comportamento e adattarti.
 
-**Comprensione del linguaggio naturale dove il contesto conta.** Un cliente scrive "l'integrazione continua a rompersi." Non è un dato strutturato. È una lamentela, e ha bisogno di contesto. Si è rotta una volta? Tre? Il cliente è frustrato o sta solo segnalando? Il linguaggio naturale conta. Una regola non coglie la sfumatura.
+Comprensione del linguaggio naturale dove il contesto conta. Un cliente scrive "l'integrazione continua a rompersi." Non è un dato strutturato. È una lamentela, e ha bisogno di contesto. Si è rotta una volta? Tre? Il cliente è frustrato o sta solo segnalando? Il linguaggio naturale conta. Una regola non coglie la sfumatura.
 
 ## Quando no
 
-**Qualsiasi cosa risolvibile con un filtro.** "Mostrami i pagamenti sotto 1000 euro" non ha bisogno di un modello. Ha bisogno di una condizione nel database. Ogni richiesta di funzionalità che si riduce a "fai vedere solo gli elementi dove [condizione]" è un filtro, non un problema di AI.
+Qualsiasi cosa risolvibile con un filtro. "Mostrami i pagamenti sotto 1000 euro" non ha bisogno di un modello. Ha bisogno di una condizione nel database. Ogni richiesta di funzionalità che si riduce a "fai vedere solo gli elementi dove [condizione]" è un filtro, non un problema di AI.
 
-**Qualsiasi cosa risolvibile con una query.** "Quali centri hanno il volume di transazioni più alto?" "Qual è il tasso di abbandono per paese?" Regole. Struttura la domanda, scrivi la query, mostra la risposta.
+Qualsiasi cosa risolvibile con una query. "Quali centri hanno il volume di transazioni più alto?" "Qual è il tasso di abbandono per paese?" Regole. Struttura la domanda, scrivi la query, mostra la risposta.
 
-**Qualsiasi cosa con una regola chiara.** "Se il pagamento fallisce due volte, metti il centro in revisione." Quella è una regola. "Se l'elaborazione impiega più di 2 secondi, registra un incidente." Regola. Il PM che dice "usiamo l'AI per gestire gli errori" di solito sta guardando un diagramma di stati, non un problema di intelligenza.
+Qualsiasi cosa con una regola chiara. "Se il pagamento fallisce due volte, metti il centro in revisione." Quella è una regola. "Se l'elaborazione impiega più di 2 secondi, registra un incidente." Regola. Il PM che dice "usiamo l'AI per gestire gli errori" di solito sta guardando un diagramma di stati, non un problema di intelligenza.
 
 ## Il calcolo del costo
 
@@ -78,4 +78,4 @@ La domanda migliore: "Cosa possiamo risolvere senza AI?" Risolvi quello prima. I
 
 ---
 
-**Vedi in pratica:** [CasaHunter](/lab/casahunter) usa esattamente questo approccio — tre filtri deterministici prima, AI solo su quello che sopravvive. Il risultato è più veloce, più economico e più prevedibile delle alternative full-AI.
+Vedi in pratica: [CasaHunter](/lab/casahunter) usa esattamente questo approccio — tre filtri deterministici prima, AI solo su quello che sopravvive. Il risultato è più veloce, più economico e più prevedibile delle alternative full-AI.
