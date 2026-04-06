@@ -10,7 +10,7 @@ export function MetricHighlight({ value, label, context }: MetricHighlightProps)
       <span className="font-heading font-bold text-[#e8a838] text-xl md:text-2xl leading-[1] tracking-[-0.9px]">
         {value}
       </span>
-      <span className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+      <span className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
         {label}
       </span>
       {context && (

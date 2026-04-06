@@ -102,7 +102,7 @@ export function MobileMenu({ locale, currentPath, isOpen, onClose }: MobileMenuP
       <div className="flex items-center justify-end px-[var(--spacing-page-padding)] h-16">
         <button
           onClick={onClose}
-          className="text-text-primary p-2"
+          className="text-text-primary p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
           aria-label={t('closeMenu')}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

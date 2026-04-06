@@ -31,19 +31,19 @@ export function CaseStudySummary({
       {/* Header info row */}
       <div className="grid grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-10 pb-8 md:pb-10 border-b border-[#1a1a1f]">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.4)] mb-2">
+          <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.55)] mb-2">
             {labels.role}
           </p>
           <p className="text-[13px] text-[#f5f5f0]">{role}</p>
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.4)] mb-2">
+          <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.55)] mb-2">
             {labels.period}
           </p>
           <p className="text-[13px] text-[#f5f5f0]">{period}</p>
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.4)] mb-2">
+          <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.55)] mb-2">
             {labels.industry}
           </p>
           <p className="text-[13px] text-[#f5f5f0]">{industry}</p>
@@ -57,7 +57,7 @@ export function CaseStudySummary({
             <p className="font-heading font-bold text-[#e8a838] text-[28px] md:text-[36px] leading-[1] tracking-[-1.2px] mb-2">
               {metric.value}
             </p>
-            <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[10px] uppercase tracking-[1px] text-[rgba(255,255,255,0.55)]">
               {metric.label}
             </p>
           </div>

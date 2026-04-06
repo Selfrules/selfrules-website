@@ -10,7 +10,7 @@ export async function Footer({ locale }: { locale: string }) {
     <footer className="mt-32 px-[var(--spacing-page-padding)]">
       <div className="mx-auto max-w-[var(--width-wide)] flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pb-8">
         {/* Left: inline links separated by · */}
-        <div className="flex flex-wrap items-center gap-x-2 text-[14px] text-[rgba(255,255,255,0.5)]">
+        <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-[13px] sm:text-[14px] text-[rgba(255,255,255,0.5)]">
           <span>PM / Builder</span>
           <span>·</span>
           <a
@@ -54,7 +54,7 @@ export async function Footer({ locale }: { locale: string }) {
         </div>
 
         {/* Right: build version */}
-        <p className="font-mono text-[11px] text-[#5a5a5e]">
+        <p className="font-mono text-[11px] text-[#7e7e82]">
           {t('buildVersion', { buildMonth, commitCount: String(COMMIT_COUNT) })}
         </p>
       </div>

@@ -1,26 +1,26 @@
 export const metadata = {
   title: 'Perché le metriche mentono senza contesto',
-  date: '2026-03-08',
+  date: '2026-03-22',
   excerpt: 'Un numero senza una storia è solo un numero. La storia è ciò che lo rende una decisione.',
   readingTime: 3,
   locale: 'it',
 }
 
-All'inizio della mia carriera da PM, sono entrato in una quarterly review con una slide che diceva "DAU su del 23%." La stanza era contenta. Il VP annuiva. Siamo andati avanti.
+All'inizio della mia carriera da PM, sono entrato in una revisione trimestrale con una slide che diceva "utenti attivi giornalieri su del 23%." La stanza era contenta. Il VP annuiva. Siamo andati avanti.
 
 <KeyTakeaway>
-Tre settimane dopo, abbiamo scoperto che l'aumento veniva da un bug nel tracking delle sessioni che contava doppio gli utenti che switchavano tra tab. I DAU reali erano piatti. Avevamo passato il quarter a ottimizzare per una metrica che ci mentiva.
+Tre settimane dopo, abbiamo scoperto che l'aumento veniva da un errore nel tracciamento delle sessioni che contava due volte gli utenti che passavano da una scheda all'altra. Gli utenti attivi reali erano piatti. Avevamo passato il trimestre a ottimizzare per una metrica che ci mentiva.
 </KeyTakeaway>
 
 <MetricsTriangleDiagram />
 
 ## Ogni metrica ha bisogno di tre cose
 
-Il numero è cosa è successo. I DAU sono su del 23%. Il revenue è cresciuto del 15%. I ticket di supporto sono calati del 40%.
+Il numero è cosa è successo. Gli utenti attivi sono su del 23%. Il fatturato è cresciuto del 15%. I ticket di supporto sono calati del 40%.
 
-Il meccanismo è *perché* è successo. I DAU sono cresciuti perché abbiamo lanciato le push notification. Il revenue è cresciuto perché abbiamo alzato i prezzi. I ticket sono calati perché abbiamo rimosso una feature.
+Il meccanismo è *perché* è successo. Gli utenti attivi sono cresciuti perché abbiamo lanciato le notifiche push. Il fatturato è cresciuto perché abbiamo alzato i prezzi. I ticket sono calati perché abbiamo rimosso una funzionalità.
 
-La contro-metrica è cosa stai pagando per ottenerlo. Le push notification hanno aumentato i DAU ma hanno anche triplicato il tasso di opt-out. L'aumento di prezzo ha fatto crescere il revenue ma il churn è passato dal 3% al 7%. Rimuovere la feature ha tagliato i ticket ma l'NPS è sceso di 12 punti.
+La contro-metrica è cosa stai pagando per ottenerlo. Le notifiche push hanno aumentato gli utenti attivi ma hanno anche triplicato il tasso di disiscrizione. L'aumento di prezzo ha fatto crescere il fatturato ma il tasso di abbandono è passato dal 3% al 7%. Rimuovere la funzionalità ha tagliato i ticket ma la soddisfazione è scesa di 12 punti.
 
 <Callout>
 Senza tutte e tre, stai prendendo decisioni con un occhio chiuso.
@@ -28,11 +28,11 @@ Senza tutte e tre, stai prendendo decisioni con un occhio chiuso.
 
 ## La trappola della dashboard
 
-Ho lavorato con team che avevano 30+ metriche sulla dashboard principale. La controllavano ogni mattina. Potevano dirti il numero esatto di qualsiasi KPI in qualsiasi momento.
+Ho lavorato con team che avevano più di 30 metriche sulla dashboard principale. La controllavano ogni mattina. Potevano dirti il numero esatto di qualsiasi indicatore in qualsiasi momento.
 
-Ma quando chiedevo "quale di queste metriche cambierebbe la vostra prossima decisione?", la risposta di solito era due o tre. Il resto erano vanity metric — numeri che salivano, che facevano sentire bene, ma non informavano nessuna scelta concreta.
+Ma quando chiedevo "quale di queste metriche cambierebbe la vostra prossima decisione?", la risposta di solito era due o tre. Il resto erano metriche di vanità — numeri che salivano, che facevano sentire bene, ma non informavano nessuna scelta concreta.
 
-La migliore dashboard che abbia mai costruito aveva quattro numeri. Uno per acquisition, uno per activation, uno per retention, uno per revenue. Ognuno aveva un target, una linea di trend, e una spiegazione in una frase del perché si stava muovendo. Fine.
+La migliore dashboard che abbia mai costruito aveva quattro numeri. Uno per acquisizione, uno per attivazione, uno per ritenzione, uno per fatturato. Ognuno aveva un obiettivo, una linea di tendenza, e una spiegazione in una frase del perché si stava muovendo. Fine.
 
 ## Tre domande che faccio ogni volta
 
@@ -43,15 +43,19 @@ Se non sanno spiegare perché il numero si è mosso, il numero è rumore.
 </NumberedInsight>
 
 <NumberedInsight number={2} title={`"Qual è la contro-metrica?"`}>
-Se non c'è un trade-off, o siamo stati fortunati o non stiamo cercando abbastanza.
+Se non c'è un compromesso, o siamo stati fortunati o non stiamo cercando abbastanza.
 </NumberedInsight>
 
 <NumberedInsight number={3} title={`"Cosa faresti diversamente se questo numero fosse 10 volte peggiore?"`}>
 Se la risposta è "niente," allora stiamo tracciando la cosa sbagliata.
 </NumberedInsight>
 
-Queste domande non sono popolari nei meeting. Nessuno vuole sentirsi dire "la vostra crescita del 23% potrebbe essere un bug." Ma l'alternativa è costruire strategia sulla sabbia.
+Queste domande non sono popolari nelle riunioni. Nessuno vuole sentirsi dire "la vostra crescita del 23% potrebbe essere un errore." Ma l'alternativa è costruire strategia sulla sabbia.
 
 <Callout>
 L'obiettivo non è avere più metriche. È avere meno metriche che capisci davvero. Un singolo numero di cui ti fidi vale più di una dashboard piena di numeri di cui non ti fidi.
 </Callout>
+
+---
+
+**Vedi in pratica:** Su [Payments Rescue](/work/payments-rescue), il team aveva ereditato oltre 40 metriche in dashboard. Ridurle a 6 che contavano davvero ha cambiato il modo in cui l'intero squad prendeva decisioni.

@@ -45,7 +45,7 @@ export function Navbar({ locale }: NavbarProps) {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setMenuOpen(true)}
-              className="text-text-primary p-2 md:hidden"
+              className="text-text-primary p-2 md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={t('openMenu')}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

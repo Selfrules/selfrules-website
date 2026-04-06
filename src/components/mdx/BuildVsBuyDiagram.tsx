@@ -57,16 +57,16 @@ export function BuildVsBuyDiagram() {
         <rect x="10" y="140" width="345" height="70" fill="#111113" stroke="#1A1A1F" strokeWidth="1" />
         <text x="25" y="163" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="#E8A838" fontWeight="600">CasaHunter → BUILD</text>
         <text x="25" y="180" fontFamily="Inter, system-ui" fontSize="10" fill="rgba(255,255,255,0.5)">Time ✓ · Core differentiator ✓ · Low TCO ✓ · Reversible ✓</text>
-        <text x="25" y="198" fontFamily="Inter, system-ui" fontSize="10" fill="rgba(255,255,255,0.4)">Ranking algorithm is the product — must own it</text>
+        <text x="25" y="198" fontFamily="Inter, system-ui" fontSize="10" fill="rgba(255,255,255,0.55)">Ranking algorithm is the product — must own it</text>
 
         {/* Example: OneCashless — BUY */}
         <rect x="370" y="140" width="345" height="70" fill="#111113" stroke="#1A1A1F" strokeWidth="1" />
         <text x="385" y="163" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="#E8A838" fontWeight="600">OneCashless → BUY (Amusement Connect)</text>
         <text x="385" y="180" fontFamily="Inter, system-ui" fontSize="10" fill="rgba(255,255,255,0.5)">No time ✗ · Not differentiator ✗ · €300K TCO ✗ · Reversible ✓</text>
-        <text x="385" y="198" fontFamily="Inter, system-ui" fontSize="10" fill="rgba(255,255,255,0.4)">Cashless is not the core product — partner delivers more</text>
+        <text x="385" y="198" fontFamily="Inter, system-ui" fontSize="10" fill="rgba(255,255,255,0.55)">Cashless is not the core product — partner delivers more</text>
 
         {/* Bottom rule */}
-        <text x="360" y="260" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="rgba(255,255,255,0.35)">Not from conviction. From constraint.</text>
+        <text x="360" y="260" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="rgba(255,255,255,0.55)">Not from conviction. From constraint.</text>
       </svg>
     </figure>
   );

@@ -35,7 +35,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        'border border-[#1a1a1f] p-6 md:p-10',
+        'border border-[#1a1a1f] p-4 sm:p-6 md:p-10',
         'transition-all duration-200 hover:border-accent/40 hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]',
         className
       )}
@@ -44,7 +44,7 @@ export function ProjectCard({
         <h3 className="font-heading font-bold text-[22px] tracking-[-0.55px] text-[#f5f5f0]">{title}</h3>
         <span className="inline-flex items-center gap-2 shrink-0">
           <span className={`w-2 h-2 ${statusColors[status]}`} data-status-dot />
-          <span className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">{statusLabel}</span>
+          <span className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">{statusLabel}</span>
         </span>
       </div>
 

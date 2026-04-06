@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Perché prototipo in codice',
-  date: '2026-03-22',
+  date: '2026-01-29',
   excerpt: 'Un Product Manager che prototipa in codice prende decisioni diverse.',
   readingTime: 4,
   locale: 'it',
@@ -9,7 +9,7 @@ export const metadata = {
 La maggior parte dei PM non scrive codice. Non è un problema. Il product management non richiede di saper programmare. Ma se sai farlo, cambia il modo in cui prendi decisioni.
 
 <KeyTakeaway>
-Non parlo di scrivere feature in produzione. Parlo di costruire la cosa minima necessaria per rispondere a una domanda prima di chiedere al team settimane di lavoro.
+Non parlo di scrivere funzionalità in produzione. Parlo di costruire la cosa minima necessaria per rispondere a una domanda prima di chiedere al team settimane di lavoro.
 </KeyTakeaway>
 
 ## CasaHunter: quando il codice mostra l'architettura
@@ -28,7 +28,7 @@ Questa architettura non sarebbe mai uscita da un diagramma. È uscita dal codice
 
 In azienda succede la stessa cosa su scala diversa.
 
-In QubicaAMF un centro stava per cancellare l'integrazione pagamenti. Il problema: ogni transazione appariva come "uncategorized income" in Square. Nessuna attribuzione per terminale, nessun modo di chiudere i libri. La diagnosi interna era "problema del partner". Irrisolvibile.
+In QubicaAMF un centro stava per cancellare l'integrazione pagamenti. Il problema: ogni transazione appariva come "uncategorized income" in Square. Nessuna attribuzione per terminale, nessun modo di chiudere i libri. La diagnosi interna era "problema del partner". Insolubile.
 
 La documentazione dell'API raccontava un'altra storia. Tracciando il data model è saltato fuori un campo esistente, `external_payment_type`, che poteva portare l'attribuzione senza cambiare niente sull'architettura di nessuna delle due parti. La spec di implementazione ha chiuso la discussione. Il centro è rimasto ed è diventato un account di riferimento.
 
@@ -60,6 +60,10 @@ Il prototipo serve quando bisogna validare un'idea prima di portarla in sprint. 
 
 Il punto non è che tutti i PM dovrebbero programmare. Il punto è che un percorso — designer, poi developer, poi PM — non è stato un errore di carriera. È stato un accumulo di strumenti.
 
-Un problema di prodotto visto da tre angolazioni contemporaneamente: come appare all'utente, come funziona sotto il cofano, e cosa significa per il business. Non perché lo dice un framework. Perché quei tre lavori li ho fatti.
+Un problema di prodotto visto da tre angolazioni contemporaneamente: come appare all'utente, come funziona sotto il cofano, e cosa significa per l'azienda. Non perché lo dice un framework. Perché quei tre lavori li ho fatti.
 
 A volte la soluzione è nel design. A volte è nel codice. A volte è nel dire "no" a qualcosa che tutti vogliono. La capacità di prototipare non è la risposta a tutto. Ma è uno strumento in più nel momento in cui serve. E quando serve, fa la differenza tra indovinare e sapere.
+
+---
+
+**Vedi in pratica:** Ho costruito un [prototipo funzionante per CasaHunter](/lab/casahunter) per validare l'algoritmo di ranking prima di scrivere una sola spec. Su [Payments Rescue](/work/payments-rescue), prototipare il flusso di riconciliazione ha evitato settimane di andata e ritorno con l'engineering.

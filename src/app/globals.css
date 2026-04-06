@@ -78,6 +78,12 @@
   outline-offset: 2px;
 }
 
+/* Prevent horizontal overflow on mobile (iOS Safari is strict about this) */
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* Smooth scroll for anchor links (PLSH-02) */
 html {
   scroll-behavior: smooth;

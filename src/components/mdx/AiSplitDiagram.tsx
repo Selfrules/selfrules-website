@@ -25,7 +25,7 @@ export function AiSplitDiagram() {
         <text x="565" y="82" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(232,168,56,0.6)">Judgment calls</text>
 
         {/* Properties row */}
-        <text x="30" y="120" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(255,255,255,0.4)">Fast · Free · Auditable · Predictable</text>
+        <text x="30" y="120" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(255,255,255,0.55)">Fast · Free · Auditable · Predictable</text>
         <text x="510" y="120" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(232,168,56,0.4)">Slower · Costs $ · Handles nuance</text>
 
         {/* CasaHunter example */}

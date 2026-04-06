@@ -12,6 +12,8 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
   const router = useRouter();
 
   function switchLocale(newLocale: string) {
+    // Set preferred-locale cookie (1 year) — prevents geo-redirect from overriding
+    document.cookie = `preferred-locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
     router.replace({ pathname }, { locale: newLocale });
   }
 
@@ -24,7 +26,7 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
         className={`transition-colors duration-150 ${
           locale === 'it'
             ? 'text-[rgba(255,255,255,0.6)]'
-            : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
+            : 'text-[rgba(255,255,255,0.55)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
         }`}
         aria-label="Italiano"
         aria-current={locale === 'it' ? 'true' : undefined}
@@ -37,7 +39,7 @@ export function LanguageToggle({ locale, variant = 'desktop' }: LanguageTogglePr
         className={`transition-colors duration-150 ${
           locale === 'en'
             ? 'text-[rgba(255,255,255,0.6)]'
-            : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
+            : 'text-[rgba(255,255,255,0.55)] hover:text-[rgba(255,255,255,0.6)] cursor-pointer'
         }`}
         aria-label="English"
         aria-current={locale === 'en' ? 'true' : undefined}

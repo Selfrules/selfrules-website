@@ -24,13 +24,13 @@ export function Hero({
   return (
     <section
       aria-label="Hero"
-      className="flex flex-col justify-start pt-[72px] md:pt-[80px] pb-[var(--spacing-section)] px-[var(--spacing-page-padding)]"
+      className="flex flex-col justify-start pt-[56px] sm:pt-[72px] md:pt-[80px] pb-[var(--spacing-section)] px-[var(--spacing-page-padding)]"
     >
       <div className="mx-auto w-full max-w-[var(--width-wide)]">
         <div className="max-w-[720px]">
         {/* Terminal prompt */}
         <div aria-hidden="true" className="flex items-center gap-2 mb-6">
-          <span className="font-mono text-[13px] text-[#5a5a5e] leading-[19.5px]">
+          <span className="font-mono text-[13px] text-[#7e7e82] leading-[19.5px]">
             {terminalPrompt}
           </span>
           <BlinkingCursor type="block" />
