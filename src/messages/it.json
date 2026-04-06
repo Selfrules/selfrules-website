@@ -17,7 +17,7 @@
     "switchLanguage": "Cambia lingua"
   },
   "footer": {
-    "bio": "Senior Technical PM. Prototipo in codice, disegno la UX, e shippo.",
+    "bio": "Senior Technical PM. Prototipo in codice, disegno la UX, e porto in produzione.",
     "email": "hello@selfrules.org",
     "linkedin": "LinkedIn",
     "github": "GitHub",
@@ -38,7 +38,7 @@
   "homepage": {
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, codice, e product management nella stessa testa.",
-      "subtitle": "Sistemi di pagamento dal caos al 99% di uptime. Funnel di integrazione ridisegnati, -35% tempo di setup. Prodotti B2B SaaS, costruiti e spediti.",
+      "subtitle": "Trovo il problema reale, risolvo prima quello che conta, e porto in produzione prodotti che reggono. Sistemi di pagamento portati dal caos al 99%+ di uptime. Flussi di integrazione rifatti, -35% sul tempo di setup.",
       "primaryCta": "Parliamo del tuo prodotto",
       "secondaryCta": "Leggi i case study",
       "tag1": "10+ anni",
@@ -48,28 +48,33 @@
       "terminalPrompt": "hello@selfrules.org ~ $",
       "signaturePhrase": "Il problema non e' mai quello del primo meeting."
     },
+    "whatIDo": {
+      "label": "COSA FACCIO",
+      "title": "Quello che faccio davvero",
+      "text": "Le aziende mi cercano quando un prodotto non funziona come dovrebbe. Scavo nel problema reale — non quello che emerge al primo meeting — progetto una soluzione che abbia senso per chi la usa, e la costruisco con il team. L'ho fatto con piattaforme di pagamento che gestiscono milioni di transazioni, tool di integrazione usati da migliaia di aziende, e side project costruiti da zero. Lo schema è sempre lo stesso: prima capire, poi costruire."
+    },
     "howIWork": {
-      "label": "TRE LINGUAGGI, UN PRODOTTO",
+      "label": "COME LAVORO",
       "title": "Tre linguaggi, un prodotto",
       "intro": "Quando il design dice \"l'utente si blocca qui perché la gerarchia visiva è sbagliata\", l'engineering dice \"servono 3 sprint di refactoring\", e il business dice \"ci costa €15K al mese in ticket di supporto\". Tre conversazioni separate. Il mio lavoro è trasformarle in una decisione.",
       "pillar1": {
-        "title": "Designer + Developer + PM.\nNella stessa stanza.",
-        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a gestire prodotti e team cross-funzionali fino a 10+ persone. Quando design e engineering non si capiscono, il problema di solito non è tecnico. È che nessuno in stanza ha fatto entrambi i lavori. Le sessioni cross-funzionali settimanali hanno tagliato gli incidenti post-release del <b>25%</b>. Meno rework, meno meeting, decisioni che reggono.",
-        "shortText": "4 anni design. 4 codice. 5+ prodotto. Quando design e engineering non si capiscono, il problema non è tecnico. Sessioni cross-funzionali: incidenti post-release <b>-25%</b>."
+        "title": "Ho fatto tutti e tre i mestieri.\nQuesto cambia come prendo le decisioni.",
+        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente finale. Meno passaggi, meno sorprese. Le sessioni cross-funzionali che ho introdotto hanno ridotto gli incidenti post-release del <b>25%</b>.",
+        "shortText": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente. Sessioni cross-funzionali: incidenti post-release <b>-25%</b>."
       },
       "pillar2": {
-        "title": "Il problema non è mai\nquello del primo meeting",
-        "text": "Un esempio. Sistema di pagamento in crisi, 44 problemi aperti. La pressione è \"agire su tutto, subito.\" Due settimane a parlare con il supporto, leggere i ticket, guardare i dati. Risultato: 12 critici, 4 con impatto finanziario immediato. Gli altri potevano aspettare. I 4 più gravi risolti in 6 settimane, non 6 mesi. Prima di costruire qualcosa, verifica di star risolvendo il problema giusto.",
-        "shortText": "Sistema di pagamento in crisi, 44 problemi aperti. Due settimane di discovery: 12 critici, 4 con impatto finanziario. I 4 più gravi risolti in 6 settimane, non 6 mesi."
+        "title": "Prima di costruire qualsiasi cosa,\nverifico il problema vero.",
+        "text": "Un sistema di pagamento con 44 problemi aperti e la pressione di risolvere tutto subito. Due settimane a parlare col supporto e leggere i dati: solo 4 stavano facendo perdere soldi ai clienti. Quei 4 risolti in 6 settimane, non 6 mesi. Gli altri 40 potevano aspettare. Capire cosa conta davvero: quello è il lavoro.",
+        "shortText": "Un sistema di pagamento con 44 problemi aperti. Due settimane di discovery: solo 4 facevano perdere soldi ai clienti. Quei 4 risolti in 6 settimane, non 6 mesi. Capire cosa conta davvero: quello è il lavoro."
       },
       "pillar3": {
-        "title": "Prototipi, non slide",
-        "text": "Un prototipo in React che gli utenti possono toccare dice più di qualsiasi documento di specifiche. React, TypeScript e Node.js per validare un'idea prima di chiedere mesi di sviluppo al team. La priorità viene dalla frustrazione dell'utente, non dalla complessità tecnica. E quando i dati dicono che una feature non serve, la risposta è no. Anche se la chiede il 60% degli utenti.",
-        "shortText": "Un prototipo React che gli utenti possono toccare dice più di qualsiasi spec. Priorità dalla frustrazione utente, non dalla complessità tecnica. Quando i dati dicono no, la risposta è no."
+        "title": "Valido le idee con codice che funziona,\nnon con i deck.",
+        "text": "Quando devo validare un'idea, costruisco un prototipo funzionante — non una presentazione. Gli utenti lo provano, osserviamo cosa succede, impariamo in giorni invece che mesi. La priorità viene dalla frustrazione reale degli utenti, non dalla politica interna. E quando i dati dicono che una feature non serve, la risposta è no — anche quando la chiede il 60% degli utenti.",
+        "shortText": "Quando devo validare un'idea, costruisco un prototipo funzionante — non una presentazione. Gli utenti lo provano, impariamo in giorni invece che mesi. Quando i dati dicono no, la risposta è no."
       }
     },
     "timeline": {
-      "label": "IL PERCORSO",
+      "label": "PERCORSO",
       "title": "Il percorso",
       "block1": {
         "role": "Founder e Designer",
@@ -102,42 +107,42 @@
       "closingLine": "Oggi quando parlo con un designer, capisco i vincoli. Quando parlo con uno sviluppatore, capisco i trade-off. Quando parlo con il business, traduco."
     },
     "metrics": {
-      "label": "NUMERI, NON PAROLE",
+      "label": "RISULTATI",
       "title": "Numeri, non parole",
       "metric1": {
         "number": "99%+",
-        "label": "Uptime",
-        "context": "100% uptime contro un target SLA del 99%"
+        "label": "Uptime sui sistemi di pagamento",
+        "context": "Transazioni per centri di intrattenimento in 5 paesi. Ereditato in stato critico, stabilizzato in 6 mesi"
       },
       "metric2": {
         "number": "-25%",
-        "label": "Incidenti post-release",
-        "context": "Post-release, attraverso processo di triage cross-funzionale"
+        "label": "Bug in meno arrivati ai clienti",
+        "context": "Introducendo review cross-funzionali settimanali prima di ogni release"
       },
       "metric3": {
         "number": "116",
-        "label": "Centri integrati",
-        "context": "Integrati su piattaforma enterprise, 5 nuovi a settimana"
+        "label": "Sedi attive sulla piattaforma",
+        "context": "Ognuna con pagamenti, scoring e operations attivi. 5 nuove live ogni settimana"
       },
       "metric4": {
         "number": "-35%",
-        "label": "Tempo di setup",
-        "context": "Su tutti i flussi di pagamento in piattaforma B2B su 5 paesi"
+        "label": "Tempo in meno per iniziare a usare il prodotto",
+        "context": "Flusso di setup ridisegnato per una piattaforma di integrazione con 380+ connettori"
       },
       "metric5": {
         "number": "+25%",
-        "label": "Crescita YoY",
-        "context": "Unico provider di pagamento ancora in crescita nel portfolio"
+        "label": "Crescita revenue anno su anno",
+        "context": "L'unica soluzione di pagamento ancora in crescita mentre i competitor si fermavano"
       },
       "metric6": {
         "number": "23/44",
-        "label": "Item spediti",
-        "context": "Spediti. Pagamenti critici ridotti da 12 a 5"
+        "label": "Problemi risolti in 6 mesi",
+        "context": "Da 12 problemi critici sui pagamenti a 5. Gli altri 21 erano decisioni deliberate di 'non ora'"
       },
       "link": "Guarda i case study"
     },
     "currentWork": {
-      "label": "COSA FACCIO ORA",
+      "label": "ORA",
       "title": "Cosa faccio ora",
       "card1": {
         "title": "Guido il prodotto payments e platform per un'azienda internazionale di 600 dipendenti",
@@ -156,7 +161,7 @@
       }
     },
     "contact": {
-      "label": "PARLIAMO",
+      "label": "CONTATTO",
       "title": "Parliamo",
       "text": "Se pensi che il mio profilo possa servire al tuo team, scrivimi. Anche se non sei sicuro che sia il fit giusto. Le conversazioni migliori che ho avuto sono iniziate con \"non so se è una cosa per te, ma...\".",
       "email": "hello@selfrules.org",
@@ -226,14 +231,14 @@
         "title": "Un sistema di pagamento\nche perdeva transazioni ogni giorno",
         "metric": "99%+",
         "metricLabel": "SUCCESS RATE →",
-        "preview": "Centinaia di centri in 5 paesi, 44 problemi aperti senza priorità, 4 con impatto economico immediato. La stabilizzazione senza riscrivere niente."
+        "preview": "I clienti perdevano soldi — doppi addebiti, pagamenti falliti, rimborsi spariti. 44 problemi aperti e la pressione di sistemare tutto insieme. Ho trovato i 4 che contavano davvero, risolti in 6 settimane, e portato il sistema al 99%+ di uptime. Senza riscrivere una riga di codice."
       },
       "cashless": {
         "tag": "Cashless · Product Strategy · Partnership",
         "title": "Cashless da zero: tre provider,\nun problema \"irrisolvibile\", e un prodotto da parcheggiare",
         "metric": "5 mesi",
         "metricLabel": "DA ZERO A DEMO LIVE →",
-        "preview": "Il prodotto interno sembrava la scelta ovvia. La discovery ha raccontato un'altra storia. Come la strategia cashless è stata definita partendo dai vincoli reali.",
+        "preview": "Come fai pagare i clienti senza contanti nei centri di intrattenimento? Tre provider in competizione, serve una strategia prodotto. La scelta ovvia sembrava la migliore sulla carta. I test reali con vincoli reali hanno raccontato un'altra storia.",
         "note": "Metriche finali disponibili al lancio in produzione — dati pilota in corso di raccolta"
       },
       "leadsbridge": {
@@ -241,7 +246,7 @@
         "title": "380+ integrazioni, e la maggior parte degli utenti\nnon ne finiva nemmeno una",
         "metric": "-35%",
         "metricLabel": "TEMPO DI SETUP →",
-        "preview": "Un flusso di creazione bridge in cinque step con enorme drop-off. La soluzione non era aggiungere funzioni — era toglierle. Auto-mapping, complessità nascosta, e un percorso più semplice verso l'attivazione."
+        "preview": "Migliaia di aziende volevano collegare i dati pubblicitari al CRM in automatico. Ma la maggior parte mollava durante la configurazione — troppo complessa. La soluzione non erano più funzionalità. Erano meno. Tempo di setup -35%, adozione +9%."
       }
     },
     "cta": {
@@ -258,6 +263,8 @@
       "company": "Piattaforma B2B SaaS · Entertainment & leisure · 5 paesi",
       "industry": "B2B SaaS · Payments · Enterprise",
       "summary": "Sistema di pagamento stabilizzato da crisi a 99.19% uptime con triage serrato — da 44 issue a 4 priorità.",
+      "tldr": "Un sistema di pagamento stava facendo perdere soldi veri ai clienti — doppi addebiti, rimborsi mancanti, timeout nelle ore di punta. Invece di provare a sistemare tutto insieme, ho filtrato 44 problemi aperti fino ai 4 che contavano davvero. Quei 4 risolti in 6 settimane. Il sistema è passato dalla crisi al 99%+ di uptime.",
+      "learnedCallout": "L’istinto in una crisi è risolvere e crescere allo stesso tempo. Non funziona. La prima vera decisione di prodotto è smettere di scavare il buco più in profondità.",
       "period": "2025",
       "heroMetric": "99.19%",
       "heroMetricLabel": "success rate globale",
@@ -348,7 +355,9 @@
             "content": "Il sistema di pagamento dopo il rescue era migliore di quello prima della crisi. Le crisi espongono il technical debt che le operazioni normali nascondono."
           }
         ]
-      }
+      },
+      "pullQuote1": "La prima decisione è smettere di scavare. Tutto il resto viene dopo.",
+      "pullQuote2": "Un unico criterio di priorità chiaro ha dato al team più direzione di qualsiasi discussione."
     },
     "leadsbridge": {
       "tag": "B2B SaaS · Integration Platform · Growth",
@@ -356,6 +365,8 @@
       "company": "Piattaforma B2B SaaS · Lead generation · 380+ integrazioni",
       "industry": "B2B SaaS · Integration Platform · Growth",
       "summary": "Ridisegnato il flusso di creazione bridge rimuovendo complessità, non aggiungendone. Setup time -35%, adoption +9%.",
+      "tldr": "Migliaia di aziende volevano spostare automaticamente i lead pubblicitari nel loro CRM. Ma la maggior parte mollava durante la configurazione — cinque step, ognuno più confuso del precedente. La soluzione non erano più funzionalità. Erano meno. Tempo di setup -35%, adozione +9%.",
+      "learnedCallout": "C’è differenza tra quello che gli utenti chiedono e quello di cui hanno bisogno per avere successo. La maggior parte aveva bisogno di un percorso più semplice. Chi aveva bisogno di complessità poteva gestire un click in più.",
       "period": "2020–2023",
       "heroMetric": "-35%",
       "heroMetricLabel": "tempo di setup",
@@ -441,7 +452,9 @@
             "content": "L'80% degli utenti aveva bisogno dello stesso flusso semplice. La piattaforma già supportava casi complessi. Il valore era rendere il percorso semplice effettivamente semplice."
           }
         ]
-      }
+      },
+      "pullQuote1": "Non stiamo togliendo funzionalità. Stiamo togliendo attrito.",
+      "pullQuote2": "Una schermata di mappatura vuota e una pre-compilata portano allo stesso posto. Ma quella pre-compilata comunica che abbiamo capito il caso d’uso."
     },
     "cashless": {
       "tag": "Cashless · Product Strategy · Partnership",
@@ -449,6 +462,8 @@
       "company": "Piattaforma B2B SaaS · Entertainment & leisure · 5 paesi",
       "industry": "B2B SaaS · Cashless · Strategy & Partnerships",
       "summary": "Ucciso un prodotto interno e costruita una partnership di co-sviluppo che ha risolto il problema strutturale in 5 mesi.",
+      "tldr": "I centri di intrattenimento volevano far giocare i clienti senza contanti — carica denaro su una card, tocca per giocare. Tre provider competevano per il deal, e il prodotto interno ovvio non avrebbe funzionato. L’ho fermato, testato due alternative con vincoli reali, e costruito una partnership di co-sviluppo che in 5 mesi è passata da zero a un sistema funzionante.",
+      "learnedCallout": "La decisione di prodotto più difficile non è cosa costruire. È cosa smettere di costruire. Fermare il prodotto interno subito ha risparmiato mesi e prevenuto una seconda crisi.",
       "period": "2025–2026",
       "heroMetric": "5 mesi",
       "heroMetricLabel": "da zero a demo live",
@@ -529,7 +544,9 @@
             "content": "Andare da nulla a un pilot funzionante in 5 mesi richiedeva skills di PM che la modalità maintenance non esercita mai: tolleranza dell'ambiguità, negoziazione con vendor, allineamento degli stakeholder senza dati."
           }
         ]
-      }
+      },
+      "pullQuote1": "La decisione di prodotto più difficile non è cosa costruire. È cosa smettere di costruire.",
+      "pullQuote2": "Scegliere un partner non è una valutazione fornitori. È una decisione di prodotto."
     },
     "cta": {
       "text": "Questi casi raccontano il come. Se vuoi il chi, c’è la pagina about. Se vuoi parlare, scrivimi.",
@@ -620,6 +637,11 @@
           "**Bot Telegram:** Attivo 24/7 per il testing. Processa alert giornalieri, gestisce il comando /outreach per generare messaggi."
         ]
       }
+    },
+    "summaryLabels": {
+      "role": "Ruolo",
+      "period": "Periodo",
+      "industry": "Settore"
     }
   },
   "lab": {
@@ -696,7 +718,7 @@
       "why-i-prototype-in-code": {
         "title": "Perché prototipo in codice",
         "date": "2026-01-16",
-        "excerpt": "Un Product Manager che prototipa in codice prende decisioni diverse.",
+        "excerpt": "I diagrammi nascondono le parti difficili. Costruire un sistema vero — anche piccolo — fa emergere i vincoli architetturali che dovrebbero guidare le decisioni di prodotto.",
         "readingTime": "4 min di lettura",
         "tags": [
           "Product Craft",
@@ -706,7 +728,7 @@
       "the-meeting-where-everyone-says-yes": {
         "title": "Il meeting dove tutti dicono sì",
         "date": "2026-02-08",
-        "excerpt": "Allineamento non è la stessa cosa di accordo. Uno costruisce prodotti, l'altro costruisce backlog.",
+        "excerpt": "Quando nessuno dissente, nessuno sta pensando. Un PM senza una posizione trasforma la roadmap in un parcheggio di feature scollegate.",
         "readingTime": "5 min di lettura",
         "tags": [
           "Decision Making",
@@ -716,7 +738,7 @@
       "why-metrics-lie-without-context": {
         "title": "Perché le metriche mentono senza contesto",
         "date": "2026-03-22",
-        "excerpt": "Un numero senza una storia è solo un numero. La storia è ciò che lo rende una decisione.",
+        "excerpt": "Ogni metrica ha bisogno di tre cose: il numero, il meccanismo che l'ha causato, e la contro-metrica — cosa hai sacrificato. Senza tutte e tre, stai tirando a indovinare.",
         "readingTime": "6 min di lettura",
         "tags": [
           "Product Craft",
@@ -726,7 +748,7 @@
       "when-ai-makes-sense-in-product": {
         "title": "Quando l'AI ha senso nel prodotto",
         "date": "2024-12-15",
-        "excerpt": "Pensare all'AI nelle decisioni.",
+        "excerpt": "La regola 80/20 applicata all'AI: regole deterministiche per i problemi prevedibili, ML solo dove serve giudizio vero. La maggior parte delle feature non ha bisogno di un modello.",
         "readingTime": "5 min",
         "tags": [
           "AI",
@@ -736,7 +758,7 @@
       "managing-payments-at-scale": {
         "title": "Gestire i pagamenti su scala",
         "date": "2025-01-15",
-        "excerpt": "Come scalano i pagamenti.",
+        "excerpt": "I pagamenti richiedono un mindset da PM diverso. Sicurezza prima di possibilità. Una settimana a leggere le API e tracciare i flussi di denaro previene mesi di incendi in produzione.",
         "readingTime": "6 min",
         "tags": [
           "Pagamenti",
@@ -746,7 +768,7 @@
       "remote-pm-across-countries": {
         "title": "PM remoto su paesi diversi",
         "date": "2025-01-08",
-        "excerpt": "Product management su fusi orari diversi.",
+        "excerpt": "Il PM remoto fallisce quando provi a risolvere il gap di fuso orario con meeting migliori. La vera skill è l'async-first: documentazione persistente, decisioni scritte, contesto condiviso.",
         "readingTime": "5 min",
         "tags": [
           "Remoto",
@@ -756,7 +778,7 @@
       "build-vs-buy-framework": {
         "title": "Framework Build vs Buy",
         "date": "2024-12-08",
-        "excerpt": "Un framework per decisioni build vs buy.",
+        "excerpt": "Build vs buy non è una decisione tecnica. Sono quattro domande strategiche in sequenza: vincolo, differenziatore, costo totale, reversibilità.",
         "readingTime": "4 min",
         "tags": [
           "Framework",
@@ -766,7 +788,7 @@
       "seven-years-running-a-business": {
         "title": "Sette anni a gestire un business",
         "date": "2025-01-01",
-        "excerpt": "Lezioni da sette anni.",
+        "excerpt": "Sette anni da freelance hanno insegnato una regola su tutte: conta portare a termine. I clienti guardano le date di consegna e i risultati visibili, non il processo elegante.",
         "readingTime": "7 min",
         "tags": [
           "Business",

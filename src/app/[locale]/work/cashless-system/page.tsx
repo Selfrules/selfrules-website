@@ -8,6 +8,7 @@ import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
 import { PullQuote } from '@/components/ui/PullQuote';
+import { KeyInsight } from '@/components/ui/KeyInsight';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -171,7 +172,18 @@ export default async function CashlessSystemPage({
             { value: resultItems[1]?.metric || '1', label: resultItems[1]?.label || 'co-development partnership' },
           ]}
           summary={t('cashless.summary')}
+          labels={{ role: t('summaryLabels.role'), period: t('summaryLabels.period'), industry: t('summaryLabels.industry') }}
         />
+      </Section>
+
+      {/* TL;DR + Key Insight */}
+      <Section>
+        <div className="max-w-none leading-[1.7] prose prose-invert prose-p:text-[var(--color-text-primary)]">
+          <p className="text-[18px] md:text-[20px] leading-[1.7] text-[rgba(255,255,255,0.7)]">
+            {t('cashless.tldr')}
+          </p>
+        </div>
+        <KeyInsight>{t('cashless.learnedCallout')}</KeyInsight>
       </Section>
 
       {/* Body */}
@@ -201,11 +213,11 @@ export default async function CashlessSystemPage({
           {approachParagraphs.slice(0, 2).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>The hardest product decision isn't what to build. It's what to stop building.</PullQuote>
+          <PullQuote>{t('cashless.pullQuote1')}</PullQuote>
           {approachParagraphs.slice(2, 4).map((p, i) => (
             <p key={i + 2} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>Choosing a partner isn't a vendor evaluation. It's a product decision.</PullQuote>
+          <PullQuote>{t('cashless.pullQuote2')}</PullQuote>
           {approachParagraphs.slice(4).map((p, i) => (
             <p key={i + 4} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}

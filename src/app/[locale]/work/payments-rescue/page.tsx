@@ -8,6 +8,7 @@ import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
 import { PullQuote } from '@/components/ui/PullQuote';
+import { KeyInsight } from '@/components/ui/KeyInsight';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'it' }];
@@ -171,7 +172,18 @@ export default async function PaymentsRescuePage({
             { value: resultItems[1]?.metric || '116', label: resultItems[1]?.label || 'centers integrated' },
           ]}
           summary={t('payments.summary')}
+          labels={{ role: t('summaryLabels.role'), period: t('summaryLabels.period'), industry: t('summaryLabels.industry') }}
         />
+      </Section>
+
+      {/* TL;DR + Key Insight */}
+      <Section>
+        <div className="max-w-none leading-[1.7] prose prose-invert prose-p:text-[var(--color-text-primary)]">
+          <p className="text-[18px] md:text-[20px] leading-[1.7] text-[rgba(255,255,255,0.7)]">
+            {t('payments.tldr')}
+          </p>
+        </div>
+        <KeyInsight>{t('payments.learnedCallout')}</KeyInsight>
       </Section>
 
       {/* Body */}
@@ -201,11 +213,11 @@ export default async function PaymentsRescuePage({
           {approachParagraphs.slice(0, 1).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>The first decision is to stop making the hole deeper. Everything else follows from that.</PullQuote>
+          <PullQuote>{t('payments.pullQuote1')}</PullQuote>
           {approachParagraphs.slice(1, 3).map((p, i) => (
             <p key={i + 1} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
-          <PullQuote>A single clear sorting criterion gave the team more clarity than any amount of discussion.</PullQuote>
+          <PullQuote>{t('payments.pullQuote2')}</PullQuote>
           {approachParagraphs.slice(3).map((p, i) => (
             <p key={i + 3} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
