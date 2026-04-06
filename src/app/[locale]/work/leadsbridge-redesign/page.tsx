@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { createPageMetadata } from '@/lib/metadata';
+import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import { markdownBold } from '@/lib/markdown';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
@@ -9,9 +11,10 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
 import { PullQuote } from '@/components/ui/PullQuote';
 import { KeyInsight } from '@/components/ui/KeyInsight';
+import { PatternCard } from '@/components/ui/PatternCard';
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }
 
 type Props = { params: Promise<{ locale: string }> };
@@ -27,14 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-/** Convert **bold** markdown to <strong> tags */
-function markdownBold(text: string): string {
-  return text.replace(
-    /\*\*(.*?)\*\*/g,
-    '<strong>$1</strong>'
-  );
-}
-
 export default async function LeadsBridgePage({
   params,
 }: {
@@ -44,14 +39,10 @@ export default async function LeadsBridgePage({
   setRequestLocale(locale);
   const t = await getTranslations('caseStudies');
 
-  const baseUrl = 'https://selfrules.org';
   const workName = locale === 'it' ? 'Lavori' : 'Work';
-  const workUrl = locale === 'it' ? `${baseUrl}/it/work` : `${baseUrl}/work`;
-  const pageUrl =
-    locale === 'it'
-      ? `${baseUrl}/it/work/leadsbridge-redesign`
-      : `${baseUrl}/work/leadsbridge-redesign`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const workUrl = buildLocalizedUrl(locale, '/work');
+  const pageUrl = buildLocalizedUrl(locale, '/work/leadsbridge-redesign');
+  const homeUrl = buildLocalizedUrl(locale);
 
   const contextParagraphs = t.raw('leadsbridge.context.content') as string[];
   const challengeParagraphs = t.raw('leadsbridge.challenge.content') as string[];
@@ -130,7 +121,7 @@ export default async function LeadsBridgePage({
           {t('backToWork')}
         </Link>
 
-        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">
+        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.55)]">
           {t('leadsbridge.role')} · {t('leadsbridge.company')} · {t('leadsbridge.period')}
         </span>
 
@@ -145,7 +136,7 @@ export default async function LeadsBridgePage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('leadsbridge.heroMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('leadsbridge.heroMetricLabel')}
             </p>
           </div>
@@ -153,7 +144,7 @@ export default async function LeadsBridgePage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('leadsbridge.secondMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('leadsbridge.secondMetricLabel')}
             </p>
           </div>
@@ -245,16 +236,17 @@ export default async function LeadsBridgePage({
 
           {/* Patterns */}
           <h2 className="mt-16">{t('leadsbridge.patterns.heading')}</h2>
-          {patternItems.map((item, i) => (
-            <div key={i} className="mt-8">
-              <h3 className="font-heading font-bold text-[16px] leading-[1.5] tracking-[-0.5px] text-[#f5f5f0]">
-                {item.title}
-              </h3>
-              <p className="mt-3">{item.content}</p>
-            </div>
-          ))}
+          <div className="mt-8 space-y-6">
+            {patternItems.map((item, i) => (
+              <PatternCard key={i} title={item.title}>
+                {item.content}
+              </PatternCard>
+            ))}
+          </div>
         </div>
       </Section>
+
+      {/* Related Notes — LeadsBridge has no strong direct blog link yet */}
 
       <PageCTA
         text={t('cta.text')}

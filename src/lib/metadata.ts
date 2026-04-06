@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
+import { BASE_URL } from '@/lib/constants';
+import { routing } from '@/i18n/routing';
 
-const baseUrl = 'https://selfrules.org';
+export function buildLocalizedUrl(locale: string, path: string = '/'): string {
+  const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
+  const suffix = path === '/' ? '' : path;
+  return `${BASE_URL}${prefix}${suffix}`;
+}
 
 export function createPageMetadata({
   locale,
@@ -13,9 +19,9 @@ export function createPageMetadata({
   title: string;
   description: string;
 }): Metadata {
-  const enUrl = `${baseUrl}${path === '/' ? '' : path}`;
-  const itUrl = `${baseUrl}/it${path === '/' ? '' : path}`;
-  const currentUrl = locale === 'it' ? itUrl : enUrl;
+  const enUrl = buildLocalizedUrl('en', path);
+  const itUrl = buildLocalizedUrl('it', path);
+  const currentUrl = buildLocalizedUrl(locale, path);
 
   return {
     title,
@@ -37,7 +43,7 @@ export function createPageMetadata({
       type: 'website',
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: `${BASE_URL}/og-image.png`,
           width: 1200,
           height: 630,
         },
@@ -47,7 +53,7 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [`${baseUrl}/og-image.png`],
+      images: [`${BASE_URL}/og-image.png`],
     },
   };
 }

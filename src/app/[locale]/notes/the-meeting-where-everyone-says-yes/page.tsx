@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
 import { NoteLayout } from '@/components/layout/NoteLayout';
 import { getAdjacentPosts } from '@/lib/posts';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 
 const SLUG = 'the-meeting-where-everyone-says-yes';
 
@@ -53,5 +54,5 @@ export default async function BlogPost({
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }

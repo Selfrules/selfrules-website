@@ -6,3 +6,5 @@ export const routing = defineRouting({
   localePrefix: 'as-needed',
   localeDetection: false
 });
+
+export const LOCALE_PARAMS = routing.locales.map((locale) => ({ locale }));

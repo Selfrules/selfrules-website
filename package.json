@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "test:e2e": "playwright test",
+    "test:i18n": "node scripts/check-i18n-keys.mjs",
     "remotion:studio": "remotion studio remotion/Root.tsx",
     "remotion:render": "remotion render remotion/Root.tsx"
   },

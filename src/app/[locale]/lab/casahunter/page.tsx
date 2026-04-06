@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { createPageMetadata } from '@/lib/metadata';
+import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import { markdownBold } from '@/lib/markdown';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { Section } from '@/components/layout/Section';
@@ -9,9 +11,10 @@ import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AiBadge } from '@/components/ui/AiBadge';
 import { ArchitectureDiagram } from '@/components/ui/ArchitectureDiagram';
+import { DecisionCard } from '@/components/ui/DecisionCard';
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }
 
 type Props = { params: Promise<{ locale: string }> };
@@ -27,14 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-/** Convert **bold** markdown to <strong> tags */
-function markdownBold(text: string): string {
-  return text.replace(
-    /\*\*(.*?)\*\*/g,
-    '<strong>$1</strong>'
-  );
-}
-
 export default async function CasaHunterPage({
   params,
 }: {
@@ -44,14 +39,10 @@ export default async function CasaHunterPage({
   setRequestLocale(locale);
   const t = await getTranslations('caseStudies');
 
-  const baseUrl = 'https://selfrules.org';
   const labName = locale === 'it' ? 'Lab' : 'Lab';
-  const labUrl = locale === 'it' ? `${baseUrl}/it/lab` : `${baseUrl}/lab`;
-  const pageUrl =
-    locale === 'it'
-      ? `${baseUrl}/it/lab/casahunter`
-      : `${baseUrl}/lab/casahunter`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const labUrl = buildLocalizedUrl(locale, '/lab');
+  const pageUrl = buildLocalizedUrl(locale, '/lab/casahunter');
+  const homeUrl = buildLocalizedUrl(locale);
 
   const originParagraphs = t.raw('casahunter.origin.content') as string[];
   const v1Paragraphs = t.raw('casahunter.v1.content') as string[];
@@ -62,6 +53,12 @@ export default async function CasaHunterPage({
     metric: string;
     label: string;
   }[];
+  const decisionLog = t.raw('casahunter.decisionLog') as {
+    heading: string;
+    whyLabel: string;
+    learnedLabel: string;
+    items: { title: string; why: string; learned: string }[];
+  };
   const learnedParagraphs = t.raw('casahunter.learned.content') as string[];
 
   /* Shared prose class string for consistent styling */
@@ -136,7 +133,7 @@ export default async function CasaHunterPage({
           {locale === 'it' ? 'Torna al Lab' : 'Back to Lab'}
         </Link>
 
-        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.4)]">
+        <span className="block font-mono text-[12px] uppercase tracking-[1.2px] text-[rgba(255,255,255,0.55)]">
           {t('casahunter.role')} · {t('casahunter.company')} · {t('casahunter.period')}
         </span>
 
@@ -156,7 +153,7 @@ export default async function CasaHunterPage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('casahunter.heroMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('casahunter.heroMetricLabel')}
             </p>
           </div>
@@ -164,7 +161,7 @@ export default async function CasaHunterPage({
             <p className="font-heading font-bold text-[#e8a838] text-[48px] md:text-[72px] leading-[1] tracking-[-3.6px]">
               {t('casahunter.secondMetric')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">
               {t('casahunter.secondMetricLabel')}
             </p>
           </div>
@@ -179,6 +176,7 @@ export default async function CasaHunterPage({
             muted
             loop
             playsInline
+            preload="none"
             className="w-full border border-[rgba(255,255,255,0.08)]"
             poster="/images/casahunter/v1-map.png"
           >
@@ -214,10 +212,11 @@ export default async function CasaHunterPage({
               width={1440}
               height={900}
               className="w-full h-auto"
-              quality={85}
+              quality={75}
+              loading="lazy"
             />
             <div className="px-4 py-3 bg-[rgba(255,255,255,0.03)]">
-              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)]">
+              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.55)]">
                 {locale === 'it'
                   ? 'Vista mappa — pin colorati per score (verde = alto, giallo = medio, rosso = basso)'
                   : 'Map view — score-colored pins (green = high, yellow = medium, red = low)'}
@@ -233,10 +232,11 @@ export default async function CasaHunterPage({
               width={1440}
               height={900}
               className="w-full h-auto"
-              quality={85}
+              quality={75}
+              loading="lazy"
             />
             <div className="px-4 py-3 bg-[rgba(255,255,255,0.03)]">
-              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)]">
+              <p className="font-mono text-[11px] text-[rgba(255,255,255,0.55)]">
                 {locale === 'it'
                   ? 'Vista lista — card con score AI, prezzo, metratura e analisi'
                   : 'List view — cards with AI score, price, size and analysis'}
@@ -253,10 +253,11 @@ export default async function CasaHunterPage({
             width={1440}
             height={900}
             className="w-full h-auto"
-            quality={85}
+            quality={75}
+            loading="lazy"
           />
           <div className="px-4 py-3 bg-[rgba(255,255,255,0.03)]">
-            <p className="font-mono text-[11px] text-[rgba(255,255,255,0.4)]">
+            <p className="font-mono text-[11px] text-[rgba(255,255,255,0.55)]">
               {locale === 'it'
                 ? 'Statistiche — distribuzione prezzi, categorie di score, analisi zone'
                 : 'Statistics — price distribution, score categories, zone analysis'}
@@ -342,6 +343,23 @@ export default async function CasaHunterPage({
           ))}
         </div>
 
+        {/* Key Decisions */}
+        <div className={`${proseClasses} mt-12`}>
+          <h2>{decisionLog.heading}</h2>
+        </div>
+        <div className="not-prose mt-6 flex flex-col gap-4">
+          {decisionLog.items.map((item, i) => (
+            <DecisionCard
+              key={i}
+              title={item.title}
+              why={item.why}
+              learned={item.learned}
+              whyLabel={decisionLog.whyLabel}
+              learnedLabel={decisionLog.learnedLabel}
+            />
+          ))}
+        </div>
+
         {/* What I learned */}
         <div className={`${proseClasses} mt-12`}>
           <h2>{t('casahunter.learned.heading')}</h2>
@@ -356,6 +374,38 @@ export default async function CasaHunterPage({
           {(t.raw('casahunter.links.content') as string[]).map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: markdownBold(p) }} />
           ))}
+        </div>
+      </Section>
+
+      {/* Related Notes */}
+      <Section>
+        <div className="border-t border-[var(--color-border-default)] pt-12">
+          <h2 className="font-heading font-bold text-[18px] tracking-[-0.5px] text-text-primary mb-6">
+            {locale === 'it' ? 'Note correlate' : 'Related notes'}
+          </h2>
+          <ul className="space-y-3">
+            <li>
+              <Link href="/notes/why-i-prototype-in-code" className="text-[15px] text-text-secondary hover:text-accent transition-colors">
+                {locale === 'it'
+                  ? 'Perché faccio prototipi in codice'
+                  : 'Why I prototype in code'}
+              </Link>
+            </li>
+            <li>
+              <Link href="/notes/when-ai-makes-sense-in-product" className="text-[15px] text-text-secondary hover:text-accent transition-colors">
+                {locale === 'it'
+                  ? 'Quando l\'AI ha senso nel prodotto'
+                  : 'When AI makes sense in product'}
+              </Link>
+            </li>
+            <li>
+              <Link href="/notes/build-vs-buy-framework" className="text-[15px] text-text-secondary hover:text-accent transition-colors">
+                {locale === 'it'
+                  ? 'Build vs Buy — un framework decisionale'
+                  : 'Build vs Buy — a decision framework'}
+              </Link>
+            </li>
+          </ul>
         </div>
       </Section>
 

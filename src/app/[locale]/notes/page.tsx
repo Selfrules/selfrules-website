@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { createPageMetadata } from '@/lib/metadata';
+import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
+import { POSTS } from '@/lib/posts';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
@@ -29,72 +31,14 @@ export default async function NotesPage({
   setRequestLocale(locale);
   const t = await getTranslations('notes');
 
-  const posts = [
-    {
-      slug: 'why-i-prototype-in-code',
-      title: t('posts.why-i-prototype-in-code.title'),
-      date: t('posts.why-i-prototype-in-code.date'),
-      excerpt: t('posts.why-i-prototype-in-code.excerpt'),
-      readingTime: t('posts.why-i-prototype-in-code.readingTime'),
-      tags: t.raw('posts.why-i-prototype-in-code.tags') as string[],
-    },
-    {
-      slug: 'the-meeting-where-everyone-says-yes',
-      title: t('posts.the-meeting-where-everyone-says-yes.title'),
-      date: t('posts.the-meeting-where-everyone-says-yes.date'),
-      excerpt: t('posts.the-meeting-where-everyone-says-yes.excerpt'),
-      readingTime: t('posts.the-meeting-where-everyone-says-yes.readingTime'),
-      tags: t.raw('posts.the-meeting-where-everyone-says-yes.tags') as string[],
-    },
-    {
-      slug: 'why-metrics-lie-without-context',
-      title: t('posts.why-metrics-lie-without-context.title'),
-      date: t('posts.why-metrics-lie-without-context.date'),
-      excerpt: t('posts.why-metrics-lie-without-context.excerpt'),
-      readingTime: t('posts.why-metrics-lie-without-context.readingTime'),
-      tags: t.raw('posts.why-metrics-lie-without-context.tags') as string[],
-    },
-    {
-      slug: 'when-ai-makes-sense-in-product',
-      title: t('posts.when-ai-makes-sense-in-product.title'),
-      date: t('posts.when-ai-makes-sense-in-product.date'),
-      excerpt: t('posts.when-ai-makes-sense-in-product.excerpt'),
-      readingTime: t('posts.when-ai-makes-sense-in-product.readingTime'),
-      tags: t.raw('posts.when-ai-makes-sense-in-product.tags') as string[],
-    },
-    {
-      slug: 'managing-payments-at-scale',
-      title: t('posts.managing-payments-at-scale.title'),
-      date: t('posts.managing-payments-at-scale.date'),
-      excerpt: t('posts.managing-payments-at-scale.excerpt'),
-      readingTime: t('posts.managing-payments-at-scale.readingTime'),
-      tags: t.raw('posts.managing-payments-at-scale.tags') as string[],
-    },
-    {
-      slug: 'remote-pm-across-countries',
-      title: t('posts.remote-pm-across-countries.title'),
-      date: t('posts.remote-pm-across-countries.date'),
-      excerpt: t('posts.remote-pm-across-countries.excerpt'),
-      readingTime: t('posts.remote-pm-across-countries.readingTime'),
-      tags: t.raw('posts.remote-pm-across-countries.tags') as string[],
-    },
-    {
-      slug: 'build-vs-buy-framework',
-      title: t('posts.build-vs-buy-framework.title'),
-      date: t('posts.build-vs-buy-framework.date'),
-      excerpt: t('posts.build-vs-buy-framework.excerpt'),
-      readingTime: t('posts.build-vs-buy-framework.readingTime'),
-      tags: t.raw('posts.build-vs-buy-framework.tags') as string[],
-    },
-    {
-      slug: 'seven-years-running-a-business',
-      title: t('posts.seven-years-running-a-business.title'),
-      date: t('posts.seven-years-running-a-business.date'),
-      excerpt: t('posts.seven-years-running-a-business.excerpt'),
-      readingTime: t('posts.seven-years-running-a-business.readingTime'),
-      tags: t.raw('posts.seven-years-running-a-business.tags') as string[],
-    },
-  ];
+  const posts = POSTS.map((slug) => ({
+    slug,
+    title: t(`posts.${slug}.title`),
+    date: t(`posts.${slug}.date`),
+    excerpt: t(`posts.${slug}.excerpt`),
+    readingTime: t(`posts.${slug}.readingTime`),
+    tags: t.raw(`posts.${slug}.tags`) as string[],
+  }));
 
   // Group posts by year
   const postsByYear = posts.reduce<Record<string, typeof posts>>((acc, post) => {
@@ -106,10 +50,9 @@ export default async function NotesPage({
 
   const years = Object.keys(postsByYear).sort((a, b) => b.localeCompare(a));
 
-  const baseUrl = 'https://selfrules.org';
   const pageName = locale === 'it' ? 'Note' : 'Notes';
-  const pageUrl = locale === 'it' ? `${baseUrl}/it/notes` : `${baseUrl}/notes`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const pageUrl = buildLocalizedUrl(locale, '/notes');
+  const homeUrl = buildLocalizedUrl(locale);
 
   // Format date for display (e.g., "Mar 22")
   const formatDate = (dateStr: string) => {
@@ -148,14 +91,14 @@ export default async function NotesPage({
               <div key={year}>
                 {/* Year separator */}
                 <div className="border-b border-[#1a1a1f] pb-4">
-                  <span className="font-mono text-[13px] uppercase tracking-[1.3px] text-[rgba(255,255,255,0.3)]">{year}</span>
+                  <span className="font-mono text-[13px] uppercase tracking-[1.3px] text-[rgba(255,255,255,0.55)]">{year}</span>
                 </div>
 
                 {/* Posts in this year */}
                 <div className="flex flex-col gap-16 mt-12">
                   {postsByYear[year].map((post) => (
                     <article key={post.slug} className="flex gap-6">
-                      <time className="w-[96px] shrink-0 font-mono text-[13px] leading-[19.5px] text-[rgba(255,255,255,0.4)] pt-[6px]">
+                      <time className="w-[96px] shrink-0 font-mono text-[13px] leading-[19.5px] text-[rgba(255,255,255,0.55)] pt-[6px]">
                         {formatDate(post.date)}
                       </time>
                       <div>
@@ -176,7 +119,7 @@ export default async function NotesPage({
             ))}
           </div>
         ) : (
-          <p className="mt-12 text-[16px] text-[rgba(255,255,255,0.4)]">
+          <p className="mt-12 text-[16px] text-[rgba(255,255,255,0.55)]">
             {t('emptyState')}
           </p>
         )}
@@ -199,5 +142,5 @@ export default async function NotesPage({
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { createPageMetadata } from '@/lib/metadata';
+import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Section } from '@/components/layout/Section';
 import { ProjectCard } from '@/components/ui/ProjectCard';
 import { PageCTA } from '@/components/sections/page-cta';
@@ -21,7 +22,7 @@ const CASAHUNTER_STACK = [
 ];
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }
 
 type Props = { params: Promise<{ locale: string }> };
@@ -46,9 +47,8 @@ export default async function LabPage({
   setRequestLocale(locale);
   const t = await getTranslations('lab');
 
-  const baseUrl = 'https://selfrules.org';
-  const pageUrl = locale === 'it' ? `${baseUrl}/it/lab` : `${baseUrl}/lab`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const pageUrl = buildLocalizedUrl(locale, '/lab');
+  const homeUrl = buildLocalizedUrl(locale);
 
   return (
     <>

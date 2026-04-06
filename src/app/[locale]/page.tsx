@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Hero } from '@/components/sections/Hero';
 import { WhatIDo } from '@/components/sections/WhatIDo';
 import { HowIWork } from '@/components/sections/HowIWork';
@@ -182,5 +183,5 @@ export default async function HomePage({
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }

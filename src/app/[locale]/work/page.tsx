@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { createPageMetadata } from '@/lib/metadata';
+import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Section } from '@/components/layout/Section';
 import { CaseStudyCard } from '@/components/ui/CaseStudyCard';
 import { PageCTA } from '@/components/sections/page-cta';
@@ -9,7 +10,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }
 
 type Props = { params: Promise<{ locale: string }> };
@@ -34,10 +35,9 @@ export default async function WorkPage({
   setRequestLocale(locale);
   const t = await getTranslations('work');
 
-  const baseUrl = 'https://selfrules.org';
   const pageName = locale === 'it' ? 'Lavori' : 'Work';
-  const pageUrl = locale === 'it' ? `${baseUrl}/it/work` : `${baseUrl}/work`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const pageUrl = buildLocalizedUrl(locale, '/work');
+  const homeUrl = buildLocalizedUrl(locale);
 
   return (
     <>
@@ -57,12 +57,15 @@ export default async function WorkPage({
         <p className="mt-6 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
+        <p className="mt-8 text-[17px] leading-[28px] text-[rgba(255,255,255,0.45)]">
+          {t('metaNarrative')}
+        </p>
       </Section>
 
       {/* Case Study Cards */}
       <ScrollReveal>
       <Section wide>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 sm:gap-6">
           {/* Card 1: Payments Rescue */}
           <CaseStudyCard
             tag={t('cases.payments.tag')}
@@ -83,7 +86,7 @@ export default async function WorkPage({
               metricLabel={t('cases.cashless.metricLabel')}
               href="/work/cashless-system"
             />
-            <p className="mt-3 font-mono text-[14px] text-[rgba(255,255,255,0.4)]">
+            <p className="mt-3 font-mono text-[14px] text-[rgba(255,255,255,0.55)]">
               {t('cases.cashless.note')}
             </p>
           </div>

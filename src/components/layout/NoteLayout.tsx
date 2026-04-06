@@ -1,6 +1,7 @@
 import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { JsonLd } from '@/components/seo/json-ld';
+import { buildLocalizedUrl } from '@/lib/metadata';
 
 interface NoteLayoutProps {
   locale: string;
@@ -19,15 +20,10 @@ export function NoteLayout({
   prevPost,
   nextPost,
 }: NoteLayoutProps) {
-  const baseUrl = 'https://selfrules.org';
   const notesName = locale === 'it' ? 'Note' : 'Notes';
-  const notesUrl =
-    locale === 'it' ? `${baseUrl}/it/notes` : `${baseUrl}/notes`;
-  const postUrl =
-    locale === 'it'
-      ? `${baseUrl}/it/notes/${slug}`
-      : `${baseUrl}/notes/${slug}`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const notesUrl = buildLocalizedUrl(locale, '/notes');
+  const postUrl = buildLocalizedUrl(locale, `/notes/${slug}`);
+  const homeUrl = buildLocalizedUrl(locale);
 
   return (
     <>
@@ -109,7 +105,7 @@ export function NoteLayout({
             </time>
             {metadata.readingTime && (
               <>
-                <span className="text-[rgba(255,255,255,0.3)]">·</span>
+                <span className="text-[rgba(255,255,255,0.55)]">·</span>
                 <span className="font-mono text-[14px] uppercase tracking-[0.05em] text-text-secondary">
                   {metadata.readingTime} min read
                 </span>
@@ -125,7 +121,8 @@ export function NoteLayout({
               prose-a:text-[var(--color-text-primary)] prose-a:underline hover:prose-a:text-[var(--color-accent)]
               prose-strong:text-[var(--color-accent)] prose-strong:font-bold
               prose-code:font-mono prose-code:text-sm prose-code:bg-[var(--color-surface)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-none
-              prose-hr:border-[var(--color-border-default)] prose-hr:my-12"
+              prose-hr:border-[var(--color-border-default)] prose-hr:my-12
+              prose-img:max-w-full prose-img:h-auto"
           >
             {children}
           </div>
@@ -138,7 +135,7 @@ export function NoteLayout({
                 href={`/notes/${prevPost.slug}`}
                 className="group text-[14px] text-[rgba(255,255,255,0.5)] hover:text-accent transition-colors"
               >
-                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.3)] mb-1">
+                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)] mb-1">
                   {locale === 'it' ? 'Precedente' : 'Previous'}
                 </span>
                 ← {prevPost.title}
@@ -151,7 +148,7 @@ export function NoteLayout({
                 href={`/notes/${nextPost.slug}`}
                 className="group text-right text-[14px] text-[rgba(255,255,255,0.5)] hover:text-accent transition-colors"
               >
-                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.3)] mb-1">
+                <span className="block font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)] mb-1">
                   {locale === 'it' ? 'Successivo' : 'Next'}
                 </span>
                 {nextPost.title} →

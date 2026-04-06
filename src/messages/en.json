@@ -259,6 +259,7 @@
   "caseStudies": {
     "backToWork": "Back to Work",
     "payments": {
+      "headline": "How a payment system went from crisis to 99% uptime",
       "tag": "Payments · B2B SaaS · Enterprise",
       "role": "Senior Product Manager, Payments",
       "company": "B2B SaaS platform · Entertainment & leisure · 5 countries",

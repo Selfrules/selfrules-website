@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { createPageMetadata } from '@/lib/metadata';
+import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
 import { JsonLd } from '@/components/seo/json-ld';
@@ -30,10 +31,9 @@ export default async function ContactPage({
   setRequestLocale(locale);
   const t = await getTranslations('contact');
 
-  const baseUrl = 'https://selfrules.org';
   const pageName = locale === 'it' ? 'Parliamo' : 'Contact';
-  const pageUrl = locale === 'it' ? `${baseUrl}/it/contact` : `${baseUrl}/contact`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const pageUrl = buildLocalizedUrl(locale, '/contact');
+  const homeUrl = buildLocalizedUrl(locale);
 
   return (
     <>
@@ -46,7 +46,7 @@ export default async function ContactPage({
         ]
       }} />
 
-      {/* Headline */}
+      {/* Headline + Contact Details + Availability — single Section */}
       <Section>
         <h1 className="font-heading font-bold text-[32px] md:text-[48px] leading-[36px] md:leading-[52.8px] tracking-[-1.2px] text-[#f5f5f0] md:whitespace-pre-line">
           {t('headline')}
@@ -54,27 +54,25 @@ export default async function ContactPage({
         <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
-      </Section>
 
-      {/* Contact Details */}
-      <ScrollReveal>
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <ScrollReveal>
+        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Email */}
-          <div>
+          <div className="min-w-0">
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
               {t('emailLabel')}
             </p>
             <a
               href={`mailto:${t('emailValue')}`}
-              className="font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              className="block break-all font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              data-umami-event="contact-email"
             >
               {t('emailValue')}
             </a>
           </div>
 
           {/* LinkedIn */}
-          <div>
+          <div className="min-w-0">
             <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
               {t('linkedinLabel')}
             </p>
@@ -82,28 +80,35 @@ export default async function ContactPage({
               href={t('linkedinUrl')}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              className="block break-all font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              data-umami-event="contact-linkedin"
             >
               {t('linkedinValue')}
             </a>
           </div>
-        </div>
-      </Section>
-      </ScrollReveal>
 
-      {/* Availability */}
-      <ScrollReveal>
-      <Section className="!pt-0">
-        <div className="mt-16 pt-16 border-t border-[#1a1a1f]">
-          <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
-            {t('availabilityLabel')}
-          </p>
-          <p className="font-light text-[17px] leading-[29.75px] text-[rgba(255,255,255,0.5)]">
-            {t('availabilityText')}
-          </p>
+          {/* CV Download */}
+          <div className="min-w-0">
+            <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-4">
+              {t('cvLabel')}
+            </p>
+            <a
+              href="/mattia-de-luca-cv.pdf"
+              download
+              className="inline-flex items-center gap-2 font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              data-umami-event="contact-cv-download"
+            >
+              {t('cvValue')}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
+            </a>
+          </div>
         </div>
+        </ScrollReveal>
+
+        {/* Availability section removed — EPIC 27 reframe */}
       </Section>
-      </ScrollReveal>
 
       {/* CTA */}
       <PageCTA
@@ -116,5 +121,5 @@ export default async function ContactPage({
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }

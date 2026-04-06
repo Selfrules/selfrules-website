@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { createPageMetadata } from '@/lib/metadata';
+import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Section } from '@/components/layout/Section';
 import { VerticalTimeline } from '@/components/ui/VerticalTimeline';
 import { PageCTA } from '@/components/sections/page-cta';
@@ -79,10 +80,9 @@ export default async function AboutPage({
     },
   ];
 
-  const baseUrl = 'https://selfrules.org';
   const pageName = locale === 'it' ? 'Chi sono' : 'About';
-  const pageUrl = locale === 'it' ? `${baseUrl}/it/about` : `${baseUrl}/about`;
-  const homeUrl = locale === 'it' ? `${baseUrl}/it` : baseUrl;
+  const pageUrl = buildLocalizedUrl(locale, '/about');
+  const homeUrl = buildLocalizedUrl(locale);
 
   return (
     <>
@@ -115,7 +115,7 @@ export default async function AboutPage({
             {careerEntries.map((entry, index) => (
               <li
                 key={index}
-                className={index < careerEntries.length - 1 ? 'mb-12' : ''}
+                className={index < careerEntries.length - 1 ? 'mb-8 md:mb-12' : ''}
               >
                 <div className="relative">
                   {/* Square node */}
@@ -171,7 +171,7 @@ export default async function AboutPage({
             {t('beliefsLabel')}
           </p>
           {beliefs.map((belief, index) => (
-            <div key={index} className={index < beliefs.length - 1 ? 'mb-12' : ''}>
+            <div key={index} className={index < beliefs.length - 1 ? 'mb-8 md:mb-12' : ''}>
               <h2 className="font-heading font-medium text-[22px] leading-[1.3] tracking-[-0.55px] text-[#f5f5f0] md:whitespace-pre-line">
                 {belief.title}
               </h2>
@@ -209,5 +209,5 @@ export default async function AboutPage({
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALE_PARAMS;
 }
