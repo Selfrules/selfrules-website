@@ -1,77 +1,81 @@
 export const metadata = {
-  title: 'Quando l\'AI ha senso in un prodotto (e quando no)',
-  date: '2026-04-15',
-  excerpt: 'La divisione 80/20. Usa regole deterministiche per quello che è prevedibile. AI solo dove serve il giudizio.',
+  title: 'Quando l\'AI ha senso nel prodotto (e quando no)',
+  date: '2026-03-12',
+  excerpt: 'La regola 80/20 applicata all\'AI: regole automatiche per i problemi prevedibili, ML solo dove serve giudizio vero. La maggior parte delle funzionalità non ha bisogno di un modello.',
   readingTime: 6,
   locale: 'it',
 }
 
-Ogni team di prodotto sta guardando alle feature AI adesso. E la maggior parte sta risolvendo il problema sbagliato.
+Tutti i team di prodotto stanno valutando funzionalità con AI. E la maggior parte sta risolvendo il problema sbagliato.
 
-La domanda non è "dovremmo aggiungere AI?" La domanda è: "Esiste una decisione che richiede giudizio e che una regola o una query non può risolvere?" Se la risposta è no, non ti serve l'AI. Ti serve un filtro e una UX migliore.
+La domanda non è "dobbiamo aggiungere l'AI?" La domanda è: "C'è una decisione che richiede giudizio e che una regola o una query non riescono a gestire?" Se la risposta è no, non ti serve l'AI. Ti serve un filtro e un'interfaccia migliore.
 
 <KeyTakeaway>
-Lo schema che uso: l'80% del problema dovrebbe essere risolvibile con regole deterministiche. Il restante 20% — dove serve il giudizio — è dove l'AI ha senso.
+Lo schema che uso: l'80% del problema si risolve con regole automatiche. Il restante 20% — dove serve il giudizio — è dove l'AI ha senso.
 </KeyTakeaway>
 
 <AiSplitDiagram />
 
 ## CasaHunter: la divisione 80/20 nella pratica
 
-Ho costruito uno strumento di ricerca appartamenti in un weekend. Il problema: otto siti di annunci, dati incoerenti, nessun posto per vedere "è apparso qualcosa di buono da ieri?"
+Ho costruito uno strumento per cercare appartamenti in un weekend. Il problema: otto siti di annunci, dati incoerenti, nessun modo per sapere "è uscito qualcosa di buono da ieri?"
 
-L'approccio ingenuo: buttare un LLM su ogni annuncio, chiedergli di valutare la qualità, rankare, notificare. Rilasciare. Sembra bello. Costa soldi, è lento, e il risultato è a malapena meglio di una regola.
+L'approccio ingenuo: dare in pasto ogni annuncio a un modello linguistico, fargli valutare la qualità, ordinare, notificare. Fatto. Sembra elegante. Costa soldi, è lento, e il risultato è appena migliore di una regola.
 
-Il vero problema era diverso. Un annuncio di appartamento ha l'80% di dati oggettivi: metri quadri, prezzo, posizione, anno di costruzione, ha ascensore, ha parcheggio. È tutto verificabile, rankabile, filtrabile. Tutto deterministico.
+Il vero problema era diverso. Un annuncio di appartamento ha l'80% di dati oggettivi: metri quadri, prezzo, posizione, anno di costruzione, ascensore sì o no, parcheggio sì o no. Tutto verificabile, ordinabile, filtrabile. Tutto automatizzabile con regole.
 
 Quindi il sistema funziona così:
 
-**Primo passaggio: filtri deterministici.** Prezzo tra 400-700k? Metri quadri sopra 120? Non richiede ristrutturazione totale? Sì a tutti. Se no, score 0. Questo elimina l'80% degli annunci gratis in millisecondi.
+Primo passaggio: filtri automatici. Prezzo tra 400-700k? Metri quadri sopra 120? Non richiede una ristrutturazione totale? Sì a tutti. Altrimenti, scartato. Questo elimina l'80% degli annunci gratis in millisecondi.
 
-**Secondo passaggio: AI su quello che sopravvive.** Il 20% rimanente va a un LLM. Ma adesso il contesto è ristretto. Non "valuta questo appartamento," ma "considerando che questo ha passato i nostri filtri oggettivi, e considerando il feedback di questo utente su cinque appartamenti che ha visto, dovrebbe vederlo?" Molto più economico. Molto più veloce. Molto meglio.
+Secondo passaggio: AI su quello che sopravvive. Il 20% che resta va al modello. Ma adesso il contesto è ristretto. Non "valuta questo appartamento", ma "considerando che ha passato i filtri oggettivi, e considerando il feedback di questo utente su cinque appartamenti che ha già visto, vale la pena che lo guardi?" Molto più economico. Molto più veloce. Molto più preciso.
 
-**Terzo passaggio: feedback loop.** Quando un utente ignora un annuncio o lo guarda e non contatta, il scoring impara. Non dai dati scrapati. Dal comportamento reale dell'utente.
+Terzo passaggio: apprendimento dal comportamento. Quando un utente ignora un annuncio o lo guarda senza contattare, la valutazione impara. Non dai dati degli annunci. Dal comportamento reale dell'utente.
 
 <Callout>
-La differenza tra l'approccio ingenuo e quello che funziona non è l'AI. È l'architettura. L'AI non è mai stato il collo di bottiglia. Il collo di bottiglia era la chiarezza su cosa è oggettivo e cosa richiede giudizio.
+La differenza tra l'approccio ingenuo e quello che funziona non è l'AI. È l'architettura. L'AI non è mai stata il collo di bottiglia. Il collo di bottiglia era la chiarezza su cosa è oggettivo e cosa richiede giudizio.
 </Callout>
 
 ## Quando l'AI è la risposta giusta
 
 L'AI ha senso quando:
 
-**Riconoscimento di pattern su dati non strutturati.** Hai migliaia di punti dati senza una regola chiara, e hai bisogno di categorizzarli. Classificazione di testo, analisi di immagini, rilevamento di anomalie. L'LLM vede pattern che una regola umana non può esprimere.
+Riconoscimento di schemi su dati non strutturati. Hai migliaia di informazioni senza una regola chiara, e devi categorizzarle. Classificazione di testo, analisi di immagini, rilevamento di anomalie. Il modello vede schemi che una regola scritta da un umano non riesce a esprimere.
 
-**Scoring personalizzato quando la preferenza è complessa.** "Quale appartamento dovrei vedere dopo?" non ha una regola singola. La persona A si interessa della vicinanza al lavoro, costo basso di ristrutturazione, spazio esterno. La persona B prioritizza ristrutturato, età dell'edificio, altezza dei soffitti. Non puoi scrivere regole per questo. Puoi imparare dal comportamento e adattare.
+Valutazione personalizzata quando le preferenze sono complesse. "Quale appartamento dovrei vedere dopo?" non ha una regola sola. A una persona interessa stare vicino al lavoro, ristrutturare poco, avere uno spazio esterno. A un'altra interessa che sia già ristrutturato, l'altezza dei soffitti, l'età del palazzo. Non puoi scrivere regole per questo. Puoi imparare dal comportamento e adattarti.
 
-**Comprensione del linguaggio naturale dove il contesto conta.** Un cliente scrive "l'integrazione continua a rompersi." Non è un campo dati. È un reclamo, e ha bisogno di contesto. Si è rotto una volta? Tre volte? Il cliente è frustrato o sta solo segnalando? Il linguaggio naturale importa qui. Una regola non gestisce la sfumatura.
+Comprensione del linguaggio naturale dove il contesto conta. Un cliente scrive "l'integrazione continua a rompersi." Non è un dato strutturato. È una lamentela, e ha bisogno di contesto. Si è rotta una volta? Tre? Il cliente è frustrato o sta solo segnalando? Il linguaggio naturale conta. Una regola non coglie la sfumatura.
 
 ## Quando no
 
-**Qualsiasi cosa un filtro risolve.** "Mostrami pagamenti sotto 1000 euro" non ha bisogno di un LLM. Ha bisogno di un `WHERE amount < 1000`. Ogni richiesta di feature che è sostanzialmente "lascia che l'utente veda solo gli item dove [condizione]" è un filtro, non un problema di AI.
+Qualsiasi cosa risolvibile con un filtro. "Mostrami i pagamenti sotto 1000 euro" non ha bisogno di un modello. Ha bisogno di una condizione nel database. Ogni richiesta di funzionalità che si riduce a "fai vedere solo gli elementi dove [condizione]" è un filtro, non un problema di AI.
 
-**Qualsiasi cosa una query SQL può rispondere.** "Quali centri hanno il volume di transazioni più alto?" "Qual è il drop-off di onboarding per paese?" Regole. Struttura la domanda, scrivi la query, mostra la risposta.
+Qualsiasi cosa risolvibile con una query. "Quali centri hanno il volume di transazioni più alto?" "Qual è il tasso di abbandono per paese?" Regole. Struttura la domanda, scrivi la query, mostra la risposta.
 
-**Qualsiasi cosa con una regola chiara.** "Se il pagamento fallisce due volte, metti il centro in revisione." Quella è una regola. "Se l'elaborazione impiega più di 2 secondi, registra un incident." Regola. Il PM che dice "usiamo l'AI per gestire gli scenari di fallimento" di solito sta guardando una macchina di stato, non un problema di intelligenza.
+Qualsiasi cosa con una regola chiara. "Se il pagamento fallisce due volte, metti il centro in revisione." Quella è una regola. "Se l'elaborazione impiega più di 2 secondi, registra un incidente." Regola. Il PM che dice "usiamo l'AI per gestire gli errori" di solito sta guardando un diagramma di stati, non un problema di intelligenza.
 
 ## Il calcolo del costo
 
-Qui è dove la maggior parte dei team sbaglia. Confrontano il "costo di scrivere una regola" con il "costo di usare un LLM." La regola costa 2 ore. L'LLM costa €0.001 per chiamata. LLM vince. Tranne:
+Qui è dove la maggior parte dei team sbaglia. Confrontano il "costo di scrivere una regola" con il "costo di una chiamata al modello." La regola costa 2 ore. La chiamata costa €0,001. Il modello vince. Tranne che:
 
-Le chiamate LLM si sommano. Lo scoring di appartamenti gira su 5.000 annunci al mese. €0.001 per chiamata. €5 al mese. Ma moltiplica per latenza, cold start, overhead API, gestione degli errori. Quando lo hai costruito in modo affidabile, il costo per chiamata è più alto e la latenza è peggiore di se avessi scritto una regola.
+Le chiamate si accumulano. La valutazione degli appartamenti gira su 5.000 annunci al mese. €0,001 a chiamata. €5 al mese. Ma aggiungi la latenza, i tempi di avvio, il lavoro di integrazione, la gestione degli errori. Quando l'hai reso affidabile, il costo per chiamata è più alto e la latenza è peggiore di una regola.
 
-Più importante: quando l'AI sbaglia un giudizio, qual è il costo? In un'app di appartamenti, niente. L'utente vede solo un annuncio cattivo. In un sistema di pagamenti, il giudizio sbagliato costa soldi. Ti servono guardrail, audit, e revisione umana. Adesso la "feature AI semplice" è infrastruttura.
+Più importante: quando l'AI sbaglia un giudizio, quanto costa? In un'app di appartamenti, niente. L'utente vede un annuncio sbagliato. In un sistema di pagamenti, un giudizio sbagliato costa soldi. Ti servono controlli, tracciabilità e revisione umana. A quel punto la "funzionalità AI semplice" diventa infrastruttura.
 
 <Callout>
-Il costo reale dell'AI non è la chiamata API. È l'infrastruttura attorno all'incertezza. Se hai bisogno di spiegare perché una decisione è stata presa, o auditarla dopo, o rollbackarla, le regole deterministiche sono più economiche.
+Il costo reale dell'AI non è la chiamata al modello. È l'infrastruttura che serve per gestire l'incertezza. Se devi spiegare perché una decisione è stata presa, o verificarla dopo, o annullarla, le regole automatiche costano meno.
 </Callout>
 
-## Cosa rilascio
+## Cosa ho messo in produzione
 
-CasaHunter è tre filtri deterministici, poi AI su chi sopravvive, poi learning dal comportamento. Payments Rescue è regole — regole rigorose — senza AI. Se un pagamento non può essere categorizzato dallo schema, non viene categorizzato. Una persona lo legge.
+CasaHunter è tre filtri automatici, poi AI su quello che sopravvive, poi apprendimento dal comportamento. Payments Rescue è regole — regole rigorose — senza AI. Se un pagamento non rientra nello schema, non viene categorizzato. Lo legge una persona.
 
-ActiveProspect: la configurazione del bridge dei lead ha un po' di AI (mapping intelligente dei campi), ma la decisione core — quali connector suggerire — è una regola basata su quello che l'utente ha già configurato.
+ActiveProspect: la configurazione dei collegamenti tra piattaforme ha un po' di AI (mappatura intelligente dei campi), ma la decisione centrale — quali integrazioni suggerire — è una regola basata su quello che l'utente ha già configurato.
 
-Ogni volta che vedo "usiamo l'AI" prima di "abbiamo un problema di decisione?" so che la feature sarà costosa e mediocre.
+Ogni volta che sento "usiamo l'AI" prima di "abbiamo un problema di giudizio?" so che la funzionalità sarà costosa e mediocre.
 
-La domanda migliore: "Cosa possiamo risolvere senza AI?" Risolvi quello prima. Il 20% che rimane — è lì che l'AI ha senso.
+La domanda migliore: "Cosa possiamo risolvere senza AI?" Risolvi quello prima. Il 20% che resta — è lì che l'AI ha senso.
+
+---
+
+Vedi in pratica: [CasaHunter](/lab/casahunter) usa esattamente questo approccio — tre filtri deterministici prima, AI solo su quello che sopravvive. Il risultato è più veloce, più economico e più prevedibile delle alternative full-AI.

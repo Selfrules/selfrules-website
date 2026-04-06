@@ -1,103 +1,107 @@
 export const metadata = {
-  title: 'Il framework di decisione build vs buy',
-  date: '2026-05-20',
-  excerpt: 'La decisione più impattante che un PM prende, e la maggior parte la sbaglia per default.',
+  title: 'Costruire o comprare: lo schema decisionale',
+  date: '2026-01-18',
+  excerpt: 'La decisione più importante che un PM prende, e la maggior parte la sbaglia per abitudine.',
   readingTime: 7,
   locale: 'it',
 }
 
-Build vs buy non è una decisione tecnica. È strategica. E la maggior parte dei PM la sbaglia per default su una preferenza invece di seguire un framework.
+Costruire o comprare non è una decisione tecnica. È strategica. E la maggior parte dei PM la sbaglia per abitudine — chi ama costruire vuole costruire tutto, chi teme il rischio vuole comprare tutto.
 
-Ho visto grandi costruttori volere costruire tutto. Ho visto PM avversi al rischio volere comprare tutto. Nessuno dei due è giusto. La decisione vive all'incrocio di quattro domande, e sbagliare l'ordine significa ottimizzare per la cosa sbagliata.
+Ho visto entrambi gli errori. La decisione dipende da quattro domande, in quest'ordine. Sbagliare la sequenza significa ottimizzare la cosa sbagliata.
 
 <KeyTakeaway>
-Il framework: qual è il tuo vincolo reale? È un differenziatore o una merce? Qual è il costo totale di proprietà? Puoi invertire questa decisione in 6 mesi?
+Le quattro domande: qual è il vincolo reale? È un punto di forza o qualcosa che fanno tutti? Quanto costa davvero mantenerlo? Posso tornare indietro entro 6 mesi?
 </KeyTakeaway>
 
-## Domanda 1: Qual è il tuo vincolo reale?
+## Domanda 1: Qual è il vincolo reale?
 
-Questa sorprende le persone perché la risposta è di solito "tempo," non "non sappiamo come costruirlo."
+Di solito non se l'aspetta nessuno, perché la risposta è quasi sempre "tempo", non "non sappiamo come costruirlo".
 
-Stavo costruendo CasaHunter. Potevo costruire lo scraper di appartamenti, la deduplica, il ranking. Avevo serate e weekend. Nessun vincolo di tempo. Quindi ho costruito.
+Quando stavo costruendo CasaHunter, potevo fare tutto da solo: lo scraper, la deduplica, la classifica. Avevo sere e weekend. Nessun vincolo di tempo. Quindi ho costruito.
 
-Nel Payments Rescue a QubicaAMF, abbiamo ereditato un sistema in crisi. 44 issue aperti, clienti infelici, il team che fatica. Il tempo era il vincolo vincolante. Non avevamo sei mesi per valutare le opzioni dei venditori. Avevamo bisogno di stabilizzare. Costruire era, o il prodotto non esiste il prossimo trimestre.
+Nel Payments Rescue a QubicaAMF, il sistema era in crisi. 44 problemi aperti, clienti scontenti, il team in difficoltà. Il tempo era il vincolo dominante. Non avevamo sei mesi per valutare fornitori. Dovevamo stabilizzare, altrimenti il prodotto non sarebbe sopravvissuto al trimestre successivo.
 
-Il contrario: quando valutiamo provider di pagamento cashless, il tempo non era il vincolo. Il denaro era. Confrontare tre provider in profondità, vettare integrazioni, pilot di proof-of-concept. Questo richiede mesi. Il nostro vincolo era che dovevamo decidere entro il Q3 e lanciare entro il Q4. Avevamo un budget per accelerare quella timeline attraverso pilot e risorse di partnership dedicate. Comprare dal partner giusto aveva senso.
+Il caso opposto: quando abbiamo valutato i fornitori cashless, il tempo non era il vincolo. Lo erano i soldi. Confrontare tre fornitori in profondità, verificare le integrazioni, fare dei pilota. Questo richiede mesi. Il nostro vincolo era decidere entro il Q3 e lanciare entro il Q4. Avevamo un budget per accelerare con pilota e risorse dedicate alla partnership. Comprare dal partner giusto aveva senso.
 
-Non perché non potessimo costruire. Perché non avevamo tempo, e il tempo era la cosa costosa.
+Non perché non fossimo capaci di costruire. Perché non avevamo tempo, e il tempo era la risorsa più costosa.
 
 <Callout>
-Se il tuo vincolo è capacità, valuti il tuo team. Se è tempo, valuti il mercato. Se è soldi, valuti la matematica dell'ROI. Vincolo sbagliato = decisione sbagliata.
+Se il vincolo è la capacità del team, valuta le competenze interne. Se è il tempo, valuta il mercato. Se sono i soldi, valuta il ritorno sull'investimento. Vincolo sbagliato = decisione sbagliata.
 </Callout>
 
-## Domanda 2: È un differenziatore core o merce?
+## Domanda 2: È un punto di forza o qualcosa che fanno tutti?
 
-Nel Payments Rescue, la riconciliazione era un differenziatore. Ogni cliente se lamentava. Era un motivo per cui i centri consideravano di cancellare. Quindi abbiamo costruito. Abbiamo posseduto l'intero flusso.
+Nel Payments Rescue, la riconciliazione contabile era un punto di forza. I clienti si lamentavano di continuo. Era il motivo per cui alcuni centri stavano per cancellare. Quindi l'abbiamo costruita internamente. Abbiamo tenuto il controllo dell'intero flusso.
 
-Ma l'elaborazione dei pagamenti stessa? Abbiamo comprato. L'elaborazione dei pagamenti di Square è una merce. Migliaia di aziende la usano. Non eravamo per elaborare i pagamenti meglio di Square. Abbiamo comprato la merce e differenziato sopra di essa.
+Ma l'elaborazione dei pagamenti in sé? Quella l'abbiamo comprata. L'elaborazione pagamenti di Square è un servizio standard. Migliaia di aziende la usano. Non saremmo stati più bravi di Square a elaborare pagamenti. Abbiamo comprato il servizio e ci siamo differenziati sopra.
 
-CasaHunter: l'algoritmo di ranking è un differenziatore. Quello ho costruito. L'infrastruttura di scraping? Sta diventando sempre più vicina alla merce man mano che emergono più provider. Ma il ranking — è lì che il giudizio conta. Lo posseggo.
+CasaHunter: l'algoritmo di valutazione è il vero punto di forza. Quello l'ho costruito. L'infrastruttura di scraping? Sta diventando sempre più un servizio standard man mano che emergono nuovi fornitori. Ma la valutazione — è lì che conta il giudizio. Quella la tengo.
 
-La domanda ti salva dall'ingegneria dello status symbol, dove costruire qualcosa di costoso e complesso si sente come un successo anche se non vale la pena differenziare.
+Questa domanda ti salva dal costruire cose costose e complesse solo perché "sembra un successo", anche quando non vale la pena differenziarsi su quel fronte.
 
-## Domanda 3: Qual è il costo totale di proprietà?
+## Domanda 3: Quanto costa davvero mantenerlo?
 
-Questo è dove la maggior parte dei PM resta accecata.
+Qui la maggior parte dei PM perde la visione d'insieme.
 
-"Costruire internamente ci costa un ingegnere per 3 mesi. Comprare costa 50K euro." Sembra una vittoria chiara per la costruzione. Fino a:
+"Costruire ci costa un ingegnere per 3 mesi. Comprare costa 50K euro." Sembra un calcolo facile. Finché non consideri che:
 
-- L'ingegnere è ora l'esperto in materia. Possiede il sistema per sempre.
-- Quando si rompe (e si romperà), lascia cadere tutto per ripararlo.
-- Quando il business vuole aggiungere una feature, solo quell'ingegnere può farlo.
-- Quando quell'ingegnere se ne va, la conoscenza esce dalla porta.
+- Quell'ingegnere diventa l'unico che capisce il sistema. Lo possiede per sempre.
+- Quando si rompe (e si romperà), molla tutto per ripararlo.
+- Quando il business chiede una modifica, solo lui può farla.
+- Quando se ne va, le competenze escono dalla porta con lui.
 
-A QubicaAMF abbiamo discontinuato OneCashless — una costruzione interna su cui avevamo investito pesantemente — e ci siamo spostati su Amusement Connect (un partner). La matematica del costo era:
+A QubicaAMF abbiamo abbandonato OneCashless — un prodotto interno su cui avevamo investito parecchio — e siamo passati ad Amusement Connect (un partner). Il confronto dei costi era questo:
 
-**OneCashless (la nostra costruzione):**
-- Sviluppo: 150K euro già spesi, sommersi.
-- In corso: un ingegnere, il 30% del suo tempo, 50K euro annuali. È ricorrente.
-- Manutenzione, supporto clienti, richieste di feature: accumulati a forse 100K euro annuali.
-- Rischio: un ingegnere che se ne va significava sei mesi per rimpiazzo + perdita di conoscenza.
+**OneCashless (il nostro prodotto):**
+- Sviluppo: 150K euro già spesi, irrecuperabili.
+- Costi ricorrenti: un ingegnere al 30% del suo tempo, circa 50K euro l'anno.
+- Manutenzione, assistenza clienti, richieste di modifica: circa 100K euro l'anno.
+- Rischio: se quell'ingegnere se ne va, sei mesi per sostituirlo più la perdita di conoscenza.
 
 **Amusement Connect (partner):**
-- Setup e integrazione: 40K euro, una volta.
+- Configurazione e integrazione: 40K euro, una tantum.
 - Licenza annuale: 60K euro.
-- Supporto 24/7 incluso.
-- Le nuove feature sono il problema di qualcun altro.
+- Assistenza 24/7 inclusa.
+- Le nuove funzionalità sono un problema di qualcun altro.
 
-In tre anni, costruire ci è costato 300K+ euro in lavoro (senza contare la spesa di capitale) più il rischio di perdita di conoscenza. Comprare ci è costato 220K euro + meno rischio. Abbiamo comprato.
+In tre anni, costruire ci è costato 300K+ euro di lavoro (senza contare gli investimenti iniziali) più il rischio di perdere le competenze. Comprare ci è costato 220K euro con meno rischi. Abbiamo comprato.
 
 <Callout>
-Gli avvocati della "costruzione" vedono 3 mesi di tempo di ingegneria. Gli avvocati della "compra" vedono il fatto che il vendor ha già pagato 10 ingegneri per 5 anni. Il costo totale di proprietà non è solo la costruzione. È costruire più mantenere più il costo opportunità di quell'ingegnere che non fa qualcosa d'altro.
+Chi preferisce costruire vede 3 mesi di lavoro. Chi preferisce comprare vede che il fornitore ha già pagato 10 ingegneri per 5 anni. Il costo reale non è solo costruire. È costruire più mantenere più il costo di non usare quell'ingegnere su qualcos'altro.
 </Callout>
 
-## Domanda 4: Puoi invertire questa decisione in 6 mesi?
+## Domanda 4: Puoi tornare indietro entro 6 mesi?
 
-Questa cambia tutto.
+Questa domanda cambia tutto.
 
-Se compri uno strumento vendor e realizzi che è sbagliato, quanto è difficile passare? Con Amusement Connect, l'integrazione era progettata per la reversibilità. Potevamo passare a un altro provider in tre mesi se avessimo dovuto. Costo di commutazione moderato, rischio gestibile.
+Se compri uno strumento e ti accorgi che è sbagliato, quanto è difficile cambiare? Con Amusement Connect, l'integrazione era progettata per essere reversibile. Potevamo passare a un altro fornitore in tre mesi. Costo di transizione moderato, rischio gestibile.
 
-Se costruisci qualcosa e hai bisogno di scambiarlo per uno strumento vendor, qual è il costo? Hai già costruito secondo le specifiche. Dovresti ricostruire secondo le specifiche del vendor. Il costo sommerso è reale.
+Se costruisci qualcosa e poi devi sostituirlo con un prodotto esterno, qual è il costo? Hai già costruito secondo le tue specifiche. Dovresti ricostruire secondo quelle del fornitore. L'investimento fatto è reale.
 
-L'algoritmo di ranking di CasaHunter: lo posseggo. Se smette di funzionare, lo risolvo io. Passare a un servizio di ranking di terze parti mi costerebbe tre settimane di refactoring. La decisione è reversibile.
+L'algoritmo di valutazione di CasaHunter: è mio. Se smette di funzionare, lo sistemo io. Passare a un servizio esterno mi costerebbe tre settimane di lavoro. La decisione è reversibile.
 
-Payments Rescue: avevamo bisogno di stabilizzare velocemente. Non potevamo dire "compriamo da un vendor e vediamo se funziona" perché non potevamo permetterci di aspettare tre mesi per scoprire che non funziona. Eravamo in una posizione dove la reversibilità era un lusso. Abbiamo costruito.
+Payments Rescue: dovevamo stabilizzare in fretta. Non potevamo dire "compriamo da un fornitore e vediamo se funziona" perché non potevamo permetterci di aspettare tre mesi per scoprire che non funzionava. Eravamo in una situazione dove la reversibilità era un lusso. Abbiamo costruito.
 
-La domanda sulla reversibilità non è "potremmo teoricamente fare questo?" È "potremmo fare questo dato i nostri vincoli attuali e il nostro burn rate?"
+La domanda sulla reversibilità non è "potremmo farlo in teoria?" È "potremmo farlo con i vincoli e le risorse che abbiamo adesso?"
 
 <BuildVsBuyDiagram />
 
-## Il framework in ordine
+## Lo schema in ordine
 
-1. **Qual è il vincolo?** (Tempo, soldi, capacità)
-2. **È un differenziatore?** (Sì = costruisci, No = considera di comprare)
-3. **Qual è il TCO su 3-5 anni?** (Incluso lavoro, rischio, costo opportunità)
-4. **La decisione è reversibile?** (No = alza la barra per la decisione. Sì = abbassala.)
+1. Qual è il vincolo? (Tempo, soldi, capacità)
+2. È un punto di forza? (Sì = costruisci. No = considera di comprare)
+3. Quanto costa mantenerlo su 3-5 anni? (Incluso lavoro, rischio, costo di non fare altro)
+4. La decisione è reversibile? (No = alza la soglia per decidere. Sì = abbassala.)
 
-Sbagliare l'ordine e ottimizzi per la cosa sbagliata. Manca il vincolo e risolvi un problema che non hai.
+Sbagliare la sequenza e ottimizzi la cosa sbagliata. Saltare il vincolo e risolvi un problema che non hai.
 
-CasaHunter: avevo tempo, il ranking è un differenziatore, costruire è l'unico modo di possederlo, e posso invertirlo se devo. Costruisci.
+CasaHunter: avevo tempo, la valutazione è il punto di forza, costruire è l'unico modo di possederla, e posso tornare indietro se serve. Costruisci.
 
-OneCashless → Amusement Connect: non avevamo tempo per una valutazione multi-vendor, cashless non è il nostro differenziatore, il TCO della proprietà era insostenibile, e abbiamo progettato lo switch per essere possibile in tre mesi. Compra.
+OneCashless → Amusement Connect: non avevamo tempo per una valutazione approfondita dei fornitori, il cashless non è il nostro punto di forza, il costo di mantenerlo internamente era insostenibile, e abbiamo progettato il passaggio perché fosse possibile in tre mesi. Compra.
 
-Questo è come vengono prese le migliori decisioni. Non dalla convinzione. Dal vincolo.
+Le decisioni migliori non nascono dalla convinzione. Nascono dal vincolo.
+
+---
+
+Vedi in pratica: Il framework build-vs-buy si è concretizzato in modo diverso su tre progetti: [Cashless System](/work/cashless-system) (compra), [Payments Rescue](/work/payments-rescue) (costruisci), e [CasaHunter](/lab/casahunter) (costruisci). Ogni decisione è dipesa da un vincolo diverso.

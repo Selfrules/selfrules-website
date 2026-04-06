@@ -17,7 +17,7 @@
     "switchLanguage": "Cambia lingua"
   },
   "footer": {
-    "bio": "Senior Technical PM. Prototipo in codice, disegno la UX, e porto in produzione.",
+    "bio": "Senior Technical PM. Prototipo in codice, progetto l'esperienza utente, e porto in produzione.",
     "email": "hello@selfrules.org",
     "linkedin": "LinkedIn",
     "github": "GitHub",
@@ -38,7 +38,7 @@
   "homepage": {
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, codice, e product management nella stessa testa.",
-      "subtitle": "Trovo il problema reale, risolvo prima quello che conta, e porto in produzione prodotti che reggono. Sistemi di pagamento portati dal caos al 99%+ di uptime. Flussi di integrazione rifatti, -35% sul tempo di setup.",
+      "subtitle": "Le aziende mi cercano quando un prodotto non funziona. Capisco perché, lo sistemo, e mi assicuro che resti sistemato. L'ho fatto in startup e in enterprise. I risultati sono nei case study.",
       "primaryCta": "Parliamo del tuo prodotto",
       "secondaryCta": "Leggi i case study",
       "tag1": "10+ anni",
@@ -46,31 +46,31 @@
       "tag3": "Payments",
       "tag4": "5 paesi",
       "terminalPrompt": "hello@selfrules.org ~ $",
-      "signaturePhrase": "Il problema non e' mai quello del primo meeting."
+      "signaturePhrase": "Il problema non è mai quello del primo meeting."
     },
     "whatIDo": {
       "label": "COSA FACCIO",
       "title": "Quello che faccio davvero",
-      "text": "Le aziende mi cercano quando un prodotto non funziona come dovrebbe. Scavo nel problema reale — non quello che emerge al primo meeting — progetto una soluzione che abbia senso per chi la usa, e la costruisco con il team. L'ho fatto con piattaforme di pagamento che gestiscono milioni di transazioni, tool di integrazione usati da migliaia di aziende, e side project costruiti da zero. Lo schema è sempre lo stesso: prima capire, poi costruire."
+      "text": "Parto dal problema, non dalla soluzione che qualcuno ha già in mente. Significa parlare con chi usa il prodotto, leggere i dati che nessuno ha guardato, e capire cosa non funziona davvero prima di scrivere una sola spec. Poi progetto e porto in produzione col team. Non consegno un documento e aspetto."
     },
     "howIWork": {
       "label": "COME LAVORO",
       "title": "Tre linguaggi, un prodotto",
       "intro": "Quando il design dice \"l'utente si blocca qui perché la gerarchia visiva è sbagliata\", l'engineering dice \"servono 3 sprint di refactoring\", e il business dice \"ci costa €15K al mese in ticket di supporto\". Tre conversazioni separate. Il mio lavoro è trasformarle in una decisione.",
       "pillar1": {
-        "title": "Ho fatto tutti e tre i mestieri.\nQuesto cambia come prendo le decisioni.",
-        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente finale. Meno passaggi, meno sorprese. Le sessioni cross-funzionali che ho introdotto hanno ridotto gli incidenti post-release del <b>25%</b>.",
-        "shortText": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente. Sessioni cross-funzionali: incidenti post-release <b>-25%</b>."
+        "title": "Meno passaggi, meno sorprese.\nSono stato da tutti e tre i lati.",
+        "text": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente finale. Meno passaggi, meno sorprese. Le revisioni trasversali che ho introdotto hanno ridotto i bug arrivati ai clienti del <b>25%</b>.",
+        "shortText": "4 anni a progettare interfacce. 4 a scrivere codice in produzione. 5+ a portare prodotti live. Quando rivedo un design, so quanto costa costruirlo. Quando valuto il lavoro engineering, so cosa sentirà l'utente. Revisioni trasversali: bug arrivati ai clienti <b>-25%</b>."
       },
       "pillar2": {
-        "title": "Prima di costruire qualsiasi cosa,\nverifico il problema vero.",
+        "title": "Trovo i 4 problemi che contano\nsui 44 per cui tutti vanno nel panico.",
         "text": "Un sistema di pagamento con 44 problemi aperti e la pressione di risolvere tutto subito. Due settimane a parlare col supporto e leggere i dati: solo 4 stavano facendo perdere soldi ai clienti. Quei 4 risolti in 6 settimane, non 6 mesi. Gli altri 40 potevano aspettare. Capire cosa conta davvero: quello è il lavoro.",
         "shortText": "Un sistema di pagamento con 44 problemi aperti. Due settimane di discovery: solo 4 facevano perdere soldi ai clienti. Quei 4 risolti in 6 settimane, non 6 mesi. Capire cosa conta davvero: quello è il lavoro."
       },
       "pillar3": {
-        "title": "Valido le idee con codice che funziona,\nnon con i deck.",
-        "text": "Quando devo validare un'idea, costruisco un prototipo funzionante — non una presentazione. Gli utenti lo provano, osserviamo cosa succede, impariamo in giorni invece che mesi. La priorità viene dalla frustrazione reale degli utenti, non dalla politica interna. E quando i dati dicono che una feature non serve, la risposta è no — anche quando la chiede il 60% degli utenti.",
-        "shortText": "Quando devo validare un'idea, costruisco un prototipo funzionante — non una presentazione. Gli utenti lo provano, impariamo in giorni invece che mesi. Quando i dati dicono no, la risposta è no."
+        "title": "Quando devo validare, lo costruisco.\nGli utenti lo provano in giorni, non mesi.",
+        "text": "Quando devo validare un'idea, costruisco un prototipo funzionante. Non una presentazione. Gli utenti lo provano, osserviamo cosa succede, impariamo in giorni invece che mesi. La priorità viene dalla frustrazione reale degli utenti, non dalla politica interna. E quando i dati dicono che una funzionalità non serve, la risposta è no, anche quando la chiede il 60% degli utenti.",
+        "shortText": "Quando devo validare un'idea, costruisco un prototipo funzionante. Non una presentazione. Gli utenti lo provano, impariamo in giorni invece che mesi. Quando i dati dicono no, la risposta è no."
       }
     },
     "timeline": {
@@ -79,9 +79,9 @@
       "block1": {
         "role": "Founder e Designer",
         "dates": "2012-2018",
-        "company": "Selfrules Studio",
-        "text": "Uno studio di web design fondato a 25 anni. 20+ clienti, tutto in una persona: vendita, design, sviluppo, consegna, supporto. Primo e-commerce: interfaccia da premio, zero vendite. La regola che ne è uscita vale ancora.",
-        "shortText": "Studio di web design. 20+ clienti, tutto in una persona. Primo e-commerce: interfaccia da premio, zero vendite."
+        "company": "Selfrules",
+        "text": "Lavoro freelance iniziato a 25 anni a Modena. 20+ clienti, tutto in una persona: vendita, design, sviluppo, consegna, supporto. Siti, e-commerce, grafica, stampa. Primo e-commerce: interfaccia da premio, zero vendite. La regola che ne è uscita vale ancora.",
+        "shortText": "Freelance: siti, e-commerce, grafica. 20+ clienti, tutto in una persona. Primo e-commerce: interfaccia da premio, zero vendite."
       },
       "block2": {
         "role": "Designer e Developer",
@@ -94,8 +94,8 @@
         "role": "Product Owner",
         "dates": "2020-2023",
         "company": "LeadsBridge / ActiveProspect",
-        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori, partnership Meta, Google, LinkedIn, TikTok. Unico PM, completamente remoto dall'Europa. Il redesign del flusso core ha tagliato il tempo di configurazione del <b>35%</b> e sbloccato la crescita del revenue.",
-        "shortText": "SaaS B2B, 380+ connettori. Unico PM, full remote. Redesign del flusso core: tempo di setup -35%."
+        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori, partnership Meta, Google, LinkedIn, TikTok. Unico PM, completamente remoto dall'Europa. Il redesign del flusso core ha ridotto il tempo di configurazione del <b>35%</b> e sbloccato la crescita del fatturato.",
+        "shortText": "SaaS B2B, 380+ connettori. Unico PM, full remote. Redesign del flusso core: tempo di configurazione -35%."
       },
       "block4": {
         "role": "Product Manager",
@@ -104,25 +104,25 @@
         "text": "Sistemi di pagamento, integrazioni di piattaforma e soluzioni cashless per centri in 5 paesi. Un sistema ereditato in stato critico. Oggi: <b>99%+</b> uptime, <b>-25%</b> incidenti post-release, <b>116 centri</b> integrati, team di 10+.",
         "shortText": "Payments, piattaforma, cashless. 99%+ uptime, -25% incidenti, 116 centri, team di 10+."
       },
-      "closingLine": "Oggi quando parlo con un designer, capisco i vincoli. Quando parlo con uno sviluppatore, capisco i trade-off. Quando parlo con il business, traduco."
+      "closingLine": "Oggi quando parlo con un designer, capisco i vincoli. Quando parlo con uno sviluppatore, capisco i compromessi. Quando parlo con il business, traduco."
     },
     "metrics": {
       "label": "RISULTATI",
       "title": "Numeri, non parole",
       "metric1": {
         "number": "99%+",
-        "label": "Uptime sui sistemi di pagamento",
-        "context": "Transazioni per centri di intrattenimento in 5 paesi. Ereditato in stato critico, stabilizzato in 6 mesi"
+        "label": "Affidabilità del sistema, da critico a stabile",
+        "context": "Un prodotto che gestisce soldi veri per aziende in 5 paesi. Ereditato in crisi, stabilizzato in 6 mesi"
       },
       "metric2": {
         "number": "-25%",
         "label": "Bug in meno arrivati ai clienti",
-        "context": "Introducendo review cross-funzionali settimanali prima di ogni release"
+        "context": "Introducendo revisioni settimanali con tutti i team prima di ogni rilascio"
       },
       "metric3": {
         "number": "116",
-        "label": "Sedi attive sulla piattaforma",
-        "context": "Ognuna con pagamenti, scoring e operations attivi. 5 nuove live ogni settimana"
+        "label": "Aziende che usano il prodotto che gestisco",
+        "context": "Ognuna dipende dal prodotto per le operazioni quotidiane. 5 nuove ogni settimana"
       },
       "metric4": {
         "number": "-35%",
@@ -131,7 +131,7 @@
       },
       "metric5": {
         "number": "+25%",
-        "label": "Crescita revenue anno su anno",
+        "label": "Crescita del fatturato anno su anno",
         "context": "L'unica soluzione di pagamento ancora in crescita mentre i competitor si fermavano"
       },
       "metric6": {
@@ -151,23 +151,23 @@
       },
       "card2": {
         "title": "Sto costruendo CasaHunter",
-        "text": "Uno strumento AI per la ricerca di appartamenti. Scoring a tre passaggi: 80% filtro deterministico, 20% budget AI su quello che conta. 880+ annunci analizzati, zero ricerca manuale.",
+        "text": "Uno strumento AI per la ricerca di appartamenti. Tre passaggi di valutazione: l'80% dei filtri è automatico, il restante 20% del budget lo spendo in AI su quello che conta davvero. 880+ annunci analizzati, zero ricerca manuale.",
         "statusLabel": "ATTIVO"
       },
       "card3": {
-        "title": "Esplorando il prossimo passo",
-        "text": "Aperto a ruoli PM e Technical PM dove design, codice e pensiero di prodotto convergono.",
-        "statusLabel": "APERTO"
+        "title": "Documentare quando l'AI vale la complessità",
+        "text": "CasaHunter mi ha insegnato dove l'AI vince (valutare 880 annunci) e dove perde (Telegram batte una dashboard web). Registro ogni decisione tra AI, logica deterministica, e semplicemente chiedere all'utente. Sono i dati che servono davvero ai team di prodotto.",
+        "statusLabel": "ATTIVO"
       }
     },
     "contact": {
       "label": "CONTATTO",
       "title": "Parliamo",
-      "text": "Se pensi che il mio profilo possa servire al tuo team, scrivimi. Anche se non sei sicuro che sia il fit giusto. Le conversazioni migliori che ho avuto sono iniziate con \"non so se è una cosa per te, ma...\".",
+      "text": "Scrivo di pagamenti, architettura di piattaforma, e delle decisioni di prodotto che stanno tra design e engineering. Se qualcosa qui ti ha fatto riflettere, scrivimi.",
       "email": "hello@selfrules.org",
       "linkedinLabel": "LinkedIn",
       "cvLabel": "Scarica il mio CV (PDF)",
-      "availability": "EU remote . US remote . Italia ibrido"
+      "availability": ""
     }
   },
   "about": {
@@ -180,7 +180,7 @@
       "selfrules": {
         "company": "Selfrules (2012–2018)",
         "dates": "2012–2018",
-        "text": "Uno studio di web design fondato a 25 anni a Modena. Per 7 anni tutto passava da una persona sola: vendita, design, sviluppo, consegna, supporto. 20+ clienti.\n\nIl primo e-commerce aveva un'interfaccia da premio e zero vendite. Il cliente non trovava il bottone per pagare. €8K di rimborsi. Quando vendi, progetti, costruisci e supporti lo stesso prodotto, il pensiero cross-funzionale non è opzionale. E una regola diventa permanente: se è bello ma confuso, è decorazione."
+        "text": "Lavoro freelance iniziato a 25 anni a Modena. Siti, e-commerce, grafica, stampa. Per 7 anni tutto passava da una persona sola: vendita, design, sviluppo, consegna, supporto. 20+ clienti.\n\nIl primo e-commerce aveva un'interfaccia da premio e zero vendite. Il cliente non trovava il bottone per pagare. €8K di rimborsi. Quando vendi, progetti, costruisci e supporti lo stesso prodotto, il pensiero cross-funzionale non è opzionale. E una regola diventa permanente: se è bello ma confuso, è decorazione."
       },
       "flowing": {
         "company": "FLOWING (2016–2020)",
@@ -190,7 +190,7 @@
       "leadsbridge": {
         "company": "ActiveProspect / LeadsBridge (2020–2023)",
         "dates": "2020–2023",
-        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori e partnership dirette con Meta, Google, LinkedIn e TikTok. Unico PM, completamente remoto dall'Europa, team di 10 persone.\n\nIl flusso core del prodotto era anche il suo punto più debole — il tipo di problema che tutti avevano accettato come normale. Il redesign ha tagliato il tempo di setup del <bold>35%</bold> e sbloccato direttamente la crescita del revenue."
+        "text": "LeadsBridge: piattaforma SaaS B2B con 380+ connettori e partnership dirette con Meta, Google, LinkedIn e TikTok. Unico PM, completamente remoto dall'Europa, team di 10 persone.\n\nIl flusso core del prodotto era anche il suo punto più debole, il tipo di problema che tutti avevano accettato come normale. Il redesign ha ridotto il tempo di configurazione del <bold>35%</bold> e sbloccato direttamente la crescita del fatturato."
       },
       "overlapBadge": "↑ sovrapposizione",
       "qubicamf": {
@@ -217,7 +217,7 @@
       "text": "Vivo in provincia di Modena. Quando non lavoro, probabilmente sono in palestra, sto costruendo qualcosa con i LEGO, o sto provando qualcosa fuori dalla mia comfort zone. L'ultimo esperimento: il ricamo. Prima o poi torno, ma non prima di aver capito cosa c'è dall'altra parte."
     },
     "cta": {
-      "text": "Se il tuo prodotto ha bisogno di qualcuno che ci mette le mani dentro — non solo le parole sopra — parliamone. Anche solo per capire se ha senso.",
+      "text": "Se qualcosa suona familiare, i problemi, l'approccio, il modo in cui penso al prodotto: i case study lo mostrano in pratica.",
       "primary": "Leggi i case study",
       "secondary": "Scrivimi"
     }
@@ -225,13 +225,14 @@
   "work": {
     "headline": "Come lavoro,\ndimostrato.",
     "intro": "Tre storie di prodotto. Il contesto, la sfida, l'approccio, i numeri. Non cosa dico di saper fare. Cosa è successo.",
+    "metaNarrative": "Tutti e tre i casi sono iniziati allo stesso modo. Qualcuno ha descritto un problema. Il problema vero era sempre un altro. Un sistema di pagamento \"pieno di bug\" in realtà aveva quattro problemi critici che facevano perdere soldi. Un brief \"scegli il fornitore cashless\" è diventato una domanda più grande: ha senso questo prodotto? Una configurazione \"che serviva più funzionalità\" si è risolta togliendo passaggi, non aggiungendone. Non è un metodo. È quello che succede quando smetti di risolvere il problema che ti hanno dato e inizi a cercare quello che conta.",
     "cases": {
       "payments": {
         "tag": "Payments · B2B SaaS · Enterprise",
         "title": "Un sistema di pagamento\nche perdeva transazioni ogni giorno",
         "metric": "99%+",
         "metricLabel": "SUCCESS RATE →",
-        "preview": "I clienti perdevano soldi — doppi addebiti, pagamenti falliti, rimborsi spariti. 44 problemi aperti e la pressione di sistemare tutto insieme. Ho trovato i 4 che contavano davvero, risolti in 6 settimane, e portato il sistema al 99%+ di uptime. Senza riscrivere una riga di codice."
+        "preview": "I clienti perdevano soldi. Doppi addebiti, pagamenti falliti, rimborsi spariti. 44 problemi aperti e la pressione di sistemare tutto insieme. Ho trovato i 4 che contavano davvero, risolti in 6 settimane, e portato il sistema al 99%+ di uptime. Senza riscrivere una riga di codice."
       },
       "cashless": {
         "tag": "Cashless · Product Strategy · Partnership",
@@ -239,14 +240,14 @@
         "metric": "5 mesi",
         "metricLabel": "DA ZERO A DEMO LIVE →",
         "preview": "Come fai pagare i clienti senza contanti nei centri di intrattenimento? Tre provider in competizione, serve una strategia prodotto. La scelta ovvia sembrava la migliore sulla carta. I test reali con vincoli reali hanno raccontato un'altra storia.",
-        "note": "Metriche finali disponibili al lancio in produzione — dati pilota in corso di raccolta"
+        "note": "Metriche finali disponibili al lancio in produzione. Dati pilota in corso di raccolta"
       },
       "leadsbridge": {
         "tag": "B2B SaaS · Integration Platform · Growth",
         "title": "380+ integrazioni, e la maggior parte degli utenti\nnon ne finiva nemmeno una",
         "metric": "-35%",
         "metricLabel": "TEMPO DI SETUP →",
-        "preview": "Migliaia di aziende volevano collegare i dati pubblicitari al CRM in automatico. Ma la maggior parte mollava durante la configurazione — troppo complessa. La soluzione non erano più funzionalità. Erano meno. Tempo di setup -35%, adozione +9%."
+        "preview": "Migliaia di aziende volevano collegare i dati pubblicitari al CRM in automatico. Ma la maggior parte mollava durante la configurazione perché era troppo complessa. Togliere funzionalità, non aggiungerne, ha risolto il problema. Tempo di setup -35%, adozione +9%."
       }
     },
     "cta": {
@@ -262,9 +263,9 @@
       "role": "Senior Product Manager, Payments",
       "company": "Piattaforma B2B SaaS · Entertainment & leisure · 5 paesi",
       "industry": "B2B SaaS · Payments · Enterprise",
-      "summary": "Sistema di pagamento stabilizzato da crisi a 99.19% uptime con triage serrato — da 44 issue a 4 priorità.",
-      "tldr": "Un sistema di pagamento stava facendo perdere soldi veri ai clienti — doppi addebiti, rimborsi mancanti, timeout nelle ore di punta. Invece di provare a sistemare tutto insieme, ho filtrato 44 problemi aperti fino ai 4 che contavano davvero. Quei 4 risolti in 6 settimane. Il sistema è passato dalla crisi al 99%+ di uptime.",
-      "learnedCallout": "L’istinto in una crisi è risolvere e crescere allo stesso tempo. Non funziona. La prima vera decisione di prodotto è smettere di scavare il buco più in profondità.",
+      "summary": "I clienti perdevano soldi a ogni transazione. Abbiamo trovato i 4 problemi che contavano davvero su 44, li abbiamo risolti in 6 settimane, e il sistema è arrivato al 99%+ di affidabilità.",
+      "tldr": "Addebiti doppi. Rimborsi che non arrivavano. Il sistema che si piantava nelle ore di punta. C'erano 44 problemi aperti e tutti volevano tutto risolto subito. Abbiamo individuato quali 4 stavano facendo perdere soldi per davvero, li abbiamo risolti in 6 settimane, e il sistema è diventato affidabile al 99%+.",
+      "learnedCallout": "L'istinto in una crisi è risolvere e crescere allo stesso tempo. Non funziona. La prima vera decisione di prodotto è smettere di scavare il buco più in profondità.",
       "period": "2025",
       "heroMetric": "99.19%",
       "heroMetricLabel": "success rate globale",
@@ -273,29 +274,29 @@
       "context": {
         "heading": "Il contesto",
         "content": [
-          "Una piattaforma B2B che serviva centinaia di centri di intrattenimento in cinque paesi. L’integrazione principale, costruita su Square, era il prodotto in più rapida crescita del portfolio: **42% del volume totale delle transazioni**, **25% di crescita anno su anno**, l’unico provider con trend positivo.",
-          "Poi la crescita ha superato il prodotto. L’MVP originale era stato progettato per una manciata di early adopter collaborativi. A metà 2025 era in produzione su una base clienti molto più ampia, e le differenze tra “tecnicamente funzionante” e “operativamente usabile” stavano diventando visibili a tutti."
+          "Un prodotto che gestiva soldi veri per centinaia di attività in cinque paesi. Era la linea di ricavi che cresceva più veloce in azienda: **42% del volume totale delle transazioni**, **25% di crescita anno su anno**, l'unico che andava verso l'alto.",
+          "Finché la crescita non ha superato quello che il prodotto era in grado di fare. La versione originale era nata per pochi clienti fidati. Adesso girava su una scala molto più grande, e la distanza tra 'tecnicamente funziona' e 'ci puoi contare' era diventata impossibile da ignorare."
         ]
       },
       "challenge": {
         "heading": "La sfida",
         "content": [
-          "Oltre il **60% dei clienti onboardati di recente** era insoddisfatto o aveva sospeso l’implementazione. Le lamentele sui social si stavano accumulando. I centri in produzione stavano sperimentando addebiti doppi, timeout dei pagamenti nelle ore di punta, split payment non funzionanti e rimborsi mancanti. Ognuno di questi aveva un impatto finanziario diretto sulle operazioni dei centri.",
-          "Il problema più profondo era strutturale. Nuovi centri continuavano a essere onboardati a pieno ritmo mentre quelli esistenti faticavano. Ogni nuovo cliente insoddisfatto aggiungeva lamentele, danni alla reputazione e carico di supporto. Il prodotto aveva superato le sue capacità, e la crescita stava peggiorando le cose.",
-          "Non c’era una vista consolidata di cosa fosse rotto, nessuna classificazione di gravità condivisa, e nessun singolo owner a guidare la risoluzione."
+          "Oltre il **60% dei clienti arrivati da poco** era scontento o aveva smesso di usare il prodotto. Le lamentele si accumulavano. Le attività che già lo usavano si ritrovavano addebiti doppi, rimborsi che non andavano a buon fine, e il sistema che si bloccava nelle ore di punta. Ogni problema costava soldi veri.",
+          "Il problema di fondo: si continuavano ad aggiungere clienti nuovi a pieno ritmo mentre quelli esistenti erano in difficoltà. Ogni nuovo cliente scontento significava più lamentele, più danno alla reputazione, più pressione sul team di supporto. Il prodotto non reggeva più il passo, e la crescita peggiorava tutto.",
+          "Nessuno aveva una visione chiara di cosa fosse rotto davvero, quanto fosse grave ogni problema, o chi se ne stesse occupando."
         ]
       },
       "approach": {
-        "heading": "L’approccio",
+        "heading": "L'approccio",
         "content": [
-          "**La prima decisione è stata smettere di scalare il problema.** Le feature di crescita sono state messe in pausa. L’acquisizione clienti è rallentata. L’intero team si è spostato su una singola priorità: far funzionare in modo affidabile i centri già in produzione. Questo ha richiesto allineare la leadership commerciale, l’engineering e gli stakeholder executive sugli stessi dati. I numeri sulla soddisfazione clienti hanno fatto il caso.",
-          "**Poi è arrivato il triage.** 44 item aperti nel backlog, compilati da engineering, sales e supporto senza alcun ranking. Il criterio di ordinamento era semplice: questo sta costando soldi a un centro adesso? Questo ha diviso il backlog in tre livelli. 12 item erano critici per le operazioni di pagamento. Di questi, 4 avevano impatto finanziario immediato sui centri live: addebiti doppi, timeout dei pagamenti, split payment non funzionanti, rimborsi mancanti. I restanti 32 erano problemi reali, ma potevano aspettare.",
-          "I 4 item a più alto impatto hanno ottenuto un owner ciascuno, una deadline e un impegno pubblico. Tutti e quattro sono stati rilasciati in sei settimane. Zero lamentele su nessuno di essi dopo il deployment.",
-          "**Mentre il team stabilizzava, ho scavato in un problema che altri avevano classificato come irrisolvibile.** Un centro importante stava per cancellare l’integrazione perché non riusciva a riconciliare i conti. Ogni transazione appariva come “entrata non categorizzata” nella dashboard Square. Nessun dettaglio per terminale, nessuna attribuzione della fonte, nessun modo di chiudere i conti.",
-          "La causa radice era nell’API di Square. Il campo dove venivano salvati i metadati delle transazioni non preservava informazioni sufficienti. Ho tracciato il data model fino a trovare `external_payment_type`, un parametro esistente che poteva trasportare l’attribuzione della fonte senza modifiche architetturali su nessuno dei due lati. Ho scritto le specifiche di implementazione e le ho passate al team. Il centro è rimasto ed è diventato un account di riferimento.",
-          "**La disciplina di scope contava quanto la velocità.** Nell’arco dell’intero anno, 23 dei 44 item sono stati rilasciati. Gli altri 21 erano decisioni deliberate di “non ora”, ciascuna con una motivazione documentata. I 12 item critici di pagamento sono stati ridotti a 5 rimanenti, con ogni problema risolto validato in produzione. Quando la feature di rimborso non era abbastanza solida prima del picco natalizio, l’ho ritirata e ho organizzato una giornata completa di test piuttosto che rilasciare logica rotta a centinaia di centri durante la settimana più intensa.",
-          "**In parallelo alla stabilizzazione, sono corsi due filoni di compliance.** Ho proposto una riduzione di scope per la certificazione PCI DSS presentando ai certificatori un’architettura di pagamento a tre canali, eliminando un rischio significativo di penale ricorrente. Ho anche completato end-to-end la certificazione tecnica FreedomPay, che ha sbloccato un nuovo segmento di centri enterprise.",
-          "**La comunicazione è stata deliberata.** Recap settimanali strutturati, memo operative per decisioni urgenti, verbali dei meeting pubblicati entro poche ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, ho creato video tutorial sui workaround. Soluzioni ponte mentre i fix reali erano in pipeline."
+          "La prima decisione è stata smettere di scalare il problema. Le feature di crescita sono state messe in pausa. L'acquisizione clienti è rallentata. L'intero team si è spostato su una singola priorità: far funzionare in modo affidabile i centri già in produzione. Questo ha richiesto allineare la leadership commerciale, l'engineering e gli stakeholder executive sugli stessi dati. I numeri sulla soddisfazione clienti hanno fatto il caso.",
+          "Poi è arrivato il triage. 44 problemi aperti nel backlog, segnalati da engineering, sales e supporto senza un ordine di priorità. Il criterio di ordinamento era semplice: questo sta costando soldi a un centro adesso? Questo ha diviso il backlog in tre livelli. 12 problemi erano critici per le operazioni di pagamento. Di questi, 4 avevano impatto finanziario immediato sui centri live: addebiti doppi, timeout dei pagamenti, split payment non funzionanti, rimborsi mancanti. I restanti 32 erano problemi reali, ma potevano aspettare.",
+          "I 4 problemi a più alto impatto hanno ottenuto un responsabile ciascuno, una scadenza e un impegno pubblico. Tutti e quattro sono stati rilasciati in sei settimane. Zero lamentele su nessuno di essi dopo il rilascio.",
+          "Mentre il team stabilizzava, ho scavato in un problema che altri avevano classificato come irrisolvibile. Un centro importante stava per cancellare l'integrazione perché non riusciva a riconciliare i conti. Ogni transazione appariva come \"entrata non categorizzata\" nella dashboard Square. Nessun dettaglio per terminale, nessuna attribuzione della fonte, nessun modo di chiudere i conti.",
+          "La causa radice era nell'API di Square. Il campo dove venivano salvati i metadati delle transazioni non preservava informazioni sufficienti. Abbiamo tracciato il data model fino a trovare `external_payment_type`, un parametro esistente che poteva trasportare l'attribuzione della fonte senza modifiche architetturali su nessuno dei due lati. Ho scritto le specifiche di implementazione e le ho passate al team. Il centro è rimasto ed è diventato un account di riferimento.",
+          "La disciplina di scope contava quanto la velocità. Nell'arco dell'intero anno, 23 dei 44 item sono stati rilasciati. Gli altri 21 erano decisioni deliberate di \"non ora\", ciascuna con una motivazione documentata. I 12 item critici di pagamento sono stati ridotti a 5 rimanenti, con ogni problema risolto validato in produzione. Quando la feature di rimborso non era abbastanza solida prima del picco natalizio, l'ho ritirata. Abbiamo organizzato una giornata completa di test piuttosto che rilasciare logica rotta a centinaia di centri durante la settimana più intensa.",
+          "In parallelo alla stabilizzazione, sono corsi due filoni di compliance. Ho proposto una riduzione di scope per la certificazione PCI DSS presentando ai certificatori un'architettura di pagamento a tre canali, eliminando un rischio significativo di penale ricorrente. Abbiamo anche completato la certificazione tecnica FreedomPay end-to-end, sbloccando un nuovo segmento di centri enterprise.",
+          "La comunicazione è stata deliberata. Riepiloghi settimanali strutturati, memo operative per decisioni urgenti, verbali delle riunioni pubblicati entro poche ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, abbiamo creato video tutorial sulle soluzioni temporanee. Soluzioni ponte mentre le correzioni vere erano in coda."
         ]
       },
       "results": {
@@ -315,7 +316,7 @@
           },
           {
             "metric": "25%",
-            "label": "crescita YoY per l’integrazione Square, l’unico provider ancora in crescita"
+            "label": "crescita anno su anno per l'integrazione Square, l'unico fornitore ancora in crescita"
           },
           {
             "metric": "116",
@@ -330,29 +331,29 @@
       "learned": {
         "heading": "Cosa ho imparato",
         "content": [
-          "L’istinto in una crisi è fixare e crescere allo stesso tempo. Non funziona. La prima vera decisione di prodotto è smettere di scavare il buco più in profondità. Tutto il resto segue da lì.",
-          "La seconda cosa: 44 item, 12 critici, 4 urgenti. La maggior parte di quello che sembrava urgente poteva in realtà aspettare. Sapere quali non possono è la vera competenza. Un singolo criterio di ordinamento chiaro ha dato al team più chiarezza di qualsiasi quantità di discussione.",
-          "La terza: quando un problema viene etichettato come “irrisolvibile” o “in attesa del partner”, vale la pena verificare se qualcuno ha effettivamente letto la documentazione dell’API. Il fix per l’attribuzione della fonte era già lì. Serviva solo qualcuno disposto a cercare."
+          "L'istinto in una crisi è risolvere tutto e crescere allo stesso tempo. Non funziona. La prima vera decisione di prodotto è smettere di scavare il buco più in profondità. Tutto il resto segue da lì.",
+          "La seconda cosa: 44 problemi, 12 critici, 4 urgenti. La maggior parte di quello che sembrava urgente poteva aspettare. Sapere quali no è la vera competenza. Un singolo criterio di ordinamento chiaro ha dato al team più chiarezza di qualsiasi discussione.",
+          "La terza: quando un problema viene etichettato come \"irrisolvibile\" o \"in attesa del partner\", vale la pena verificare se qualcuno ha effettivamente letto la documentazione dell'API. La correzione per l'attribuzione della fonte era già lì. Serviva solo qualcuno disposto a cercare."
         ]
       },
       "patterns": {
-        "heading": "Pattern trasferibili",
+        "heading": "Approcci trasferibili",
         "items": [
           {
-            "title": "Crisi → Freeze → Triage → Fix → Resume",
-            "content": "Quando un sistema è in fiamme, l'istinto è fixare tutto contemporaneamente. Il pattern che funziona: congela lo scope, fai il triage spietatamente (siamo passati da 44 problemi a 4 priorità), aggiusta quello che conta, poi riprendi la crescita."
+            "title": "Crisi → Blocco → Triage → Correzione → Ripresa",
+            "content": "Quando un sistema è in fiamme, l'istinto è risolvere tutto contemporaneamente. Lo schema che funziona: congela l'ambito, fai il triage senza pietà (siamo passati da 44 problemi a 4 priorità), aggiusta quello che conta, poi riprendi la crescita."
           },
           {
-            "title": "Le metriche come tool di triage, non decorazione di dashboard",
-            "content": "Il numero 99.19% di uptime contava solo perché veniva dall'instrumentare ogni modalità di fallimento. La dashboard non era per gli executive — era per l'ingegnere on-call alle 2 di mattina."
+            "title": "Le metriche come strumento di triage, non decorazione di dashboard",
+            "content": "Il numero 99.19% di uptime contava solo perché veniva dal misurare ogni modalità di fallimento. La dashboard serviva all'ingegnere di turno alle 2 di mattina, non ai dirigenti."
           },
           {
-            "title": "Disciplina di scope sotto pressione",
-            "content": "Ogni stakeholder aveva il suo fix preferito. Il pattern: se non riduce direttamente il failure rate, aspetta. Dire no a 40 item ha reso possibile fixare i 4 che contavano."
+            "title": "Disciplina di ambito sotto pressione",
+            "content": "Ogni persona coinvolta aveva la sua correzione preferita. La regola: se non riduce direttamente il tasso di errore, aspetta. Dire no a 40 problemi ha reso possibile risolvere i 4 che contavano."
           },
           {
             "title": "L'architettura post-crisi > architettura pre-crisi",
-            "content": "Il sistema di pagamento dopo il rescue era migliore di quello prima della crisi. Le crisi espongono il technical debt che le operazioni normali nascondono."
+            "content": "Il sistema di pagamento dopo il rescue era migliore di quello prima della crisi. Le crisi espongono il debito tecnico che le operazioni normali nascondono."
           }
         ]
       },
@@ -364,9 +365,9 @@
       "role": "Product Owner",
       "company": "Piattaforma B2B SaaS · Lead generation · 380+ integrazioni",
       "industry": "B2B SaaS · Integration Platform · Growth",
-      "summary": "Ridisegnato il flusso di creazione bridge rimuovendo complessità, non aggiungendone. Setup time -35%, adoption +9%.",
-      "tldr": "Migliaia di aziende volevano spostare automaticamente i lead pubblicitari nel loro CRM. Ma la maggior parte mollava durante la configurazione — cinque step, ognuno più confuso del precedente. La soluzione non erano più funzionalità. Erano meno. Tempo di setup -35%, adozione +9%.",
-      "learnedCallout": "C’è differenza tra quello che gli utenti chiedono e quello di cui hanno bisogno per avere successo. La maggior parte aveva bisogno di un percorso più semplice. Chi aveva bisogno di complessità poteva gestire un click in più.",
+      "summary": "La maggior parte dei clienti voleva usare il prodotto ma abbandonava durante il setup. Togliere funzionalità, non aggiungerne, ha ridotto il tempo di configurazione del 35%.",
+      "tldr": "Il prodotto collegava piattaforme pubblicitarie a strumenti aziendali. Automaticamente, senza scrivere codice. Migliaia di aziende ci contavano. Ma la maggior parte dei nuovi utenti mollava prima di finire la configurazione. Cinque passaggi, ognuno più confuso del precedente. Togliere funzionalità, non aggiungerne, si è rivelata la risposta. Tempo di configurazione -35%, adozione +9%.",
+      "learnedCallout": "C'è differenza tra quello che gli utenti chiedono e quello di cui hanno bisogno per avere successo. La maggior parte aveva bisogno di un percorso più semplice. Chi aveva bisogno di complessità poteva gestire un click in più.",
       "period": "2020–2023",
       "heroMetric": "-35%",
       "heroMetricLabel": "tempo di setup",
@@ -375,28 +376,27 @@
       "context": {
         "heading": "Il contesto",
         "content": [
-          "Una piattaforma B2B SaaS che collegava canali pubblicitari a CRM e strumenti di marketing. Ogni volta che arrivava un lead da Facebook, Google o TikTok Ads, LeadsBridge lo spostava automaticamente alla destinazione giusta — senza codice, senza export manuali, senza lead persi.",
-          "Il prodotto aveva **380+ integrazioni** e una base clienti in crescita di marketer e agenzie che dipendevano dalla piattaforma quotidianamente. L'esperienza centrale era il \"bridge\": un flusso in cinque step dove gli utenti selezionavano sorgente e destinazione, autenticavano entrambe le piattaforme, mappavano i campi dati, configuravano le opzioni avanzate e attivavano.",
-          "Il problema non era che i bridge non funzionassero. Il problema era che troppi utenti non arrivavano mai a completarne uno."
+          "Un prodotto che collegava piattaforme pubblicitarie a strumenti aziendali. Quando arrivava un potenziale cliente da Facebook, Google o TikTok Ads, il prodotto spostava le sue informazioni nel posto giusto automaticamente. Senza codice, senza lavoro manuale, senza contatti persi.",
+          "380+ integrazioni, una base crescente di marketer e agenzie che ci contavano ogni giorno. Per configurare un collegamento, l'utente faceva cinque passaggi: scegliere la sorgente, scegliere la destinazione, accedere a entrambe, abbinare i dati, e attivare. Il prodotto funzionava bene. Il problema era che troppi utenti non arrivavano alla fine della configurazione."
         ]
       },
       "challenge": {
         "heading": "La sfida",
         "content": [
-          "Il funnel di creazione bridge aveva un drop-off significativo. Gli utenti entravano nel flusso — avevano un'intenzione, avevano un caso d'uso — ma un numero sproporzionato abbandonava prima dell'attivazione. I due cali più ripidi erano nella **configurazione delle integrazioni** (connessione e autenticazione delle piattaforme) e nella **mappatura dei campi** (associazione dei campi sorgente con quelli di destinazione).",
-          "La configurazione richiedeva agli utenti di navigare flussi OAuth, chiavi API e pattern di autenticazione specifici per ogni piattaforma — ognuno leggermente diverso, ognuno con le proprie modalità di errore. Chi superava l'autenticazione si trovava di fronte alla mappatura: una schermata flessibile ma travolgente dove ogni campo sorgente poteva essere associato manualmente a qualsiasi campo destinazione. I power user la adoravano. Tutti gli altri restavano a fissarla.",
-          "Il prodotto era cresciuto feature dopo feature, aggiungendo opzioni a ogni step per soddisfare le richieste più insistenti. Il risultato era un flusso che tecnicamente poteva fare tutto — e in pratica intimidiva la maggior parte degli utenti prima di arrivare alla fine."
+          "Gli utenti arrivavano con un obiettivo chiaro (sapevano cosa volevano collegare) ma un numero sproporzionato mollava prima di finire. I due muri più alti erano **l'accesso alle piattaforme** (ogni integrazione aveva un processo di autenticazione diverso, ognuno con i suoi modi di fallire) e **l'abbinamento dei dati** (una schermata flessibile ma travolgente dove ogni campo poteva essere abbinato manualmente a qualsiasi altro).",
+          "Gli utenti esperti adoravano la flessibilità. Tutti gli altri fissavano lo schermo e se ne andavano.",
+          "Il prodotto era cresciuto aggiungendo opzioni a ogni passaggio per accontentare chi faceva più rumore. Il risultato era un flusso di configurazione che poteva fare qualsiasi cosa ma che in pratica spaventava la maggior parte degli utenti prima che arrivassero alla fine."
         ]
       },
       "approach": {
         "heading": "L'approccio",
         "content": [
-          "**Il primo passo è stato capire dove le persone si bloccavano davvero.** Non dove pensavamo si bloccassero. Ho mappato l'intero funnel con tassi di completamento a ogni step, incrociando ticket di supporto e pattern di sessione. I dati confermavano quello che i numeri suggerivano: configurazione e mappatura erano i muri. Ma rivelavano anche qualcosa di meno ovvio — gli utenti che completavano il primo bridge ne creavano in media altri tre. La barriera all'attivazione era l'unica barriera.",
-          "**Poi è arrivata la decisione controintuitiva: togliere funzionalità.** Il pannello opzioni avanzate — logica condizionale, trasformazioni custom, elaborazione campi multi-step — era visibile a ogni utente su ogni bridge. Aggiungeva carico cognitivo a un flusso che la maggior parte degli utenti aveva bisogno fosse semplice. La proposta era nasconderlo completamente dall'esperienza di default e mostrarlo solo agli utenti che lo cercavano esplicitamente.",
-          "La resistenza è stata immediata. Le opzioni avanzate erano un punto di vendita nelle demo. Il commerciale le usava per differenziarsi dai competitor. Il supporto aveva costruito documentazione attorno ad esse. Rimuoverle dalla vista di default sembrava rimuovere una funzionalità. L'argomento che ha vinto: **non stiamo rimuovendo capacità, stiamo rimuovendo frizione.** Le opzioni esistono ancora. Semplicemente smettono di penalizzare chi non ne ha bisogno.",
-          "**La mappatura dei campi ha avuto lo stesso trattamento.** Invece di presentare un canvas vuoto dove gli utenti collegavano manualmente i campi uno a uno, il flusso ridisegnato proponeva mappature automatiche basate su nomi dei campi, tipi e pattern comuni attraverso il catalogo integrazioni. Gli utenti potevano rivedere e modificare — ma il punto di partenza era una configurazione funzionante, non uno schermo vuoto.",
-          "**Non era solo un cambiamento di UI. Richiedeva ripensare il data layer.** Il motore di auto-mapping doveva comprendere la semantica dei campi attraverso centinaia di integrazioni con convenzioni di naming diverse. Ho lavorato con l'engineering per costruire un algoritmo di matching che usava metadati dei campi, pattern storici di mappatura dai bridge riusciti e compatibilità di tipo. Il lavoro tecnico ha reso possibile l'UI semplice.",
-          "**Il rollout è stato graduale.** Non abbiamo cambiato tutto per tutti. Il nuovo flusso è andato prima ai nuovi utenti, mentre i power user esistenti mantenevano l'esperienza originale. Abbiamo misurato tassi di completamento, time-to-first-bridge e — cruciale — se il flusso semplificato produceva bridge che funzionavano davvero in produzione. Funzionavano."
+          "Il primo passo è stato capire dove le persone si bloccavano davvero. Non dove pensavamo si bloccassero. Ho mappato l'intero percorso con tassi di completamento a ogni passaggio, incrociando ticket di supporto e comportamenti nelle sessioni. I dati confermavano quello che i numeri suggerivano: configurazione e mappatura erano i muri. Ma rivelavano anche qualcosa di meno ovvio — gli utenti che completavano il primo bridge ne creavano in media altri tre. La barriera all'attivazione era l'unica barriera.",
+          "Poi è arrivata la decisione controintuitiva: togliere funzionalità. Il pannello opzioni avanzate — logica condizionale, trasformazioni custom, elaborazione campi multi-step — era visibile a ogni utente su ogni bridge. Aggiungeva carico cognitivo a un flusso che la maggior parte degli utenti aveva bisogno fosse semplice. La proposta era nasconderlo completamente dall'esperienza di default e mostrarlo solo agli utenti che lo cercavano esplicitamente.",
+          "La resistenza è stata immediata. Le opzioni avanzate erano un punto di vendita nelle demo. Il commerciale le usava per differenziarsi dai competitor. Il supporto aveva costruito documentazione attorno ad esse. Rimuoverle dalla vista di default sembrava rimuovere una funzionalità. L'argomento che ha vinto: non stiamo rimuovendo capacità, stiamo rimuovendo frizione. Le opzioni esistono ancora. Semplicemente smettono di penalizzare chi non ne ha bisogno.",
+          "La mappatura dei campi ha avuto lo stesso trattamento. Invece di presentare uno schermo vuoto dove gli utenti collegavano manualmente i campi uno a uno, il flusso ridisegnato proponeva mappature automatiche basate su nomi dei campi, tipi e schemi ricorrenti nel catalogo integrazioni. Gli utenti potevano rivedere e modificare — ma il punto di partenza era una configurazione funzionante, non uno schermo vuoto.",
+          "Non era solo un cambiamento di UI. Richiedeva ripensare lo strato dati. Il motore di auto-mapping doveva comprendere la semantica dei campi attraverso centinaia di integrazioni con convenzioni di denominazione diverse. Abbiamo costruito un algoritmo di matching che usava metadati dei campi, schemi storici di mappatura dai bridge riusciti e compatibilità di tipo. Il lavoro tecnico ha reso possibile l'interfaccia semplice.",
+          "Il rollout è stato graduale. Non abbiamo cambiato tutto per tutti. Il nuovo flusso è andato prima ai nuovi utenti, mentre i power user esistenti mantenevano l'esperienza originale. Abbiamo misurato tassi di completamento, time-to-first-bridge e, cosa cruciale, se il flusso semplificato produceva bridge che funzionavano davvero in produzione. Funzionavano."
         ]
       },
       "results": {
@@ -427,25 +427,25 @@
       "learned": {
         "heading": "Cosa ho imparato",
         "content": [
-          "Le decisioni di prodotto più difficili sembrano quelle in cui togli qualcosa. Rimuovere opzioni visibili da un flusso sembra un passo indietro — specialmente quando quelle opzioni esistono perché i clienti le hanno chieste. Ma c'è una differenza tra quello che gli utenti chiedono e quello di cui hanno bisogno per avere successo. I dati erano inequivocabili: la maggior parte degli utenti aveva bisogno di un percorso più semplice, e la minoranza che aveva bisogno di complessità poteva gestire un click in più per trovarla.",
+          "Le decisioni di prodotto più difficili sembrano quelle in cui togli qualcosa. Rimuovere opzioni visibili da un flusso sembra un passo indietro, specialmente quando quelle opzioni esistono perché i clienti le hanno chieste. Ma c'è una differenza tra quello che gli utenti chiedono e quello di cui hanno bisogno per avere successo. I dati erano inequivocabili: la maggior parte degli utenti aveva bisogno di un percorso più semplice, e la minoranza che aveva bisogno di complessità poteva gestire un click in più per trovarla.",
           "La seconda lezione riguardava i default. Una schermata di mappatura vuota e una pre-compilata portano allo stesso posto. Ma la versione pre-compilata comunica \"capiamo il tuo caso d'uso\" mentre quella vuota comunica \"arrangiatevi.\" Il lavoro del prodotto è codificare conoscenza, non solo fornire strumenti.",
-          "La terza: lavorare come Product Owner sotto un fondatore che dava vera autonomia è stata la miglior palestra possibile. Gestivo l'intero ciclo — ricerca, design, specifiche, delivery, misurazione — con un partner senior che sfidava le assunzioni ma non sovrascriveva le decisioni. Quella dinamica mi ha insegnato più sul giudizio di prodotto di qualsiasi framework."
+          "La terza: lavorare come Product Owner sotto un fondatore che dava vera autonomia è stata la miglior palestra possibile. Gestivo l'intero ciclo (ricerca, design, specifiche, delivery, misurazione) con un partner senior che sfidava le assunzioni ma non sovrascriveva le decisioni. Quella dinamica mi ha insegnato più sul giudizio di prodotto di qualsiasi schema teorico."
         ]
       },
       "patterns": {
-        "heading": "Pattern trasferibili",
+        "heading": "Approcci trasferibili",
         "items": [
           {
             "title": "Togli prima di aggiungere",
-            "content": "La mossa controintuitiva: rimuovere il pannello opzioni avanzate dal flusso di default ha ridotto il tempo di setup del 35%. La maggior parte dei miglioramenti UX vengono dalla sottrazione, non dall'aggiunta."
+            "content": "La mossa controintuitiva: rimuovere il pannello opzioni avanzate dal flusso predefinito ha ridotto il tempo di configurazione del 35%. La maggior parte dei miglioramenti UX vengono dalla sottrazione, non dall'aggiunta."
           },
           {
-            "title": "Automatizza il pain point, non redesign intorno a esso",
-            "content": "Gli utenti non fallivano perché l'UI fosse brutta. Fallivano alla mappatura dei campi. L'auto-mapping ha risolto il problema alla radice, non in superficie."
+            "title": "Automatizza il punto dolente, non aggirarlo",
+            "content": "Gli utenti non fallivano perché l'interfaccia fosse brutta. Fallivano alla mappatura dei campi. L'auto-mapping ha risolto il problema alla radice, non in superficie."
           },
           {
-            "title": "Misura il funnel, non la feature",
-            "content": "Le 380+ integrazioni erano una vanity metric. Il numero reale era il tasso di completamento a 5 step. Ottimizzare uno step ha mosso la metrica di business più che lanciare 50 nuove integrazioni."
+            "title": "Misura il percorso, non la singola funzionalità",
+            "content": "Le 380+ integrazioni erano una metrica di vanità. Il numero reale era il tasso di completamento a 5 passaggi. Ottimizzare un passaggio ha mosso la metrica di business più che lanciare 50 nuove integrazioni."
           },
           {
             "title": "Pensiero da piattaforma: rendi il caso comune senza sforzo",
@@ -454,16 +454,16 @@
         ]
       },
       "pullQuote1": "Non stiamo togliendo funzionalità. Stiamo togliendo attrito.",
-      "pullQuote2": "Una schermata di mappatura vuota e una pre-compilata portano allo stesso posto. Ma quella pre-compilata comunica che abbiamo capito il caso d’uso."
+      "pullQuote2": "Una schermata di mappatura vuota e una pre-compilata portano allo stesso posto. Ma quella pre-compilata comunica che abbiamo capito il caso d'uso."
     },
     "cashless": {
       "tag": "Cashless · Product Strategy · Partnership",
       "role": "Senior Product Manager, Payments & Cashless",
       "company": "Piattaforma B2B SaaS · Entertainment & leisure · 5 paesi",
       "industry": "B2B SaaS · Cashless · Strategy & Partnerships",
-      "summary": "Ucciso un prodotto interno e costruita una partnership di co-sviluppo che ha risolto il problema strutturale in 5 mesi.",
-      "tldr": "I centri di intrattenimento volevano far giocare i clienti senza contanti — carica denaro su una card, tocca per giocare. Tre provider competevano per il deal, e il prodotto interno ovvio non avrebbe funzionato. L’ho fermato, testato due alternative con vincoli reali, e costruito una partnership di co-sviluppo che in 5 mesi è passata da zero a un sistema funzionante.",
-      "learnedCallout": "La decisione di prodotto più difficile non è cosa costruire. È cosa smettere di costruire. Fermare il prodotto interno subito ha risparmiato mesi e prevenuto una seconda crisi.",
+      "summary": "Tre fornitori, un gap strategico, e un prodotto interno che non avrebbe funzionato. L'ho fermato per tempo e abbiamo costruito una partnership che ha consegnato in 5 mesi.",
+      "tldr": "I clienti volevano smettere di usare contanti. Carichi soldi su una tessera, tocchi per giocare. L'azienda non aveva una soluzione, il competitor sì. C'erano tre fornitori sul tavolo. La scelta ovvia, costruirlo internamente, avrebbe ripetuto gli stessi errori. Ho fermato quel progetto per tempo, testato due alternative con vincoli reali, e abbiamo costruito una partnership che in 5 mesi è andata da zero a un sistema funzionante.",
+      "learnedCallout": "Sapere cosa smettere di costruire è più difficile che sapere cosa iniziare. Fermare il prodotto interno subito ha risparmiato mesi e prevenuto una seconda crisi.",
       "period": "2025–2026",
       "heroMetric": "5 mesi",
       "heroMetricLabel": "da zero a demo live",
@@ -472,27 +472,26 @@
       "context": {
         "heading": "Il contesto",
         "content": [
-          "Una piattaforma B2B dove il prodotto pagamenti stava crescendo rapidamente. L’integrazione Square copriva il **42% del volume delle transazioni**, i centri si onboardavano a **5 a settimana**, e i flussi di pagamento core erano stabili.",
-          "Ma i clienti continuavano a fare la stessa domanda: quando possiamo andare cashless? L’industria si stava muovendo verso il gioco basato su card, i wallet a valore memorizzato e i sistemi tap-to-play. Il competitor principale aveva già un’offerta cashless unificata, e quel gap si vedeva in ogni deal competitivo.",
-          "Il problema non era se costruire il cashless. Il problema era che non esisteva nessuna integrazione tra i provider cashless e l’architettura di pagamento della piattaforma, e il gap tecnico era più profondo di quanto chiunque avesse stimato."
+          "Il prodotto pagamenti dell'azienda stava crescendo bene: **42% del volume delle transazioni**, **5 nuove attività live ogni settimana**, e il prodotto core era finalmente stabile dopo mesi di crisi. Ma i clienti continuavano a fare la stessa domanda: quando possiamo andare senza contanti?",
+          "Il settore si stava spostando verso i pagamenti con tessera. Carichi soldi, tocchi per giocare, niente monete. Il competitor principale ce l'aveva già. Quel buco si vedeva in ogni trattativa commerciale. Tutti erano d'accordo che servisse. La domanda era come, perché nessuno aveva capito come collegare un sistema cashless al prodotto di pagamento esistente, e il problema tecnico era più grosso di quanto chiunque pensasse."
         ]
       },
       "challenge": {
         "heading": "La sfida",
         "content": [
-          "I sistemi cashless funzionano su un modello deposito-e-riscatto. Un cliente carica denaro su una card, poi lo spende ai terminali di gioco. Semplice dal lato utente. Dal lato contabile, un casino: il deposito si registra come entrata, e il riscatto si registra come seconda entrata. Doppio conteggio. Ogni centro che gestiva il cashless avrebbe dovuto riconciliare manualmente, o i conti non avrebbero quadrato.",
-          "Tre provider cashless erano sul tavolo. Ognuno aveva architetture API diverse, modelli di prezzo diversi e diversi livelli di disponibilità a co-sviluppare. Nessuno internamente aveva mappato il panorama o definito cosa “integrazione cashless” significasse davvero per la piattaforma."
+          "La trappola nascosta era la contabilità. Quando un cliente carica soldi sulla tessera, quello viene registrato come un incasso. Quando li spende, viene registrato come un altro incasso. Doppio conteggio. Ogni attività che usava il cashless avrebbe dovuto sistemare i conti a mano ogni giorno, altrimenti i numeri non tornavano.",
+          "C'erano tre fornitori disponibili, ognuno con tecnologia diversa, prezzi diversi, e diversa disponibilità a lavorare insieme su una soluzione. Nessuno in azienda aveva mappato le opzioni o definito cosa significasse davvero 'andare cashless'."
         ]
       },
       "approach": {
-        "heading": "L’approccio",
+        "heading": "L'approccio",
         "content": [
-          "**La prima mossa è stata capire cosa stavamo effettivamente costruendo.** Non “una feature cashless” ma una definizione di prodotto specifica: cosa significa integrazione cashless per una piattaforma che già gestisce pagamenti Square? Qual è il data model? Dove scorre il denaro? Ho mappato l’intero ciclo di vita della transazione attraverso deposito, gioco e riscatto prima di valutare qualsiasi provider.",
-          "**Poi ho ucciso l’opzione ovvia.** Il prodotto interno, OneCashless, era stato esplorato attraverso diverse sessioni di discovery. Sulla carta sembrava il percorso più veloce. In pratica, il prodotto non convinceva. Il modello di business era poco chiaro, l’architettura tecnica richiedeva lavoro che non potevamo giustificare, e forzare un prodotto debole in produzione avrebbe creato la stessa crisi che il team pagamenti aveva appena speso mesi a risolvere. L’ho parcheggiato. Deliberatamente.",
-          "**Intercard è stato il primo vero test.** Una fee API di $500 per terminale, ma avevano presenza di mercato. Ho definito lo scope per un proof of concept con due centri pilota, l’ho fatto validare e messo in uso quotidiano. Ha dimostrato che l’integrazione cashless era tecnicamente fattibile sulla piattaforma.",
-          "**Il vero sblocco è stato Amusement Connect.** Avevano qualcosa che nessun altro provider offriva: compatibilità nativa con Square. Questo significava che il problema del doppio conteggio aveva una soluzione strutturale, non solo un workaround. Ho avviato una partnership di co-sviluppo e negoziato una roadmap condivisa verso la feature parity con l’integrazione Intercard.",
-          "**Il problema del doppio conteggio ha ottenuto una soluzione specifica.** Ho esplorato molteplici approcci: pagamenti app tramite QR, meccanismi gift card, swap hardware fisici. Nessuno lo risolveva in modo pulito. La svolta è stata un modello basato su payout che utilizza l’infrastruttura gift card di Square, dove i riscatti compensano i depositi invece di creare nuove voci di entrata. Conti puliti. Nessuna riconciliazione manuale.",
-          "**BowlExpo ha validato la direzione.** La fiera più grande del settore, e la piattaforma doveva mostrare capacità cashless. Il team ha consegnato un’integrazione funzionante in meno di cinque mesi dal kickoff. Non una demo. Un sistema funzionante."
+          "La prima mossa è stata capire cosa stavamo effettivamente costruendo. Non \"una feature cashless\" ma una definizione di prodotto specifica: cosa significa integrazione cashless per una piattaforma che già gestisce pagamenti Square? Qual è il data model? Dove scorre il denaro? Ho mappato l'intero ciclo di vita della transazione attraverso deposito, gioco e riscatto prima di valutare qualsiasi provider.",
+          "Poi ho scartato l'opzione ovvia. Il prodotto interno, OneCashless, era stato esplorato attraverso diverse sessioni di discovery. Sulla carta sembrava il percorso più veloce. In pratica, il prodotto non convinceva. Il modello di business era poco chiaro, l'architettura tecnica richiedeva lavoro che non potevamo giustificare, e forzare un prodotto debole in produzione avrebbe creato la stessa crisi che il team pagamenti aveva appena speso mesi a risolvere. L'ho parcheggiato. Deliberatamente.",
+          "Intercard è stato il primo vero test. Una fee API di $500 per terminale, ma avevano presenza di mercato. Ho definito l'ambito per un proof of concept con due centri pilota. Il team l'ha validato e messo in uso quotidiano. Ha dimostrato che l'integrazione cashless era tecnicamente fattibile sulla piattaforma.",
+          "Il vero sblocco è stato Amusement Connect. Avevano qualcosa che nessun altro provider offriva: compatibilità nativa con Square. Questo significava che il problema del doppio conteggio aveva una soluzione strutturale, non solo un aggiramento temporaneo. Ho avviato una partnership di co-sviluppo e negoziato una roadmap condivisa verso la parità di funzionalità con l'integrazione Intercard.",
+          "Il problema del doppio conteggio ha ottenuto una soluzione specifica. Abbiamo esplorato molteplici approcci: pagamenti app tramite QR, meccanismi gift card, swap hardware fisici. Nessuno lo risolveva in modo pulito. La svolta è stata un modello basato su payout che utilizza l'infrastruttura gift card di Square, dove i riscatti compensano i depositi invece di creare nuove voci di entrata. Conti puliti. Nessuna riconciliazione manuale.",
+          "BowlExpo ha validato la direzione. La fiera più grande del settore, e la piattaforma doveva mostrare capacità cashless. Il team ha consegnato un'integrazione funzionante in meno di cinque mesi dal kickoff. Non una demo. Un sistema funzionante."
         ]
       },
       "results": {
@@ -512,44 +511,44 @@
           },
           {
             "metric": "1",
-            "label": "prodotto ucciso (OneCashless) prima che potesse diventare un problema"
+            "label": "prodotto fermato (OneCashless) prima che potesse diventare un problema"
           }
         ]
       },
       "learned": {
         "heading": "Cosa ho imparato",
         "content": [
-          "La decisione di prodotto più difficile non è cosa costruire. È cosa smettere di costruire. OneCashless aveva momentum, supporter interni e un vantaggio iniziale. Non avrebbe funzionato. Parcheggiarlo presto ha risparmiato mesi di tempo engineering e prevenuto una seconda crisi pagamenti.",
-          "La seconda lezione: quando il problema tecnico sembra irrisolvibile, la risposta di solito è nel data model, non nella UI. Il problema del doppio conteggio è sparito quando ho smesso di cercare un fix lato utente e ho iniziato a mappare dove il denaro scorre effettivamente nel sistema.",
-          "La terza: scegliere un partner non è una valutazione fornitori. È una decisione di prodotto. Amusement Connect ha vinto non perché aveva il pitch migliore, ma perché la loro architettura risolveva un problema che la nostra non poteva risolvere da sola."
+          "Sapere cosa smettere di costruire è più difficile che sapere cosa iniziare. OneCashless aveva momentum, supporter interni e un vantaggio iniziale. Niente di tutto questo contava, perché il prodotto non reggeva. Parcheggiarlo presto ha risparmiato mesi di lavoro al team e prevenuto una seconda crisi pagamenti.",
+          "La seconda lezione: quando il problema tecnico sembra irrisolvibile, la risposta di solito è nel modello dati, non nell'interfaccia. Il problema del doppio conteggio è sparito quando ho smesso di cercare una soluzione lato utente e ho iniziato a mappare dove il denaro scorre effettivamente nel sistema.",
+          "La terza: scegliere un partner è lavoro di prodotto, non procurement. Amusement Connect ha vinto perché la loro architettura risolveva un problema che la nostra non poteva risolvere da sola, non perché aveva il pitch migliore."
         ]
       },
       "patterns": {
-        "heading": "Pattern trasferibili",
+        "heading": "Approcci trasferibili",
         "items": [
           {
-            "title": "Uccidi il tuo prodotto per risolvere il vero problema",
-            "content": "La decisione di prodotto più difficile: raccomandare di smettere di costruire internamente e fare partnership invece. Il problema strutturale (regolamentare, hardware, operations) non poteva essere risolto da software migliore."
+            "title": "Ferma il tuo prodotto per risolvere il vero problema",
+            "content": "La decisione di prodotto più difficile: raccomandare di smettere di costruire internamente e fare partnership invece. Il problema strutturale (regolamentare, hardware, operazioni) non poteva essere risolto da software migliore."
           },
           {
-            "title": "Pilot prima di committerti",
-            "content": "5 clienti, 150+ transazioni in 14 giorni erano segnale sufficiente. Non hai bisogno di 100 clienti per validare una direzione — hai bisogno dei 5 giusti."
+            "title": "Testa prima di impegnarti",
+            "content": "5 clienti, 150+ transazioni in 14 giorni erano segnale sufficiente. Non servono 100 clienti per validare una direzione. Servono i 5 giusti."
           },
           {
             "title": "La selezione del partner è lavoro di prodotto",
-            "content": "Valutare 3 vendor non era procurement — era strategia di prodotto. Il framework di scoring (tech, API, roadmap, overlap) era lo stesso che useresti per build vs buy."
+            "content": "Valutare 3 fornitori era strategia di prodotto, non procurement. Lo schema di valutazione (tecnologia, API, roadmap, sovrapposizione clienti) era lo stesso che useresti per decidere se costruire o comprare."
           },
           {
-            "title": "Da zero a uno richiede un PM muscle diverso",
-            "content": "Andare da nulla a un pilot funzionante in 5 mesi richiedeva skills di PM che la modalità maintenance non esercita mai: tolleranza dell'ambiguità, negoziazione con vendor, allineamento degli stakeholder senza dati."
+            "title": "Da zero a uno richiede competenze diverse",
+            "content": "Andare da nulla a un pilota funzionante in 5 mesi richiedeva competenze di PM che la modalità manutenzione non esercita mai: tolleranza dell'ambiguità, negoziazione con fornitori, allineamento di chi decide senza dati."
           }
         ]
       },
-      "pullQuote1": "La decisione di prodotto più difficile non è cosa costruire. È cosa smettere di costruire.",
-      "pullQuote2": "Scegliere un partner non è una valutazione fornitori. È una decisione di prodotto."
+      "pullQuote1": "Sapere cosa smettere di costruire è più difficile che sapere cosa iniziare.",
+      "pullQuote2": "Scegliere un partner è lavoro di prodotto, non procurement."
     },
     "cta": {
-      "text": "Questi casi raccontano il come. Se vuoi il chi, c’è la pagina about. Se vuoi parlare, scrivimi.",
+      "text": "Questi casi raccontano il come. Se vuoi il chi, c'è la pagina about. Se vuoi parlare, scrivimi.",
       "primary": "Chi sono",
       "secondary": "Scrivimi"
     },
@@ -565,8 +564,8 @@
       "origin": {
         "heading": "Come è nato",
         "content": [
-          "Dovevo trovare un appartamento a Modena. Come tutti in Italia, controllavo Immobiliare.it, Idealista, Subito e i siti delle agenzie separatamente — ogni piattaforma un silo, nessun modo di vedere il quadro completo. Gli appartamenti buoni sparivano in ore. Gli algoritmi non capivano la qualità; ordinavano solo per data o prezzo.",
-          "Allora ho scritto uno scraper in un weekend. Parser di ogni piattaforma, scoring degli annunci su qualità effettiva — non parole chiave, non popolarità, ma rapporto qualità-prezzo. Prezzo contro medie di zona. Stato dalle foto. Tempo di pendolarismo. Tutto quello che farebbe una persona, ma automatico.",
+          "Dovevo trovare un appartamento a Modena. Come tutti in Italia, controllavo Immobiliare.it, Idealista, Subito e i siti delle agenzie separatamente. Ogni piattaforma un silo, nessun modo di vedere il quadro completo. Gli appartamenti buoni sparivano in ore. Gli algoritmi non capivano la qualità; ordinavano solo per data o prezzo.",
+          "Allora ho scritto uno scraper in un weekend. Parser di ogni piattaforma, scoring degli annunci su qualità effettiva: rapporto qualità-prezzo, non parole chiave o popolarità. Prezzo contro medie di zona. Stato dalle foto. Tempo di pendolarismo. Tutto quello che farebbe una persona, ma automatico.",
           "L'ho fatto girare per settimane. La dashboard mostrava 1.029 annunci in Emilia-Romagna, colorati per score. La maggior parte era rumore. Ma quelli con score alto? Erano veramente buoni. E ho trovato il mio usando questo."
         ]
       },
@@ -580,7 +579,7 @@
       "turning_point": {
         "heading": "Da tool a prodotto",
         "content": [
-          "La svolta non era la dashboard stessa. Era realizzare cosa mancava nel mercato: nessuno fa scoring di qualità basato su AI. Aggregatori esistono. Alert esistono. Ma aggregatori + scoring + \"è questo appartamento per me?\" — quello è un gap di prodotto.",
+          "La svolta è stata realizzare cosa mancava nel mercato: nessuno fa scoring di qualità basato su AI. Aggregatori esistono. Alert esistono. Ma aggregatori + scoring + \"è questo appartamento per me?\" Quella combinazione è un gap di prodotto.",
           "Quel gap richiedeva un modello di costo. Lanciare Claude Sonnet su tutti i 1.000+ annunci giornalieri costerebbe migliaia al mese. Insostenibile. La risposta: essere spietati su cosa merita attenzione AI. Filtrare deterministicamente prima (prezzo, posizione, metratura — vincoli hard), poi spendere il budget AI su quello che passa il cancello.",
           "Con quella matematica risolta, ho deciso di costruire un vero prodotto. Non solo un bot, ma un SaaS: Telegram per alert real-time, dashboard per l'analisi, infrastruttura enterprise."
         ]
@@ -622,12 +621,34 @@
           }
         ]
       },
+      "decisionLog": {
+        "heading": "Decisioni chiave",
+        "whyLabel": "PERCHÉ",
+        "learnedLabel": "COSA MI HA INSEGNATO",
+        "items": [
+          {
+            "title": "Tre passaggi di scoring, non tutto all'AI",
+            "why": "Ogni annuncio poteva passare da GPT. Sarebbe stato più semplice da costruire e da spiegare. Ho scelto un sistema a tre passaggi: prima i filtri deterministici (gratis), poi lo scoring AI (solo su quello che sopravvive), infine il feedback loop (impara dalle reazioni dell'utente). Metà degli annunci viene eliminata prima che l'AI li veda. Processare tutto con l'AI a 1.000+ annunci al giorno avrebbe bruciato qualsiasi budget ragionevole. E soprattutto, la maggior parte degli annunci non passa criteri oggettivi: zona sbagliata, senza ascensore, troppo caro. Non serve un modello linguistico per controllare un numero.",
+            "learned": "L'uso migliore dell'AI in un prodotto è quello più stretto. Dai l'AI in pasto a tutto e ottieni un sistema lento, costoso, difficile da debuggare. Limita dove gira e diventa la parte che conta davvero."
+          },
+          {
+            "title": "Prima Telegram, non una web app",
+            "why": "La mossa ovvia era una dashboard. Filtri di ricerca, mappa, annunci salvati. Ne ho prototipata una. Poi ho rilasciato su Telegram. L'utente tipo — qualcuno che cerca casa in Italia — controlla il telefono tra una visita e l'altra, in autobus, a pranzo. Un bot Telegram consegna un annuncio con punteggio in una notifica push. Niente login, niente tab da ricordare, niente app da installare. L'interazione è: arriva la notifica, guardi il punteggio, tocchi per aprire l'annuncio. Cinque secondi.",
+            "learned": "L'interfaccia giusta non è quella più completa. È quella che si inserisce nel momento in cui l'utente ne ha bisogno. Una dashboard è un prodotto migliore sulla carta. Un bot è un prodotto migliore nella tasca di qualcuno."
+          },
+          {
+            "title": "Budget AI fisso per utente: €0,25/mese",
+            "why": "Prima di scrivere qualsiasi riga di architettura, ho fissato un vincolo: il costo AI per utente attivo non può superare €0,25/mese. Ogni decisione tecnica è partita da questo numero. Senza un tetto di spesa, le funzionalità AI si espandono finché il prodotto è in perdita o il prezzo è assurdo. €0,25 significava 95% di margine lordo a €10/mese di prezzo. Significava anche essere spietati su cosa meritava l'attenzione dell'AI e cosa no. Il che ha reso l'architettura a tre passaggi inevitabile.",
+            "learned": "Un vincolo di budget non è un limite. È una decisione di prodotto che rende tutte le altre più facili. \"Possiamo aggiungere l'AI a X?\" diventa \"X sta dentro €0,25?\" e la risposta diventa ovvia."
+          }
+        ]
+      },
       "learned": {
         "heading": "Cosa ho imparato",
         "content": [
-          "Costruire intelligenza costa più che costruire aggregazione. Ogni SaaS aggrega qualcosa — il moat è cosa fai con i dati dopo. Per gli appartamenti, è scoring AI che risponde \"è questo per me?\"",
-          "L'economia unitaria determina la strategia di prodotto. A €0,25/utente/mese, break-even è ~150 utenti a €10/mese. Ha modellato tutto: l'architettura, il feature set, il go-to-market.",
-          "Validare prima, costruire dopo. La dashboard e il bot funzionano. Il SaaS non è live. Sto misurando la domanda prima di impegnarmi nell'infrastruttura di customer support. Quella è la parte difficile — non il codice."
+          "Costruire intelligenza costa più che costruire aggregazione. Ogni SaaS aggrega qualcosa; il vero vantaggio è cosa fai con i dati dopo. Per gli appartamenti, è scoring AI che risponde \"è questo per me?\"",
+          "L'economia unitaria determina la strategia di prodotto. A €0,25/utente/mese, il pareggio è ~150 utenti a €10/mese. Ha modellato tutto: l'architettura, le funzionalità, come andare sul mercato.",
+          "Validare prima, costruire dopo. La dashboard e il bot funzionano. Il SaaS non è live. Sto misurando la domanda prima di impegnarmi nell'assistenza clienti. Quella è la parte difficile. Il codice è la parte facile."
         ]
       },
       "links": {
@@ -664,7 +685,7 @@
       "title": "OpenClaw",
       "description": "Web scraper open-source per estrarre dati strutturati di prodotti da siti e-commerce. Costruito per la raccolta dati su larga scala senza intervento manuale.",
       "statusLabel": "Esperimento",
-      "whatItTaughtMe": "Costruire open-source ti insegna che l'API è il prodotto. Interfacce pulite e documentate contano più della breadth di feature. Meno cose fa, meglio le fa."
+      "whatItTaughtMe": "Costruire open-source ti insegna che l'API è il prodotto. Interfacce pulite e documentate contano più del numero di funzionalità. Meno cose fa, meglio le fa."
     },
     "cta": {
       "text": "Se ti interessa come ragiono quando costruisco, i case study professionali raccontano la stessa cosa su scala diversa.",
@@ -673,15 +694,15 @@
   },
   "approach": {
     "headline": "Come prendo decisioni di prodotto.",
-    "intro": "Nessun framework con un nome. Un modo di lavorare formato facendo il designer, poi lo sviluppatore, poi il PM. Ognuna di quelle fasi ha cambiato il modo di vedere i problemi. Quello che segue non è una metodologia. È quello che succede quando bisogna decidere cosa costruire.",
+    "intro": "Nessuno schema con un nome. Un modo di lavorare formato facendo il designer, poi lo sviluppatore, poi il PM. Ognuna di quelle fasi ha cambiato il modo di vedere i problemi. Quello che segue non è una metodologia. È quello che succede quando bisogna decidere cosa costruire.",
     "sections": {
       "s1": {
         "title": "1. Capire prima di toccare",
         "text": "La tentazione quando arrivi su un prodotto in difficoltà è agire subito. Dimostrare che stai facendo qualcosa. In QubicaAMF il sistema di pagamenti era in crisi. La prima decisione: non toccare niente per due settimane.\n\nNon è inerzia. È il tempo per capire quali dei 44 problemi aperti stanno effettivamente costando soldi ai clienti adesso, e quali possono aspettare. La differenza tra \"urgente\" e \"importante\" non si vede il primo giorno. Si vede dopo aver parlato con il supporto, letto i ticket, e guardato i dati.\n\nIl risultato: 44 item, 12 critici, 4 con impatto finanziario immediato. Il resto poteva aspettare. Senza quelle due settimane, il lavoro sarebbe stato su tutto contemporaneamente. Con quelle due settimane, i 4 più gravi risolti in 6 settimane."
       },
       "s2": {
-        "title": "2. Il problema è nel funnel, non dove pensi",
-        "text": "Quasi sempre la prima diagnosi è sbagliata. Non per incompetenza. Perché chi chiede di risolvere il problema vede il sintomo, non la causa.\n\nIn QubicaAMF un centro stava per cancellare l'integrazione perché non riusciva a riconciliare i libri. Ogni transazione appariva come \"uncategorized income\" in Square. La diagnosi interna era \"problema del partner, non risolvibile da noi.\" Tracciando il data model è saltato fuori un campo API esistente che risolveva tutto senza modifiche architetturali. Il centro è rimasto ed è diventato un account di riferimento.\n\nIn LeadsBridge il flusso di configurazione del bridge mapping generava errori a ripetizione. Ogni errore diventava un ticket. Il volume di supporto cresceva proporzionalmente ai nuovi utenti. Il problema non era il volume di ticket. Era il flusso multi-step che li generava. Il redesign ha tagliato il tempo di setup del <bold>35%</bold>.\n\nIl pattern: prima di costruire qualcosa, verificare di star risolvendo il problema giusto. Costa meno di qualsiasi sprint."
+        "title": "2. Il problema è nel percorso, non dove pensi",
+        "text": "Quasi sempre la prima diagnosi è sbagliata. Non per incompetenza. Perché chi chiede di risolvere il problema vede il sintomo, non la causa.\n\nIn QubicaAMF un centro stava per cancellare l'integrazione perché non riusciva a riconciliare i libri. Ogni transazione appariva come \"uncategorized income\" in Square. La diagnosi interna era \"problema del partner, non risolvibile da noi.\" Tracciando il data model è saltato fuori un campo API esistente che risolveva tutto senza modifiche architetturali. Il centro è rimasto ed è diventato un account di riferimento.\n\nIn LeadsBridge il flusso di configurazione del bridge mapping generava errori a ripetizione. Ogni errore diventava un ticket. Il volume di supporto cresceva proporzionalmente ai nuovi utenti. Il problema non era il volume di ticket. Era il flusso multi-step che li generava. Il redesign ha ridotto il tempo di configurazione del <bold>35%</bold>.\n\nLa regola: prima di costruire qualcosa, verificare di star risolvendo il problema giusto. Costa meno di qualsiasi sprint."
       },
       "s3": {
         "title": "3. Costruire per scoprire, non per consegnare",
@@ -689,11 +710,11 @@
       },
       "s4": {
         "title": "4. Sapere cosa non costruire",
-        "text": "La decisione più difficile non è cosa costruire. È cosa smettere di costruire.\n\nNel cashless, OneCashless era il candidato ovvio. Prodotto interno, supporto organizzativo, head start. Ma la discovery ha mostrato che il prodotto non reggeva. Il business model era poco chiaro, l'architettura richiedeva lavoro non giustificabile. Parcheggiato. Deliberatamente.\n\nNel payments rescue, 23 dei 44 item sono stati consegnati. Gli altri 21 erano decisioni deliberate di \"non ora\", ognuna con una motivazione documentata. Quando il refund non era abbastanza solido prima del picco natalizio, è stato ritirato. Un giorno intero di testing piuttosto che spedire logica rotta a centinaia di centri nella loro settimana più intensa.\n\nIl \"no\" documentato è un deliverable tanto quanto il codice spedito."
+        "text": "Sapere cosa smettere di costruire è più difficile che sapere cosa iniziare.\n\nNel cashless, OneCashless era il candidato ovvio. Prodotto interno, supporto organizzativo, head start. Ma la discovery ha mostrato che il prodotto non reggeva. Il business model era poco chiaro, l'architettura richiedeva lavoro non giustificabile. Parcheggiato. Deliberatamente.\n\nNel payments rescue, 23 dei 44 item sono stati consegnati. Gli altri 21 erano decisioni deliberate di \"non ora\", ognuna con una motivazione documentata. Quando il refund non era abbastanza solido prima del picco natalizio, è stato ritirato. Un giorno intero di testing piuttosto che spedire logica rotta a centinaia di centri nella loro settimana più intensa.\n\nIl \"no\" documentato è un deliverable tanto quanto il codice spedito."
       },
       "s5": {
         "title": "5. Comunicare come se non fossi nella stanza",
-        "text": "Il lavoro migliore è inutile se nessuno lo capisce. Soprattutto in contesti remoti, multi-timezone, multi-country.\n\nIl default: recap settimanali strutturati, memo operative per decisioni urgenti, minute dei meeting pubblicate entro ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, servivano video tutorial con i workaround. Soluzioni ponte mentre i fix veri erano in pipeline.\n\nNon è burocrazia. È il modo in cui un team distribuito mantiene il contesto senza dover chiedere \"cosa sta succedendo?\" ogni lunedì mattina."
+        "text": "Il lavoro migliore è inutile se nessuno lo capisce. Soprattutto in contesti remoti, con fusi orari diversi, in più paesi.\n\nIl metodo: riepiloghi settimanali strutturati, memo operative per decisioni urgenti, verbali delle riunioni pubblicati entro ore. Quando il team di supporto doveva aiutare clienti con problemi non ancora risolti, servivano video tutorial con le soluzioni temporanee. Soluzioni ponte mentre le correzioni vere erano in coda.\n\nNon è burocrazia. È il modo in cui un team distribuito mantiene il contesto senza dover chiedere \"cosa sta succedendo?\" ogni lunedì mattina."
       }
     },
     "closing": {
@@ -717,8 +738,8 @@
     "posts": {
       "why-i-prototype-in-code": {
         "title": "Perché prototipo in codice",
-        "date": "2026-01-16",
-        "excerpt": "I diagrammi nascondono le parti difficili. Costruire un sistema vero — anche piccolo — fa emergere i vincoli architetturali che dovrebbero guidare le decisioni di prodotto.",
+        "date": "2026-01-29",
+        "excerpt": "I diagrammi nascondono le parti difficili. Costruire un sistema vero, anche piccolo, fa emergere i vincoli architetturali che dovrebbero guidare le decisioni di prodotto.",
         "readingTime": "4 min di lettura",
         "tags": [
           "Product Craft",
@@ -726,9 +747,9 @@
         ]
       },
       "the-meeting-where-everyone-says-yes": {
-        "title": "Il meeting dove tutti dicono sì",
+        "title": "La riunione dove tutti dicono sì",
         "date": "2026-02-08",
-        "excerpt": "Quando nessuno dissente, nessuno sta pensando. Un PM senza una posizione trasforma la roadmap in un parcheggio di feature scollegate.",
+        "excerpt": "Quando nessuno dissente, nessuno sta pensando. Un PM senza una posizione trasforma la roadmap in un parcheggio di funzionalità scollegate.",
         "readingTime": "5 min di lettura",
         "tags": [
           "Decision Making",
@@ -738,7 +759,7 @@
       "why-metrics-lie-without-context": {
         "title": "Perché le metriche mentono senza contesto",
         "date": "2026-03-22",
-        "excerpt": "Ogni metrica ha bisogno di tre cose: il numero, il meccanismo che l'ha causato, e la contro-metrica — cosa hai sacrificato. Senza tutte e tre, stai tirando a indovinare.",
+        "excerpt": "Ogni metrica ha bisogno di tre cose: il numero, il meccanismo che l'ha causato, e la contro-metrica (cosa hai sacrificato). Senza tutte e tre, stai tirando a indovinare.",
         "readingTime": "6 min di lettura",
         "tags": [
           "Product Craft",
@@ -747,8 +768,8 @@
       },
       "when-ai-makes-sense-in-product": {
         "title": "Quando l'AI ha senso nel prodotto",
-        "date": "2024-12-15",
-        "excerpt": "La regola 80/20 applicata all'AI: regole deterministiche per i problemi prevedibili, ML solo dove serve giudizio vero. La maggior parte delle feature non ha bisogno di un modello.",
+        "date": "2026-03-12",
+        "excerpt": "La regola 80/20 applicata all'AI: regole automatiche per i problemi prevedibili, ML solo dove serve giudizio vero. La maggior parte delle funzionalità non ha bisogno di un modello.",
         "readingTime": "5 min",
         "tags": [
           "AI",
@@ -757,7 +778,7 @@
       },
       "managing-payments-at-scale": {
         "title": "Gestire i pagamenti su scala",
-        "date": "2025-01-15",
+        "date": "2026-03-01",
         "excerpt": "I pagamenti richiedono un mindset da PM diverso. Sicurezza prima di possibilità. Una settimana a leggere le API e tracciare i flussi di denaro previene mesi di incendi in produzione.",
         "readingTime": "6 min",
         "tags": [
@@ -767,8 +788,8 @@
       },
       "remote-pm-across-countries": {
         "title": "PM remoto su paesi diversi",
-        "date": "2025-01-08",
-        "excerpt": "Il PM remoto fallisce quando provi a risolvere il gap di fuso orario con meeting migliori. La vera skill è l'async-first: documentazione persistente, decisioni scritte, contesto condiviso.",
+        "date": "2026-02-19",
+        "excerpt": "Il PM remoto fallisce quando provi a risolvere il gap di fuso orario con riunioni migliori. La vera competenza è lavorare in asincrono: documentazione persistente, decisioni scritte, contesto condiviso.",
         "readingTime": "5 min",
         "tags": [
           "Remoto",
@@ -776,9 +797,9 @@
         ]
       },
       "build-vs-buy-framework": {
-        "title": "Framework Build vs Buy",
-        "date": "2024-12-08",
-        "excerpt": "Build vs buy non è una decisione tecnica. Sono quattro domande strategiche in sequenza: vincolo, differenziatore, costo totale, reversibilità.",
+        "title": "Costruire o comprare: lo schema decisionale",
+        "date": "2026-01-18",
+        "excerpt": "Build vs buy sono quattro domande strategiche in sequenza, non una decisione tecnica: vincolo, differenziatore, costo totale, reversibilità.",
         "readingTime": "4 min",
         "tags": [
           "Framework",
@@ -787,7 +808,7 @@
       },
       "seven-years-running-a-business": {
         "title": "Sette anni a gestire un business",
-        "date": "2025-01-01",
+        "date": "2026-01-06",
         "excerpt": "Sette anni da freelance hanno insegnato una regola su tutte: conta portare a termine. I clienti guardano le date di consegna e i risultati visibili, non il processo elegante.",
         "readingTime": "7 min",
         "tags": [
@@ -799,16 +820,18 @@
   },
   "contact": {
     "headline": "Parliamo di prodotto",
-    "intro": "Sono sempre interessato a conversazioni su sfide di prodotto, soprattutto in B2B SaaS, pagamenti e design di piattaforme. Che tu abbia un ruolo specifico in mente o solo voglia scambiare idee, sono qui ad ascoltare.",
+    "intro": "Lavoro su prodotti B2B SaaS: pagamenti, integrazioni di piattaforma, e le decisioni che stanno tra design e engineering. Se qualcosa nel sito ti ha fatto riflettere, o se hai un problema di prodotto che sembra familiare, scrivimi.",
     "emailLabel": "Email",
     "emailValue": "hello@selfrules.org",
     "linkedinLabel": "LinkedIn",
-    "linkedinValue": "linkedin.com/in/mattiadeluca",
-    "linkedinUrl": "https://linkedin.com/in/mattiadeluca",
-    "availabilityLabel": "Disponibilità",
-    "availabilityText": "Aperto a ruoli di Product Manager e Technical PM. Remoto, fuso orario EU o US. Con base in Italia.",
+    "linkedinValue": "linkedin.com/in/selfrules",
+    "linkedinUrl": "https://linkedin.com/in/selfrules",
+    "cvLabel": "CV",
+    "cvValue": "Scarica PDF",
+    "availabilityLabel": "",
+    "availabilityText": "",
     "cta": {
-      "text": "Mandami un'email o connettiti su LinkedIn. Il primo messaggio migliore è sempre specifico: cosa stai costruendo, qual è la sfida, cosa stai cercando di capire.",
+      "text": "Mandami un'email o connettiti su LinkedIn.",
       "primary": "Invia email",
       "secondary": "Apri LinkedIn"
     }
@@ -820,11 +843,11 @@
     },
     "about": {
       "title": "Chi sono",
-      "description": "Designer, developer, poi Product Manager—tutto in una testa. Carriera costruita su colmare il divario tra design, engineering e business quando non si capiscono."
+      "description": "Designer, developer, poi Product Manager, tutto in una testa. Carriera costruita per far parlare design, engineering e business quando non si capiscono."
     },
     "work": {
       "title": "Lavori",
-      "description": "Tre casi studio: pagamenti salvati dalla crisi, piattaforma integrazione da zero, tempo setup tagliato 35%. Numeri e decisioni, non marketing copy."
+      "description": "Tre casi studio: pagamenti salvati dalla crisi, piattaforma integrazione da zero, tempo di configurazione ridotto del 35%. Numeri e decisioni, non testi promozionali."
     },
     "lab": {
       "title": "Lab",
@@ -832,15 +855,15 @@
     },
     "approach": {
       "title": "Approccio",
-      "description": "Come lavoro: discovery prima, prototipi prima di spec, ship con convinzione. Nessun framework, nessun teatro—cosa funziona al limite del caos."
+      "description": "Come lavoro: prima capisco il problema, poi prototipo prima di scrivere specifiche, e porto in produzione con convinzione. Nessuno schema rigido, nessun teatro."
     },
     "notes": {
       "title": "Note",
-      "description": "Saggi su decisioni di prodotto, metriche che ingannano, quando buildare vs comprare, e perché prototipar in codice cambia il modo di pensare il prodotto."
+      "description": "Saggi su decisioni di prodotto, metriche che ingannano, costruire o comprare, e perché prototipare in codice cambia il modo di pensare il prodotto."
     },
     "contact": {
-      "title": "Parliamo",
-      "description": "Contattami se vuoi parlare di sfide di prodotto, opportunità lavorative, o semplicemente scambiare idee su product management e building in tech."
+      "title": "Contatti — Mattia De Luca",
+      "description": "Contatta Mattia De Luca. Senior Technical PM specializzato in B2B SaaS, pagamenti e piattaforme."
     },
     "paymentsRescue": {
       "title": "Payments Rescue — Mattia De Luca",
@@ -852,12 +875,33 @@
     },
     "leadsbridgeRedesign": {
       "title": "LeadsBridge Redesign — Mattia De Luca",
-      "description": "Una feature rimossa ha tagliato il setup del 35%. Come la semplificazione, auto-mapping e ripensare il percorso difficile sono diventati il differenziale."
+      "description": "Una funzionalità rimossa ha ridotto la configurazione del 35%. Come la semplificazione, l'auto-mapping e ripensare il percorso difficile sono diventati il vero punto di forza."
     },
     "casahunter": {
       "title": "CasaHunter — Mattia De Luca",
-      "description": "Costruito un tool di apartment-hunting con IA. Scoring a tre passaggi, ottimizzazione budget, e la lezione: eleganza tecnica < velocità di ship."
+      "description": "Uno strumento AI per cercare casa. Valutazione a tre passaggi, ottimizzazione del budget, e la lezione: l'eleganza tecnica conta meno della velocità di consegna."
     },
     "skipToContent": "Vai al contenuto"
+  },
+  "feedbackWidget": {
+    "triggerLabel": "Invia feedback",
+    "triggerText": "Feedback",
+    "modalTitle": "Dimmi qualcosa",
+    "close": "Chiudi",
+    "typeLabel": "Di cosa si tratta",
+    "typeFeedback": "Feedback",
+    "typeBug": "Bug",
+    "typeQuestion": "Domanda",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Qualcosa che non funziona, non è chiaro, o si può migliorare?",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tua@email.com",
+    "optional": "solo se vuoi una risposta",
+    "submit": "Invia",
+    "sending": "Invio in corso...",
+    "successTitle": "Ricevuto.",
+    "successMessage": "Lo leggo. Grazie per il tempo.",
+    "errorGeneric": "Qualcosa si è rotto da questa parte. Riprova.",
+    "rateLimited": "Piano — troppe richieste. Riprova tra un po'."
   }
 }
