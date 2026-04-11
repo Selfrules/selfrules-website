@@ -58,7 +58,7 @@ Se il team funziona bene, il merito è del team. Ma "togliere ostacoli" non bast
 
 ### Su cosa sto investendo adesso
 
-Quello che prima richiedeva uno sprint ora si prototipa in un pomeriggio. È il cambiamento più interessante che ho visto in dieci anni di product, e sto spendendo tempo serio per capirlo bene: **AI Product Management Certification** (Product School, ottobre 2025) e **Advanced AI Agents Certification** (Product School, marzo 2026).
+Quello che prima richiedeva uno sprint ora si prototipa in un pomeriggio. È il cambiamento più interessante che ho visto in dieci anni di product, e sto spendendo tempo serio per capirlo bene: **AI Product Management** (Product School, ottobre 2025) e **Advanced AI Agents** (Product School, marzo 2026).
 
 Il resto delle certificazioni è [qui](https://www.credential.net/profile/mattiafilippodeluca284078/wallet).
 
@@ -139,7 +139,7 @@ If the team works well, credit goes to the team. But "removing obstacles" isn't 
 
 ### Where I'm investing now
 
-What used to take a sprint now prototypes in an afternoon. It's the most interesting shift I've seen in ten years of product work, and I'm putting real time into getting it right: **AI Product Management Certification** (Product School, October 2025) and **Advanced AI Agents Certification** (Product School, March 2026).
+What used to take a sprint now prototypes in an afternoon. It's the most interesting shift I've seen in ten years of product work, and I'm putting real time into getting it right: **AI Product Management** (Product School, October 2025) and **Advanced AI Agents** (Product School, March 2026).
 
 The rest of the certifications live [here](https://www.credential.net/profile/mattiafilippodeluca284078/wallet).
 
