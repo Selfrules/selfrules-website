@@ -78,6 +78,16 @@
   outline-offset: 2px;
 }
 
+/* Text selection — branded accent */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+::-moz-selection {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
 /* Prevent horizontal overflow on mobile (iOS Safari is strict about this) */
 html,
 body {
