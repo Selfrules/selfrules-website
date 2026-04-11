@@ -175,6 +175,7 @@
     "subtitle": "Non sono partito dal product management. Ci sono arrivato passando dal design, dal codice, e da tanto costruire. Ecco come.",
     "careerLabel": "PERCORSO",
     "beliefsLabel": "IN COSA CREDO",
+    "investingLabel": "SU COSA STO INVESTENDO ADESSO",
     "outsideLabel": "FUORI DAL LAVORO",
     "career": {
       "selfrules": {
@@ -212,6 +213,10 @@
         "title": "Il PM migliore è quello che il team non nota.",
         "text": "Se il team funziona bene, il merito è del team. Ma \"togliere ostacoli\" non basta. Il lavoro vero è capire cosa costruire e perché. Dare al team una direzione che regge anche quando le priorità cambiano. Proteggere il focus non è dire \"no\" alle interruzioni. È aver fatto il lavoro strategico prima, così il team sa già cosa conta. Se il PM diventa il collo di bottiglia tra chi costruisce e chi decide, qualcosa è andato storto."
       }
+    },
+    "investing": {
+      "text": "Quello che prima richiedeva uno sprint ora si prototipa in un pomeriggio. È il cambiamento più interessante che ho visto in dieci anni di product, e sto spendendo tempo serio per capirlo bene: <bold>AI Product Management Certification</bold> (Product School, ottobre 2025) e <bold>Advanced AI Agents Certification</bold> (Product School, marzo 2026).",
+      "more": "Il resto delle certificazioni è <link>qui</link>."
     },
     "outside": {
       "text": "Vivo in provincia di Modena. Quando non lavoro, probabilmente sono in palestra, sto costruendo qualcosa con i LEGO, o sto provando qualcosa fuori dalla mia comfort zone. L'ultimo esperimento: il ricamo. Prima o poi torno, ma non prima di aver capito cosa c'è dall'altra parte."

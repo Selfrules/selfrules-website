@@ -184,6 +184,34 @@ export default async function AboutPage({
       </Section>
       </ScrollReveal>
 
+      {/* Where I'm investing now — AI certifications */}
+      <ScrollReveal>
+      <Section>
+        <div>
+          <p className="font-mono text-[14px] uppercase tracking-[0.7px] text-[rgba(255,255,255,0.5)] mb-6">
+            {t('investingLabel')}
+          </p>
+          <p className="font-light text-[18px] leading-[32.4px] text-[rgba(255,255,255,0.5)]">
+            {t.rich('investing.text', richBold)}
+          </p>
+          <p className="mt-4 font-light text-[18px] leading-[32.4px] text-[rgba(255,255,255,0.5)]">
+            {t.rich('investing.more', {
+              link: (chunks: React.ReactNode) => (
+                <a
+                  href="https://www.credential.net/profile/mattiafilippodeluca284078/wallet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline underline-offset-4 hover:opacity-80 transition-opacity"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
+          </p>
+        </div>
+      </Section>
+      </ScrollReveal>
+
       {/* Outside work — subtle divider above (D-03 Option B) */}
       <ScrollReveal>
       <Section className="!pt-0">

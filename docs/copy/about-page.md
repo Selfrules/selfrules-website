@@ -56,6 +56,14 @@ Se il team funziona bene, il merito è del team. Ma "togliere ostacoli" non bast
 
 ---
 
+### Su cosa sto investendo adesso
+
+Quello che prima richiedeva uno sprint ora si prototipa in un pomeriggio. È il cambiamento più interessante che ho visto in dieci anni di product, e sto spendendo tempo serio per capirlo bene: **AI Product Management Certification** (Product School, ottobre 2025) e **Advanced AI Agents Certification** (Product School, marzo 2026).
+
+Il resto delle certificazioni è [qui](https://www.credential.net/profile/mattiafilippodeluca284078/wallet).
+
+---
+
 ### Fuori dal lavoro
 
 Vivo in provincia di Modena. Quando non lavoro, probabilmente sono in palestra, sto costruendo qualcosa con i LEGO, o sto provando qualcosa fuori dalla mia comfort zone. L'ultimo esperimento: il ricamo. Prima o poi torno, ma non prima di aver capito cosa c'è dall'altra parte.
@@ -126,6 +134,14 @@ An idea, before becoming a ticket, becomes a working prototype. React that users
 
 **The best PM is the one the team doesn't notice.**
 If the team works well, credit goes to the team. But "removing obstacles" isn't enough. The real work is figuring out what to build and why. Giving the team a direction that holds even when priorities shift. Protecting focus isn't saying "no" to interruptions. It's having done the strategic work upfront, so the team already knows what matters. If the PM becomes the bottleneck between builders and decision-makers, something went wrong.
+
+---
+
+### Where I'm investing now
+
+What used to take a sprint now prototypes in an afternoon. It's the most interesting shift I've seen in ten years of product work, and I'm putting real time into getting it right: **AI Product Management Certification** (Product School, October 2025) and **Advanced AI Agents Certification** (Product School, March 2026).
+
+The rest of the certifications live [here](https://www.credential.net/profile/mattiafilippodeluca284078/wallet).
 
 ---
 

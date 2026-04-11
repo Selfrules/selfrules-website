@@ -175,6 +175,7 @@
     "subtitle": "I didn't start in product management. I got here through design, code, and a lot of building. Here's how.",
     "careerLabel": "CAREER PATH",
     "beliefsLabel": "WHAT I BELIEVE",
+    "investingLabel": "WHERE I'M INVESTING NOW",
     "outsideLabel": "OUTSIDE WORK",
     "career": {
       "selfrules": {
@@ -212,6 +213,10 @@
         "title": "The best PM is the one the team doesn't notice.",
         "text": "If the team works well, credit goes to the team. But \"removing obstacles\" isn't enough. The real work is figuring out what to build and why. Giving the team a direction that holds even when priorities shift. Protecting focus isn't saying \"no\" to interruptions. It's having done the strategic work upfront, so the team already knows what matters. If the PM becomes the bottleneck between builders and decision-makers, something went wrong."
       }
+    },
+    "investing": {
+      "text": "What used to take a sprint now prototypes in an afternoon. It's the most interesting shift I've seen in ten years of product work, and I'm putting real time into getting it right: <bold>AI Product Management Certification</bold> (Product School, October 2025) and <bold>Advanced AI Agents Certification</bold> (Product School, March 2026).",
+      "more": "The rest of the certifications live <link>here</link>."
     },
     "outside": {
       "text": "Based in northern Italy. When not working, probably at the gym, building something with LEGO, or trying something outside the comfort zone. Latest experiment: embroidery. Will go back eventually, but not before figuring out what's on the other side."
