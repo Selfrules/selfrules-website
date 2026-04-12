@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
 import { markdownBold } from '@/lib/markdown';
 import { LOCALE_PARAMS } from '@/i18n/routing';
@@ -130,6 +131,17 @@ export default async function CashlessSystemPage({
             ? 'Come un prodotto cashless è passato da zero al partner di integrazione giusto'
             : 'How a cashless product went from zero to the right integration partner'}
         </h1>
+
+        <div className="mt-8 w-full overflow-hidden" style={{ borderRadius: 0 }}>
+          <Image
+            src="/images/work/cashless-system.png"
+            alt="Wireframe illustration of a smartwatch with NFC signal — hello@selfrules.org ~ $ scan --frictionless"
+            width={1380}
+            height={776}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
 
         <div className="mt-10 flex flex-wrap gap-8 md:gap-16">
           <div>

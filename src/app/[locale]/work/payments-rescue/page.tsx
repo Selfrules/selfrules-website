@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
 import { markdownBold } from '@/lib/markdown';
 import { LOCALE_PARAMS } from '@/i18n/routing';
@@ -125,6 +126,17 @@ export default async function PaymentsRescuePage({
         <h1 className="mt-5 font-heading font-bold text-[clamp(28px,4vw,48px)] leading-[1.15] tracking-[-1.2px] text-[#f5f5f0]">
           {t('payments.headline')}
         </h1>
+
+        <div className="mt-8 w-full overflow-hidden" style={{ borderRadius: 0 }}>
+          <Image
+            src="/images/work/payments-rescue.png"
+            alt="Wireframe illustration of a vintage cash register — hello@selfrules.org ~ $ fix --payments"
+            width={1380}
+            height={776}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
 
         <div className="mt-10 flex flex-wrap gap-8 md:gap-16">
           <div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { JsonLd } from '@/components/seo/json-ld';
@@ -7,6 +8,7 @@ interface NoteLayoutProps {
   locale: string;
   slug: string;
   metadata: { title: string; date: string; excerpt?: string; readingTime?: number };
+  heroImage?: { src: string; alt: string };
   children: React.ReactNode;
   prevPost?: { slug: string; title: string };
   nextPost?: { slug: string; title: string };
@@ -16,6 +18,7 @@ export function NoteLayout({
   locale,
   slug,
   metadata,
+  heroImage,
   children,
   prevPost,
   nextPost,
@@ -112,6 +115,19 @@ export function NoteLayout({
               </>
             )}
           </div>
+
+          {heroImage && (
+            <div className="mt-8 w-full overflow-hidden" style={{ borderRadius: 0 }}>
+              <Image
+                src={heroImage.src}
+                alt={heroImage.alt}
+                width={1380}
+                height={776}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          )}
 
           <div
             className="mt-12 max-w-none leading-[1.7]

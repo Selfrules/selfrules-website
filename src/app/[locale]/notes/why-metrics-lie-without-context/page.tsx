@@ -3,7 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/metadata';
 import { NoteLayout } from '@/components/layout/NoteLayout';
-import { getAdjacentPosts } from '@/lib/posts';
+import { getAdjacentPosts, POST_HERO_IMAGES } from '@/lib/posts';
 import { LOCALE_PARAMS } from '@/i18n/routing';
 
 const SLUG = 'why-metrics-lie-without-context';
@@ -41,6 +41,7 @@ export default async function BlogPost({
       locale={locale}
       slug={SLUG}
       metadata={metadata}
+      heroImage={POST_HERO_IMAGES[SLUG]}
       prevPost={
         prev ? { slug: prev, title: t(`posts.${prev}.title`) } : undefined
       }

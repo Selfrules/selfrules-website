@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
 import { markdownBold } from '@/lib/markdown';
 import { LOCALE_PARAMS } from '@/i18n/routing';
@@ -130,6 +131,17 @@ export default async function LeadsBridgePage({
             ? '380+ integrazioni, e la maggior parte degli utenti non ne finiva nemmeno una'
             : '380+ integrations, and most users never finished setting one up'}
         </h1>
+
+        <div className="mt-8 w-full overflow-hidden" style={{ borderRadius: 0 }}>
+          <Image
+            src="/images/work/leadsbridge-redesign.png"
+            alt="Wireframe illustration of modular UI panels being rearranged — hello@selfrules.org ~ $ refactor --clean"
+            width={1380}
+            height={776}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
 
         <div className="mt-10 flex flex-wrap gap-8 md:gap-16">
           <div>

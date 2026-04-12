@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import Image from 'next/image';
 import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Section } from '@/components/layout/Section';
 import { ProjectCard } from '@/components/ui/ProjectCard';
@@ -68,6 +69,17 @@ export default async function LabPage({
         <p className="mt-6 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('intro')}
         </p>
+
+        <div className="mt-8 w-full overflow-hidden" style={{ borderRadius: 0 }}>
+          <Image
+            src="/images/ui/lab.png"
+            alt="Wireframe illustration of a laboratory flask — hello@selfrules.org ~ $ experiment --run"
+            width={1380}
+            height={776}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
       </Section>
 
       {/* CasaHunter — the only shipped project */}

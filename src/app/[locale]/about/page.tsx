@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { createPageMetadata, buildLocalizedUrl } from '@/lib/metadata';
+import Image from 'next/image';
 import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Section } from '@/components/layout/Section';
 import { VerticalTimeline } from '@/components/ui/VerticalTimeline';
@@ -102,6 +103,17 @@ export default async function AboutPage({
         <p className="mt-4 font-light text-[19px] leading-[30.4px] text-[rgba(255,255,255,0.6)]">
           {t('subtitle')}
         </p>
+
+        <div className="mt-8 w-full overflow-hidden" style={{ borderRadius: 0 }}>
+          <Image
+            src="/images/ui/about.png"
+            alt="Wireframe illustration of a technical pencil and T-square — hello@selfrules.org ~ $ whoami --verbose"
+            width={1380}
+            height={776}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
       </Section>
 
       {/* Career Path — VerticalTimeline */}
