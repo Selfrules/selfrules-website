@@ -233,8 +233,8 @@
     },
     "cta": {
       "text": "If any of this sounds familiar, the problems, the approach, the way I think about product: the case studies show it in practice.",
-      "primary": "Read my case studies",
-      "secondary": "Get in touch"
+      "primary": "Read the case studies",
+      "secondary": "Email me"
     }
   },
   "work": {
@@ -268,7 +268,7 @@
     "cta": {
       "text": "These cases tell the how. For the who, there's the about page. If you want to talk, write me.",
       "primary": "About me",
-      "secondary": "Get in touch"
+      "secondary": "Email me"
     }
   },
   "caseStudies": {
@@ -566,7 +566,7 @@
     "cta": {
       "text": "These cases tell the how. For the who, there's the about page. If you want to talk, write me.",
       "primary": "About me",
-      "secondary": "Get in touch"
+      "secondary": "Email me"
     },
     "casahunter": {
       "tag": "Product · Scoring · AI Budget · Feedback loops",
@@ -685,6 +685,7 @@
     "headline": "Same thinking,\napplied to my own problems.",
     "intro": "Side projects are product decisions, not coding exercises. Same thinking as the day job, different constraints. Every project here started from a real need: understand the problem, build the minimum to validate, decide what not to build. The result is on Telegram, not in a portfolio.",
     "whatItTaughtMeLabel": "What it taught me",
+    "projectLinkLabel": "See how it works",
     "casahunter": {
       "title": "CasaHunter",
       "description": "Processes 1,000+ apartment listings daily across 8 Italian platforms. Scores quality with Claude Sonnet. Telegram bot + dashboard. Zero competitors do this.",
@@ -749,7 +750,7 @@
     "cta": {
       "text": "If you want to see the reasoning applied to real products, the case studies have the details.",
       "primary": "See the work",
-      "secondary": "Get in touch"
+      "secondary": "Email me"
     },
     "posts": {
       "why-i-prototype-in-code": {

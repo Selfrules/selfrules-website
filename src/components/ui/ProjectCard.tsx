@@ -9,6 +9,7 @@ interface ProjectCardProps {
   status: 'active' | 'shipped' | 'coming-soon' | 'experiment';
   statusLabel: string;
   href?: string;
+  linkLabel?: string;
   whatItTaughtMe?: string;
   whatItTaughtMeLabel?: string;
   className?: string;
@@ -28,6 +29,7 @@ export function ProjectCard({
   status,
   statusLabel,
   href,
+  linkLabel,
   whatItTaughtMe,
   whatItTaughtMeLabel,
   className,
@@ -69,7 +71,7 @@ export function ProjectCard({
 
       {href && (
         <Link href={href} className="mt-4 inline-block text-accent hover:underline">
-          View project &rarr;
+          {linkLabel ?? 'View project'} &rarr;
         </Link>
       )}
     </div>

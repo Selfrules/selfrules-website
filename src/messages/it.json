@@ -685,6 +685,7 @@
     "headline": "Lo stesso modo di pensare,\napplicato a problemi miei.",
     "intro": "I side project sono decisioni di prodotto, non esercizi di coding. Lo stesso pensiero del lavoro, vincoli diversi. Ogni progetto qui è partito da un bisogno reale: capire il problema, costruire il minimo per validare, decidere cosa non costruire. Il risultato è su Telegram, non in un portfolio.",
     "whatItTaughtMeLabel": "Cosa mi ha insegnato",
+    "projectLinkLabel": "Guarda come funziona",
     "casahunter": {
       "title": "CasaHunter",
       "description": "Processa 1.000+ annunci di appartamenti al giorno su 8 piattaforme italiane. Scoring della qualità con Claude Sonnet. Bot Telegram + dashboard. Nessun competitor fa questo.",

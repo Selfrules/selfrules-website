@@ -94,6 +94,7 @@ export default async function LabPage({
             whatItTaughtMe={t('casahunter.whatItTaughtMe')}
             whatItTaughtMeLabel={t('whatItTaughtMeLabel')}
             href={locale === 'it' ? '/it/lab/casahunter' : '/lab/casahunter'}
+            linkLabel={t('projectLinkLabel')}
           />
         </Section>
       </ScrollReveal>
