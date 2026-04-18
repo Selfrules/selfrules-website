@@ -8,6 +8,7 @@ import { LOCALE_PARAMS } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import { Section } from '@/components/layout/Section';
 import { PageCTA } from '@/components/sections/page-cta';
+import { ArrowIcon } from '@/components/ui/ArrowIcon';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CaseStudySummary } from '@/components/ui/CaseStudySummary';
 import { PullQuote } from '@/components/ui/PullQuote';
@@ -104,21 +105,7 @@ export default async function LeadsBridgePage({
           href="/work"
           className="inline-flex items-center gap-2 text-[14px] text-[rgba(255,255,255,0.5)] hover:text-accent transition-colors mb-8"
         >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M10 12L6 8L10 4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <ArrowIcon direction="back" />
           {t('backToWork')}
         </Link>
 

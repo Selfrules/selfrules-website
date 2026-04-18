@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Tag } from '@/components/ui/Tag';
+import { ArrowIcon } from '@/components/ui/ArrowIcon';
 import Link from 'next/link';
 
 interface ProjectCardProps {
@@ -71,7 +72,7 @@ export function ProjectCard({
 
       {href && (
         <Link href={href} className="mt-4 inline-block text-accent hover:underline">
-          {linkLabel ?? 'View project'} &rarr;
+          {linkLabel ?? 'View project'} <ArrowIcon className="ml-0.5" />
         </Link>
       )}
     </div>

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Button } from '@/components/ui/Button';
 import { BlinkingCursor } from '@/components/ui/BlinkingCursor';
 import { TerminalBlock } from '@/components/ui/TerminalBlock';
+import { ArrowIcon } from '@/components/ui/ArrowIcon';
 
 interface HeroMetric {
   number: string;
@@ -109,6 +110,7 @@ export function Hero({
             <div className="flex flex-wrap gap-3 mt-12">
               <Button variant="primary" href="#contact">
                 {primaryCta}
+                <ArrowIcon className="ml-2" />
               </Button>
               <Button variant="secondary" href="/work">
                 {secondaryCta}

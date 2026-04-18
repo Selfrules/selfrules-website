@@ -1,6 +1,7 @@
 import { Section } from '@/components/layout/Section';
 import { SectionHeader } from '@/components/sections/SectionHeader';
 import { MetricCard } from '@/components/ui/MetricCard';
+import { ArrowIcon } from '@/components/ui/ArrowIcon';
 
 interface MetricsProps {
   label: string;
@@ -34,9 +35,7 @@ export function Metrics({ label, title, metrics, linkText, linkHref }: MetricsPr
           className="inline-flex items-center gap-2 text-[14px] font-medium text-text-primary hover:text-accent transition-colors duration-150"
         >
           {linkText}
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
+          <ArrowIcon />
         </a>
       </div>
     </Section>

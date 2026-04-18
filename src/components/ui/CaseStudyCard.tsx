@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Link } from '@/i18n/navigation';
+import { ArrowIcon } from '@/components/ui/ArrowIcon';
 
 interface CaseStudyCardProps {
   tag: string;
@@ -44,9 +45,7 @@ export function CaseStudyCard({
           <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-[rgba(255,255,255,0.55)]">{metricLabel}</p>
         )}
         {href && (
-          <span className="mt-3 text-[14px] text-[rgba(255,255,255,0.55)] transition-colors group-hover:text-accent">
-            →
-          </span>
+          <ArrowIcon className="mt-3 text-[14px] text-[rgba(255,255,255,0.55)] transition-colors group-hover:text-accent" />
         )}
       </div>
     </>

@@ -1,5 +1,6 @@
 import { Section } from '@/components/layout/Section';
 import { Button } from '@/components/ui/Button';
+import { ArrowIcon } from '@/components/ui/ArrowIcon';
 
 interface PageCTAProps {
   text: string;
@@ -12,10 +13,11 @@ export function PageCTA({ text, primaryCta, secondaryCta }: PageCTAProps) {
     <Section>
       <div>
         <p className="mb-8 font-light text-[19px] leading-[28.5px] text-[rgba(255,255,255,0.6)]">{text}</p>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <div className="flex flex-wrap gap-3 sm:gap-4">
           <span data-umami-event="cta-primary">
             <Button variant="primary" href={primaryCta.href}>
               {primaryCta.label}
+              <ArrowIcon className="ml-2" />
             </Button>
           </span>
           {secondaryCta && (

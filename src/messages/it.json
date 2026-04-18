@@ -39,7 +39,7 @@
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, codice, e product management nella stessa testa.",
       "subtitle": "Le aziende mi cercano quando un prodotto non funziona. Capisco perché, lo sistemo, e mi assicuro che resti sistemato. L'ho fatto in startup e in enterprise. I risultati sono nei case study.",
-      "primaryCta": "Parliamo del tuo prodotto →",
+      "primaryCta": "Parliamo del tuo prodotto",
       "secondaryCta": "Leggi i case study",
       "tag1": "10+ anni",
       "tag2": "B2B SaaS",
@@ -246,14 +246,14 @@
         "tag": "Payments · B2B SaaS · Enterprise",
         "title": "Un sistema di pagamento\nche perdeva transazioni ogni giorno",
         "metric": "99%+",
-        "metricLabel": "SUCCESS RATE →",
+        "metricLabel": "SUCCESS RATE",
         "preview": "I clienti perdevano soldi. Doppi addebiti, pagamenti falliti, rimborsi spariti. 44 problemi aperti e la pressione di sistemare tutto insieme. Ho trovato i 4 che contavano davvero, risolti in 6 settimane, e portato il sistema al 99%+ di uptime. Senza riscrivere una riga di codice."
       },
       "cashless": {
         "tag": "Cashless · Product Strategy · Partnership",
         "title": "Cashless da zero: tre provider,\nun problema \"irrisolvibile\", e un prodotto da parcheggiare",
         "metric": "5 mesi",
-        "metricLabel": "DA ZERO A DEMO LIVE →",
+        "metricLabel": "DA ZERO A DEMO LIVE",
         "preview": "Come fai pagare i clienti senza contanti nei centri di intrattenimento? Tre provider in competizione, serve una strategia prodotto. La scelta ovvia sembrava la migliore sulla carta. I test reali con vincoli reali hanno raccontato un'altra storia.",
         "note": "Metriche finali disponibili al lancio in produzione. Dati pilota in corso di raccolta"
       },
@@ -261,7 +261,7 @@
         "tag": "B2B SaaS · Integration Platform · Growth",
         "title": "380+ integrazioni, e la maggior parte degli utenti\nnon ne finiva nemmeno una",
         "metric": "-35%",
-        "metricLabel": "TEMPO DI SETUP →",
+        "metricLabel": "TEMPO DI SETUP",
         "preview": "Migliaia di aziende volevano collegare i dati pubblicitari al CRM in automatico. Ma la maggior parte mollava durante la configurazione perché era troppo complessa. Togliere funzionalità, non aggiungerne, ha risolto il problema. Tempo di setup -35%, adozione +9%."
       }
     },

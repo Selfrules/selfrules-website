@@ -39,7 +39,7 @@
     "hero": {
       "headline": "Senior Technical Product Manager.\nDesign, code, and product management in the same head.",
       "subtitle": "Companies call me when a product isn't working. I figure out why, fix it, and make sure it stays fixed. I've done it at startup scale and enterprise scale. The results are in the case studies.",
-      "primaryCta": "Let's talk about your product →",
+      "primaryCta": "Let's talk about your product",
       "secondaryCta": "Read the case studies",
       "tag1": "10+ years",
       "tag2": "B2B SaaS",
@@ -246,14 +246,14 @@
         "tag": "Payments · B2B SaaS · Enterprise",
         "title": "A payment system\nlosing transactions every day",
         "metric": "99%+",
-        "metricLabel": "SUCCESS RATE →",
+        "metricLabel": "SUCCESS RATE",
         "preview": "Customers were losing money. Double charges, failed payments, missing refunds. 44 open issues and pressure to fix everything at once. I found the 4 that actually mattered, resolved them in 6 weeks, and brought the system to 99%+ uptime. Without rewriting a line of code."
       },
       "cashless": {
         "tag": "Cashless · Product Strategy · Partnership",
         "title": "Cashless from zero: three providers,\nan \"unsolvable\" problem, and a product to park",
         "metric": "5 mo",
-        "metricLabel": "ZERO TO LIVE DEMO →",
+        "metricLabel": "ZERO TO LIVE DEMO",
         "preview": "How do you let customers pay without cash at entertainment centers? Three competing providers, one product strategy needed. The obvious choice looked best on paper. Real testing with real constraints told a different story.",
         "note": "Full metrics available upon production launch. Pilot data currently being collected"
       },
@@ -261,7 +261,7 @@
         "tag": "B2B SaaS · Integration Platform · Growth",
         "title": "380+ integrations, and most users\nnever finished setting one up",
         "metric": "-35%",
-        "metricLabel": "SETUP TIME →",
+        "metricLabel": "SETUP TIME",
         "preview": "Thousands of businesses wanted to connect their advertising data to their CRM automatically. But most gave up during setup because the process was too complex. Fewer features, not more, turned out to be the fix. Setup time dropped 35%, adoption jumped 9%."
       }
     },
