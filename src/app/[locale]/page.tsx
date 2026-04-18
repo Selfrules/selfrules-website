@@ -56,13 +56,39 @@ export default async function HomePage({
         ]
       }} />
       <Hero
-        headline={t('hero.headline')}
+        availability={t('hero.availability')}
+        roleEyebrow={t('hero.roleEyebrow')}
+        headline={t.rich('hero.headlineRich', {
+          accent: (chunks) => <span className="text-accent">{chunks}</span>,
+          mute: (chunks) => (
+            <span className="text-text-secondary">{chunks}</span>
+          ),
+          emph: (chunks) => (
+            <span className="relative inline-block">
+              {chunks}
+              <span
+                aria-hidden="true"
+                className="absolute left-0 right-0 -bottom-1.5 h-1 bg-accent"
+              />
+            </span>
+          ),
+        })}
         subtitle={t('hero.subtitle')}
         primaryCta={t('hero.primaryCta')}
         secondaryCta={t('hero.secondaryCta')}
-        tags={[t('hero.tag1'), t('hero.tag2'), t('hero.tag3'), t('hero.tag4')]}
-        terminalPrompt={t('hero.terminalPrompt')}
+        whoamiLine1={t('hero.whoamiLine1')}
+        whoamiLine2={t('hero.whoamiLine2')}
         signaturePhrase={t('hero.signaturePhrase')}
+        ruleFooter={t('hero.ruleFooter')}
+        terminalCaption={t('hero.terminalCaption')}
+        metricsCaption={t('hero.metricsCaption')}
+        scrollHint={t('hero.scrollHint')}
+        revLabel={t('hero.revLabel')}
+        metrics={[
+          { number: t('metrics.metric2.number'), label: t('metrics.metric2.label') },
+          { number: t('metrics.metric3.number'), label: t('metrics.metric3.label') },
+          { number: t('metrics.metric5.number'), label: t('metrics.metric5.label') },
+        ]}
       />
 
       <ScrollReveal>

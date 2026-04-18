@@ -46,7 +46,17 @@
       "tag3": "Payments",
       "tag4": "5 paesi",
       "terminalPrompt": "hello@selfrules.org ~ $",
-      "signaturePhrase": "Il problema non è mai quello del primo meeting."
+      "signaturePhrase": "Il problema non è mai quello del primo meeting.",
+      "availability": "Disponibile · EU / US remoto",
+      "roleEyebrow": "Senior Technical Product Manager",
+      "headlineRich": "<accent>Product.</accent> Design. Codice.\n<mute>Nella </mute><emph>stessa testa</emph><mute>.</mute>",
+      "ruleFooter": "— rule #01 · discovery-first",
+      "whoamiLine1": "Senior Technical PM · ex-designer · ex-developer",
+      "whoamiLine2": "10+ yrs · B2B SaaS · Payments · 5 countries",
+      "terminalCaption": "~/selfrules · zsh",
+      "metricsCaption": "last 24 mo",
+      "scrollHint": "↓ scroll · prossimo: come lavoro",
+      "revLabel": "rev. v25 · build 2026.04"
     },
     "whatIDo": {
       "label": "COSA FACCIO",
