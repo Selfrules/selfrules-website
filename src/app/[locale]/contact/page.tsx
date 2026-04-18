@@ -64,7 +64,7 @@ export default async function ContactPage({
             </p>
             <a
               href={`mailto:${t('emailValue')}`}
-              className="block break-all font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              className="block [overflow-wrap:anywhere] font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
               data-umami-event="contact-email"
             >
               {t('emailValue')}
@@ -80,7 +80,7 @@ export default async function ContactPage({
               href={t('linkedinUrl')}
               target="_blank"
               rel="noopener noreferrer"
-              className="block break-all font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
+              className="block [overflow-wrap:anywhere] font-heading font-medium text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.65px] text-[#E8A838] hover:text-[#f5f5f0] transition-colors duration-150"
               data-umami-event="contact-linkedin"
             >
               {t('linkedinValue')}
