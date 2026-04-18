@@ -106,7 +106,7 @@ export function Hero({
             </p>
 
             {/* CTA row */}
-            <div className="flex flex-col sm:flex-row gap-3 mt-12">
+            <div className="flex flex-wrap gap-3 mt-12">
               <Button variant="primary" href="#contact">
                 {primaryCta}
               </Button>
