@@ -757,80 +757,56 @@
         "date": "2026-01-29",
         "excerpt": "Diagrams hide the hard parts. Building a real system, even a small one, exposes the architectural constraints that should drive product decisions.",
         "readingTime": "4 min read",
-        "tags": [
-          "Product Craft",
-          "Technical PM"
-        ]
+        "tags": ["craft", "process"]
       },
       "the-meeting-where-everyone-says-yes": {
         "title": "The meeting where everyone says yes",
         "date": "2026-02-08",
         "excerpt": "When nobody disagrees, nobody's thinking. A PM with no position turns the roadmap into a parking lot of unrelated features.",
         "readingTime": "5 min read",
-        "tags": [
-          "Decision Making",
-          "Product Craft"
-        ]
+        "tags": ["process", "craft"]
       },
       "why-metrics-lie-without-context": {
         "title": "Why metrics lie without context",
         "date": "2026-03-22",
         "excerpt": "Every metric needs three things: the number, the mechanism that caused it, and the counter-metric (what you sacrificed). Without all three, you're guessing.",
         "readingTime": "6 min read",
-        "tags": [
-          "Product Craft",
-          "Payments"
-        ]
+        "tags": ["metrics", "process"]
       },
       "when-ai-makes-sense-in-product": {
         "title": "When AI makes sense in product",
         "date": "2026-03-12",
         "excerpt": "The 80/20 rule applied to AI: use deterministic rules for predictable problems, reserve ML for genuine judgment calls. Most features don't need a model.",
         "readingTime": "5 min",
-        "tags": [
-          "AI",
-          "Product"
-        ]
+        "tags": ["ai", "architecture"]
       },
       "managing-payments-at-scale": {
         "title": "Managing payments at scale",
         "date": "2026-03-01",
         "excerpt": "Payments require a different PM mindset. Safety before possibility. One week reading the API and tracing money flows prevents months of production fires.",
         "readingTime": "6 min",
-        "tags": [
-          "Payments",
-          "Scale"
-        ]
+        "tags": ["payments", "architecture"]
       },
       "remote-pm-across-countries": {
         "title": "Being a remote PM across countries",
         "date": "2026-02-19",
         "excerpt": "Remote PM fails when you solve timezone overlap with better scheduling. The real skill is async-first: persistent docs, written decisions, shared context.",
         "readingTime": "5 min",
-        "tags": [
-          "Remote",
-          "PM"
-        ]
+        "tags": ["craft", "process"]
       },
       "build-vs-buy-framework": {
         "title": "Build vs Buy framework",
         "date": "2026-01-18",
         "excerpt": "Build vs buy is four strategic questions in sequence, not a technical one: constraint, differentiator, total cost, reversibility.",
         "readingTime": "4 min",
-        "tags": [
-          "Framework",
-          "Decisions"
-        ]
+        "tags": ["architecture", "metrics"]
       },
       "seven-years-running-a-business": {
         "title": "Seven years running a business",
         "date": "2026-01-06",
         "excerpt": "Seven years freelancing taught one rule above all: shipping is what matters. Clients care about delivery dates and visible results, not elegant process.",
         "readingTime": "7 min",
-        "tags": [
-          "Business",
-          "Lessons"
-        ]
+        "tags": ["craft", "ai"]
       }
     }
   },
