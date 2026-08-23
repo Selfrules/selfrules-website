@@ -110,7 +110,7 @@ Ogni case study ha la sua keyword basata sul problema risolto, non sul nome azie
 
 ### Open Graph
 Ogni pagina ha: `og:title`, `og:description`, `og:image` personalizzati.
-Immagine OG: branded (logo + headline su sfondo scuro, stile neo-brutalist).
+Immagine OG: branded — sfondo nero #0A0A0B, headline in Space Grotesk, amber accent #E8A838, 0px border-radius, aesthetic terminal-editorial coerente col design system v25 del sito.
 
 ### Specifiche tecniche
 - Sitemap XML generata automaticamente

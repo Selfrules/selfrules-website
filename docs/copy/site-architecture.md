@@ -105,7 +105,7 @@ Versione italiana sotto `/it/`, inglese come default.
 
 1. **TASK-CS-03:** Scrivere case study LeadsBridge (serve recuperare materiale Austin)
 2. **Implementazione:** Portare il copy nei componenti del sito
-3. **Design:** Applicare neobrutalism-ui-designer ai layout
+3. **Design:** Applicare il design system terminal-editorial v25 (dark #0A0A0B, 0px radius, amber #E8A838, Space Grotesk + Inter + JetBrains Mono) — vedi `docs/design/DESIGN-UPDATE-v25.md`
 4. **/approach:** Pubblicare solo quando i case study sono tutti pronti e il pattern è maturo
 5. **/blog:** Pubblicare "Perché prototipo in codice" come primo post
 6. **SEO:** Implementare strategia (vedi TASK-MB-04)
