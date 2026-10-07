@@ -65,3 +65,6 @@ Per stack completo, pattern, pitfall e "What NOT to Use", leggi i file in `.plan
 - `PITFALLS.md` — 14 pitfall con mitigazioni
 - `ARCHITECTURE.md` — directory structure, component boundaries
 - `REQUIREMENTS.md` (in `.planning/milestones/v1.0-REQUIREMENTS.md`) — 65 requisiti con ID
+
+## Fabbrica
+Il codice passa dalla skill `fabbrica-codice`. Base `main` di questo repo. Controlli: `npm run lint && npm run test:i18n && npm run build`, più `npm run test:e2e` se cambia una pagina. Si guarda con `npm run dev -- --port <porta>`. Il push su `main` pubblica su Vercel, quindi si chiede a Mattia (skill `deploy-selfrules`).
