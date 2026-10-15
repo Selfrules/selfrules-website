@@ -1,4 +1,11 @@
-import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google';
+import { Fraunces, Inter, IBM_Plex_Mono } from 'next/font/google';
+
+export const fraunces = Fraunces({
+  subsets: ['latin'],
+  axes: ['SOFT', 'WONK', 'opsz'],
+  variable: '--font-fraunces',
+  display: 'swap',
+});
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -6,16 +13,9 @@ export const inter = Inter({
   display: 'swap',
 });
 
-export const spaceGrotesk = Space_Grotesk({
+export const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  variable: '--font-heading',
+  weight: ['400', '500'],
+  variable: '--font-plex-mono',
   display: 'swap',
-});
-
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains',
-  display: 'swap',
-  // Note: adjustFontFallback auto-generates an Arial fallback, but we override it
-  // with Courier New in layout.tsx inline <style> for better CLS (monospace→monospace)
 });

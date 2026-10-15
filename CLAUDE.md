@@ -1,70 +1,23 @@
-# selfrules-website — Istruzioni per Claude Code
+# selfrules-website
 
-> Questo progetto è il sito web selfrules.org.
-> Leggi QUESTO file e il piano di implementazione prima di scrivere qualsiasi codice.
+Il sito personale di Mattia De Luca, selfrules.org. Rifatto da capo a ottobre 2026 sul ramo `sito-2026`.
 
-## Obiettivo
-Costruire il sito web personale di Mattia De Luca (selfrules.org) da zero.
-Il sito sostituirà il sito attuale su https://selfrules.org/it.
+## Cosa vale oggi
+- Posizionamento e testi decisi da Mattia il 13-14/10/2026. Fonti in `../immagine-online/` (testi-linkedin-v2.md, esperienze-v2.md, foglio-unico.md, scheda-21lab.md) e backlog in `../immagine-online/sito/backlog-sito.md` (Plane P16, IMG-20…36).
+- Direzione visiva "Quaderno da GM", valori in `docs/design.md`. Riferimento disegnato su Magic Patterns: https://www.magicpatterns.com/c/5rhymh8xky8fnqdxwwcjyc (il codice di Magic Patterns non entra nel repo).
+- Tutto quello che c'è in `docs/archivio/` è superato dalla struttura del 14/10/2026. Il sito di luglio è in `docs/archivio/sito-luglio-2026/`.
 
-## File di riferimento
+## Dove stanno i testi
+- `src/content/index.ts`: storie (elenco), note (elenco), data di Adesso, email, LinkedIn.
+- `src/content/storie/*.mdx`, `src/content/note/*.mdx`, `src/content/pagine/*.mdx`: i testi lunghi, uno per file.
+- `src/content/errori.ts`: la pagina Errori.
+- Il copy viene da questi file, non si inventa nel codice. Nomi di persone inventati, niente soci, incassi o margini di 21Lab. Il titolo a 21Lab è "GM".
+- Voce: skill `voce-mattia` più `selfrules-voice`. Niente due punti nei testi, niente em dash, niente "non è X, è Y".
 
-### ⚠️ PRIMA DI TUTTO — Design Update v25
-- **`docs/design/DESIGN-UPDATE-v25.md`** — LEGGERE PER PRIMO. Contiene 9 modifiche al design (font, componenti, signature elements) verificate nel prototipo Figma v25. Applicare tutte le modifiche PRIMA di iniziare a scrivere codice.
-
-### Piano e layout (ESECUZIONE)
-- **Piano di implementazione:** `./implementation-plan.md` — il piano operativo dettagliato con layout per-page, comandi, codice esempio.
-- **Design specs (originali):** `docs/copy/figma-make-prompt.md` — specifiche visive base per pagina. In caso di conflitto, DESIGN-UPDATE-v25.md ha la precedenza.
-
-### Copy sorgente (CONTENUTO)
-- **Copy del sito:** `docs/copy/` — 10 file con tutto il copy IT + EN e specifiche SEO. COPIARE ESATTAMENTE.
-
-### GSD Research (RIFERIMENTO TECNICO)
-- **STACK.md** — in `.planning/research/STACK.md`. Stack research completa, pattern di codice, "What NOT to Use".
-- **PITFALLS.md** — in `.planning/research/PITFALLS.md`. 14 pitfalls con mitigazioni.
-- **REQUIREMENTS.md** — in `.planning/milestones/v1.0-REQUIREMENTS.md`. 65 requisiti con ID.
-- **ARCHITECTURE.md** — in `.planning/research/ARCHITECTURE.md`. Directory structure, component boundaries.
-- **STATE.md** — in `.planning/STATE.md`. Tracker avanzamento progetto.
-- **ROADMAP.md** — in `.planning/ROADMAP.md`. Struttura fasi.
-
-### Documentazione aggiuntiva (in `docs/`)
-- **`docs/design/`** — Design specs, gap analysis, pixel-perfect fixes
-- **`docs/audits/`** — Site audit reports
-- **`docs/reference/`** — Analytics events, deploy checklist, glossario IT, Remotion guide
-- **`docs/drafts/`** — Bozze e documenti di lavoro
-- **`docs/job-search/`** — Materiali LinkedIn, CV, analisi job search (non parte del sito)
-
-## Stack tecnologico
-- Next.js 16.2 (App Router, Turbopack) — NON 15. Usa `proxy.ts` (non middleware.ts)
-- TypeScript 5.x
-- Tailwind CSS v4 (CSS-first: `@theme` in globals.css, NO tailwind.config.ts)
-- next-intl 4.8.x per i18n (IT + EN), `localePrefix: 'as-needed'`, `localeDetection: false`
-- @next/mdx per blog (NON next-mdx-remote)
-- next/font/google per Inter + JetBrains Mono
-- Umami Cloud per analytics (cookieless)
-- Vercel per deploy
+## Tecnica
+Next.js 16 (App Router) su Vercel, Tailwind 4, MDX con `@next/mdx`, font con `next/font`. Animazioni in CSS (scroll-driven e View Transitions), nessuna libreria di animazione. Tema chiaro di base, scuro col sistema o con l'interruttore. Solo italiano per ora, l'inglese è IMG-13.
 
 ## Regole
-0. **Prima di iniziare qualsiasi lavoro, dichiara come intendi verificare il risultato**
-1. Segui il piano in `implementation-plan.md` fase per fase
-2. Ogni fase ha criteri di accettazione — verificali TUTTI prima di passare alla fase successiva
-3. Il copy è DEFINITIVO — non modificarlo, copialo esattamente dai file sorgente
-4. Il design system è definito nelle specs — rispettalo al pixel
-5. Dopo ogni fase, fai una valutazione critica del tuo lavoro
-6. Se qualcosa non funziona, documenta il problema e proponi una soluzione prima di andare avanti
-
-## Posizionamento
-
-**Modello B — identità aspirazionale.** Il sito di un IC che pensa ad alta voce: mostra come ragiona, come prende decisioni di prodotto, cosa ha costruito e con quali risultati. Mai framing job-seeker. Disponibilità e CV solo in Contatto e Footer.
-
-**Core Value:** Un hiring manager che atterra su selfrules.org deve pensare "questo è uno che sa quello che fa" — competenza attraverso specificità e risultati, mai self-promotion.
-
-## Riferimenti tecnici dettagliati
-Per stack completo, pattern, pitfall e "What NOT to Use", leggi i file in `.planning/research/`:
-- `STACK.md` — stack research, pattern di codice, alternative considerate
-- `PITFALLS.md` — 14 pitfall con mitigazioni
-- `ARCHITECTURE.md` — directory structure, component boundaries
-- `REQUIREMENTS.md` (in `.planning/milestones/v1.0-REQUIREMENTS.md`) — 65 requisiti con ID
-
-## Fabbrica
-Il codice passa dalla skill `fabbrica-codice`. Base `main` di questo repo. Controlli: `npm run lint && npm run test:i18n && npm run build`, più `npm run test:e2e` se cambia una pagina. Si guarda con `npm run dev -- --port <porta>`. Il push su `main` pubblica su Vercel, quindi si chiede a Mattia (skill `deploy-selfrules`).
+- I redirect `/21lab-extra` e `/extra` in `vercel.json` servono ai coach di 21Lab, non si toccano.
+- Il push su `main` pubblica selfrules.org: lo decide Mattia. Le anteprime si fanno sui rami, Vercel le pubblica da sole.
+- Controlli prima di un push: `npm run lint && npm run build`, poi il sito guardato a 375 px e a 1280 px, chiaro e scuro.

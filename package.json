@@ -4,14 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node -e \"const c=require('child_process');let n=47;try{n=parseInt(c.execSync('git rev-list --count HEAD').toString().trim())||47}catch(e){}require('fs').writeFileSync('src/lib/build-info.ts','export const COMMIT_COUNT = '+n+';\\n')\"",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "test:e2e": "playwright test",
-    "test:i18n": "node scripts/check-i18n-keys.mjs",
-    "remotion:studio": "remotion studio remotion/Root.tsx",
-    "remotion:render": "remotion render remotion/Root.tsx"
+    "lint": "eslint"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -20,16 +15,10 @@
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "next": "16.2.1",
-    "next-intl": "^4.8.3",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.11.1",
-    "@playwright/test": "^1.58.2",
-    "@remotion/bundler": "^4.0.439",
-    "@remotion/cli": "^4.0.439",
-    "@remotion/renderer": "^4.0.439",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",
@@ -38,7 +27,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "remark-gfm": "^4.0.1",
-    "remotion": "^4.0.439",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

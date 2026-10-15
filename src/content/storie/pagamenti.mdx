@@ -1,0 +1,39 @@
+Immagina un sabato sera in un centro bowling. C'è una festa di compleanno, dodici bambini, un papà che paga le piste con la carta. Il terminale ci pensa, poi dice errore. Lui riprova. Il lunedì gli arrivano due addebiti, e il gestore del centro passa la mattina al telefono a spiegare una cosa che non ha fatto lui.
+
+Nel 2025 questa scena succedeva in troppi centri. L'integrazione con Square, uno dei quattro sistemi di pagamento che seguivo in QubicaAMF, era il prodotto che cresceva più in fretta. Ed era anche quello che faceva più danni a chi lo usava.
+
+## Il problema di chi lo aveva
+
+QubicaAMF fa il software che fa girare i centri bowling e di intrattenimento, 600 persone in tutto il mondo. Io seguivo i pagamenti e le cashless card, cioè le tessere che i giocatori ricaricano con soldi veri, con quattro team di sviluppo e quattro fornitori di pagamenti (Square, Stripe, First Data e FreedomPay).
+
+Per un gestore di centro il pagamento è il momento in cui il cliente decide se tornare. Addebiti doppi, pagamenti bloccati proprio nelle ore di punta, rimborsi che sparivano nel nulla. Ognuna di queste cose finiva alla cassa, davanti a una persona arrabbiata.
+
+## Cosa non andava
+
+Sulla carta il sistema funzionava. Nella lista dei problemi aperti ce n'erano 44, senza un ordine. Ognuno aveva qualcuno che lo considerava urgente, e nessuno sapeva dire quale venisse prima.
+
+Nel frattempo sales continuava a promettere funzioni nuove, perché il prodotto vendeva. Era come ridipingere la facciata di una casa con le tubature che perdono.
+
+## Cosa ho deciso, e cosa ho scartato
+
+Ho chiesto a sales e alla direzione di fermare le funzioni nuove. Per qualche settimana tutto il team avrebbe lavorato a una cosa sola, far funzionare bene quello che c'era. Non è stata una conversazione comoda.
+
+Poi ho messo in fila i 44 problemi con una domanda sola. **Questo oggi fa perdere soldi a un centro?** Quattro sì. Gli altri potevano aspettare, e il motivo l'ho scritto.
+
+Ho scartato l'idea di sistemare tutto insieme. Nei pagamenti una correzione può romperne un'altra, e un errore costa soldi di qualcun altro.
+
+## Com'è finita
+
+I quattro problemi che facevano perdere soldi li abbiamo chiusi in **4 settimane**. In quell'anno, dei 44, ne abbiamo consegnati 23 e rimandati 21, ognuno con il motivo scritto.
+
+Quando ho passato le consegne, negli ultimi 30 giorni i pagamenti andavano a buon fine il **99,83%** delle volte, in **290 centri**. Vuol dire che su mille pagamenti meno di due non andavano a buon fine.
+
+C'era anche un centro grande che stava per disdire. I suoi operatori ci mettevano il doppio del tempo a far quadrare la cassa a fine giornata, perché ogni pagamento arrivava senza dire da quale terminale veniva. Ho letto la documentazione tecnica di Square riga per riga e ho trovato un campo che esisteva già e poteva portare quell'informazione. Ho scritto come usarlo, il team l'ha rilasciato, e quel centro è diventato uno dei clienti che l'azienda porta come esempio.
+
+Due abitudini piccole hanno fatto il resto. Un incontro a settimana tra prodotto, sviluppo, tech support e customer support ha fatto calare del **25%** le segnalazioni di errori. E un manuale di 47 pagine che nessuno leggeva è diventato un video di 3 minuti, con il 9% di centri in più che hanno attivato l'integrazione.
+
+## Cosa mi porto via
+
+Una lista di 44 cose urgenti è una lista senza priorità. Serve una domanda che divida, e la pazienza di spiegare per iscritto, a chi l'aveva chiesta, perché la sua cosa aspetta.
+
+E le funzioni nuove su un prodotto che perde soldi ai clienti sono un debito che paga qualcun altro, di solito il sabato sera.
