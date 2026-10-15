@@ -54,7 +54,7 @@ export const storie: Storia[] = [
     periodo: 'da agosto 2026',
     riassunto:
       'Da agosto 2026 sono il GM di una palestra a Vignola. Il gestionale nuovo lo sto costruendo con agenti AI, per restituire tempo a clienti, coach e a chi amministra.',
-    rigaPiccola: 'Il gruppo pilota lo prova da dicembre.',
+    rigaPiccola: 'Il gruppo pilota lo proverà da dicembre.',
     link: "Com'è andata finora",
     fretta: 'Il gestionale di una palestra costruito da agenti AI, con me a decidere cosa serve. Prima versione ai clienti dal 7 dicembre 2026.',
     minuti: 4,
@@ -73,7 +73,7 @@ export const note: Nota[] = [
   {
     slug: 'riunione-dove-tutti-dicono-si',
     titolo: 'La riunione dove tutti dicono sì',
-    riga: 'Essere d’accordo costa poco. Decidere cosa non fare è il lavoro.',
+    riga: 'Tutti annuiscono, nessuno si impegna. Cosa faccio prima, durante e dopo.',
     data: '2026-02-08',
     minuti: 3,
   },

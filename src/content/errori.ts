@@ -40,7 +40,7 @@ export const errori: Errore[] = [
     costoSpiegato: 'su tutto lo staff della palestra',
     scena: [
       "Nell'estate 2026, mentre preparavo il mio arrivo a 21Lab, ho scritto le regole della palestra come le avrei scritte per un team di sviluppo. Sigle, parole inglesi, frasi fitte. Mi sembravano chiarissime.",
-      'Il titolare me lo ha detto senza giri. Il tuo linguaggio, in questo momento, c\'è una persona sola che lo capisce, ed è lui. Poi ha usato un paragone da palestra. Un personal trainer che carica troppo un atleta nuovo, e l\'atleta sta male. La colpa è del trainer.',
+      'Il titolare me lo ha detto senza giri. Il mio linguaggio, in quel momento, lo capiva una persona sola, cioè lui. Poi ha usato un paragone da palestra. Un personal trainer che carica troppo un atleta nuovo, e l\'atleta sta male. La colpa è del trainer.',
     ],
     regola:
       'Se chi legge non capisce, il testo è sbagliato. Da allora riscrivo finché lo capisce chi è più lontano dal mio mestiere.',

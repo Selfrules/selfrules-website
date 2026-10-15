@@ -10,7 +10,10 @@ export default function Home() {
   const errore = errori[0];
   return (
     <Colonna>
-      <section className="pt-14 pb-16 sm:pt-24 sm:pb-24">
+      <section className="pt-12 pb-16 sm:pt-20 sm:pb-24">
+        <p className="etichetta appare mb-5" style={{ '--ritardo': '0s' } as React.CSSProperties}>
+          Senior Product Manager · GM di 21Lab
+        </p>
         <h1 className="titolo-morbido text-[2.65rem] leading-[1.05] font-medium tracking-tight text-balance sm:text-[4rem]">
           <span className="cursore">
             <ParolePerParola testo="Ho fatto il designer, lo sviluppatore e il product manager." />
@@ -61,8 +64,10 @@ export default function Home() {
           Un negozio online bellissimo che in tre settimane non ha venduto niente. Alla fine il cliente mi
           ha chiesto dove si cliccava per pagare.
         </p>
-        <p className="etichetta mt-7 !text-rosa-inchiostro/80">La regola che ne è uscita</p>
-        <p className="mt-2 font-titolo text-xl leading-snug sm:text-2xl">{errore.regola}</p>
+        <div className="mt-7 border-l-2 border-rosa-inchiostro/40 pl-4">
+          <p className="etichetta !text-rosa-inchiostro/80">La regola che ne è uscita</p>
+          <p className="mt-2 font-titolo text-xl leading-snug sm:text-2xl">{errore.regola}</p>
+        </div>
         <Link href="/errori" className="link mt-7 inline-block font-medium !text-rosa-inchiostro">
           Tutti gli errori <span className="freccia" aria-hidden="true">→</span>
         </Link>

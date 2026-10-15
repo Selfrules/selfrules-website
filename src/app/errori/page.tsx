@@ -39,8 +39,10 @@ export default function PaginaErrori() {
                 <p key={i}>{p}</p>
               ))}
             </div>
-            <p className="etichetta mt-7 !text-rosa-inchiostro/80">La regola</p>
-            <p className="mt-2 font-titolo text-xl leading-snug sm:text-[1.4rem]">{e.regola}</p>
+            <div className="mt-7 border-l-2 border-rosa-inchiostro/40 pl-4">
+              <p className="etichetta !text-rosa-inchiostro/80">La regola</p>
+              <p className="mt-2 font-titolo text-xl leading-snug sm:text-[1.4rem]">{e.regola}</p>
+            </div>
           </li>
         ))}
       </ol>

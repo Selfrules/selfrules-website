@@ -1,24 +1,24 @@
 La maggior parte dei product manager non scrive codice, e va benissimo così. Il mestiere non lo chiede. Ma se lo sai fare, cambia il modo in cui decidi.
 
-Non parlo di scrivere le funzioni che vanno ai clienti. Parlo di costruire la cosa più piccola che risponde a una domanda, prima di chiedere al team settimane di lavoro.
+Parlo della cosa più piccola che risponde a una domanda, costruita prima di chiedere al team settimane di lavoro.
 
 ## Una casa in affitto
 
 Cercavo un appartamento e non volevo ricaricare i siti di annunci ogni sera. Così ho scritto 8 piccoli programmi che leggevano gli annunci al posto mio.
 
-La parte difficile è arrivata dopo, cioè capire quali annunci valeva la pena guardare. La prima versione mandava tutto a un'AI. Funzionava, ma costava troppo e non migliorava oltre un certo punto.
+La parte difficile è arrivata dopo, cioè capire quali annunci valeva la pena guardare. Far leggere tutto a un'AI costa, e su centinaia di annunci costa parecchio.
 
-L'ho rifatto in tre passaggi. Prima regole fisse, che scartano gratis quello che non va (prezzo, zona, metri). Poi l'AI legge solo i migliori. Infine il voto scende man mano che l'annuncio invecchia. Su 880 annunci raccolti, l'AI ne ha dovuti leggere 28. In uno di quei 28 adesso ci abito.
+Così ho diviso il lavoro in tre passaggi. Prima regole fisse, che scartano gratis quello che non va (prezzo, zona, metri). Poi l'AI legge solo i migliori. Infine il voto scende man mano che l'annuncio invecchia. Su 880 annunci raccolti, l'AI ne ha dovuti leggere 28. In uno di quei 28 adesso ci abito.
 
-Quella divisione non mi sarebbe venuta in mente davanti a una lavagna. Me l'ha mostrata il codice, quando la prima versione mi ha presentato il conto.
+Quella divisione è venuta fuori costruendo, un pezzo alla volta, guardando quanto costava ogni passaggio.
 
 ## Un campo che nessuno aveva letto
 
-In QubicaAMF un centro bowling grande stava per disdire. Ogni pagamento arrivava nel suo sistema contabile senza dire da quale terminale veniva, e chiudere la cassa a fine giornata richiedeva il doppio del tempo. La diagnosi interna era che fosse un limite del fornitore, e quindi senza soluzione.
+In QubicaAMF un centro bowling grande stava per disdire. Ogni pagamento arrivava nel suo sistema contabile senza dire da quale terminale veniva, e chiudere la cassa a fine giornata richiedeva il doppio del tempo.
 
-Ho letto la documentazione tecnica del fornitore come si legge un contratto. C'era un campo che esisteva già e poteva portare quell'informazione, senza cambiare niente da nessuna delle due parti. Ho scritto come usarlo, il team l'ha rilasciato, e il centro è rimasto.
+Ho letto la documentazione tecnica del fornitore come si legge un contratto. C'era un campo che esisteva già e poteva portare quell'informazione. Ho scritto come usarlo, il team l'ha rilasciato, e il centro è rimasto.
 
-Non ho scritto una riga di codice di produzione. Mi è bastato sapere come si legge.
+Mi è bastato saper leggere una documentazione tecnica.
 
 ## Il rischio
 
