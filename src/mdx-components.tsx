@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { foto, schermate } from '@/content/foto';
 import { ScenaInLinea } from '@/components/Palco';
+import { Annuncio } from '@/components/Annuncio';
 import { DecidiStoria } from '@/components/Decidi';
 import { Capitolo as CapitoloCliente } from '@/components/Capitolo';
 import { Children, isValidElement, type ReactNode } from 'react';
@@ -31,6 +32,17 @@ export function ancora(t: string) {
 function Foto({ id, schermata }: { id?: keyof typeof foto; schermata?: keyof typeof schermate }) {
   const f = id ? foto[id] : schermata ? schermate[schermata] : null;
   if (!f) return null;
+  if (schermata) {
+    const alta = f.src.height > f.src.width;
+    return (
+      <figure data-entra>
+        <div className={alta ? 'telefono' : 'schermo'} data-ui>
+          <Image src={f.src} alt={f.alt} sizes="(min-width: 768px) 40vw, 100vw" className="w-full" />
+        </div>
+        {f.didascalia && <figcaption className="didascalia">{f.didascalia}</figcaption>}
+      </figure>
+    );
+  }
   return (
     <figure data-entra>
       <div className="foto-taglio overflow-hidden">
@@ -42,9 +54,9 @@ function Foto({ id, schermata }: { id?: keyof typeof foto; schermata?: keyof typ
 }
 
 // <Capitolo titolo="..."> nel manuale di Come lavoro: l'indirizzo viene dal titolo
-function Capitolo({ titolo, children }: { titolo: string; children: ReactNode }) {
+function Capitolo({ titolo, aperto = false, children }: { titolo: string; aperto?: boolean; children: ReactNode }) {
   return (
-    <CapitoloCliente titolo={titolo} id={ancora(titolo)}>
+    <CapitoloCliente titolo={titolo} id={ancora(titolo)} sempreAperto={aperto}>
       {children}
     </CapitoloCliente>
   );
@@ -52,6 +64,7 @@ function Capitolo({ titolo, children }: { titolo: string; children: ReactNode })
 
 const components: MDXComponents = {
   Capitolo,
+  Annuncio,
   Foto,
   ScenaInLinea,
   DecidiStoria,

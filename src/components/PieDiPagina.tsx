@@ -55,9 +55,7 @@ export function PieDiPagina() {
             </ul>
           </nav>
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-auto lg:pt-16">
-            <p>
-              Scritto da me, costruito con qualche agente AI. Il carattere è Erode di Indian Type Foundry.
-            </p>
+            <p>Scritto da me, costruito con qualche agente AI.</p>
             <details>
               <summary className="cursor-pointer font-semibold">Le foto, chi le ha fatte</summary>
               <ul className="mt-3 space-y-2 text-grigio">
@@ -73,7 +71,9 @@ export function PieDiPagina() {
               </ul>
             </details>
           </div>
-          <p className="mt-10 text-piccolo text-grigio">{foto.rocca.didascalia} © Mattia De Luca, 2026</p>
+          <p className="mt-10 text-piccolo text-grigio">
+            <span className="hidden lg:inline">{foto.rocca.didascalia} </span>© Mattia De Luca, 2026
+          </p>
         </div>
       </div>
     </footer>

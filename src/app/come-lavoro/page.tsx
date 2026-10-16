@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // I titoli delle sezioni vengono dal file del testo, così l'indice non si scorda di nessuna
 const sezioni = readFileSync(join(process.cwd(), 'src/content/pagine/come-lavoro.mdx'), 'utf8')
   .split('\n')
-  .map((r) => r.match(/^<Capitolo titolo="([^"]+)">/)?.[1])
+  .map((r) => r.match(/^<Capitolo titolo="([^"]+)"/)?.[1])
   .filter((t): t is string => Boolean(t))
   .map((t): [string, string] => [ancora(t), t]);
 

@@ -44,7 +44,7 @@ export const decisioni: Decisione[] = [
   },
   {
     slug: 'leadsbridge',
-    nome: 'Il 60% che chiede',
+    nome: 'La funzione del 60%',
     dove: 'LeadsBridge, 2020 – 2023',
     scena:
       'Sei utenti su dieci chiedono la stessa funzione. Il team di sviluppo è pronto, la stima è di tre sprint, cioè sei settimane di lavoro.',

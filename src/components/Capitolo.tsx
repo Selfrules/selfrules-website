@@ -6,13 +6,23 @@ import { Children, isValidElement, useState, useSyncExternalStore } from 'react'
 // Sul computer e senza script è tutto aperto.
 const nessunEvento = () => () => {};
 
-export function Capitolo({ titolo, id, children }: { titolo: string; id: string; children: React.ReactNode }) {
+export function Capitolo({
+  titolo,
+  id,
+  sempreAperto = false,
+  children,
+}: {
+  titolo: string;
+  id: string;
+  sempreAperto?: boolean;
+  children: React.ReactNode;
+}) {
   const nelBrowser = useSyncExternalStore(nessunEvento, () => true, () => false);
   const [aperto, setAperto] = useState(false);
   // Si chiude solo se dopo il primo paragrafo c'è altro da aprire
   const parti = Children.toArray(children).filter(isValidElement);
   const primo = parti.findIndex((p) => p.type === 'p');
-  const restoPresente = primo >= 0 && primo < parti.length - 1;
+  const restoPresente = !sempreAperto && primo >= 0 && primo < parti.length - 1;
   const chiuso = nelBrowser && restoPresente && !aperto;
 
   return (

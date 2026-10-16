@@ -853,3 +853,18 @@ a {
 .decidi-storia[data-attesa='si'] ~ * {
   display: none;
 }
+
+.annuncio {
+  max-width: 24rem;
+  background: var(--chiaro);
+  padding: 20px;
+}
+
+.annuncio-voto {
+  flex: none;
+  background: var(--verde);
+  color: var(--verde-testo);
+  padding: 2px 10px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}

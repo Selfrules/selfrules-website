@@ -31,7 +31,7 @@ export const errori: Errore[] = [
       'Lo abbiamo cambiato. Il cliente chiede un\'integrazione, noi la prepariamo per l\'80%, lui sistema il resto. Quella versione l\'hanno usata tre volte tanto.',
     ],
     regola:
-      'Ascolto chi chiede più forte, poi conto chi usa. Se i due gruppi non coincidono, conta il secondo.',
+      'Ascolto chi chiede più forte, poi conto chi lo usa. Se i due gruppi non coincidono, conta il secondo.',
   },
   {
     numero: '3',

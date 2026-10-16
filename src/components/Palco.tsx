@@ -92,7 +92,7 @@ export function Scena({ scena, inLinea = false }: { scena: ScenaDati; inLinea?: 
       return (
         <figure className="scena scena-foto">
           <Clip className="scena-img" />
-          <figcaption className="didascalia">Uno spare, cioè i birilli rimasti buttati giù col secondo tiro. Rimediare bene conta quanto il primo colpo.</figcaption>
+          <figcaption className="didascalia">Uno spare, cioè i birilli rimasti in piedi buttati giù col secondo tiro. Rimediare bene conta quanto il primo colpo.</figcaption>
         </figure>
       );
   }
