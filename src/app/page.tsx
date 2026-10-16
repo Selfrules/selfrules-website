@@ -5,22 +5,26 @@ import { ParolePerParola, Colonna } from '@/components/Titolo';
 import { Cerchiata } from '@/components/Cerchiata';
 import { RigaStoria } from '@/components/RigaStoria';
 import { ListaNote } from '@/components/ListaNote';
+import { GiorniDaGM } from '@/components/GiorniDaGM';
 
 export default function Home() {
   const errore = errori[0];
   return (
     <Colonna>
       <section className="pt-12 pb-16 sm:pt-20 sm:pb-24">
-        <p className="etichetta appare mb-5" style={{ '--ritardo': '0s' } as React.CSSProperties}>
-          Senior Product Manager · GM di 21Lab
-        </p>
         <h1 className="titolo-morbido text-[2.65rem] leading-[1.05] font-medium tracking-tight text-balance sm:text-[4rem]">
           <span className="cursore">
             <ParolePerParola testo="Ho fatto il designer, lo sviluppatore e il product manager." />
           </span>
         </h1>
         <p
-          className="appare mt-7 max-w-[36rem] text-[1.15rem] leading-relaxed text-matita sm:text-xl"
+          className="appare mt-6 text-[1.15rem] font-medium sm:text-xl"
+          style={{ '--ritardo': '0.4s' } as React.CSSProperties}
+        >
+          Senior Product Manager, <GiorniDaGM /> GM di 21Lab.
+        </p>
+        <p
+          className="appare mt-4 max-w-[36rem] text-[1.15rem] leading-relaxed text-matita sm:text-xl"
           style={{ '--ritardo': '0.5s' } as React.CSSProperties}
         >
           Poi ho preso in mano una <Cerchiata>palestra</Cerchiata>, per vedere se le cose che dicevo
@@ -39,7 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="titolo-storie" className="border-t border-inchiostro pt-10">
+      <section aria-labelledby="titolo-storie" className="pt-4">
         <h2 id="titolo-storie" className="font-titolo text-3xl font-medium">
           Tre storie, con i numeri
         </h2>
@@ -74,10 +78,10 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="titolo-adesso" className="rivela mt-20">
-        <p className="etichetta">Aggiornato il {AGGIORNATO}</p>
-        <h2 id="titolo-adesso" className="mt-3 font-titolo text-3xl font-medium">
+        <h2 id="titolo-adesso" className="font-titolo text-3xl font-medium">
           Adesso
         </h2>
+        <p className="etichetta mt-2">Aggiornato il {AGGIORNATO}</p>
         <p className="mt-4 text-lg">
           Faccio il GM di 21Lab e chiudo la prima versione del gestionale. Cerco un team, un&apos;azienda,
           dove si può dire quello che si pensa e il rischio si condivide.
