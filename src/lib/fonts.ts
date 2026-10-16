@@ -1,17 +1,15 @@
-import { Libre_Franklin, Source_Serif_4 } from 'next/font/google';
+import localFont from 'next/font/local';
 
-// Libre Franklin per il nome e i titoli, Source Serif 4 per leggere. Redesign del 16/10/2026, docs/design.md
-export const franklin = Libre_Franklin({
-  subsets: ['latin'],
-  weight: ['700', '800'],
-  variable: '--font-franklin',
+// Erode di Indian Type Foundry (Fontshare, licenza ITF Free Font), un carattere solo per tutto il sito.
+// I file stanno nel repo, così la build non dipende da un servizio esterno. Redesign del 16/10/2026, docs/design-racconto.md
+export const erode = localFont({
+  src: [
+    { path: '../fonts/erode-400.woff2', weight: '400', style: 'normal' },
+    { path: '../fonts/erode-400-italic.woff2', weight: '400', style: 'italic' },
+    { path: '../fonts/erode-500.woff2', weight: '500', style: 'normal' },
+    { path: '../fonts/erode-600.woff2', weight: '600', style: 'normal' },
+  ],
+  variable: '--font-erode',
   display: 'swap',
-});
-
-export const serif = Source_Serif_4({
-  subsets: ['latin'],
-  weight: ['400', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-serif',
-  display: 'swap',
+  fallback: ['Georgia', 'serif'],
 });

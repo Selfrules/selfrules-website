@@ -2,6 +2,8 @@ import type { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { foto, schermate } from '@/content/foto';
+import { ScenaInLinea } from '@/components/Palco';
+import { DecidiStoria } from '@/components/Decidi';
 import { Children, isValidElement, type ReactNode } from 'react';
 
 function testo(nodo: ReactNode): string {
@@ -24,19 +26,24 @@ export function ancora(t: string) {
     .replace(/^-|-$/g, '');
 }
 
-// Una foto dentro il testo: <Foto id="rocca" /> per le foto d'archivio, <Foto schermata="mappa" /> per CasaHunter
+// Una foto dentro il testo: <Foto id="rocca" /> per le foto d'archivio, <Foto schermata="mappa" /> per le schermate
 function Foto({ id, schermata }: { id?: keyof typeof foto; schermata?: keyof typeof schermate }) {
   const f = id ? foto[id] : schermata ? schermate[schermata] : null;
   if (!f) return null;
   return (
-    <figure className="foto-testo">
-      <Image src={f.src} alt={f.alt} sizes="(min-width: 768px) 50vw, 100vw" className="aspect-[3/2] w-full object-cover" />
+    <figure data-entra>
+      <div className="foto-taglio overflow-hidden">
+        <Image src={f.src} alt={f.alt} sizes="(min-width: 768px) 50vw, 100vw" className="aspect-[3/2] w-full object-cover" />
+      </div>
+      {f.didascalia && <figcaption className="didascalia">{f.didascalia}</figcaption>}
     </figure>
   );
 }
 
 const components: MDXComponents = {
   Foto,
+  ScenaInLinea,
+  DecidiStoria,
   a: ({ href = '', children }) =>
     href.startsWith('/') ? <Link href={href}>{children}</Link> : <a href={href}>{children}</a>,
   h2: ({ children }) => <h2 id={ancora(testo(children))}>{children}</h2>,

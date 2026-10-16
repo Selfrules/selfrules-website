@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { storie } from '@/content';
-import { fotoStorie } from '@/content/foto-storie';
-import { Monumento, FotoLarga, CoppiaFoto } from '@/components/Pagina';
+import { Palco } from '@/components/Palco';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,90 +24,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// La storia sul palco: sul computer a sinistra resta ferma la scena del capitolo che stai leggendo,
+// sul telefono ogni scena compare sotto il suo titolo.
 export default async function PaginaStoria({ params }: Props) {
   const { slug } = await params;
   const s = storie.find((x) => x.slug === slug);
   if (!s) notFound();
   const { default: Contenuto } = await import(`@/content/storie/${slug}.mdx`);
-  const altre = storie.filter((x) => x.slug !== slug);
-  const [apertura, primaCoppia, secondaCoppia] = fotoStorie[slug];
+  const i = storie.findIndex((x) => x.slug === slug);
+  const dopo = storie[(i + 1) % storie.length];
 
   return (
     <>
-      <div aria-hidden="true" className="barra-lettura fixed top-0 left-0 z-50 h-1 w-full bg-ciliegia" />
-      <article>
-        <header>
-          <Monumento testo={s.numero} />
-          <div className="mt-6 px-4 md:mt-8 md:grid md:grid-cols-12 md:gap-x-8 md:px-8">
-            <h1 className="testa text-[1.5rem] leading-[1.1] text-balance md:col-span-8 md:text-[clamp(1.75rem,2.6vw,2.5rem)]">
+      <div aria-hidden="true" className="barra-lettura fixed top-0 left-0 z-50 h-1 w-full bg-verde" />
+      <article className="lg:grid lg:grid-cols-2 lg:gap-x-12">
+        <div className="hidden lg:block">
+          <Palco storia={slug} testo={`testo-${slug}`} />
+        </div>
+
+        <div className="px-[var(--margine)] lg:px-0 lg:pr-[var(--margine)]">
+          <header className="pt-8 lg:pt-24">
+            <p className="cifra entra-subito text-verde">{s.numero}</p>
+            <h1
+              className="entra-subito mt-5 max-w-[30ch] text-[clamp(1.5rem,1.2rem+1vw,2.25rem)] leading-[1.08]"
+              style={{ '--ritardo': 1 } as React.CSSProperties}
+            >
               {s.titolo}
             </h1>
-            <p className="mt-3 text-grigio md:col-span-4 md:col-start-9 md:mt-1">
-              {s.azienda}, {s.periodo}. {s.minuti} minuti di lettura.
+            <p className="entra-subito mt-4 text-grigio" style={{ '--ritardo': 2 } as React.CSSProperties}>
+              {s.azienda}, {s.periodo}. {s.ruolo}. {s.minuti} minuti di lettura.
             </p>
-          </div>
-        </header>
+            <div className="entra-subito mt-8 max-w-[40rem] bg-superficie p-6" style={{ '--ritardo': 3 } as React.CSSProperties}>
+              <p className="font-semibold">Se hai un minuto solo</p>
+              <p className="mt-2">{s.fretta}</p>
+            </div>
+          </header>
 
-        <div className="mt-10 md:mt-14">
-          <FotoLarga foto={apertura} priorita posizione={slug === 'palestra' ? '50% 12%' : '50% 50%'} />
-        </div>
-
-        <div className="mt-14 px-4 md:mt-24 md:grid md:grid-cols-12 md:gap-x-8 md:px-8">
-          <aside data-entra aria-label="Per chi ha fretta" className="self-start md:col-span-3">
-            <p className="testa text-[1.75rem] md:text-[2rem]">Per chi ha fretta</p>
-            <dl className="mt-6 space-y-4">
-              <div>
-                <dt className="font-bold">Ruolo</dt>
-                <dd className="text-grigio">{s.ruolo}</dd>
-              </div>
-              <div>
-                <dt className="font-bold">Periodo</dt>
-                <dd className="text-grigio">{s.periodo}</dd>
-              </div>
-              <div>
-                <dt className="font-bold">In una frase</dt>
-                <dd className="text-grigio">{s.fretta}</dd>
-              </div>
-            </dl>
-          </aside>
-          <div data-entra-ciascuno className="testo-lungo mt-14 max-w-[62ch] md:col-span-7 md:col-start-5 md:mt-0">
+          <div id={`testo-${slug}`} data-entra-ciascuno className="testo-lungo mt-12 max-w-[40rem] pb-8 lg:mt-20">
             <Contenuto />
           </div>
+
+          <nav aria-label="La prossima storia" className="mt-16 max-w-[40rem] bg-superficie p-6 md:p-10">
+            <p className="text-grigio">La prossima storia</p>
+            <Link href={`/storie/${dopo.slug}`} className="group mt-3 block no-underline">
+              <span className="cifra block text-verde transition-transform group-hover:translate-x-2">{dopo.numero}</span>
+              <span className="text-lead mt-3 block font-medium group-hover:underline">{dopo.titolo}</span>
+            </Link>
+          </nav>
         </div>
       </article>
-
-      <div className="mt-24 md:mt-40">
-        <CoppiaFoto a={primaCoppia} b={secondaCoppia} />
-      </div>
-
-      <nav aria-labelledby="altre-storie" className="mt-24 bg-superficie px-4 py-20 md:mt-40 md:px-8 md:py-28">
-        <h2 id="altre-storie" className="testa text-[1.75rem] md:text-[2rem]">
-          Le altre storie
-        </h2>
-        <ul className="mt-10 grid gap-14 md:grid-cols-2 md:gap-8">
-          {altre.map((a) => (
-            <li key={a.slug} data-entra>
-              <Link href={`/storie/${a.slug}`} className="group block no-underline">
-                <div className="overflow-hidden">
-                  <Image
-                    src={fotoStorie[a.slug][0].src}
-                    alt={fotoStorie[a.slug][0].alt}
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <span className="testa cifre mt-6 block text-[16.2vw] transition-colors group-hover:text-ciliegia md:text-[clamp(3rem,6.4vw,6.5rem)] md:leading-[0.95]">
-                  {a.numero}
-                </span>
-                <span className="mt-3 block font-bold">{a.titolo}</span>
-                <span className="mt-1 block text-grigio">
-                  {a.azienda}, {a.periodo}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </>
   );
 }

@@ -97,3 +97,11 @@ export const AGGIORNATO = '15 ottobre 2026';
 export const EMAIL = 'mattia@selfrules.org';
 export const LINKEDIN = 'https://www.linkedin.com/in/selfrules';
 export const SITO = 'https://selfrules.org';
+
+export const pagine = [
+  { href: '/storie', label: 'Storie' },
+  { href: '/errori', label: 'Errori' },
+  { href: '/come-lavoro', label: 'Come lavoro' },
+  { href: '/adesso', label: 'Adesso' },
+  { href: '/note', label: 'Note' },
+];

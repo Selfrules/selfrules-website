@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { AGGIORNATO } from '@/content';
 import Contenuto from '@/content/pagine/adesso.mdx';
-import { Monumento, FotoLarga } from '@/components/Pagina';
-import { GiorniDaGM } from '@/components/GiorniDaGM';
 import { foto } from '@/content/foto';
+import { Contatori } from '@/components/Contatori';
+import { Testata } from '@/components/Testata';
 
 export const metadata: Metadata = {
   title: 'Adesso',
@@ -14,31 +15,22 @@ export const metadata: Metadata = {
 export default function PaginaAdesso() {
   return (
     <>
-      <header className="pb-14 md:pb-24">
-        <Monumento testo="Adesso" titolo />
-        <div className="mt-6 px-4 md:mt-8 md:grid md:grid-cols-12 md:gap-x-8 md:px-8">
-          <p className="text-[1.375rem] leading-[1.25] md:col-span-7 md:text-[clamp(1.75rem,2.4vw,2.25rem)] md:leading-[1.2]">
-            Cosa sto facendo adesso, e cosa cerco.
-          </p>
-          <dl className="mt-6 grid grid-cols-2 gap-4 md:col-span-4 md:col-start-9 md:mt-2">
-            <div>
-              <dt className="font-bold">Aggiornato</dt>
-              <dd className="text-grigio">il {AGGIORNATO}</dd>
-            </div>
-            <div>
-              <dt className="font-bold">GM di 21Lab</dt>
-              <dd className="text-grigio">
-                <GiorniDaGM />
-              </dd>
-            </div>
-          </dl>
+      <Testata titolo="Adesso" frase={`Cosa sto facendo adesso, e cosa cerco. Aggiornata a mano il ${AGGIORNATO}.`}>
+        <div className="entra-subito mt-14 lg:mt-20" style={{ '--ritardo': 3 } as React.CSSProperties}>
+          <Contatori />
         </div>
-        <div className="mt-12 md:mt-16">
-          <FotoLarga foto={foto.rocca} priorita />
+      </Testata>
+
+      <div className="px-[var(--margine)] lg:grid lg:grid-cols-12 lg:gap-x-8">
+        <figure data-entra className="mb-14 lg:sticky lg:top-28 lg:col-span-5 lg:mb-0 lg:self-start">
+          <div className="foto-taglio overflow-hidden">
+            <Image src={foto.ciliegie.src} alt={foto.ciliegie.alt} sizes="(min-width: 1024px) 40vw, 100vw" className="aspect-[4/5] w-full object-cover" />
+          </div>
+          <figcaption className="didascalia">{foto.ciliegie.didascalia}</figcaption>
+        </figure>
+        <div data-entra-ciascuno className="testo-lungo lg:col-span-6 lg:col-start-7 [&>h2:first-of-type]:mt-0">
+          <Contenuto />
         </div>
-      </header>
-      <div data-entra-ciascuno className="testo-lungo blocchi px-4 pb-8 md:px-8">
-        <Contenuto />
       </div>
     </>
   );

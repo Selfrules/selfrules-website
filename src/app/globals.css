@@ -1,451 +1,794 @@
 @import 'tailwindcss';
 
-/* Redesign del 16/10/2026 con la skill design-taste-frontend: il nome come monumento.
-   Gesso, gomma nera e rosso ciliegia di Vignola. Valori spiegati in docs/design.md */
+/* Redesign del 16/10/2026 sera, ramo sito-2026-racconto: "Decidi tu".
+   Carta rosa e inchiostro bruno, un verde per le cose che contano. Valori spiegati in docs/design-racconto.md */
 
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
 :root {
-  --terra: #f3f2ef;
-  --superficie: #e8e6e1;
-  --superficie-2: #dcd9d2;
-  --inchiostro: #141414;
-  --grigio: #57534d;
-  --ciliegia: #b0102c;
-  --ciliegia-testo: #ffffff;
+  --carta: #ebe5e3;
+  --superficie: #e1dad7;
+  --superficie-2: #d5ccc8;
+  --chiaro: #f6f2f0;
+  --inchiostro: #2b2622;
+  --grigio: #645b57;
+  --verde: #0f7d45;
+  --verde-testo: #ffffff;
+  --margine: 16px;
   color-scheme: light;
 }
 
 [data-theme='dark'] {
-  --terra: #121212;
-  --superficie: #1d1c1a;
-  --superficie-2: #282725;
-  --inchiostro: #ebebe9;
-  --grigio: #aaa69e;
-  --ciliegia: #ff5a6e;
-  --ciliegia-testo: #121212;
+  --carta: #1b1817;
+  --superficie: #252120;
+  --superficie-2: #322d2b;
+  --chiaro: #2c2826;
+  --inchiostro: #efe8e5;
+  --grigio: #ada39f;
+  --verde: #4cc483;
+  --verde-testo: #0e1410;
   color-scheme: dark;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --margine: 32px;
+  }
+}
+
 @theme inline {
-  --color-terra: var(--terra);
+  --color-carta: var(--carta);
   --color-superficie: var(--superficie);
   --color-superficie-2: var(--superficie-2);
+  --color-chiaro: var(--chiaro);
   --color-inchiostro: var(--inchiostro);
   --color-grigio: var(--grigio);
-  --color-ciliegia: var(--ciliegia);
-  --color-ciliegia-testo: var(--ciliegia-testo);
-  --font-nome: var(--font-franklin), 'Arial Narrow', sans-serif;
-  --font-testo: var(--font-serif), Georgia, serif;
-  --text-piccolo: 0.875rem;
+  --color-verde: var(--verde);
+  --color-verde-testo: var(--verde-testo);
+  --font-testo: var(--font-erode), Georgia, serif;
+  --text-piccolo: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
   --text-corpo: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
   --text-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
   --text-testa: clamp(2rem, 1.3rem + 3.2vw, 4rem);
 }
 
 html {
-  background: var(--terra);
+  background: var(--carta);
   color: var(--inchiostro);
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 2rem;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--terra);
+  background: var(--carta);
   color: var(--inchiostro);
   font-family: var(--font-testo);
   font-size: var(--text-corpo);
-  line-height: 1.55;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'kern', 'liga';
 }
 
-::selection {
-  background: var(--ciliegia);
-  color: var(--ciliegia-testo);
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 a {
   color: inherit;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+::selection {
+  background: var(--verde);
+  color: var(--verde-testo);
 }
 
 :focus-visible {
-  outline: 2px solid var(--ciliegia);
+  outline: 3px solid var(--verde);
   outline-offset: 3px;
 }
 
-/* Il nome e i titoli: Libre Franklin, stretto e pesante */
-.nome {
-  font-family: var(--font-nome);
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 0.86;
-  text-transform: uppercase;
-  font-kerning: normal;
+.text-lead {
+  line-height: 1.3;
 }
-.testa {
-  font-family: var(--font-nome);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+
+.text-testa {
   line-height: 1;
+  letter-spacing: -0.025em;
 }
-.cifre {
+
+/* Il nome e i numeri grandi */
+.cifra {
+  font-size: clamp(3.25rem, 1.6rem + 7vw, 7rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
   font-variant-numeric: tabular-nums lining-nums;
 }
 
-/* ---------- Home: il nome fermo sopra le foto ---------- */
-
-.monumento {
-  position: relative;
-}
-.monumento-nome {
-  color: var(--ciliegia);
-  white-space: nowrap;
-  font-size: 16.2vw;
-  padding: 0.5rem 1rem 0;
-}
-.quadro {
-  position: relative;
-  background: var(--fondo, var(--terra));
-}
-.quadro-foto {
-  display: block;
-  object-fit: cover;
-  width: calc(100% - 2rem);
-  max-width: 30rem;
-  margin: 0 1rem;
-  aspect-ratio: 2 / 3;
-  height: auto;
-}
-
-/* Dal computer in su il nome resta fermo e le tre foto gli passano sotto, senza toccarlo */
-@media (min-width: 1024px) {
-  .monumento {
-    --qt: calc(4.5rem + 9.4vw + 28px);
-    --qw: min(calc((100svh - var(--qt)) * 2 / 3), 36vw);
-  }
-  .monumento-strato {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    height: 100svh;
-    pointer-events: none;
-  }
-  .monumento-strato a,
-  .monumento-strato button {
-    pointer-events: auto;
-  }
-  .monumento-nome {
-    font-size: 10.6vw;
-    padding: 4.5rem 0 0;
-    text-align: center;
-  }
-  .monumento-quadri {
-    margin-top: -100svh;
-  }
-  .quadro {
-    height: 100svh;
-  }
-  .quadro-foto {
-    position: absolute;
-    left: 50%;
-    top: var(--qt);
-    width: var(--qw);
-    max-width: none;
-    margin: 0;
-    translate: -50% 0;
-  }
-  .quadro-didascalia {
-    position: absolute;
-    left: calc(50% + var(--qw) / 2 + 2rem);
-    bottom: 9rem;
-    max-width: min(17rem, calc(50% - var(--qw) / 2 - 4rem));
-  }
-}
-
-/* ---------- Home: l'indice delle storie coi numeri grandi ---------- */
-
-@media (min-width: 768px) {
-.indice-nome {
-  color: var(--grigio);
-  transition: color 0.2s ease;
-}
-.indice li:first-child .indice-nome {
-  color: var(--inchiostro);
-}
-.indice:has(a:hover, a:focus-visible) .indice-nome {
-  color: var(--grigio);
-}
-.indice a:hover .indice-nome,
-.indice a:focus-visible .indice-nome {
-  color: var(--inchiostro);
-}
-.cornice > * {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-.cornice > :first-child {
-  opacity: 1;
-}
-.vetrina:has(.indice li:nth-child(2) a:is(:hover, :focus-visible)) .cornice > :nth-child(2),
-.vetrina:has(.indice li:nth-child(3) a:is(:hover, :focus-visible)) .cornice > :nth-child(3) {
-  opacity: 1;
-}
-.vetrina:has(.indice li:nth-child(2) a:is(:hover, :focus-visible)) .cornice > :nth-child(1),
-.vetrina:has(.indice li:nth-child(3) a:is(:hover, :focus-visible)) .cornice > :nth-child(1) {
-  opacity: 0;
-}
-
-}
-
-.clip {
-  filter: grayscale(1) contrast(1.1);
-  scale: 1.3;
-  transform-origin: 50% 60%;
-}
-@media (prefers-reduced-motion: reduce) {
-  .clip {
-    display: none;
-  }
-  .cornice > :first-child,
-  .clip-fondo {
-    background: center / cover url('/video/bowling-spare.jpg');
-  }
-}
-
-/* Bottone pieno, angoli vivi */
-.pulsante {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--ciliegia);
-  color: var(--ciliegia-testo);
-  font-family: var(--font-nome);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  padding: 0.95rem 1.4rem;
-  text-decoration: none;
-  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
-}
-.pulsante:hover {
-  background: var(--inchiostro);
-  color: var(--terra);
-}
-.pulsante:active {
-  transform: scale(0.97);
+.cifra-grande {
+  font-size: clamp(4.5rem, 2rem + 11vw, 11rem);
 }
 
 .collegamento {
   text-decoration: underline;
-  text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
-  transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
+  transition: color 0.2s ease;
 }
+
 .collegamento:hover {
-  color: var(--ciliegia);
-  text-decoration-thickness: 2px;
+  color: var(--verde);
 }
 
-/* ---------- Entrate: titolo, testo, foto, uno dopo l'altro ---------- */
-/* La classe .mv la mette lo script in testa alla pagina. Senza script, o con "riduci movimento", tutto è subito visibile */
-.mv [data-entra] > * {
-  opacity: 0;
-  translate: 0 24px;
-}
-.mv [data-entra].dentro > * {
-  opacity: 1;
-  translate: 0 0;
-  transition:
-    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
-    translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-/* Nel testo lungo ogni paragrafo entra da solo, quando arriva lui */
-.mv [data-entra-ciascuno] > * {
-  opacity: 0;
-  translate: 0 20px;
-}
-.mv [data-entra-ciascuno] > .dentro {
-  opacity: 1;
-  translate: 0 0;
-  transition:
-    opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
-    translate 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.mv [data-entra].dentro > :nth-child(2) {
-  transition-delay: 75ms;
-}
-.mv [data-entra].dentro > :nth-child(3) {
-  transition-delay: 150ms;
-}
-.mv [data-entra].dentro > :nth-child(4) {
-  transition-delay: 225ms;
-}
-.mv [data-entra].dentro > :nth-child(n + 5) {
-  transition-delay: 300ms;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .monumento-nome {
-    animation: nome-entra 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-  /* La foto del quadro si avvicina piano mentre scorre */
-  @supports (animation-timeline: view()) {
-    .quadro-foto,
-    .si-avvicina {
-      animation: avvicina linear both;
-      animation-timeline: view();
-    }
-  }
-}
-@keyframes avvicina {
-  from {
-    scale: 1.07;
-  }
-  to {
-    scale: 1;
-  }
-}
-@keyframes nome-entra {
-  from {
-    opacity: 0;
-    translate: 0 0.15em;
-  }
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
-}
-
-/* Il piè di pagina resta sotto e si scopre alla fine */
-.pagina {
-  position: relative;
-  z-index: 1;
-  background: var(--terra);
-}
-.chiusura {
-  position: sticky;
-  bottom: 0;
-  z-index: 0;
-  background: var(--inchiostro);
-  color: var(--terra);
-}
-
-/* Testo lungo (storie, note, pagine): serif da leggere, titoli in Franklin, niente sottolineature colorate */
-.testo-lungo > * + * {
-  margin-top: 1.1em;
-}
-.testo-lungo h2 {
-  font-family: var(--font-nome);
-  font-weight: 700;
-  font-size: 1.75rem;
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-  margin-top: 2.2em;
-}
-@media (min-width: 768px) {
-  .testo-lungo h2 {
-    font-size: 2rem;
-  }
-}
-.testo-lungo h2 + * {
-  margin-top: 0.75em;
-}
-.testo-lungo a {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-}
-.testo-lungo a:hover {
-  color: var(--ciliegia);
-}
-.testo-lungo strong {
+.pulsante {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background: var(--verde);
+  color: var(--verde-testo);
+  padding: 0.85em 1.35em;
   font-weight: 600;
-  color: var(--ciliegia);
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    background-color 0.2s ease;
 }
-.testo-lungo > p:first-child {
-  font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+
+.pulsante:hover {
+  background: var(--inchiostro);
+  color: var(--carta);
+}
+
+.pulsante:active {
+  transform: scale(0.97);
+}
+
+.didascalia {
+  margin-top: 0.75rem;
+  max-width: 44ch;
+  font-size: var(--text-piccolo);
+  line-height: 1.4;
+  color: var(--grigio);
+}
+
+/* Le barre: il segno che torna. Spente sono basse e grigie, quelle che contano salgono e diventano verdi */
+.barre {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 64px;
+}
+
+.barra {
+  flex: 1;
+  height: 55%;
+  background: var(--superficie-2);
+  transform-origin: bottom;
+  transition:
+    height 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--i) * 14ms),
+    background-color 0.5s ease calc(var(--i) * 14ms);
+}
+
+.barre[data-accese='si'] .conta {
+  height: 100%;
+  background: var(--verde);
+}
+
+.barre-fitte {
+  height: 40px;
+  gap: 2px;
+}
+
+.barre-molte {
+  display: grid;
+  grid-template-columns: repeat(47, 1fr);
+  gap: 3px 2px;
+  height: auto;
+}
+
+.barre-molte .barra {
+  height: 12px;
+}
+
+.barre-molte[data-accese='si'] .conta {
+  height: 18px;
+}
+
+/* La prima schermata della home: la foto ferma a destra, il biglietto a sinistra */
+.apertura {
+  display: grid;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.apertura-foto {
+  position: relative;
+  height: 52svh;
+  overflow: hidden;
+  background: var(--superficie);
+}
+
+.apertura-foto img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+}
+
+.biglietto {
+  position: relative;
+  margin-top: -32px;
+  margin-inline: 12px;
+  background: var(--chiaro);
+  padding: 0 20px 28px;
+}
+
+@media (min-width: 1024px) {
+  .apertura {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .apertura-foto {
+    order: 2;
+    position: sticky;
+    top: 12px;
+    height: calc(100svh - 24px);
+  }
+
+  .biglietto {
+    margin: 0;
+    min-height: calc(100svh - 24px - 4rem);
+    padding: 0 48px 48px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Decidi tu */
+.decidi-nomi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+}
+
+.decidi-nome {
+  text-align: left;
+  font-size: var(--text-lead);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--grigio);
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.decidi-nome[aria-selected='true'] {
+  color: var(--inchiostro);
+}
+
+.decidi-nome:hover {
+  color: var(--inchiostro);
+  transform: translateX(4px);
+}
+
+.decidi-segno {
+  display: block;
+  min-height: 1.4em;
+  margin-top: 4px;
+  font-size: var(--text-piccolo);
+  color: var(--verde);
+  letter-spacing: 0;
+}
+
+.decidi-palco {
+  margin-top: 20px;
+  margin-inline: calc(var(--margine) * -1);
+  background: var(--superficie);
+  padding: 28px var(--margine) 40px;
+}
+
+@media (min-width: 1024px) {
+  .decidi {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 32px;
+    align-items: start;
+  }
+
+  .decidi-nomi {
+    grid-column: 1 / span 5;
+    flex-direction: column;
+    gap: 28px;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 7rem;
+  }
+
+  .decidi-nome {
+    font-size: var(--text-testa);
+    line-height: 1;
+  }
+
+  .decidi-palco {
+    grid-column: 6 / span 7;
+    margin: 0;
+    padding: 64px;
+  }
+}
+
+.foglio {
+  max-width: 40rem;
+  animation: entra-foglio 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.scelte {
+  display: grid;
+  gap: 10px;
+}
+
+.scelta {
+  text-align: left;
+  padding: 18px 20px;
+  background: var(--chiaro);
+  font-size: var(--text-corpo);
   line-height: 1.3;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
 }
-.testo-lungo blockquote {
-  font-style: italic;
-  font-size: 1.375rem;
+
+.scelta:not(:disabled):hover {
+  background: var(--inchiostro);
+  color: var(--carta);
+}
+
+.scelta:not(:disabled):active {
+  transform: scale(0.985);
+}
+
+.scelta:disabled {
+  cursor: default;
+}
+
+.scelta[aria-pressed='true'] {
+  background: var(--inchiostro);
+  color: var(--carta);
+}
+
+.scelta[data-mia='si'] {
+  border-left: 6px solid var(--verde);
+  padding-left: 14px;
+}
+
+.esito {
+  margin-top: 36px;
+  animation: entra-foglio 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.punteggio {
+  margin-top: 48px;
+}
+
+.punteggio::before {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 6px;
+  margin-bottom: 34px;
+  background: var(--verde);
+}
+
+.decidi-storia {
+  margin: 3.5rem calc(var(--margine) * -1);
+  background: var(--superficie);
+  padding: 32px var(--margine) 40px;
+}
+
+@media (min-width: 768px) {
+  .decidi-storia {
+    margin-inline: 0;
+    padding: 48px;
+  }
+}
+
+/* Il palco delle storie */
+.palco {
+  position: sticky;
+  top: 4rem;
+  height: calc(100svh - 4rem);
+  overflow: hidden;
+  background: var(--superficie);
+}
+
+.palco-strato {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.7s ease,
+    visibility 0s linear 0.7s;
+}
+
+.palco-strato[data-attiva='si'] {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.7s ease;
+}
+
+.palco .scena-foto {
+  height: 100%;
+  margin: 0;
+}
+
+.palco .scena-foto .scena-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.palco .scena-foto .didascalia {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  padding: 16px 32px 24px;
+  background: var(--carta);
+  color: var(--inchiostro);
+}
+
+.palco .scena-segno,
+.palco .scena-schermata {
+  align-self: center;
+  padding: 64px;
+}
+
+.palco .scena-schermata {
+  justify-self: center;
+}
+
+.scena-in-linea {
+  margin: 2rem calc(var(--margine) * -1) 2.5rem;
+}
+
+.scena-in-linea .scena-foto .scena-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.scena-in-linea .scena-foto video.scena-img {
+  aspect-ratio: 16 / 10;
+}
+
+.scena-in-linea .scena-foto .didascalia {
+  padding-inline: var(--margine);
+}
+
+.scena-in-linea .scena-segno,
+.scena-in-linea .scena-schermata {
+  background: var(--superficie);
+  padding: 32px var(--margine);
+}
+
+.telefono {
+  width: min(320px, 78vw);
+  padding: 10px;
+  background: var(--inchiostro);
+  border-radius: 34px;
+  overflow: hidden;
+}
+
+.telefono img {
+  border-radius: 24px;
+}
+
+.schermo {
+  width: 100%;
+  padding: 8px;
+  background: var(--inchiostro);
+}
+
+.campi {
+  max-width: 26rem;
+  background: var(--chiaro);
+  padding: 20px;
+}
+
+.campi-testa {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.campi-riga {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 0.9375rem;
+}
+
+.campi-da {
+  background: var(--superficie);
+  padding: 6px 10px;
+}
+
+.campi-a {
+  background: var(--superficie-2);
+  padding: 6px 10px;
+}
+
+.campi-vuoto {
+  background: var(--verde);
+  color: var(--verde-testo);
+}
+
+.clip {
+  filter: grayscale(1) sepia(0.22) contrast(1.05) brightness(1.02);
+  object-fit: cover;
+}
+
+/* Il testo lungo delle storie e delle note */
+.testo-lungo > p,
+.testo-lungo > ul,
+.testo-lungo > ol {
+  margin-top: 1.1em;
+  max-width: 62ch;
+}
+
+.testo-lungo > p:first-of-type {
+  margin-top: 0;
+  font-size: var(--text-lead);
   line-height: 1.35;
 }
+
+.testo-lungo h2 {
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  margin-top: 3.2em;
+  margin-bottom: 0.2em;
+  max-width: 20ch;
+}
+
+.testo-lungo strong {
+  font-weight: 600;
+  background: color-mix(in srgb, var(--verde) 16%, transparent);
+  padding: 0 0.12em;
+}
+
+.testo-lungo a {
+  text-decoration: underline;
+}
+
 .testo-lungo ul {
   list-style: disc;
   padding-left: 1.2em;
 }
-.testo-lungo ol {
-  list-style: decimal;
-  padding-left: 1.4em;
+
+.testo-lungo figure {
+  margin: 2.5rem 0;
 }
 
-/* ---------- Barra di lettura e passaggio tra pagine ---------- */
+/* Elenchi dove la riga sotto il dito si accende */
+.registro-riga {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 24px;
+  padding: 18px 0;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
 
+@media (hover: hover) {
+  .registro:hover .registro-riga {
+    color: var(--grigio);
+  }
+
+  .registro:hover .registro-riga:hover {
+    color: var(--inchiostro);
+    transform: translateX(6px);
+  }
+}
+
+/* Il menu nel piè di pagina */
+.menu-grande a {
+  display: block;
+  font-size: var(--text-testa);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  padding: 6px 0;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.menu-grande a:hover {
+  transform: translateX(12px);
+  color: var(--verde);
+}
+
+/* Il campo per scrivermi, su un campo intero di verde */
+.campo-verde {
+  background: var(--verde);
+  color: var(--verde-testo);
+}
+
+.campo-verde .pulsante {
+  background: var(--inchiostro);
+  color: var(--carta);
+}
+
+.campo-verde .pulsante:hover {
+  background: var(--carta);
+  color: var(--inchiostro);
+}
+
+.campo-verde .collegamento:hover {
+  color: inherit;
+  text-decoration-thickness: 2px;
+}
+
+.campo-verde .campo {
+  color: var(--inchiostro);
+}
+
+.campo-verde :focus-visible {
+  outline-color: var(--verde-testo);
+}
+
+.campo {
+  display: flex;
+  align-items: stretch;
+  background: var(--chiaro);
+}
+
+.campo textarea {
+  flex: 1;
+  min-height: 64px;
+  padding: 18px 20px;
+  background: transparent;
+  resize: vertical;
+  font-size: var(--text-corpo);
+}
+
+.campo textarea:focus {
+  outline: none;
+}
+
+.campo:focus-within {
+  box-shadow: inset 0 0 0 3px var(--inchiostro); /* taste-skill-ignore: anello del fuoco, non un'ombra */
+}
+
+.campo button {
+  flex: none;
+  align-self: end;
+  margin: 8px;
+}
+
+/* Movimento. Senza script o con "riduci movimento" non si nasconde niente: la classe .mv la mette lo script del tema */
 @media (prefers-reduced-motion: no-preference) {
+  .mv [data-entra]:not(.dentro),
+  .mv [data-entra-ciascuno] > :not(.dentro) {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .mv [data-entra],
+  .mv [data-entra-ciascuno] > * {
+    transition:
+      opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--ritardo, 0) * 80ms),
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--ritardo, 0) * 80ms);
+  }
+
+  .mv [data-entra]:not(.dentro) .scena-img,
+  .mv [data-entra]:not(.dentro) .foto-taglio {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  .mv [data-entra] .scena-img,
+  .mv [data-entra] .foto-taglio {
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s;
+  }
+
+  .mv [data-entra]:not(.dentro) .barra {
+    height: 8%;
+  }
+
+  .entra-subito {
+    animation: entra-foglio 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--ritardo, 0) * 90ms);
+  }
+
+  @supports (animation-timeline: view()) {
+    .lento img {
+      animation: avvicina linear both;
+      animation-timeline: view();
+    }
+  }
+
   @supports (animation-timeline: scroll()) {
     .barra-lettura {
-      transform-origin: 0 50%;
+      transform-origin: left;
       animation: leggi linear both;
       animation-timeline: scroll(root);
     }
   }
+
+  @view-transition {
+    navigation: auto;
+  }
 }
+
 @media (prefers-reduced-motion: reduce) {
+  .foglio,
+  .esito {
+    animation: none;
+  }
+
+  .barra,
+  .palco-strato {
+    transition: none;
+  }
+
   .barra-lettura {
     display: none;
   }
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
-    animation: none !important;
+}
+
+@supports not (animation-timeline: scroll()) {
+  .barra-lettura {
+    display: none;
   }
 }
+
+@keyframes entra-foglio {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes avvicina {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 @keyframes leggi {
   from {
     transform: scaleX(0);
   }
   to {
     transform: scaleX(1);
-  }
-}
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0.22s;
-}
-
-/* Pagine a blocchi (Adesso, Come lavoro). Dal computer in su il titolo sta a sinistra, il testo e le foto a destra */
-.foto-testo {
-  max-width: 40rem;
-  margin-top: 2em;
-  margin-bottom: 0.6em;
-}
-.blocchi > p,
-.blocchi > ul,
-.blocchi > ol {
-  max-width: 62ch;
-}
-@media (min-width: 1024px) {
-  .blocchi {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: 2rem;
-  }
-  .blocchi > * {
-    grid-column: 5 / span 7;
-  }
-  .blocchi > h2 {
-    grid-column: 1 / span 4;
-    margin-top: 0;
-    padding-top: 6rem;
-    padding-right: 2rem;
-  }
-  .blocchi > h2 + * {
-    margin-top: 0;
-    padding-top: 6.4rem;
-  }
-  .blocchi > p:first-child {
-    grid-column: 1 / span 9;
-    max-width: 50ch;
-    margin-bottom: 1rem;
   }
 }

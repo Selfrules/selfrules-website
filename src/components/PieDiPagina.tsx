@@ -1,101 +1,80 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { CopiaEmail } from './CopiaEmail';
-import { LINKEDIN } from '@/content';
-import { foto, video } from '@/content/foto';
+import { LINKEDIN, pagine as voci } from '@/content';
+import { crediti, foto } from '@/content/foto';
+import { Scrivimi } from './Scrivimi';
 
-const pagine = [
-  { href: '/storie', label: 'Storie' },
-  { href: '/errori', label: 'Errori' },
-  { href: '/adesso', label: 'Adesso' },
-  { href: '/come-lavoro', label: 'Come lavoro' },
-  { href: '/note', label: 'Note' },
-];
-
-// Il nome torna a tutta larghezza, in colori invertiti. Su telefono va su due righe.
-function Firma() {
-  const comune = {
-    fill: 'currentColor',
-    fontFamily: 'var(--font-franklin)',
-    fontWeight: 800,
-    lengthAdjust: 'spacingAndGlyphs' as const,
-  };
-  return (
-    <div aria-hidden="true" className="nome select-none">
-      <svg viewBox="0 0 1000 92" className="hidden w-full md:block">
-        <text x="0" y="89" fontSize="120" textLength="1000" {...comune}>
-          MATTIA DE LUCA
-        </text>
-      </svg>
-      <svg viewBox="0 0 1000 400" className="w-full md:hidden">
-        <text x="0" y="188" fontSize="254" textLength="1000" {...comune}>
-          MATTIA
-        </text>
-        <text x="0" y="392" fontSize="254" textLength="1000" {...comune}>
-          DE LUCA
-        </text>
-      </svg>
-    </div>
-  );
-}
-
+// La chiusura di ogni pagina: un campo per scrivermi, poi la Rocca di Vignola accanto al menu grande.
 export function PieDiPagina() {
   return (
-    <footer id="contatti" className="chiusura grid min-h-svh grid-rows-[auto_1fr_auto] px-4 pt-10 pb-5 md:px-8">
-      <div className="grid grid-cols-2 gap-x-6 gap-y-8 text-base leading-snug md:grid-cols-12">
-        <nav aria-label="Pagine" className="md:col-span-3">
-          <p className="font-nome font-bold">Pagine</p>
-          <ul className="mt-2 space-y-1 opacity-80">
-            {pagine.map((p) => (
-              <li key={p.href}>
-                <Link href={p.href} className="collegamento no-underline hover:underline">
-                  {p.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className="md:col-span-3">
-          <p className="font-nome font-bold">Contatti</p>
-          <ul className="mt-2 space-y-1 opacity-80">
-            <li>
-              <CopiaEmail />
-            </li>
-            <li>
-              <a href={LINKEDIN} className="collegamento" rel="me" data-umami-event="linkedin">
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="/mattia-de-luca-cv.pdf" className="collegamento" download data-umami-event="cv-scarica">
-                Scarica il CV
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-2 md:col-span-3">
-          <p className="font-nome font-bold">Le foto</p>
-          <details className="mt-2 opacity-80">
-            <summary className="cursor-pointer">Archivi pubblici, in bianco e nero. Autori e licenze</summary>
-            <ul className="mt-2 space-y-1.5 text-base">
-              {[...Object.values(foto), video.bowling].map((f) => (
-                <li key={f.pagina}>
-                  <a href={f.pagina} className="collegamento">
-                    {f.titolo}
+    <footer className="mt-32 lg:mt-48">
+      <section id="scrivimi" aria-labelledby="titolo-scrivimi" className="campo-verde px-[var(--margine)] py-20 lg:py-32">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-x-8">
+          <div data-entra className="lg:col-span-5">
+            <p className="text-lead max-w-[30ch]">Cerchi un product manager, o hai un team dove si dice quello che si pensa?</p>
+            <h2 id="titolo-scrivimi" className="mt-4 text-[clamp(3rem,1.5rem+6vw,7rem)] leading-[0.9] tracking-[-0.04em]">
+              Scrivimi due righe
+            </h2>
+          </div>
+          <div data-entra className="mt-10 lg:col-span-6 lg:col-start-7 lg:mt-3" style={{ '--ritardo': 1 } as React.CSSProperties}>
+            <Scrivimi />
+            <dl className="mt-10 grid grid-cols-2 gap-6 text-piccolo">
+              <div>
+                <dt className="opacity-80">Dove</dt>
+                <dd>Vignola, in provincia di Modena</dd>
+              </div>
+              <div>
+                <dt className="opacity-80">Altrove</dt>
+                <dd>
+                  <a href={LINKEDIN} rel="me" className="collegamento" data-umami-event="linkedin">
+                    LinkedIn
                   </a>
-                  , {f.autore}, {f.licenza}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <div className="grid bg-superficie lg:min-h-svh lg:grid-cols-2">
+        <figure className="relative h-[50svh] overflow-hidden lg:h-auto">
+          <Image src={foto.rocca.src} alt={foto.rocca.alt} sizes="(min-width: 1024px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
+        </figure>
+        <div className="flex flex-col px-[var(--margine)] pt-10 pb-8 lg:px-12 lg:pt-16">
+          <p className="font-semibold">Mattia De Luca</p>
+          <nav aria-label="Pagine" className="menu-grande mt-6">
+            <ul>
+              <li>
+                <Link href="/">Inizio</Link>
+              </li>
+              {voci.map((v) => (
+                <li key={v.href}>
+                  <Link href={v.href}>{v.label}</Link>
                 </li>
               ))}
             </ul>
-          </details>
+          </nav>
+          <div className="mt-14 grid gap-8 text-piccolo md:grid-cols-2 lg:mt-auto lg:pt-16">
+            <p>
+              Scritto da me, costruito con qualche agente AI. Il carattere è Erode di Indian Type Foundry.
+            </p>
+            <details>
+              <summary className="cursor-pointer font-semibold">Le foto, chi le ha fatte</summary>
+              <ul className="mt-3 space-y-2 text-grigio">
+                <li>Il ritratto di Mattia è suo. Le schermate sono dei suoi programmi, con dati di prova.</li>
+                {crediti.map((c) => (
+                  <li key={c.pagina}>
+                    <a href={c.pagina} className="collegamento">
+                      {c.titolo}
+                    </a>
+                    , {c.autore}, {c.licenza}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </div>
+          <p className="mt-10 text-piccolo text-grigio">{foto.rocca.didascalia} © Mattia De Luca, 2026</p>
         </div>
-        <p className="col-span-2 opacity-80 md:col-span-3">
-          Scritto e costruito da me, con qualche agente AI che non si lamenta mai.
-        </p>
-      </div>
-      <div />
-      <div>
-        <Firma />
-        <p className="mt-4 text-base opacity-80">© Mattia De Luca, Vignola</p>
       </div>
     </footer>
   );

@@ -1,8 +1,12 @@
+<ScenaInLinea storia="pagamenti" n={0} />
+
 Immagina un sabato sera in un centro bowling. C'è una festa di compleanno, dodici bambini, un papà che paga le piste con la carta. Il terminale ci pensa, poi dice errore. Lui riprova. Il lunedì gli arrivano due addebiti, e il gestore del centro passa la mattina al telefono a spiegare una cosa che non ha fatto lui.
 
 Nel 2025 questa scena succedeva in troppi centri. L'integrazione con Square, uno dei quattro sistemi di pagamento che seguivo in QubicaAMF, era il prodotto che cresceva più in fretta. Ed era anche quello che faceva più danni a chi lo usava.
 
 ## Per chi era un problema
+
+<ScenaInLinea storia="pagamenti" n={1} />
 
 QubicaAMF fa il software che fa girare i centri bowling e di intrattenimento, 600 persone in tutto il mondo. Io seguivo i pagamenti e le cashless card, cioè le tessere che i giocatori ricaricano con soldi, con quattro team di sviluppo e quattro fornitori di pagamenti (Square, Stripe, First Data e FreedomPay).
 
@@ -10,11 +14,17 @@ Per un gestore di centro il pagamento è il momento in cui il cliente decide se 
 
 ## Cosa non andava
 
+<ScenaInLinea storia="pagamenti" n={2} />
+
 Sulla carta il sistema funzionava. Nella lista dei problemi aperti ce n'erano 44, senza un ordine. Ognuno aveva qualcuno che lo considerava urgente, e nessuno sapeva dire quale venisse prima.
 
 Nel frattempo sales continuava a promettere funzioni nuove, perché il prodotto vendeva. E intanto la cassa dei centri pagava gli addebiti doppi.
 
+<DecidiStoria slug="pagamenti" />
+
 ## Cosa ho deciso, e cosa ho scartato
+
+<ScenaInLinea storia="pagamenti" n={3} />
 
 Ho chiesto a sales e alla direzione di fermare le funzioni nuove. Per qualche settimana tutto il team avrebbe lavorato a una cosa sola, far funzionare bene quello che c'era. Non è stata una conversazione comoda.
 
@@ -23,6 +33,8 @@ Poi ho messo in fila i 44 problemi con una domanda sola. **Questo oggi fa perder
 Ho scartato l'idea di sistemare tutto insieme. Nei pagamenti una correzione può romperne un'altra, e un errore costa soldi di qualcun altro.
 
 ## Com'è finita
+
+<ScenaInLinea storia="pagamenti" n={4} />
 
 I quattro problemi che facevano perdere soldi li abbiamo chiusi in **4 settimane**. In quell'anno, dei 44, ne abbiamo consegnati 23 e rimandati 21, ognuno con il motivo scritto.
 
@@ -33,6 +45,8 @@ C'era anche un centro grande che stava per disdire. I suoi operatori ci mettevan
 Due abitudini piccole hanno fatto il resto. Un incontro a settimana tra prodotto, sviluppo, tech support e customer support ha fatto calare del **25%** le segnalazioni di errori. E un manuale di 47 pagine che nessuno leggeva è diventato un video di 3 minuti, con il 9% di centri in più che hanno attivato l'integrazione.
 
 ## Cosa ho imparato
+
+<ScenaInLinea storia="pagamenti" n={5} />
 
 Una lista di 44 cose urgenti è una lista senza priorità. Serve una domanda che divida, e la pazienza di spiegare per iscritto, a chi l'aveva chiesta, perché la sua cosa aspetta.
 

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { franklin, serif } from '@/lib/fonts';
+import { erode } from '@/lib/fonts';
 import { SITO } from '@/content';
 import { Navigazione } from '@/components/Navigazione';
 import { PieDiPagina } from '@/components/PieDiPagina';
@@ -8,7 +8,7 @@ import { Movimento } from '@/components/Movimento';
 import './globals.css';
 
 const descrizione =
-  'Ho fatto il designer, lo sviluppatore e il product manager. Poi ho preso in mano una palestra. Storie, numeri ed errori di Mattia De Luca.';
+  'Product manager, da agosto 2026 GM di una palestra a Vignola. Tre decisioni da prendere prima di leggere cosa ho fatto io, gli errori che ho pagato e come lavoro.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITO),
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f3f2ef' },
-    { media: '(prefers-color-scheme: dark)', color: '#121212' },
+    { media: '(prefers-color-scheme: light)', color: '#ebe5e3' },
+    { media: '(prefers-color-scheme: dark)', color: '#1b1817' },
   ],
 };
 
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="it"
       suppressHydrationWarning
-      className={`${franklin.variable} ${serif.variable}`}
+      className={erode.variable}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: temaIniziale }} />
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="pagina flex min-h-dvh flex-col">
           <a
             href="#contenuto"
-            className="pulsante sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+            className="pulsante sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60]"
           >
             Vai al contenuto
           </a>

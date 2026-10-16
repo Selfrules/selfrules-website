@@ -4,21 +4,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { InterruttoreTema } from './InterruttoreTema';
+import { pagine } from '@/content';
 
-const voci = [
-  { href: '/storie', label: 'Storie' },
-  { href: '/errori', label: 'Errori' },
-  { href: '/adesso', label: 'Adesso' },
-  { href: '/come-lavoro', label: 'Come lavoro' },
-  { href: '/note', label: 'Note' },
-];
+const voci = pagine;
 
+// Una barra semplice: il nome, le pagine, un'azione. Sul telefono le pagine stanno in un menu a tutto schermo.
 export function Navigazione() {
   const percorso = usePathname();
   const [aperto, setAperto] = useState(false);
   const [ultimo, setUltimo] = useState(percorso);
 
-  // Cambiando pagina il menu del telefono si chiude
   if (ultimo !== percorso) {
     setUltimo(percorso);
     setAperto(false);
@@ -30,31 +25,33 @@ export function Navigazione() {
       if (e.key === 'Escape') setAperto(false);
     };
     window.addEventListener('keydown', chiudi);
-    return () => window.removeEventListener('keydown', chiudi);
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', chiudi);
+      document.documentElement.style.overflow = '';
+    };
   }, [aperto]);
 
   const attivo = (href: string) => percorso === href || percorso.startsWith(href + '/');
 
   return (
-    <header className="relative z-40">
-      <nav aria-label="Principale" className="flex h-16 items-center justify-between px-4 md:px-8">
+    <header className="sticky top-0 z-40 bg-carta">
+      <nav aria-label="Principale" className="flex h-16 items-center justify-between gap-6 px-[var(--margine)]">
         <Link
           href="/"
-          className="font-nome text-base font-bold tracking-[-0.01em] no-underline"
+          className="text-lg font-semibold tracking-[-0.01em] no-underline"
           aria-current={percorso === '/' ? 'page' : undefined}
         >
           Mattia De Luca
         </Link>
 
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="hidden items-center gap-7 lg:flex">
           {voci.map((v) => (
             <li key={v.href}>
               <Link
                 href={v.href}
                 aria-current={attivo(v.href) ? 'page' : undefined}
-                className={`font-nome text-base font-bold tracking-[-0.01em] no-underline transition-colors hover:text-ciliegia ${
-                  attivo(v.href) ? 'text-ciliegia' : ''
-                }`}
+                className={`no-underline transition-colors hover:text-verde ${attivo(v.href) ? 'text-verde' : ''}`}
               >
                 {v.label}
               </Link>
@@ -63,36 +60,49 @@ export function Navigazione() {
           <li>
             <InterruttoreTema />
           </li>
+          <li>
+            <a href="#scrivimi" className="pulsante !py-2.5">
+              Scrivimi
+            </a>
+          </li>
         </ul>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-1 lg:hidden">
           <InterruttoreTema />
           <button
             type="button"
             aria-expanded={aperto}
             aria-controls="menu-telefono"
             onClick={() => setAperto((a) => !a)}
-            className="font-nome px-3 py-2 text-base font-bold transition-colors hover:text-ciliegia active:scale-95"
+            className="px-3 py-2 font-semibold transition-transform active:scale-95"
           >
             {aperto ? 'Chiudi' : 'Menu'}
           </button>
         </div>
       </nav>
 
-      <div id="menu-telefono" hidden={!aperto} className="absolute inset-x-0 top-16 bg-superficie md:hidden">
-        <ul className="px-4 pt-2 pb-8">
+      <div
+        id="menu-telefono"
+        hidden={!aperto}
+        className="fixed inset-x-0 top-16 bottom-0 overflow-y-auto bg-carta px-[var(--margine)] pt-4 pb-10 lg:hidden"
+      >
+        <ul className="menu-grande">
+          <li>
+            <Link href="/" aria-current={percorso === '/' ? 'page' : undefined}>
+              Inizio
+            </Link>
+          </li>
           {voci.map((v) => (
             <li key={v.href}>
-              <Link
-                href={v.href}
-                aria-current={attivo(v.href) ? 'page' : undefined}
-                className={`testa block py-2.5 text-[2.6rem] no-underline ${attivo(v.href) ? 'text-ciliegia' : ''}`}
-              >
+              <Link href={v.href} aria-current={attivo(v.href) ? 'page' : undefined} className={attivo(v.href) ? 'text-verde' : ''}>
                 {v.label}
               </Link>
             </li>
           ))}
         </ul>
+        <a href="#scrivimi" onClick={() => setAperto(false)} className="pulsante mt-10">
+          Scrivimi
+        </a>
       </div>
     </header>
   );
