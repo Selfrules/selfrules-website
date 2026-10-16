@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Colonna>
       <section className="pt-12 pb-16 sm:pt-20 sm:pb-24">
-        <h1 className="titolo-morbido text-[2.65rem] leading-[1.05] font-medium tracking-tight text-balance sm:text-[4rem]">
+        <h1 className="titolo-morbido text-[2.4rem] leading-[1.05] font-medium tracking-tight text-balance sm:text-[4rem]">
           <span className="cursore">
             <ParolePerParola testo="Ho fatto il designer, lo sviluppatore e il product manager." />
           </span>
