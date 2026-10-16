@@ -3,7 +3,7 @@ import { LINKEDIN } from '@/content';
 
 export function PieDiPagina() {
   return (
-    <footer id="contatti" className="mt-24 border-t border-riga">
+    <footer id="contatti" className="mt-24 overflow-hidden bg-pannello">
       <div className="mx-auto max-w-[680px] px-5 py-12 sm:px-0">
         <p className="font-titolo text-3xl leading-tight">Se ti è venuta voglia di parlarne, scrivimi.</p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
@@ -19,6 +19,12 @@ export function PieDiPagina() {
           Scritto e costruito da me, con qualche agente AI che non si lamenta mai.
         </p>
       </div>
+      <p
+        aria-hidden="true"
+        className="titolo-morbido mx-auto max-w-[680px] px-5 pb-8 text-[12.5vw] leading-[0.9] font-medium tracking-tight whitespace-nowrap sm:px-0 sm:text-[5.75rem]"
+      >
+        Mattia De Luca
+      </p>
     </footer>
   );
 }

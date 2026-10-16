@@ -42,7 +42,7 @@ export function InterruttoreTema() {
       onClick={cambia}
       aria-label={scuro ? 'Passa al tema chiaro' : 'Passa al tema scuro'}
       title={scuro ? 'Accendi la luce' : 'Spegni la luce'}
-      className="grid size-9 place-items-center rounded-md border border-riga text-inchiostro transition-transform hover:rotate-12 active:scale-90"
+      className="grid size-9 place-items-center rounded-md text-inchiostro transition-transform hover:rotate-12 hover:bg-pannello active:scale-90"
     >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         {scuro ? (

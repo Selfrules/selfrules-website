@@ -25,7 +25,7 @@ export function CopiaEmail() {
         type="button"
         onClick={copia}
         data-umami-event="email-copia"
-        className="etichetta rounded border border-riga px-2 py-0.5 transition-colors hover:text-inchiostro"
+        className="etichetta rounded bg-carta px-2 py-0.5 transition-colors hover:text-inchiostro"
       >
         <span aria-live="polite">{copiata ? 'Copiata' : 'Copia'}</span>
       </button>

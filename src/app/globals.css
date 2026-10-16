@@ -89,12 +89,11 @@ a {
   border-radius: 4px;
 }
 
-/* Etichette in monospazio */
+/* Etichette in monospazio, in minuscolo come si scrive a penna (audit taste-skill del 16/10) */
 .etichetta {
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0;
   color: var(--matita);
 }
 
@@ -223,13 +222,13 @@ a:focus-visible .freccia {
       background-size: 0% 0.28em;
       animation: stendi linear both;
       animation-timeline: view();
-      animation-range: entry 40% cover 35%;
+      animation-range: entry 0px entry 220px;
     }
 
     .rivela {
       animation: rivela linear both;
       animation-timeline: view();
-      animation-range: entry 0% entry 70%;
+      animation-range: entry 0px entry 180px;
     }
 
     .timbro {

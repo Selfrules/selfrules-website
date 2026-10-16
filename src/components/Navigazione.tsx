@@ -36,7 +36,7 @@ export function Navigazione() {
   const attivo = (href: string) => percorso === href || percorso.startsWith(href + '/');
 
   return (
-    <header className="sticky top-0 z-40 border-b border-riga bg-carta/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 bg-carta">
       <nav
         aria-label="Principale"
         className="mx-auto flex h-16 max-w-[960px] items-center justify-between px-5 sm:px-8"
@@ -51,9 +51,9 @@ export function Navigazione() {
               <Link
                 href={v.href}
                 aria-current={attivo(v.href) ? 'page' : undefined}
-                className={`etichetta no-underline transition-colors hover:text-inchiostro ${
+                className={`text-[0.95rem] font-medium text-matita no-underline transition-colors hover:text-inchiostro ${
                   attivo(v.href)
-                    ? 'text-inchiostro underline decoration-senape decoration-2 underline-offset-[6px]'
+                    ? '!text-inchiostro underline decoration-senape decoration-2 underline-offset-[6px]'
                     : ''
                 }`}
               >
@@ -73,24 +73,23 @@ export function Navigazione() {
             aria-expanded={aperto}
             aria-controls="menu-telefono"
             onClick={() => setAperto((a) => !a)}
-            className="etichetta rounded-md border border-riga px-3 py-1.5 text-inchiostro"
+            className="rounded-md px-3 py-1.5 text-[0.95rem] font-medium text-inchiostro transition-colors hover:bg-pannello"
           >
             {aperto ? 'Chiudi' : 'Menu'}
           </button>
         </div>
       </nav>
 
-      <div id="menu-telefono" hidden={!aperto} className="border-t border-riga bg-carta md:hidden">
+      <div id="menu-telefono" hidden={!aperto} className="bg-pannello md:hidden">
         <ul className="mx-auto max-w-[960px] px-5 py-3">
           {voci.map((v, i) => (
             <li key={v.href} className="appare" style={{ '--ritardo': `${i * 40}ms` } as React.CSSProperties}>
               <Link
                 href={v.href}
                 aria-current={attivo(v.href) ? 'page' : undefined}
-                className="flex items-baseline justify-between border-b border-riga py-3.5 font-titolo text-2xl no-underline last:border-0"
+                className="block py-3 font-titolo text-[1.7rem] no-underline"
               >
                 {v.label}
-                <span className="etichetta">0{i + 1}</span>
               </Link>
             </li>
           ))}
