@@ -31,9 +31,79 @@
   ],
   "redirects": [
     {
-      "source": "/it/home",
-      "destination": "/it",
-      "permanent": true
+      "source": "/:lingua(it|en)",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/home",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/about",
+      "destination": "/come-lavoro",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/contact",
+      "destination": "/#scrivimi",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/work",
+      "destination": "/storie",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/work/payments-rescue",
+      "destination": "/storie/pagamenti",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/work/cashless-system",
+      "destination": "/storie/pagamenti",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/work/leadsbridge-redesign",
+      "destination": "/storie/leadsbridge",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/notes",
+      "destination": "/note",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/notes/the-meeting-where-everyone-says-yes",
+      "destination": "/note/riunione-dove-tutti-dicono-si",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/notes/why-i-prototype-in-code",
+      "destination": "/note/perche-prototipo-in-codice",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/notes/:resto*",
+      "destination": "/note",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/lab",
+      "destination": "/adesso",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/lab/:resto*",
+      "destination": "/adesso",
+      "permanent": false
+    },
+    {
+      "source": "/:lingua(it|en)/:resto*",
+      "destination": "/",
+      "permanent": false
     },
     {
       "source": "/21lab-extra",

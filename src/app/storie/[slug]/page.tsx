@@ -52,7 +52,7 @@ export default async function PaginaStoria({ params }: Props) {
               {s.titolo}
             </h1>
             <p className="entra-subito mt-4 text-grigio" style={{ '--ritardo': 2 } as React.CSSProperties}>
-              {s.azienda}, {s.periodo}. {s.ruolo}. {s.minuti} minuti di lettura.
+              {s.azienda}, {s.periodo}, come {s.ruolo}. Si legge in {s.minuti} minuti.
             </p>
             <div className="entra-subito mt-8 max-w-[40rem] bg-superficie p-6" style={{ '--ritardo': 3 } as React.CSSProperties}>
               <p className="font-semibold">Se hai un minuto solo</p>

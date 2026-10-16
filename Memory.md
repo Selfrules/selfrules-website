@@ -1,14 +1,15 @@
 # Memory.md — selfrules-website
 
-## Stato attuale (16/10/2026)
-- 16/10 pomeriggio: redesign completo da zero sul ramo `sito-2026-redesign` con la skill design-taste-frontend, direzione "Il nome come monumento" (`docs/design-monumento.md`). Tutte le 12 pagine rifatte, 0 FAIL del misuratore, home da 6,5 a 7,6. Ritratto di Mattia in home dal 16/10. Anteprima Vercel del ramo con link di 23 ore.
-- 16/10: audit con la skill design-taste-frontend (taste-skill v2) e 7 commit su `sito-2026`: etichette in minuscolo, riga di servizio sotto i titoli, pannelli senza bordo, piè di pagina col nome, giorni da GM in home, indice di Come lavoro corretto. Dettagli e voti in `docs/audit-taste-2026-10-16.md`. Manca una foto di Mattia, è la modifica che più alzerebbe il voto.
-- Sito rifatto da capo sul ramo `sito-2026` (PC Windows). Direzione "Quaderno da GM", testi da `../immagine-online/`. Anteprima Vercel del ramo, protetta, con link di condivisione di 23 ore creato dal Vercel MCP.
-- Pagine fatte in italiano: home, storie (pagamenti, leadsbridge, palestra), errori (3), adesso, come lavoro, note (3 su 8 riscritte). Mancano inglese (IMG-13), redirect dei vecchi indirizzi (IMG-33), CV nuovo, le altre 5 note.
-- `main` è ancora il sito di luglio: la pubblicazione la decide Mattia.
-- Da far confermare a Mattia: scene dedotte nelle storie ("Immagina un sabato sera", "chiringuito"), "Come darmi una cattiva notizia" e "Dove sono scarso", errore n. 3 (feedback del titolare del 23/07).
+## Stato attuale (16/10/2026 sera)
+- 16/10 sera: redesign "Decidi tu" sul ramo `sito-2026-racconto`, pubblicato su selfrules.org col permesso di Mattia. Direzione e valori in `docs/design-racconto.md`.
+- L'idea: chi legge prende tre decisioni prima di scoprire cosa ha fatto Mattia (home e dentro ogni storia), le barre verdi come segno che torna, storie con un palco che cambia scena per capitolo, Come lavoro a capitoli che si aprono sul telefono, campo per scrivere che apre la posta.
+- Foto in bicromia da `scripts/tratta-foto.py` (originali in `assets/`, fuori dal repo), schermate del gestionale con dati di prova e senza nomi. Carattere Erode in locale.
+- Indirizzi del sito di luglio (`/it/...`, `/en/...`) rediretti alle pagine nuove in `vercel.json` (IMG-33).
+- Decise da me il 16/10, da far confermare a Mattia: frasi in prima persona di Come lavoro tenute, errore n. 3 pubblico tenuto, scene "Immagina un sabato sera" e "chiringuito" tenute, link al CV vecchio tolto (il PDF è quello di luglio).
+- Mancano inglese (IMG-13), CV nuovo, le altre 5 note.
 
 ## Cronologia
+- 2026-10-16 sera — Redesign "Decidi tu" da capo dopo il giudizio di Mattia sul "nome come monumento": ricerca su 16 siti personali e su lettura e attenzione, gioco delle decisioni, palco delle storie, critica di un lettore esterno (6/10, poi corretti i cinque punti), pubblicato su main.
 - 2026-10-16 — Redesign "Il nome come monumento" su `sito-2026-redesign`: home, storie, errori, adesso, come lavoro, note; foto d'archivio con crediti, video di bowling, componente Foto nelle MDX.
 - 2026-10-16 — Audit taste-skill e modifiche su `sito-2026`, anteprima Vercel rigenerata (link di 23 ore).
 - 2026-10-15 — Sito nuovo su `sito-2026`, Plane IMG-12, 14, 20, 23-32 in In Progress. Magic Patterns usato per il disegno delle pagine interne nel progetto 5rhymh8xky8fnqdxwwcjyc.

@@ -46,7 +46,7 @@ export const storie: Storia[] = [
   },
   {
     slug: 'palestra',
-    numero: '21Lab',
+    numero: '217 su 235',
     evidenzia: false,
     titolo: 'Una palestra, un gestionale nuovo e qualche agente AI',
     azienda: '21Lab Fitness & Athletics',

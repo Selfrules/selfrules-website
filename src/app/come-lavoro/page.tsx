@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 // I titoli delle sezioni vengono dal file del testo, così l'indice non si scorda di nessuna
 const sezioni = readFileSync(join(process.cwd(), 'src/content/pagine/come-lavoro.mdx'), 'utf8')
   .split('\n')
-  .filter((r) => r.startsWith('## '))
-  .map((r) => r.slice(3).trim())
+  .map((r) => r.match(/^<Capitolo titolo="([^"]+)">/)?.[1])
+  .filter((t): t is string => Boolean(t))
   .map((t): [string, string] => [ancora(t), t]);
 
 export default function PaginaComeLavoro() {
@@ -31,7 +31,7 @@ export default function PaginaComeLavoro() {
           <p className="mb-3 text-piccolo text-grigio">Sei capitoli brevi</p>
           <Indice sezioni={sezioni} />
         </aside>
-        <div data-entra-ciascuno className="testo-lungo lg:col-span-7 lg:col-start-6 [&>h2:first-of-type]:mt-0">
+        <div data-entra-ciascuno className="testo-lungo lg:col-span-7 lg:col-start-6 [&>section:first-of-type>h2]:mt-0">
           <Contenuto />
         </div>
       </div>

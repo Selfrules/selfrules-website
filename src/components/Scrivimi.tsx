@@ -43,7 +43,7 @@ export function Scrivimi() {
           Manda
         </button>
       </form>
-      <p className="mt-3 text-piccolo opacity-85">
+      <p className="mt-3 opacity-90">
         Si apre la tua posta con il messaggio già scritto. Ti rispondo io.
       </p>
       <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1">

@@ -11,7 +11,7 @@ export function PieDiPagina() {
       <section id="scrivimi" aria-labelledby="titolo-scrivimi" className="campo-verde px-[var(--margine)] py-20 lg:py-32">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8">
           <div data-entra className="lg:col-span-5">
-            <p className="text-lead max-w-[30ch]">Cerchi un product manager, o hai un team dove si dice quello che si pensa?</p>
+            <p className="text-lead max-w-[30ch]">Cerchi un product manager? Hai una domanda su una storia?</p>
             <h2 id="titolo-scrivimi" className="mt-4 text-[clamp(3rem,1.5rem+6vw,7rem)] leading-[0.9] tracking-[-0.04em]">
               Scrivimi due righe
             </h2>
@@ -37,7 +37,7 @@ export function PieDiPagina() {
       </section>
 
       <div className="grid bg-superficie lg:min-h-svh lg:grid-cols-2">
-        <figure className="relative h-[50svh] overflow-hidden lg:h-auto">
+        <figure className="relative h-[34svh] overflow-hidden lg:h-auto">
           <Image src={foto.rocca.src} alt={foto.rocca.alt} sizes="(min-width: 1024px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
         </figure>
         <div className="flex flex-col px-[var(--margine)] pt-10 pb-8 lg:px-12 lg:pt-16">
@@ -54,7 +54,7 @@ export function PieDiPagina() {
               ))}
             </ul>
           </nav>
-          <div className="mt-14 grid gap-8 text-piccolo md:grid-cols-2 lg:mt-auto lg:pt-16">
+          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-auto lg:pt-16">
             <p>
               Scritto da me, costruito con qualche agente AI. Il carattere è Erode di Indian Type Foundry.
             </p>

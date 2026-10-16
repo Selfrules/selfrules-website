@@ -45,7 +45,7 @@ export const decisioni: Decisione[] = [
   {
     slug: 'leadsbridge',
     nome: 'Il 60% che chiede',
-    dove: 'LeadsBridge, 2021',
+    dove: 'LeadsBridge, 2020 – 2023',
     scena:
       'Sei utenti su dieci chiedono la stessa funzione. Il team di sviluppo è pronto, la stima è di tre sprint, cioè sei settimane di lavoro.',
     domanda: 'Tu cosa fai?',
@@ -79,7 +79,7 @@ export const decisioni: Decisione[] = [
     fatto:
       'Scrivo in italiano semplice come funziona la palestra, gli agenti scrivono il codice e io provo ogni schermata. Al 13 ottobre 2026 la prima versione aveva 217 attività chiuse su 235.',
     numero: '217 su 235',
-    numeroDetto: 'attività chiuse al 13 ottobre',
+    numeroDetto: 'attività del gestionale chiuse al 13 ottobre',
     barre: { totale: 235, accese: 217, dopo: 'Il primo gruppo di clienti lo prova dal 7 dicembre 2026.' },
   },
 ];

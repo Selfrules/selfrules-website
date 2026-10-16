@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { storie, note } from '@/content';
+import { storie, note, LINKEDIN } from '@/content';
 import { foto, mattia, schermate, type Immagine } from '@/content/foto';
 import { Barre } from '@/components/Barre';
 import { DecidiTu } from '@/components/Decidi';
@@ -37,17 +37,21 @@ export default function Home() {
                 <span className="block">con una palestra</span>
               </h1>
               <p className="entra-subito mt-6 max-w-[38ch]" style={{ '--ritardo': 2 } as React.CSSProperties}>
-                Sono Mattia De Luca. Ho fatto il designer, lo sviluppatore e il product manager, in QubicaAMF e in
-                LeadsBridge. Da agosto 2026 sono il GM di 21Lab, una palestra a Vignola, e il suo gestionale lo
-                costruisco con agenti AI. <strong className="font-semibold">Cerco un ruolo da product manager in un team.</strong>
+                Sono Mattia De Luca, senior product manager. Sei anni tra pagamenti e integrazioni, in QubicaAMF e in
+                LeadsBridge, e prima sette con il mio studio web. Da agosto 2026 sono il GM di 21Lab, una palestra a
+                Vignola, e il suo gestionale lo costruisco con agenti AI.{' '}
+                <strong className="font-semibold">Cerco un ruolo da product manager in un team.</strong>
               </p>
               <div className="entra-subito mt-8 flex flex-wrap items-center gap-x-6 gap-y-4" style={{ '--ritardo': 3 } as React.CSSProperties}>
                 <a href="#decidi" className="pulsante" data-umami-event="home-decidi">
                   Prendi tre decisioni
                 </a>
                 <Link href="/storie" className="collegamento">
-                  Oppure leggi le storie
+                  Le storie
                 </Link>
+                <a href={LINKEDIN} rel="me" className="collegamento" data-umami-event="home-linkedin">
+                  LinkedIn
+                </a>
               </div>
             </div>
             <p className="mt-10 text-piccolo text-grigio lg:mt-0">
@@ -66,8 +70,7 @@ export default function Home() {
                 per partire. Così il primo agosto 2026 ho lasciato un&apos;azienda da 600 persone per una palestra.
               </p>
               <p data-entra>
-                Detta così sembra la mossa di chi molla tutto per aprire un chiringuito ai Caraibi. Il motivo è più
-                semplice, e sta tutto nelle tre decisioni qui sotto. Una per ogni lavoro.
+                Il metodo l&apos;ho portato con me. Si vede meglio nelle tre decisioni qui sotto, una per ogni lavoro.
               </p>
               <p data-entra className="text-grigio">
                 Prima di leggere cosa ho fatto io, prova a prenderle tu. Ci vuole un minuto.
@@ -182,11 +185,6 @@ export default function Home() {
             <p data-entra>
               La sera chiudo la prima versione del gestionale. L&apos;app per iPhone è in prova da ottobre, e il primo
               gruppo di clienti la userà dal 7 dicembre.
-            </p>
-            <p data-entra>
-              Cerco un team, un&apos;azienda, dove si può dire quello che si pensa e il rischio si condivide. Un ruolo
-              da product manager, in qualunque settore. Ho fatto pagamenti, integrazioni e una palestra, e il metodo
-              era lo stesso.
             </p>
             <p data-entra>
               Da solo vado veloce, ma imparo poco. Mi manca qualcuno che mi dica che la mia idea migliore della

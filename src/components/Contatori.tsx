@@ -18,19 +18,15 @@ export function Contatori() {
   const alPilota = adesso === null ? null : Math.ceil((PILOTA - adesso) / GIORNO);
 
   return (
-    <dl className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-3">
-      <div className="flex flex-col-reverse">
-        <dt className="mt-2 max-w-[20ch] text-grigio">giorni da GM di 21Lab</dt>
-        <dd className="cifra text-verde">{daGM ?? '1° ago'}</dd>
-      </div>
-      <div className="flex flex-col-reverse">
-        <dt className="mt-2 max-w-[20ch] text-grigio">giorni prima che il gruppo pilota provi il gestionale</dt>
-        <dd className="cifra">{alPilota === null ? '7 dic' : alPilota > 0 ? alPilota : 'via'}</dd>
-      </div>
-      <div className="flex flex-col-reverse">
-        <dt className="mt-2 max-w-[20ch] text-grigio">annunci di case letti da CasaHunter al posto mio</dt>
-        <dd className="cifra">880</dd>
-      </div>
-    </dl>
+    <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:max-w-[48rem]">
+      <p>
+        <span className="cifra block text-verde">{daGM ?? '1° ago'}</span>
+        <span className="mt-2 block max-w-[20ch] text-grigio">giorni da GM di 21Lab</span>
+      </p>
+      <p>
+        <span className="cifra block">{alPilota === null ? '7 dic' : alPilota > 0 ? alPilota : 'via'}</span>
+        <span className="mt-2 block max-w-[20ch] text-grigio">giorni prima che i primi clienti provino il gestionale</span>
+      </p>
+    </div>
   );
 }

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { foto, schermate } from '@/content/foto';
 import { ScenaInLinea } from '@/components/Palco';
 import { DecidiStoria } from '@/components/Decidi';
+import { Capitolo as CapitoloCliente } from '@/components/Capitolo';
 import { Children, isValidElement, type ReactNode } from 'react';
 
 function testo(nodo: ReactNode): string {
@@ -40,7 +41,17 @@ function Foto({ id, schermata }: { id?: keyof typeof foto; schermata?: keyof typ
   );
 }
 
+// <Capitolo titolo="..."> nel manuale di Come lavoro: l'indirizzo viene dal titolo
+function Capitolo({ titolo, children }: { titolo: string; children: ReactNode }) {
+  return (
+    <CapitoloCliente titolo={titolo} id={ancora(titolo)}>
+      {children}
+    </CapitoloCliente>
+  );
+}
+
 const components: MDXComponents = {
+  Capitolo,
   Foto,
   ScenaInLinea,
   DecidiStoria,

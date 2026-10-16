@@ -36,14 +36,16 @@ export function ElencoErrori({ conScena = false }: { conScena?: boolean }) {
             >
               <summary className="registro-riga cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span className="text-lead font-medium">{x.titolo}</span>
-                <span className="self-start text-right font-semibold text-verde tabular-nums lg:hidden">{x.costo}</span>
-                <span className="text-piccolo text-grigio">
+                <span className="self-start pt-1 text-piccolo text-grigio">
                   <span className="group-open:hidden">Apri</span>
                   <span className="hidden group-open:inline">Chiudi</span>
                 </span>
+                <span className="lg:hidden">
+                  <span className="font-semibold text-verde tabular-nums">{x.costo}</span>{' '}
+                  <span className="text-grigio">{x.costoSpiegato}</span>
+                </span>
               </summary>
               <div className="pb-8">
-                <p className="text-piccolo text-grigio lg:hidden">{x.costoSpiegato}</p>
                 {conScena && fotoErrore[x.numero] && (
                   <figure className="mt-5 mb-6">
                     <Image src={fotoErrore[x.numero].src} alt={fotoErrore[x.numero].alt} sizes="(min-width: 1024px) 45vw, 100vw" className="aspect-[3/2] w-full object-cover" />

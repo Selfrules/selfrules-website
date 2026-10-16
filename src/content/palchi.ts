@@ -22,10 +22,10 @@ export const palchi: Record<string, Scena[]> = {
     { tipo: 'video' },
   ],
   leadsbridge: [
-    { tipo: 'barre', barre: { totale: 10, accese: 6, dopo: '' }, accese: true, numero: '60%', detto: 'degli utenti chiedeva la stessa funzione' },
+    { tipo: 'foto', immagine: foto.telefonista },
     { tipo: 'foto', immagine: foto.centralino },
     { tipo: 'campi' },
-    { tipo: 'foto', immagine: foto.telefonista },
+    { tipo: 'barre', barre: { totale: 10, accese: 6, dopo: '' }, accese: true, numero: '60%', detto: 'chiedeva la funzione. Il problema l’avevano già risolto da soli' },
     { tipo: 'numero', numero: '35%', detto: 'di tempo in meno per mettere in piedi un’integrazione' },
     { tipo: 'numero', numero: '3 sprint', detto: 'risparmiati con mezz’ora di telefonata' },
   ],
@@ -34,7 +34,7 @@ export const palchi: Record<string, Scena[]> = {
     { tipo: 'schermata', immagine: schermate.classe, stretta: true },
     { tipo: 'foto', immagine: foto.postIt },
     { tipo: 'schermata', immagine: schermate.assistente, stretta: true },
-    { tipo: 'barre', barre: { totale: 235, accese: 217, dopo: '' }, accese: true, numero: '217 su 235', detto: 'attività chiuse al 13 ottobre 2026' },
+    { tipo: 'barre', barre: { totale: 235, accese: 217, dopo: '' }, accese: true, numero: '217 su 235', detto: 'attività del gestionale chiuse al 13 ottobre 2026' },
     { tipo: 'foto', immagine: mattia.alto },
   ],
 };

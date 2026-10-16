@@ -48,8 +48,8 @@ function Foglio({
   return (
     <div className="foglio">
       <p className="text-grigio">{d.dove}</p>
-      <p className="text-lead mt-3 max-w-[40ch]">{d.scena}</p>
-      <p className="text-lead mt-6 font-semibold">{d.domanda}</p>
+      {!inStoria && <p className="text-lead mt-3 max-w-[40ch]">{d.scena}</p>}
+      <p className="text-lead mt-6 font-semibold">{inStoria ? 'Tu, al mio posto, cosa avresti fatto?' : d.domanda}</p>
 
       {nelBrowser ? (
         <>
@@ -64,10 +64,14 @@ function Foglio({
                 data-mia={scelta !== null && s.id === d.mia ? 'si' : undefined}
                 className="scelta"
               >
-                {s.testo}
+                <span>{s.testo}</span>
+                <span aria-hidden="true" className="scelta-freccia">
+                  →
+                </span>
               </button>
             ))}
           </div>
+          {scelta === null && <p className="mt-4 text-piccolo text-grigio">Tocca una risposta per vedere cosa ho fatto io.</p>}
           {scelta !== null && <Esito d={d} scelta={scelta} inStoria={inStoria} />}
         </>
       ) : (
@@ -127,7 +131,7 @@ export function DecidiTu() {
           >
             <span>{x.nome}</span>
             <span className="decidi-segno" aria-hidden="true">
-              {risposte[x.slug] ? (risposte[x.slug] === x.mia ? 'come me' : 'diverso') : ''}
+              {risposte[x.slug] ? (risposte[x.slug] === x.mia ? 'come me' : 'diversa da me') : 'da decidere'}
             </span>
           </button>
         ))}
