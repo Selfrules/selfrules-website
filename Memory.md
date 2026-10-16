@@ -6,9 +6,11 @@
 - Foto in bicromia da `scripts/tratta-foto.py` (originali in `assets/`, fuori dal repo), schermate del gestionale con dati di prova e senza nomi. Carattere Erode in locale.
 - Indirizzi del sito di luglio (`/it/...`, `/en/...`) rediretti alle pagine nuove in `vercel.json` (IMG-33).
 - Decise da me il 16/10, da far confermare a Mattia: frasi in prima persona di Come lavoro tenute, errore n. 3 pubblico tenuto, scene "Immagina un sabato sera" e "chiringuito" tenute, link al CV vecchio tolto (il PDF è quello di luglio).
+- Per tornare al sito di prima: Instant Rollback su Vercel al deploy g2sh7onzl del 21/07, oppure il tag git `sito-prima-del-16-10`.
 - Mancano inglese (IMG-13), CV nuovo, le altre 5 note.
 
 ## Cronologia
+- 2026-10-16 sera tardi — Giri 2-4 sul sito pubblicato: ricerca in `docs/ricerca-2026-10-16.md`, storie con la decisione che aspetta la scelta, Come lavoro a capitoli che si aprono, schermate leggibili e annuncio di CasaHunter ridisegnato, piede corto. Critica esterna passata da 6 a 7 su 10. Per tornare indietro: Instant Rollback su Vercel al deploy g2sh7onzl, o il tag git `sito-prima-del-16-10`.
 - 2026-10-16 sera — Redesign "Decidi tu" da capo dopo il giudizio di Mattia sul "nome come monumento": ricerca su 16 siti personali e su lettura e attenzione, gioco delle decisioni, palco delle storie, critica di un lettore esterno (6/10, poi corretti i cinque punti), pubblicato su main.
 - 2026-10-16 — Redesign "Il nome come monumento" su `sito-2026-redesign`: home, storie, errori, adesso, come lavoro, note; foto d'archivio con crediti, video di bowling, componente Foto nelle MDX.
 - 2026-10-16 — Audit taste-skill e modifiche su `sito-2026`, anteprima Vercel rigenerata (link di 23 ore).
