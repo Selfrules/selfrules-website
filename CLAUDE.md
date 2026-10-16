@@ -4,7 +4,7 @@ Il sito personale di Mattia De Luca, selfrules.org. Rifatto da capo a ottobre 20
 
 ## Cosa vale oggi
 - Posizionamento e testi decisi da Mattia il 13-14/10/2026. Fonti in `../immagine-online/` (testi-linkedin-v2.md, esperienze-v2.md, foglio-unico.md, scheda-21lab.md) e backlog in `../immagine-online/sito/backlog-sito.md` (Plane P16, IMG-20…36).
-- Direzione visiva "Quaderno da GM", valori in `docs/design.md`. Riferimento disegnato su Magic Patterns: https://www.magicpatterns.com/c/5rhymh8xky8fnqdxwwcjyc (il codice di Magic Patterns non entra nel repo).
+- Direzione visiva "Quaderno da GM", valori in `docs/design.md`. Sul ramo `sito-2026-redesign` c'è il redesign del 16/10 "Il nome come monumento" (`docs/design-monumento.md`), in prova: diventa la direzione quando Mattia lo approva. Riferimento disegnato su Magic Patterns: https://www.magicpatterns.com/c/5rhymh8xky8fnqdxwwcjyc (il codice di Magic Patterns non entra nel repo).
 - Tutto quello che c'è in `docs/archivio/` è superato dalla struttura del 14/10/2026. Il sito di luglio è in `docs/archivio/sito-luglio-2026/`.
 
 ## Dove stanno i testi

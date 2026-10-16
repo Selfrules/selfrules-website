@@ -51,7 +51,7 @@ export default async function PaginaStoria({ params }: Props) {
         </header>
 
         <div className="mt-10 md:mt-14">
-          <FotoLarga foto={apertura} priorita />
+          <FotoLarga foto={apertura} priorita posizione={slug === 'palestra' ? '50% 12%' : '50% 50%'} />
         </div>
 
         <div className="mt-14 px-4 md:mt-24 md:grid md:grid-cols-12 md:gap-x-8 md:px-8">

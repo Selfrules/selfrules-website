@@ -19,7 +19,17 @@ export function Monumento({ testo, titolo = false }: { testo: string; titolo?: b
 }
 
 // Una foto a tutta larghezza che si avvicina piano mentre scorre
-export function FotoLarga({ foto, priorita = false, rapporto = 'md:aspect-[21/9]' }: { foto: Foto; priorita?: boolean; rapporto?: string }) {
+export function FotoLarga({
+  foto,
+  priorita = false,
+  rapporto = 'md:aspect-[21/9]',
+  posizione = '50% 50%',
+}: {
+  foto: Foto;
+  priorita?: boolean;
+  rapporto?: string;
+  posizione?: string;
+}) {
   return (
     <figure className="overflow-hidden">
       <Image
@@ -28,6 +38,7 @@ export function FotoLarga({ foto, priorita = false, rapporto = 'md:aspect-[21/9]
         priority={priorita}
         sizes="100vw"
         className={`si-avvicina aspect-[4/3] w-full object-cover ${rapporto}`}
+        style={{ objectPosition: posizione }}
       />
     </figure>
   );
