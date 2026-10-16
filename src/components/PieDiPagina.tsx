@@ -7,7 +7,7 @@ import { Scrivimi } from './Scrivimi';
 // La chiusura di ogni pagina: un campo per scrivermi, poi la Rocca di Vignola accanto al menu grande.
 export function PieDiPagina() {
   return (
-    <footer className="mt-32 lg:mt-48">
+    <footer className="mt-24 lg:mt-32">
       <section id="scrivimi" aria-labelledby="titolo-scrivimi" className="campo-verde px-[var(--margine)] py-20 lg:py-32">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8">
           <div data-entra className="lg:col-span-5">

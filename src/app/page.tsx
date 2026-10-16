@@ -104,8 +104,8 @@ export default function Home() {
                     <Image src={immagineStoria[s.slug].src} alt="" sizes="100vw" className="h-full w-full object-cover" />
                   )}
                 </div>
-                <Link href={`/storie/${s.slug}`} className="registro-riga group lg:!grid-cols-[11rem_1fr_auto] lg:!py-7">
-                  <span className="text-testa text-verde tabular-nums lg:row-span-2">{s.numero}</span>
+                <Link href={`/storie/${s.slug}`} className="registro-riga group lg:!grid-cols-[14rem_1fr_auto] lg:!py-7">
+                  <span className="text-testa whitespace-nowrap text-verde tabular-nums lg:row-span-2">{s.numero}</span>
                   <span className="text-lead col-start-1 font-medium lg:col-start-2">{s.titolo}</span>
                   <span className="col-start-1 text-piccolo text-grigio lg:col-start-2">
                     {s.azienda}, {s.periodo}. {s.minuti} minuti.
