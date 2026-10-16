@@ -16,7 +16,7 @@ export default function PaginaNote() {
         titolo="Appunti di prodotto"
         intro="Le scrivo quando una cosa mi diventa chiara. Le altre tornano qui man mano che le rileggo."
       />
-      <div className="border-t border-inchiostro">
+      <div>
         <ListaNote note={note} />
       </div>
     </Colonna>

@@ -24,11 +24,11 @@ export default function PaginaErrori() {
             <div className="flex flex-wrap items-start justify-between gap-6">
               <div>
                 <p className="etichetta !text-rosa-inchiostro/80">Errore n. {e.numero}</p>
-                <h2 className="mt-2 font-titolo text-[1.75rem] leading-tight font-medium">{e.titolo}</h2>
+                <h2 className="mt-2 font-titolo text-[1.6rem] leading-tight font-medium sm:text-[1.75rem]">{e.titolo}</h2>
               </div>
               <p className="timbro shrink-0 rotate-[-7deg] rounded-sm border-[3px] border-double border-timbro px-3 py-1.5 text-center font-mono text-timbro uppercase">
                 <span className="block text-2xl leading-none font-medium tracking-tight">{e.costo}</span>
-                <span className="mt-1 block max-w-[9rem] text-[0.62rem] leading-tight tracking-wider">
+                <span className="mt-1 block max-w-[10rem] text-[0.75rem] leading-tight tracking-wide">
                   {e.costoSpiegato}
                 </span>
               </p>
