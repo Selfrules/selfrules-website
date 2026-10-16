@@ -13,25 +13,26 @@ export function ParolePerParola({ testo, inizio = 0 }: { testo: string; inizio?:
   );
 }
 
+// La riga di servizio (azienda, data, minuti) sta sotto il titolo, non sopra: il titolo apre la pagina
 export function TestataPagina({
-  sopra,
+  meta,
   titolo,
   intro,
 }: {
-  sopra?: React.ReactNode;
+  meta?: React.ReactNode;
   titolo: string;
   intro?: React.ReactNode;
 }) {
   return (
     <header className="pt-14 pb-10 sm:pt-20">
-      {sopra && (
-        <p className="etichetta appare" style={{ '--ritardo': '0s' } as React.CSSProperties}>
-          {sopra}
-        </p>
-      )}
-      <h1 className="titolo-morbido mt-4 text-[2.4rem] leading-[1.08] font-medium tracking-tight text-balance sm:text-[3.2rem]">
+      <h1 className="titolo-morbido text-[2.15rem] leading-[1.08] font-medium tracking-tight text-balance sm:text-[3.2rem] xl:w-[860px]">
         <ParolePerParola testo={titolo} />
       </h1>
+      {meta && (
+        <p className="etichetta appare mt-4" style={{ '--ritardo': '0.3s' } as React.CSSProperties}>
+          {meta}
+        </p>
+      )}
       {intro && <p className="appare mt-5 max-w-[34rem] text-lg text-matita">{intro}</p>}
     </header>
   );

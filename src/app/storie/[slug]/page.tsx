@@ -36,11 +36,11 @@ export default async function PaginaStoria({ params }: Props) {
       <div aria-hidden="true" className="barra-lettura fixed top-0 left-0 z-50 h-[3px] w-full bg-senape" />
       <Colonna>
         <article>
-          <TestataPagina sopra={`Storia · ${s.azienda} · ${s.periodo}`} titolo={s.titolo} />
+          <TestataPagina meta={`${s.azienda} · ${s.minuti} min di lettura`} titolo={s.titolo} />
 
           <aside
             aria-label="Per chi ha fretta"
-            className="appare mb-12 rounded-md border border-riga bg-pannello p-5 sm:p-6"
+            className="appare mb-12 rounded-md bg-pannello p-5 sm:p-6"
             style={{ '--ritardo': '0.45s' } as React.CSSProperties}
           >
             <p className="etichetta !text-inchiostro">Per chi ha fretta</p>
@@ -61,14 +61,14 @@ export default async function PaginaStoria({ params }: Props) {
           </div>
         </article>
 
-        <nav aria-label="Altre storie" className="mt-20 border-t border-inchiostro pt-8">
-          <p className="etichetta">Le altre storie</p>
+        <nav aria-label="Altre storie" className="mt-20">
+          <h2 className="font-titolo text-2xl font-medium">Le altre storie</h2>
           <ul className="mt-4 grid gap-4 sm:grid-cols-2">
             {altre.map((a) => (
               <li key={a.slug}>
                 <Link
                   href={`/storie/${a.slug}`}
-                  className="group block h-full rounded-md border border-riga p-5 no-underline transition-colors hover:border-verde"
+                  className="group block h-full rounded-md bg-pannello p-5 no-underline transition-transform hover:-translate-y-0.5"
                 >
                   <span className="font-titolo text-3xl font-medium">{a.numero}</span>
                   <span className="mt-2 block">{a.titolo}</span>

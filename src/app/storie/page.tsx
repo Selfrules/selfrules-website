@@ -13,7 +13,6 @@ export default function PaginaStorie() {
   return (
     <Colonna>
       <TestataPagina
-        sopra="Storie"
         titolo="Tre storie, con i numeri"
         intro="Una storia per azienda. Il problema di chi lo aveva, cosa ho deciso, cosa ho scartato e com'è finita."
       />

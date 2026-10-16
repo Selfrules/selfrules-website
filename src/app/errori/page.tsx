@@ -12,7 +12,6 @@ export default function PaginaErrori() {
   return (
     <Colonna>
       <TestataPagina
-        sopra="Errori"
         titolo="Gli errori che mi sono costati qualcosa"
         intro="Ognuno ha una scena, un costo e la regola che ne è uscita. Li tengo qui perché mi hanno insegnato più delle cose andate bene."
       />

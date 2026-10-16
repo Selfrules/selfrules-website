@@ -5,7 +5,7 @@ export default function NonTrovata() {
   return (
     <Colonna>
       <TestataPagina
-        sopra="Errore 404"
+        meta="Errore 404"
         titolo="Questa pagina non c'è più"
         intro="Il sito è stato rifatto a ottobre 2026 e qualche indirizzo vecchio è rimasto per strada. Le cose importanti stanno qui sotto."
       />

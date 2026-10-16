@@ -36,7 +36,7 @@ export default async function PaginaNota({ params }: Props) {
       <div aria-hidden="true" className="barra-lettura fixed top-0 left-0 z-50 h-[3px] w-full bg-senape" />
       <Colonna>
         <article>
-          <TestataPagina sopra={`Nota · ${dataBreve(n.data)} · ${n.minuti} min`} titolo={n.titolo} />
+          <TestataPagina meta={`${dataBreve(n.data)} · ${n.minuti} min di lettura`} titolo={n.titolo} />
           <div className="testo-lungo appare">
             <Contenuto />
           </div>

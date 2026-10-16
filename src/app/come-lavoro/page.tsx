@@ -19,7 +19,7 @@ const sezioni = [
 export default function PaginaComeLavoro() {
   return (
     <Colonna>
-      <TestataPagina sopra="Manuale d'uso" titolo="Come lavoro" />
+      <TestataPagina meta="Manuale d'uso" titolo="Come lavoro" />
       <nav aria-label="Sezioni" className="appare -mt-4 mb-12">
         <ol className="grid gap-1.5">
           {sezioni.map(([id, t], i) => (

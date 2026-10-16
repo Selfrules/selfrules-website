@@ -13,7 +13,6 @@ export default function PaginaNote() {
   return (
     <Colonna>
       <TestataPagina
-        sopra="Note"
         titolo="Appunti di prodotto"
         intro="Le scrivo quando una cosa mi diventa chiara. Le altre tornano qui man mano che le rileggo."
       />

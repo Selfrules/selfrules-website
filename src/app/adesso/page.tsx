@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function PaginaAdesso() {
   return (
     <Colonna>
-      <TestataPagina sopra={`Aggiornato il ${AGGIORNATO}`} titolo="Cosa sto facendo adesso" />
+      <TestataPagina meta={`Aggiornato il ${AGGIORNATO}`} titolo="Cosa sto facendo adesso" />
       <div className="testo-lungo blocchi appare -mt-6">
         <Contenuto />
       </div>
