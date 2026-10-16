@@ -52,7 +52,9 @@ export function Scena({ scena, inLinea = false }: { scena: ScenaDati; inLinea?: 
       return (
         <figure className="scena scena-foto">
           <Image src={scena.immagine.src} alt={scena.immagine.alt} sizes={inLinea ? '100vw' : '50vw'} className="scena-img" />
-          {scena.immagine.didascalia && <figcaption className="didascalia">{scena.immagine.didascalia}</figcaption>}
+          {(scena.didascalia ?? scena.immagine.didascalia) && (
+            <figcaption className="didascalia">{scena.didascalia ?? scena.immagine.didascalia}</figcaption>
+          )}
         </figure>
       );
     case 'schermata':
@@ -90,7 +92,7 @@ export function Scena({ scena, inLinea = false }: { scena: ScenaDati; inLinea?: 
       return (
         <figure className="scena scena-foto">
           <Clip className="scena-img" />
-          <figcaption className="didascalia">Uno spare. Il punto non lo fa il primo tiro.</figcaption>
+          <figcaption className="didascalia">Uno spare, cioè i birilli rimasti buttati giù col secondo tiro. Rimediare bene conta quanto il primo colpo.</figcaption>
         </figure>
       );
   }

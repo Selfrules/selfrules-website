@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const immagine: Record<string, Immagine> = {
   pagamenti: foto.insegna,
   leadsbridge: foto.centralino,
-  palestra: foto.manubri,
+  palestra: foto.rocca,
 };
 
 export default function PaginaStorie() {

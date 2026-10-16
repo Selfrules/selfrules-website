@@ -94,11 +94,20 @@ function Foglio({
 export function DecidiStoria({ slug }: { slug: string }) {
   const d = decisioni.find((x) => x.slug === slug);
   const [scelta, setScelta] = useState<Scelta['id'] | null>(null);
+  const [saltata, setSaltata] = useState(false);
+  const nelBrowser = useNelBrowser();
   if (!d) return null;
+  // Finché non scegli, il resto del capitolo aspetta. Senza script, o se salti, si legge tutto subito.
+  const inAttesa = nelBrowser && scelta === null && !saltata;
   return (
-    <aside aria-label="Decidi tu" className="decidi-storia not-prose">
+    <aside aria-label="Decidi tu" className="decidi-storia not-prose" data-attesa={inAttesa ? 'si' : undefined}>
       <p className="text-testa mb-8 font-medium">Decidi tu, prima di leggere</p>
       <Foglio d={d} scelta={scelta} onScegli={setScelta} inStoria />
+      {inAttesa && (
+        <button type="button" onClick={() => setSaltata(true)} className="collegamento mt-5 text-piccolo">
+          Preferisco leggere e basta
+        </button>
+      )}
       {scelta !== null && <p className="mt-6 font-semibold">Cosa ho fatto, e perché, è qui sotto.</p>}
     </aside>
   );

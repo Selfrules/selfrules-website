@@ -80,14 +80,14 @@ export const note: Nota[] = [
   {
     slug: 'perche-prototipo-in-codice',
     titolo: 'Perché prototipo in codice',
-    riga: 'Una casa in affitto, un campo che nessuno aveva letto, e quando invece mi faccio da parte.',
+    riga: 'Ho trovato casa con otto piccoli programmi. Perché costruisco prima di chiedere settimane al team, e quando non lo faccio.',
     data: '2026-01-29',
     minuti: 4,
   },
   {
     slug: 'il-cliente-sa-cosa-non-vuole',
     titolo: 'Il cliente sa cosa non vuole',
-    riga: 'Sette anni di studio web e una domanda girata al contrario.',
+    riga: 'Sette anni di studio web, e la domanda che ha cambiato le riunioni coi clienti. Cosa scarteresti?',
     data: '2026-01-06',
     minuti: 3,
   },

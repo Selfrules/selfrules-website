@@ -28,7 +28,7 @@ export default function PaginaErrori() {
           <div className="foto-taglio overflow-hidden">
             <Image src={mattia.alto.src} alt={mattia.alto.alt} sizes="(min-width: 1024px) 40vw, 100vw" className="aspect-[4/5] w-full object-cover" />
           </div>
-          <figcaption className="didascalia">Quello che li ha fatti. Ne ha fatti altri, questi sono quelli che gli hanno insegnato di più.</figcaption>
+          <figcaption className="didascalia">Io, che li ho fatti. Ne ho fatti altri, questi sono quelli che mi hanno insegnato di più.</figcaption>
         </figure>
         <div data-entra className="mt-10 self-center lg:col-span-5 lg:col-start-8 lg:mt-0">
           <p className="text-testa">Il primo l&apos;ho pagato 8.000 euro.</p>

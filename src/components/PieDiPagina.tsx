@@ -37,13 +37,13 @@ export function PieDiPagina() {
       </section>
 
       <div className="grid bg-superficie lg:min-h-svh lg:grid-cols-2">
-        <figure className="relative h-[34svh] overflow-hidden lg:h-auto">
+        <figure className="relative hidden overflow-hidden lg:block">
           <Image src={foto.rocca.src} alt={foto.rocca.alt} sizes="(min-width: 1024px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
         </figure>
         <div className="flex flex-col px-[var(--margine)] pt-10 pb-8 lg:px-12 lg:pt-16">
           <p className="font-semibold">Mattia De Luca</p>
-          <nav aria-label="Pagine" className="menu-grande mt-6">
-            <ul>
+          <nav aria-label="Pagine" className="menu-grande mt-4 lg:mt-6">
+            <ul className="grid grid-cols-2 gap-x-6 lg:block">
               <li>
                 <Link href="/">Inizio</Link>
               </li>

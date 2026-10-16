@@ -654,7 +654,7 @@ a {
 /* Il menu nel piè di pagina */
 .menu-grande a {
   display: block;
-  font-size: var(--text-lead);
+  font-size: var(--text-corpo);
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -847,4 +847,9 @@ a {
 .scena-img,
 .foto-taglio img {
   background: var(--superficie);
+}
+
+/* Dentro una storia, il capitolo della decisione aspetta la tua scelta */
+.decidi-storia[data-attesa='si'] ~ * {
+  display: none;
 }

@@ -19,7 +19,6 @@ export default function PaginaNote() {
       <Testata
         titolo="Note"
         frase="Appunti di prodotto. Le scrivo quando una cosa mi diventa chiara."
-        riga="Ne ho riscritte tre. Le altre tornano qui man mano che le rileggo."
       />
       <ul className="px-[var(--margine)]">
         {note.map((n, i) => (

@@ -24,6 +24,7 @@ FOTO = {
     'registratore': ('assets/national-cash-register-1918.jpg', 4 / 5, 0.5, 0.5),
     'riunione': ('assets/meeting-of-the-niagara-frontier-regional-committee.jpg', 3 / 2, 0.5, 0.5),
     'post-it': ('assets/sticky-notes-on-the-wall-of-the.jpg', 4 / 5, 0.4, 0.5),
+    'carta-da-parati': ('assets/sample-book-the-larkin-wallpaper-book-no.jpg', 3 / 2, 0.5, 0.5),
 }
 LATO = 1400
 # Ritagli fatti a mano sull'originale (sinistra, alto, destra, basso)

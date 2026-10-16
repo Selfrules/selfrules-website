@@ -20,6 +20,8 @@ import uiAssistente from '@/foto/ui/assistente.png';
 import uiImpostazioni from '@/foto/ui/impostazioni.jpg';
 import chMappa from '@/foto/casahunter-mappa.jpg';
 import chLista from '@/foto/casahunter-lista.jpg';
+import chAnnuncio from '@/foto/ui/casahunter-annuncio.png';
+import cartaParati from '@/foto/r/carta-da-parati.jpg';
 
 export type Immagine = { src: typeof ritratto; alt: string; didascalia?: string };
 export type Credito = { titolo: string; autore: string; licenza: string; pagina: string };
@@ -59,7 +61,7 @@ export const foto = {
   centralino: {
     src: centralino,
     alt: 'Una fila di centraliniste con le cuffie davanti ai pannelli',
-    didascalia: 'Ogni filo va nel buco giusto. Un’integrazione fa lo stesso lavoro, senza cuffie.',
+    didascalia: 'Collegare ogni filo al posto giusto, a mano. LeadsBridge faceva lo stesso coi contatti dei clienti.',
     credito: { titolo: 'WAC telephone switchboard operators', autore: 'PhotosNormandie', licenza: 'CC BY-SA 2.0, in bicromia', pagina: 'https://commons.wikimedia.org/w/index.php?curid=131249837' },
   },
   manubri: {
@@ -92,6 +94,12 @@ export const foto = {
     didascalia: 'Tutti d’accordo, nel 1943. Chissà com’è andata dopo.',
     credito: { titolo: 'Meeting of the Niagara Frontier regional committee, 1943', autore: 'Marjory Collins', licenza: 'pubblico dominio', pagina: 'https://commons.wikimedia.org/wiki/File:Meeting_of_the_Niagara_Frontier_regional_committee_of_the_United_States_War_Manpower_Commssion.8d16929v.jpg' },
   },
+  cartaParati: {
+    src: cartaParati,
+    alt: 'Un campionario di carte da parati del 1915, aperto su due motivi',
+    didascalia: 'Un campionario del 1915. Scegliere scartando è più facile che descrivere.',
+    credito: { titolo: 'Sample Book, The Larkin Wallpaper Book, No. 4, ca. 1915', autore: 'autore sconosciuto', licenza: 'pubblico dominio', pagina: 'https://commons.wikimedia.org/wiki/File:Sample_Book,_The_Larkin_Wallpaper_Book,_No._4,_ca._1915_(CH_18476109-17).jpg' },
+  },
   postIt: {
     src: postIt,
     alt: 'Un muro coperto di post-it, in un ufficio',
@@ -106,6 +114,7 @@ export const schermate = {
   assistente: { src: uiAssistente, alt: 'Il gestionale di 21Lab, l’assistente che cambia una regola e lascia dieci minuti per annullare', didascalia: 'L’assistente cambia una regola e lascia dieci minuti per tornare indietro.' },
   impostazioni: { src: uiImpostazioni, alt: 'Il gestionale di 21Lab, le regole della palestra scritte in italiano semplice', didascalia: 'Le regole della palestra, scritte come le direbbe la reception.' },
   mappa: { src: chMappa, alt: 'CasaHunter, la mappa degli annunci in provincia di Modena e Bologna', didascalia: 'CasaHunter, 880 annunci sulla mappa. In uno di questi adesso ci abito.' },
+  annuncio: { src: chAnnuncio, alt: 'CasaHunter, un annuncio con il voto 100 dato dall’AI, il prezzo e i metri quadri', didascalia: 'Un annuncio come lo vedeva CasaHunter, col voto dell’AI in alto a destra.' },
   lista: { src: chLista, alt: 'CasaHunter, la lista degli annunci col voto di ciascuno', didascalia: 'CasaHunter, gli annunci col voto che gli dava l’AI.' },
 } satisfies Record<string, Immagine>;
 
@@ -126,5 +135,5 @@ export const crediti: Credito[] = Object.values(foto)
 export const fotoNote: Record<string, Immagine> = {
   'riunione-dove-tutti-dicono-si': foto.riunione,
   'perche-prototipo-in-codice': schermate.mappa,
-  'il-cliente-sa-cosa-non-vuole': foto.registratore,
+  'il-cliente-sa-cosa-non-vuole': foto.cartaParati,
 };

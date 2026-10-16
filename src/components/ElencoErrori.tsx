@@ -5,28 +5,6 @@ import Image from 'next/image';
 import { errori } from '@/content/errori';
 import { foto, schermate } from '@/content/foto';
 
-// Lo strumento di LeadsBridge in tre barre, in proporzione ai numeri del testo: il 58% in meno, poi tre volte tanto
-function UsoStrumento() {
-  const righe: [string, number, boolean][] = [
-    ['Prima, con le integrazioni pronte', 100, false],
-    ['Lo strumento per farsele da soli', 42, false],
-    ['Preparata da noi all’80%', 126, true],
-  ];
-  return (
-    <figure className="mt-5 mb-6 bg-superficie p-5">
-      {righe.map(([t, v, ok]) => (
-        <div key={t} className="mb-4 last:mb-0">
-          <p className="text-piccolo">{t}</p>
-          <div className="mt-1 h-5 bg-superficie-2">
-            <div className={`h-full ${ok ? 'bg-verde' : 'bg-inchiostro'}`} style={{ width: `${(v / 126) * 100}%` }} />
-          </div>
-        </div>
-      ))}
-      <figcaption className="didascalia">Quanto veniva usato, in proporzione ai numeri qui sotto. Il disegno è mio, i numeri del prodotto.</figcaption>
-    </figure>
-  );
-}
-
 function Figura({ numero }: { numero: string }) {
   if (numero === '1')
     return (
@@ -37,11 +15,12 @@ function Figura({ numero }: { numero: string }) {
         <figcaption className="didascalia">{foto.registratore.didascalia}</figcaption>
       </figure>
     );
-  if (numero === '2') return <UsoStrumento />;
   if (numero === '3')
     return (
       <figure className="mt-5 mb-6">
-        <Image src={schermate.impostazioni.src} alt={schermate.impostazioni.alt} sizes="(min-width: 1024px) 45vw, 100vw" className="w-full" />
+        <div className="schermo" data-ui>
+          <Image src={schermate.impostazioni.src} alt={schermate.impostazioni.alt} sizes="(min-width: 1024px) 45vw, 100vw" className="w-full" />
+        </div>
         <figcaption className="didascalia">Come scrivo le regole della palestra adesso, nel gestionale. Le capisce anche chi non le ha scritte.</figcaption>
       </figure>
     );

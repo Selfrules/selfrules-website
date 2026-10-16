@@ -5,7 +5,7 @@ import type { Barre } from './decisioni';
 // Sul computer il palco resta fermo a sinistra e cambia mentre si legge; sul telefono ogni scena compare sotto il suo titolo.
 
 export type Scena =
-  | { tipo: 'foto'; immagine: Immagine }
+  | { tipo: 'foto'; immagine: Immagine; didascalia?: string }
   | { tipo: 'schermata'; immagine: Immagine; stretta?: boolean }
   | { tipo: 'barre'; barre: Barre; accese: boolean; numero: string; detto: string }
   | { tipo: 'numero'; numero: string; detto: string }
@@ -32,7 +32,7 @@ export const palchi: Record<string, Scena[]> = {
   palestra: [
     { tipo: 'foto', immagine: foto.manubri },
     { tipo: 'schermata', immagine: schermate.classe, stretta: true },
-    { tipo: 'foto', immagine: foto.postIt },
+    { tipo: 'foto', immagine: foto.postIt, didascalia: 'Le regole del Lab stavano su fogli e nella testa di chi se le ricordava.' },
     { tipo: 'schermata', immagine: schermate.assistente, stretta: true },
     { tipo: 'barre', barre: { totale: 235, accese: 217, dopo: '' }, accese: true, numero: '217 su 235', detto: 'attività del gestionale chiuse al 13 ottobre 2026' },
     { tipo: 'foto', immagine: mattia.alto },
