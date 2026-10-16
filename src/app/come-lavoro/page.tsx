@@ -14,22 +14,26 @@ const sezioni = [
   ['cosa-mi-fa-arrabbiare', 'Cosa mi fa arrabbiare'],
   ['come-darmi-una-cattiva-notizia', 'Come darmi una cattiva notizia'],
   ['dove-sono-scarso', 'Dove sono scarso'],
+  ['da-dove-vengo', 'Da dove vengo'],
 ];
 
 export default function PaginaComeLavoro() {
   return (
     <Colonna>
-      <TestataPagina meta="Manuale d'uso" titolo="Come lavoro" />
+      <TestataPagina titolo="Come lavoro" />
       <nav aria-label="Sezioni" className="appare -mt-4 mb-12">
-        <ol className="grid gap-1.5">
-          {sezioni.map(([id, t], i) => (
+        <ul className="flex flex-wrap gap-2">
+          {sezioni.map(([id, t]) => (
             <li key={id}>
-              <a href={`#${id}`} className="etichetta no-underline transition-colors hover:text-inchiostro">
-                0{i + 1} · {t}
+              <a
+                href={`#${id}`}
+                className="block rounded-md bg-pannello px-3 py-1.5 text-[0.95rem] no-underline transition-colors hover:text-verde"
+              >
+                {t}
               </a>
             </li>
           ))}
-        </ol>
+        </ul>
       </nav>
       <div className="testo-lungo blocchi">
         <Contenuto />
