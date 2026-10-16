@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { fraunces, inter, plexMono } from '@/lib/fonts';
+import { franklin, serif } from '@/lib/fonts';
 import { SITO } from '@/content';
 import { Navigazione } from '@/components/Navigazione';
 import { PieDiPagina } from '@/components/PieDiPagina';
+import { Movimento } from '@/components/Movimento';
 import './globals.css';
 
 const descrizione =
@@ -27,13 +28,13 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#faf6ee' },
-    { media: '(prefers-color-scheme: dark)', color: '#15140f' },
+    { media: '(prefers-color-scheme: light)', color: '#f3f2ef' },
+    { media: '(prefers-color-scheme: dark)', color: '#121212' },
   ],
 };
 
 // Prima del disegno della pagina, così il tema scuro non lampeggia in chiaro
-const temaIniziale = `try{var t=localStorage.getItem('tema');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}`;
+const temaIniziale = `try{var t=localStorage.getItem('tema');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('mv')}catch(e){}`;
 
 const persona = {
   '@context': 'https://schema.org',
@@ -52,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="it"
       suppressHydrationWarning
-      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
+      className={`${franklin.variable} ${serif.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: temaIniziale }} />
@@ -61,18 +62,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(persona) }}
         />
       </head>
-      <body className="min-h-dvh flex flex-col">
-        <a
-          href="#contenuto"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 bottone"
-        >
-          Vai al contenuto
-        </a>
-        <Navigazione />
-        <main id="contenuto" className="flex-1">
-          {children}
-        </main>
+      <body className="min-h-dvh">
+        <div className="pagina flex min-h-dvh flex-col">
+          <a
+            href="#contenuto"
+            className="pulsante sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+          >
+            Vai al contenuto
+          </a>
+          <Navigazione />
+          <main id="contenuto" className="flex-1">
+            {children}
+          </main>
+        </div>
         <PieDiPagina />
+        <Movimento />
         {process.env.NEXT_PUBLIC_UMAMI_ID && (
           <Script
             src="/api/umami/script.js"

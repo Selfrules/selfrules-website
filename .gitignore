@@ -63,3 +63,8 @@ docs/drafts/LEGACY-Memory.md
 # github pat for automated push
 .github-pat
 .claude/
+
+# originali delle foto d archivio (in uso le copie in src/foto e public/video) e screenshot della skill
+/assets/*.jpg
+/assets/*.webm
+/.taste-skill/inspect/

@@ -18,14 +18,14 @@ export function CopiaEmail() {
 
   return (
     <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
-      <a href={`mailto:${EMAIL}`} className="link" data-umami-event="email-scrivi">
+      <a href={`mailto:${EMAIL}`} className="collegamento" data-umami-event="email-scrivi">
         {EMAIL}
       </a>
       <button
         type="button"
         onClick={copia}
         data-umami-event="email-copia"
-        className="etichetta rounded bg-carta px-2 py-0.5 transition-colors hover:text-inchiostro"
+        className="font-nome text-base font-bold underline-offset-4 transition-transform hover:underline active:scale-95"
       >
         <span aria-live="polite">{copiata ? 'Copiata' : 'Copia'}</span>
       </button>

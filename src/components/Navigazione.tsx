@@ -36,25 +36,24 @@ export function Navigazione() {
   const attivo = (href: string) => percorso === href || percorso.startsWith(href + '/');
 
   return (
-    <header className="sticky top-0 z-40 bg-carta">
-      <nav
-        aria-label="Principale"
-        className="mx-auto flex h-16 max-w-[960px] items-center justify-between px-5 sm:px-8"
-      >
-        <Link href="/" className="font-titolo text-[1.15rem] font-medium tracking-tight no-underline">
+    <header className="relative z-40">
+      <nav aria-label="Principale" className="flex h-16 items-center justify-between px-4 md:px-8">
+        <Link
+          href="/"
+          className="font-nome text-base font-bold tracking-[-0.01em] no-underline"
+          aria-current={percorso === '/' ? 'page' : undefined}
+        >
           Mattia De Luca
         </Link>
 
-        <ul className="hidden items-center gap-6 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {voci.map((v) => (
             <li key={v.href}>
               <Link
                 href={v.href}
                 aria-current={attivo(v.href) ? 'page' : undefined}
-                className={`text-[0.95rem] font-medium text-matita no-underline transition-colors hover:text-inchiostro ${
-                  attivo(v.href)
-                    ? '!text-inchiostro underline decoration-senape decoration-2 underline-offset-[6px]'
-                    : ''
+                className={`font-nome text-base font-bold tracking-[-0.01em] no-underline transition-colors hover:text-ciliegia ${
+                  attivo(v.href) ? 'text-ciliegia' : ''
                 }`}
               >
                 {v.label}
@@ -66,28 +65,28 @@ export function Navigazione() {
           </li>
         </ul>
 
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           <InterruttoreTema />
           <button
             type="button"
             aria-expanded={aperto}
             aria-controls="menu-telefono"
             onClick={() => setAperto((a) => !a)}
-            className="rounded-md px-3 py-1.5 text-[0.95rem] font-medium text-inchiostro transition-colors hover:bg-pannello"
+            className="font-nome px-3 py-2 text-base font-bold transition-colors hover:text-ciliegia active:scale-95"
           >
             {aperto ? 'Chiudi' : 'Menu'}
           </button>
         </div>
       </nav>
 
-      <div id="menu-telefono" hidden={!aperto} className="bg-pannello md:hidden">
-        <ul className="mx-auto max-w-[960px] px-5 py-3">
-          {voci.map((v, i) => (
-            <li key={v.href} className="appare" style={{ '--ritardo': `${i * 40}ms` } as React.CSSProperties}>
+      <div id="menu-telefono" hidden={!aperto} className="absolute inset-x-0 top-16 bg-superficie md:hidden">
+        <ul className="px-4 pt-2 pb-8">
+          {voci.map((v) => (
+            <li key={v.href}>
               <Link
                 href={v.href}
                 aria-current={attivo(v.href) ? 'page' : undefined}
-                className="block py-3 font-titolo text-[1.7rem] no-underline"
+                className={`testa block py-2.5 text-[2.6rem] no-underline ${attivo(v.href) ? 'text-ciliegia' : ''}`}
               >
                 {v.label}
               </Link>

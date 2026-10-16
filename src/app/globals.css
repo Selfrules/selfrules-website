@@ -1,42 +1,56 @@
 @import 'tailwindcss';
 
-/* Quaderno da GM. Valori scelti il 15/10/2026 (IMG-22), vedi docs/design.md */
+/* Redesign del 16/10/2026 con la skill design-taste-frontend: il nome come monumento.
+   Gesso, gomma nera e rosso ciliegia di Vignola. Valori spiegati in docs/design.md */
 
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
 :root {
-  --carta: #faf6ee;
-  --inchiostro: #1a1a1a;
-  --matita: #5c5a55;
-  --riga: #e3dccd;
-  --verde: #1f4d3a;
-  --verde-testo: #ffffff;
-  --senape: #d9a93a;
-  --rosa: #f2d5d0;
-  --rosa-inchiostro: #1a1a1a;
-  --timbro: #a8322a;
-  --pannello: #f3ede1;
+  --terra: #f3f2ef;
+  --superficie: #e8e6e1;
+  --superficie-2: #dcd9d2;
+  --inchiostro: #141414;
+  --grigio: #57534d;
+  --ciliegia: #b0102c;
+  --ciliegia-testo: #ffffff;
   color-scheme: light;
 }
 
 [data-theme='dark'] {
-  --carta: #15140f;
-  --inchiostro: #f1ebdd;
-  --matita: #b1aa9b;
-  --riga: #2f2c25;
-  --verde: #8fc7a8;
-  --verde-testo: #15140f;
-  --senape: #c99a2e;
-  --rosa: #3a2724;
-  --rosa-inchiostro: #f1ebdd;
-  --timbro: #f08a7e;
-  --pannello: #1e1c16;
+  --terra: #121212;
+  --superficie: #1d1c1a;
+  --superficie-2: #282725;
+  --inchiostro: #ebebe9;
+  --grigio: #aaa69e;
+  --ciliegia: #ff5a6e;
+  --ciliegia-testo: #121212;
   color-scheme: dark;
 }
 
+/* Nomi di prima, tenuti finché le pagine interne non sono rifatte */
+:root,
+[data-theme='dark'] {
+  --carta: var(--terra);
+  --matita: var(--grigio);
+  --riga: var(--superficie);
+  --verde: var(--ciliegia);
+  --verde-testo: var(--ciliegia-testo);
+  --senape: var(--ciliegia);
+  --rosa: var(--superficie);
+  --rosa-inchiostro: var(--inchiostro);
+  --timbro: var(--ciliegia);
+  --pannello: var(--superficie);
+}
+
 @theme inline {
-  --color-carta: var(--carta);
+  --color-terra: var(--terra);
+  --color-superficie: var(--superficie);
+  --color-superficie-2: var(--superficie-2);
   --color-inchiostro: var(--inchiostro);
+  --color-grigio: var(--grigio);
+  --color-ciliegia: var(--ciliegia);
+  --color-ciliegia-testo: var(--ciliegia-testo);
+  --color-carta: var(--carta);
   --color-matita: var(--matita);
   --color-riga: var(--riga);
   --color-verde: var(--verde);
@@ -46,37 +60,35 @@
   --color-rosa-inchiostro: var(--rosa-inchiostro);
   --color-timbro: var(--timbro);
   --color-pannello: var(--pannello);
-  --font-titolo: var(--font-fraunces), Georgia, serif;
-  --font-testo: var(--font-inter), system-ui, sans-serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-nome: var(--font-franklin), 'Arial Narrow', sans-serif;
+  --font-titolo: var(--font-franklin), 'Arial Narrow', sans-serif;
+  --font-testo: var(--font-serif), Georgia, serif;
+  --font-mono: var(--font-serif), Georgia, serif;
+  --text-piccolo: 0.875rem;
+  --text-corpo: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --text-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --text-testa: clamp(2rem, 1.3rem + 3.2vw, 4rem);
 }
 
 html {
-  background: var(--carta);
+  background: var(--terra);
   color: var(--inchiostro);
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 2rem;
 }
 
 body {
-  background: var(--carta);
+  background: var(--terra);
   color: var(--inchiostro);
   font-family: var(--font-testo);
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: var(--text-corpo);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-@media (min-width: 768px) {
-  body {
-    font-size: 1.125rem;
-  }
 }
 
 ::selection {
-  background: var(--senape);
-  color: #1a1a1a;
+  background: var(--ciliegia);
+  color: var(--ciliegia-testo);
 }
 
 a {
@@ -84,9 +96,252 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--verde);
+  outline: 2px solid var(--ciliegia);
   outline-offset: 3px;
-  border-radius: 4px;
+}
+
+/* Il nome e i titoli: Libre Franklin, stretto e pesante */
+.nome {
+  font-family: var(--font-nome);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.86;
+  text-transform: uppercase;
+  font-kerning: normal;
+}
+.testa {
+  font-family: var(--font-nome);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.cifre {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* ---------- Home: il nome fermo sopra le foto ---------- */
+
+.monumento {
+  position: relative;
+}
+.monumento-nome {
+  color: var(--ciliegia);
+  white-space: nowrap;
+  font-size: 16.2vw;
+  padding: 0.5rem 1rem 0;
+}
+.quadro {
+  position: relative;
+  background: var(--fondo, var(--terra));
+}
+.quadro-foto {
+  display: block;
+  object-fit: cover;
+  width: calc(100% - 2rem);
+  max-width: 30rem;
+  margin: 0 1rem;
+  aspect-ratio: 2 / 3;
+  height: auto;
+}
+
+/* Dal computer in su il nome resta fermo e le tre foto gli passano sotto, senza toccarlo */
+@media (min-width: 1024px) {
+  .monumento {
+    --qt: calc(4.5rem + 9.4vw + 28px);
+    --qw: min(calc((100svh - var(--qt)) * 2 / 3), 36vw);
+  }
+  .monumento-strato {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 100svh;
+    pointer-events: none;
+  }
+  .monumento-strato a,
+  .monumento-strato button {
+    pointer-events: auto;
+  }
+  .monumento-nome {
+    font-size: 10.6vw;
+    padding: 4.5rem 0 0;
+    text-align: center;
+  }
+  .monumento-quadri {
+    margin-top: -100svh;
+  }
+  .quadro {
+    height: 100svh;
+  }
+  .quadro-foto {
+    position: absolute;
+    left: 50%;
+    top: var(--qt);
+    width: var(--qw);
+    max-width: none;
+    margin: 0;
+    translate: -50% 0;
+  }
+  .quadro-didascalia {
+    position: absolute;
+    left: calc(50% + var(--qw) / 2 + 2rem);
+    bottom: 9rem;
+    max-width: min(17rem, calc(50% - var(--qw) / 2 - 4rem));
+  }
+}
+
+/* ---------- Home: l'indice delle storie coi numeri grandi ---------- */
+
+@media (min-width: 768px) {
+.indice-nome {
+  color: var(--grigio);
+  transition: color 0.2s ease;
+}
+.indice li:first-child .indice-nome {
+  color: var(--inchiostro);
+}
+.indice:has(a:hover, a:focus-visible) .indice-nome {
+  color: var(--grigio);
+}
+.indice a:hover .indice-nome,
+.indice a:focus-visible .indice-nome {
+  color: var(--inchiostro);
+}
+.cornice > * {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.cornice > :first-child {
+  opacity: 1;
+}
+.vetrina:has(.indice li:nth-child(2) a:is(:hover, :focus-visible)) .cornice > :nth-child(2),
+.vetrina:has(.indice li:nth-child(3) a:is(:hover, :focus-visible)) .cornice > :nth-child(3) {
+  opacity: 1;
+}
+.vetrina:has(.indice li:nth-child(2) a:is(:hover, :focus-visible)) .cornice > :nth-child(1),
+.vetrina:has(.indice li:nth-child(3) a:is(:hover, :focus-visible)) .cornice > :nth-child(1) {
+  opacity: 0;
+}
+
+}
+
+.clip {
+  filter: grayscale(1) contrast(1.1);
+  scale: 1.3;
+  transform-origin: 50% 60%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .clip {
+    display: none;
+  }
+  .cornice > :first-child,
+  .clip-fondo {
+    background: center / cover url('/video/bowling-spare.jpg');
+  }
+}
+
+/* Bottone pieno, angoli vivi */
+.pulsante {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--ciliegia);
+  color: var(--ciliegia-testo);
+  font-family: var(--font-nome);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 0.95rem 1.4rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.pulsante:hover {
+  background: var(--inchiostro);
+  color: var(--terra);
+}
+.pulsante:active {
+  transform: scale(0.97);
+}
+
+.collegamento {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
+}
+.collegamento:hover {
+  color: var(--ciliegia);
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- Entrate: titolo, testo, foto, uno dopo l'altro ---------- */
+/* La classe .mv la mette lo script in testa alla pagina. Senza script, o con "riduci movimento", tutto è subito visibile */
+.mv [data-entra] > * {
+  opacity: 0;
+  translate: 0 24px;
+}
+.mv [data-entra].dentro > * {
+  opacity: 1;
+  translate: 0 0;
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.mv [data-entra].dentro > :nth-child(2) {
+  transition-delay: 75ms;
+}
+.mv [data-entra].dentro > :nth-child(3) {
+  transition-delay: 150ms;
+}
+.mv [data-entra].dentro > :nth-child(4) {
+  transition-delay: 225ms;
+}
+.mv [data-entra].dentro > :nth-child(n + 5) {
+  transition-delay: 300ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .monumento-nome {
+    animation: nome-entra 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  /* La foto del quadro si avvicina piano mentre scorre */
+  @supports (animation-timeline: view()) {
+    .quadro-foto,
+    .si-avvicina {
+      animation: avvicina linear both;
+      animation-timeline: view();
+    }
+  }
+}
+@keyframes avvicina {
+  from {
+    scale: 1.07;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes nome-entra {
+  from {
+    opacity: 0;
+    translate: 0 0.15em;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* Il piè di pagina resta sotto e si scopre alla fine */
+.pagina {
+  position: relative;
+  z-index: 1;
+  background: var(--terra);
+}
+.chiusura {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+  background: var(--inchiostro);
+  color: var(--terra);
 }
 
 /* Etichette in monospazio, in minuscolo come si scrive a penna (audit taste-skill del 16/10) */

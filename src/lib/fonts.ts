@@ -1,21 +1,17 @@
-import { Fraunces, Inter, IBM_Plex_Mono } from 'next/font/google';
+import { Libre_Franklin, Source_Serif_4 } from 'next/font/google';
 
-export const fraunces = Fraunces({
+// Libre Franklin per il nome e i titoli, Source Serif 4 per leggere. Redesign del 16/10/2026, docs/design.md
+export const franklin = Libre_Franklin({
   subsets: ['latin'],
-  axes: ['SOFT', 'WONK', 'opsz'],
-  variable: '--font-fraunces',
+  weight: ['700', '800'],
+  variable: '--font-franklin',
   display: 'swap',
 });
 
-export const inter = Inter({
+export const serif = Source_Serif_4({
   subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-export const plexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-plex-mono',
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
   display: 'swap',
 });
