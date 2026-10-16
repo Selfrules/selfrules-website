@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { storie } from '@/content';
-import { Colonna, TestataPagina } from '@/components/Titolo';
+import { fotoStorie } from '@/content/foto-storie';
+import { Monumento, FotoLarga, CoppiaFoto } from '@/components/Pagina';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -30,57 +32,84 @@ export default async function PaginaStoria({ params }: Props) {
   if (!s) notFound();
   const { default: Contenuto } = await import(`@/content/storie/${slug}.mdx`);
   const altre = storie.filter((x) => x.slug !== slug);
+  const [apertura, primaCoppia, secondaCoppia] = fotoStorie[slug];
 
   return (
     <>
-      <div aria-hidden="true" className="barra-lettura fixed top-0 left-0 z-50 h-[3px] w-full bg-senape" />
-      <Colonna>
-        <article>
-          <TestataPagina meta={`${s.azienda} · ${s.minuti} min di lettura`} titolo={s.titolo} />
+      <div aria-hidden="true" className="barra-lettura fixed top-0 left-0 z-50 h-1 w-full bg-ciliegia" />
+      <article>
+        <header>
+          <Monumento testo={s.numero} />
+          <div className="mt-6 px-4 md:mt-8 md:grid md:grid-cols-12 md:gap-x-8 md:px-8">
+            <h1 className="testa text-[1.5rem] leading-[1.1] text-balance md:col-span-8 md:text-[clamp(1.75rem,2.6vw,2.5rem)]">
+              {s.titolo}
+            </h1>
+            <p className="mt-3 text-grigio md:col-span-4 md:col-start-9 md:mt-1">
+              {s.azienda}, {s.periodo}. {s.minuti} minuti di lettura.
+            </p>
+          </div>
+        </header>
 
-          <aside
-            aria-label="Per chi ha fretta"
-            className="appare mb-12 rounded-md bg-pannello p-5 sm:p-6"
-            style={{ '--ritardo': '0.45s' } as React.CSSProperties}
-          >
-            <p className="etichetta !text-inchiostro">Per chi ha fretta</p>
-            <dl className="mt-3 grid grid-cols-[6.5rem_1fr] gap-x-4 gap-y-2 text-[0.97rem]">
-              <dt className="text-matita">Ruolo</dt>
-              <dd>{s.ruolo}</dd>
-              <dt className="text-matita">Periodo</dt>
-              <dd>{s.periodo}</dd>
-              <dt className="text-matita">Il numero</dt>
-              <dd className="font-titolo text-xl leading-tight font-medium">{s.numero}</dd>
-              <dt className="text-matita">In una frase</dt>
-              <dd>{s.fretta}</dd>
+        <div className="mt-10 md:mt-14">
+          <FotoLarga foto={apertura} priorita />
+        </div>
+
+        <div className="mt-14 px-4 md:mt-24 md:grid md:grid-cols-12 md:gap-x-8 md:px-8">
+          <aside data-entra aria-label="Per chi ha fretta" className="self-start md:col-span-3">
+            <p className="testa text-[1.75rem] md:text-[2rem]">Per chi ha fretta</p>
+            <dl className="mt-6 space-y-4">
+              <div>
+                <dt className="font-bold">Ruolo</dt>
+                <dd className="text-grigio">{s.ruolo}</dd>
+              </div>
+              <div>
+                <dt className="font-bold">Periodo</dt>
+                <dd className="text-grigio">{s.periodo}</dd>
+              </div>
+              <div>
+                <dt className="font-bold">In una frase</dt>
+                <dd className="text-grigio">{s.fretta}</dd>
+              </div>
             </dl>
           </aside>
-
-          <div className="testo-lungo">
+          <div data-entra-ciascuno className="testo-lungo mt-14 max-w-[62ch] md:col-span-7 md:col-start-5 md:mt-0">
             <Contenuto />
           </div>
-        </article>
+        </div>
+      </article>
 
-        <nav aria-label="Altre storie" className="mt-20">
-          <h2 className="font-titolo text-2xl font-medium">Le altre storie</h2>
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2">
-            {altre.map((a) => (
-              <li key={a.slug}>
-                <Link
-                  href={`/storie/${a.slug}`}
-                  className="group block h-full rounded-md bg-pannello p-5 no-underline transition-transform hover:-translate-y-0.5"
-                >
-                  <span className="font-titolo text-3xl font-medium">{a.numero}</span>
-                  <span className="mt-2 block">{a.titolo}</span>
-                  <span className="link mt-3 inline-block text-[0.95rem]">
-                    Leggi <span className="freccia" aria-hidden="true">→</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </Colonna>
+      <div className="mt-24 md:mt-40">
+        <CoppiaFoto a={primaCoppia} b={secondaCoppia} />
+      </div>
+
+      <nav aria-labelledby="altre-storie" className="mt-24 bg-superficie px-4 py-20 md:mt-40 md:px-8 md:py-28">
+        <h2 id="altre-storie" className="testa text-[1.75rem] md:text-[2rem]">
+          Le altre storie
+        </h2>
+        <ul className="mt-10 grid gap-14 md:grid-cols-2 md:gap-8">
+          {altre.map((a) => (
+            <li key={a.slug} data-entra>
+              <Link href={`/storie/${a.slug}`} className="group block no-underline">
+                <div className="overflow-hidden">
+                  <Image
+                    src={fotoStorie[a.slug][0].src}
+                    alt={fotoStorie[a.slug][0].alt}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <span className="testa cifre mt-6 block text-[16.2vw] transition-colors group-hover:text-ciliegia md:text-[clamp(3rem,6.4vw,6.5rem)] md:leading-[0.95]">
+                  {a.numero}
+                </span>
+                <span className="mt-3 block font-bold">{a.titolo}</span>
+                <span className="mt-1 block text-grigio">
+                  {a.azienda}, {a.periodo}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }

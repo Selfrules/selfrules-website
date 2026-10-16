@@ -27,21 +27,6 @@
   color-scheme: dark;
 }
 
-/* Nomi di prima, tenuti finché le pagine interne non sono rifatte */
-:root,
-[data-theme='dark'] {
-  --carta: var(--terra);
-  --matita: var(--grigio);
-  --riga: var(--superficie);
-  --verde: var(--ciliegia);
-  --verde-testo: var(--ciliegia-testo);
-  --senape: var(--ciliegia);
-  --rosa: var(--superficie);
-  --rosa-inchiostro: var(--inchiostro);
-  --timbro: var(--ciliegia);
-  --pannello: var(--superficie);
-}
-
 @theme inline {
   --color-terra: var(--terra);
   --color-superficie: var(--superficie);
@@ -50,20 +35,8 @@
   --color-grigio: var(--grigio);
   --color-ciliegia: var(--ciliegia);
   --color-ciliegia-testo: var(--ciliegia-testo);
-  --color-carta: var(--carta);
-  --color-matita: var(--matita);
-  --color-riga: var(--riga);
-  --color-verde: var(--verde);
-  --color-verde-testo: var(--verde-testo);
-  --color-senape: var(--senape);
-  --color-rosa: var(--rosa);
-  --color-rosa-inchiostro: var(--rosa-inchiostro);
-  --color-timbro: var(--timbro);
-  --color-pannello: var(--pannello);
   --font-nome: var(--font-franklin), 'Arial Narrow', sans-serif;
-  --font-titolo: var(--font-franklin), 'Arial Narrow', sans-serif;
   --font-testo: var(--font-serif), Georgia, serif;
-  --font-mono: var(--font-serif), Georgia, serif;
   --text-piccolo: 0.875rem;
   --text-corpo: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
   --text-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
@@ -285,6 +258,18 @@ a {
     opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
     translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
+/* Nel testo lungo ogni paragrafo entra da solo, quando arriva lui */
+.mv [data-entra-ciascuno] > * {
+  opacity: 0;
+  translate: 0 20px;
+}
+.mv [data-entra-ciascuno] > .dentro {
+  opacity: 1;
+  translate: 0 0;
+  transition:
+    opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    translate 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
 .mv [data-entra].dentro > :nth-child(2) {
   transition-delay: 75ms;
 }
@@ -344,215 +329,75 @@ a {
   color: var(--terra);
 }
 
-/* Etichette in monospazio, in minuscolo come si scrive a penna (audit taste-skill del 16/10) */
-.etichetta {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  letter-spacing: 0;
-  color: var(--matita);
-}
-
-/* Link sottolineati, la sottolineatura si ispessisce al passaggio */
-.link {
-  color: var(--verde);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.22em;
-  transition: text-decoration-thickness 0.15s ease, text-underline-offset 0.15s ease;
-}
-.link:hover {
-  text-decoration-thickness: 2.5px;
-  text-underline-offset: 0.28em;
-}
-
-.freccia {
-  display: inline-block;
-  transition: transform 0.18s ease;
-}
-a:hover .freccia,
-a:focus-visible .freccia {
-  transform: translateX(4px);
-}
-
-/* Bottone */
-.bottone {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--verde);
-  color: var(--verde-testo);
-  font-weight: 600;
-  padding: 0.8rem 1.4rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: transform 0.15s ease, filter 0.15s ease;
-}
-.bottone:hover {
-  filter: brightness(1.12);
-}
-.bottone:active {
-  transform: translateY(1px) scale(0.98);
-}
-
-/* Evidenziatore senape sotto i numeri */
-.evidenziatore {
-  background-image: linear-gradient(var(--senape), var(--senape));
-  background-repeat: no-repeat;
-  background-position: 0 88%;
-  background-size: 100% 0.28em;
-  padding: 0 0.06em;
-}
-
-/* Titolo grande con gli assi morbidi di Fraunces */
-.titolo-morbido {
-  font-family: var(--font-titolo);
-  font-variation-settings: 'SOFT' 100, 'WONK' 1;
-}
-
-/* Testo lungo (storie, note, pagine) */
+/* Testo lungo (storie, note, pagine): serif da leggere, titoli in Franklin, niente sottolineature colorate */
 .testo-lungo > * + * {
-  margin-top: 1.15em;
+  margin-top: 1.1em;
 }
 .testo-lungo h2 {
-  font-family: var(--font-titolo);
-  font-size: 1.6rem;
-  line-height: 1.2;
-  font-weight: 500;
-  margin-top: 2.4em;
-  letter-spacing: -0.01em;
+  font-family: var(--font-nome);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-top: 2.2em;
+}
+@media (min-width: 768px) {
+  .testo-lungo h2 {
+    font-size: 2rem;
+  }
 }
 .testo-lungo h2 + * {
-  margin-top: 0.7em;
+  margin-top: 0.75em;
 }
 .testo-lungo a {
-  color: var(--verde);
   text-decoration: underline;
-  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.testo-lungo a:hover {
+  color: var(--ciliegia);
 }
 .testo-lungo strong {
-  font-weight: 650;
-  background-image: linear-gradient(var(--senape), var(--senape));
-  background-repeat: no-repeat;
-  background-position: 0 90%;
-  background-size: 100% 0.3em;
+  font-weight: 600;
+  color: var(--ciliegia);
 }
 .testo-lungo > p:first-child {
-  font-size: 1.15em;
+  font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  line-height: 1.3;
 }
 .testo-lungo blockquote {
-  border-left: 3px solid var(--senape);
-  padding-left: 1rem;
-  font-family: var(--font-titolo);
-  font-size: 1.25em;
+  font-style: italic;
+  font-size: 1.375rem;
+  line-height: 1.35;
+}
+.testo-lungo ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+.testo-lungo ol {
+  list-style: decimal;
+  padding-left: 1.4em;
 }
 
-/* ---------- Movimento ---------- */
+/* ---------- Barra di lettura e passaggio tra pagine ---------- */
 
 @media (prefers-reduced-motion: no-preference) {
-  /* Il titolo entra parola per parola, in meno di un secondo */
-  .parola {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(0.35em);
-    animation: entra 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
-    animation-delay: calc(var(--i) * 45ms);
-  }
-
-  .appare {
-    opacity: 0;
-    animation: entra 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
-    animation-delay: var(--ritardo, 0.35s);
-  }
-
-  /* Il cerchio a penna attorno alla parola "palestra" */
-  .cerchio-penna path {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: disegna 0.9s 0.9s cubic-bezier(0.6, 0, 0.3, 1) forwards;
-  }
-
-  /* L'evidenziatore si stende quando il numero entra nello schermo */
-  @supports (animation-timeline: view()) {
-    .evidenziatore {
-      background-size: 0% 0.28em;
-      animation: stendi linear both;
-      animation-timeline: view();
-      animation-range: entry 0px entry 220px;
-    }
-
-    .rivela {
-      animation: rivela linear both;
-      animation-timeline: view();
-      animation-range: entry 0px entry 180px;
-    }
-
-    .timbro {
-      animation: timbra linear both;
-      animation-timeline: view();
-      animation-range: entry 30% cover 40%;
-    }
-
+  @supports (animation-timeline: scroll()) {
     .barra-lettura {
       transform-origin: 0 50%;
       animation: leggi linear both;
       animation-timeline: scroll(root);
     }
   }
-
-  .cursore::after {
-    content: '';
-    display: inline-block;
-    width: 0.08em;
-    height: 0.9em;
-    margin-left: 0.08em;
-    background: var(--verde);
-    vertical-align: -0.08em;
-    animation: lampeggia 1.1s steps(1) infinite;
-    animation-delay: 1.4s;
-    opacity: 0;
-  }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .barra-lettura {
     display: none;
   }
-}
-
-@keyframes entra {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes disegna {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes stendi {
-  to {
-    background-size: 100% 0.28em;
-  }
-}
-@keyframes rivela {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes timbra {
-  from {
-    opacity: 0;
-    transform: rotate(-24deg) scale(1.6);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(-7deg) scale(1);
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }
 @keyframes leggi {
@@ -563,50 +408,44 @@ a:focus-visible .freccia {
     transform: scaleX(1);
   }
 }
-@keyframes lampeggia {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-/* Passaggio tra le pagine (View Transitions) */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 0.22s;
 }
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
-    animation: none !important;
-  }
-}
 
-/* Pagine a blocchi (Adesso, Come lavoro). Sul computer il titolo sta a sinistra, il testo a destra */
-@media (min-width: 768px) {
+/* Pagine a blocchi (Adesso, Come lavoro). Dal computer in su il titolo sta a sinistra, il testo e le foto a destra */
+.foto-testo {
+  max-width: 40rem;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+.blocchi > p,
+.blocchi > ul,
+.blocchi > ol {
+  max-width: 62ch;
+}
+@media (min-width: 1024px) {
   .blocchi {
     display: grid;
-    grid-template-columns: 12rem 1fr;
-    column-gap: 2.5rem;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 2rem;
   }
   .blocchi > * {
-    grid-column: 2;
+    grid-column: 5 / span 7;
   }
   .blocchi > h2 {
-    grid-column: 1;
-    font-size: 1.45rem;
+    grid-column: 1 / span 4;
     margin-top: 0;
-    padding-top: 3rem;
+    padding-top: 6rem;
+    padding-right: 2rem;
   }
   .blocchi > h2 + * {
     margin-top: 0;
-    padding-top: 3.2rem;
+    padding-top: 6.4rem;
   }
   .blocchi > p:first-child {
-    grid-column: 1 / -1;
-    margin-bottom: 1.5rem;
+    grid-column: 1 / span 9;
+    max-width: 50ch;
+    margin-bottom: 1rem;
   }
 }

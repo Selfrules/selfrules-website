@@ -9,7 +9,9 @@ export function Movimento() {
   const percorso = usePathname();
 
   useEffect(() => {
-    const blocchi = document.querySelectorAll<HTMLElement>('[data-entra]:not(.dentro)');
+    const blocchi = document.querySelectorAll<HTMLElement>(
+      '[data-entra]:not(.dentro), [data-entra-ciascuno] > :not(.dentro)',
+    );
     if (!('IntersectionObserver' in window)) {
       blocchi.forEach((b) => b.classList.add('dentro'));
       return;

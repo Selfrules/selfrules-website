@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { errori } from '@/content/errori';
-import { Colonna, TestataPagina } from '@/components/Titolo';
+import { foto, type Foto } from '@/content/foto';
+import { Monumento } from '@/components/Pagina';
 
 export const metadata: Metadata = {
   title: 'Errori',
@@ -8,43 +10,70 @@ export const metadata: Metadata = {
   alternates: { canonical: '/errori' },
 };
 
+// Una foto per errore, dal suo mondo: la cassa, il centralino, il manuale che nessuno capisce
+const fotoErrori: Foto[] = [foto.registratore, foto.centralino, foto['manuale-1905']];
+const fondi = ['bg-superficie', 'bg-terra', 'bg-superficie-2'];
+
 export default function PaginaErrori() {
   return (
-    <Colonna>
-      <TestataPagina
-        titolo="Gli errori che mi sono costati qualcosa"
-        intro="Ognuno ha una scena, un costo e la regola che ne è uscita. Li tengo qui perché mi hanno insegnato più delle cose andate bene."
-      />
-      <ol className="grid gap-10">
-        {errori.map((e) => (
-          <li
-            key={e.numero}
-            className="rivela relative overflow-hidden rounded-md bg-rosa px-6 pt-8 pb-9 text-rosa-inchiostro sm:px-10"
-          >
-            <div className="flex flex-wrap items-start justify-between gap-6">
-              <div>
-                <p className="etichetta !text-rosa-inchiostro/80">Errore n. {e.numero}</p>
-                <h2 className="mt-2 font-titolo text-[1.6rem] leading-tight font-medium sm:text-[1.75rem]">{e.titolo}</h2>
+    <>
+      <header className="pb-16 md:pb-24">
+        <Monumento testo="Errori" titolo />
+        <div className="mt-6 px-4 md:mt-8 md:grid md:grid-cols-12 md:items-end md:gap-x-8 md:px-8">
+          <div className="md:col-span-7">
+            <p className="max-w-[40ch] text-[1.375rem] leading-[1.25] md:text-[clamp(1.75rem,2.4vw,2.25rem)] md:leading-[1.2]">
+              Gli errori che mi sono costati qualcosa. Ognuno ha una scena, un costo e la regola che ne è uscita.
+            </p>
+            <p className="mt-6 max-w-[44ch] text-grigio">
+              Li tengo qui perché mi hanno insegnato più delle cose andate bene.
+            </p>
+          </div>
+          <Image
+            src={foto.birillo.src}
+            alt={foto.birillo.alt}
+            priority
+            sizes="(min-width: 768px) 30vw, 100vw"
+            className="mt-12 aspect-[3/4] w-full max-w-[24rem] object-cover md:col-span-4 md:col-start-9 md:mt-0"
+          />
+        </div>
+      </header>
+
+      {errori.map((e, i) => (
+        <section
+          key={e.numero}
+          aria-labelledby={`errore-${e.numero}`}
+          className={`${fondi[i]} px-4 py-20 md:px-8 md:py-32`}
+        >
+          <div className="lg:grid lg:grid-cols-12 lg:gap-x-8">
+            <div data-entra className={`lg:col-span-5 ${i % 2 ? 'lg:order-2 lg:col-start-8' : ''}`}>
+              <p className="testa cifre text-[16.2vw] leading-[0.9] text-ciliegia md:text-[clamp(3rem,6.4vw,6.5rem)]">
+                {e.costo}
+              </p>
+              <p className="mt-3 font-bold">{e.costoSpiegato}</p>
+              <Image
+                src={fotoErrori[i].src}
+                alt={fotoErrori[i].alt}
+                sizes="(min-width: 1024px) 35vw, 100vw"
+                className="mt-10 aspect-[4/5] w-full max-w-[28rem] object-cover"
+              />
+            </div>
+            <div data-entra className={`mt-12 lg:col-span-6 lg:mt-0 ${i % 2 ? 'lg:order-1 lg:col-start-1' : 'lg:col-start-7'}`}>
+              <h2 id={`errore-${e.numero}`} className="testa text-[1.75rem] leading-[1.1] md:text-[2rem]">
+                {e.titolo}
+              </h2>
+              <div className="mt-6 max-w-[60ch] space-y-4">
+                {e.scena.map((p, j) => (
+                  <p key={j}>{p}</p>
+                ))}
               </div>
-              <p className="timbro shrink-0 rotate-[-7deg] rounded-sm border-[3px] border-double border-timbro px-3 py-1.5 text-center font-mono text-timbro uppercase">
-                <span className="block text-2xl leading-none font-medium tracking-tight">{e.costo}</span>
-                <span className="mt-1 block max-w-[10rem] text-[0.75rem] leading-tight tracking-wide">
-                  {e.costoSpiegato}
-                </span>
+              <p className="mt-10 font-bold">La regola che ne è uscita</p>
+              <p className="mt-2 max-w-[42ch] text-[1.375rem] leading-[1.25] md:text-[clamp(1.75rem,2.4vw,2.25rem)] md:leading-[1.2]">
+                {e.regola}
               </p>
             </div>
-            <div className="mt-5 space-y-4">
-              {e.scena.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-            <div className="mt-7 border-l-2 border-rosa-inchiostro/40 pl-4">
-              <p className="etichetta !text-rosa-inchiostro/80">La regola</p>
-              <p className="mt-2 font-titolo text-xl leading-snug sm:text-[1.4rem]">{e.regola}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-    </Colonna>
+          </div>
+        </section>
+      ))}
+    </>
   );
 }

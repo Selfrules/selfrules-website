@@ -4,7 +4,7 @@ import { storie, note, AGGIORNATO, EMAIL, LINKEDIN } from '@/content';
 import { errori } from '@/content/errori';
 import { foto, video, type Foto } from '@/content/foto';
 import { GiorniDaGM } from '@/components/GiorniDaGM';
-import { dataBreve } from '@/components/ListaNote';
+import { dataBreve } from '@/lib/date';
 
 // Le tre foto che passano sotto il nome, una per storia, e quelle della cornice accanto ai numeri
 const quadri: { foto: Foto; fondo: string; posizione: string; slug: string }[] = [
