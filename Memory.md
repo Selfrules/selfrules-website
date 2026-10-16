@@ -1,12 +1,14 @@
 # Memory.md — selfrules-website
 
-## Stato attuale (15/10/2026)
+## Stato attuale (16/10/2026)
+- 16/10: audit con la skill design-taste-frontend (taste-skill v2) e 7 commit su `sito-2026`: etichette in minuscolo, riga di servizio sotto i titoli, pannelli senza bordo, piè di pagina col nome, giorni da GM in home, indice di Come lavoro corretto. Dettagli e voti in `docs/audit-taste-2026-10-16.md`. Manca una foto di Mattia, è la modifica che più alzerebbe il voto.
 - Sito rifatto da capo sul ramo `sito-2026` (PC Windows). Direzione "Quaderno da GM", testi da `../immagine-online/`. Anteprima Vercel del ramo, protetta, con link di condivisione di 23 ore creato dal Vercel MCP.
 - Pagine fatte in italiano: home, storie (pagamenti, leadsbridge, palestra), errori (3), adesso, come lavoro, note (3 su 8 riscritte). Mancano inglese (IMG-13), redirect dei vecchi indirizzi (IMG-33), CV nuovo, le altre 5 note.
 - `main` è ancora il sito di luglio: la pubblicazione la decide Mattia.
 - Da far confermare a Mattia: scene dedotte nelle storie ("Immagina un sabato sera", "chiringuito"), "Come darmi una cattiva notizia" e "Dove sono scarso", errore n. 3 (feedback del titolare del 23/07).
 
 ## Cronologia
+- 2026-10-16 — Audit taste-skill e modifiche su `sito-2026`, anteprima Vercel rigenerata (link di 23 ore).
 - 2026-10-15 — Sito nuovo su `sito-2026`, Plane IMG-12, 14, 20, 23-32 in In Progress. Magic Patterns usato per il disegno delle pagine interne nel progetto 5rhymh8xky8fnqdxwwcjyc.
 
 > Storia precedente.
