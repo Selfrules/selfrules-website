@@ -15,6 +15,8 @@ import campionario_1931 from '@/foto/campionario-1931.jpg';
 import centralino_legno from '@/foto/centralino-legno.jpg';
 import riunione_1943 from '@/foto/riunione-1943.jpg';
 import post_it from '@/foto/post-it.jpg';
+import ritratto from '@/foto/ritratto.jpg';
+import ritratto_volto from '@/foto/ritratto-volto.jpg';
 import casahunter_lista from '@/foto/casahunter-lista.jpg';
 import casahunter_mappa from '@/foto/casahunter-mappa.jpg';
 import casahunter_statistiche from '@/foto/casahunter-statistiche.jpg';
@@ -38,6 +40,12 @@ export const foto = {
   'riunione-1943': { src: riunione_1943, alt: "Una riunione di comitato attorno a un tavolo, nel 1943", titolo: "Meeting of the Niagara Frontier regional committee of the United States War Manpower Commssion.8d16929v", autore: "Marjory Collins", licenza: "public domain", pagina: "https://commons.wikimedia.org/wiki/File:Meeting_of_the_Niagara_Frontier_regional_committee_of_the_United_States_War_Manpower_Commssion.8d16929v.jpg" },
   'post-it': { src: post_it, alt: "Un muro coperto di post-it, in un ufficio", titolo: "Sticky notes on the wall of the Wikimedia Foundation office, 2010-10-26", autore: "Ragesoss", licenza: "CC BY 3.0", pagina: "https://commons.wikimedia.org/w/index.php?curid=12023461" },
 } satisfies Record<string, Foto>;
+
+// Il ritratto di Mattia, mandato da lui il 16/10/2026, in bianco e nero come le altre foto
+export const mattia = {
+  ritratto: { src: ritratto, alt: 'Mattia De Luca appoggiato a un pilastro di cemento, camicia di lino chiara, guarda di lato' },
+  volto: { src: ritratto_volto, alt: 'Mattia De Luca, il volto' },
+};
 
 // Schermate di CasaHunter, il programma di Mattia: non servono crediti
 export const schermate = {

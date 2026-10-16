@@ -16,7 +16,7 @@ La palette del foglio era "Frost and slate": ho tenuto le proporzioni e preso i 
 
 Caratteri. Libre Franklin 800 maiuscolo per il nome e i segni grandi, 700 per i titoli. Source Serif 4 per leggere, 17-19 px.
 
-Foto. Archivi pubblici (Wikimedia Commons e Openverse), in bianco e nero, crediti in `assets/credits.json` e nel piè di pagina. Gli originali stanno in `assets/` e non vanno nel repo, le copie usate in `src/foto/`. Video del bowling in `public/video/`. Schermate di CasaHunter in bianco e nero. Il ritratto di Mattia, quando arriva, prende il posto della Rocca nel paragrafo della home.
+Foto. Archivi pubblici (Wikimedia Commons e Openverse), in bianco e nero, crediti in `assets/credits.json` e nel piè di pagina. Gli originali stanno in `assets/` e non vanno nel repo, le copie usate in `src/foto/`. Video del bowling in `public/video/`. Schermate di CasaHunter in bianco e nero. Il ritratto di Mattia (mandato il 16/10) apre la home sotto il nome e torna come volto accanto al paragrafo "Poi ho preso in mano una palestra".
 
 Movimento. Nome che entra all'apertura, foto sotto il nome che cambiano scorrendo (solo da 1024 px in su), parti di ogni blocco che entrano una dopo l'altra, paragrafi del testo lungo uno alla volta, foto che si avvicinano piano, tiro di bowling in loop. Con "riduci movimento" o senza script tutto è subito visibile.
 

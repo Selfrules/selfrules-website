@@ -41,6 +41,7 @@ const persona = {
   '@type': 'Person',
   name: 'Mattia De Luca',
   url: SITO,
+  image: `${SITO}/mattia-de-luca.jpg`,
   jobTitle: 'Senior Product Manager',
   worksFor: { '@type': 'Organization', name: '21Lab Fitness & Athletics' },
   hasOccupation: { '@type': 'Occupation', name: 'GM di 21Lab' },

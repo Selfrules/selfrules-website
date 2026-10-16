@@ -1,7 +1,7 @@
 # Memory.md — selfrules-website
 
 ## Stato attuale (16/10/2026)
-- 16/10 pomeriggio: redesign completo da zero sul ramo `sito-2026-redesign` con la skill design-taste-frontend, direzione "Il nome come monumento" (`docs/design-monumento.md`). Tutte le 12 pagine rifatte, 0 FAIL del misuratore, home da 6,5 a 7,6. Manca il ritratto di Mattia, chiesto nel thread. Anteprima Vercel del ramo con link di 23 ore.
+- 16/10 pomeriggio: redesign completo da zero sul ramo `sito-2026-redesign` con la skill design-taste-frontend, direzione "Il nome come monumento" (`docs/design-monumento.md`). Tutte le 12 pagine rifatte, 0 FAIL del misuratore, home da 6,5 a 7,6. Ritratto di Mattia in home dal 16/10. Anteprima Vercel del ramo con link di 23 ore.
 - 16/10: audit con la skill design-taste-frontend (taste-skill v2) e 7 commit su `sito-2026`: etichette in minuscolo, riga di servizio sotto i titoli, pannelli senza bordo, piè di pagina col nome, giorni da GM in home, indice di Come lavoro corretto. Dettagli e voti in `docs/audit-taste-2026-10-16.md`. Manca una foto di Mattia, è la modifica che più alzerebbe il voto.
 - Sito rifatto da capo sul ramo `sito-2026` (PC Windows). Direzione "Quaderno da GM", testi da `../immagine-online/`. Anteprima Vercel del ramo, protetta, con link di condivisione di 23 ore creato dal Vercel MCP.
 - Pagine fatte in italiano: home, storie (pagamenti, leadsbridge, palestra), errori (3), adesso, come lavoro, note (3 su 8 riscritte). Mancano inglese (IMG-13), redirect dei vecchi indirizzi (IMG-33), CV nuovo, le altre 5 note.

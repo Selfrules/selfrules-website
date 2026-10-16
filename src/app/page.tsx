@@ -2,15 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { storie, note, AGGIORNATO, EMAIL, LINKEDIN } from '@/content';
 import { errori } from '@/content/errori';
-import { foto, video, type Foto } from '@/content/foto';
+import { foto, video, mattia, type Foto } from '@/content/foto';
 import { GiorniDaGM } from '@/components/GiorniDaGM';
 import { dataBreve } from '@/lib/date';
 
 // Le tre foto che passano sotto il nome, una per storia, e quelle della cornice accanto ai numeri
-const quadri: { foto: Foto; fondo: string; posizione: string; slug: string }[] = [
-  { foto: foto.birilli, fondo: 'var(--terra)', posizione: '50% 50%', slug: 'pagamenti' },
-  { foto: foto.telefonista, fondo: 'var(--superficie)', posizione: '72% 50%', slug: 'leadsbridge' },
-  { foto: foto.sollevatore, fondo: 'var(--superficie-2)', posizione: '50% 30%', slug: 'palestra' },
+const quadri: { foto: Pick<Foto, 'src' | 'alt'>; fondo: string; posizione: string; slug: string }[] = [
+  { foto: mattia.ritratto, fondo: 'var(--terra)', posizione: '50% 30%', slug: 'io' },
+  { foto: foto.birilli, fondo: 'var(--superficie)', posizione: '50% 50%', slug: 'pagamenti' },
+  { foto: foto.telefonista, fondo: 'var(--superficie-2)', posizione: '72% 50%', slug: 'leadsbridge' },
+  { foto: foto.sollevatore, fondo: 'var(--superficie)', posizione: '50% 30%', slug: 'palestra' },
 ];
 const cornice: Foto[] = [foto.registratore, foto.centralino, foto.manubri];
 
@@ -68,7 +69,7 @@ export default function Home() {
 
         <div className="monumento-quadri">
           {quadri.map((q, i) => {
-            const s = storie.find((x) => x.slug === q.slug)!;
+            const s = storie.find((x) => x.slug === q.slug);
             return (
               <figure
                 key={q.slug}
@@ -84,14 +85,23 @@ export default function Home() {
                   style={{ objectPosition: q.posizione }}
                 />
                 <figcaption className="quadro-didascalia mx-4 mt-5 max-w-[30rem] lg:mx-0 lg:mt-0">
-                  <Link href={`/storie/${s.slug}`} className="group block no-underline">
-                    <span className="block text-base text-grigio">
-                      {s.azienda}, {s.periodo}
-                    </span>
-                    <span className="collegamento mt-1 block">
-                      {s.titolo} <span aria-hidden="true">→</span>
-                    </span>
-                  </Link>
+                  {s ? (
+                    <Link href={`/storie/${s.slug}`} className="group block no-underline">
+                      <span className="block text-base text-grigio">
+                        {s.azienda}, {s.periodo}
+                      </span>
+                      <span className="collegamento mt-1 block">
+                        {s.titolo} <span aria-hidden="true">→</span>
+                      </span>
+                    </Link>
+                  ) : (
+                    <Link href="/come-lavoro" className="group block no-underline">
+                      <span className="block text-base text-grigio">Mattia De Luca</span>
+                      <span className="collegamento mt-1 block">
+                        Come lavoro, il mio manuale d&apos;uso <span aria-hidden="true">→</span>
+                      </span>
+                    </Link>
+                  )}
                 </figcaption>
               </figure>
             );
@@ -108,8 +118,8 @@ export default function Home() {
         <div data-entra className="md:col-span-9 md:col-start-4 md:row-start-1">
           <p className="text-[1.375rem] leading-[1.25] md:text-[clamp(1.75rem,2.4vw,2.25rem)] md:leading-[1.2]">
             <Image
-              src={foto.rocca.src}
-              alt={foto.rocca.alt}
+              src={mattia.volto.src}
+              alt={mattia.volto.alt}
               sizes="160px"
               className="float-left mt-1 mr-[0.5em] aspect-square h-[5em] w-[5em] object-cover md:h-[3.6em] md:w-[3.6em]"
             />
