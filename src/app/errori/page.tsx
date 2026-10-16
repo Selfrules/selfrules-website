@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { foto } from '@/content/foto';
+import { mattia } from '@/content/foto';
 import { ElencoErrori } from '@/components/ElencoErrori';
 import { Testata } from '@/components/Testata';
 
@@ -23,12 +23,12 @@ export default function PaginaErrori() {
         <ElencoErrori conScena />
       </section>
 
-      <section aria-label="Una cassa del 1918" className="mt-28 px-[var(--margine)] lg:mt-40 lg:grid lg:grid-cols-12 lg:gap-x-8">
+      <section aria-label="Chi li ha fatti" className="mt-28 px-[var(--margine)] lg:mt-40 lg:grid lg:grid-cols-12 lg:gap-x-8">
         <figure data-entra className="lg:col-span-5 lg:col-start-2">
           <div className="foto-taglio overflow-hidden">
-            <Image src={foto.registratore.src} alt={foto.registratore.alt} sizes="(min-width: 1024px) 40vw, 100vw" className="aspect-[4/5] w-full object-cover" />
+            <Image src={mattia.alto.src} alt={mattia.alto.alt} sizes="(min-width: 1024px) 40vw, 100vw" className="aspect-[4/5] w-full object-cover" />
           </div>
-          <figcaption className="didascalia">{foto.registratore.didascalia}</figcaption>
+          <figcaption className="didascalia">Quello che li ha fatti. Ne ha fatti altri, questi sono quelli che gli hanno insegnato di più.</figcaption>
         </figure>
         <div data-entra className="mt-10 self-center lg:col-span-5 lg:col-start-8 lg:mt-0">
           <p className="text-testa">Il primo l&apos;ho pagato 8.000 euro.</p>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useSyncExternalStore } from 'react';
+import { Children, isValidElement, useState, useSyncExternalStore } from 'react';
 
 // Un capitolo del manuale. Sul telefono si vede il titolo e il primo paragrafo, il resto si apre col dito.
 // Sul computer e senza script è tutto aperto.
@@ -9,7 +9,11 @@ const nessunEvento = () => () => {};
 export function Capitolo({ titolo, id, children }: { titolo: string; id: string; children: React.ReactNode }) {
   const nelBrowser = useSyncExternalStore(nessunEvento, () => true, () => false);
   const [aperto, setAperto] = useState(false);
-  const chiuso = nelBrowser && !aperto;
+  // Si chiude solo se dopo il primo paragrafo c'è altro da aprire
+  const parti = Children.toArray(children).filter(isValidElement);
+  const primo = parti.findIndex((p) => p.type === 'p');
+  const restoPresente = primo >= 0 && primo < parti.length - 1;
+  const chiuso = nelBrowser && restoPresente && !aperto;
 
   return (
     <section className="capitolo" data-chiuso={chiuso ? 'si' : 'no'} aria-labelledby={id}>
@@ -17,7 +21,7 @@ export function Capitolo({ titolo, id, children }: { titolo: string; id: string;
       <div id={`${id}-corpo`} className="capitolo-corpo">
         {children}
       </div>
-      {nelBrowser && (
+      {nelBrowser && restoPresente && (
         <button
           type="button"
           className="capitolo-apri collegamento font-semibold lg:hidden"

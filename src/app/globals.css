@@ -623,7 +623,7 @@ a {
 }
 
 @media (max-width: 1023px) {
-  .capitolo[data-chiuso='si'] .capitolo-corpo > :not(:first-child) {
+  .capitolo[data-chiuso='si'] .capitolo-corpo > p ~ * {
     display: none;
   }
 }

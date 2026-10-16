@@ -1,18 +1,73 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { errori } from '@/content/errori';
-import { foto, type Foto } from '@/content/foto';
+import { foto, schermate } from '@/content/foto';
 
-// Una foto dal mondo dell'errore. Il primo ha la sua cassa del 1918 in fondo alla pagina
-const fotoErrore: Record<string, Foto> = { '2': foto.centralino, '3': foto.riunione };
+// Lo strumento di LeadsBridge in tre barre, in proporzione ai numeri del testo: il 58% in meno, poi tre volte tanto
+function UsoStrumento() {
+  const righe: [string, number, boolean][] = [
+    ['Prima, con le integrazioni pronte', 100, false],
+    ['Lo strumento per farsele da soli', 42, false],
+    ['Preparata da noi all’80%', 126, true],
+  ];
+  return (
+    <figure className="mt-5 mb-6 bg-superficie p-5">
+      {righe.map(([t, v, ok]) => (
+        <div key={t} className="mb-4 last:mb-0">
+          <p className="text-piccolo">{t}</p>
+          <div className="mt-1 h-5 bg-superficie-2">
+            <div className={`h-full ${ok ? 'bg-verde' : 'bg-inchiostro'}`} style={{ width: `${(v / 126) * 100}%` }} />
+          </div>
+        </div>
+      ))}
+      <figcaption className="didascalia">Quanto veniva usato, in proporzione ai numeri qui sotto. Il disegno è mio, i numeri del prodotto.</figcaption>
+    </figure>
+  );
+}
+
+function Figura({ numero }: { numero: string }) {
+  if (numero === '1')
+    return (
+      <figure className="mt-5 mb-6">
+        <div className="foto-taglio overflow-hidden">
+          <Image src={foto.registratore.src} alt={foto.registratore.alt} sizes="(min-width: 1024px) 45vw, 100vw" className="aspect-[3/2] w-full object-cover" />
+        </div>
+        <figcaption className="didascalia">{foto.registratore.didascalia}</figcaption>
+      </figure>
+    );
+  if (numero === '2') return <UsoStrumento />;
+  if (numero === '3')
+    return (
+      <figure className="mt-5 mb-6">
+        <Image src={schermate.impostazioni.src} alt={schermate.impostazioni.alt} sizes="(min-width: 1024px) 45vw, 100vw" className="w-full" />
+        <figcaption className="didascalia">Come scrivo le regole della palestra adesso, nel gestionale. Le capisce anche chi non le ha scritte.</figcaption>
+      </figure>
+    );
+  return null;
+}
 
 // Gli errori come elenco: la riga sotto il dito o aperta si accende, e a sinistra compare quanto mi è costata.
 // Ogni riga è un <details>, così sul telefono si apre col dito e senza script funziona lo stesso.
 export function ElencoErrori({ conScena = false }: { conScena?: boolean }) {
   const [attivo, setAttivo] = useState(0);
   const e = errori[attivo];
+  const elenco = useRef<HTMLUListElement>(null);
+
+  // Scorrendo, il costo a sinistra segue l'errore che sta a metà schermo
+  useEffect(() => {
+    const righe = elenco.current?.querySelectorAll('li');
+    if (!righe || !('IntersectionObserver' in window)) return;
+    const os = new IntersectionObserver(
+      (voci) => {
+        for (const v of voci) if (v.isIntersecting) setAttivo(Number((v.target as HTMLElement).dataset.indice));
+      },
+      { rootMargin: '-45% 0px -45% 0px' },
+    );
+    righe.forEach((r) => os.observe(r));
+    return () => os.disconnect();
+  }, []);
 
   return (
     <div className="lg:grid lg:grid-cols-12 lg:gap-x-8">
@@ -24,9 +79,9 @@ export function ElencoErrori({ conScena = false }: { conScena?: boolean }) {
           <p className="text-lead mt-3 max-w-[22ch]">{e.costoSpiegato}</p>
         </div>
       </div>
-      <ul className="registro lg:col-span-6 lg:col-start-7">
+      <ul ref={elenco} className="registro lg:col-span-6 lg:col-start-7">
         {errori.map((x, i) => (
-          <li key={x.numero} onMouseEnter={() => setAttivo(i)} onFocus={() => setAttivo(i)}>
+          <li key={x.numero} data-indice={i} onMouseEnter={() => setAttivo(i)} onFocus={() => setAttivo(i)}>
             <details
               className="group"
               open={conScena || undefined}
@@ -46,12 +101,7 @@ export function ElencoErrori({ conScena = false }: { conScena?: boolean }) {
                 </span>
               </summary>
               <div className="pb-8">
-                {conScena && fotoErrore[x.numero] && (
-                  <figure className="mt-5 mb-6">
-                    <Image src={fotoErrore[x.numero].src} alt={fotoErrore[x.numero].alt} sizes="(min-width: 1024px) 45vw, 100vw" className="aspect-[3/2] w-full object-cover" />
-                    <figcaption className="didascalia">{fotoErrore[x.numero].didascalia}</figcaption>
-                  </figure>
-                )}
+                {conScena && <Figura numero={x.numero} />}
                 {conScena && x.scena.map((p, k) => <p key={k} className="mt-3 max-w-[54ch]">{p}</p>)}
                 <p className="mt-4 max-w-[54ch] font-semibold">{x.regola}</p>
               </div>
