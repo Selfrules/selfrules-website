@@ -13,7 +13,7 @@ Il sito personale di Mattia De Luca, selfrules.org. Rifatto da capo a ottobre 20
 - `src/content/errori.ts`: la pagina Errori.
 - `src/content/decisioni.ts`: le tre decisioni del gioco. `src/content/palchi.ts`: la scena di ogni capitolo delle storie. `src/content/foto.ts`: foto, didascalie e crediti.
 - Messaggio deciso da Mattia il 17/10: sei anni tra pagamenti, gestionali e integrazioni, prima sette anni in proprio fra design e sviluppo (mai "studio web"); "GM del 21Lab", palestra in provincia di Modena; il gestionale lo usano dieci clienti da ottobre, tutto il Lab dal 7 dicembre; cerca un team e un'azienda in cui investire i prossimi anni, disponibile da novembre 2026, il Lab resta in buone mani. Abita a Savignano sul Panaro, fino a maggio 2026 a Spilamberto. Le storie possono piegare un po' i fatti, ma devono tornare tra loro. Il ritratto è di Valentina Malavenda (valentinamalavenda.com).
-- Il copy viene da questi file, non si inventa nel codice. Nomi di persone inventati, niente soci, incassi o margini di 21Lab. Il titolo a 21Lab è "GM".
+- Il copy viene da questi file, non si inventa nel codice. Nomi di persone inventati, niente soci, incassi o margini di 21Lab. Il titolo a 21Lab è "GM", sempre senza spiegarlo (mai "direttore generale").
 - Le persone della palestra sono "clienti" (in inglese "clients"), mai "soci" o "members".
 - Voce: skill `voce-mattia` più `selfrules-voice`. Niente due punti nei testi, niente em dash, niente "non è X, è Y".
 

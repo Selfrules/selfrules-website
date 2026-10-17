@@ -37,14 +37,16 @@ export default function Home() {
                 <span className="block">con una palestra</span>
               </h1>
               <p className="entra-subito mt-6 max-w-[38ch]" style={{ '--ritardo': 2 } as React.CSSProperties}>
-                Sono Mattia De Luca, senior product manager. Sei anni tra pagamenti, gestionali e integrazioni, in
-                QubicaAMF e in LeadsBridge, e prima sette anni in proprio fra design e sviluppo. Da agosto 2026 sono il GM, cioè il direttore generale, del 21Lab,
-                una palestra in provincia di Modena, dove il codice del gestionale lo scrivono agenti AI e le decisioni
-                le prendo io.{' '}
+                Sono Mattia De Luca. Ho passato sette anni in proprio fra design e sviluppo, poi sei da product
+                manager, fino a senior, tra pagamenti, gestionali e integrazioni, in LeadsBridge e in QubicaAMF. Da agosto sono il GM
+                del 21Lab, una palestra in provincia di Modena, e il suo gestionale lo scrivono agenti AI mentre io
+                decido cosa serve.
+              </p>
+              <p className="entra-subito mt-4 max-w-[38ch]" style={{ '--ritardo': 2 } as React.CSSProperties}>
                 <strong className="font-semibold">
-                  Cerco un ruolo da product manager, in un team e in un&apos;azienda in cui investire i prossimi anni.
+                  Adesso cerco un team e un&apos;azienda in cui investire i prossimi anni, da product manager.
                 </strong>{' '}
-                Sono disponibile da novembre, il Lab resta in buone mani.
+                Sono disponibile da novembre, e il Lab resta in buone mani.
               </p>
               <div className="entra-subito mt-8 flex flex-wrap items-center gap-x-6 gap-y-4" style={{ '--ritardo': 3 } as React.CSSProperties}>
                 <a href="#decidi" className="pulsante" data-umami-event="home-decidi">
