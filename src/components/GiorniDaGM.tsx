@@ -12,7 +12,7 @@ const sulServer = () => null;
 export function GiorniDaGM() {
   const n = useSyncExternalStore(nessunEvento, giorniOggi, sulServer);
   return (
-    <time dateTime="2026-08-01" title="GM di 21Lab dal 1° agosto 2026">
+    <time dateTime="2026-08-01" title="GM del 21Lab dal 1° agosto 2026">
       {n === null ? 'dal 1° agosto 2026' : n === 1 ? 'da oggi' : `da ${n} giorni`}
     </time>
   );

@@ -213,7 +213,7 @@ a {
 
 .apertura-foto {
   position: relative;
-  height: 42svh;
+  height: 36svh;
   overflow: hidden;
   background: var(--superficie);
 }
@@ -455,24 +455,20 @@ a {
 .palco .scena-foto {
   height: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 48px 28px;
+}
+
+.palco .scena-foto .scena-cornice {
+  flex: 1;
+  min-height: 0;
 }
 
 .palco .scena-foto .scena-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.palco .scena-foto .didascalia {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 0;
-  max-width: none;
-  width: 100%;
-  padding: 16px 32px 24px;
-  background: var(--carta);
-  color: var(--inchiostro);
 }
 
 .palco .scena-segno,
@@ -489,6 +485,10 @@ a {
   margin: 2rem calc(var(--margine) * -1) 2.5rem;
 }
 
+.scena-in-linea .scena-foto {
+  padding: 0 var(--margine);
+}
+
 .scena-in-linea .scena-foto .scena-img {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -499,9 +499,7 @@ a {
   aspect-ratio: 16 / 10;
 }
 
-.scena-in-linea .scena-foto .didascalia {
-  padding-inline: var(--margine);
-}
+
 
 .scena-in-linea .scena-segno,
 .scena-in-linea .scena-schermata {
@@ -667,7 +665,7 @@ a {
 
 @media (min-width: 1024px) {
   .menu-grande a {
-    font-size: var(--text-testa);
+    font-size: var(--text-lead);
   }
 }
 
@@ -867,4 +865,32 @@ a {
   padding: 2px 10px;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+}
+
+.mestiere {
+  font-size: var(--text-piccolo);
+  line-height: 1.45;
+  background: var(--chiaro);
+  border-left: 4px solid var(--verde);
+  padding: 12px 14px;
+}
+
+.regola-riga {
+  display: grid;
+  gap: 2px;
+  padding: 10px 0;
+  border-top: 0;
+}
+
+.regola-riga + .regola-riga {
+  margin-top: 4px;
+}
+
+/* La forma delle foto: finestre ad arco, come quelle delle rocche di Vignola, Spilamberto e Savignano.
+   Persone e posti stanno nell'arco; documenti, schermate e archivi restano rettangoli. */
+.arco,
+.arco img {
+  border-top-left-radius: 50% 34%;
+  border-top-right-radius: 50% 34%;
+  overflow: hidden;
 }

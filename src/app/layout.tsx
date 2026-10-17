@@ -8,7 +8,7 @@ import { Movimento } from '@/components/Movimento';
 import './globals.css';
 
 const descrizione =
-  'Product manager, da agosto 2026 GM di una palestra a Vignola. Tre decisioni da prendere prima di leggere cosa ho fatto io, gli errori che ho pagato e come lavoro.';
+  'Product manager, da agosto 2026 GM di una palestra in provincia di Modena. Tre decisioni da prendere prima di leggere cosa ho fatto io, gli errori che ho pagato e come lavoro.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITO),
@@ -44,7 +44,7 @@ const persona = {
   image: `${SITO}/mattia-de-luca.jpg`,
   jobTitle: 'Senior Product Manager',
   worksFor: { '@type': 'Organization', name: '21Lab Fitness & Athletics' },
-  hasOccupation: { '@type': 'Occupation', name: 'GM di 21Lab' },
+  hasOccupation: { '@type': 'Occupation', name: 'GM del 21Lab' },
   sameAs: ['https://www.linkedin.com/in/selfrules'],
   address: { '@type': 'PostalAddress', addressRegion: 'Modena', addressCountry: 'IT' },
 };

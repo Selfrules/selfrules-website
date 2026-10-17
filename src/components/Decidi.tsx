@@ -25,6 +25,7 @@ function Esito({ d, scelta, inStoria }: { d: Decisione; scelta: Scelta['id'] | n
         <p className="text-lead font-medium">Io ho scelto «{mia.testo.toLowerCase()}».</p>
       )}
       {!inStoria && <p className="mt-4 max-w-[46ch]">{d.fatto}</p>}
+      <p className="mestiere mt-5 max-w-[46ch]">{d.mestiere}</p>
       <p className="cifra mt-8 text-verde">{d.numero}</p>
       <p className="mt-1 text-grigio">{d.numeroDetto}</p>
       <Barre barre={d.barre} className="mt-6" />
@@ -47,7 +48,9 @@ function Foglio({
   const nelBrowser = useNelBrowser();
   return (
     <div className="foglio">
-      <p className="text-grigio">{d.dove}</p>
+      <p id={`scena-${d.slug}`} tabIndex={-1} className="text-grigio outline-none">
+        {d.dove}
+      </p>
       {!inStoria && <p className="text-lead mt-3 max-w-[40ch]">{d.scena}</p>}
       <p className="text-lead mt-6 font-semibold">{inStoria ? 'Tu, al mio posto, cosa avresti fatto?' : d.domanda}</p>
 
@@ -122,6 +125,17 @@ export function DecidiTu() {
   const finito = date === decisioni.length;
 
   const scegli = (id: Scelta['id']) => setRisposte((r) => ({ ...r, [d.slug]: id }));
+
+  // Passando alla decisione dopo si torna all'inizio della domanda, col fuoco lì per chi usa la tastiera
+  const vaiA = (i: number) => {
+    setAttiva(i);
+    requestAnimationFrame(() => {
+      const palco = document.getElementById('decidi-palco');
+      const fermo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      palco?.scrollIntoView({ behavior: fermo ? 'auto' : 'smooth', block: 'start' });
+      document.getElementById(`scena-${decisioni[i].slug}`)?.focus({ preventScroll: true });
+    });
+  };
   const prossima = decisioni.findIndex((x) => !risposte[x.slug]);
 
   return (
@@ -154,7 +168,7 @@ export function DecidiTu() {
               Leggi la storia intera <span aria-hidden="true">→</span>
             </Link>
             {prossima >= 0 && (
-              <button type="button" onClick={() => setAttiva(prossima)} className="pulsante">
+              <button type="button" onClick={() => vaiA(prossima)} className="pulsante">
                 Prossima decisione
               </button>
             )}
@@ -179,7 +193,7 @@ export function DecidiTu() {
                 className="collegamento font-semibold"
                 onClick={() => {
                   setRisposte({});
-                  setAttiva(0);
+                  vaiA(0);
                 }}
               >
                 Ricomincia

@@ -29,11 +29,18 @@ export function ancora(t: string) {
 }
 
 // Una foto dentro il testo: <Foto id="rocca" /> per le foto d'archivio, <Foto schermata="mappa" /> per le schermate
-function Foto({ id, schermata }: { id?: keyof typeof foto; schermata?: keyof typeof schermate }) {
+function Foto({ id, schermata, nuda = false }: { id?: keyof typeof foto; schermata?: keyof typeof schermate; nuda?: boolean }) {
   const f = id ? foto[id] : schermata ? schermate[schermata] : null;
   if (!f) return null;
   if (schermata) {
     const alta = f.src.height > f.src.width;
+    if (nuda)
+      return (
+        <figure data-entra>
+          <Image src={f.src} alt={f.alt} sizes="340px" className="mx-auto w-full max-w-[340px]" />
+          {f.didascalia && <figcaption className="didascalia">{f.didascalia}</figcaption>}
+        </figure>
+      );
     return (
       <figure data-entra>
         <div className={alta ? 'telefono' : 'schermo'} data-ui>

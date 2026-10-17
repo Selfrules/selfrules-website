@@ -19,7 +19,7 @@ export function Annuncio() {
         </p>
       </div>
       <figcaption className="didascalia">
-        Uno degli 880 annunci che CasaHunter ha letto al posto mio, con il voto che gli ha dato l&apos;AI. Ridisegnato dalla schermata del programma.
+        Uno degli 880 annunci che CasaHunter ha letto al posto mio, col voto dell&apos;AI. Non è la casa dove abito, ma il voto funzionava così. Ridisegnato dalla schermata del programma.
       </figcaption>
     </figure>
   );

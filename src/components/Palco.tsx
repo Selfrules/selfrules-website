@@ -46,12 +46,34 @@ function Campi() {
   );
 }
 
+// Tre regole della palestra come le scriverebbe la reception, disegnate in HTML
+function Regole() {
+  const righe = [
+    ['Un pacchetto da 10 ingressi', 'scade dopo 12 mesi'],
+    ['La disdetta è gratis', 'fino a 90 minuti prima'],
+    ['Il compenso di un coach', 'si calcola sulle presenze'],
+  ];
+  return (
+    <div className="campi" data-ui>
+      <p className="campi-testa">Le regole del Lab</p>
+      {righe.map(([a, b]) => (
+        <div key={a} className="regola-riga">
+          <span>{a}</span>
+          <span className="font-semibold">{b}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function Scena({ scena, inLinea = false }: { scena: ScenaDati; inLinea?: boolean }) {
   switch (scena.tipo) {
     case 'foto':
       return (
         <figure className="scena scena-foto">
-          <Image src={scena.immagine.src} alt={scena.immagine.alt} sizes={inLinea ? '100vw' : '50vw'} className="scena-img" />
+          <div className="scena-cornice arco">
+            <Image src={scena.immagine.src} alt={scena.immagine.alt} sizes={inLinea ? '100vw' : '50vw'} className="scena-img" />
+          </div>
           {(scena.didascalia ?? scena.immagine.didascalia) && (
             <figcaption className="didascalia">{scena.didascalia ?? scena.immagine.didascalia}</figcaption>
           )}
@@ -60,9 +82,13 @@ export function Scena({ scena, inLinea = false }: { scena: ScenaDati; inLinea?: 
     case 'schermata':
       return (
         <figure className="scena scena-schermata">
-          <div className={scena.stretta ? 'telefono' : 'schermo'} data-ui>
-            <Image src={scena.immagine.src} alt={scena.immagine.alt} sizes="400px" className="w-full" />
-          </div>
+          {scena.nuda ? (
+            <Image src={scena.immagine.src} alt={scena.immagine.alt} sizes="400px" className="mx-auto w-full max-w-[340px]" />
+          ) : (
+            <div className={scena.stretta ? 'telefono' : 'schermo'} data-ui>
+              <Image src={scena.immagine.src} alt={scena.immagine.alt} sizes="(min-width: 1024px) 45vw, 100vw" className="w-full" />
+            </div>
+          )}
           {scena.immagine.didascalia && <figcaption className="didascalia">{scena.immagine.didascalia}</figcaption>}
         </figure>
       );
@@ -81,6 +107,13 @@ export function Scena({ scena, inLinea = false }: { scena: ScenaDati; inLinea?: 
           <p className="mt-2 max-w-[28ch] text-lead">{scena.detto}</p>
         </div>
       );
+    case 'regole':
+      return (
+        <div className="scena scena-segno">
+          <Regole />
+          <p className="didascalia mt-6">Tre regole del Lab che il vecchio programma non sapeva. Finivano su un foglio.</p>
+        </div>
+      );
     case 'campi':
       return (
         <div className="scena scena-segno">
@@ -91,7 +124,9 @@ export function Scena({ scena, inLinea = false }: { scena: ScenaDati; inLinea?: 
     case 'video':
       return (
         <figure className="scena scena-foto">
-          <Clip className="scena-img" />
+          <div className="scena-cornice">
+            <Clip className="scena-img" />
+          </div>
           <figcaption className="didascalia">Uno spare, cioè i birilli rimasti in piedi buttati giù col secondo tiro. Rimediare bene conta quanto il primo colpo.</figcaption>
         </figure>
       );

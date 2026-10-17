@@ -1,7 +1,8 @@
 // Le tre decisioni del gioco "Decidi tu" in home e dentro ogni storia.
-// Chi legge sceglie prima, poi vede cosa ho fatto io e com'è finita. I numeri vengono dalle storie in storie/*.mdx.
+// Chi legge sceglie prima, poi vede cosa ho fatto io e com'è finita. La scena la capisce chiunque;
+// la riga "mestiere" è per chi fa questo lavoro. I numeri vengono dalle storie in storie/*.mdx.
 
-export type Scelta = { id: 'a' | 'b'; testo: string };
+export type Scelta = { id: 'a' | 'b' | 'c'; testo: string };
 
 export type Barre = { totale: number; accese: number; dopo: string };
 
@@ -11,11 +12,12 @@ export type Decisione = {
   dove: string;
   scena: string;
   domanda: string;
-  scelte: [Scelta, Scelta];
+  scelte: Scelta[];
   mia: Scelta['id'];
   stessa: string;
   diversa: string;
   fatto: string;
+  mestiere: string;
   numero: string;
   numeroDetto: string;
   barre: Barre;
@@ -25,61 +27,70 @@ export const decisioni: Decisione[] = [
   {
     slug: 'pagamenti',
     nome: 'I 44 problemi',
-    dove: 'QubicaAMF, 2025',
+    dove: 'QubicaAMF, 2025, pagamenti in 290 centri bowling',
     scena:
-      'Un sistema di pagamenti fa addebiti doppi in 290 centri bowling. Ci sono 44 problemi aperti, ognuno urgente per qualcuno. Sales intanto vende funzioni nuove.',
+      'Sabato sera. Un papà paga una festa di compleanno con la carta e il lunedì si trova due addebiti. Succede in troppi centri. Sulla lista ci sono 44 problemi aperti, ognuno urgente per qualcuno, e intanto i commerciali vendono funzioni nuove.',
     domanda: 'Tu cosa fai?',
     scelte: [
       { id: 'a', testo: 'Divido il team, metà sui problemi e metà sulle funzioni nuove' },
-      { id: 'b', testo: 'Fermo le funzioni nuove e cerco i problemi che costano soldi' },
+      { id: 'b', testo: 'Parto dal problema che più clienti hanno segnalato' },
+      { id: 'c', testo: 'Fermo le funzioni nuove e cerco i problemi che fanno perdere soldi' },
     ],
-    mia: 'b',
-    stessa: 'Abbiamo fatto la stessa scelta.',
-    diversa: 'Io ho fatto l’altra, e la conversazione con sales non è stata comoda.',
+    mia: 'c',
+    stessa: 'Abbiamo scelto uguale. Facile dirlo adesso, a me è costata una riunione scomoda coi commerciali.',
+    diversa: 'Io ho fatto un’altra cosa, e la riunione coi commerciali non è stata comoda.',
     fatto:
-      'Ho messo in fila i 44 problemi con una domanda sola. Questo oggi fa perdere soldi a un centro? Quattro sì. Li abbiamo chiusi in quattro settimane.',
+      'Ho fermato le funzioni nuove per quattro settimane e ho messo in fila i 44 problemi con una domanda sola. Questo, oggi, fa perdere soldi a un centro? Quattro sì. Li abbiamo chiusi tutti e quattro prima di riaprire il resto.',
+    mestiere:
+      'Per chi fa il mestiere. Un criterio solo per ordinare il backlog, cioè quanto perde il cliente oggi, e il motivo scritto per ognuna delle 40 voci che dovevano aspettare. Il blocco delle funzioni nuove aveva una data di fine già nel primo messaggio, così il no era a tempo e sales l’ha accettato.',
     numero: '4 su 44',
-    numeroDetto: 'i problemi che facevano perdere soldi',
-    barre: { totale: 44, accese: 4, dopo: 'Alla fine il 99,83% dei pagamenti andava a buon fine.' },
+    numeroDetto: 'i problemi che facevano perdere soldi ai centri',
+    barre: { totale: 44, accese: 4, dopo: 'Quando ho lasciato, il 99,83% dei pagamenti andava a buon fine. Ne falliva meno di due su mille.' },
   },
   {
     slug: 'leadsbridge',
     nome: 'La funzione del 60%',
-    dove: 'LeadsBridge, 2020 – 2023',
+    dove: 'LeadsBridge, 2021, una startup americana da 50 persone',
     scena:
-      'Sei utenti su dieci chiedono la stessa funzione. Il team di sviluppo è pronto, la stima è di tre sprint, cioè sei settimane di lavoro.',
+      'Sei clienti su dieci chiedono la stessa funzione nuova. Il team di sviluppo è pronto a partire, la stima è di sei settimane. Nella riunione tutti annuiscono.',
     domanda: 'Tu cosa fai?',
     scelte: [
-      { id: 'a', testo: 'La metto in cima alla lista, la chiede il 60%' },
-      { id: 'b', testo: 'Prima telefono a chi la chiede' },
+      { id: 'a', testo: 'La costruisco, se la chiede il 60% il dubbio non c’è' },
+      { id: 'b', testo: 'Mando un sondaggio a tutti i clienti per esserne sicuro' },
+      { id: 'c', testo: 'Telefono a cinque dei clienti che la chiedono' },
     ],
-    mia: 'b',
-    stessa: 'Abbiamo fatto la stessa scelta.',
-    diversa: 'Io ho fatto l’altra. Mezz’ora costava meno di sei settimane.',
+    mia: 'c',
+    stessa: 'Abbiamo scelto uguale. Cinque telefonate costano meno di sei settimane.',
+    diversa: 'Io ho fatto un’altra cosa. Un sondaggio ti conferma quello che chiedi, una telefonata ti dice quello che non sapevi.',
     fatto:
-      'Mezz’ora di telefonata. Il problema l’avevano già risolto da soli, con un giro un po’ storto. Ho reso ufficiale la loro soluzione e la funzione non l’abbiamo costruita.',
+      'Al terzo cliente era già chiaro. Il problema l’avevano risolto da soli, con un giro storto ma che funzionava. Ho reso ufficiale il loro giro con una modifica piccola, e la funzione nuova non l’abbiamo mai costruita.',
+    mestiere:
+      'Per chi fa il mestiere. Discovery prima del delivery, cioè capire cosa fanno i clienti prima di costruire quello che chiedono. Cinque interviste su cosa i clienti facevano già, al posto di un sondaggio che conferma la richiesta. Le sei settimane risparmiate sono andate sulla mappatura dei campi, dove il problema era di tutti, e lì il tempo di configurazione è sceso del 35%.',
     numero: '3 sprint',
-    numeroDetto: 'risparmiati, un mese e mezzo di lavoro',
-    barre: { totale: 10, accese: 6, dopo: 'Il 60% aveva ragione sul problema. Sulla soluzione no.' },
+    numeroDetto: 'risparmiati, cioè sei settimane di sviluppo',
+    barre: { totale: 10, accese: 6, dopo: 'Il 60% aveva ragione sul problema. Sulla soluzione, no.' },
   },
   {
     slug: 'palestra',
     nome: 'Il gestionale',
-    dove: '21Lab, 2026',
+    dove: '21Lab, 2026, una palestra in provincia di Modena',
     scena:
-      'Il gestionale della palestra è macchinoso. Pacchetti, abbonamenti e compensi dei coach finiscono su un foglio a mano, e nella testa di chi se li deve ricordare.',
+      'Il gestionale della palestra è macchinoso. Pacchetti, abbonamenti e compensi dei coach stanno su un foglio e nella testa di chi se li ricorda. Il budget è quello di una palestra, non di un’azienda di software.',
     domanda: 'Tu cosa fai?',
     scelte: [
-      { id: 'a', testo: 'Ne compro uno migliore, sul mercato ce ne sono tanti' },
-      { id: 'b', testo: 'Lo costruisco, con agenti AI che scrivono il codice' },
+      { id: 'a', testo: 'Compro il gestionale migliore che c’è sul mercato' },
+      { id: 'b', testo: 'Cerco uno sviluppatore e glielo faccio costruire' },
+      { id: 'c', testo: 'Lo costruisco con agenti AI e faccio io il product manager' },
     ],
-    mia: 'b',
-    stessa: 'Abbiamo fatto la stessa scelta, e sono curioso di sapere perché.',
-    diversa: 'Io ho fatto l’altra. Comprarne uno voleva dire piegare la palestra al software.',
+    mia: 'c',
+    stessa: 'Abbiamo scelto uguale. Ti avverto, la parte difficile non è il codice.',
+    diversa: 'Io ho fatto un’altra cosa. Comprarne uno voleva dire piegare la palestra al software, e lo sviluppatore non ce lo potevamo permettere.',
     fatto:
-      'Scrivo in italiano semplice come funziona la palestra, gli agenti scrivono il codice e io provo ogni schermata. Al 13 ottobre 2026 la prima versione aveva 217 attività chiuse su 235.',
-    numero: '217 su 235',
-    numeroDetto: 'attività del gestionale chiuse al 13 ottobre',
-    barre: { totale: 235, accese: 217, dopo: 'Il primo gruppo di clienti lo prova dal 7 dicembre 2026.' },
+      'Ho scritto in italiano semplice come funziona la palestra, regola per regola. Gli agenti AI scrivono il codice, io decido cosa serve e provo ogni schermata. Da ottobre dieci soci lo usano per prenotare, e ogni settimana entra una funzione nuova.',
+    mestiere:
+      'Per chi fa il mestiere. Le specifiche scritte sono l’unica fonte di verità, ogni compito ha criteri di accettazione che si provano da soli, e ogni schermata si chiude solo dopo il confronto col disegno. Sulle prime 32 gli agenti hanno trovato 361 differenze che a parole nessuno aveva visto.',
+    numero: '790 euro',
+    numeroDetto: 'di AI per i primi 102 compiti, un lavoro da 400 a 800 ore di sviluppo',
+    barre: { totale: 10, accese: 10, dopo: 'Dieci soci lo usano già. Dal 7 dicembre lo userà tutto il Lab.' },
   },
 ];

@@ -20,7 +20,7 @@ export default function Home() {
     <>
       {/* La prima schermata: il ritratto resta fermo a destra mentre a sinistra si legge il perché */}
       <div className="apertura">
-        <figure className="apertura-foto">
+        <figure className="apertura-foto arco">
           <Image src={mattia.ritratto.src} alt={mattia.ritratto.alt} priority sizes="(min-width: 1024px) 50vw, 100vw" />
         </figure>
 
@@ -37,10 +37,13 @@ export default function Home() {
                 <span className="block">con una palestra</span>
               </h1>
               <p className="entra-subito mt-6 max-w-[38ch]" style={{ '--ritardo': 2 } as React.CSSProperties}>
-                Sono Mattia De Luca, senior product manager. Sei anni tra pagamenti e integrazioni, in QubicaAMF e in
-                LeadsBridge, e prima sette con il mio studio web. Da agosto 2026 sono il GM di 21Lab, una palestra a
-                Vignola, e il suo gestionale lo costruisco con agenti AI.{' '}
-                <strong className="font-semibold">Cerco un ruolo da product manager in un team.</strong>
+                Sono Mattia De Luca, senior product manager. Sei anni tra pagamenti, gestionali e integrazioni, in
+                QubicaAMF e in LeadsBridge, e prima sette anni in proprio fra design e sviluppo. Da agosto 2026 sono il GM, cioè il direttore generale, del 21Lab,
+                una palestra in provincia di Modena, dove il codice del gestionale lo scrivono agenti AI e le decisioni
+                le prendo io.{' '}
+                <strong className="font-semibold">
+                  Cerco un ruolo da product manager, in un team e in un&apos;azienda in cui investire i prossimi anni.
+                </strong>
               </p>
               <div className="entra-subito mt-8 flex flex-wrap items-center gap-x-6 gap-y-4" style={{ '--ritardo': 3 } as React.CSSProperties}>
                 <a href="#decidi" className="pulsante" data-umami-event="home-decidi">
@@ -55,7 +58,7 @@ export default function Home() {
               </div>
             </div>
             <p className="mt-10 text-piccolo text-grigio lg:mt-0">
-              GM di 21Lab <GiorniDaGM />, il gestionale va ai primi clienti il 7 dicembre.
+              GM del 21Lab <GiorniDaGM />. Dieci soci usano già il gestionale nuovo.
             </p>
           </section>
 
@@ -63,14 +66,16 @@ export default function Home() {
             <div className="max-w-[34rem] space-y-5">
               <p data-entra className="text-lead font-medium">
                 Per sei anni ho detto nelle riunioni che le decisioni si prendono guardando i dati, che si prova in
-                piccolo, che il software deve restituire tempo alle persone.
+                piccolo, si sperimenta e si sbaglia spesso e in fretta, e che il software deve restituire tempo alle
+                persone.
               </p>
               <p data-entra>
                 Poi ho voluto vedere se funziona anche alle sette di sera, con la reception piena e una classe che sta
-                per partire. Così il primo agosto 2026 ho lasciato un&apos;azienda da 600 persone per una palestra.
+                per partire. Così ad agosto ho lasciato un&apos;azienda da 600 persone per una palestra.
               </p>
               <p data-entra>
-                Il metodo l&apos;ho portato con me. Si vede meglio nelle tre decisioni qui sotto, una per ogni lavoro.
+                Funziona. Solo che alle sette di sera nessuno ti lascia finire la slide. Il metodo si vede meglio nelle
+                tre decisioni qui sotto, una per ogni lavoro.
               </p>
               <p data-entra className="text-grigio">
                 Prima di leggere cosa ho fatto io, prova a prenderle tu. Ci vuole un minuto.
@@ -161,11 +166,14 @@ export default function Home() {
 
       <section aria-label="Adesso" className="mt-32 bg-superficie px-[var(--margine)] py-20 lg:mt-48 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:py-32">
         <figure data-entra className="mb-14 lg:order-2 lg:col-span-5 lg:col-start-8 lg:mb-0 lg:self-center">
-          <div className="telefono mx-auto lg:mx-0" data-ui>
-            <Image src={schermate.assistente.src} alt={schermate.assistente.alt} sizes="320px" className="w-full" />
-          </div>
+          <Image
+            src={schermate.postoLiberato.src}
+            alt={schermate.postoLiberato.alt}
+            sizes="340px"
+            className="mx-auto w-full max-w-[320px] lg:mx-0"
+          />
           <figcaption className="didascalia mx-auto max-w-[320px] lg:mx-0">
-            Il gestionale di 21Lab, una sera di ottobre. {schermate.assistente.didascalia}
+            Il gestionale del 21Lab, dati di prova. {schermate.postoLiberato.didascalia}
           </figcaption>
         </figure>
         <div className="max-w-[34rem] lg:col-span-6 lg:col-start-2">
@@ -178,23 +186,23 @@ export default function Home() {
           />
           <div className="mt-7 space-y-5">
             <p data-entra>
-              Adesso faccio il GM di 21Lab. Prezzi e pacchetti, turni e compensi dei coach, clienti, conti di fine
-              mese. Il lunedì sera sono spesso alla reception, ed è il posto migliore che conosca per capire se una
-              decisione era giusta.
+              Adesso faccio il GM del 21Lab. Prezzi e pacchetti, turni dei coach, clienti, conti di fine mese. Il
+              lunedì sera sono spesso alla reception, che è il posto migliore che conosca per capire se una decisione
+              era giusta. Ti risponde in trenta secondi, e senza slide.
             </p>
             <p data-entra>
-              La sera chiudo la prima versione del gestionale. L&apos;app per iPhone è in prova da ottobre, e il primo
-              gruppo di clienti la userà dal 7 dicembre.
+              Il gestionale nuovo cresce così. Da ottobre dieci soci lo usano per prenotare, ogni settimana entra una
+              funzione e ogni lunedì sento cosa non va. Dal 7 dicembre lo apro a tutto il Lab.
             </p>
             <p data-entra>
-              Da solo vado veloce, ma imparo poco. Mi manca qualcuno che mi dica che la mia idea migliore della
-              settimana è una pessima idea.
+              Da solo vado veloce, ma imparo poco. Voglio di nuovo un team che mi dica quando la mia idea migliore
+              della settimana è una pessima idea, e un&apos;azienda in cui investire i prossimi anni.
             </p>
           </div>
           <p data-entra className="text-lead mt-8 italic">
             Mattia
           </p>
-          <p className="text-piccolo text-grigio">GM di 21Lab, Vignola</p>
+          <p className="text-piccolo text-grigio">GM del 21Lab, da Savignano sul Panaro</p>
           <Link href="/adesso" className="collegamento mt-8 inline-block font-semibold">
             Cosa sto facendo questo mese <span aria-hidden="true">→</span>
           </Link>

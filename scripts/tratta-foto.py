@@ -24,6 +24,10 @@ FOTO = {
     'registratore': ('assets/national-cash-register-1918.jpg', 4 / 5, 0.5, 0.5),
     'riunione': ('assets/meeting-of-the-niagara-frontier-regional-committee.jpg', 3 / 2, 0.5, 0.5),
     'post-it': ('assets/sticky-notes-on-the-wall-of-the.jpg', 4 / 5, 0.4, 0.5),
+    'savignano': ('assets/savignano-sul-panaro-castello-di-savignano-202209141607.jpg', 4 / 5, 0.33, 0.5),
+    'spilamberto': ('assets/servizio-fotografico-spilamberto-1976.jpg', 4 / 5, 0.62, 0.5),
+    'vignola': ('assets/servizio-fotografico-vignola-1976.jpg', 4 / 5, 0.5, 0.5),
+    'frutteti': ('assets/servizio-fotografico-vignola-1976-2.jpg', 3 / 2, 0.5, 0.6),
     'carta-da-parati': ('assets/sample-book-the-larkin-wallpaper-book-no.jpg', 3 / 2, 0.5, 0.5),
 }
 LATO = 1400

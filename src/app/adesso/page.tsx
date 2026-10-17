@@ -23,7 +23,7 @@ export default function PaginaAdesso() {
 
       <div className="flex flex-col px-[var(--margine)] lg:grid lg:grid-cols-12 lg:gap-x-8">
         <figure data-entra className="order-last mt-14 lg:order-none lg:mt-0 lg:sticky lg:top-28 lg:col-span-5 lg:mb-0 lg:self-start">
-          <div className="foto-taglio overflow-hidden">
+          <div className="arco foto-taglio">
             <Image src={foto.ciliegie.src} alt={foto.ciliegie.alt} sizes="(min-width: 1024px) 40vw, 100vw" className="aspect-[4/5] w-full object-cover" />
           </div>
           <figcaption className="didascalia">{foto.ciliegie.didascalia}</figcaption>

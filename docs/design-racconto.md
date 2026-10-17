@@ -26,6 +26,8 @@ Direzione del foglio `split-stage` (seed 1215440405, `.taste-skill/direction.jso
 
 Carattere unico Erode (Indian Type Foundry, licenza ITF Free Font), file in `src/fonts/`, cinque misure (piccolo, corpo, lead, testa, cifra).
 
+Forma delle foto (17/10). Persone e posti stanno in una finestra ad arco, come quelle delle rocche di Vignola, Spilamberto e Savignano; documenti, archivi e schermate restano rettangoli. Nel piede i tre paesi di Mattia (Savignano dove abita, Spilamberto fino a maggio 2026, Vignola dove lavora), due foto di Paolo Monti del 1976.
+
 Foto. Bicromia inchiostro e carta con grana leggera, fatta da `scripts/tratta-foto.py` dagli originali in `assets/` (non nel repo). Crediti in `src/content/foto.ts` e nel piè di pagina. Schermate del gestionale di 21Lab con dati di prova, ritagliate senza nomi di persone.
 
 Movimento. Le barre che salgono e diventano verdi, le foto che si scoprono dal basso quando entrano, il palco che sfuma da una scena all'altra, le parti di ogni blocco una dopo l'altra, un tiro di bowling in loop. Con "riduci movimento" o senza script tutto è visibile e il gioco diventa un riquadro da aprire.

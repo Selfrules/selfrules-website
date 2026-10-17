@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { LINKEDIN, pagine as voci } from '@/content';
-import { crediti, foto } from '@/content/foto';
+import { crediti } from '@/content/foto';
+import { TrePaesi } from './TrePaesi';
 import { Scrivimi } from './Scrivimi';
 
-// La chiusura di ogni pagina: un campo per scrivermi, poi la Rocca di Vignola accanto al menu grande.
+// La chiusura di ogni pagina: un campo per scrivermi, poi i tre paesi accanto al menu.
 export function PieDiPagina() {
   return (
     <footer className="mt-24 lg:mt-32">
@@ -21,7 +21,7 @@ export function PieDiPagina() {
             <dl className="mt-10 grid grid-cols-2 gap-6 text-piccolo">
               <div>
                 <dt className="opacity-80">Dove</dt>
-                <dd>Vignola, in provincia di Modena</dd>
+                <dd>Savignano sul Panaro, lavoro a Vignola</dd>
               </div>
               <div>
                 <dt className="opacity-80">Altrove</dt>
@@ -36,14 +36,14 @@ export function PieDiPagina() {
         </div>
       </section>
 
-      <div className="grid bg-superficie lg:min-h-svh lg:grid-cols-2">
-        <figure className="relative hidden overflow-hidden lg:block">
-          <Image src={foto.rocca.src} alt={foto.rocca.alt} sizes="(min-width: 1024px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
-        </figure>
-        <div className="flex flex-col px-[var(--margine)] pt-10 pb-8 lg:px-12 lg:pt-16">
+      <div className="bg-superficie px-[var(--margine)] pt-12 pb-8 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:pt-20">
+        <div className="lg:col-span-6">
+          <TrePaesi />
+        </div>
+        <div className="mt-14 flex flex-col lg:col-span-5 lg:col-start-8 lg:mt-0">
           <p className="font-semibold">Mattia De Luca</p>
-          <nav aria-label="Pagine" className="menu-grande mt-4 lg:mt-6">
-            <ul className="grid grid-cols-2 gap-x-6 lg:block">
+          <nav aria-label="Pagine" className="menu-grande mt-4">
+            <ul className="grid grid-cols-2 gap-x-6">
               <li>
                 <Link href="/">Inizio</Link>
               </li>
@@ -54,12 +54,18 @@ export function PieDiPagina() {
               ))}
             </ul>
           </nav>
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-auto lg:pt-16">
+          <div className="mt-12 grid gap-6">
             <p>Scritto da me, costruito con qualche agente AI.</p>
             <details>
               <summary className="cursor-pointer font-semibold">Le foto, chi le ha fatte</summary>
               <ul className="mt-3 space-y-2 text-grigio">
-                <li>Il ritratto di Mattia è suo. Le schermate sono dei suoi programmi, con dati di prova.</li>
+                <li>
+                  Il ritratto di Mattia è di{' '}
+                  <a href="https://valentinamalavenda.com/" className="collegamento">
+                    Valentina Malavenda
+                  </a>
+                  . Le schermate sono dei suoi programmi, con dati di prova.
+                </li>
                 {crediti.map((c) => (
                   <li key={c.pagina}>
                     <a href={c.pagina} className="collegamento">
@@ -71,9 +77,7 @@ export function PieDiPagina() {
               </ul>
             </details>
           </div>
-          <p className="mt-10 text-piccolo text-grigio">
-            <span className="hidden lg:inline">{foto.rocca.didascalia} </span>© Mattia De Luca, 2026
-          </p>
+          <p className="mt-10 text-piccolo text-grigio">© Mattia De Luca, 2026</p>
         </div>
       </div>
     </footer>

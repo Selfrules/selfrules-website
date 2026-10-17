@@ -21,11 +21,11 @@ export function Contatori() {
     <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:max-w-[48rem]">
       <p>
         <span className="cifra block text-verde">{daGM ?? '1° ago'}</span>
-        <span className="mt-2 block max-w-[20ch] text-grigio">giorni da GM di 21Lab</span>
+        <span className="mt-2 block max-w-[20ch] text-grigio">giorni da GM del 21Lab</span>
       </p>
       <p>
         <span className="cifra block">{alPilota === null ? '7 dic' : alPilota > 0 ? alPilota : 'via'}</span>
-        <span className="mt-2 block max-w-[20ch] text-grigio">giorni prima che i primi clienti provino il gestionale</span>
+        <span className="mt-2 block max-w-[20ch] text-grigio">giorni prima che tutto il Lab usi il gestionale nuovo</span>
       </p>
     </div>
   );

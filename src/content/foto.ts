@@ -21,7 +21,14 @@ import uiImpostazioni from '@/foto/ui/impostazioni.jpg';
 import chMappa from '@/foto/casahunter-mappa.jpg';
 import chLista from '@/foto/casahunter-lista.jpg';
 import chAnnuncio from '@/foto/ui/casahunter-annuncio.png';
+import mpPosto from '@/foto/ui/mp-posto-liberato.png';
+import mpPiena from '@/foto/ui/mp-lezione-piena.png';
+import mpAssistente from '@/foto/ui/mp-assistente-scheda.png';
 import cartaParati from '@/foto/r/carta-da-parati.jpg';
+import savignano from '@/foto/r/savignano.jpg';
+import spilamberto from '@/foto/r/spilamberto.jpg';
+import vignola from '@/foto/r/vignola.jpg';
+import frutteti from '@/foto/r/frutteti.jpg';
 
 export type Immagine = { src: typeof ritratto; alt: string; didascalia?: string };
 export type Credito = { titolo: string; autore: string; licenza: string; pagina: string };
@@ -94,6 +101,30 @@ export const foto = {
     didascalia: 'Tutti d’accordo, nel 1943. Chissà com’è andata dopo.',
     credito: { titolo: 'Meeting of the Niagara Frontier regional committee, 1943', autore: 'Marjory Collins', licenza: 'pubblico dominio', pagina: 'https://commons.wikimedia.org/wiki/File:Meeting_of_the_Niagara_Frontier_regional_committee_of_the_United_States_War_Manpower_Commssion.8d16929v.jpg' },
   },
+  savignano: {
+    src: savignano,
+    alt: 'Savignano alto, il borgo col campanile in cima alla collina',
+    didascalia: 'Savignano sul Panaro, dove abito.',
+    credito: { titolo: 'Savignano sul Panaro, Castello di Savignano, 2022', autore: 'Quart1984', licenza: 'CC BY-SA 4.0, in bicromia', pagina: 'https://commons.wikimedia.org/wiki/File:Savignano_sul_Panaro_-_Castello_di_Savignano_-_202209141607.jpg' },
+  },
+  spilamberto: {
+    src: spilamberto,
+    alt: 'La Rocca Rangoni di Spilamberto nel 1976, col ponte ad archi',
+    didascalia: 'Spilamberto, dove ho abitato fino a maggio.',
+    credito: { titolo: 'Servizio fotografico (Spilamberto, 1976)', autore: 'Paolo Monti', licenza: 'CC BY-SA 4.0, in bicromia', pagina: 'https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Spilamberto,_1976)_-_BEIC_6329212.jpg' },
+  },
+  vignola: {
+    src: vignola,
+    alt: 'La Rocca di Vignola nel 1976, le torri merlate dietro gli alberi spogli',
+    didascalia: 'Vignola, dove lavoro.',
+    credito: { titolo: 'Servizio fotografico (Vignola, 1976)', autore: 'Paolo Monti', licenza: 'CC BY-SA 4.0, in bicromia', pagina: 'https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Vignola,_1976)_-_BEIC_6329214.jpg' },
+  },
+  frutteti: {
+    src: frutteti,
+    alt: 'I frutteti della valle del Panaro nel 1976, visti dalla collina',
+    didascalia: 'La valle del Panaro nel 1976, ciliegi a perdita d’occhio. Paolo Monti.',
+    credito: { titolo: 'Servizio fotografico (Vignola, 1976), i frutteti', autore: 'Paolo Monti', licenza: 'CC BY-SA 4.0, in bicromia', pagina: 'https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Vignola,_1976)_-_BEIC_6329215.jpg' },
+  },
   cartaParati: {
     src: cartaParati,
     alt: 'Un campionario di carte da parati del 1915, aperto su due motivi',
@@ -110,10 +141,13 @@ export const foto = {
 
 // Schermate dei programmi di Mattia: il gestionale di 21Lab (dati di prova) e CasaHunter
 export const schermate = {
-  classe: { src: uiClasse, alt: 'Il gestionale di 21Lab, una classe con 9 posti presi su 15 e gli orari di disdetta', didascalia: 'Il gestionale di 21Lab, dati di prova. Una classe con i suoi posti e le sue scadenze.' },
-  assistente: { src: uiAssistente, alt: 'Il gestionale di 21Lab, l’assistente che cambia una regola e lascia dieci minuti per annullare', didascalia: 'L’assistente cambia una regola e lascia dieci minuti per tornare indietro.' },
-  impostazioni: { src: uiImpostazioni, alt: 'Il gestionale di 21Lab, le regole della palestra scritte in italiano semplice', didascalia: 'Le regole della palestra, scritte come le direbbe la reception.' },
+  classe: { src: uiClasse, alt: 'Il gestionale del 21Lab, una classe con 9 posti presi su 15 e gli orari di disdetta', didascalia: 'Il gestionale del 21Lab, dati di prova. Una classe con i suoi posti e le sue scadenze.' },
+  assistente: { src: uiAssistente, alt: 'Il gestionale del 21Lab, l’assistente che cambia una regola e lascia dieci minuti per annullare', didascalia: 'L’assistente cambia una regola e lascia dieci minuti per tornare indietro.' },
+  impostazioni: { src: uiImpostazioni, alt: 'Il gestionale del 21Lab, le regole della palestra scritte in italiano semplice', didascalia: 'Le regole della palestra, scritte come le direbbe la reception.' },
   mappa: { src: chMappa, alt: 'CasaHunter, la mappa degli annunci in provincia di Modena e Bologna', didascalia: 'CasaHunter, 880 annunci sulla mappa. In uno di questi adesso ci abito.' },
+  postoLiberato: { src: mpPosto, alt: 'Il gestionale del 21Lab sul telefono, un posto liberato in una classe piena con tredici minuti per accettarlo', didascalia: 'Si libera un posto in una classe piena. Il primo in lista ha tredici minuti per prenderlo, poi tocca al secondo. Nessuno deve chiamare nessuno.' },
+  lezionePiena: { src: mpPiena, alt: 'Il gestionale del 21Lab sul telefono, una classe piena con la lista d’attesa', didascalia: 'Classe piena. Ti metti in lista, e la lista chiude da sola alle 17:30.' },
+  assistenteAnteprima: { src: mpAssistente, alt: 'Il gestionale del 21Lab sul computer, l’assistente propone di cambiare una regola e mostra prima e dopo', didascalia: 'Chi gestisce chiede a parole, l’assistente mostra prima e dopo, e cambia la regola solo dopo il sì.' },
   annuncio: { src: chAnnuncio, alt: 'CasaHunter, un annuncio con il voto 100 dato dall’AI, il prezzo e i metri quadri', didascalia: 'Un annuncio come lo vedeva CasaHunter, col voto dell’AI in alto a destra.' },
   lista: { src: chLista, alt: 'CasaHunter, la lista degli annunci col voto di ciascuno', didascalia: 'CasaHunter, gli annunci col voto che gli dava l’AI.' },
 } satisfies Record<string, Immagine>;

@@ -6,7 +6,8 @@ import type { Barre } from './decisioni';
 
 export type Scena =
   | { tipo: 'foto'; immagine: Immagine; didascalia?: string }
-  | { tipo: 'schermata'; immagine: Immagine; stretta?: boolean }
+  | { tipo: 'schermata'; immagine: Immagine; stretta?: boolean; nuda?: boolean }
+  | { tipo: 'regole' }
   | { tipo: 'barre'; barre: Barre; accese: boolean; numero: string; detto: string }
   | { tipo: 'numero'; numero: string; detto: string }
   | { tipo: 'campi' }
@@ -27,14 +28,14 @@ export const palchi: Record<string, Scena[]> = {
     { tipo: 'campi' },
     { tipo: 'barre', barre: { totale: 10, accese: 6, dopo: '' }, accese: true, numero: '60%', detto: 'chiedeva la funzione. Il problema l’avevano già risolto da soli' },
     { tipo: 'numero', numero: '35%', detto: 'di tempo in meno per mettere in piedi un’integrazione' },
-    { tipo: 'numero', numero: '3 sprint', detto: 'risparmiati con mezz’ora di telefonata' },
+    { tipo: 'numero', numero: '3 sprint', detto: 'risparmiati con cinque telefonate' },
   ],
   palestra: [
+    { tipo: 'foto', immagine: foto.frutteti },
     { tipo: 'foto', immagine: foto.manubri },
-    { tipo: 'schermata', immagine: schermate.classe, stretta: true },
-    { tipo: 'foto', immagine: foto.postIt, didascalia: 'Le regole del Lab stavano su fogli e nella testa di chi se le ricordava.' },
-    { tipo: 'schermata', immagine: schermate.assistente, stretta: true },
-    { tipo: 'barre', barre: { totale: 235, accese: 217, dopo: '' }, accese: true, numero: '217 su 235', detto: 'attività del gestionale chiuse al 13 ottobre 2026' },
+    { tipo: 'regole' },
+    { tipo: 'schermata', immagine: schermate.assistenteAnteprima },
+    { tipo: 'schermata', immagine: schermate.postoLiberato, nuda: true },
     { tipo: 'foto', immagine: mattia.alto },
   ],
 };
