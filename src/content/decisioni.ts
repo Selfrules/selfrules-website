@@ -86,11 +86,11 @@ export const decisioni: Decisione[] = [
     stessa: 'Abbiamo scelto uguale. Ti avverto, la parte difficile non è il codice.',
     diversa: 'Io ho fatto un’altra cosa. Comprarne uno voleva dire piegare la palestra al software, e lo sviluppatore non ce lo potevamo permettere.',
     fatto:
-      'Ho scritto in italiano semplice come funziona la palestra, regola per regola. Gli agenti AI scrivono il codice, io decido cosa serve e provo ogni schermata. Da ottobre dieci soci lo usano per prenotare, e ogni settimana entra una funzione nuova.',
+      'Ho scritto in italiano semplice come funziona la palestra, regola per regola. Gli agenti AI scrivono il codice, io decido cosa serve e provo ogni schermata. Da ottobre dieci clienti lo usano per prenotare, e ogni settimana entra una funzione nuova.',
     mestiere:
       'Per chi fa il mestiere. Le specifiche scritte sono l’unica fonte di verità, ogni compito ha criteri di accettazione che si provano da soli, e ogni schermata si chiude solo dopo il confronto col disegno. Sulle prime 32 gli agenti hanno trovato 361 differenze che a parole nessuno aveva visto.',
     numero: '790 euro',
     numeroDetto: 'di AI per i primi 102 compiti, un lavoro da 400 a 800 ore di sviluppo',
-    barre: { totale: 10, accese: 10, dopo: 'Dieci soci lo usano già. Dal 7 dicembre lo userà tutto il Lab.' },
+    barre: { totale: 10, accese: 10, dopo: 'Dieci clienti lo usano già. Dal 7 dicembre lo userà tutto il Lab.' },
   },
 ];

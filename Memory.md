@@ -10,7 +10,7 @@
 - Mancano inglese (IMG-13), CV nuovo, le altre 5 note.
 
 ## Cronologia
-- 2026-10-17 — Giro sugli appunti di Mattia (Note, "Modifiche sito"): testi riscritti senza incongruenze (gestionale in uso da dieci soci, cinque telefonate, errore 2 prima della regola), tre decisioni con tre risposte e una riga per chi fa il mestiere, schermate da Magic Patterns, foto ad arco, i tre paesi nel piede, credito a Valentina Malavenda, prossima decisione che torna alla domanda.
+- 2026-10-17 — Giro sugli appunti di Mattia (Note, "Modifiche sito"): testi riscritti senza incongruenze (gestionale in uso da dieci clienti, cinque telefonate, errore 2 prima della regola), tre decisioni con tre risposte e una riga per chi fa il mestiere, schermate da Magic Patterns, foto ad arco, i tre paesi nel piede, credito a Valentina Malavenda, prossima decisione che torna alla domanda.
 - 2026-10-16 sera tardi — Giri 2-4 sul sito pubblicato: ricerca in `docs/ricerca-2026-10-16.md`, storie con la decisione che aspetta la scelta, Come lavoro a capitoli che si aprono, schermate leggibili e annuncio di CasaHunter ridisegnato, piede corto. Critica esterna passata da 6 a 7 su 10. Per tornare indietro: Instant Rollback su Vercel al deploy g2sh7onzl, o il tag git `sito-prima-del-16-10`.
 - 2026-10-16 sera — Redesign "Decidi tu" da capo dopo il giudizio di Mattia sul "nome come monumento": ricerca su 16 siti personali e su lettura e attenzione, gioco delle decisioni, palco delle storie, critica di un lettore esterno (6/10, poi corretti i cinque punti), pubblicato su main.
 - 2026-10-16 — Redesign "Il nome come monumento" su `sito-2026-redesign`: home, storie, errori, adesso, come lavoro, note; foto d'archivio con crediti, video di bowling, componente Foto nelle MDX.

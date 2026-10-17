@@ -58,7 +58,7 @@ export default function Home() {
               </div>
             </div>
             <p className="mt-10 text-piccolo text-grigio lg:mt-0">
-              GM del 21Lab <GiorniDaGM />. Dieci soci usano già il gestionale nuovo.
+              GM del 21Lab <GiorniDaGM />. Dieci clienti usano già il gestionale nuovo.
             </p>
           </section>
 
@@ -191,7 +191,7 @@ export default function Home() {
               era giusta. Ti risponde in trenta secondi, e senza slide.
             </p>
             <p data-entra>
-              Il gestionale nuovo cresce così. Da ottobre dieci soci lo usano per prenotare, ogni settimana entra una
+              Il gestionale nuovo cresce così. Da ottobre dieci clienti lo usano per prenotare, ogni settimana entra una
               funzione e ogni lunedì sento cosa non va. Dal 7 dicembre lo apro a tutto il Lab.
             </p>
             <p data-entra>

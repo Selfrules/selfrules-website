@@ -46,17 +46,17 @@ export const storie: Storia[] = [
   },
   {
     slug: 'palestra',
-    numero: '10 soci',
+    numero: '10 clienti',
     evidenzia: false,
     titolo: 'Una palestra, un gestionale nuovo e qualche agente AI',
     azienda: '21Lab Fitness & Athletics',
     ruolo: 'GM',
     periodo: 'da agosto 2026',
     riassunto:
-      'Da agosto 2026 sono il GM di una palestra in provincia di Modena. Il gestionale nuovo lo scrivono agenti AI, io decido cosa serve. Dieci soci lo usano già.',
+      'Da agosto 2026 sono il GM di una palestra in provincia di Modena. Il gestionale nuovo lo scrivono agenti AI, io decido cosa serve. Dieci clienti lo usano già.',
     rigaPiccola: 'Dal 7 dicembre lo userà tutto il Lab.',
     link: "Com'è andata finora",
-    fretta: 'Il gestionale di una palestra scritto da agenti AI, con me a decidere cosa serve. Dieci soci lo usano da ottobre, una funzione nuova a settimana, tutto il Lab dal 7 dicembre.',
+    fretta: 'Il gestionale di una palestra scritto da agenti AI, con me a decidere cosa serve. Dieci clienti lo usano da ottobre, una funzione nuova a settimana, tutto il Lab dal 7 dicembre.',
     minuti: 4,
   },
 ];
