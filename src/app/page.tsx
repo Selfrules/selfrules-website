@@ -43,7 +43,8 @@ export default function Home() {
                 le prendo io.{' '}
                 <strong className="font-semibold">
                   Cerco un ruolo da product manager, in un team e in un&apos;azienda in cui investire i prossimi anni.
-                </strong>
+                </strong>{' '}
+                Sono disponibile da novembre, il Lab resta in buone mani.
               </p>
               <div className="entra-subito mt-8 flex flex-wrap items-center gap-x-6 gap-y-4" style={{ '--ritardo': 3 } as React.CSSProperties}>
                 <a href="#decidi" className="pulsante" data-umami-event="home-decidi">

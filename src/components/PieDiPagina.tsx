@@ -11,7 +11,7 @@ export function PieDiPagina() {
       <section id="scrivimi" aria-labelledby="titolo-scrivimi" className="campo-verde px-[var(--margine)] py-20 lg:py-32">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8">
           <div data-entra className="lg:col-span-5">
-            <p className="text-lead max-w-[30ch]">Cerchi un product manager? Hai una domanda su una storia?</p>
+            <p className="text-lead max-w-[30ch]">Cerchi un product manager, disponibile da novembre? Hai una domanda su una storia?</p>
             <h2 id="titolo-scrivimi" className="mt-4 text-[clamp(3rem,1.5rem+6vw,7rem)] leading-[0.9] tracking-[-0.04em]">
               Scrivimi due righe
             </h2>
