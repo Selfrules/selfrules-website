@@ -1,0 +1,41 @@
+# La funzione che il 60% chiedeva, e che non abbiamo costruito
+
+> Scrivi pure sopra il testo, oppure sotto con "MATTIA:" davanti. Io riporto tutto nel sito.
+
+Il 60% degli utenti chiedeva la stessa funzione. In una startup è il numero che fa partire una riunione da cui esci con una data di consegna. Io prima ho fatto cinque telefonate.
+
+## Per chi era un problema
+
+LeadsBridge è una piattaforma di lead distribution. Un'azienda fa una campagna su Meta, Google, LinkedIn o TikTok, qualcuno lascia il suo contatto, e LeadsBridge lo porta nel CRM che l'azienda usa già, il programma dove i commerciali tengono i clienti. Più di 380 integrazioni pronte.
+
+Ero l'unico responsabile di prodotto in una startup di 50 persone, con sede ad Austin, in Texas, e io a lavorare dall'Italia. Dal 2020 al 2023, fino a dopo l'acquisizione da parte di ActiveProspect.
+
+Per i clienti ogni contatto perso era una vendita persa. Se un'integrazione si bloccava il venerdì sera, il lunedì mattina qualcuno contava i soldi spesi in pubblicità per niente.
+
+## Cosa non andava
+
+Ogni cliente passava da un passaggio obbligato, dire quale dato della piattaforma va in quale campo del CRM. Il nome qui, l'email là, il telefono in quell'altro campo. Era la parte più usata del prodotto e quella dove la gente si bloccava.
+
+E poi c'era la richiesta. Una funzione nuova, chiesta dal 60% degli utenti. Sei utenti su dieci.
+
+## Cosa ho deciso, e cosa ho scartato
+
+[qui c'è la decisione del gioco, testo in 01-home.md]
+
+Prima di scrivere una riga di specifiche ho chiamato cinque dei clienti che la chiedevano, mezz'ora ciascuno. Al terzo era già chiaro che il problema l'avevano risolto da soli, con un giro un po' storto ma che funzionava. Ho fatto anche le ultime due, e hanno confermato.
+
+Ho scartato la funzione. Ho preso la loro soluzione, l'ho resa ufficiale con una piccola modifica al prodotto, e l'ho spiegata a tutti gli altri. **Tre sprint risparmiati**. Con sprint da due settimane, sono un mese e mezzo di lavoro del team di sviluppo andato su altro.
+
+Sul passaggio dei campi invece ho fatto il contrario. L'ho ridisegnato, perché lì il problema non l'aveva risolto nessuno.
+
+## Com'è finita
+
+Per mettere in piedi un'integrazione serviva circa il **35% di tempo in meno**. Dove prima serviva un'ora, bastavano circa quaranta minuti.
+
+L'altra metà del lavoro erano i partner. Tenevo i rapporti con Meta, Google, TikTok e LinkedIn, e le integrazioni in piedi ogni volta che cambiavano le loro regole o chiedevano una nuova certificazione. Se funziona nessuno ti chiama. Se si rompe ti chiamano tutti, di lunedì.
+
+Le telefonate le faccio perché il primo anno non le avevo fatte, e l'ho pagata. Uno strumento per costruirsi le integrazioni da soli che i clienti hanno usato il 58% in meno. È nella pagina degli [errori](/errori), perché è lì che mi ha insegnato di più.
+
+## Cosa ho imparato
+
+Una richiesta dice cosa la gente pensa di volere. Una telefonata dice cosa sta già facendo. La seconda costa mezz'ora, la prima può costare tre sprint.

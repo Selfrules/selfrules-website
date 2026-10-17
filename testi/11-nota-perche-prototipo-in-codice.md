@@ -1,0 +1,37 @@
+# Perché prototipo in codice
+
+> Scrivi pure sopra il testo, oppure sotto con "MATTIA:" davanti. Io riporto tutto nel sito.
+
+Riga sotto il titolo: Ho trovato casa con otto piccoli programmi. Perché costruisco prima di chiedere settimane al team, e quando non lo faccio.
+
+La maggior parte dei product manager non scrive codice, e va benissimo così. Il mestiere non lo chiede. Ma se lo sai fare, cambia il modo in cui decidi.
+
+Parlo della cosa più piccola che risponde a una domanda. La costruisco prima di chiedere al team settimane di lavoro.
+
+## Una casa in affitto
+
+Cercavo un appartamento e non volevo ricaricare i siti di annunci ogni sera. Così ho scritto 8 piccoli programmi che leggevano gli annunci al posto mio.
+
+La parte difficile è arrivata dopo, cioè capire quali annunci valeva la pena guardare. Far leggere tutto a un'AI costa, e su centinaia di annunci costa parecchio.
+
+Così ho diviso il lavoro in tre passaggi. Prima regole fisse, che scartano gratis quello che non va (prezzo, zona, metri). Poi l'AI legge solo i migliori. Infine il voto scende man mano che l'annuncio invecchia. Su 880 annunci raccolti, l'AI ne ha dovuti leggere 28. In uno di quei 28, qualche mese dopo, ci sono andato ad abitare.
+
+[annuncio di CasaHunter ridisegnato]
+
+Quella divisione è venuta fuori costruendo, un pezzo alla volta, guardando quanto costava ogni passaggio.
+
+## Un campo che nessuno aveva letto
+
+[foto: insegna, didascalia in 13-didascalie.md]
+
+In QubicaAMF un centro bowling grande stava per disdire. Ogni pagamento arrivava nel suo sistema contabile senza dire da quale terminale veniva, e chiudere la cassa a fine giornata richiedeva il doppio del tempo.
+
+Ho letto la documentazione tecnica del fornitore come si legge un contratto. C'era un campo che esisteva già e poteva portare quell'informazione. Ho scritto come usarlo, il team l'ha rilasciato, e il centro è rimasto.
+
+Mi è bastato saper leggere una documentazione tecnica.
+
+## Il rischio
+
+Un product manager che programma rischia di voler costruire tutto da solo, e di non lasciare spazio al team. È un rischio che conosco bene.
+
+La regola che uso è semplice. Prototipo quando la domanda è "si può fare?" e la risposta sta nei dati. Quando il team sa esplorare il problema meglio di me, scrivo due righe chiare e mi faccio da parte.

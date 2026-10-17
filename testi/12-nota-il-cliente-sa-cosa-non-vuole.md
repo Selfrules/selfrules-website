@@ -1,0 +1,35 @@
+# Il cliente sa cosa non vuole
+
+> Scrivi pure sopra il testo, oppure sotto con "MATTIA:" davanti. Io riporto tutto nel sito.
+
+Riga sotto il titolo: Sette anni fra design e sviluppo, e la domanda che ha cambiato le riunioni coi clienti. Cosa scarteresti?
+
+Per sette anni, dal 2012, ho lavorato in proprio fra design e sviluppo. Ho venduto, disegnato, costruito e tenuto in piedi più di 20 siti e negozi online. Da solo, quindi anche il commerciale, l'assistenza e quello che porta il caffè.
+
+La conversazione che ho fatto più spesso era questa.
+
+"Voglio un sito bellissimo."
+"Cosa vuol dire bellissimo, per te?"
+"Non lo so. Ma quando lo vedo lo riconosco."
+
+[foto: registratore, didascalia in 13-didascalie.md]
+
+## La domanda girata
+
+Per anni mi ha fatto impazzire. Poi ho capito che il cliente aveva ragione. Non sapeva dire cosa voleva, ma sapeva benissimo cosa non gli piaceva.
+
+Così ho girato la domanda. Invece di chiedere cosa voleva, mostravo qualche direzione diversa e chiedevo quale scartare. Due sparivano subito. Sulle rimanenti la conversazione diventava precisa, e si andava avanti da lì.
+
+Il lavoro di dire cosa serve è mio. Il lavoro del cliente è dire no a quello che non lo convince, e in quello sono tutti bravissimi.
+
+## Nel prodotto funziona uguale
+
+Se in un'intervista chiedi "quali funzioni vorresti?", ottieni risposte vaghe e una lista dei desideri. Se chiedi "quale passaggio ti ha fatto perdere più tempo questa settimana?", ottieni un problema preciso, con un giorno e un'ora.
+
+Gli utenti sanno cosa li blocca. Il mio mestiere è partire da lì.
+
+## Cosa mi è costato impararlo
+
+Il negozio online più bello che abbia fatto non ha venduto niente per tre settimane. Chi entrava nel negozio non trovava dove si pagava. Mi è costato 8.000 euro di rimborsi, ed è il primo della mia [pagina degli errori](/errori).
+
+Da allora la prima domanda che mi faccio davanti a una schermata è se la persona riesce a finire quello che è venuta a fare. Se è bella, lo guardo dopo.

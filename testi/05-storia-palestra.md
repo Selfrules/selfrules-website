@@ -1,0 +1,43 @@
+# Una palestra, un gestionale nuovo e qualche agente AI
+
+> Scrivi pure sopra il testo, oppure sotto con "MATTIA:" davanti. Io riporto tutto nel sito.
+
+Ad agosto 2026 ho lasciato un posto da product manager in un'azienda da 600 persone per fare il GM di una palestra in provincia di Modena. Detta così, sembra la mossa di chi molla tutto per aprire un chiringuito ai Caraibi. Senza il mare, e con più bilancieri.
+
+Il motivo è più semplice. Per sei anni ho detto nelle riunioni che si decide guardando i dati, si prova in piccolo e si sbaglia in fretta. Volevo vedere se funziona anche alle sette di sera, con la reception piena e una classe che sta per partire.
+
+## Per chi era un problema
+
+Il 21Lab è una palestra con clienti, coach e una persona che a fine mese deve far quadrare i conti. Il gestionale che usavamo era macchinoso. Ogni iscrizione, rinnovo, presenza o pagamento chiedeva una persona dietro, e i compensi dei coach si facevano a mano.
+
+Il tempo andava via in amministrazione. Per una palestra è il tempo sbagliato da perdere, perché è quello che dovrebbe stare con le persone in sala.
+
+## Cosa non andava
+
+Le regole del 21Lab non stavano nel software. Pacchetti di lezioni, abbonamenti, compensi dei coach calcolati sulle presenze. Quello che il programma non sapeva fare finiva su un foglio a mano, e nella testa di chi se lo doveva ricordare.
+
+## Cosa ho deciso, e cosa ho scartato
+
+[qui c'è la decisione del gioco, testo in 01-home.md]
+
+Ho scartato l'idea di comprarne un altro, perché voleva dire piegare la palestra al software invece del contrario. Ho deciso di costruirlo, con agenti AI che scrivono il codice e io che faccio il product manager. Gli agenti sono programmi di intelligenza artificiale che lavorano come sviluppatori instancabili, a patto che qualcuno dica loro con precisione cosa costruire e controlli quello che consegnano.
+
+In pratica scrivo in un documento solo, in italiano semplice, come funziona la palestra. Chi può prenotare cosa, quando scade un pacchetto, cosa succede se una vendita viene registrata due volte. Quel documento è la regola per tutto. Decido le priorità e provo ogni schermata prima che arrivi a un cliente.
+
+Alcune decisioni, per dare l'idea. I pagamenti con addebito diretto sul conto restano spenti nella prima versione, ma pronti dietro un interruttore. Una vendita registrata due volte si può annullare entro 10 minuti, dopo diventa uno storno. Tutti i pacchetti di lezioni durano 12 mesi, così nessuno deve ricordarsi una tabella.
+
+All'inizio descrivevo le schermate a parole. Poi ho fatto confrontare agli agenti ogni schermata costruita con il disegno originale. Sulle prime 32 hanno trovato **361 differenze**. Più di undici a schermata, che a parole nessuno aveva visto. Da allora ogni schermata si chiude solo dopo il confronto con l'immagine.
+
+## Com'è finita, per ora
+
+Non è finita, ed è il bello. Da ottobre **dieci clienti** lo usano dal telefono per prenotare le classi. Ogni settimana entra una funzione nuova, e il lunedì sera alla reception sento cosa non torna. Lo do a poche persone alla volta, apposta, perché un errore visto da dieci persone costa poco e si corregge in un giorno.
+
+I primi 102 compiti di sviluppo sono costati circa **790 euro** di AI. A mano, uno sviluppatore ci avrebbe messo tra le 400 e le 800 ore, a stima.
+
+Dal **7 dicembre 2026** lo userà tutto il Lab. Se i dieci nel frattempo mi dicono che non ne possono più fare a meno, anche prima.
+
+## Cosa ho imparato
+
+È il lavoro di prodotto più onesto che abbia fatto. Se sbaglio una scelta me lo dicono il lunedì sera alla reception, senza aspettare la retrospettiva.
+
+E ho imparato che da soli si va veloci, ma si impara poco. Per questo cerco un team e un'azienda in cui investire i prossimi anni e quello che ho imparato qui, dove le idee si discutono apertamente e le scommesse si prendono insieme.
